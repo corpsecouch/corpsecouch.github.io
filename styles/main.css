@@ -1,16 +1,17 @@
-* {
+*{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-html, body {
+html, body{
   height: 100%;
   font-size: 16px;
-  background-color: white;
+  background-color: black;
+  color: white;
 }
 
-.flex-container {
+.flex-container{
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -18,9 +19,8 @@ html, body {
   display: flex;
 }
 
-.section {
+.section{
   height: 100vh;
-  color: white;
 
   -webkit-flex-flow: row nowrap;
   flex-flow: row nowrap;
@@ -28,14 +28,19 @@ html, body {
   justify-content: center;
 }
 
-.section.one {
+.section.one{
   background-color: green;
 }
 
-.section.two {
+.section.two{
   background-color: black;
 }
 
-.section.three {
+.section.three{
   background-color: blue;
+}
+
+.section > .content {
+  width: 45%;
+  font-size: 1.6rem;
 }
