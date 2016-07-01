@@ -8,12 +8,12 @@ html, body{
   height: 100%;
   font-size: 16px;
   font-family: 'Raleway', sans-serif;
-  background-color: black;
-  color: white;
+  background-color: #1a1a1a;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 a{
-  color: white;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 a:hover{
@@ -22,11 +22,13 @@ a:hover{
 
 ul{
   list-style: none;
-  justify-content: space-between;
 }
 
 ul.flex > li{
-  display: inline-block;
+  padding: 0.3rem;
+  margin: 0.2rem 0;
+  font-size: 0.7rem;
+  line-height: 0.7rem;
 }
 
 .flex{
@@ -50,13 +52,32 @@ ul.flex > li{
 }
 
 .section{
-  height: 100vh;
+  height: 95vh;
   align-items: center;
   justify-content: center;
 }
 
 .section:nth-child(2n+1){
-  background-color: darkgray;
+  background-color: #A5D6A7;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.section:nth-child(2n+1),
+.section:nth-child(2n+1) a{
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.section:nth-child(3){
+  /*background-color: #C5E1A5;*/
+  background-color: #B39DDB;
+}
+
+.section:nth-child(5){
+  background-color: #80CBC4;
+}
+
+.section:last-of-type{
+  height: 100vh;
 }
 
 .section > .content {
@@ -69,4 +90,26 @@ ul.flex > li{
 
 .content > div + div{
   margin-top: 4rem;
+}
+
+#tech{
+  justify-content: space-around;
+}
+
+#tech > li{
+  display: inline-block;
+  background: rgba(0,0,0,0.15);
+}
+
+#social{
+  justify-content: space-between;
+  align-items: center;
+  border: 2px rgba(255, 255, 255, 0.2) solid;
+  border-radius: 4rem;
+  padding: 2rem 1rem;
+  min-height: 220px;
+}
+
+#social > li{
+
 }
