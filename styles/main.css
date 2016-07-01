@@ -7,6 +7,7 @@
 html, body{
   height: 100%;
   font-size: 16px;
+  font-family: 'Raleway', sans-serif;
   background-color: black;
   color: white;
 }
@@ -24,6 +25,10 @@ ul{
   justify-content: space-between;
 }
 
+ul.flex > li{
+  display: inline-block;
+}
+
 .flex{
   display: -webkit-box;
   display: -moz-box;
@@ -33,8 +38,8 @@ ul{
 }
 
 .flex.row{
-  -webkit-flex-flow: row nowrap;
-  flex-flow: row nowrap;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
   width: 100%;
 }
 
@@ -60,4 +65,8 @@ ul{
   line-height: 2.3rem;
   letter-spacing: 0.12rem;
   word-spacing: 0.2rem;
+}
+
+.content > div + div{
+  margin-top: 4rem;
 }
