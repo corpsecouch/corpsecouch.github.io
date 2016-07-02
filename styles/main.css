@@ -114,7 +114,14 @@ ul.flex > li{
 }
 
 #books{
-  justify-content: space-around;
+  /*justify-content: space-around;
+  align-items: center;*/
+}
+
+#books .content {
+  width: auto;
+  flex-grow: 1;
+  justify-content: center;
   align-items: center;
 }
 
@@ -122,6 +129,7 @@ ul.flex > li{
   position: relative;
   height: 100%;
   width: 33%;
+  margin-left: auto;
 }
 
 #books .list .gr_grid_container{
@@ -137,6 +145,30 @@ ul.flex > li{
   height: 115%;
   width: 100%;
   position: relative;
+}
+
+@keyframes example{
+  to{
+    -webkit-filter: opacity(1) saturate(1);
+    filter: opacity(1) saturate(1);
+  }
+}
+
+#books .list .gr_grid_book_container{
+  -webkit-filter: opacity(0.3) saturate(0.6);
+  filter: opacity(0.3) saturate(0.6);
+  margin-right: 0.3rem;
+}
+
+#books .list .gr_grid_book_container:hover{
+  animation-name: example;
+  animation-timing-function: ease;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+#books .current{
+  margin-top: 1rem;
 }
 
 /* goodreads widget */
