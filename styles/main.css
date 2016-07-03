@@ -52,7 +52,7 @@ ul.flex > li{
 }
 
 .section{
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   overflow: hidden;
   align-items: center;
@@ -89,6 +89,7 @@ ul.flex > li{
   line-height: 2.3rem;
   letter-spacing: 0.12rem;
   word-spacing: 0.2rem;
+  margin: 4rem 0;
 }
 
 .content > div + div{
@@ -114,8 +115,7 @@ ul.flex > li{
 }
 
 #books{
-  /*justify-content: space-around;
-  align-items: center;*/
+  height: 100vh;
 }
 
 #books .content {
@@ -171,12 +171,24 @@ ul.flex > li{
   margin-top: 1rem;
 }
 
-/* goodreads widget */
-
-.gr_grid_container {
-
+#band .photo{
+  background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(26,26,26,1) 91%),
+              -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(26,26,26,1) 100%),
+              url('../assets/photo.jpg') no-repeat;
+  background: linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(26,26,26,1) 91%),
+              linear-gradient(top, rgba(0,0,0,0) 0%, rgba(26,26,26,1) 100%),
+              url('../assets/photo.jpg') no-repeat;
+  height: 720px;
+  width: 480px;
+  position: absolute;
+  z-index: -1;
+  left: 0;
 }
 
-.gr_grid_book_container {
+/* goodreads widget */
+
+.gr_grid_container{}
+
+.gr_grid_book_container{
   padding: 0px 0px;
 }
