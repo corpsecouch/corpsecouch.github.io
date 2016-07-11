@@ -5,7 +5,7 @@ var api = {
 
 api.goodreads.getCurrentBook = function(success, error){
   return $.get({
-    url: 'https://api-skullnbones.c9users.io/goodreads/current',
+    url: 'https://api-skullnbones.rhcloud.com/goodreads/current',
     success: success,
     error: function(e){
       console.error(e);
@@ -16,7 +16,7 @@ api.goodreads.getCurrentBook = function(success, error){
 
 api.goodreads.getReadBooks = function(success, error){
   return $.get({
-    url: 'https://api-skullnbones.c9users.io/goodreads/read',
+    url: 'https://api-skullnbones.rhcloud.com/goodreads/read',
     success: success,
     error: function(e){
       console.error(e);
@@ -27,7 +27,7 @@ api.goodreads.getReadBooks = function(success, error){
 
 api.medium.getPosts = function(success, error){
   return $.get({
-    url: 'https://api-skullnbones.c9users.io/medium/posts',
+    url: 'https://api-skullnbones.rhcloud.com/medium/posts',
     success: success,
     error: function(e){
       console.error(e);
