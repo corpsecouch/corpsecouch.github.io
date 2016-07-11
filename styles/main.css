@@ -125,14 +125,14 @@ ul.flex > li{
   align-items: center;
 }
 
-#books .list{
+#books .read{
   position: relative;
   height: 100%;
   width: 33%;
   margin-left: auto;
 }
 
-#books .list .gr_grid_container{
+#books .read > .books/*.gr_grid_container*/{
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -154,13 +154,13 @@ ul.flex > li{
   }
 }
 
-#books .list .gr_grid_book_container{
+#books .read > .books > a/*.gr_grid_book_container*/{
   -webkit-filter: opacity(0.3) saturate(0.6);
   filter: opacity(0.3) saturate(0.6);
   margin-right: 0.3rem;
 }
 
-#books .list .gr_grid_book_container:hover{
+#books .read > .books > a:hover/*.gr_grid_book_container:hover*/{
   animation-name: example;
   animation-timing-function: ease;
   animation-duration: 0.3s;
