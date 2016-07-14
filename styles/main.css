@@ -124,6 +124,14 @@ ul.flex > li{
   position: relative;
 }
 
+#writing .medium .previewImage{
+  overflow: hidden;
+}
+
+#writing .medium .previewImage > img{
+  width: 100%;
+}
+
 #writing .medium .post .date{
   font-size: 0.8rem;
 }

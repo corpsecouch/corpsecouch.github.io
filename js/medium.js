@@ -15,6 +15,8 @@ $.widget("jb.medium", {
       console.error(err);
     })
     .done((data) => {
+      console.log(data.posts);
+
       // create the posts container
       $('<div></div>').addClass('posts').appendTo(this.element);
 
@@ -24,9 +26,22 @@ $.widget("jb.medium", {
           $('<div></div>').addClass('post')
           .data('position', itr)
           .data('url', `${this.options.userUrl}/${post.uniqueSlug}`)
+          .append(
+            $('<div></div>').addClass('previewImage')
+            .append(() => {
+              if(post.virtuals.previewImage.imageId) return `<img src="https://cdn-images-1.medium.com/max/2000/${post.virtuals.previewImage.imageId}">`;
+              else return;
+            })
+          )
           .append(`<a class="title" href="${this.options.userUrl}/${post.uniqueSlug}" target="_blank">${post.title}</a>`)
-          .append($('<div></div>').addClass('date').text(post.virtuals.updatedAtRelative))
-          .append($('<div></div>').addClass('subtitle').text(post.content.subtitle))
+          .append(
+            $('<div></div>').addClass('date')
+            .text(post.virtuals.updatedAtRelative)
+          )
+          .append(
+            $('<div></div>').addClass('subtitle')
+            .text(post.content.subtitle)
+          )
           .click((evt) => {
             var elem = $(evt.currentTarget);
             var pos = elem.data('position');
