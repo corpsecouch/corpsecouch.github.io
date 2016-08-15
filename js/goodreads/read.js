@@ -6,8 +6,10 @@ define(['jquery-ui'], function(){
     },
 
     _create: function(){
-      $.get({
-        url: this.options.endpoint
+      $.ajax({
+        url: this.options.endpoint,
+        cache: false,
+        method: 'GET'
       })
       .fail((err) => {
         console.error();

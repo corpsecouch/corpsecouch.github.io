@@ -9,15 +9,15 @@ define(['jquery-ui'], function(){
 
     // constructor
     _create: function(){
-      $.get({
-        url: this.options.endpoint
+      $.ajax({
+        url: this.options.endpoint,
+        cache: false,
+        method: 'GET'
       })
       .fail((err) => {
         console.error(err);
       })
       .done((data) => {
-        console.log(data.posts);
-
         // create the posts container
         $('<div></div>').addClass('posts').appendTo(this.element);
 

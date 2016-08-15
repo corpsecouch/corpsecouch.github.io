@@ -26,7 +26,7 @@ ul{
 
 ul.flex > li{
   padding: 0.3rem;
-  margin: 0.2rem 0;
+  margin: 0.5rem 0;
   font-size: 0.7rem;
   line-height: 0.7rem;
 }
@@ -159,7 +159,7 @@ ul.flex > li{
 #social{
   justify-content: space-between;
   align-items: center;
-  border: 2px rgba(255, 255, 255, 0.2) solid;
+  border: 2px rgba(0, 0, 0, 0.2) solid;
   border-radius: 4rem;
   padding: 2rem 1rem;
   min-height: 220px;
