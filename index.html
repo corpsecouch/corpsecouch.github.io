@@ -8,10 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- scripts -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
-        <script src="js/medium.js"></script>
-        <script src="js/main.js"></script>
+        <script data-main="js/app" src="bower_components/requirejs/require.js"></script>
 
         <!-- font -->
         <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
@@ -40,6 +37,17 @@
           </div>
         </div>
 
+        <div class="flex row section" id="books">
+          <div class="flex column content">
+            I'm currently reading:
+            <div class="current"></div>
+          </div>
+
+          <div class="read">
+            <div class="books"></div>
+          </div>
+        </div>
+
         <div class="flex row section">
           <div class="content">
             <div>The future is my passion and I love dreaming of innovative tech. I've even won a Disney Inventor award for a pending VR patent.</div>
@@ -53,17 +61,6 @@
                 <li>Big Geo</li>
               </ul>
             </div>
-          </div>
-        </div>
-
-        <div class="flex row section" id="books">
-          <div class="flex column content">
-            Currently reading
-            <div class="current"></div>
-          </div>
-
-          <div class="read">
-            <div class="books"></div>
           </div>
         </div>
 
