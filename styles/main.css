@@ -63,6 +63,10 @@ ul.flex > li{
 .section:nth-child(2n+1){
   background-color: #A5D6A7;
   color: rgba(0, 0, 0, 0.75);
+
+  -webkit-box-shadow: 0 0px 12px 12px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 0px 12px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0px 12px 12px rgba(0, 0, 0, 0.25);
 }
 
 .section:nth-child(2n+1),
@@ -233,6 +237,7 @@ ul.flex > li{
   position: absolute;
   z-index: -1;
   left: 0;
+  top: 0;
 }
 
 /* goodreads widget */
