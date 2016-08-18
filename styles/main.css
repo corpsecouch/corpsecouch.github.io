@@ -174,16 +174,18 @@ ul.flex > li{
   flex-grow: 1;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  z-index: 100;
+  margin: 0;
 }
 
 #books .read{
   position: relative;
-  height: 100%;
-  width: 33%;
-  margin-left: auto;
+  height: 80%;
+  width: 100%;
 }
 
-#books .read > .books/*.gr_grid_container*/{
+#books .read > .books{
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -191,9 +193,10 @@ ul.flex > li{
   display: flex;
   -webkit-flex-flow: column wrap;
   flex-flow: column wrap;
-  align-content: flex-start;
-  align-items: flex-start;
-  height: 115%;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
   width: 100%;
   position: relative;
 }
@@ -205,9 +208,9 @@ ul.flex > li{
   }
 }
 
-#books .read > .books > a/*.gr_grid_book_container*/{
-  -webkit-filter: opacity(0.3) saturate(0.6);
-  filter: opacity(0.3) saturate(0.6);
+#books .read > .books > a{
+  -webkit-filter: opacity(0.16) saturate(0.4);
+  filter: opacity(0.16) saturate(0.4);
   margin-right: 0.3rem;
 }
 
