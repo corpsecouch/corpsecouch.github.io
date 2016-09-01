@@ -2,12 +2,14 @@ define(['jquery-ui'], function(){
   $.widget('jb.grRead', {
 
     options: {
-      endpoint: 'https://api-skullnbones.rhcloud.com/goodreads/read',
+      server: 'https://api-skullnbones.rhcloud.com',
+      endpoint: '/goodreads/read',
+      health: '/health'
     },
 
     _create: function(){
       $.ajax({
-        url: this.options.endpoint,
+        url: this.options.server + this.options.endpoint,
         cache: false,
         method: 'GET'
       })
@@ -15,7 +17,9 @@ define(['jquery-ui'], function(){
         console.error();
       })
       .done((data) => {
-        $(this.element).append(data);
+        data.data.forEach(function(val){
+          $(this.element).append('<a title="' + val.title + '" href="' + val.href + '"><img src="' + val.src + '" alt="' + val.title + '"></a>');
+        }, this);
       });
     }
 
