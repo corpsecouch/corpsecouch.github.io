@@ -4,9 +4,11 @@ define(function(require) {
   require('goodreads/current');
   require('goodreads/read');
 
-  $('#books .read .books').grRead();
+  $(function(){
+    $('#books .read .books').grRead();
 
-  $('#books .current').grCurrent();
+    $('#books .current').grCurrent();
 
-  $('#writing .medium').medium();
+    $('#writing .medium').medium();
+  });
 });
