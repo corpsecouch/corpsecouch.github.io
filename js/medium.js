@@ -43,7 +43,7 @@ define(['jquery-ui'], function(){
               $('<div></div>').addClass('subtitle')
               .text(post.content.subtitle)
             )
-            .click((evt) => {
+            /*.click((evt) => {
               var elem = $(evt.currentTarget);
               var pos = elem.data('position');
 
@@ -58,7 +58,7 @@ define(['jquery-ui'], function(){
               }, 300);
 
               evt.preventDefault();
-            })
+            })*/
           );
         });
       });

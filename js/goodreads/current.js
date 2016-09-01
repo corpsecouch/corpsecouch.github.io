@@ -17,7 +17,7 @@ define(['jquery-ui'], function(){
         console.error();
       })
       .done((data) => {
-        $(this.element).append('<a title="' + data.data.title + '" href="' + data.data.href + '"><img src="' + data.data.src + '" alt="' + data.data.title + '"></a>');
+        $(this.element).append(`<a title="${data.data.title}" href="${data.data.href}"><img src="${data.data.src}" alt="${data.data.title}"></a>`);
       });
     }
 
