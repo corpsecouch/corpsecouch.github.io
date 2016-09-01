@@ -8,12 +8,15 @@ html, body{
   height: 100%;
   font-size: 16px;
   font-family: 'Raleway', sans-serif;
-  background-color: #1a1a1a;
-  color: rgba(255, 255, 255, 0.85);
+  /*background-color: #1a1a1a;*/
+  background-color: white;
+  /*color: rgba(255, 255, 255, 0.85);*/
+  color: rgba(0, 0, 0, 0.85);
 }
 
 a{
-  color: rgba(255, 255, 255, 0.85);
+  /*color: rgba(255, 255, 255, 0.85);*/
+  color: rgba(0, 0, 0, 0.85);
 }
 
 a:hover{
@@ -52,7 +55,8 @@ ul.flex > li{
 }
 
 .section{
-  min-height: 100vh;
+  /*min-height: 100vh;*/
+  min-height: 42rem;
   width: 100vw;
   overflow: hidden;
   align-items: center;
@@ -60,12 +64,9 @@ ul.flex > li{
   position: relative;
 }
 
-.section:nth-child(2n+1){
+/*.section:nth-child(2n+1){
   background-color: #A5D6A7;
   color: rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 0 0px 26px 16px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0 0px 26px 16px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 0px 26px 16px rgba(0, 0, 0, 0.25);
 }
 
 .section:nth-child(2n+1),
@@ -74,7 +75,6 @@ ul.flex > li{
 }
 
 .section:nth-child(3){
-  /*background-color: #C5E1A5;*/
   background-color: #B39DDB;
 }
 
@@ -84,37 +84,60 @@ ul.flex > li{
 
 .section:last-of-type{
   height: 100vh;
-}
+}*/
 
 .section > .content {
-  max-width: 45%;
+  /*max-width: 45%;*/
+  max-width: 42rem;
   font-size: 1.6rem;
   line-height: 2.3rem;
   letter-spacing: 0.12rem;
   word-spacing: 0.2rem;
   margin: 4rem 0;
+  padding: 0 1rem;
 }
 
 .content > div + div{
   margin-top: 4rem;
 }
 
+#name{
+  position: relative;
+  overflow: visible;
+  min-height: 36rem;
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#60e064+0,22b524+100 */
+  background: rgb(96,224,100); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(96,224,100,1) 0%, rgba(34,181,36,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(96,224,100,1) 0%,rgba(34,181,36,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(96,224,100,1) 0%,rgba(34,181,36,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#60e064', endColorstr='#22b524',GradientType=0 ); /* IE6-9 */
+
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
+
+  /*-webkit-box-shadow: 0 0px 26px 16px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 0px 26px 16px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0px 26px 16px rgba(0, 0, 0, 0.25);*/
+}
+
 #writing > .content{
-  width: 45%;
+  /*width: 45%;*/
 }
 
 #writing .medium{
-  margin-top: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 #writing .medium .posts{
-  display: -webkit-box;
+  /*display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row nowrap;
-  flex-flow: row nowrap;
+  flex-flow: row nowrap;*/
   width: 100%;
   position: relative;
 }
@@ -123,6 +146,7 @@ ul.flex > li{
   flex-shrink: 0;
   width: 100%;
   margin-right: 8rem;
+  margin-bottom: 2rem;
   cursor: pointer;
   position: relative;
   background-color: rgba(0, 0, 0, 0.07);
@@ -157,26 +181,47 @@ ul.flex > li{
 }
 
 #social{
-  justify-content: space-between;
-  align-items: center;
-  border: 2px rgba(0, 0, 0, 0.2) solid;
-  border-radius: 4rem;
-  padding: 2rem 1rem;
-  min-height: 220px;
+  height: 32rem;
+  min-height: auto;
+}
+
+#social li{
+  margin: 0;
+  font-size: 1rem;
+  line-height: normal;
+  padding: 0 1rem;
+}
+
+#social img{
+  width: 42px;
+  height: 42px;
 }
 
 #books{
-  height: 100vh;
+  height: 54rem;
+  /*height: 100vh;*/
+  /*background-color: #1a1a1a;*/
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#dd2ded+0,aa24c1+100 */
+  background: rgb(221,45,237); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(221,45,237,1) 0%, rgba(170,36,193,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(221,45,237,1) 0%,rgba(170,36,193,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(221,45,237,1) 0%,rgba(170,36,193,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dd2ded', endColorstr='#aa24c1',GradientType=0 ); /* IE6-9 */
 }
 
 #books .content {
   width: auto;
+  height: auto;
   flex-grow: 1;
   justify-content: center;
   align-items: center;
   position: absolute;
   z-index: 100;
   margin: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
 }
 
 #books .read{
@@ -229,7 +274,7 @@ ul.flex > li{
   margin-bottom: 1rem;
 }
 
-#band .photo{
+/*#band .photo{
   background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(26,26,26,1) 91%),
               -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(26,26,26,1) 100%),
               url('../assets/photo.jpg') no-repeat;
@@ -242,12 +287,4 @@ ul.flex > li{
   z-index: -1;
   left: 0;
   top: 0;
-}
-
-/* goodreads widget */
-
-.gr_grid_container{}
-
-.gr_grid_book_container{
-  padding: 0px 0px;
-}
+}*/
