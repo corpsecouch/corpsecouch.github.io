@@ -27,14 +27,14 @@ define(['jquery-ui'], function(){
           $('.posts', this.element).append(
             $('<div></div>').addClass('post')
             .data('position', itr)
-            .data('url', `${this.options.userUrl}/${post.uniqueSlug}`)
+            .data('url', this.options.userUrl + '/' + post.uniqueSlug)
             .append(
               $('<div></div>').addClass('previewImage')
               .append(function(){
-                return post.virtuals.previewImage.imageId ? `<img src="https://cdn-images-1.medium.com/max/2000/${post.virtuals.previewImage.imageId}">` : false;
+                return post.virtuals.previewImage.imageId ? '<img src="https://cdn-images-1.medium.com/max/2000/' + post.virtuals.previewImage.imageId + '">' : false;
               })
             )
-            .append(`<a class="title" href="${this.options.userUrl}/${post.uniqueSlug}" target="_blank">${post.title}</a>`)
+            .append('<a class="title" href="' + this.options.userUrl '/' + post.uniqueSlug + '" target="_blank">' + post.title + '</a>')
             .append(
               $('<div></div>').addClass('date')
               .text(post.virtuals.updatedAtRelative)
