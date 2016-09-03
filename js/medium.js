@@ -26,8 +26,8 @@ define(['jquery-ui'], function(){
         data.posts.forEach(function(post, itr){
           $('.posts', this.element).append(
             $('<div></div>').addClass('post')
-            .data('position', itr)
-            .data('url', this.options.userUrl + '/' + post.uniqueSlug)
+            //.data('position', itr)
+            //.data('url', this.options.userUrl + '/' + post.uniqueSlug)
             .append(
               $('<div></div>').addClass('previewImage')
               .append(function(){
