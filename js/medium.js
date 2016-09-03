@@ -27,7 +27,7 @@ define(['jquery-ui'], function(){
           $('.posts', this.element).append(
             $('<div></div>').addClass('post')
             //.data('position', itr)
-            //.data('url', this.options.userUrl + '/' + post.uniqueSlug)
+            .data('url', this.options.userUrl + '/' + post.uniqueSlug)
             .append(
               $('<div></div>').addClass('previewImage')
               .append(function(){
@@ -43,22 +43,10 @@ define(['jquery-ui'], function(){
               $('<div></div>').addClass('subtitle')
               .text(post.content.subtitle)
             )
-            /*.click((evt) => {
-              var elem = $(evt.currentTarget);
-              var pos = elem.data('position');
-
-              if(pos == this.options.position){
-                window.open(elem.data('url'), '_blank');
-                return;
-              }
-
-              this.options.position = pos;
-              $(evt.currentTarget.parentElement).animate({
-                marginLeft: -pos * elem.outerWidth(true)
-              }, 300);
-
+            .click(function(evt){
+              window.open($(evt.currentTarget).data('url'), '_blank');
               evt.preventDefault();
-            })*/
+            })
           );
         }, this);
       });
