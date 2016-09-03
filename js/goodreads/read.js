@@ -11,12 +11,13 @@ define(['jquery-ui'], function(){
       $.ajax({
         url: this.options.server + this.options.endpoint,
         cache: false,
-        method: 'GET'
+        method: 'GET',
+        context: this
       })
-      .fail((err) => {
+      .fail(function(err){
         console.error();
       })
-      .done((data) => {
+      .done(function(data){
         // shuffle the books
         this.shuffle(data.data);
 

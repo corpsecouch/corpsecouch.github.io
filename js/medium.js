@@ -1,5 +1,5 @@
 define(['jquery-ui'], function(){
-  $.widget("jb.medium", {
+  $.widget('jb.medium', {
     // default options
     options: {
       position: 0,
@@ -9,29 +9,30 @@ define(['jquery-ui'], function(){
 
     // constructor
     _create: function(){
+      console.log(this);
       $.ajax({
         url: this.options.endpoint,
         cache: false,
-        method: 'GET'
+        method: 'GET',
+        context: this
       })
-      .fail((err) => {
+      .fail(function(err){
         console.error(err);
       })
-      .done((data) => {
+      .done(function(data){
         // create the posts container
         $('<div></div>').addClass('posts').appendTo(this.element);
 
         // populate the container with posts
-        data.posts.forEach((post, itr) => {
+        data.posts.forEach(function(post, itr){
           $('.posts', this.element).append(
             $('<div></div>').addClass('post')
             .data('position', itr)
             .data('url', `${this.options.userUrl}/${post.uniqueSlug}`)
             .append(
               $('<div></div>').addClass('previewImage')
-              .append(() => {
-                if(post.virtuals.previewImage.imageId) return `<img src="https://cdn-images-1.medium.com/max/2000/${post.virtuals.previewImage.imageId}">`;
-                else return;
+              .append(function(){
+                return post.virtuals.previewImage.imageId ? `<img src="https://cdn-images-1.medium.com/max/2000/${post.virtuals.previewImage.imageId}">` : false;
               })
             )
             .append(`<a class="title" href="${this.options.userUrl}/${post.uniqueSlug}" target="_blank">${post.title}</a>`)
@@ -60,7 +61,7 @@ define(['jquery-ui'], function(){
               evt.preventDefault();
             })*/
           );
-        });
+        }, this);
       });
     }
   });
