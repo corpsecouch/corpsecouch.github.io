@@ -182,20 +182,29 @@ ul.flex > li{
   -webkit-clip-path: polygon(0 0, 90% 2%, 100% 0, 100% 100%, 10% 98%, 0 100%);
   clip-path: polygon(0 0, 90% 2%, 100% 0, 100% 100%, 10% 98%, 0 100%);
 
-  -webkit-align-content: center;
-  align-content: center;
+  /*-webkit-align-content: center;
+  align-content: center;*/
 }
 
 #books .content {
   width: auto;
   height: auto;
+
   -webkit-flex-grow: 1;
   flex-grow: 1;
+
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-justify-content: center;
+
+  -webkit-align-items: center;
   align-items: center;
+
   position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
   z-index: 100;
   margin: 0;
   color: white;
@@ -215,14 +224,19 @@ ul.flex > li{
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+
   -webkit-flex-flow: column wrap;
   flex-flow: column wrap;
+
   -webkit-align-content: center;
   align-content: center;
+
   -webkit-align-items: center;
   align-items: center;
+
   -webkit-justify-content: center;
   justify-content: center;
+
   height: 100%;
   width: 100%;
   position: relative;
@@ -242,9 +256,16 @@ ul.flex > li{
 }
 
 #books .read > .books > a:hover{
+  -webkit-animation-name: example;
   animation-name: example;
+
+  -webkit-animation-timing-function: ease;
   animation-timing-function: ease;
+
+  -webkit-animation-duration: 0.3s;
   animation-duration: 0.3s;
+
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
