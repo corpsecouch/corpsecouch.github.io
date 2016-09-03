@@ -23,7 +23,7 @@ define(['jquery-ui'], function(){
 
         // display the books
         data.data.forEach(function(val){
-          $(this.element).append('<a title="' + val.title + '" href="' + val.href + '"><img src="' + val.src + '" alt="' + val.title + '"></a>');
+          $(this.element).append('<a title="' + val.title + '" href="' + val.url + '"><img src="' + val.src + '" alt="' + val.title + '"></a>');
         }, this);
       });
     },
