@@ -8,14 +8,11 @@ html, body{
   height: 100%;
   font-size: 16px;
   font-family: 'Raleway', sans-serif;
-  /*background-color: #1a1a1a;*/
   background-color: white;
-  /*color: rgba(255, 255, 255, 0.85);*/
   color: rgba(0, 0, 0, 0.85);
 }
 
 a{
-  /*color: rgba(255, 255, 255, 0.85);*/
   color: rgba(0, 0, 0, 0.85);
 }
 
@@ -55,8 +52,7 @@ ul.flex > li{
 }
 
 .section{
-  /*min-height: 100vh;*/
-  min-height: 42rem;
+  margin-top: 12rem;
   width: 100vw;
   overflow: hidden;
   align-items: center;
@@ -64,36 +60,16 @@ ul.flex > li{
   position: relative;
 }
 
-/*.section:nth-child(2n+1){
-  background-color: #A5D6A7;
-  color: rgba(0, 0, 0, 0.75);
-}
-
-.section:nth-child(2n+1),
-.section:nth-child(2n+1) a{
-  color: rgba(0, 0, 0, 0.75);
-}
-
-.section:nth-child(3){
-  background-color: #B39DDB;
-}
-
-.section:nth-child(5){
-  background-color: #80CBC4;
-}
-
 .section:last-of-type{
-  height: 100vh;
-}*/
+  margin-bottom: 4rem;
+}
 
 .section > .content {
-  /*max-width: 45%;*/
   max-width: 42rem;
   font-size: 1.6rem;
   line-height: 2.3rem;
   letter-spacing: 0.12rem;
   word-spacing: 0.2rem;
-  margin: 4rem 0;
   padding: 0 1rem;
 }
 
@@ -104,7 +80,8 @@ ul.flex > li{
 #name{
   position: relative;
   overflow: visible;
-  min-height: 36rem;
+  height: 35rem;
+  margin:0;
 
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#60e064+0,22b524+100 */
   background: rgb(96,224,100); /* Old browsers */
@@ -121,13 +98,8 @@ ul.flex > li{
   box-shadow: 0 0px 26px 16px rgba(0, 0, 0, 0.25);*/
 }
 
-#writing > .content{
-  /*width: 45%;*/
-}
-
 #writing .medium{
   margin-top: 4rem;
-  margin-bottom: 4rem;
 }
 
 #writing .medium .posts{
@@ -180,16 +152,15 @@ ul.flex > li{
   background: rgba(0,0,0,0.15);
 }
 
-#social{
-  height: 32rem;
-  min-height: auto;
+#social ul{
+  justify-content: center;
 }
 
 #social li{
   margin: 0;
   font-size: 1rem;
   line-height: normal;
-  padding: 0 1rem;
+  padding: 1rem;
 }
 
 #social img{
@@ -199,8 +170,6 @@ ul.flex > li{
 
 #books{
   height: 54rem;
-  /*height: 100vh;*/
-  /*background-color: #1a1a1a;*/
 
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#dd2ded+0,aa24c1+100 */
   background: rgb(221,45,237); /* Old browsers */
@@ -208,6 +177,9 @@ ul.flex > li{
   background: -webkit-linear-gradient(top,  rgba(221,45,237,1) 0%,rgba(170,36,193,1) 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom,  rgba(221,45,237,1) 0%,rgba(170,36,193,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dd2ded', endColorstr='#aa24c1',GradientType=0 ); /* IE6-9 */
+
+  -webkit-clip-path: polygon(0 0, 90% 2%, 100% 0, 100% 100%, 10% 98%, 0 100%);
+  clip-path: polygon(0 0, 90% 2%, 100% 0, 100% 100%, 10% 98%, 0 100%);
 }
 
 #books .content {
@@ -259,7 +231,7 @@ ul.flex > li{
   margin-right: 0.3rem;
 }
 
-#books .read > .books > a:hover/*.gr_grid_book_container:hover*/{
+#books .read > .books > a:hover{
   animation-name: example;
   animation-timing-function: ease;
   animation-duration: 0.3s;
