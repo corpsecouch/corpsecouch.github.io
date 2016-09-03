@@ -9,7 +9,6 @@ define(['jquery-ui'], function(){
 
     // constructor
     _create: function(){
-      console.log(this);
       $.ajax({
         url: this.options.endpoint,
         cache: false,
