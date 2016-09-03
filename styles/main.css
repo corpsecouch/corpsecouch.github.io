@@ -60,10 +60,6 @@ ul.flex > li{
   position: relative;
 }
 
-.section:last-of-type{
-  margin-bottom: 4rem;
-}
-
 .section > .content {
   max-width: 42rem;
   font-size: 1.6rem;
@@ -260,3 +256,7 @@ ul.flex > li{
   left: 0;
   top: 0;
 }*/
+
+#copywrite{
+  margin-bottom: 4rem;
+}
