@@ -9,6 +9,6 @@ define(function(require) {
 
     $('#books .current').grCurrent();
 
-    $('#writing .medium').medium();
+    $('#writing .medium').medium({postsToDisplay: 3});
   });
 });

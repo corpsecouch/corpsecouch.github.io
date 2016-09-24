@@ -138,6 +138,11 @@ ul.flex > li{
   line-height: 2rem;
 }
 
+#writing .medium .more{
+  display: block;
+  text-align: center;
+}
+
 #tech{
   -webkit-justify-content: space-around;
   justify-content: space-around;
