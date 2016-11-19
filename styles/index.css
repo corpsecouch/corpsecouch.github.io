@@ -1,0 +1,227 @@
+#name{
+  position: relative;
+  overflow: visible;
+  height: 35rem;
+  margin:0;
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#60e064+0,22b524+100 */
+  background: rgb(96,224,100); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(96,224,100,1) 0%, rgba(34,181,36,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(96,224,100,1) 0%,rgba(34,181,36,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(96,224,100,1) 0%,rgba(34,181,36,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#60e064', endColorstr='#22b524',GradientType=0 ); /* IE6-9 */
+
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
+
+  /*-webkit-box-shadow: 0 0px 26px 16px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 0px 26px 16px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0px 26px 16px rgba(0, 0, 0, 0.25);*/
+}
+
+#memberships img{
+  width:100%;
+}
+
+#writing .medium{
+  margin-top: 4rem;
+}
+
+#writing .medium .posts{
+  width: 100%;
+  position: relative;
+}
+
+#writing .medium .post{
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  width: 100%;
+  margin-right: 8rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.07);
+  padding: 0.5em;
+}
+
+#writing .medium .previewImage{
+  overflow: hidden;
+}
+
+#writing .medium .previewImage > img{
+  width: 100%;
+}
+
+#writing .medium .post .date{
+  font-size: 0.8rem;
+}
+
+#writing .medium .post .subtitle{
+  font-size: 1.3rem;
+  letter-spacing: 0.08rem;
+  line-height: 2rem;
+}
+
+#writing .medium .more{
+  display: block;
+  text-align: center;
+}
+
+#tech{
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+#tech > li{
+  display: inline-block;
+  background: rgba(0,0,0,0.15);
+}
+
+#social ul{
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+#social li{
+  margin: 0;
+  font-size: 1rem;
+  line-height: normal;
+  padding: 1rem;
+}
+
+#social img{
+  width: 42px;
+  height: 42px;
+}
+
+#books{
+  height: 54rem;
+
+
+
+  /*-webkit-align-content: center;
+  align-content: center;*/
+}
+
+#books .content {
+  width: auto;
+  height: auto;
+
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+
+  -webkit-justify-content: center;
+  justify-content: center;
+
+  -webkit-align-items: center;
+  align-items: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  z-index: 100;
+  margin: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+}
+
+#books .read{
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  -webkit-align-items: center;
+  align-items: center;
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#dd2ded+0,aa24c1+100 */
+  background: rgb(221,45,237); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(221,45,237,1) 0%, rgba(170,36,193,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(221,45,237,1) 0%,rgba(170,36,193,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(221,45,237,1) 0%,rgba(170,36,193,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dd2ded', endColorstr='#aa24c1',GradientType=0 ); /* IE6-9 */
+
+  -webkit-clip-path:  polygon(0 0, 90% 2%, 100% 0, 100% 100%, 10% 98%, 0 100%);
+  clip-path:          polygon(0 0, 90% 2%, 100% 0, 100% 100%, 10% 98%, 0 100%);
+}
+
+#books .read > .books{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: column wrap;
+  flex-flow: column wrap;
+
+  -webkit-align-content: center;
+  align-content: center;
+
+  -webkit-align-items: center;
+  align-items: center;
+
+  -webkit-justify-content: center;
+  justify-content: center;
+
+  height: 80%;
+  width: 100%;
+  position: relative;
+}
+
+@keyframes example{
+  to{
+    -webkit-filter: opacity(1) saturate(1);
+    filter: opacity(1) saturate(1);
+  }
+}
+
+#books .read > .books > a{
+  -webkit-filter: opacity(0.16) saturate(0.4);
+  filter: opacity(0.16) saturate(0.4);
+  margin-right: 0.3rem;
+}
+
+#books .read > .books > a:hover{
+  -webkit-animation-name: example;
+  animation-name: example;
+
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+#books .current{
+  margin-top: 1rem;
+}
+
+#band .content > *{
+  margin-bottom: 1rem;
+}
+
+/*#band .photo{
+  background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(26,26,26,1) 91%),
+              -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(26,26,26,1) 100%),
+              url('../assets/photo.jpg') no-repeat;
+  background: linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(26,26,26,1) 91%),
+              linear-gradient(top, rgba(0,0,0,0) 0%, rgba(26,26,26,1) 100%),
+              url('../assets/photo.jpg') no-repeat;
+  height: 720px;
+  width: 480px;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}*/
+
+#copywrite{
+  margin-bottom: 4rem;
+}
