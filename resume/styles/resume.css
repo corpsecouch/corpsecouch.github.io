@@ -1,4 +1,4 @@
-@import 'interior.css';
+@import '../../styles/interior.css';
 
 p.context{
   color: rgba(0, 0, 0, 0.65);
