@@ -42,12 +42,9 @@ export class GoodreadsReadComponent implements OnInit  {
   private books:Book[];
   private errorMessage:any;
 
-  constructor(private goodreadsService:GoodreadsService) {
-    console.log('GoodreadsReadComponent::constructor');
-  }
+  constructor(private goodreadsService:GoodreadsService) { }
 
   ngOnInit() {
-    console.log('GoodreadsReadComponent::ngOnInit');
     this.goodreadsService.getReadBooks()
       .subscribe(
         books => this.books = books,

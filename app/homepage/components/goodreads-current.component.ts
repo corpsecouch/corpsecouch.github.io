@@ -14,12 +14,9 @@ export class GoodreadsCurrentComponent implements OnInit  {
   private book:Book;
   private errorMessage:any;
 
-  constructor(private goodreadsService:GoodreadsService) {
-    console.log('GoodreadsCurrentComponent::constructor');
-  }
+  constructor(private goodreadsService:GoodreadsService) { }
 
   ngOnInit() {
-    console.log('GoodreadsCurrentComponent::ngOnInit');
     this.goodreadsService.getCurrentBook()
       .subscribe(
         book => this.book = book,

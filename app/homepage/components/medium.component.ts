@@ -1,4 +1,4 @@
-import { Component, OnInit }  from '@angular/core';
+import { Component, OnInit, Input }  from '@angular/core';
 
 import { MediumService }      from '../services/medium.service';
 
@@ -35,19 +35,27 @@ import { MediumService }      from '../services/medium.service';
   `
 })
 export class MediumComponent implements OnInit {
+  @Input() postsToDisplay:number = -1;
 
   private articles:any;
   private errorMessage:any;
 
-  constructor(private mediumService:MediumService) {
-    console.log('MediumComponent::constructor');
-  }
+  constructor(private mediumService:MediumService) { }
 
   ngOnInit() {
-    console.log('MediumComponent::ngOnInit');
     this.mediumService.getRecentArticles()
       .subscribe(
-        articles => this.articles = articles,
+        //articles => this.articles = articles,
+        articles => {
+          if(this.postsToDisplay < 0){
+            this.articles = articles;
+          }
+          else if(this.postsToDisplay > 0){
+            var numDisplayablePosts = Math.min(this.postsToDisplay, articles.length);
+            articles.splice(-numDisplayablePosts, numDisplayablePosts);
+            this.articles = articles;
+          }
+        },
         error => this.errorMessage = <any>error);
   }
 

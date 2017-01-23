@@ -14,12 +14,9 @@ export class GoodreadsService {
   private currentEndpoint:string = 'goodreads/current';
   private readEndpoint:string = 'goodreads/read';
 
-  constructor(private http:Http){
-    console.log('GoodreadstService::constructor');
-  }
+  constructor(private http:Http){ }
 
   public getReadBooks():Observable<any> {
-    console.log('GoodreadsService::getReadBooks');
     return this.http
       .get(this.server + this.readEndpoint)
       .map((res:Response) => {
@@ -30,7 +27,6 @@ export class GoodreadsService {
   }
 
   public getCurrentBook():Observable<any> {
-    console.log('GoodreadsService::getCurrentBook');
     return this.http
       .get(this.server + this.currentEndpoint)
       .map((res:Response) => {
@@ -41,7 +37,6 @@ export class GoodreadsService {
   }
 
   private handleError(err:Response | any):Observable<any> {
-    console.error('GoodreadsService::handleError');
     console.error(err);
     return Observable.throw(err.message);
   }

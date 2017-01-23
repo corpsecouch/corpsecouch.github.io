@@ -12,12 +12,9 @@ export class MediumService {
 
   private endpoint:string = 'https://api-skullnbones.rhcloud.com/medium/posts';
 
-  constructor(private http:Http){
-    console.log('MediumService::constructor');
-  }
+  constructor(private http:Http){ }
 
   public getRecentArticles():Observable<Article[]> {
-    console.log('MediumService::getRecentArticles');
     return this.http
       .get(this.endpoint)
       .map(this.extractData)
@@ -34,7 +31,6 @@ export class MediumService {
   }
 
   private handleError(err:Response | any):Observable<any> {
-    console.error('MediumService::handleError');
     console.error(err);
     return Observable.throw(err.message);
   }

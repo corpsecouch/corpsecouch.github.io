@@ -39,7 +39,7 @@ import { Title }      from '@angular/platform-browser';
   <div class="flex row section" id="writing">
     <div class="content">
       Sometimes I'll write about tech, nerdery and other random stuff on <a href="https://medium.com/@jasonbejot" target="_blank">Medium</a>
-      <medium></medium>
+      <medium postsToDisplay="3"></medium>
     </div>
   </div>
 
