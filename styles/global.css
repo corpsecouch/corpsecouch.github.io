@@ -1,14 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700');
-
+/* normalize everything */
 @import 'normalize.css';
 
-*{
+/* fonts */
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Libre+Baskerville:400');
+
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-html, body{
+html, body {
   height: 100%;
   font-size: 16px;
   font-family: 'Raleway', sans-serif;
@@ -18,68 +20,38 @@ html, body{
   color: rgba(0, 0, 0, 0.85);
 }
 
-a{
+a {
   color: rgba(0, 0, 0, 0.85);
 }
 
-a:hover{
+a:hover {
   text-decoration: line-through;
 }
 
-ul{
-  list-style: none;
+@page {
+  margin: 2cm;
 }
 
-ul.flex > li{
-  padding: 0.3rem;
-  margin: 0.5rem 0;
-  font-size: 0.7rem;
-  line-height: 0.7rem;
-}
+@media print {
+  html, body {
+    font-size: 12px;
+  }
 
-.flex{
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-}
+  * {
+    letter-spacing: 0.06rem !important;
+  }
 
-.flex.row{
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-  width: 100%;
-}
+  h3, h4 {
+    letter-spacing: 0.14rem !important;
+  }
 
-.flex.column{
-  -webkit-flex-flow: column nowrap;
-  flex-flow: column nowrap;
-  height: 100%;
-}
+  .page-break-after {
+    page-break-after: always;
+    break-after: always;
+  }
 
-.section{
-  margin-top: 12rem;
-  width: 100vw;
-  overflow: hidden;
-
-  -webkit-align-items: center;
-  align-items: center;
-
-  -webkit-justify-content: center;
-  justify-content: center;
-
-  position: relative;
-}
-
-.section > .content {
-  max-width: 42rem;
-  font-size: 1.6rem;
-  line-height: 2.3rem;
-  letter-spacing: 0.12rem;
-  word-spacing: 0.2rem;
-  padding: 0 1rem;
-}
-
-.content > div + div{
-  margin-top: 4rem;
+  .page-break-before {
+    page-break-before: always;
+    break-before: always;
+  }
 }

@@ -1,0 +1,29 @@
+.section{
+  width: 100vw;
+  overflow: hidden;
+
+  -webkit-align-items: center;
+  align-items: center;
+
+  -webkit-justify-content: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.content {
+  max-width: 42rem;
+  width: 100%;
+
+  letter-spacing: normal;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.125rem;
+  word-spacing: 0.2rem;
+  line-height: 2.2rem;
+}
+
+@media print {
+  .content {
+    max-width: 100%;
+  }
+}
