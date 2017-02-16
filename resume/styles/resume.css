@@ -1,0 +1,55 @@
+@import '../../styles/global.css';
+@import '../../styles/layout.css';
+@import '../../styles/interior.css';
+@import '../../styles/section.css';
+@import '../../styles/header.css';
+
+.section:nth-of-type(1n+2) {
+  padding: 6rem 0;
+}
+
+.section:nth-of-type(2) {
+  padding-top: 0;
+}
+
+p.context {
+  color: rgba(0, 0, 0, 0.65);
+  font-style: italic;
+  font-size: 1rem;
+}
+
+h3 {
+  margin-top: 5rem !important;
+}
+
+h3:first-of-type {
+  margin-top: inherit !important;
+}
+
+#brands{
+  list-style:none;
+  flex-wrap: nowrap;
+}
+
+#brands li{
+  padding: 0 0.4rem 0 0.4rem;
+  margin: 0;
+  flex: 1 1 auto;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#brands li:first-child{
+  padding-left: 0;
+}
+
+#brands li:last-child{
+  padding-right: 0;
+}
+
+#brands img{
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}

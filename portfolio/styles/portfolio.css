@@ -1,0 +1,61 @@
+@import '../../styles/global.css';
+@import '../../styles/layout.css';
+@import '../../styles/interior.css';
+@import '../../styles/section.css';
+@import '../../styles/header.css';
+
+.case-study {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.case-study .content {
+  background-color: rgba(0, 0, 0, 0.07);
+  padding: 1rem 1rem 0.6rem 1rem;
+  text-decoration: none;
+}
+
+.case-study a {
+  text-decoration: none;
+}
+
+.case-study h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  text-decoration: underline;
+}
+
+.case-study a:hover h2 {
+  text-decoration: line-through;
+}
+
+.case-study .sneakpeek {
+  width: 100%;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#ar-concept .sneakpeek {
+  background-image: url(../ar-concept/assets/storyboard.png);
+  background-position: 98% 57%;
+  background-size: 112%;
+}
+
+#viewmaster .sneakpeek {
+  background-image: url('../viewmaster/assets/Viewmaster Icons-FINAL-03.png');
+  background-position: 47% 22%;
+  background-size: 112%;
+}
+
+#hex .sneakpeek {
+  background-image: url(../hex/assets/version-two.png);
+  background-position: 53% 60%;
+  background-size: 110%;
+}
+
+#castl .sneakpeek {
+  background-image: url(../castl/assets/masthead.jpg);
+  background-position: 50%;
+  background-size: cover;
+}

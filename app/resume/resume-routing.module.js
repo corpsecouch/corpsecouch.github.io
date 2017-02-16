@@ -8,9 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var resume_component_1 = require("./resume.component");
+var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
+var resume_component_1 = require('./resume.component');
 var routes = [
     {
         path: 'resume',
@@ -20,18 +20,18 @@ var routes = [
 var ResumeRoutingModule = (function () {
     function ResumeRoutingModule() {
     }
+    ResumeRoutingModule = __decorate([
+        core_1.NgModule({
+            imports: [
+                router_1.RouterModule.forRoot(routes)
+            ],
+            exports: [
+                router_1.RouterModule
+            ]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], ResumeRoutingModule);
     return ResumeRoutingModule;
 }());
-ResumeRoutingModule = __decorate([
-    core_1.NgModule({
-        imports: [
-            router_1.RouterModule.forRoot(routes)
-        ],
-        exports: [
-            router_1.RouterModule
-        ]
-    }),
-    __metadata("design:paramtypes", [])
-], ResumeRoutingModule);
 exports.ResumeRoutingModule = ResumeRoutingModule;
 //# sourceMappingURL=resume-routing.module.js.map

@@ -13,8 +13,8 @@ var platform_browser_1 = require('@angular/platform-browser');
 var http_1 = require('@angular/http');
 var app_component_1 = require('./app.component');
 var app_routing_module_1 = require('./app-routing.module');
-var resume_module_1 = require('./resume/resume.module');
-var portfolio_module_1 = require('./portfolio/portfolio.module');
+//import { ResumeModule }                 from './resume/resume.module';
+//import { PortfolioModule }              from './portfolio/portfolio.module';
 var homepage_module_1 = require('./homepage/homepage.module');
 var AppModule = (function () {
     function AppModule() {
@@ -24,8 +24,8 @@ var AppModule = (function () {
             imports: [
                 platform_browser_1.BrowserModule,
                 http_1.HttpModule,
-                resume_module_1.ResumeModule,
-                portfolio_module_1.PortfolioModule,
+                //ResumeModule,
+                //PortfolioModule,
                 homepage_module_1.HomepageModule,
                 app_routing_module_1.AppRoutingModule
             ],

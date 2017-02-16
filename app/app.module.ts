@@ -6,8 +6,8 @@ import { HttpModule }                   from '@angular/http';
 import { AppComponent }                 from './app.component';
 import { AppRoutingModule }             from './app-routing.module';
 
-import { ResumeModule }                 from './resume/resume.module';
-import { PortfolioModule }              from './portfolio/portfolio.module';
+//import { ResumeModule }                 from './resume/resume.module';
+//import { PortfolioModule }              from './portfolio/portfolio.module';
 import { HomepageModule }               from './homepage/homepage.module';
 
 
@@ -15,8 +15,8 @@ import { HomepageModule }               from './homepage/homepage.module';
   imports: [
     BrowserModule,
     HttpModule,
-    ResumeModule,
-    PortfolioModule,
+    //ResumeModule,
+    //PortfolioModule,
     HomepageModule,
     AppRoutingModule
   ],

@@ -1,0 +1,47 @@
+@import '../../styles/global.css';
+@import '../../styles/layout.css';
+@import '../../styles/interior.css';
+@import '../../styles/section.css';
+@import '../../styles/header.css';
+@import 'visual-example.css';
+
+.visual-example {
+  margin-top: 1.5rem;
+}
+
+@media screen {
+  .section:nth-child(even){
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* header overrides */
+
+.header {
+  color: rgba(255, 255, 255, 0.9);
+
+  margin: 0;
+
+  background-color: rgba(0, 0, 0, 0.9);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  -webkit-clip-path:  polygon(0 0, 90% 2%, 100% 0, 100% 100%, 10% 98%, 0 100%);
+  clip-path:          polygon(0 0, 90% 2%, 100% 0, 100% 100%, 10% 98%, 0 100%);
+
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.9);
+}
+
+.header .wrap {
+  background-color: rgba(0, 0, 0, 0.55);
+  justify-content: center;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+@media print {
+  .header .content {
+    padding: 0 6rem;
+  }
+}
