@@ -68,6 +68,10 @@ ul:last-child {
   margin-bottom: 0;
 }
 
+li ul {
+  list-style: circle;
+}
+
 ul > li{
   margin-left:2rem;
   /*margin-bottom: 0.3rem;*/
