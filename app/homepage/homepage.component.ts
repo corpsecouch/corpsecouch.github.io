@@ -4,7 +4,6 @@ import { Title }      from '@angular/platform-browser';
 @Component({
   styleUrls: [
     'styles/layout.css',
-    'app/resume/components/section.styles.css',
     'app/homepage/homepage.styles.css'
   ],
   template: `
