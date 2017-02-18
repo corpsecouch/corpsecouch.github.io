@@ -24,6 +24,11 @@
   line-height: 2.2rem;
 }
 
+#copywrite {
+  background-color: transparent;
+  margin-bottom: 0;
+}
+
 @media print {
   .section {
     padding: 3rem 0;

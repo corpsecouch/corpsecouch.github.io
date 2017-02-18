@@ -28,6 +28,11 @@ a:hover {
   text-decoration: line-through;
 }
 
+#copywrite{
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
 @page {
   margin: 2cm;
 }
