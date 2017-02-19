@@ -3,13 +3,10 @@
 @import '../../styles/interior.css';
 @import '../../styles/section.css';
 @import '../../styles/header.css';
+@import '../../styles/navigation.css';
 
 .section:nth-of-type(1n+2) {
   padding: 6rem 0;
-}
-
-.section:nth-of-type(2) {
-  padding-top: 0;
 }
 
 p.context {

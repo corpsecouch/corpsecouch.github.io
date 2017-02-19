@@ -3,6 +3,7 @@
 @import '../../styles/interior.css';
 @import '../../styles/section.css';
 @import '../../styles/header.css';
+@import '../../styles/navigation.css';
 @import 'visual-example.css';
 
 .visual-example {
@@ -10,9 +11,17 @@
 }
 
 @media screen {
-  .section:nth-child(even){
+  .section.content:nth-child(2n+1){
     background-color: rgba(0, 0, 0, 0.05);
   }
+}
+
+#nav {
+  padding-bottom: 0.5rem;
+}
+
+#nav .content {
+  border: none;
 }
 
 /* header overrides */
