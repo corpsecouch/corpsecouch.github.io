@@ -5,6 +5,11 @@
 @import '../../styles/header.css';
 @import '../../styles/navigation.css';
 
+.date {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
 .case-study {
   padding-top: 0;
   padding-bottom: 3rem;
@@ -12,7 +17,7 @@
 
 .case-study .content {
   background-color: rgba(0, 0, 0, 0.07);
-  padding: 1rem 1rem 0.6rem 1rem;
+  padding: 1rem 1rem 1.5rem 1rem;
   text-decoration: none;
 }
 
@@ -20,9 +25,13 @@
   text-decoration: none;
 }
 
+.case-study p + p {
+  margin-top: 1rem;
+}
+
 .case-study h2 {
   margin-top: 2rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0;
   text-decoration: underline;
 }
 
