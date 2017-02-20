@@ -14,6 +14,7 @@ h1, h2 {
 h1 {
   font-size: 3.5rem;
   letter-spacing: 0.2rem;
+  line-height: 1.1em;
 }
 
 h2 {

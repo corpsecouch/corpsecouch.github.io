@@ -6,7 +6,8 @@
 @import '../../styles/navigation.css';
 
 .section:nth-of-type(1n+2) {
-  padding: 6rem 0;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 p.context {

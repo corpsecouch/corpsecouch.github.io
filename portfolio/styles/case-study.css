@@ -26,6 +26,11 @@
 
 /* header overrides */
 
+.header.section {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .header {
   color: rgba(255, 255, 255, 0.9);
 
@@ -48,7 +53,7 @@
   background-color: rgba(0, 0, 0, 0.55);
   justify-content: center;
   position: relative;
-  padding-bottom: 1rem;
+  padding: 0 1rem 1rem 1rem;
 }
 
 @media print {
