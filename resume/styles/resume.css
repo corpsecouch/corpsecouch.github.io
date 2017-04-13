@@ -29,7 +29,7 @@ h3:first-of-type {
   margin-top: inherit !important;
 }
 
-#brands{
+/*#brands{
   list-style:none;
   flex-wrap: nowrap;
 }
@@ -55,7 +55,7 @@ h3:first-of-type {
   display: block;
   max-width: 100%;
   max-height: 100%;
-}
+}*/
 
 @media print {
   #nav {
@@ -85,5 +85,24 @@ h3:first-of-type {
 
   .header .content:after {
     content: 'Portfolio: jasonbejot.com/portfolio';
+  }
+
+  #brands {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #brands li {
+    width: 25%;
   }
 }
