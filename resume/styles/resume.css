@@ -15,11 +15,25 @@
   padding-bottom: 3rem;
 }
 
+.section .content {
+  font-size: 0.9rem;
+  line-height: 1.8rem;
+}
+
 p.context {
   color: rgba(0, 0, 0, 0.65);
   font-style: italic;
-  font-size: 1rem;
+  /*font-size: 0.9rem;*/
 }
+
+p.context + p {
+  margin-top: 0;
+}
+
+/*h2 {
+  border-bottom: solid rgba(0, 0, 0, 0.85) 1px;
+  padding-bottom: 0.5rem;
+}*/
 
 h3 {
   margin-top: 5rem !important;
@@ -27,6 +41,29 @@ h3 {
 
 h3:first-of-type {
   margin-top: inherit !important;
+}
+
+h4 {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: 0.85rem;
+}
+
+* + h5 {
+  margin-top: 1rem;
+}
+
+h5 + ul {
+  margin-top: 0;
+}
+
+.role {
+  margin-top: 2rem;
+  border-left: solid rgba(0, 0, 0, 0.1) 0.2rem;
+  padding-left: 1rem;
 }
 
 /*#brands{
