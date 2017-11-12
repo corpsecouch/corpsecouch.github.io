@@ -10,7 +10,7 @@ import { Book }           from '../data/book';
 
 export class GoodreadsService {
 
-  private server:string = 'http://jb-api-jasonbejot.7e14.starter-us-west-2.openshiftapps.com';
+  private server:string = 'http://jb-api-jasonbejot.7e14.starter-us-west-2.openshiftapps.com/';
   private currentEndpoint:string = 'goodreads/current';
   private readEndpoint:string = 'goodreads/read';
 

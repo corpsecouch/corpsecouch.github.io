@@ -8,15 +8,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var http_1 = require("@angular/http");
-var Observable_1 = require("rxjs/Observable");
-require("rxjs/add/operator/map");
-require("rxjs/add/operator/catch");
+var core_1 = require('@angular/core');
+var http_1 = require('@angular/http');
+var Observable_1 = require('rxjs/Observable');
+require('rxjs/add/operator/map');
+require('rxjs/add/operator/catch');
 var GoodreadsService = (function () {
     function GoodreadsService(http) {
         this.http = http;
-        this.server = 'http://jb-api-jasonbejot.7e14.starter-us-west-2.openshiftapps.com';
+        this.server = 'http://jb-api-jasonbejot.7e14.starter-us-west-2.openshiftapps.com/';
         this.currentEndpoint = 'goodreads/current';
         this.readEndpoint = 'goodreads/read';
     }
@@ -42,11 +42,11 @@ var GoodreadsService = (function () {
         console.error(err);
         return Observable_1.Observable.throw(err.message);
     };
+    GoodreadsService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [http_1.Http])
+    ], GoodreadsService);
     return GoodreadsService;
 }());
-GoodreadsService = __decorate([
-    core_1.Injectable(),
-    __metadata("design:paramtypes", [http_1.Http])
-], GoodreadsService);
 exports.GoodreadsService = GoodreadsService;
 //# sourceMappingURL=goodreads.service.js.map
