@@ -10,7 +10,7 @@ import { Article }           from '../data/article';
 
 export class MediumService {
 
-  private endpoint:string = 'https://api-skullnbones.rhcloud.com/medium/posts';
+  private endpoint:string = 'http://jb-api-jasonbejot.7e14.starter-us-west-2.openshiftapps.com/medium/posts';
 
   constructor(private http:Http){ }
 

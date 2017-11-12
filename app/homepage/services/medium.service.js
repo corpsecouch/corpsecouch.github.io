@@ -8,16 +8,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var http_1 = require('@angular/http');
-var Observable_1 = require('rxjs/Observable');
-require('rxjs/add/operator/map');
-require('rxjs/add/operator/catch');
-var article_1 = require('../data/article');
+var core_1 = require("@angular/core");
+var http_1 = require("@angular/http");
+var Observable_1 = require("rxjs/Observable");
+require("rxjs/add/operator/map");
+require("rxjs/add/operator/catch");
+var article_1 = require("../data/article");
 var MediumService = (function () {
     function MediumService(http) {
         this.http = http;
-        this.endpoint = 'https://api-skullnbones.rhcloud.com/medium/posts';
+        this.endpoint = 'http://jb-api-jasonbejot.7e14.starter-us-west-2.openshiftapps.com/medium/posts';
     }
     MediumService.prototype.getRecentArticles = function () {
         return this.http
@@ -37,11 +37,11 @@ var MediumService = (function () {
         console.error(err);
         return Observable_1.Observable.throw(err.message);
     };
-    MediumService = __decorate([
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.Http])
-    ], MediumService);
     return MediumService;
 }());
+MediumService = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [http_1.Http])
+], MediumService);
 exports.MediumService = MediumService;
 //# sourceMappingURL=medium.service.js.map
