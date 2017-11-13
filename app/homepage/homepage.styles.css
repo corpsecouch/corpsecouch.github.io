@@ -150,8 +150,8 @@ medium{
   background: linear-gradient(to bottom,  rgba(221,45,237,1) 0%,rgba(170,36,193,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dd2ded', endColorstr='#aa24c1',GradientType=0 ); /* IE6-9 */
 
-  -webkit-clip-path:  polygon(0 0, 90% 2%, 100% 0, 100% 100%, 10% 98%, 0 100%);
-  clip-path:          polygon(0 0, 90% 2%, 100% 0, 100% 100%, 10% 98%, 0 100%);
+  /*-webkit-clip-path:  polygon(0 0, 90% 2%, 100% 0, 100% 100%, 10% 98%, 0 100%);
+  clip-path:          polygon(0 0, 90% 2%, 100% 0, 100% 100%, 10% 98%, 0 100%);*/
 }
 
 goodreads-read{

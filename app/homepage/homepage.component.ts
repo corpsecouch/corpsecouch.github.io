@@ -12,7 +12,7 @@ import { Title }      from '@angular/platform-browser';
   </div>
 
   <div class="flex row section" id="live">
-    <div class="content">I live in Los Angeles where I'm the lead user experience architect for <a href="http://www.disney.com/" target="_blank"> Walt Disney Studios</a>.</div>
+    <div class="content">I live in Seattle where I design the future of Alexa and Artificial Intelligence for <a href="http://www.amazon.com/" target="_blank">Amazon</a>.</div>
   </div>
 
   <div class="flex row section" id="social">
