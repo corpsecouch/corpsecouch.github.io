@@ -1,8 +1,8 @@
 import _ from 'lodash';
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Index from 'components/Index';
-import FourOhFour from 'components/FourOhFour';
+import Index from 'pages/Index';
+import FourOhFour from 'pages/FourOhFour';
 Vue.use(VueRouter);
 
 const routes = [

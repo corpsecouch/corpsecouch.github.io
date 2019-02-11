@@ -1,26 +1,39 @@
 <template>
   <div>
+    <Hero></Hero>
+    <CaseStudies></CaseStudies>
+  </div>
+  <!--<div>
     <img src="static/Oval@1x.png">
     <SocialIcons id="icons"></SocialIcons>
-  </div>
+  </div>-->
 </template>
 
 <script>
   import SocialIcons from 'components/SocialIcons';
+  import Hero from 'components/Hero';
+  import CaseStudies from 'components/CaseStudies';
 
   export default {
     name: 'Index',
 
     components: {
-      SocialIcons
+      //SocialIcons
+      Hero,
+      CaseStudies
     }
 
   }
 </script>
 
 <style lang="css">
-  html{
-    background-color: #131312;
+  html {
+    /*background-color: #131312;*/
+    background-color: white;
+  }
+
+  body {
+    margin: 0;
   }
 </style>
 
