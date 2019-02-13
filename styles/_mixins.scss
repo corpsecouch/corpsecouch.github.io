@@ -1,0 +1,22 @@
+/* screen sizes */
+@mixin screen-sm {
+  @media all and (max-width: 575px) { @content; }
+}
+
+@mixin screen-md {
+  @media all and (max-width: 768px) { @content; }
+}
+
+@mixin screen-lg {
+  @media all and (max-width: 991px) { @content; }
+}
+
+@mixin screen-xl {
+  /*@media all and (max-width: 1199px) { @content; }*/
+  @media all and (min-width: 992px) { @content; }
+}
+
+/* fonts */
+@mixin font-raleway {
+  font-family: 'Raleway', sans-serif;
+}

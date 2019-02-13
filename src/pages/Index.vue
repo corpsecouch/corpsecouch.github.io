@@ -1,54 +1,66 @@
 <template>
-  <div>
-    <Hero></Hero>
-    <CaseStudies></CaseStudies>
-  </div>
-  <!--<div>
-    <img src="static/Oval@1x.png">
-    <SocialIcons id="icons"></SocialIcons>
-  </div>-->
+  <main>
+    <Intro></Intro>
+    <DisneyExperience class="text-light"></DisneyExperience>
+    <AceMetrixExperience class="text-light"></AceMetrixExperience>
+    <PhenomblueExperience class="text-light"></PhenomblueExperience>
+    <AboutMe class="text-light"></AboutMe>
+  </main>
 </template>
 
 <script>
-  import SocialIcons from 'components/SocialIcons';
-  import Hero from 'components/Hero';
-  import CaseStudies from 'components/CaseStudies';
+  import Intro from 'components/Intro';
+  import AboutMe from 'components/AboutMe';
+  import DisneyExperience from 'components/DisneyExperience';
+  import AceMetrixExperience from 'components/AceMetrixExperience';
+  import PhenomblueExperience from 'components/PhenomblueExperience';
 
   export default {
     name: 'Index',
 
     components: {
-      //SocialIcons
-      Hero,
-      CaseStudies
+      Intro,
+      AboutMe,
+      DisneyExperience,
+      AceMetrixExperience,
+      PhenomblueExperience,
     }
 
   }
 </script>
 
-<style lang="css">
-  html {
-    /*background-color: #131312;*/
-    background-color: white;
+<style lang="scss">
+  @import "styles/_global";
+
+  .text-light {
+    section {
+      color: rgba(255, 255, 255, 0.6);  
+    }
+
+    header {
+      color: rgba(255, 255, 255, 1);
+    }
   }
 
-  body {
-    margin: 0;
-  }
-</style>
+  main {
+    /*> *:nth-child(2n) {
 
-<style scoped lang="css">
-  img, #icons{
-    display: block;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    }
+
+    > *:nth-child(2n+2) {
+      background-color: $color-backgroundgrey;
+    }
+
+    > *:nth-child(3) {
+      background-color: $color-19-korea;
+    }
+
+    > *:nth-child(5) {
+      background-color: $color-19-plasticpink;
+    }
+
+    */
   }
 
-  #icons{
-    margin-top: 140px;
-    width: 250px;
-  }
+
 </style>

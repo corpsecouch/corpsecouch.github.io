@@ -38,12 +38,32 @@ module.exports = {
           'vue-style-loader',
           'css-loader'
         ]
+      },
+
+      {
+        test: /\.scss$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          /*'sass-loader'*/
+          {
+            loader: 'sass-loader',
+            options: {
+              data: `
+                @import "styles/_fonts.scss";
+                @import "styles/_colors.scss";
+                @import "styles/_mixins.scss";
+              `
+            }
+          }
+        ]
       }
+
     ]
   },
 
   resolve: {
-    extensions: ['.vue', '.js', '.css'],
+    extensions: ['.vue', '.js', '.css', '.scss'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       'components': path.resolve(__dirname, 'src/components/'),
