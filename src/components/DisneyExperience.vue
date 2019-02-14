@@ -1,5 +1,5 @@
 <template>
-  <ExperienceTemplate src="https://picsum.photos/800/400/?random">
+  <ExperienceTemplate class="poop" src="https://picsum.photos/800/400/?random">
     <template v-slot:role>
       Sr. UX Architect + Lead
     </template>
@@ -24,7 +24,11 @@
 </script>
 
 <style scoped lang="scss">
-  & {
+
+.poop {
+  background-color: green;
+}
+  /*& {
     background-color: $color-backgroundgrey;
-  }
+  }*/
 </style>

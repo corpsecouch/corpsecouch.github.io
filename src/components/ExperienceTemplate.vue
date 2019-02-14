@@ -4,7 +4,7 @@
       <div id="description">
         <span id="role"><slot name="role">role</slot></span>
         <header><slot name="title">title</slot></header>
-        <span id="details"><slot name="details">details</slot></span>
+        <p id="details"><slot name="details">details</slot></p>
       </div>
     </SectionTemplate>
 </template>
@@ -22,6 +22,8 @@
 </script>
 
 <style scoped lang="scss">
+
+
   #description {
     @include screen-xl {
       width: 50%;
@@ -62,7 +64,6 @@
   }
 
   header {
-    @include font-raleway;
     font-weight: 300;
     font-size: 1.8em;
     line-height: 1.2;
@@ -72,10 +73,10 @@
     }
   }
 
-  #details {
-    @include font-raleway;
+  p {
     line-height: 1.3;
     font-size: 1em;
-    line-height: 1.4;
+    line-height: 1.3;
+    letter-spacing: 0.4px;
   }
 </style>
