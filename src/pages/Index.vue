@@ -29,7 +29,7 @@
         Between March and October of 2013, I was the head of design for Ace Metrix.
       </template>
       <template v-slot:details>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc enim est, porttitor ac nunc quis, fringilla posuere risus. Mauris ornare mattis arcu, bibendum sodales libero elementum et. Nam mattis varius tortor ac imperdiet. Aliquam egestas, sem at consequat vestibulum, urna diam fermentum odio.
+        Starting out as a Sr. UI Engineer, I quickly switched to a leadership role by building out their in-house design team. I worked closely with engineering, product, data scientists and R&amp;D to strategize and create a B2B product for assessing and measuring the impact of video advertising. Our work has influenced brand advertising and decision making across 2,500 brands and 80k ads measured across 25MM viewers.
       </template>
     </ExperienceTemplate>
 
@@ -42,16 +42,18 @@
         At Phenomblue, I led R&amp;D and UX design for 5 years.
       </template>
       <template v-slot:details>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc enim est, porttitor ac nunc quis, fringilla posuere risus. Mauris ornare mattis arcu, bibendum sodales libero elementum et. Nam mattis varius tortor ac imperdiet. Aliquam egestas, sem at consequat vestibulum, urna diam fermentum odio.
+        During my time at Phenomblue, I led a wide range of exciting and innovative projects for brands including Gatorade, McDonalds, Samsung, Eli Lily, Microsoft and GlaxoSmithKline. Being early in my career, I learned how to juggle multiple projects at once, move quickly and combine creativity, strategy and technical knowledge to drive innovation.
       </template>
     </ExperienceTemplate>
 
     <!-- about me -->
     <SectionTemplate id="about" class="text-light">
       <header>About Me</header>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc enim est, porttitor ac nunc quis, fringilla posuere risus. Mauris ornare mattis arcu, bibendum sodales libero elementum et.</p>
-      <p>Nam mattis varius tortor ac imperdiet. Aliquam egestas, sem at consequat vestibulum, urna diam fermentum odio, eget congue tellus sem nec enim. Suspendisse finibus turpis arcu, ac porta ante cursus id. Ut aliquam lobortis dictum. Curabitur commodo aliquam elit sit amet viverra. Sed tristique dui in tincidunt malesuada.</p>
-      <p>Mauris vehicula fringilla neque, eu porta risus venenatis ac. Pellentesque ultricies maximus sagittis. Morbi tortor ante, fermentum eu vehicula in, pretium non leo. Cras ornare urna eu arcu dignissim finibus.</p>
+      <p>Early on in my career I knew I wanted to impact people's lives for the better. Getting a Computer Science degree was completely motivated by wanting to make games to entertain people.</p>
+      <p>I transitioned into design when I realized I had a knack for understanding how people interacted things and expected things to work. As an experience designer I've been able to create things that delight and drive business (of course). But more importantly, and what I'm most passionate about, I'm able to add value to people's lives.</p>
+      <p>Combined with my deep science and technical background, I routinely drive technical innovation through the lens of the experience. Having been elected to the innovation council at Phenomblue and recieving three Disney Inventor Awards and an patent.</p>
+      <p>In a previous life I was musician writing and playing spacy guitar riffs in The Answer Team, touring and recording two albums. Then I was a biker tempting fate on treacherous, twisty canyon roads in the southern California mountains. But all of this was after I was a farm-boy living in the middle of a corn field, helping manage 5,000 acres of corn and 30,000 head of cattle.</p>
+      <p>I currently live in Seattle with my wife and daughter.</p>
     </SectionTemplate>
 
   </main>
@@ -80,11 +82,17 @@
   header, p {
     @include font-raleway;
   }
+
+  p {
+    line-height: 1.3;
+    font-size: 0.9em;
+    letter-spacing: 0.4px;
+  }
 </style>
 
 <style scoped lang="scss">
   .text-light {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.8);
 
     /deep/ header {
       color: rgba(255, 255, 255, 1);
@@ -95,6 +103,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-height: 90vh;
 
     /deep/ .container {
 
@@ -171,14 +180,10 @@
     }
 
     p {
-      line-height: 1.3;
-      font-size: 0.9em;
-
        /deep/ + p {
          padding-top: 1em;
        }
      }
    }
-
 
 </style>

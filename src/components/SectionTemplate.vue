@@ -15,7 +15,6 @@
 <style scoped lang="scss">
   section {
     padding: 6em 0;
-    min-height: 90vh;
     color: rgb(51, 51, 51);
     width: 100%;
   }

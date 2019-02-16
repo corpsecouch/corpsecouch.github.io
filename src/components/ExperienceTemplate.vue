@@ -72,11 +72,4 @@
       margin-top: 0.6em;
     }
   }
-
-  p {
-    line-height: 1.3;
-    font-size: 1em;
-    line-height: 1.3;
-    letter-spacing: 0.4px;
-  }
 </style>
