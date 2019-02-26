@@ -92,7 +92,7 @@
 
 <style scoped lang="scss">
   .text-light {
-    color: rgba(255, 255, 255, 0.8);
+    color: $color-lighttext;
 
     /deep/ header {
       color: rgba(255, 255, 255, 1);
@@ -132,7 +132,7 @@
       }
 
       a {
-        color: rgb(247, 72, 82);
+        color: $color-link;
         text-decoration: none;
         cursor: pointer;
         font-weight: 500;
