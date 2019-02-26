@@ -3,7 +3,11 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Index from 'pages/Index';
 import FourOhFour from 'pages/FourOhFour';
+import VeeValidate from 'vee-validate';
+
+// plugins
 Vue.use(VueRouter);
+Vue.use(VeeValidate);
 
 const routes = [
   { path: '/', component: Index },
