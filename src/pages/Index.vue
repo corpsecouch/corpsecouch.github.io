@@ -3,14 +3,14 @@
 
     <!-- intro -->
     <SectionTemplate id="intro">
-      <header>Hi! My name is Jason and I'm currently leading design on Amazon's Alexa Identity team.</header>
+      <header>Hi! My name is Jason and I'm currently leading experience design on Amazon's Alexa Identity team.</header>
       <p>Before taking a role in Amazon in July 2017, I led the UX design team at <a href="http://thewaltdisneycompany.com" target="_blank">Walt Disney Studios</a>. Check out my <a href="http://linkedin.com/in/jasonbejot" target="_blank">LinkedIn</a> profile to learn more. Follow me on <a href="http://twitter.com/jasonbejot" target="_blank">Twitter</a> for my random thoughts or read my articles on <a href="http://medium.com/@jasonbejot" target="_blank">Medium</a>.</p>
     </SectionTemplate>
 
     <!-- disney -->
     <ExperienceTemplate id="disney" class="text-light" src="https://picsum.photos/800/400/?random">
       <template v-slot:role>
-        Sr. UX Architect + Lead
+        Sr. UX Architect &amp; Lead
       </template>
       <template v-slot:title>
         From October 2013 to July 2017, I led UX design for Walt Disney Studios Technology.
@@ -49,11 +49,12 @@
     <!-- about me -->
     <SectionTemplate id="about" class="text-light">
       <header>About Me</header>
-      <p>Early on in my career I knew I wanted to impact people's lives for the better. Getting a Computer Science degree was completely motivated by wanting to make games to entertain people.</p>
+      <p>Early in my career I knew I wanted to impact people's lives for the better. Getting a Computer Science degree was completely motivated by wanting to make games to entertain people.</p>
       <p>I transitioned into design when I realized I had a knack for understanding how people interacted things and expected things to work. As an experience designer I've been able to create things that delight and drive business (of course). But more importantly, and what I'm most passionate about, I'm able to add value to people's lives.</p>
       <p>Combined with my deep science and technical background, I routinely drive technical innovation through the lens of the experience. Having been elected to the innovation council at Phenomblue and recieving three Disney Inventor Awards and an patent.</p>
       <p>In a previous life I was musician writing and playing spacy guitar riffs in The Answer Team, touring and recording two albums. Then I was a biker tempting fate on treacherous, twisty canyon roads in the southern California mountains. But all of this was after I was a farm-boy living in the middle of a corn field, helping manage 5,000 acres of corn and 30,000 head of cattle.</p>
       <p>I currently live in Seattle with my wife and daughter.</p>
+      <footer>&copy; Jason Bejot</footer>
     </SectionTemplate>
 
   </main>
@@ -79,11 +80,11 @@
 <style lang="scss">
   @import "styles/_global";
 
-  header, p {
+  header, p, footer {
     @include font-raleway;
   }
 
-  p {
+  p, footer {
     line-height: 1.3;
     font-size: 0.9em;
     letter-spacing: 0.4px;
@@ -107,7 +108,7 @@
 
     /deep/ .container {
 
-      header, p {
+      * {
         margin: 0 auto;
 
         @include screen-xl { width: 70%; }
@@ -154,10 +155,11 @@
 
   #about {
     background-color: $color-19-plasticpink;
+    padding-bottom: 3em;
 
     /deep/ .container {
 
-      header, p {
+    * {
         margin: 0 auto;
 
         @include screen-xl { width: 50%; }
@@ -179,11 +181,16 @@
       }
     }
 
-    p {
-       /deep/ + p {
-         padding-top: 1em;
-       }
-     }
+    p, footer {
+      /deep/ + * {
+       padding-top: 1em;
+      }
+    }
+
+    footer {
+      padding-top: 3em;
+      text-align: center;
+    }
    }
 
 </style>
