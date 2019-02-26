@@ -72,6 +72,12 @@
     components: {
       ExperienceTemplate,
       SectionTemplate
+    },
+
+    methods: {
+      track() {
+        this.$ga.page('/');
+      }
     }
 
   }
