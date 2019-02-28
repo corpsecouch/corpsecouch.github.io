@@ -8,7 +8,8 @@
     </SectionTemplate>
 
     <!-- disney -->
-    <ExperienceTemplate id="disney" class="text-light" src="https://picsum.photos/800/400/?random">
+    <ExperienceTemplate id="disney" class="text-light" src="static/disney.png">
+    <!--<ExperienceTemplate id="disney" class="text-light">-->
       <template v-slot:role>
         Sr. UX Architect &amp; Lead
       </template>
@@ -21,7 +22,7 @@
     </ExperienceTemplate>
 
     <!-- ace metrix -->
-    <ExperienceTemplate id="ace" class="text-light" src="https://picsum.photos/800/400/?random">
+    <ExperienceTemplate id="ace" class="text-light" src="static/ace metrix.png">
       <template v-slot:role>
         Creative Director
       </template>
@@ -34,7 +35,7 @@
     </ExperienceTemplate>
 
     <!-- phenomblue -->
-    <ExperienceTemplate id="phenom" class="text-light" src="https://picsum.photos/800/400/?random">
+    <ExperienceTemplate id="phenom" class="text-light" src="static/phenomblue.png">
       <template v-slot:role>
         Sr. UX Designer
       </template>
@@ -149,6 +150,10 @@
 
   #disney {
     background-color: $color-backgroundgrey;
+
+    /*/deep/ .container {
+      background-image: url('~../../static/disney.png');
+    }*/
   }
 
   #ace {
@@ -157,6 +162,17 @@
 
   #phenom {
     background-color: $color-backgroundgrey;
+
+    /deep/ .description {
+      position: relative;
+      @include screen-xl { top: -350px; }
+
+      @include screen-lg { top: -250px; }
+
+      @include screen-md { top: -175px; }
+
+      @include screen-sm { top: 0px; }
+    }
   }
 
   #about {
