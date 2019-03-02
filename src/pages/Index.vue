@@ -163,7 +163,7 @@
   #phenom {
     background-color: $color-backgroundgrey;
 
-    /deep/ .description {
+    /*/deep/ .description {
       position: relative;
       @include screen-xl { top: -350px; }
 
@@ -172,7 +172,7 @@
       @include screen-md { top: -175px; }
 
       @include screen-sm { top: 0px; }
-    }
+    }*/
   }
 
   #about {
