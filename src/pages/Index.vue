@@ -9,28 +9,27 @@
 
     <!-- disney -->
     <ExperienceTemplate id="disney" class="text-light" src="static/disney.png">
-    <!--<ExperienceTemplate id="disney" class="text-light">-->
       <template v-slot:role>
-        Sr. UX Architect &amp; Lead
+        Principal UX
       </template>
       <template v-slot:title>
         From October 2013 to July 2017, I led UX design for Walt Disney Studios Technology.
       </template>
       <template v-slot:details>
-        I started out as the sole designer and built a team that, at it's largest, totalled 16 people. I worked closely with the team, product, engineers and senior leadership across the company creating it's proprietary enterprise products and processes. I played a key role in evolving how the studio operates it's business.
+        Starting out as the sole designer, I helped build a large centralized design team within the Disney Studios Technology Group. I managed designers and worked closely with product, engineers and senior leadership across the company to create it's suite of 150+ proprietary enterprise products. I played a key role in evolving how the studio operates it's business.
       </template>
     </ExperienceTemplate>
 
     <!-- ace metrix -->
     <ExperienceTemplate id="ace" class="text-light" src="static/ace metrix.png">
       <template v-slot:role>
-        Creative Director
+        Head of Design
       </template>
       <template v-slot:title>
         Between March and October of 2013, I was the head of design for Ace Metrix.
       </template>
       <template v-slot:details>
-        Starting out as a Sr. UI Engineer, I quickly switched to a leadership role by building out their in-house design team. I worked closely with engineering, product, data scientists and R&amp;D to strategize and create a B2B product for assessing and measuring the impact of video advertising. Our work has influenced brand advertising and decision making across 2,500 brands and 80k ads measured across 25MM viewers.
+        After starting as their Sr. UI Engineer, I quickly moved into a leadership role by building out their in-house design team. We worked closely with engineering, product, data scientists and R&amp;D to strategize and create a B2B product for assessing and measuring the impact of video advertising. Our work has influenced advertising and marketing across 2,500 brands with more than 80k ads measured across 25MM viewers.
       </template>
     </ExperienceTemplate>
 
@@ -43,19 +42,27 @@
         At Phenomblue, I led R&amp;D and UX design for 5 years.
       </template>
       <template v-slot:details>
-        During my time at Phenomblue, I led a wide range of exciting and innovative projects for brands including Gatorade, McDonalds, Samsung, Eli Lily, Microsoft and GlaxoSmithKline. Being early in my career, I learned how to juggle multiple projects at once, move quickly and combine creativity, strategy and technical knowledge to drive innovation.
+        At Phenomblue, I led a wide range of exciting and innovative projects for major brands including Gatorade, McDonalds, Samsung, Eli Lily, Microsoft and GlaxoSmithKline. Being early in my career, I learned how to juggle multiple projects at once, move quickly and combine creativity, strategy and technical knowledge to drive innovation.
       </template>
     </ExperienceTemplate>
 
     <!-- about me -->
     <SectionTemplate id="about" class="text-light">
+
       <header>About Me</header>
-      <p>Early in my career I knew I wanted to impact people's lives for the better. Getting a Computer Science degree was completely motivated by wanting to make games to entertain people.</p>
-      <p>I transitioned into design when I realized I had a knack for understanding how people interacted things and expected things to work. As an experience designer I've been able to create things that delight and drive business (of course). But more importantly, and what I'm most passionate about, I'm able to add value to people's lives.</p>
-      <p>Combined with my deep science and technical background, I routinely drive technical innovation through the lens of the experience. Having been elected to the innovation council at Phenomblue and recieving three Disney Inventor Awards and an patent.</p>
-      <p>In a previous life I was musician writing and playing spacy guitar riffs in The Answer Team, touring and recording two albums. Then I was a biker tempting fate on treacherous, twisty canyon roads in the southern California mountains. But all of this was after I was a farm-boy living in the middle of a corn field, helping manage 5,000 acres of corn and 30,000 head of cattle.</p>
+
+      <p>I always knew I wanted to positively impact people's lives. Even my motivation for getting a Computer Science degree was to entertain and enrich lives by making games.</p>
+
+      <p>Growing up on a large family farm, I filled my days with immersive storytelling by playing RPGs and running D&amp;D campaigns. Once I was in college, I realized I had a talent for understanding how people expected things to work and gravitated towards HCI.</p>
+
+      <p>After spending a few years as an engineering lead I made the switch to experience design. I've been able to create things that delight millions of people and drive business (of course). Combined with my science and technical background, I've found a passion for driving innovation and invention through the lens of the experience. As a result I was elected to the innovation council at Phenomblue, received three Disney Inventor Awards, a patent, launched a product incubator within Disney Studios and was handpicked by the Disney Studios CTO to spearhead a Studio-wide innovation initiative.</p>
+
+      <p>In a previous life I was musician writing and playing spacy guitar riffs in The Answer Team, touring and recording two albums. Then I was a biker tempting fate on the treacherous, twisty Souther California canyon roads.</p>
+
       <p>I currently live in Seattle with my wife and daughter.</p>
+
       <footer>&copy; Jason Bejot</footer>
+
     </SectionTemplate>
 
   </main>
@@ -79,6 +86,13 @@
       track() {
         this.$ga.page('/');
       }
+    },
+
+    props: {
+      name: {
+        type: String,
+        default: 'Vue!'
+      }
     }
 
   }
@@ -87,7 +101,7 @@
 <style lang="scss">
   @import "styles/_global";
 
-  header, p, footer {
+  /*header, p, footer {
     @include font-raleway;
   }
 
@@ -95,7 +109,7 @@
     line-height: 1.3;
     font-size: 0.9em;
     letter-spacing: 0.4px;
-  }
+  }*/
 </style>
 
 <style scoped lang="scss">
