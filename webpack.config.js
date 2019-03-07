@@ -10,6 +10,14 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
 
+  // webpack-dev-server
+  devServer: {
+    //contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    //port: 9000,
+    //hot: true
+  },
+
   module: {
     rules: [
 
@@ -38,15 +46,48 @@ module.exports = {
           'vue-style-loader',
           'css-loader'
         ]
-      }
+      },
+
+      {
+        test: /\.scss$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          /*'sass-loader'*/
+          {
+            loader: 'sass-loader',
+            options: {
+              data: `
+                @import "styles/_fonts.scss";
+                @import "styles/_colors.scss";
+                @import "styles/_mixins.scss";
+              `
+            }
+          }
+        ]
+      }/*,
+
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]',
+            },
+          },
+        ],
+      }*/
+
     ]
   },
 
   resolve: {
-    extensions: ['.vue', '.js', '.css'],
+    extensions: ['.vue', '.js', '.css', '.scss'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      'components': path.resolve(__dirname, 'src/components/')
+      'components': path.resolve(__dirname, 'src/components/'),
+      'pages': path.resolve(__dirname, 'src/pages/')
     }
   },
 
