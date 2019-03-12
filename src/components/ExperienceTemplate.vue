@@ -1,6 +1,6 @@
 <template>
     <SectionTemplate>
-      <img :src="src">
+      <img :src="src" id="masthead">
       <div class="description">
         <span id="role"><slot name="role">role</slot></span>
         <header><slot name="title">title</slot></header>
@@ -14,7 +14,9 @@
 
   export default {
     name: 'ExperienceTemplate',
+
     props: ['src'],
+
     components: {
       SectionTemplate
     }
@@ -22,8 +24,6 @@
 </script>
 
 <style scoped lang="scss">
-
-
   .description {
     @include screen-xl {
       width: 50%;
@@ -44,16 +44,12 @@
     }
   }
 
-  /*#description > span {
-    display: block;
-  }*/
-
-  img {
+  #masthead {
     width: 100%;
+  }
 
-    + #description {
-      margin-top: 3em;
-    }
+  #description {
+    margin-top: 3em;
   }
 
   #role {

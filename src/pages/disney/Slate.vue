@@ -1,20 +1,19 @@
 <template>
-  <main>
-    <section>
-      <div class="container">
-        <div class="content">
-          <router-link to="/">Back</router-link>
-          <header>Disney Studios Slate</header>
-          
-        </div>
-      </div>
-    </section>
-  </main>
+  <PortfolioPage>
+    <router-link :to="{ name: 'portfolio' }">Back</router-link>
+    <header>Disney Studios Slate</header>
+  </PortfolioPage>
 </template>
 
 <script>
+  import PortfolioPage from 'components/PortfolioPage'
+
   export default {
     name: 'DisneySlate',
+
+    components: {
+      PortfolioPage
+    }
   }
 </script>
 
@@ -41,32 +40,5 @@
     + p {
       padding: 0;
     }
-  }
-
-  main {
-    padding: 10em 0;
-  }
-
-  section {
-    width: 100%;
-  }
-
-  .container {
-    box-sizing: border-box;
-    max-width: 990px;
-    margin: 0 auto;
-
-    @include screen-xl { width: 940px; }
-    @include screen-lg { width: 720px; }
-    @include screen-md { width: 86%; }
-    @include screen-sm { width: 90%; }
-  }
-
-  .content {
-    margin: 0 auto;
-    @include screen-xl { width: 70%; }
-    @include screen-lg { width: 70%; }
-    @include screen-md { width: 90%; }
-    @include screen-sm { width: 100%; }
   }
 </style>

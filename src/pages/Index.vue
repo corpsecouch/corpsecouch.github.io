@@ -1,6 +1,8 @@
 <template>
   <main>
 
+    <TopNav></TopNav>
+
     <!-- intro -->
     <SectionTemplate id="intro">
       <header>Hi! My name is Jason and I'm currently leading experience design on Amazon's Alexa Identity team.</header>
@@ -61,7 +63,7 @@
 
       <p>I currently live in Seattle with my wife and daughter.</p>
 
-      <footer>&copy; Jason Bejot</footer>
+      <Footer></Footer>
 
     </SectionTemplate>
 
@@ -73,25 +75,22 @@
 
   import ExperienceTemplate from 'components/ExperienceTemplate'
   import SectionTemplate from 'components/SectionTemplate'
+  import TopNav from 'components/TopNav'
+  import Footer from 'components/Footer'
 
   export default {
     name: 'Index',
 
     components: {
       ExperienceTemplate,
-      SectionTemplate
+      SectionTemplate,
+      TopNav,
+      Footer
     },
 
     methods: {
       track() {
         this.$ga.page('/');
-      }
-    },
-
-    props: {
-      name: {
-        type: String,
-        default: 'Vue!'
       }
     }
 
@@ -100,16 +99,6 @@
 
 <style lang="scss">
   @import "styles/_global";
-
-  /*header, p, footer {
-    @include font-raleway;
-  }
-
-  p, footer {
-    line-height: 1.3;
-    font-size: 0.9em;
-    letter-spacing: 0.4px;
-  }*/
 </style>
 
 <style scoped lang="scss">
@@ -217,15 +206,10 @@
       }
     }
 
-    p, footer {
-      /deep/ + * {
+    p {
+      /deep/ + p {
        padding-top: 1em;
       }
-    }
-
-    footer {
-      padding-top: 3em;
-      text-align: center;
     }
    }
 
