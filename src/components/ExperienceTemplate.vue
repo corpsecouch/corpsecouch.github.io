@@ -1,6 +1,7 @@
 <template>
     <Section>
-      <img :src="src" id="masthead">
+      <slot name="masthead"></slot>
+      <!--<img :src="src" id="masthead">-->
       <div class="description">
         <span id="role"><slot name="role">role</slot></span>
         <header><slot name="title">title</slot></header>
@@ -44,7 +45,7 @@
     }
   }
 
-  #masthead {
+  .masthead {
     width: 100%;
   }
 

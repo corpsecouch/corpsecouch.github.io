@@ -23,23 +23,26 @@ Vue.use(VueScrollTo);*/
 // *** pages *** //
 import Index from 'pages/Index';
 import FourOhFour from 'pages/FourOhFour';
-import Portfolio from 'pages/Portfolio';
-import DisneyDesignSystem from 'pages/disney/DesignSystem';
-import DisneyGreenlight from 'pages/disney/Greenlight';
-import DisneyInnovationProgram from 'pages/disney/InnovationProgram';
-import AlexaCortana from 'pages/amazon/AlexaCortana';
-import AlexaPersonalSkills from 'pages/amazon/AlexaPersonalSkills';
+import Portfolio from 'pages/portfolio/Portfolio';
+import DisneyDesignSystem from 'pages/portfolio/disney/design system/DesignSystem';
+import DisneyGreenlight from 'pages/portfolio/disney/Greenlight';
+import DisneyInnovationProgram from 'pages/portfolio/disney/InnovationProgram';
+import AlexaCortana from 'pages/portfolio/amazon/AlexaCortana';
+import AlexaPersonalSkills from 'pages/portfolio/amazon/AlexaPersonalSkills';
+import AceAnalyticsDashboard from 'pages/portfolio/ace metrix/AnalyticsDashboard';
+
 const routes = [
   { path: '/', name:'index', component: Index },
   { path: '/about', name:'about', component: FourOhFour },
-  { path: '/portfolio', name:'portfolio', component: Portfolio },
   { path: '/contact', name:'contact', component: FourOhFour },
 
-  { path: '/disney/design-system', name:'disneydesignsystem', component: DisneyDesignSystem },
-  { path: '/disney/greenlight', name:'disneygreenlight', component: DisneyGreenlight },
-  { path: '/disney/innovation-program', name:'disneyinnovationprogram', component: DisneyInnovationProgram },
-  { path: '/amazon/alexa-cortana', name:'alexacortana', component: AlexaCortana },
-  { path: '/amazon/alexa-personal-skills', name:'alexapersonalskills', component: AlexaPersonalSkills },
+  { path: '/portfolio',                                 name:'portfolio',               component: Portfolio },
+  { path: '/portfolio/disney-design-system',            name:'disneydesignsystem',      component: DisneyDesignSystem },
+  { path: '/portfolio/disney-greenlight',               name:'disneygreenlight',        component: DisneyGreenlight },
+  { path: '/portfolio/disney-innovation-program',       name:'disneyinnovationprogram', component: DisneyInnovationProgram },
+  { path: '/portfolio/amazon-alexa-cortana',            name:'alexacortana',            component: AlexaCortana },
+  { path: '/portfolio/amazon-alexa-personal-skills',    name:'alexapersonalskills',     component: AlexaPersonalSkills },
+  { path: '/portfolio/ace-analytics-dashboard',         name:'aceanalyticsdashbaord',   component: AceAnalyticsDashboard },
 
   { path: '/404', component: FourOhFour },
   { path: '*', redirect: '/404' }

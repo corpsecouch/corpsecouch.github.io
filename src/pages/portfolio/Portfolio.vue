@@ -57,6 +57,20 @@
       </ul>
     </Section>
 
+    <Section>
+      <header class="company">Ace Metrix</header>
+      <ul class="project-list">
+
+        <li>
+          <PortfolioListItem route="aceanalyticsdashbaord">
+            <template v-slot:title>Analytics Dashboard</template>
+            <template v-slot:description>Blah blah blah blah blah</template>
+          </PortfolioListItem>
+        </li>
+
+      </ul>
+    </Section>
+
   </Page>
 </template>
 
