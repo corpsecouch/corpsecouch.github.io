@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import Vue from 'vue';
 
-
 // *** plugins *** //
 
 // view routing
@@ -11,12 +10,6 @@ Vue.use(VueRouter);
 // form validation
 /*import VeeValidate from 'vee-validate';
 Vue.use(VeeValidate);*/
-
-// google analytics
-import VueAnalytics from 'vue-analytics';
-Vue.use(VueAnalytics, {
-  id: 'UA-318678-4'
-});
 
 // modal
 /*import VModal from 'vue-js-modal';
@@ -41,7 +34,7 @@ const routes = [
   { path: '/about', name:'about', component: FourOhFour },
   { path: '/portfolio', name:'portfolio', component: Portfolio },
   { path: '/contact', name:'contact', component: FourOhFour },
-  
+
   { path: '/disney/design-system', name:'disneydesignsystem', component: DisneyDesignSystem },
   { path: '/disney/greenlight', name:'disneygreenlight', component: DisneyGreenlight },
   { path: '/disney/innovation-program', name:'disneyinnovationprogram', component: DisneyInnovationProgram },
@@ -70,7 +63,26 @@ const router = new VueRouter({
         return { x: 0, y: 0 }
     }
   }*/
-})
+});
+
+// google analytics
+// https://medium.com/dailyjs/tips-tricks-for-vue-analytics-87a9d2838915
+import VueAnalytics from 'vue-analytics';
+
+Vue.config.productionTip =  false;
+const isProd = process.env.NODE_ENV === 'production';
+
+Vue.use(VueAnalytics, {
+  id: 'UA-318678-4',
+  router,
+  autoTracking: {
+    exception: true
+  },
+  debug: {
+    enabled: !isProd,
+    sendHitTask: isProd
+  }
+});
 
 new Vue({
   el: '#app',
