@@ -10,14 +10,14 @@
         <li>
           <PortfolioListItem route="alexacortana">
             <template v-slot:title>Introducting Alexa to Cortana</template>
-            <template v-slot:description>Amazon Project 1 description</template>
+            <template v-slot:description>A world first, connecting two competing AIs.</template>
           </PortfolioListItem>
         </li>
 
         <li>
           <PortfolioListItem route="alexapersonalskills">
             <template v-slot:title>Personalizing Alexa Skills</template>
-            <template v-slot:description>Amazon Project 2 description</template>
+            <template v-slot:description>Transforming the experience of Alexa Skills.</template>
           </PortfolioListItem>
         </li>
 
@@ -31,28 +31,28 @@
         <li>
           <PortfolioListItem route="disneydesignsystem">
             <template v-slot:title>Disney Design System</template>
-            <template v-slot:description>Disney Project 1 description</template>
+            <template v-slot:description>Creating an award-winning enterprise design system.</template>
           </PortfolioListItem>
         </li>
 
         <li>
           <PortfolioListItem route="disneygreenlight">
             <template v-slot:title>Movie Greenlight</template>
-            <template v-slot:description>Disney Project 2 description</template>
+            <template v-slot:description>Innovating how Disney greenlights movies.</template>
           </PortfolioListItem>
         </li>
 
         <li>
           <PortfolioListItem route="disneyinnovationprogram">
-            <template v-slot:title>Innovation Program</template>
-            <template v-slot:description>Disney Project 2 description</template>
+            <template v-slot:title>Innovation Incubator</template>
+            <template v-slot:description>Transforming how Disney Studios innovates.</template>
           </PortfolioListItem>
         </li>
 
         <li>
           <PortfolioListItem route="/portfolio/disney2">
             <template v-slot:title>Movie Slate</template>
-            <template v-slot:description>Disney Project 2 description</template>
+            <template v-slot:description>Innovating how Disney plans and tracks their slate of upcoming movies.</template>
           </PortfolioListItem>
         </li>
 
@@ -79,12 +79,6 @@
       Footer,
       SectionTemplate,
       PortfolioListItem
-    },
-
-    methods: {
-      track() {
-        this.$ga.page('/portfolio');
-      }
     }
 
   }

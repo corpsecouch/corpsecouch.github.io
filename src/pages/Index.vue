@@ -86,12 +86,6 @@
       SectionTemplate,
       TopNav,
       Footer
-    },
-
-    methods: {
-      track() {
-        this.$ga.page('/');
-      }
     }
 
   }
