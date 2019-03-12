@@ -3,6 +3,7 @@
     <router-link :to="{ name: 'portfolio' }">Back</router-link>
     <header>Disney Studios Greenlight</header>
     <p>The Disney Studios Greenlight is a new process and set of business tools for developing stories for Disney movies and approving them for production.</p>
+    <img src="./teaser.png">
     <p>All movies go through a greenlighting process, when it goes into production. It’s a long and intense where multiple teams gather, critique and develop story ideas and eventually decide whether they are Disney enough. Most movie ideas never make it through. There’s even a team dedicated to managing the entire thing.</p>
     <p>The tools the teams were using had essentially become broken. Not only were they outdated and difficult to even look at but they had become incompatible, unreliable and insecure over the years. They desperately needed a new set of tools, which also means they needed a new greenlighting process.</p>
     <p>I was the principal UX designer, managing two senior UX designers over the course of the project.</p>
