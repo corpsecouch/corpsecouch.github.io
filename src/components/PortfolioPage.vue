@@ -1,25 +1,23 @@
 <template>
-  <main>
+  <Page>
 
-    <section>
-      <div class="container">
-        <slot></slot>
-      </div>
-    </section>
+    <Section>
+      <slot></slot>
+    </Section>
 
-    <Footer></Footer>
-
-  </main>
+  </Page>
 </template>
 
 <script>
-  import Footer from 'components/Footer'
+  import Page from 'components/PageTemplate'
+  import Section from 'components/SectionTemplate'
 
   export default {
     name: 'PortfolioPage',
 
     components: {
-      Footer
+      Page,
+      Section
     }
   }
 </script>
@@ -30,7 +28,7 @@
     padding-top: 10rem;
   }
 
-  .container {
+  /*.container {
     box-sizing: border-box;
     max-width: 990px;
     margin: 0 auto;
@@ -39,5 +37,5 @@
     @include screen-lg { width: 720px; }
     @include screen-md { width: 86%; }
     @include screen-sm { width: 90%; }
-  }
+  }*/
 </style>

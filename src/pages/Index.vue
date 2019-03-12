@@ -1,13 +1,11 @@
 <template>
-  <main>
-
-    <TopNav></TopNav>
+  <Page>
 
     <!-- intro -->
-    <SectionTemplate id="intro">
+    <Section id="intro">
       <header>Hi! My name is Jason and I'm currently leading experience design on Amazon's Alexa Identity team.</header>
       <p>Before taking a role in Amazon in July 2017, I led the UX design team at <a href="http://thewaltdisneycompany.com" target="_blank">Walt Disney Studios</a>. Check out my <a href="http://linkedin.com/in/jasonbejot" target="_blank">LinkedIn</a> profile to learn more. Follow me on <a href="http://twitter.com/jasonbejot" target="_blank">Twitter</a> for my random thoughts or read my articles on <a href="http://medium.com/@jasonbejot" target="_blank">Medium</a>.</p>
-    </SectionTemplate>
+    </Section>
 
     <!-- disney -->
     <ExperienceTemplate id="disney" class="text-light" src="static/disney.png">
@@ -49,7 +47,7 @@
     </ExperienceTemplate>
 
     <!-- about me -->
-    <SectionTemplate id="about" class="text-light">
+    <Section id="about" class="text-light">
 
       <header>About Me</header>
 
@@ -62,38 +60,29 @@
       <p>In a previous life I was musician writing and playing spacy guitar riffs in The Answer Team, touring and recording two albums. Then I was a biker tempting fate on the treacherous, twisty Souther California canyon roads.</p>
 
       <p>I currently live in Seattle with my wife and daughter.</p>
+    </Section>
 
-      <Footer></Footer>
-
-    </SectionTemplate>
-
-  </main>
+  </Page>
 </template>
 
 <script>
   // https://www.bestfolios.com/portfolio/dougseidman
 
   import ExperienceTemplate from 'components/ExperienceTemplate'
-  import SectionTemplate from 'components/SectionTemplate'
-  import TopNav from 'components/TopNav'
-  import Footer from 'components/Footer'
+  import Section from 'components/SectionTemplate'
+  import Page from 'components/PageTemplate'
 
   export default {
     name: 'Index',
 
     components: {
       ExperienceTemplate,
-      SectionTemplate,
-      TopNav,
-      Footer
+      Section,
+      Page
     }
 
   }
 </script>
-
-<style lang="scss">
-  @import "styles/_global";
-</style>
 
 <style scoped lang="scss">
   .text-light {

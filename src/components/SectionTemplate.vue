@@ -15,7 +15,6 @@
 <style scoped lang="scss">
   section {
     padding: 6em 0;
-    color: rgb(51, 51, 51);
     width: 100%;
   }
 
@@ -24,20 +23,9 @@
     max-width: 990px;
     margin: 0 auto;
 
-    @include screen-xl {
-      width: 940px;
-    }
-
-    @include screen-lg {
-      width: 720px;
-    }
-
-    @include screen-md {
-      width: 86%;
-    }
-
-    @include screen-sm {
-      width: 90%;
-    }
+    @include screen-xl { width: 940px; }
+    @include screen-lg { width: 720px; }
+    @include screen-md { width: 86%; }
+    @include screen-sm { width: 90%; }
   }
 </style>

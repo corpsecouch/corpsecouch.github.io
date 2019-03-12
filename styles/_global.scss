@@ -11,6 +11,7 @@
 html {
   background-color: white;
   @include font-raleway;
+  color: $color-darktext;
   line-height: 1;
   font-size: 16px;
 }

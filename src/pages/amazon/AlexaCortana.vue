@@ -29,10 +29,6 @@
   }
 </script>
 
-<style lang="scss">
-  @import "styles/_global";
-</style>
-
 <style scoped lang="scss">
   p, ul {
     padding-top: 1.8em;

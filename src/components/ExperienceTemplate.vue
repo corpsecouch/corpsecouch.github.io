@@ -1,16 +1,16 @@
 <template>
-    <SectionTemplate>
+    <Section>
       <img :src="src" id="masthead">
       <div class="description">
         <span id="role"><slot name="role">role</slot></span>
         <header><slot name="title">title</slot></header>
         <p id="details"><slot name="details">details</slot></p>
       </div>
-    </SectionTemplate>
+    </Section>
 </template>
 
 <script>
-  import SectionTemplate from 'components/SectionTemplate'
+  import Section from 'components/SectionTemplate'
 
   export default {
     name: 'ExperienceTemplate',
@@ -18,7 +18,7 @@
     props: ['src'],
 
     components: {
-      SectionTemplate
+      Section
     }
   }
 </script>

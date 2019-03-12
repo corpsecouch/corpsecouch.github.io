@@ -1,16 +1,14 @@
 <template>
-  <main>
+  <Page>
 
-    <TopNav></TopNav>
-
-    <SectionTemplate>
+    <Section>
       <header class="company">Amazon</header>
       <ul class="project-list">
 
         <li>
           <PortfolioListItem route="alexacortana">
-            <template v-slot:title>Introducting Alexa to Cortana</template>
-            <template v-slot:description>A world first, connecting two competing AIs.</template>
+            <template v-slot:title>Introducing Alexa to Cortana</template>
+            <template v-slot:description>Connecting AIs from two of the world's largest companies; a world-first.</template>
           </PortfolioListItem>
         </li>
 
@@ -22,15 +20,15 @@
         </li>
 
       </ul>
-    </SectionTemplate>
+    </Section>
 
-    <SectionTemplate>
+    <Section>
       <header class="company">Walt Disney Studios</header>
       <ul class="project-list">
 
         <li>
           <PortfolioListItem route="disneydesignsystem">
-            <template v-slot:title>Disney Design System</template>
+            <template v-slot:title>Studio Design System</template>
             <template v-slot:description>Creating an award-winning enterprise design system.</template>
           </PortfolioListItem>
         </li>
@@ -57,36 +55,27 @@
         </li>
 
       </ul>
-    </SectionTemplate>
+    </Section>
 
-    <Footer></Footer>
-
-  </main>
+  </Page>
 </template>
 
 <script>
-
-  import TopNav from 'components/TopNav'
-  import Footer from 'components/Footer'
-  import SectionTemplate from 'components/SectionTemplate'
+  import Page from 'components/PageTemplate'
+  import Section from 'components/SectionTemplate'
   import PortfolioListItem from 'components/PortfolioListItem'
 
   export default {
     name: 'Portfolio',
 
     components: {
-      TopNav,
-      Footer,
-      SectionTemplate,
+      Page,
+      Section,
       PortfolioListItem
     }
 
   }
 </script>
-
-<style lang="scss">
-  @import "styles/_global";
-</style>
 
 <style scoped lang="scss">
   .company {
