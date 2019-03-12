@@ -25,11 +25,12 @@ import Index from 'pages/Index';
 import FourOhFour from 'pages/FourOhFour';
 import Portfolio from 'pages/portfolio/Portfolio';
 import DisneyDesignSystem from 'pages/portfolio/disney/design system/DesignSystem';
-import DisneyGreenlight from 'pages/portfolio/disney/Greenlight';
-import DisneyInnovationProgram from 'pages/portfolio/disney/InnovationProgram';
-import AlexaCortana from 'pages/portfolio/amazon/AlexaCortana';
-import AlexaPersonalSkills from 'pages/portfolio/amazon/AlexaPersonalSkills';
-import AceAnalyticsDashboard from 'pages/portfolio/ace metrix/AnalyticsDashboard';
+import DisneyGreenlight from 'pages/portfolio/disney/greenlight/Greenlight';
+import DisneyInnovationProgram from 'pages/portfolio/disney/innovation program/InnovationProgram';
+import DisneyMovieSlate from 'pages/portfolio/disney/slate/Slate';
+import AlexaCortana from 'pages/portfolio/amazon/alexa cortana/AlexaCortana';
+import AlexaPersonalSkills from 'pages/portfolio/amazon/alexa personal skills/AlexaPersonalSkills';
+import AceAnalyticsDashboard from 'pages/portfolio/ace metrix/analytics dashboard/AnalyticsDashboard';
 
 const routes = [
   { path: '/', name:'index', component: Index },
@@ -40,6 +41,7 @@ const routes = [
   { path: '/portfolio/disney-design-system',            name:'disneydesignsystem',      component: DisneyDesignSystem },
   { path: '/portfolio/disney-greenlight',               name:'disneygreenlight',        component: DisneyGreenlight },
   { path: '/portfolio/disney-innovation-program',       name:'disneyinnovationprogram', component: DisneyInnovationProgram },
+  { path: '/portfolio/disney-movie-slate',              name:'disneymovieslate',        component: DisneyMovieSlate },
   { path: '/portfolio/amazon-alexa-cortana',            name:'alexacortana',            component: AlexaCortana },
   { path: '/portfolio/amazon-alexa-personal-skills',    name:'alexapersonalskills',     component: AlexaPersonalSkills },
   { path: '/portfolio/ace-analytics-dashboard',         name:'aceanalyticsdashbaord',   component: AceAnalyticsDashboard },

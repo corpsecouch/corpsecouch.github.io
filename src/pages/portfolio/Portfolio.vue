@@ -48,7 +48,7 @@
         </li>
 
         <li>
-          <PortfolioListItem route="/portfolio/disney2">
+          <PortfolioListItem route="disneymovieslate">
             <template v-slot:title>Movie Slate</template>
             <template v-slot:description>Innovating how Disney plans and tracks their slate of upcoming movies.</template>
           </PortfolioListItem>
