@@ -1,8 +1,8 @@
 <template>
   <PortfolioPage>
-    <template v-slot:title>Disney Studios Slate</template>
+    <template v-slot:title>Analytics Dashboard</template>
     <template v-slot:content>
-      <img src="./teaser.png">
+
     </template>
   </PortfolioPage>
 </template>
@@ -11,7 +11,7 @@
   import PortfolioPage from 'components/PortfolioPage'
 
   export default {
-    name: 'DisneySlate',
+    name: 'AnalyticsDashboard',
 
     components: {
       PortfolioPage

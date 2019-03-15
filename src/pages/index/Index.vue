@@ -79,7 +79,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 90vh;
+    min-height: 80vh;
 
     /deep/ .container {
 
@@ -105,13 +105,6 @@
         padding-top: 1em;
         font-size: 1.2em;
         line-height: 1.6;
-      }
-
-      a {
-        color: $color-link;
-        text-decoration: none;
-        cursor: pointer;
-        font-weight: 500;
       }
     }
   }
@@ -166,10 +159,6 @@
   #disney {
     color: $color-lighttext;
     background-color: $color-backgroundgrey;
-
-    /*/deep/ .container {
-      background-image: url('~../../static/disney.png');
-    }*/
   }
 
   #ace {

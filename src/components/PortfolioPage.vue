@@ -2,7 +2,9 @@
   <Page>
 
     <Section>
-      <slot></slot>
+      <header><slot name="title"></slot></header>
+      <span class="subhead"><slot name="subhead">A Case Study</slot></span>
+      <slot name="content"></slot>
     </Section>
 
   </Page>
@@ -26,6 +28,24 @@
   section {
     width: 100%;
     padding-top: 10rem;
+    padding-bottom: 0;
+  }
+
+  header {
+    font-size: 2.4em;
+    font-weight: 300;
+    line-height: 1.2em;
+    padding-bottom: 1em;
+    text-align: center;
+  }
+
+  .subhead {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: $color-grey;
+    display: block;
+    text-align: center;
+    margin-bottom: 2.5rem;
   }
 
   /*.container {

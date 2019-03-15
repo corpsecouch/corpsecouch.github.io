@@ -24,13 +24,13 @@ Vue.use(VueScrollTo);*/
 import Index from 'pages/Index';
 import FourOhFour from 'pages/FourOhFour';
 import Portfolio from 'pages/portfolio/Portfolio';
-import DisneyDesignSystem from 'pages/portfolio/disney/design system/DesignSystem';
+import DisneyDesignSystem from 'pages/portfolio/disney/design-system/DesignSystem';
 import DisneyGreenlight from 'pages/portfolio/disney/greenlight/Greenlight';
-import DisneyInnovationProgram from 'pages/portfolio/disney/innovation program/InnovationProgram';
+import DisneyInnovationProgram from 'pages/portfolio/disney/innovation-program/InnovationProgram';
 import DisneyMovieSlate from 'pages/portfolio/disney/slate/Slate';
-import AlexaCortana from 'pages/portfolio/amazon/alexa cortana/AlexaCortana';
-import AlexaPersonalSkills from 'pages/portfolio/amazon/alexa personal skills/AlexaPersonalSkills';
-import AceAnalyticsDashboard from 'pages/portfolio/ace metrix/analytics dashboard/AnalyticsDashboard';
+import AlexaCortana from 'pages/portfolio/amazon/alexa-cortana/AlexaCortana';
+import AlexaPersonalSkills from 'pages/portfolio/amazon/alexa-personal-skills/AlexaPersonalSkills';
+import AceAnalyticsDashboard from 'pages/portfolio/ace-metrix/analytics-dashboard/AnalyticsDashboard';
 
 const routes = [
   { path: '/', name:'index', component: Index },
@@ -52,7 +52,10 @@ const routes = [
 
 const router = new VueRouter({
   //mode: 'history',
-  routes: routes/*,
+  routes: routes,
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 };  // scroll to the top with every new route
+  }/*,
   scrollBehavior (to, from, savedPosition) {
     console.log('scrollBehavior');
     console.log('to:', to);

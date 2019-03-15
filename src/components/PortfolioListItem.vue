@@ -1,6 +1,6 @@
 <template>
   <router-link :to="{ name: route }">
-    <img src="https://picsum.photos/120">
+    <img :src="require(imageURL)">
     <span class="container">
       <span class="title"><slot name="title">Project Title</slot></span>
       <span class="description"><slot name="description">Project description</slot></span>
@@ -11,8 +11,12 @@
 <script>
   export default {
     name: 'PortfolioListItem',
-
-    props: ['route']
+    props: ['route', 'imageURL']/*,
+    methods: {
+      getURL(url){
+        return require(url);
+      }
+    }*/
   }
 </script>
 
