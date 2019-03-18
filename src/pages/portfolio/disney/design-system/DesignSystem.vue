@@ -2,11 +2,15 @@
   <PortfolioPage>
     <template v-slot:title>Disney Studios Design System</template>
     <template v-slot:content>
+      <h2>What is it?</h2>
       <p>The Disney Studios Design System is a full design language for Disney Studio’s suite of proprietary enterprise tools. It includes guidelines, wireframes, color palettes, Sketch templates, Axure templates and an Angular UI framework.</p>
       <img src="./teaser.png">
+      <h2>Why do it?</h2>
       <p>The business of Disney Studios depends on custom internal enterprise applications. These applications should look and behave consistently as if they were originally created as a part of the same product suite. With hundreds of these mission critical applications, created by various people across many years, consistency is nonexistent. Efficiency and effectiveness from both business operations and product development both suffer because of this.</p>
+      <h2>What did I do?</h2>
       <p>I championed the need for a design system to make the suite of enterprise applications consistent and show measurable improvements with users, business operations and product development.</p>
       <img src="./outcome.jpg">
+      <h2>What was my role?</h2>
       <p>I wore many hats on this project, the most impactful were product owner and stakeholder. After rolling up my sleeves and standing-up version 1 as a team of one with no budget, the design system proved valuable enough that it gained a dedicated team of designers and engineers along with a multi-million dollar budget.</p>
       <ul>
         <li>V2 launched in 2014</li>

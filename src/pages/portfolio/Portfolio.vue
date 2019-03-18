@@ -183,7 +183,6 @@
 
           .title {
             font-size: 1.2rem;
-            padding-top: 2rem;
             font-weight: 500;
           }
 

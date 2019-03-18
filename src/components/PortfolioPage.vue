@@ -48,6 +48,15 @@
     margin-bottom: 2.5rem;
   }
 
+  /deep/ h2 {
+    font-weight: 600;
+    margin-top: 2em;
+
+    &:first-of-type, + * {
+      margin-top: 0;
+    }
+  }
+
   /*.container {
     box-sizing: border-box;
     max-width: 990px;
