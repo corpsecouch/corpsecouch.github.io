@@ -4,7 +4,7 @@
     <Section>
       <header><slot name="title"></slot></header>
       <span class="subhead"><slot name="subhead">A Case Study</slot></span>
-      <slot name="content"></slot>
+      <div class="content"><slot name="content"></slot></div>
     </Section>
 
   </Page>
@@ -57,14 +57,11 @@
     }
   }
 
-  /*.container {
-    box-sizing: border-box;
-    max-width: 990px;
-    margin: 0 auto;
-
-    @include screen-xl { width: 940px; }
-    @include screen-lg { width: 720px; }
-    @include screen-md { width: 86%; }
-    @include screen-sm { width: 90%; }
-  }*/
+  .content {
+    @include screen-xl { width: 70%; }
+    @include screen-lg { width: 70%; }
+    @include screen-md { width: 90%; }
+    @include screen-sm { width: 100%; }
+    margin: auto;
+  }
 </style>

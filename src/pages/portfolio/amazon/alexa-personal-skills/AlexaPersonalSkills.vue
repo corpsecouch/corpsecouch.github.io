@@ -5,10 +5,15 @@
         <div class="content">
           <router-link to="/">Back</router-link>
           <header>Alexa Personal Skills</header>
+          <h2>What is it?</h2>
           <p>Enabling all Alexa Skills to recognize and personalize for individual users.</p>
+          <h2>Why do it?</h2>
           <p>Skills are basically apps for Alexa. Made by 3rd-party developers, companies and brands Skills bring more content, utility and entertainment to everyone who uses Alexa. The number of Alexa Skills is rapidly growing, with more than 70,000 available worldwide as of Q4 2018.</p>
+          <h2>What did I do?</h2>
           <p>In 2018, Alexa began recognizing people by their voice enabling her to provide features and experiences custom tailored to each individual person. We wanted to extend this capability to all Alexa Skills so they can provide personalized experiences.</p>
+          <h2>What was my role?</h2>
           <p>I was the product manager and principal experience designer.</p>
+          <h2>What was the outcome?</h2>
           <ul>
             <li>Initial announcement at re:invent 2017</li>
             <li>Developer preview launched at re:invent 2018</li>

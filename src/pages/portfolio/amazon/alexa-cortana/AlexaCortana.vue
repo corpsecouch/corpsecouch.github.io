@@ -10,6 +10,7 @@
       <p>I was the principal experience designer owning design across both Amazon and Microsoft.</p>
       <h2>What was my role?</h2>
       <p>I wore many hats on this project, the most impactful were product owner and stakeholder. After rolling up my sleeves and standing-up version 1 as a team of one with no budget, the design system proved valuable enough that it gained a dedicated team of designers and engineers along with a multi-million dollar budget.</p>
+      <h2>What was the outcome?</h2>
       <ul>
         <li>Launched in 2018</li>
         <li>Cortana is available to all 20MM+ Alexa users on all 100MM+ Echo devices</li>
