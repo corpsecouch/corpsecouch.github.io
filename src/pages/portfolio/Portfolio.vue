@@ -2,14 +2,14 @@
   <Page>
     <Section id="intro">
       <header>Welcome to my portfolio.</header>
-      <p>Here are some notable samples of my work. If you're interested in digging into the details, please <a href="#">contact me</a>.</p>
+      <p>Here are some notable samples of my work. If you're interested in digging into the details, please <router-link :to="{ name: 'contact' }">contact me</router-link>.</p>
     </Section>
 
     <Section id="projects">
       <ul>
 
         <li>
-          <img src="./amazon/alexa-cortana/peek.png">
+          <!--<img src="./amazon/alexa-cortana/peek.png">-->
           <span class="rightside">
             <span class="company">Amazon</span>
             <span class="title">Introducing Alexa to Cortana</span>
@@ -18,7 +18,7 @@
           </span>
         </li>
 
-        <li>
+        <!--<li>
           <img src="https://picsum.photos/260">
           <span class="rightside">
             <span class="company">Amazon</span>
@@ -26,10 +26,20 @@
             <span class="description">Transforming the experience of Alexa Skills.</span>
             <router-link :to="{ name: 'alexapersonalskills' }">Learn more</router-link>
           </span>
-        </li>
+        </li>-->
+
+        <!--<li>
+          <img src="https://picsum.photos/260">
+          <span class="rightside">
+            <span class="company">Walt Disney Studios</span>
+            <span class="title">Building An Enterprise UX Org</span>
+            <span class="description">Blah blah blah.</span>
+            <router-link :to="{ name: 'disneydesignsystem' }">Learn more</router-link>
+          </span>
+        </li>-->
 
         <li>
-          <img src="./disney/design-system/peek.png">
+          <!--<img src="./disney/design-system/peek.png">-->
           <span class="rightside">
             <span class="company">Walt Disney Studios</span>
             <span class="title">Studio Design System</span>
@@ -39,7 +49,7 @@
         </li>
 
         <li>
-          <img src="./disney/greenlight/peek.png">
+          <!--<img src="./disney/greenlight/peek.png">-->
           <span class="rightside">
             <span class="company">Walt Disney Studios</span>
             <span class="title">Movie Greenlight</span>
@@ -49,7 +59,7 @@
         </li>
 
         <li>
-          <img src="./disney/innovation-program/peek.png">
+          <!--<img src="./disney/innovation-program/peek.png">-->
           <span class="rightside">
             <span class="company">Walt Disney Studios</span>
             <span class="title">Innovation Incubator</span>
@@ -58,8 +68,68 @@
           </span>
         </li>
 
+        <!--<li>
+          <img src="https://picsum.photos/260">
+          <span class="rightside">
+            <span class="company">Walt Disney Studios</span>
+            <span class="title">Patent 1</span>
+            <span class="description">Blah blah blah.</span>
+            <router-link :to="{ name: 'disneydesignsystem' }">Learn more</router-link>
+          </span>
+        </li>-->
+
+        <!--<li>
+          <img src="https://picsum.photos/260">
+          <span class="rightside">
+            <span class="company">Walt Disney Studios</span>
+            <span class="title">Patent 2</span>
+            <span class="description">Blah blah blah.</span>
+            <router-link :to="{ name: 'disneydesignsystem' }">Learn more</router-link>
+          </span>
+        </li>-->
+
+        <!--<li>
+          <img src="https://picsum.photos/260">
+          <span class="rightside">
+            <span class="company">Walt Disney Studios</span>
+            <span class="title">Patent 3</span>
+            <span class="description">Blah blah blah.</span>
+            <router-link :to="{ name: 'disneydesignsystem' }">Learn more</router-link>
+          </span>
+        </li>-->
+
+        <!--<li>
+          <img src="https://picsum.photos/260">
+          <span class="rightside">
+            <span class="company">Walt Disney Studios</span>
+            <span class="title">Braintrust</span>
+            <span class="description">Blah blah blah.</span>
+            <router-link :to="{ name: 'disneydesignsystem' }">Learn more</router-link>
+          </span>
+        </li>-->
+
+        <!--<li>
+          <img src="https://picsum.photos/260">
+          <span class="rightside">
+            <span class="company">Walt Disney Studios</span>
+            <span class="title">Ignite</span>
+            <span class="description">Blah blah blah.</span>
+            <router-link :to="{ name: 'disneydesignsystem' }">Learn more</router-link>
+          </span>
+        </li>-->
+
         <li>
-          <img src="./disney/slate/peek.png">
+          <!--<img src="https://picsum.photos/260">-->
+          <span class="rightside">
+            <span class="company">Walt Disney Studios</span>
+            <span class="title">Filmmaking for Virtual Reality</span>
+            <span class="description">Leading the VR conversation.</span>
+            <router-link :to="{ name: 'disneyvr' }">Learn more</router-link>
+          </span>
+        </li>
+
+        <li>
+          <!--<img src="./disney/slate/peek.png">-->
           <span class="rightside">
             <span class="company">Walt Disney Studios</span>
             <span class="title">Movie Slate</span>
@@ -68,7 +138,27 @@
           </span>
         </li>
 
-        <li>
+        <!--<li>
+          <img src="https://picsum.photos/260">
+          <span class="rightside">
+            <span class="company">Walt Disney Studios</span>
+            <span class="title">Disney Movies Anywhere</span>
+            <span class="description">Blah blah blah.</span>
+            <router-link :to="{ name: 'disneymovieslate' }">Learn more</router-link>
+          </span>
+        </li>-->
+
+        <!--<li>
+          <img src="https://picsum.photos/260">
+          <span class="rightside">
+            <span class="company">Ace Metrix</span>
+            <span class="title">Building A Start-up Design Org</span>
+            <span class="description">Blah blah blah.</span>
+            <router-link :to="{ name: 'disneydesignsystem' }">Learn more</router-link>
+          </span>
+        </li>-->
+
+        <!--<li>
           <img src="./ace-metrix/analytics-dashboard/peek.png">
           <span class="rightside">
             <span class="company">Ace Metrix</span>
@@ -76,7 +166,57 @@
             <span class="description">Blah blah blah blah blah</span>
             <router-link :to="{ name: 'aceanalyticsdashbaord' }">Learn more</router-link>
           </span>
+        </li>-->
+
+        <!--<li>
+          <img src="https://picsum.photos/260">
+          <span class="rightside">
+            <span class="company">Phenomblue</span>
+            <span class="title">AR Engine</span>
+            <span class="description">Blah blah blah.</span>
+            <router-link :to="{ name: 'disneydesignsystem' }">Learn more</router-link>
+          </span>
         </li>
+
+        <li>
+          <img src="https://picsum.photos/260">
+          <span class="rightside">
+            <span class="company">Phenomblue</span>
+            <span class="title">Dino Dig</span>
+            <span class="description">Blah blah blah.</span>
+            <router-link :to="{ name: 'disneydesignsystem' }">Learn more</router-link>
+          </span>
+        </li>
+
+        <li>
+          <img src="https://picsum.photos/260">
+          <span class="rightside">
+            <span class="company">Phenomblue</span>
+            <span class="title">Signature Reserve</span>
+            <span class="description">Blah blah blah.</span>
+            <router-link :to="{ name: 'disneydesignsystem' }">Learn more</router-link>
+          </span>
+        </li>
+
+        <li>
+          <img src="https://picsum.photos/260">
+          <span class="rightside">
+            <span class="company">Phenomblue</span>
+            <span class="title">Wild Kingdom</span>
+            <span class="description">Blah blah blah.</span>
+            <router-link :to="{ name: 'disneydesignsystem' }">Learn more</router-link>
+          </span>
+        </li>
+
+        <li>
+          <img src="https://picsum.photos/260">
+          <span class="rightside">
+            <span class="company">Phenomblue</span>
+            <span class="title">Building An Agency UX Org</span>
+            <span class="description">Blah blah blah.</span>
+            <router-link :to="{ name: 'disneydesignsystem' }">Learn more</router-link>
+          </span>
+        </li>-->
 
       </ul>
     </Section>
@@ -133,7 +273,10 @@
         margin: 0 0.5rem 4rem 0.5rem;
 
         .rightside {
-          margin: 1rem 0 0 0;
+          /*margin: 1rem 0 0 0;*/
+          margin: 0;
+          padding: 1rem 0 0 0;
+          border-top: rgba(46, 139, 87, 0.28) 1rem solid;
 
           > span {
             display: block;

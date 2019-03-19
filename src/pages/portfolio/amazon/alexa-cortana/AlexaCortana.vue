@@ -2,6 +2,7 @@
   <PortfolioPage>
     <template v-slot:title>Introducing Alexa to Cortana</template>
     <template v-slot:content>
+      <img src="./pr.png">
       <h2>What is it?</h2>
       <p>In a world-first, the two AIs (Alexa and Cortana) were linked together to provide the experiences and benefits of each AI to the other. An Alexa user gained the benefits of Cortana’s specialties within an Alexa conversation and vice-versa. All this without the need for additional cost, hardware or setup.</p>
       <h2>Why do it?</h2>
@@ -36,5 +37,8 @@
 </script>
 
 <style scoped lang="scss">
-
+  img {
+    margin-bottom: 3rem;
+    width: 100%;
+  }
 </style>

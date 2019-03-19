@@ -9,7 +9,7 @@
       <h2>What did I do?</h2>
       <p>The tools the teams were using had essentially become broken. Not only were they outdated and difficult to even look at but they had become incompatible, unreliable and insecure over the years. They desperately needed a new set of tools, which also means they needed a new greenlighting process.</p>
       <h2>What was my role?</h2>
-      <p>I was the principal UX designer, managing two senior UX designers over the course of the project.</p>
+      <p>I was the UX director with a small team of senior UX designers and researchers.</p>
       <h2>What was the outcome?</h2>
       <ul>
         <li>V1 Launched in 2017</li>
@@ -18,6 +18,8 @@
         <li>Increased business task effectiveness (increasing overall efficiency and bandwidth)</li>
         <li>Increased overall satisfaction with the tools</li>
       </ul>
+      <h2>What did the process look like?</h2>
+      <p>This project is covered under an NDA. Please <router-link :to="{ name: 'contact' }">contact me</router-link> if you'd like to do a portfolio review.</p>
     </template>
   </PortfolioPage>
 </template>

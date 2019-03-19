@@ -21,6 +21,8 @@
         <li>Adopted across other Disney Segments (ESPN, ABC, Disney Interactive)</li>
         <li>Received the Best of Disney award in 2014</li>
       </ul>
+      <h2>What did the process look like?</h2>
+      <p>This project is covered under an NDA. Please <router-link :to="{ name: 'contact' }">contact me</router-link> if you'd like to do a portfolio review.</p>
     </template>
   </PortfolioPage>
 </template>

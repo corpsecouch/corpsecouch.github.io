@@ -3,7 +3,7 @@
     <router-link :to="{ name : 'index' }" alt="Jason Bejot">Jason&nbsp;Bejot</router-link>
     <span class="deadspace"></span>
     <span class="navs">
-      <router-link :to="{ name : 'about '}" alt="about">About</router-link>
+      <router-link to="/#about" alt="about">About</router-link>
       <router-link :to="{ name : 'portfolio' }" alt="portfolio">Portfolio</router-link>
       <router-link :to="{ name : 'contact' }" alt="contact">Contact</router-link>
     </span>
