@@ -87,7 +87,7 @@ Vue.use(VueAnalytics, {
     exception: true
   },
   debug: {
-    enabled: !isProd,
+    enabled: isProd,
     sendHitTask: isProd
   }
 });
