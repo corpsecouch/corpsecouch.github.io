@@ -65,7 +65,7 @@ module.exports = {
             }
           }
         ]
-      }/*,
+      },
 
       {
         test: /\.(png|jpg|gif)$/,
@@ -73,11 +73,13 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: '[path][name].[ext]',
-            },
-          },
-        ],
-      }*/
+              name: '[hash].[ext]',
+              outputPath: 'assets',
+              publicPath: 'dist/assets'
+            }
+          }
+        ]
+      }
 
     ]
   },
