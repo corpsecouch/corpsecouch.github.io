@@ -219,6 +219,9 @@
         </li>-->
 
       </ul>
+
+      <p>More to come.</p>
+
     </Section>
 
   </Page>
@@ -303,6 +306,10 @@
             padding-top: 0.5rem;
           }
         }
+      }
+
+      + p {
+        text-align: center;
       }
     }
 
