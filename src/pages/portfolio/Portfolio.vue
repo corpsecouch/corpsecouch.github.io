@@ -14,7 +14,7 @@
             <span class="company">Amazon</span>
             <span class="title">Introducing Alexa to Cortana</span>
             <span class="description">Connecting AIs from two of the world's largest companies; a world-first.</span>
-            <router-link :to="{ name: 'alexacortana' }">Learn more</router-link>
+            <router-link :to="{ name: 'alexacortana' }">Read more</router-link>
           </span>
         </li>
 
@@ -44,7 +44,7 @@
             <span class="company">Walt Disney Studios</span>
             <span class="title">Studio Design System</span>
             <span class="description">Creating an award-winning enterprise design system.</span>
-            <router-link :to="{ name: 'disneydesignsystem' }">Learn more</router-link>
+            <router-link :to="{ name: 'disneydesignsystem' }">Read more</router-link>
           </span>
         </li>
 
@@ -54,7 +54,7 @@
             <span class="company">Walt Disney Studios</span>
             <span class="title">Movie Greenlight</span>
             <span class="description">Innovating how Disney greenlights movies.</span>
-            <router-link :to="{ name: 'disneygreenlight' }">Learn more</router-link>
+            <router-link :to="{ name: 'disneygreenlight' }">Read more</router-link>
           </span>
         </li>
 
@@ -64,7 +64,7 @@
             <span class="company">Walt Disney Studios</span>
             <span class="title">Innovation Incubator</span>
             <span class="description">Transforming how Disney Studios innovates.</span>
-            <router-link :to="{ name: 'disneyinnovationprogram' }">Learn more</router-link>
+            <router-link :to="{ name: 'disneyinnovationprogram' }">Read more</router-link>
           </span>
         </li>
 
@@ -124,7 +124,7 @@
             <span class="company">Walt Disney Studios</span>
             <span class="title">Filmmaking for Virtual Reality</span>
             <span class="description">Leading the VR conversation.</span>
-            <router-link :to="{ name: 'disneyvr' }">Learn more</router-link>
+            <router-link :to="{ name: 'disneyvr' }">Read more</router-link>
           </span>
         </li>
 
@@ -134,7 +134,7 @@
             <span class="company">Walt Disney Studios</span>
             <span class="title">Movie Slate</span>
             <span class="description">Innovating how Disney plans and tracks their slate of upcoming movies.</span>
-            <router-link :to="{ name: 'disneymovieslate' }">Learn more</router-link>
+            <router-link :to="{ name: 'disneymovieslate' }">Read more</router-link>
           </span>
         </li>
 
