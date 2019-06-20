@@ -218,6 +218,42 @@
           </span>
         </li>-->
 
+        <li>
+          <span class="rightside">
+            <span class="company">Phenomblue</span>
+            <span class="title">Microsoft Genesis</span>
+            <span class="description">A 3D multi-person space simulator for the Surface 1.0.</span>
+            <router-link :to="{ name: 'phenombluegenesis' }">Read more</router-link>
+          </span>
+        </li>
+
+        <li>
+          <span class="rightside">
+            <span class="company">Phenomblue</span>
+            <span class="title">Operation: Dino Dig</span>
+            <span class="description">TK</span>
+            <router-link :to="{ name: 'phenombluedinodig' }">Read more</router-link>
+          </span>
+        </li>
+
+        <li>
+          <span class="rightside">
+            <span class="company">Phenomblue</span>
+            <span class="title">Movie Lotto</span>
+            <span class="description">TK</span>
+            <router-link :to="{ name: 'phenombluemovielotto' }">Read more</router-link>
+          </span>
+        </li>
+
+        <li>
+          <span class="rightside">
+            <span class="company">Phenomblue</span>
+            <span class="title">Fantastic Future Me</span>
+            <span class="description">TK</span>
+            <router-link :to="{ name: 'phenombluefantasticfutureme' }">Read more</router-link>
+          </span>
+        </li>
+
       </ul>
 
       <p>More to come.</p>

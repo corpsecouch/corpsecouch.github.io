@@ -32,6 +32,10 @@ import DisneyMovieSlate from 'pages/portfolio/disney/slate/Slate';
 import DisneyVR from 'pages/portfolio/disney/vr/vr';
 import AlexaCortana from 'pages/portfolio/amazon/alexa-cortana/AlexaCortana';
 import AlexaPersonalSkills from 'pages/portfolio/amazon/alexa-personal-skills/AlexaPersonalSkills';
+import PhenomblueGenesis from 'pages/portfolio/phenomblue/genesis/Genesis';
+import PhenomblueDinoDig from 'pages/portfolio/phenomblue/dino-dig/DinoDig';
+import PhenomblueMovieLotto from 'pages/portfolio/phenomblue/movie-lotto/MovieLotto';
+import PhenomblueFantasticFutureMe from 'pages/portfolio/phenomblue/fantastic-future-me/FantasticFutureMe';
 //import AceAnalyticsDashboard from 'pages/portfolio/ace-metrix/analytics-dashboard/AnalyticsDashboard';
 
 const routes = [
@@ -39,14 +43,18 @@ const routes = [
   { path: '/#about', name:'about', component: Index },
   { path: '/contact', name:'contact', component: Contact },
 
-  { path: '/portfolio',                                 name:'portfolio',               component: Portfolio },
-  { path: '/portfolio/disney-design-system',            name:'disneydesignsystem',      component: DisneyDesignSystem },
-  { path: '/portfolio/disney-greenlight',               name:'disneygreenlight',        component: DisneyGreenlight },
-  { path: '/portfolio/disney-innovation-program',       name:'disneyinnovationprogram', component: DisneyInnovationProgram },
-  { path: '/portfolio/disney-movie-slate',              name:'disneymovieslate',        component: DisneyMovieSlate },
-  { path: '/portfolio/disney-vr',                       name:'disneyvr',                component: DisneyVR },
-  { path: '/portfolio/amazon-alexa-cortana',            name:'alexacortana',            component: AlexaCortana },
-  { path: '/portfolio/amazon-alexa-personal-skills',    name:'alexapersonalskills',     component: AlexaPersonalSkills },
+  { path: '/portfolio',                                 name:'portfolio',                     component: Portfolio },
+  { path: '/portfolio/disney/design-system',            name:'disneydesignsystem',            component: DisneyDesignSystem },
+  { path: '/portfolio/disney/greenlight',               name:'disneygreenlight',              component: DisneyGreenlight },
+  { path: '/portfolio/disney/innovation-program',       name:'disneyinnovationprogram',       component: DisneyInnovationProgram },
+  { path: '/portfolio/disney/movie-slate',              name:'disneymovieslate',              component: DisneyMovieSlate },
+  { path: '/portfolio/disney/vr',                       name:'disneyvr',                      component: DisneyVR },
+  { path: '/portfolio/amazon/alexa-cortana',            name:'alexacortana',                  component: AlexaCortana },
+  { path: '/portfolio/amazon/alexa-personal-skills',    name:'alexapersonalskills',           component: AlexaPersonalSkills },
+  { path: '/portfolio/phenomblue/genesis',              name:'phenombluegenesis',             component: PhenomblueGenesis },
+  { path: '/portfolio/phenomblue/dino-dig',             name:'phenombluedinodig',             component: PhenomblueDinoDig },
+  { path: '/portfolio/phenomblue/movie-lotto',          name:'phenombluemovielotto',          component: PhenomblueMovieLotto },
+  { path: '/portfolio/phenomblue/fantastic-future-me',  name:'phenombluefantasticfutureme',   component: PhenomblueFantasticFutureMe },
 //  { path: '/portfolio/ace-analytics-dashboard',         name:'aceanalyticsdashbaord',   component: AceAnalyticsDashboard },
 
   { path: '/404', component: FourOhFour },
