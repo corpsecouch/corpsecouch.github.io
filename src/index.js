@@ -25,17 +25,18 @@ import Index from 'pages/index/Index';
 import Contact from 'pages/contact/Contact';
 import FourOhFour from 'pages/FourOhFour';
 import Portfolio from 'pages/portfolio/Portfolio';
-import DisneyDesignSystem from 'pages/portfolio/disney/design-system/DesignSystem';
-import DisneyGreenlight from 'pages/portfolio/disney/greenlight/Greenlight';
-import DisneyInnovationProgram from 'pages/portfolio/disney/innovation-program/InnovationProgram';
-import DisneyMovieSlate from 'pages/portfolio/disney/slate/Slate';
-import DisneyVR from 'pages/portfolio/disney/vr/vr';
-import AlexaCortana from 'pages/portfolio/amazon/alexa-cortana/AlexaCortana';
-import AlexaPersonalSkills from 'pages/portfolio/amazon/alexa-personal-skills/AlexaPersonalSkills';
-import PhenomblueGenesis from 'pages/portfolio/phenomblue/genesis/Genesis';
-import PhenomblueDinoDig from 'pages/portfolio/phenomblue/dino-dig/DinoDig';
-import PhenomblueMovieLotto from 'pages/portfolio/phenomblue/movie-lotto/MovieLotto';
-import PhenomblueFantasticFutureMe from 'pages/portfolio/phenomblue/fantastic-future-me/FantasticFutureMe';
+import DisneyDesignSystem from 'pages/portfolio/disney/DesignSystem';
+import DisneyGreenlight from 'pages/portfolio/disney/Greenlight';
+import DisneyInnovationProgram from 'pages/portfolio/disney/InnovationProgram';
+import DisneyMovieSlate from 'pages/portfolio/disney/Slate';
+import DisneyVR from 'pages/portfolio/disney/vr';
+import AlexaCortana from 'pages/portfolio/amazon/AlexaCortana';
+//import AlexaPersonalSkills from 'pages/portfolio/amazon/AlexaPersonalSkills';
+import PhenomblueGenesis from 'pages/portfolio/phenomblue/Genesis';
+import PhenomblueDinoDig from 'pages/portfolio/phenomblue/DinoDig';
+import PhenomblueMovieLotto from 'pages/portfolio/phenomblue/MovieLotto';
+import PhenomblueFantasticFutureMe from 'pages/portfolio/phenomblue/FantasticFutureMe';
+import PhenomblueMoppetMashup from 'pages/portfolio/phenomblue/MoppetMashup';
 //import AceAnalyticsDashboard from 'pages/portfolio/ace-metrix/analytics-dashboard/AnalyticsDashboard';
 
 const routes = [
@@ -50,11 +51,12 @@ const routes = [
   { path: '/portfolio/disney/movie-slate',              name:'disneymovieslate',              component: DisneyMovieSlate },
   { path: '/portfolio/disney/vr',                       name:'disneyvr',                      component: DisneyVR },
   { path: '/portfolio/amazon/alexa-cortana',            name:'alexacortana',                  component: AlexaCortana },
-  { path: '/portfolio/amazon/alexa-personal-skills',    name:'alexapersonalskills',           component: AlexaPersonalSkills },
+  //{ path: '/portfolio/amazon/alexa-personal-skills',    name:'alexapersonalskills',           component: AlexaPersonalSkills },
   { path: '/portfolio/phenomblue/genesis',              name:'phenombluegenesis',             component: PhenomblueGenesis },
   { path: '/portfolio/phenomblue/dino-dig',             name:'phenombluedinodig',             component: PhenomblueDinoDig },
   { path: '/portfolio/phenomblue/movie-lotto',          name:'phenombluemovielotto',          component: PhenomblueMovieLotto },
   { path: '/portfolio/phenomblue/fantastic-future-me',  name:'phenombluefantasticfutureme',   component: PhenomblueFantasticFutureMe },
+  { path: '/portfolio/phenomblue/moppet-mashup',        name:'phenombluemoppetmashup',        component: PhenomblueMoppetMashup },
 //  { path: '/portfolio/ace-analytics-dashboard',         name:'aceanalyticsdashbaord',   component: AceAnalyticsDashboard },
 
   { path: '/404', component: FourOhFour },
