@@ -29,6 +29,8 @@
 
 <style scoped lang="scss">
   li {
+    display: flex;
+    flex-flow: column nowrap;
     width: 260px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
@@ -37,6 +39,16 @@
       width: 100%;
       height: 10rem;
       background-color: grey;
+    }
+
+    &.highlight {
+      width: 580px;
+      flex-flow: row nowrap;
+
+      > img {
+        width: 260px;
+        height: 100%;
+      }
     }
 
     > .contents {

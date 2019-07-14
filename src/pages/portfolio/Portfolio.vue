@@ -12,6 +12,7 @@
           v-for="project in projects"
           v-bind:data="projects"
           v-bind:key="project.routeName"
+          v-bind:class="{highlight: project.highlight}"
           v-bind:routeName="project.routeName"
           v-bind:imageUrl="project.imageUrl">
             <template v-slot:company>{{project.company}}</template>
@@ -186,11 +187,12 @@
       return {
         projects: [
           {
+            highlight:    true,
             company:      'Amazon',
             title:        'Introducing Alexa to Cortana',
             description:  'Connecting AIs from two of the world\'s largest companies; a world-first.',
             routeName:    'alexacortana',
-            imageUrl:     './dist/assets/portfolio/amazon/alexa-cortana/peek.png'
+            imageUrl:     './dist/assets/portfolio/amazon/alexa-cortana/peek-lg.png'
           },
           {
             company:      'Walt Disney Studios',
@@ -297,8 +299,6 @@
       margin: 0;
 
       > li {
-        display: flex;
-        flex-flow: column nowrap;
         margin: 0 0.5rem 4rem 0.5rem;
       }
 
