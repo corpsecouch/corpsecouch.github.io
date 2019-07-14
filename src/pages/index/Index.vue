@@ -21,8 +21,8 @@
     <Section id="ace" class="exp">
       <img src="./ace metrix.png" class="masthead">
       <div class="description">
-        <span class="role">Head of Design</span>
-        <header>Between March and October of 2013, I was the head of design for Ace Metrix.</header>
+        <span class="role">Creative Director</span>
+        <header>Between March and October of 2013, I directed the design team for Ace Metrix.</header>
         <p class="details">After starting as their Sr. UI Engineer, I quickly moved into a leadership role by building out their in-house design team. We worked closely with engineering, product, data scientists and R&amp;D to strategize and create a B2B product for assessing and measuring the impact of video advertising. Our work has influenced advertising and marketing across 2,500 brands with more than 80k ads measured across 25MM viewers.</p>
       </div>
     </Section>
