@@ -32,7 +32,7 @@
       <img src="./phenomblue.png" class="masthead">
       <div class="description">
         <span class="role">Sr. UX Designer</span>
-        <header>At Phenomblue, I led R&amp;D and UX design for 5 years.</header>
+        <header>Between 2007 and 2013, I was an engineer, a UX designer and led R&amp;D for Phenomblue.</header>
         <p class="details">At Phenomblue, I led a wide range of exciting and innovative projects for major brands including Gatorade, McDonalds, Samsung, Eli Lily, Microsoft and GlaxoSmithKline. Being early in my career, I learned how to juggle multiple projects at once, move quickly and combine creativity, strategy and technical knowledge to drive innovation.</p>
       </div>
     </Section>
