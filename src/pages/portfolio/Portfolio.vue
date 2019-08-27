@@ -238,10 +238,24 @@
           },
           {
             company:      'Phenomblue',
+            title:        'My Wild Kingdom',
+            description:  'A groundbreaking adventure app that brings the wild to any situation',
+            routeName:    'phenombluemywildkingdom',
+            imageUrl:     './dist/assets/portfolio/phenomblue/my-wild-kingdom/peek.png'
+          },
+          {
+            company:      'Phenomblue',
             title:        'Operation: Dino Dig',
             description:  'Social computing for learning and exploration.',
             routeName:    'phenombluedinodig',
             imageUrl:     './dist/assets/portfolio/phenomblue/dino-dig/peek.png'
+          },
+          {
+            company:      'Phenomblue',
+            title:        'Page',
+            description:  'Breaking down the "fifth wall" of reading and literature.',
+            routeName:    'phenombluepage',
+            imageUrl:     './dist/assets/portfolio/phenomblue/page/peek.png'
           },
           {
             company:      'Phenomblue',
@@ -263,7 +277,14 @@
             description:  'A social, large-format interactive experience.',
             routeName:    'phenombluemoppetmashup',
             imageUrl:     './dist/assets/portfolio/phenomblue/moppet-mashup/peek.png'
-          }
+          },
+          {
+            company:      'Phenomblue',
+            title:        'TUMS: Food Fight',
+            description:  'A branded Facebook game.',
+            routeName:    'phenombluetums',
+            imageUrl:     './dist/assets/portfolio/phenomblue/tums/peek.png'
+          },
         ]
       }
     }

@@ -37,6 +37,9 @@ import PhenomblueDinoDig from 'pages/portfolio/phenomblue/DinoDig';
 import PhenomblueMovieLotto from 'pages/portfolio/phenomblue/MovieLotto';
 import PhenomblueFantasticFutureMe from 'pages/portfolio/phenomblue/FantasticFutureMe';
 import PhenomblueMoppetMashup from 'pages/portfolio/phenomblue/MoppetMashup';
+import PhenomblueTums from 'pages/portfolio/phenomblue/Tums';
+import PhenombluePage from 'pages/portfolio/phenomblue/Page';
+import PhenomblueMyWildKingdom from 'pages/portfolio/phenomblue/MyWildKingdom';
 //import AceAnalyticsDashboard from 'pages/portfolio/ace-metrix/analytics-dashboard/AnalyticsDashboard';
 
 const routes = [
@@ -57,6 +60,9 @@ const routes = [
   { path: '/portfolio/phenomblue/movie-lotto',          name:'phenombluemovielotto',          component: PhenomblueMovieLotto },
   { path: '/portfolio/phenomblue/fantastic-future-me',  name:'phenombluefantasticfutureme',   component: PhenomblueFantasticFutureMe },
   { path: '/portfolio/phenomblue/moppet-mashup',        name:'phenombluemoppetmashup',        component: PhenomblueMoppetMashup },
+  { path: '/portfolio/phenomblue/my-wild-kingdom',      name:'phenombluemywildkingdom',       component: PhenomblueMyWildKingdom },
+  { path: '/portfolio/phenomblue/page',                 name:'phenombluepage',                component: PhenombluePage },
+  { path: '/portfolio/phenomblue/tums',                 name:'phenombluetums',                component: PhenomblueTums },
 //  { path: '/portfolio/ace-analytics-dashboard',         name:'aceanalyticsdashbaord',   component: AceAnalyticsDashboard },
 
   { path: '/404', component: FourOhFour },
