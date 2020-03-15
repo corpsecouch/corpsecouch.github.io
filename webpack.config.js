@@ -28,7 +28,7 @@ module.exports = {
       },
 
       // this will apply to both plain `.js` files AND `<script>` blocks in `.vue` files
-      /*{
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
@@ -37,7 +37,7 @@ module.exports = {
             presets: ['@babel/preset-env']
           }
         }
-      },*/
+      },
 
       // this will apply to both plain `.css` files AND `<style>` blocks in `.vue` files
       {
@@ -89,7 +89,8 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       'components': path.resolve(__dirname, 'src/components/'),
-      'pages': path.resolve(__dirname, 'src/pages/')
+      'pages': path.resolve(__dirname, 'src/pages/'),
+      'data': path.resolve(__dirname, 'src/data')
     }
   },
 
