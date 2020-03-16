@@ -8,8 +8,8 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 // calendly integration
-import VueCalendly from 'vue-calendly';
-Vue.use(VueCalendly);
+/*import VueCalendly from 'vue-calendly';
+Vue.use(VueCalendly);*/
 
 // form validation
 /*import VeeValidate from 'vee-validate';

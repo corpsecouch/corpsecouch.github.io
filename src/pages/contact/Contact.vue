@@ -2,9 +2,10 @@
   <Page>
 
     <Section>
-      <header>So, you want to talk?</header>
-      <p>Your best bet for contacting me is by <a href="http://linkedin.com/in/jasonbejot" target="_blank">messaging me on LinkedIn</a>. Of course, you could also <a href="http://twitter.com/jasonbejot" target="_blank">tweet at me</a>.</p>
-      <vue-calendly url="https://calendly.com/jasonbejot" :height="600"></vue-calendly>
+      <header>Let's talk.</header>
+      <p>Is it work related?<br><a href="http://linkedin.com/in/jasonbejot" target="_blank">Message me on LinkedIn</a></p>
+      <p>Something other than work?<br><a href="http://twitter.com/jasonbejot" target="_blank">DM me on Twitter</a></p>
+      <p>If all else fails...<br><a href="https://calendly.com/jasonbejot" target="_blank">Book a meeting</a></p>
     </Section>
 
   </Page>
@@ -37,7 +38,7 @@
 
     /deep/ .container {
 
-      * {
+      > * {
         margin: 0 auto;
 
         @include screen-xl { width: 70%; }
@@ -56,6 +57,7 @@
         padding-top: 1em;
         font-size: 1.2em;
         line-height: 1.6;
+        padding-bottom: 2em;
       }
     }
   }
