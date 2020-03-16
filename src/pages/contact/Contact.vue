@@ -4,6 +4,7 @@
     <Section>
       <header>So, you want to talk?</header>
       <p>Your best bet for contacting me is by <a href="http://linkedin.com/in/jasonbejot" target="_blank">messaging me on LinkedIn</a>. Of course, you could also <a href="http://twitter.com/jasonbejot" target="_blank">tweet at me</a>.</p>
+      <vue-calendly url="https://calendly.com/jasonbejot" :height="600"></vue-calendly>
     </Section>
 
   </Page>
