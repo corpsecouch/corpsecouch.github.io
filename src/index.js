@@ -1,11 +1,9 @@
 import _ from 'lodash';
 import Vue from 'vue';
+import router from './router';
+import analytics from './analytics';
 
 // *** plugins *** //
-
-// view routing
-import VueRouter from 'vue-router';
-Vue.use(VueRouter);
 
 // calendly integration
 /*import VueCalendly from 'vue-calendly';
@@ -19,13 +17,9 @@ Vue.use(VeeValidate);*/
 /*import VModal from 'vue-js-modal';
 Vue.use(VModal);*/
 
-// scrollTo
-/*import VueScrollTo from 'vue-scrollto';
-Vue.use(VueScrollTo);*/
-
 
 // *** pages *** //
-import Index from 'pages/index/Index';
+/*import Index from 'pages/index/Index';
 import Contact from 'pages/contact/Contact';
 import FourOhFour from 'pages/FourOhFour';
 import Portfolio from 'pages/portfolio/Portfolio';
@@ -43,10 +37,10 @@ import PhenomblueFantasticFutureMe from 'pages/portfolio/phenomblue/FantasticFut
 import PhenomblueMoppetMashup from 'pages/portfolio/phenomblue/MoppetMashup';
 import PhenomblueTums from 'pages/portfolio/phenomblue/Tums';
 import PhenombluePage from 'pages/portfolio/phenomblue/Page';
-import PhenomblueMyWildKingdom from 'pages/portfolio/phenomblue/MyWildKingdom';
+import PhenomblueMyWildKingdom from 'pages/portfolio/phenomblue/MyWildKingdom';*/
 //import AceAnalyticsDashboard from 'pages/portfolio/ace-metrix/analytics-dashboard/AnalyticsDashboard';
 
-const routes = [
+/*const routes = [
   { path: '/',                                            name: 'index',                    component: Index },
   { path: '/#about', name:'about', component: Index },
   { path: '/contact', name:'contact', component: Contact },
@@ -71,48 +65,9 @@ const routes = [
 
   { path: '/404', component: FourOhFour },
   { path: '*', redirect: '/404' }
-];
+];*/
 
-const router = new VueRouter({
-  //mode: 'history',
-  routes: routes,
-  scrollBehavior (to, from, savedPosition) {
-    console.log('scrollBehavior');
-    console.log('to:', to);
-    console.log('from:', from);
-    console.log('savedPosition:', savedPosition);
-    if(savedPosition) {
-      return savedPosition; // scroll to the position
-    }
-    else if (to.hash) {
-        return { selector: to.hash }; // scroll to the selector
-    }
-    else {
-        return { x: 0, y: 0 };  // scroll to the top
-    }
-  }
-});
-
-// google analytics
-// https://medium.com/dailyjs/tips-tricks-for-vue-analytics-87a9d2838915
-import VueAnalytics from 'vue-analytics';
-
-Vue.config.productionTip =  true;
-/*const isProd = */process.env.NODE_ENV === 'production';
-
-Vue.use(VueAnalytics, {
-  id: 'UA-318678-4',
-  router/*,
-  autoTracking: {
-    exception: true
-  },
-  debug: {
-    enabled: isProd,
-    sendHitTask: isProd
-  }*/
-});
 
 new Vue({
-  el: '#app',
   router
-});
+}).$mount('#app');

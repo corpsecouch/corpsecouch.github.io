@@ -10,6 +10,8 @@
 
 <style scoped lang="scss">
   footer {
+    grid-column: mainStart / mainEnd;
+    grid-row: rowFooter;
     padding: 3em 0;
     text-align: center;
   }

@@ -1,13 +1,13 @@
 <template>
-  <li v-on:click="readMore">
+  <article v-on:click="readMore">
     <img :src="imageUrl">
-    <span class="contents">
-      <span class="company"><slot name="company">Company</slot></span>
+    <div class="contents">
       <span class="title"><slot name="title">Title</slot></span>
       <span class="description"><slot name="description">Description</slot></span>
-      <a>Read more</a>
-    </span>
-  </li>
+      <!--<span class="company"><slot name="company">Company</slot></span>-->
+      <!--<a>Read more</a>-->
+    </div>
+  </article>
 </template>
 
 <script>
@@ -28,36 +28,39 @@
 </script>
 
 <style scoped lang="scss">
-  li {
-    display: flex;
-    flex-flow: column nowrap;
-    width: 260px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  article {
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.29);
     cursor: pointer;
+    background-color: white;
 
     > img {
       width: 100%;
-      height: 10rem;
       background-color: grey;
-    }
+      opacity: 1;
+      transition: opacity 0.2s;
 
-    &.highlight {
-      width: 580px;
-      flex-flow: row nowrap;
-
-      > img {
-        width: 260px;
-        height: 100%;
+      &:hover {
+        opacity: 0.6;
       }
     }
 
     > .contents {
       margin: 0;
-      padding: 1rem;
+      padding: 1rem 1rem 1.8rem 1rem;
 
       > span {
         display: block;
         width: 100%;
+        text-align: center;
+      }
+
+      * + * {
+        margin-top: 1rem;
+      }
+
+      *:first-child {
+        margin-top: 0;
       }
 
       a {
@@ -71,15 +74,19 @@
         font-size: 0.7rem;
         text-transform: uppercase;
         color: $color-grey;
+        margin-bottom: 0.5rem;
       }
 
       .title {
         font-size: 1.2rem;
-        font-weight: 500;
+        font-weight: 300;
+        line-height: 1.2;
       }
 
       .description {
-        padding-top: 0.5rem;
+        line-height: 1.3;
+        font-size: 0.9rem;
+        font-weight: 300;
       }
     }
   }

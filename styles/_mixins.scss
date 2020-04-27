@@ -20,3 +20,15 @@
 @mixin font-raleway {
   font-family: 'Raleway', sans-serif;
 }
+
+@mixin font-baskerville {
+  font-family: 'Libre Baskerville', serif;
+}
+
+@mixin font-roboto-slab {
+  font-family: 'Roboto Slab', serif;
+}
+
+@mixin font-josefin-slab {
+  font-family: 'Josefin Slab', serif;
+}

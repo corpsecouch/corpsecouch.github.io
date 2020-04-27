@@ -1,24 +1,23 @@
 <template>
   <Page>
-    <Section id="intro">
+    <!--<Section id="intro">
       <header>Welcome to my portfolio.</header>
       <p>Here are some notable samples of my work. If you're interested in digging into the details, please <router-link :to="{ name: 'contact' }">contact me</router-link>.</p>
-    </Section>
+    </Section>-->
 
-    <Section id="projects">
-      <ul>
-
-        <PortfolioListItem
-          v-for="project in projects"
-          v-bind:data="projects"
-          v-bind:key="project.routeName"
-          v-bind:class="{highlight: project.highlight}"
-          v-bind:routeName="project.routeName"
-          v-bind:imageUrl="project.imageUrl">
-            <template v-slot:company>{{project.company}}</template>
-            <template v-slot:title>{{project.title}}</template>
-            <template v-slot:description>{{project.description}}</template>
-        </PortfolioListItem>
+    <section id="projects">
+      <PortfolioListItem
+        v-for="project in projects"
+        v-bind:data="projects"
+        v-bind:key="project.routeName"
+        v-bind:class="{highlight: project.highlight}"
+        v-bind:routeName="project.routeName"
+        v-bind:imageUrl="project.imageUrl">
+          <template v-slot:company>{{project.company}}</template>
+          <template v-slot:title>{{project.title}}</template>
+          <template v-slot:description>{{project.description}}</template>
+      </PortfolioListItem>
+    </section>
 
         <!--<li>
           <img src="https://picsum.photos/260">
@@ -160,12 +159,6 @@
           </span>
         </li>-->
 
-      </ul>
-
-      <p>More to come.</p>
-
-    </Section>
-
   </Page>
 </template>
 
@@ -194,7 +187,28 @@
 </script>
 
 <style scoped lang="scss">
-  #intro {
+  #projects {
+    width: 100%;
+    columns: 3;
+    column-gap: 1.5rem;
+    column-width: 180px;
+    padding: 4rem 4rem;
+    background-color: #efefef;
+
+    article {
+      display: inline-block;
+      width: 100%;
+      transform: translateZ(0); // fixes chrome bug with dropshadows and columns: https://stackoverflow.com/questions/17881923/box-shadow-trimmed-in-css-columns-in-chrome
+      margin-bottom: 1.5rem;
+
+      &.highlight {
+        column-span: 2;
+      }
+    }
+  }
+
+
+  /*#intro {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -229,5 +243,5 @@
       }
     }
 
-  }
+  }*/
 </style>

@@ -1,57 +1,120 @@
 <template>
   <Page>
 
-    <!-- intro -->
-    <Section id="intro">
-      <header>Hi! My name is Jason and I'm currently leading experience design on Amazon's Alexa Identity team.</header>
-      <p>Before taking a role in Amazon in July 2017, I led the UX design team at <a href="http://thewaltdisneycompany.com" target="_blank">Walt Disney Studios</a>. Check out my <a href="http://linkedin.com/in/jasonbejot" target="_blank">LinkedIn</a> profile to learn more. Follow me on <a href="http://twitter.com/jasonbejot" target="_blank">Twitter</a> for my random thoughts or read my articles on <a href="http://medium.com/@jasonbejot" target="_blank">Medium</a>.</p>
-    </Section>
+    <!--<Section id="one">
+      <p>Hi, my name is Jason and I'm human-focused technologist.</p>
+      <p>I'm currently an experience design leader at Amazon working on Alexa, defining the future of AI personalization, security and privacy-centric biometric recognition.</p>
+    </Section>-->
 
-    <!-- disney -->
-    <Section id="disney" class="exp">
-      <img src="./disney.png" class="masthead">
-      <div class="description">
-        <span class="role">Principal UX</span>
-        <header>From October 2013 to July 2017, I led UX design for Walt Disney Studios Technology.</header>
-        <p class="details">Starting out as the sole designer, I helped build a large centralized design team within the Disney Studios Technology Group. I managed designers and worked closely with product, engineers and senior leadership across the company to create it's suite of 150+ proprietary enterprise products. I played a key role in evolving how the studio operates it's business.</p>
+
+
+    <section id="masthead">
+      <img>
+    </section>
+
+    <section id="intro">
+      <p class="left">Experience design that looks around corners.</p>
+      <p class="right">I'm a technologist who designs experiences addressing the human side of innovation, how behavior and technology together can create a brighter future. I work at the intersection of psychology, technology, and business. </p>
+    </section>
+
+    <section id="social">
+      <a>twitter</a>
+      <a>linked in</a>
+      <a>medium</a>
+    </section>
+
+    <!--<section id="work">
+      <div id="projects">
+        <PortfolioListItem
+          v-for="project in projects"
+          v-bind:data="projects"
+          v-bind:key="project.routeName"
+          v-bind:class="{highlight: project.highlight}"
+          v-bind:routeName="project.routeName"
+          v-bind:imageUrl="project.imageUrl">
+            <template v-slot:company>{{project.company}}</template>
+            <template v-slot:title>{{project.title}}</template>
+            <template v-slot:description>{{project.description}}</template>
+        </PortfolioListItem>
       </div>
-    </Section>
+      <router-link :to="{ name : 'portfolio' }" alt="Portfolio">More in my porfolio</router-link>
+    </section>-->
 
-    <!-- ace metrix -->
-    <Section id="ace" class="exp">
-      <img src="./ace metrix.png" class="masthead">
-      <div class="description">
-        <span class="role">Creative Director</span>
-        <header>Between March and October of 2013, I directed the design team for Ace Metrix.</header>
-        <p class="details">After starting as their Sr. UI Engineer, I quickly moved into a leadership role by building out their in-house design team. We worked closely with engineering, product, data scientists and R&amp;D to strategize and create a B2B product for assessing and measuring the impact of video advertising. Our work has influenced advertising and marketing across 2,500 brands with more than 80k ads measured across 25MM viewers.</p>
-      </div>
-    </Section>
-
-    <!-- phenomblue -->
-    <Section id="phenom" class="exp">
-      <img src="./phenomblue.png" class="masthead">
-      <div class="description">
-        <span class="role">Sr. UX Designer</span>
-        <header>Between 2007 and 2013, I was an engineer, a UX designer and led R&amp;D for Phenomblue.</header>
-        <p class="details">At Phenomblue, I led a wide range of exciting and innovative projects for major brands including Gatorade, McDonalds, Samsung, Eli Lily, Microsoft and GlaxoSmithKline. Being early in my career, I learned how to juggle multiple projects at once, move quickly and combine creativity, strategy and technical knowledge to drive innovation.</p>
-      </div>
-    </Section>
-
-    <!-- about me -->
-    <Section id="about">
-
+    <!--<section id="about">
       <header>About Me</header>
-
       <p>I always knew I wanted to positively impact people's lives. Even my motivation for getting a Computer Science degree was to entertain and enrich lives by making games.</p>
-
       <p>Growing up on a large family farm, I filled my days with immersive storytelling by playing RPGs and running D&amp;D campaigns. Once I was in college, I realized I had a talent for understanding how people expected things to work and gravitated towards HCI.</p>
-
       <p>After spending a few years as an engineering lead I made the switch to experience design. I've been able to create things that delight millions of people and drive business (of course). Combined with my science and technical background, I've found a passion for driving innovation and invention through the lens of the experience. As a result I was elected to the innovation council at Phenomblue, received three Disney Inventor Awards, a patent, launched a product incubator within Disney Studios and was handpicked by the Disney Studios CTO to spearhead a Studio-wide innovation initiative.</p>
-
       <p>In a previous life I was musician writing and playing spacy guitar riffs in The Answer Team, touring and recording two albums. Then I was a biker tempting fate on the treacherous, twisty Southern California canyon roads.</p>
-
       <p>I currently live in Seattle with my wife and daughter.</p>
+    </section>-->
+
+    <!--<Section>
+      <div>
+        Designer
+        Engineer
+        Entrepreneur
+      </div>
+
+      <div>
+
+      </div>
+
     </Section>
+
+    Patents
+    X
+    X
+    X
+
+    Recognition
+    News Coverage
+    Webby Awards
+    FWA Awards
+    W3 Awards
+    Disney Inventor Awards
+    Best of Disney Award
+    Microsoft PhizzPop Challenge-->
+
+
+    <!--<Section id="work">
+      <header>Work</header>
+
+      <ul>
+        <li>Amazon</li>
+        <li>Disney</li>
+        <li>Ace Metrix</li>
+        <li>Phenomblue</li>
+        <li>Orajen</li>
+        <li>U.S. Army Corp of Engineers</li>
+        <li>SAIC</li>
+        <li>University of Nebraska Omaha</li>
+      </ul>
+      <img src="./amazon.png">
+      <img src="./disney.png">
+      <img src="./acemetrix.jpg">
+      <img src="./phenomblue.jpg">
+      <img src="./orajen.jpg">
+      <img src="./us army corps of engineers.jpg">
+      <img src="./saic.png">
+      <img src="./uno.png">
+    </Section>-->
+
+    <!--<Section id="about">
+      <header>About Me</header>
+      <p>I always knew I wanted to positively impact people's lives. Even my motivation for getting a Computer Science degree was to entertain and enrich lives by making games.</p>
+      <p>Growing up on a large family farm, I filled my days with immersive storytelling by playing RPGs and running D&amp;D campaigns. Once I was in college, I realized I had a talent for understanding how people expected things to work and gravitated towards HCI.</p>
+      <p>After spending a few years as an engineering lead I made the switch to experience design. I've been able to create things that delight millions of people and drive business (of course). Combined with my science and technical background, I've found a passion for driving innovation and invention through the lens of the experience. As a result I was elected to the innovation council at Phenomblue, received three Disney Inventor Awards, a patent, launched a product incubator within Disney Studios and was handpicked by the Disney Studios CTO to spearhead a Studio-wide innovation initiative.</p>
+      <p>In a previous life I was musician writing and playing spacy guitar riffs in The Answer Team, touring and recording two albums. Then I was a biker tempting fate on the treacherous, twisty Southern California canyon roads.</p>
+      <p>I currently live in Seattle with my wife and daughter.</p>
+    </Section>-->
+
+    <!--<Section id="contact">
+      <header>Let's talk</header>
+      <p>Is it work related?<br><a href="http://linkedin.com/in/jasonbejot" target="_blank">Message me on LinkedIn</a></p>
+      <p>Something other than work?<br><a href="http://twitter.com/jasonbejot" target="_blank">DM me on Twitter</a></p>
+      <p>If all else fails...<br><a href="https://calendly.com/jasonbejot" target="_blank">Book a meeting</a></p>
+    </Section>-->
 
   </Page>
 </template>
@@ -61,13 +124,22 @@
 
   import Section from 'components/SectionTemplate'
   import Page from 'components/PageTemplate'
+  import PortfolioListItem from 'components/PortfolioListItem'
+  import portfolioData from 'data/portfolio'
 
   export default {
     name: 'Index',
 
     components: {
       Section,
-      Page
+      Page,
+      PortfolioListItem
+    },
+
+    data () {
+      return {
+        projects: _.filter(portfolioData, function(o) { return o.showcase; })
+      }
     }
 
   }
@@ -75,7 +147,86 @@
 
 <style scoped lang="scss">
 
+  #work {
+    grid-column: 1 / span 5;
+    grid-row: 2;
+    width: 100%;
+    padding: 4rem 4rem;
+    background-color: #efefef;
+    text-align: center;
+
+    > a {
+      text-transform: uppercase;
+    }
+  }
+
+  /*#projects {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4rem;
+
+    article {
+      display: inline-block;
+      width: 30%;
+      transform: translateZ(0); // fixes chrome bug with dropshadows and columns: https://stackoverflow.com/questions/17881923/box-shadow-trimmed-in-css-columns-in-chrome
+    }
+  }*/
+
+  #masthead {
+    grid-column: colLeft / mainRight;
+    grid-row: 1;
+    img {
+      background-color: grey;
+      width: 100%;
+      height: 24rem;
+    }
+  }
+
   #intro {
+    grid-column: colLeft / mainRight;
+    grid-row: 2;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 4rem 2rem;
+
+    p {
+      margin: 0;
+    }
+
+    .left {
+      grid-column: 1;
+      font-size: 2rem;
+      font-weight: 300;
+      line-height: 1.2;
+    }
+
+    .right {
+      grid-column: 2;
+    }
+  }
+
+  #social {
+    grid-column: colLeft / mainRight;
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+
+    a {
+      padding: 0.5rem;
+      margin-left: 1.5rem;
+
+      &:first-child {
+        margin: 0;
+      }
+    }
+  }
+
+
+  /* --- --- --- */
+
+  /*#intro {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -107,7 +258,7 @@
         line-height: 1.6;
       }
     }
-  }
+  }*/
 
   .exp {
     .description {
@@ -182,7 +333,7 @@
     }*/
   }
 
-  #about {
+  /*#about {
     color: $color-lighttext;
     background-color: $color-19-plasticpink;
     padding-bottom: 3em;
@@ -216,6 +367,6 @@
        padding-top: 1em;
       }
     }
-   }
+  }*/
 
 </style>

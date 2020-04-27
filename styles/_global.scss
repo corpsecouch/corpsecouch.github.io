@@ -9,7 +9,8 @@
 }
 
 html {
-  background-color: white;
+  /*background-color: white;*/
+  background-color: #e4e4e4;
   @include font-raleway;
   color: $color-darktext;
   line-height: 1;

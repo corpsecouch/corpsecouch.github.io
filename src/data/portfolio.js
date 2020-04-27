@@ -1,6 +1,7 @@
 const data = [
   {
     highlight:    true,
+    showcase:     true,
     company:      'Amazon',
     title:        'Introducing Alexa to Cortana',
     description:  'Connecting AIs from two of the world\'s largest companies; a world-first.',
@@ -8,6 +9,7 @@ const data = [
     imageUrl:     './dist/assets/portfolio/amazon/alexa-cortana/peek-lg.png'
   },
   {
+    showcase:     true,
     company:      'Walt Disney Studios',
     title:        'Studio Design System',
     description:  'Creating an award-winning enterprise design system.',
@@ -29,6 +31,7 @@ const data = [
     imageUrl:     './dist/assets/portfolio/disney/innovation-program/peek.png'
   },
   {
+    showcase:     true,
     company:      'Walt Disney Studios',
     title:        'Filmmaking for Virtual Reality',
     description:  'Leading the VR conversation.',
