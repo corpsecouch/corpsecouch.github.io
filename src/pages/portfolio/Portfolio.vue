@@ -165,7 +165,6 @@
 <script>
   import data from 'data/portfolio'
   import Page from 'components/PageTemplate'
-  import Section from 'components/SectionTemplate'
   import PortfolioListItem from 'components/PortfolioListItem'
 
   export default {
@@ -173,7 +172,6 @@
 
     components: {
       Page,
-      Section,
       PortfolioListItem
     },
 
@@ -188,12 +186,15 @@
 
 <style scoped lang="scss">
   #projects {
+    grid-column: colStart / colEnd;
+    grid-row: 1;
+
     width: 100%;
     columns: 3;
     column-gap: 1.5rem;
-    column-width: 180px;
-    padding: 4rem 4rem;
-    background-color: #efefef;
+    column-width: 240px;
+    /*padding: 4rem 4rem;
+    background-color: #efefef;*/
 
     article {
       display: inline-block;
@@ -201,9 +202,9 @@
       transform: translateZ(0); // fixes chrome bug with dropshadows and columns: https://stackoverflow.com/questions/17881923/box-shadow-trimmed-in-css-columns-in-chrome
       margin-bottom: 1.5rem;
 
-      &.highlight {
+      /*&.highlight {
         column-span: 2;
-      }
+      }*/
     }
   }
 

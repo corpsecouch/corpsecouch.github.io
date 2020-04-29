@@ -1,6 +1,8 @@
 <template>
   <article v-on:click="readMore">
-    <img :src="imageUrl">
+    <div class="top">
+      <img :src="imageUrl">
+    </div>
     <div class="contents">
       <span class="title"><slot name="title">Title</slot></span>
       <span class="description"><slot name="description">Description</slot></span>
@@ -33,15 +35,24 @@
     box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.29);
     cursor: pointer;
     background-color: white;
+    position: relative;
 
-    > img {
-      width: 100%;
-      background-color: grey;
-      opacity: 1;
-      transition: opacity 0.2s;
+    .top {
+      position: relative;
 
-      &:hover {
-        opacity: 0.6;
+      img {
+        width: 100%;
+        height: auto;
+        background-color: grey;
+        transition: 0.3s ease;
+      }
+    }
+
+    &:hover {
+      .top {
+        img {
+          opacity: 0.3;
+        }
       }
     }
 

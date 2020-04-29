@@ -29,7 +29,7 @@
 <style scoped lang="scss">
 
   section {
-    grid-column: colLeft / mainRight;
+    grid-column: colStart / colEnd;
     grid-row: 1;
   }
 

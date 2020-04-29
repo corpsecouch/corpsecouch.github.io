@@ -174,7 +174,7 @@
   }*/
 
   #masthead {
-    grid-column: colLeft / mainRight;
+    grid-column: colStart / colEnd;
     grid-row: 1;
     img {
       background-color: grey;

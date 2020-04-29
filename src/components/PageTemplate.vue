@@ -87,14 +87,13 @@
     grid-gap: 4rem 2rem;*/
 
     display: grid;
-    grid-template-columns: [colLeft] 1fr [colMiddle] 1fr [colRight] 1fr;
+    grid-template-columns: [colStart] auto auto auto [colEnd];
     grid-template-rows: auto;
     grid-gap: 4rem 2rem;
     margin: 4rem 0;
   }
 
   footer {
-    /*padding: 3em 0;*/
     text-align: center;
   }
 </style>
