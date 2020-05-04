@@ -1,34 +1,39 @@
 <template>
   <div id="page">
-    <header>
-      <span class="name">Jason Bejot</span>
-      <span class="links">
-        <router-link :to="{ name: 'about' }" alt="About">About</router-link>
-        <router-link :to="{ name: 'work' }" alt="Work">Work</router-link>
-        <router-link :to="{ name: 'contact' }" alt="Contact">Contact</router-link>
-      </span>
-    </header>
+    <header>Jason Bejot</header>
 
     <main>
       <slot></slot>
     </main>
 
-    <footer>&copy; Jason Bejot</footer>
+    <footer>
+      <div class="container">
+        <div class="links">
+          <span class="site">
+            <router-link :to="{ name: 'about' }" alt="About">About</router-link>
+            <router-link :to="{ name: 'work' }" alt="Work">Work</router-link>
+            <router-link :to="{ name: 'contact' }" alt="Contact">Contact</router-link>
+          </span>
+          <span class="social">
+            <router-link :to="{ name: 'about' }" alt="Twitter">twitter</router-link>
+            <router-link :to="{ name: 'work' }" alt="LinkedIn">linkedin</router-link>
+            <router-link :to="{ name: 'contact' }" alt="Medium">medium</router-link>
+          </span>
+        </div>
+        <div class="copyright">
+          &copy; Jason Bejot
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 
 <script>
 
-  import TopNav from 'components/TopNav'
-  import Footer from 'components/Footer'
-
   export default {
     name: 'PageTemplate',
 
-    components: {
-      TopNav,
-      Footer
-    }
+    components: { }
 
   }
 </script>
@@ -37,63 +42,75 @@
   @import "styles/_global";
 
   #page {
-    margin: 6rem auto 3rem auto;
-    width: 80%;
+    margin: 0 auto;
+    width: 100%;
   }
 
   header {
-    /*padding: 6rem 0 3rem 0;*/
-    padding: 0 0 3rem 0;
-    border-bottom: dashed 1px #bfbfbf;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-
-    .name {
-      text-transform: uppercase;
-      font-weight: 400;
-      font-size: 2.4rem;
-      letter-spacing: 0.5rem;
-      @include font-josefin-slab;
-    }
-
-    .links {
-      margin-top: 3rem;
-
-      a {
-        display: inline-block;
-        padding: 0.5rem;
-        margin-left: 1.5rem;
-
-        &:hover {
-          transition: background-color 0.2s;
-          background-color: $color-link;
-          border-radius: 0.2rem;
-          color: white;
-          text-decoration: none;
-        }
-
-        &:first-child {
-          margin: 0;
-        }
-      }
-    }
+    width: 100%;
+    display: block;
+    background-color: $color-background-dark;
+    padding: 2rem 0;
+    text-align: center;
+    color: $color-text-light;
+    font-size: 1.3rem;//1.625rem;
+    @include font-raleway;
+    font-size: 200;
+    letter-spacing: 0.2em; // 20%-ish?
+    text-transform: uppercase;
   }
 
   main {
-    /*display: grid;
-    grid-template-columns: 10% [mainStart] 1fr 1fr 1fr [mainEnd] 10%;
-    grid-template-rows: [rowHeader] auto [rowContent] auto [rowFooter] auto;
-    grid-gap: 4rem 2rem;*/
-
-    display: grid;
-    grid-template-columns: [colStart] auto auto auto [colEnd];
-    grid-template-rows: auto;
-    grid-gap: 4rem 2rem;
-    margin: 4rem 0;
+    width: 100%;
+    display: block;
   }
 
   footer {
-    text-align: center;
+    width: 100%;
+    display: block;
+    background-color: $color-background-dark;
+    padding: 3rem 0;
+
+    .container {
+      box-sizing: border-box;
+      margin: 0 auto;
+      /*@include screen-xl { width: 50%; }
+      @include screen-lg { width: 50%; }
+      @include screen-md { width: 86%; }
+      @include screen-sm { width: 90%; }*/
+      width: 80%;
+    }
+
+    .links,
+    .site,
+    .social {
+      display: flex;
+      flex-wrap: no-wrap;
+    }
+
+    .links {
+      justify-content: space-between;
+      text-transform: uppercase;
+    }
+
+    .site > *,
+    .social > * {
+      display: inline-block;
+      margin-right: 2rem;
+      color: $color-text-link;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    .copyright {
+      text-align: center;
+      color: $color-text-light;
+      margin-top: 3rem;
+      text-transform: uppercase;
+      @include font-raleway;
+      letter-spacing: 0.2em;
+    }
   }
 </style>

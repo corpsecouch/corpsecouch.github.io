@@ -1,26 +1,54 @@
 <template>
   <Page>
 
-    <!--<Section id="one">
-      <p>Hi, my name is Jason and I'm human-focused technologist.</p>
-      <p>I'm currently an experience design leader at Amazon working on Alexa, defining the future of AI personalization, security and privacy-centric biometric recognition.</p>
-    </Section>-->
-
-
-
-    <section id="masthead">
-      <img>
+    <section id="catchy">
+      <div class="container">
+        <p>Experience design that looks around corners.</p>
+      </div>
     </section>
 
     <section id="intro">
-      <p class="left">Experience design that looks around corners.</p>
-      <p class="right">I'm a technologist who designs experiences addressing the human side of innovation, how behavior and technology together can create a brighter future. I work at the intersection of psychology, technology, and business. </p>
+      <div class="container">
+        <p class="title separator">I'm not just another designer</p>
+        <p>I'm a technologist who designs experiences addressing the human side of innovation, how behavior and technology together can create a brighter future.</p>
+        <p>I work at the intersection of psychology, technology, and business.</p>
+      </div>
     </section>
 
-    <section id="social">
-      <a>twitter</a>
-      <a>linked in</a>
-      <a>medium</a>
+    <section id="alexa" class="work dark">
+      <div class="container">
+        <p class="company separator">amazon alexa</p>
+        <p class="role">sr. ux design lead</p>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. A, nec in eget elit orci consectetur nullam. Fringilla massa nisi erat elementum eu mauris. Quis sed tristique a adipiscing vitae quam tortor egestas fames. Proin dolor quis sit ultricies. Hendrerit mauris at gravida lectus viverra eu. Consectetur morbi.</p>
+        <a class="case-study">case studies</a>
+      </div>
+    </section>
+
+    <section id="disney" class="work">
+      <div class="container">
+        <p class="company separator">walt disney studios</p>
+        <p class="role">principal ux architect</p>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. A, nec in eget elit orci consectetur nullam. Fringilla massa nisi erat elementum eu mauris. Quis sed tristique a adipiscing vitae quam tortor egestas fames. Proin dolor quis sit ultricies. Hendrerit mauris at gravida lectus viverra eu. Consectetur morbi.</p>
+        <a class="case-study">case studies</a>
+      </div>
+    </section>
+
+    <section id="ace-metrix" class="work dark">
+      <div class="container">
+        <p class="company separator">ace metrix</p>
+        <p class="role">creative director</p>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. A, nec in eget elit orci consectetur nullam. Fringilla massa nisi erat elementum eu mauris. Quis sed tristique a adipiscing vitae quam tortor egestas fames. Proin dolor quis sit ultricies. Hendrerit mauris at gravida lectus viverra eu. Consectetur morbi.</p>
+        <a class="case-study">case studies</a>
+      </div>
+    </section>
+
+    <section id="phenomblue" class="work">
+      <div class="container">
+        <p class="company separator">phenomblue</p>
+        <p class="role">sr. ux designer</p>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. A, nec in eget elit orci consectetur nullam. Fringilla massa nisi erat elementum eu mauris. Quis sed tristique a adipiscing vitae quam tortor egestas fames. Proin dolor quis sit ultricies. Hendrerit mauris at gravida lectus viverra eu. Consectetur morbi.</p>
+        <a class="case-study">case studies</a>
+      </div>
     </section>
 
     <!--<section id="work">
@@ -122,18 +150,15 @@
 <script>
   // https://www.bestfolios.com/portfolio/dougseidman
 
-  import Section from 'components/SectionTemplate'
   import Page from 'components/PageTemplate'
-  import PortfolioListItem from 'components/PortfolioListItem'
+  //import PortfolioListItem from 'components/PortfolioListItem'
   import portfolioData from 'data/portfolio'
 
   export default {
     name: 'Index',
 
     components: {
-      Section,
-      Page,
-      PortfolioListItem
+      Page
     },
 
     data () {
@@ -146,6 +171,116 @@
 </script>
 
 <style scoped lang="scss">
+
+  section {
+    width: 100%;
+    //min-height: 36rem;
+    min-height: 32rem;
+    padding: 2rem 0;
+
+    p {
+      font-weight: 300;
+      font-size: 0.9rem;
+      line-height: 1.5rem;
+    }
+
+    .separator::before {
+      content: '';
+      width: 3rem;
+      height: 0.5rem;
+      display: block;
+      box-shadow: inset 0 4px 0 0 #cacaca;
+      //margin: 7rem auto 1.5rem;
+      margin: 7rem 0 1.5rem;
+    }
+
+    a.case-study {
+      margin: 1.5rem 0 7rem;
+      display: inline-block;
+      color: $color-text-link;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    &.dark {
+      background-color: $color-background-dark;
+      color: $color-text-light;
+    }
+  }
+
+  #catchy {
+    background-color: $color-background-dark;
+    color: $color-text-light;
+
+    .container {
+      margin: 0 auto;
+      width: 80%;
+      /*height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;*/
+    }
+    p {
+      width: 50%;
+      @include font-raleway;
+      font-size: 2.8rem; //2.25rem;
+      font-weight: 200;
+      letter-spacing: 0.4em;
+      line-height: 3.4rem;
+    }
+  }
+
+  #intro {
+    .container {
+      margin: 0 auto;
+      width: 40%;
+    }
+
+    /*.separator {
+      width: 3rem;
+      height: 0.5rem;
+      display: block;
+      box-shadow: inset 0 4px 0 0 #cacaca;
+      margin: 7rem auto 1.5rem;
+    }*/
+
+    p {
+      display: inline-block;
+
+      &.title {
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        font-weight: 600;
+        display: block;
+        //text-align: center;
+      }
+    }
+  }
+
+  .work {
+    .container {
+      margin: 0 auto;
+      width: 40%;
+    }
+
+    .company {
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .role {
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      font-weight: 100;
+      line-height: 2.2rem;
+      margin: 0;
+    }
+
+    .description {
+
+    }
+  }
 
   #work {
     grid-column: 1 / span 5;
@@ -172,56 +307,6 @@
       transform: translateZ(0); // fixes chrome bug with dropshadows and columns: https://stackoverflow.com/questions/17881923/box-shadow-trimmed-in-css-columns-in-chrome
     }
   }*/
-
-  #masthead {
-    grid-column: colStart / colEnd;
-    grid-row: 1;
-    img {
-      background-color: grey;
-      width: 100%;
-      height: 24rem;
-    }
-  }
-
-  #intro {
-    grid-column: colLeft / mainRight;
-    grid-row: 2;
-
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 4rem 2rem;
-
-    p {
-      margin: 0;
-    }
-
-    .left {
-      grid-column: 1;
-      font-size: 2rem;
-      font-weight: 300;
-      line-height: 1.2;
-    }
-
-    .right {
-      grid-column: 2;
-    }
-  }
-
-  #social {
-    grid-column: colLeft / mainRight;
-    grid-row: 3;
-    display: flex;
-    justify-content: center;
-
-    a {
-      padding: 0.5rem;
-      margin-left: 1.5rem;
-
-      &:first-child {
-        margin: 0;
-      }
-    }
-  }
 
 
   /* --- --- --- */
@@ -307,7 +392,7 @@
     }
   }
 
-  #disney {
+  /*#disney {
     color: $color-lighttext;
     background-color: $color-backgroundgrey;
   }
@@ -319,7 +404,7 @@
 
   #phenom {
     color: $color-lighttext;
-    background-color: $color-backgroundgrey;
+    background-color: $color-backgroundgrey;*/
 
     /*/deep/ .description {
       position: relative;
@@ -331,7 +416,7 @@
 
       @include screen-sm { top: 0px; }
     }*/
-  }
+  //}
 
   /*#about {
     color: $color-lighttext;
