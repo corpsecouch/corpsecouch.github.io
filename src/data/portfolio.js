@@ -1,105 +1,246 @@
+//const slugs = {
+//  alexa: "alexa",
+//  disney: "disney",
+//  phenomblue: "pb"
+//}
+
+const companies = {
+  alexa: {
+    name: {
+      long: 'Amazon Alexa',
+      short: 'Alexa'
+    },
+    slug: 'alexa'
+  },
+  disney: {
+    name: {
+      long: 'Walt Disney Studios',
+      short: 'Disney'
+    },
+    slug: 'disney'
+  },
+  phenomblue: {
+    name: {
+      long: 'Phenomblue',
+      short: 'Phenomblue'
+    },
+    slug: 'phenomblue'
+  }
+}
+
+const randomImage = function() {
+  return `https://picsum.photos/200?random=${Math.random()*1000}`;
+}
+
 const data = [
-  {
-    highlight:    true,
-    showcase:     true,
-    company:      'Amazon',
-    title:        'Introducing Alexa to Cortana',
+  /*{
+    company: companies.alexa,
+    title:        'Alexa Profile',
+    slug:         'profile',
     description:  'Connecting AIs from two of the world\'s largest companies; a world-first.',
-    routeName:    'alexacortana',
-    imageUrl:     './dist/assets/portfolio/amazon/alexa-cortana/peek-lg.png'
+    image:        'https://picsum.photos/200?random=4',
+    route: {
+      name: 'alexacortana'
+    }
   },
+
   {
-    showcase:     true,
-    company:      'Walt Disney Studios',
-    title:        'Studio Design System',
+    company: companies.alexa,
+    title:        'Presence Detection',
+    slug:         'presence-detection',
+    description:  'Connecting AIs from two of the world\'s largest companies; a world-first.',
+    image:        'https://picsum.photos/200?random=3',
+    route: {
+      name: 'alexacortana'
+    }
+  },
+
+  {
+    company: companies.alexa,
+    title:        'Personalized Skills',
+    slug:         'personalized-skills',
+    description:  'Connecting AIs from two of the world\'s largest companies; a world-first.',
+    image:        'https://picsum.photos/200?random=2',
+    route: {
+      name: 'alexacortana'
+    }
+  },
+
+  {
+    company: companies.alexa,
+    title:        'Voice Settings',
+    slug:         'voice-settings',
+    description:  'Connecting AIs from two of the world\'s largest companies; a world-first.',
+    image:        'https://picsum.photos/200?random=1',
+    route: {
+      name: 'alexacortana'
+    }
+  },*/
+
+  {
+    company: companies.alexa,
+    title:        'Alexa + Cortana',
+    slug:         'alexa-cortana',
+    description:  'Connecting AIs from two of the world\'s largest companies; a world-first.',
+    //image:     './dist/assets/portfolio/amazon/alexa-cortana/peek-lg.png',
+    image:        randomImage(),
+    route: {
+      name: 'alexacortana'
+    }
+  },
+
+  {
+    company: companies.disney,
+    title:        'Enterprise Design System',
+    slug:         'design-system',
     description:  'Creating an award-winning enterprise design system.',
-    routeName:    'disneydesignsystem',
-    imageUrl:     './dist/assets/portfolio/disney/design-system/peek.png'
+    //image:     './dist/assets/portfolio/disney/design-system/peek.png',
+    image:        randomImage(),
+    route: {
+      name: 'disneydesignsystem'
+    }
   },
+
   {
-    company:      'Walt Disney Studios',
+    company: companies.disney,
     title:        'Movie Greenlight',
+    slug:         'greenlight',
     description:  'Innovating how Disney greenlights movies.',
-    routeName:    'disneygreenlight',
-    imageUrl:     './dist/assets/portfolio/disney/greenlight/peek.png'
+    //image:     './dist/assets/portfolio/disney/greenlight/peek.png',
+    image:        randomImage(),
+    route: {
+      name: 'disneygreenlight'
+    }
   },
+
   {
-    company:      'Walt Disney Studios',
+    company: companies.disney,
     title:        'Innovation Incubator',
+    slug:         'incubator',
     description:  'Transforming how Disney Studios innovates.',
-    routeName:    'disneyinnovationprogram',
-    imageUrl:     './dist/assets/portfolio/disney/innovation-program/peek.png'
+    //image:     './dist/assets/portfolio/disney/innovation-program/peek.png',
+    image:        randomImage(),
+    route: {
+      name: 'disneyinnovationprogram'
+    }
   },
+
   {
-    showcase:     true,
-    company:      'Walt Disney Studios',
+    company: companies.disney,
     title:        'Filmmaking for Virtual Reality',
-    description:  'Leading the VR conversation.',
-    routeName:    'disneyvr',
-    imageUrl:     './dist/assets/portfolio/disney/vr/peek.png'
+    slug:         'vr',
+    description:  'eading the VR conversation.',
+    //image:     './dist/assets/portfolio/disney/vr/peek.png',
+    image:        randomImage(),
+    route: {
+      name: 'disneyvr'
+    }
   },
+
   {
-    company:      'Walt Disney Studios',
+    company: companies.disney,
     title:        'Movie Slate',
+    slug:         'slate',
     description:  'Innovating how Disney plans and tracks their slate of upcoming movies.',
-    routeName:    'disneymovieslate',
-    imageUrl:     './dist/assets/portfolio/disney/slate/peek.png'
+    //image:     './dist/assets/portfolio/disney/slate/peek.png',
+    image:        randomImage(),
+    route: {
+      name: 'disneymovieslate'
+    }
   },
+
   {
-    company:      'Phenomblue',
+    company: companies.phenomblue,
     title:        'Microsoft Genesis',
+    slug:         'genesis',
     description:  'A 3D, social space simulator.',
-    routeName:    'phenombluegenesis',
-    imageUrl:     './dist/assets/portfolio/phenomblue/genesis/peek.png'
+    //image:     './dist/assets/portfolio/phenomblue/genesis/peek.png',
+    image:        randomImage(),
+    route: {
+      name: 'phenombluegenesis'
+    }
   },
+
   {
-    company:      'Phenomblue',
+    company: companies.phenomblue,
+    /*route: {
+      name: 'pbwildkingdom'
+    },*/
     title:        'My Wild Kingdom',
+    slug:         'wild-kingdom',
     description:  'A groundbreaking adventure app that brings the wild to any situation',
-    routeName:    'phenombluemywildkingdom',
-    imageUrl:     './dist/assets/portfolio/phenomblue/my-wild-kingdom/peek.png'
+    //image:     './dist/assets/portfolio/phenomblue/my-wild-kingdom/peek.png'
+    image:        randomImage()
   },
+
   {
-    company:      'Phenomblue',
+    company: companies.phenomblue,
+    /*route: {
+      name: 'pbdinodig'
+    },*/
     title:        'Operation: Dino Dig',
+    slug:         'dino-dig',
     description:  'Social computing for learning and exploration.',
-    routeName:    'phenombluedinodig',
-    imageUrl:     './dist/assets/portfolio/phenomblue/dino-dig/peek.png'
+    //image:     './dist/assets/portfolio/phenomblue/dino-dig/peek.png'
+    image:        randomImage()
   },
+
   {
-    company:      'Phenomblue',
+    company: companies.phenomblue,
+    /*route: {
+      name: 'pbpage'
+    },*/
     title:        'Page',
+    slug:         'page',
     description:  'Breaking down the "fifth wall" of reading and literature.',
-    routeName:    'phenombluepage',
-    imageUrl:     './dist/assets/portfolio/phenomblue/page/peek.png'
+    //image:     './dist/assets/portfolio/phenomblue/page/peek.png'
+    image:        randomImage()
   },
+
   {
-    company:      'Phenomblue',
+    company: companies.phenomblue,
+    /*route: {
+      name: 'pbmovielotto'
+    },*/
     title:        'Movie Lotto',
+    slug:         'movie-lotto',
     description:  'Social gaming in theaters.',
-    routeName:    'phenombluemovielotto',
-    imageUrl:     './dist/assets/portfolio/phenomblue/movie-lotto/peek.png'
+    //image:     './dist/assets/portfolio/phenomblue/movie-lotto/peek.png'
+    image:        randomImage()
   },
-  {
-    company:      'Phenomblue',
+
+  /*{
+    company: companies.phenomblue,
     title:        'Fantastic Future Me',
+    slug:         'fantastic-future-me',
     description:  'Encouraging kids to reach their Future Me.',
-    routeName:    'phenombluefantasticfutureme',
-    imageUrl:     './dist/assets/portfolio/phenomblue/fantastic-future-me/peek.png'
+    image:     './dist/assets/portfolio/phenomblue/fantastic-future-me/peek.png',
+    route: {
+      name: 'phenombluefantasticfutureme'
+    }
   },
+
   {
-    company:      'Phenomblue',
+    company: companies.phenomblue,
     title:        'Moppet Mashup',
+    slug:         'moppet-mashup',
     description:  'A social, large-format interactive experience.',
-    routeName:    'phenombluemoppetmashup',
-    imageUrl:     './dist/assets/portfolio/phenomblue/moppet-mashup/peek.png'
-  },
+    image:     './dist/assets/portfolio/phenomblue/moppet-mashup/peek.png',
+    route: {
+      name: 'phenombluemoppetmashup'
+    }
+  },*/
+
   {
-    company:      'Phenomblue',
+    company: companies.phenomblue,
+    /*route: {
+      name: 'pbtums'
+    },*/
     title:        'TUMS: Food Fight',
+    slug:         'tums',
     description:  'A branded Facebook game.',
-    routeName:    'phenombluetums',
-    imageUrl:     './dist/assets/portfolio/phenomblue/tums/peek.png'
+    //image:     './dist/assets/portfolio/phenomblue/tums/peek.png'
+    image:        randomImage()
   },
 ]
 

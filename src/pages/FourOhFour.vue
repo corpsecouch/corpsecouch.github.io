@@ -1,21 +1,19 @@
 <template>
   <Page>
-    <Section>
+    <section class="content">
       <h1>Not Found!</h1>
-    </Section>
+    </section>
   </Page>
 </template>
 
 <script>
   import Page from 'components/PageTemplate'
-  import Section from 'components/SectionTemplate'
 
   export default {
     name: 'FourOhFour',
 
     components: {
-      Page,
-      Section
+      Page
     }
   }
 </script>

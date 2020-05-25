@@ -1,6 +1,7 @@
 <template>
   <PortfolioPage>
     <template v-slot:title>Introducing Alexa to Cortana</template>
+    <!--<template v-slot:masthead><img src="dist/assets/portfolio/amazon/alexa-cortana/pr.png"></template>-->
     <template v-slot:content>
       <img src="dist/assets/portfolio/amazon/alexa-cortana/pr.png">
       <h2>What is it?</h2>
@@ -37,8 +38,10 @@
 </script>
 
 <style scoped lang="scss">
+  @import "styles/_portfolio";
+
   img {
-    margin-bottom: 3rem;
+    //margin-bottom: 3rem;
     width: 100%;
   }
 </style>

@@ -16,6 +16,38 @@
   @media all and (min-width: 992px) { @content; }
 }
 
+
+
+@mixin screen-small {
+  @media all and (max-width: 578px) {
+    //margin: 0 auto;
+    //width: 100%;
+    @content;
+  }
+}
+
+@mixin screen-regular {
+  @media all and (max-width: $screen-width-max) {
+    //margin: 0 auto;
+    //width: 100%;
+    @content;
+  }
+}
+
+@mixin screen-large {
+  @media all and (min-width: $screen-width-max) {
+    //margin: 0 auto;
+    //width: $content-width-max;
+    @content;
+  }
+}
+
+/*@mixin content-breakpoint {
+  @include screen-regular { }
+  @include screen-large { }
+}*/
+
+
 /* fonts */
 @mixin font-raleway {
   font-family: 'Raleway', sans-serif;

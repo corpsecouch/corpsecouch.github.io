@@ -1,12 +1,18 @@
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+
+  entry: {
+    index: './src/index.js'
+  },
 
   output: {
     filename: 'main.js',
+    chunkFilename: 'bundles/[id].js',
+    publicPath: 'dist/',
     path: path.resolve(__dirname, 'dist')
   },
 
@@ -62,6 +68,7 @@ module.exports = {
                 @import "styles/_fonts.scss";
                 @import "styles/_colors.scss";
                 @import "styles/_mixins.scss";
+                @import "styles/_variables.scss";
               `
             }
           }
@@ -69,7 +76,7 @@ module.exports = {
       },
 
       {
-        test: /\.(png|jpg|gif|mp4)$/,
+        test: /\.(png|jpg|gif|mp4)$/i,
         use: [
           {
             loader: 'file-loader',
@@ -96,6 +103,7 @@ module.exports = {
   },
 
   plugins: [
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new CleanWebpackPlugin()
   ]
 };

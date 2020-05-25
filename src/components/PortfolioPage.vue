@@ -1,67 +1,84 @@
 <template>
   <Page>
 
-    <Section>
-      <header><slot name="title"></slot></header>
-      <span class="subhead"><slot name="subhead">A Case Study</slot></span>
-      <div class="content"><slot name="content"></slot></div>
-    </Section>
+      <SmallMasthead>
+        <slot name="title"></slot>
+      </SmallMasthead>
+
+      <section id="wrapper" class="content">
+        <!--<div id="masthead"><slot name="masthead"></slot></div>
+        <div id="content"><slot name="content"></slot></div>-->
+        <slot name="content"></slot>
+      </section>
 
   </Page>
 </template>
 
 <script>
   import Page from 'components/PageTemplate'
-  import Section from 'components/SectionTemplate'
+  import SmallMasthead from 'components/SmallMasthead'
 
   export default {
     name: 'PortfolioPage',
 
     components: {
       Page,
-      Section
+      SmallMasthead
     }
   }
 </script>
 
 <style scoped lang="scss">
-  section {
-    width: 100%;
-    padding-top: 10rem;
-    padding-bottom: 0;
-  }
-
-  header {
-    font-size: 2.4em;
-    font-weight: 300;
-    line-height: 1.2em;
-    padding-bottom: 1em;
-    text-align: center;
-  }
-
-  .subhead {
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    color: $color-grey;
-    display: block;
-    text-align: center;
-    margin-bottom: 2.5rem;
-  }
-
-  /deep/ h2 {
-    font-weight: 600;
-    margin-top: 2em;
-
-    &:first-of-type, + * {
-      margin-top: 0;
-    }
+  #wrapper {
+    position: relative;
+    top: $portfolio-offset;
+    //top: -1.5rem;
+    @include screen-small { top: 0; }
+    //background-color: $color-background-light;
+    //padding: 3rem 0;
   }
 
   .content {
-    @include screen-xl { width: 70%; }
-    @include screen-lg { width: 70%; }
-    @include screen-md { width: 90%; }
-    @include screen-sm { width: 100%; }
-    margin: auto;
+    width: 70%;
+    @include screen-large { width: 770px; }
   }
+
+  /*#masthead {
+    width: 70%;
+    margin: auto;
+    @include screen-small { width: 100%; }
+  }*/
+
+  /*#title {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-background-dark;
+  }*/
+
+  /*#title-background {
+    height: 42vh;
+    background-color: $color-background-dark;
+  }
+
+  #title {
+    padding-bottom: 4vh;
+    color: $color-text-light;
+    font-size: 1.3rem;
+    @include font-raleway;
+    font-size: 200;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+    position: sticky;
+    top: 10rem;
+  }*/
+
+  /*#content {
+    width: 70%;
+    @include screen-small { width: 90%; }
+    margin: auto;
+    padding: 3rem 0;
+  }*/
 </style>

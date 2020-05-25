@@ -1,90 +1,13 @@
 <template>
   <Page>
 
-    <!--<p>Experience design that looks around corners.</p>-->
-
-    <BigMasthead>
-      Jason Bejot
-    </BigMasthead>
-
-    <!--<ContentNavs />-->
-
-    <section id="work">
-      <h2>Work</h2>
-      <div class="content">
-        <router-link
-          v-for="project in projects"
-          :data="projects"
-          :key="project.route.name"
-          :to="project.route.path"
-          :alt="project.title"
-          :class="project.company.slug">
-          <img :src="project.image">
-          <span class="wrapper">
-            <span class="company">{{project.company.name.short}}</span>
-            <span class="title">{{project.title}}</span>
-          </span>
-        </router-link>
+    <section id="catchy">
+      <div class="container">
+        <p>Experience design that looks around corners.</p>
       </div>
     </section>
 
-    <section id="about">
-      <h2>About</h2>
-      <div class="content">
-        <section class="left-column">
-          <p>I always knew I wanted to positively impact people's lives. Even my motivation for getting a Computer Science degree was to entertain and enrich lives by making games.</p>
-          <p>Growing up on a large family farm, I filled my days with immersive storytelling by playing RPGs and running D&amp;D campaigns. Once I was in college, I realized I had a talent for understanding how people expected things to work and gravitated towards HCI.</p>
-          <p>After spending a few years as an engineering lead I made the switch to experience design. I've been able to create things that delight millions of people and drive business (of course). Combined with my science and technical background, I've found a passion for driving innovation and invention through the lens of the experience. As a result I was elected to the innovation council at Phenomblue, received three Disney Inventor Awards, a patent, launched a product incubator within Disney Studios and was handpicked by the Disney Studios CTO to spearhead a Studio-wide innovation initiative.</p>
-          <p>In a previous life I was musician writing and playing spacy guitar riffs in The Answer Team, touring and recording two albums. Then I was a biker tempting fate on the treacherous, twisty Southern California canyon roads.</p>
-          <p>I currently live in Seattle with my wife and daughter.</p>
-        </section>
-
-        <section class="right-column">
-          <h3>Patents</h3>
-          <ul id="patents">
-            <li>Patent #1</li>
-            <li>Patent #2</li>
-            <li>Patent #3</li>
-          </ul>
-
-          <h3>Recognition</h3>
-          <ul id="awards">
-            <li>Webby</li>
-            <li>FWA</li>
-            <li>W3</li>
-            <li>Disney Inventor</li>
-            <li>Best of Disney</li>
-            <li>Microsoft PhizzPop Challenge</li>
-          </ul>
-
-          <h3>News Coverage</h3>
-          <ul id="news">
-            <li>TechCrunch</li>
-            <li>Venturebeat</li>
-            <li>The Verge</li>
-            <li>Ars Technica</li>
-            <li>Lifehacker</li>
-            <li>CNet</li>
-            <li>PCMag</li>
-            <li>Slate</li>
-            <li>CNBC</li>
-            <li>Washington Post</li>
-            <li>TechRadar</li>
-          </ul>
-        </section>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="content">
-        <span class="left">Is it work related?<br><a href="http://linkedin.com/in/jasonbejot" target="_blank">Message me on LinkedIn</a></span>
-        <span class="center">Something other than work?<br><a href="http://twitter.com/jasonbejot" target="_blank">DM me on Twitter</a></span>
-        <span class="right">If all else fails...<br><a href="https://calendly.com/jasonbejot" target="_blank">Book a meeting</a></span>
-      </div>
-    </section>
-
-    <!--<section id="intro">
+    <section id="intro">
       <div class="container">
         <p class="title separator">I'm not just another designer</p>
         <p>I'm a technologist who designs experiences addressing the human side of innovation, how behavior and technology together can create a brighter future.</p>
@@ -126,7 +49,7 @@
         <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. A, nec in eget elit orci consectetur nullam. Fringilla massa nisi erat elementum eu mauris. Quis sed tristique a adipiscing vitae quam tortor egestas fames. Proin dolor quis sit ultricies. Hendrerit mauris at gravida lectus viverra eu. Consectetur morbi.</p>
         <a class="case-study">case studies</a>
       </div>
-    </section>-->
+    </section>
 
     <!--<section id="work">
       <div id="projects">
@@ -227,31 +150,20 @@
 <script>
   // https://www.bestfolios.com/portfolio/dougseidman
 
-  import Page from 'components/PageTemplate';
-  import portfolioData from 'data/portfolio';
-  import BigMasthead from 'components/BigMasthead'
-  import ContentNavs from 'components/ContentNavs'
+  import Page from 'components/PageTemplate'
+  //import PortfolioListItem from 'components/PortfolioListItem'
+  import portfolioData from 'data/portfolio'
 
   export default {
     name: 'Index',
 
     components: {
-      Page,
-      BigMasthead,
-      ContentNavs
+      Page
     },
 
     data () {
-      //console.log(_.filter(portfolioData, function(o) { return o.imageUrl; }));
-      //_.map(portfolioData, 'imageUrl').forEach(val => require(val));
-      //_.forEach(ulrs, function(value, key) { require });
-      //portfolioData.keys().forEach(portfolioData);
-
-      //console.log(portfolioData);
-
       return {
-        //projects: _.filter(portfolioData, function(o) { return o.showcase; })
-        projects: portfolioData
+        projects: _.filter(portfolioData, function(o) { return o.showcase; })
       }
     }
 
@@ -260,174 +172,277 @@
 
 <style scoped lang="scss">
 
-  .content {
+  section {
+    width: 100%;
+    //min-height: 36rem;
+    min-height: 32rem;
     padding: 2rem 0;
-  }
 
-  h2 {
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 2rem;
+    p {
+      font-weight: 300;
+      font-size: 0.9rem;
+      line-height: 1.5rem;
+    }
 
-    &::before {
+    .separator::before {
       content: '';
+      width: 3rem;
+      height: 0.5rem;
       display: block;
-      margin: 6rem auto 1rem auto;
-      width: 42px;
-      height: 6px;
-      box-shadow: inset 0 4px 0 0 #c9d0d9;
+      box-shadow: inset 0 4px 0 0 #cacaca;
+      //margin: 7rem auto 1.5rem;
+      margin: 7rem 0 1.5rem;
+    }
+
+    a.case-study {
+      margin: 1.5rem 0 7rem;
+      display: inline-block;
+      color: $color-text-link;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    &.dark {
+      background-color: $color-background-dark;
+      color: $color-text-light;
     }
   }
 
-  h3 {
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-  }
+  #catchy {
+    background-color: $color-background-dark;
+    color: $color-text-light;
 
-  * + h3 {
-    margin-top: 1.5rem;
-  }
-
-  .left {
-    grid-column: left;
-  }
-
-  .center {
-    grid-column: center;
-  }
-
-  .right {
-    grid-column: right;
-  }
-
-  #work .content {
-    //padding: 1.5rem 0;
-
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-auto-rows: 1fr;
-    grid-gap: 1.5rem;
-
-    @include screen-large { }
-    @include screen-regular { }
-    @include screen-small { grid-template-columns: auto; }
-
-    a {
-      // https://spin.atomicobject.com/2015/07/14/css-responsive-square/
-      position: relative;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
+    .container {
+      margin: 0 auto;
+      width: 80%;
+      /*height: 100%;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
+      flex-direction: column;
+      justify-content: center;*/
+    }
+    p {
+      width: 50%;
+      @include font-raleway;
+      font-size: 2.8rem;
+      font-weight: 200;
+      letter-spacing: 0.4em;
+      line-height: 3.4rem;
+    }
+  }
 
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: filter 0.3s ease;
-      }
+  #intro {
+    .container {
+      margin: 0 auto;
+      width: 40%;
+    }
 
-      &:hover img {
-        filter: hue-rotate(30deg) blur(4px) brightness(150%);
-      }
+    p {
+      display: inline-block;
 
-      &.alexa .company {
-        background-color: $color-primary;
-      }
-
-      &.disney .company {
-        background-color: $color-secondary;
-      }
-
-      &.phenomblue .company {
-        background-color: $color-tertiary;
-      }
-
-      &::before {
-        content: '';
-        display: block;
-        padding-bottom: 100%;
-      }
-
-      .wrapper {
-        position: absolute;
-        bottom: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-      }
-
-      .company, .title {
-        width: 100%;
-        text-align: center;
-        background-color: $color-background-dark;
-        color: $color-text-light;
+      &.title {
         text-transform: uppercase;
-        font-size: 1.2rem;
-        @include font-raleway;
-        font-weight: 300;
-        letter-spacing: 0.2em;
-        padding: 0.3rem 0.5rem;
-        line-height: 1.5rem;
-      }
-
-      .company {
-        opacity: 0.85;
-        font-size: 0.8rem;
-        font-weight: 200;
-        text-shadow: 0px 0px 8px #000000;
+        font-size: 1.1rem;
+        font-weight: 600;
+        display: block;
       }
     }
   }
 
-  #about .content {
-    display: grid;
-    grid-template-columns: [left] 1fr [right] 1fr;
-    grid-auto-rows: 1fr;
-    grid-gap: 3rem;
-
-    //width: 80%;
-    //margin: auto;
-    padding: 3rem 0;
-    @include screen-small {
-      //width: 95%;
-      grid-template-columns: auto;
+  .work {
+    .container {
+      margin: 0 auto;
+      width: 40%;
     }
 
-    ul {
-      list-style: none;
+    .company {
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .role {
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      font-weight: 100;
+      line-height: 2.2rem;
       margin: 0;
     }
 
-    #news {
-      li {
-        display: inline-block;
-        margin-right: 0.3rem;
+    .description {
 
-        &:nth-of-type(1n+2)::before {
-          content: '|';
-          padding-right: 0.5rem;
-        }
-      }
     }
   }
 
-  #contact .content {
-    display: grid;
-    grid-template-columns: [left] 1fr [center] 1fr [right] 1fr;
-    grid-gap: 3rem;
+  #work {
+    grid-column: 1 / span 5;
+    grid-row: 2;
+    width: 100%;
+    padding: 4rem 4rem;
+    background-color: #efefef;
     text-align: center;
 
-    @include screen-small { grid-template-columns: [left center right] 1fr; }
-    //@include screen-regular { grid-template-columns: [left center right] 1fr; }
+    > a {
+      text-transform: uppercase;
+    }
   }
+
+  /*#projects {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4rem;
+
+    article {
+      display: inline-block;
+      width: 30%;
+      transform: translateZ(0); // fixes chrome bug with dropshadows and columns: https://stackoverflow.com/questions/17881923/box-shadow-trimmed-in-css-columns-in-chrome
+    }
+  }*/
+
+
+  /* --- --- --- */
+
+  /*#intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 80vh;
+
+    /deep/ .container {
+
+      * {
+        margin: 0 auto;
+
+        @include screen-xl { width: 70%; }
+
+        @include screen-lg { width: 70%; }
+
+        @include screen-md { width: 90%; }
+
+        @include screen-sm { width: 100%; }
+      }
+
+      header {
+        font-size: 2.4em;
+        font-weight: 300;
+        line-height: 1.2;
+      }
+
+      p {
+        padding-top: 1em;
+        font-size: 1.2em;
+        line-height: 1.6;
+      }
+    }
+  }*/
+
+  .exp {
+    .description {
+      @include screen-xl {
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      @include screen-lg {
+        width: 70%;
+        margin: 0 auto;
+      }
+
+      @include screen-md { width: 90%; }
+
+      @include screen-sm { width: 100%; }
+
+      > span {
+        display: block;
+      }
+
+      .role {
+        @include font-raleway;
+        font-size: 0.8em;
+        font-weight: 500;
+        text-transform: uppercase;
+
+        + header {
+          margin-top: 0.6em;
+        }
+      }
+
+      header {
+        font-weight: 300;
+        font-size: 1.8em;
+        line-height: 1.2;
+
+        + .details {
+          margin-top: 0.6em;
+        }
+      }
+    }
+
+    .masthead {
+      width: 100%;
+    }
+  }
+
+  /*#disney {
+    color: $color-lighttext;
+    background-color: $color-backgroundgrey;
+  }
+
+  #ace {
+    color: $color-lighttext;
+    background-color: $color-19-korea;
+  }
+
+  #phenom {
+    color: $color-lighttext;
+    background-color: $color-backgroundgrey;*/
+
+    /*/deep/ .description {
+      position: relative;
+      @include screen-xl { top: -350px; }
+
+      @include screen-lg { top: -250px; }
+
+      @include screen-md { top: -175px; }
+
+      @include screen-sm { top: 0px; }
+    }*/
+  //}
+
+  /*#about {
+    color: $color-lighttext;
+    background-color: $color-19-plasticpink;
+    padding-bottom: 3em;
+
+    /deep/ .container {
+
+    * {
+        margin: 0 auto;
+
+        @include screen-xl { width: 50%; }
+
+        @include screen-lg { width: 70%; }
+
+        @include screen-md { width: 90%; }
+
+        @include screen-sm { width: 100%; }
+      }
+    }
+
+    header {
+      font-weight: 500;
+      text-transform: uppercase;
+
+      /deep/ + p {
+        padding-top: 0.6em;
+      }
+    }
+
+    p {
+      /deep/ + p {
+       padding-top: 1em;
+      }
+    }
+  }*/
 
 </style>
