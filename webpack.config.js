@@ -11,7 +11,7 @@ module.exports = {
 
   output: {
     filename: 'main.js',
-    chunkFilename: 'bundles/[id].js',
+    //chunkFilename: 'bundles/[id].js',
     publicPath: 'dist/',
     path: path.resolve(__dirname, 'dist')
   },
@@ -87,7 +87,12 @@ module.exports = {
             }
           }
         ]
-      }
+      },
+
+      /*{
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },*/
 
     ]
   },
@@ -96,9 +101,11 @@ module.exports = {
     extensions: ['.vue', '.js', '.css', '.scss'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      'components': path.resolve(__dirname, 'src/components/'),
-      'pages': path.resolve(__dirname, 'src/pages/'),
-      'data': path.resolve(__dirname, 'src/data')
+      'components': path.resolve(__dirname, 'src/components'),
+      'pages': path.resolve(__dirname, 'src/pages'),
+      'data': path.resolve(__dirname, 'src/data'),
+      'assets': path.resolve(__dirname, 'src/assets'),
+      'globals': path.resolve(__dirname, 'src/globals')
     }
   },
 

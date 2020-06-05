@@ -28,24 +28,24 @@
       <slot></slot>
     </main>
 
-    <footer>
-      <div class="content">
-        <!--<div class="links">
-          <span class="site">
-            <router-link :to="{ name: 'about' }" alt="About">About</router-link>
-            <router-link :to="{ name: 'work' }" alt="Work">Work</router-link>
-            <router-link :to="{ name: 'contact' }" alt="Contact">Contact</router-link>
-          </span>
-          <span class="social">
-            <router-link :to="{ name: 'about' }" alt="Twitter">twitter</router-link>
-            <router-link :to="{ name: 'work' }" alt="LinkedIn">linkedin</router-link>
-            <router-link :to="{ name: 'contact' }" alt="Medium">medium</router-link>
-          </span>
-        </div>-->
-        <div class="copyright">
-          &copy; Jason Bejot
-        </div>
-      </div>
+    <footer class="divider">
+      <!--<div class="links">
+        <span class="site">
+          <router-link :to="{ name: 'about' }" alt="About">About</router-link>
+          <router-link :to="{ name: 'work' }" alt="Work">Work</router-link>
+          <router-link :to="{ name: 'contact' }" alt="Contact">Contact</router-link>
+        </span>
+        <span class="social">
+          <router-link :to="{ name: 'about' }" alt="Twitter">twitter</router-link>
+          <router-link :to="{ name: 'work' }" alt="LinkedIn">linkedin</router-link>
+          <router-link :to="{ name: 'contact' }" alt="Medium">medium</router-link>
+        </span>
+      </div>-->
+      <!--<div class="copyright">
+        &copy; Jason Bejot
+      </div>-->
+      Built from scratch with care.
+      <span id="copyright">&copy; Jason Bejot</span>
     </footer>
   </div>
 </template>
@@ -57,11 +57,11 @@
 
     components: { },
 
-    data () {
+    /*data () {
       return {
         menuHidden: true
       }
-    }
+    }*/
 
     /*methods: {
       readMore: function() {
@@ -76,11 +76,11 @@
   @import "styles/_global";
 
   header {
-    width: 100vw;
+    /*width: 100vw;
     position: absolute;
     z-index: $z-menu-button;
     display: flex;
-    justify-content: center;
+    justify-content: center;*/
     /*position: fixed;
     top: 0;*/
     //background-color: $color-background-dark;
@@ -90,9 +90,9 @@
     }*/
   }
 
-  main {
+  /*main {
     background-color: $color-background-light;
-  }
+  }*/
 
   #menu-button {
     display: block;
@@ -141,10 +141,10 @@
     }
   }
 
-  #page {
+  /*#page {
     margin: 0 auto;
     width: 100%;
-  }
+  }*/
 
   main {
     width: 100%;
@@ -154,10 +154,12 @@
   footer {
     width: 100%;
     display: block;
-    background-color: $color-background-dark;
+    //background-color: $color-background-dark;
     padding: 3rem 0;
+    font-size: 0.9rem;
+    text-align: center;
 
-    .links,
+    /*.links,
     .site,
     .social {
       display: flex;
@@ -178,15 +180,16 @@
       &:last-child {
         margin: 0;
       }
-    }
+    }*/
 
-    .copyright {
-      text-align: center;
-      color: $color-text-light;
-      margin-top: 3rem;
+    #copyright {
+      //color: $color-text-light;
+      //margin-top: 3rem;
       text-transform: uppercase;
-      @include font-raleway;
-      letter-spacing: 0.2em;
+      display: block;
+      margin-top: 1.5rem;
+      //@include font-raleway;
+      //letter-spacing: 0.2em;
     }
   }
 </style>

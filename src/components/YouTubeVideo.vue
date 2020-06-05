@@ -14,6 +14,7 @@
 <style scoped lang="scss">
 .youtube {
   position:relative;padding-top:56.25%;
+  background-color: $color-text-dark;
 }
 
 iframe {

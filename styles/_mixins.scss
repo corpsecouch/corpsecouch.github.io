@@ -19,7 +19,8 @@
 
 
 @mixin screen-small {
-  @media all and (max-width: 578px) {
+  //@media all and (max-width: 578px) {
+  @media all and (max-width: 680px) {
     //margin: 0 auto;
     //width: 100%;
     @content;
@@ -54,17 +55,17 @@
   font-weight: 400; // regular
 }
 
-@mixin font-baskerville {
+/*@mixin font-baskerville {
   font-family: 'Libre Baskerville', serif;
   font-weight: 400;
-}
+}*/
 
-@mixin font-roboto-slab {
+/*@mixin font-roboto-slab {
   font-family: 'Roboto Slab', serif;
   font-weight: 400;
-}
+}*/
 
-@mixin font-josefin-slab {
+/*@mixin font-josefin-slab {
   font-family: 'Josefin Slab', serif;
   font-weight: 400;
-}
+}*/
