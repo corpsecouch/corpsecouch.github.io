@@ -3,36 +3,29 @@ import VueRouter from 'vue-router';
 import FourOhFour from 'pages/FourOhFour';
 import Index from 'pages/index/Index';
 
-import AlexaCortana from 'pages/portfolio/alexa/alexa-cortana/alexa-cortana';
-import AlexaPresence from 'pages/portfolio/alexa/presence/presence';
-import AlexaPersonalizedSkills from 'pages/portfolio/alexa/personalized-skills/personalized-skills';
-import AlexaProfile from 'pages/portfolio/alexa/profile/profile';
-import AlexaVoiceSettings from 'pages/portfolio/alexa/voice-settings/voice-settings';
+const AlexaCortana = () => import(/* webpackChunkName: "alexa-projects" */ 'pages/portfolio/alexa/alexa-cortana/alexa-cortana')
+const AlexaPresence = () => import(/* webpackChunkName: "alexa-projects" */ 'pages/portfolio/alexa/presence/presence')
+const AlexaPersonalizedSkills = () => import(/* webpackChunkName: "alexa-projects" */ 'pages/portfolio/alexa/personalized-skills/personalized-skills')
+const AlexaProfile = () => import(/* webpackChunkName: "alexa-projects" */ 'pages/portfolio/alexa/profile/profile')
+const AlexaVoiceSettings = () => import(/* webpackChunkName: "alexa-projects" */ 'pages/portfolio/alexa/voice-settings/voice-settings')
 
-import DisneyDesignSystem from 'pages/portfolio/disney/design-system/design-system';
-import DisneyGreenlight from 'pages/portfolio/disney/greenlight/greenlight';
-import DisneyInnovationProgram from 'pages/portfolio/disney/incubator/incubator';
-import DisneyMovieSlate from 'pages/portfolio/disney/slate/slate';
-import DisneyVR from 'pages/portfolio/disney/vr/vr';
+const DisneyDesignSystem = () => import(/* webpackChunkName: "disney-projects" */ 'pages/portfolio/disney/design-system/design-system')
+const DisneyGreenlight = () => import(/* webpackChunkName: "disney-projects" */ 'pages/portfolio/disney/greenlight/greenlight')
+const DisneyInnovationProgram = () => import(/* webpackChunkName: "disney-projects" */ 'pages/portfolio/disney/incubator/incubator')
+const DisneyMovieSlate = () => import(/* webpackChunkName: "disney-projects" */ 'pages/portfolio/disney/slate/slate')
+const DisneyVR = () => import(/* webpackChunkName: "disney-projects" */ 'pages/portfolio/disney/vr/vr')
 
-import PhenomblueGenesis from 'pages/portfolio/phenomblue/genesis/genesis';
-import PhenomblueDinoDig from 'pages/portfolio/phenomblue/dino-dig/dino-dig';
-import PhenomblueMovieLotto from 'pages/portfolio/phenomblue/movie-lotto/movie-lotto';
-import PhenomblueFantasticFutureMe from 'pages/portfolio/phenomblue/fantastic-future-me/fantastic-future-me';
-import PhenomblueMoppetMashup from 'pages/portfolio/phenomblue/moppet-mashup/moppet-mashup';
-import PhenomblueTums from 'pages/portfolio/phenomblue/tums/tums';
-import PhenombluePage from 'pages/portfolio/phenomblue/page/page';
-import PhenomblueMyWildKingdom from 'pages/portfolio/phenomblue/wild-kingdom/wild-kingdom';
+const PhenomblueGenesis = () => import(/* webpackChunkName: "pb-projects" */ 'pages/portfolio/phenomblue/genesis/genesis')
+const PhenomblueDinoDig = () => import(/* webpackChunkName: "pb-projects" */ 'pages/portfolio/phenomblue/dino-dig/dino-dig')
+const PhenomblueMovieLotto = () => import(/* webpackChunkName: "pb-projects" */ 'pages/portfolio/phenomblue/movie-lotto/movie-lotto')
+const PhenomblueFantasticFutureMe = () => import(/* webpackChunkName: "pb-projects" */ 'pages/portfolio/phenomblue/fantastic-future-me/fantastic-future-me')
+const PhenomblueMoppetMashup = () => import(/* webpackChunkName: "pb-projects" */ 'pages/portfolio/phenomblue/moppet-mashup/moppet-mashup')
+const PhenomblueTums = () => import(/* webpackChunkName: "pb-projects" */ 'pages/portfolio/phenomblue/tums/tums')
+const PhenombluePage = () => import(/* webpackChunkName: "pb-projects" */ 'pages/portfolio/phenomblue/page/page')
+const PhenomblueMyWildKingdom = () => import(/* webpackChunkName: "pb-projects" */ 'pages/portfolio/phenomblue/wild-kingdom/wild-kingdom')
 
 //https://github.com/vihanb/babel-plugin-wildcard
 //import * from 'pages/portfolio/amazon/*'; // this doesn't work
-
-// scrollTo
-/*import VueScrollTo from 'vue-scrollto';
-Vue.use(VueScrollTo);*/
-
-
-
 
 
 //console.log(MyPlugin.routes);
@@ -125,35 +118,12 @@ const router = new VueRouter({
 
   scrollBehavior (to, from, savedPosition) {
     //https://router.vuejs.org/guide/advanced/scroll-behavior.html
-
     if (to.hash) {
       return { selector: to.hash }
     } else {
       return { x: 0, y: 0 }
     }
-
-    /*if (savedPosition) {
-      return savedPosition
-    } else {
-      return { x: 0, y: 0 }
-    }*/
   }
-
-  /*scrollBehavior (to, from, savedPosition) {
-    console.log('scrollBehavior');
-    console.log('to:', to);
-    console.log('from:', from);
-    console.log('savedPosition:', savedPosition);
-    if(savedPosition) {
-      return savedPosition; // scroll to the position
-    }
-    else if (to.hash) {
-        return { selector: to.hash }; // scroll to the selector
-    }
-    else {
-        return { x: 0, y: 0 };  // scroll to the top
-    }
-  }*/
 });
 
 export default router;
