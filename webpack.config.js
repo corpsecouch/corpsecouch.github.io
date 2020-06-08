@@ -18,10 +18,6 @@ module.exports = {
 
   // webpack-dev-server
   devServer: {
-    //contentBase: path.join(__dirname, 'dist'),
-    //contentBase: './dist',
-    //compress: true,
-    //port: 9000,
     hot: true
   },
 
