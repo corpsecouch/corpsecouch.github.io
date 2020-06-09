@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import FourOhFour from 'pages/FourOhFour';
-import Index from 'pages/index/Index';
+import Index from 'pages/Index';
 
 const AlexaCortana = () => import(/* webpackChunkName: "alexa-projects" */ 'pages/portfolio/alexa/alexa-cortana/alexa-cortana')
 const AlexaPresence = () => import(/* webpackChunkName: "alexa-projects" */ 'pages/portfolio/alexa/presence/presence')

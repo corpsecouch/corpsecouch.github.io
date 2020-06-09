@@ -37,7 +37,7 @@
           :to="{ name: 'alexaprofile' }"
           title="Alexa Profile">
           <span class="wrapper">
-            <img src="../portfolio/alexa/profile/thumb.png" class="work">
+            <img src="portfolio/alexa/profile/thumb.png" class="work">
             <span class="title">Alexa Profile</span>
             <span class="company">Alexa 2019</span>
           </span>
@@ -48,7 +48,7 @@
           :to="{ name: 'alexacortana' }"
           title="Alexa + Cortana">
           <span class="wrapper">
-            <img src="../portfolio/alexa/alexa-cortana/thumb.png" class="work">
+            <img src="portfolio/alexa/alexa-cortana/thumb.png" class="work">
             <span class="title">Alexa + Cortana</span>
             <span class="company">Alexa 2017</span>
           </span>
@@ -59,7 +59,7 @@
           :to="{ name: 'disneyvr' }"
           title="Filmmaking for VR">
           <span class="wrapper">
-            <img src="../portfolio/disney/vr/thumb.png" class="work">
+            <img src="portfolio/disney/vr/thumb.png" class="work">
             <span class="title">Filmmaking for VR</span>
             <span class="company">Disney 2014</span>
           </span>
