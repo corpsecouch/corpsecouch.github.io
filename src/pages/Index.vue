@@ -5,11 +5,10 @@
 
     <section id="name">
       <h1>Jason Bejot</h1>
-      <p>Experience design that looks around corners.</p>
+      <!--<p>Experience design that looks around corners.</p>-->
     </section>
 
     <section id="social">
-      <!--<a href="#portfolio" alt="Portfolio">Portfolio</a>-->
       <router-link :to="{ path: '/#portfolio' }" alt="Portfolio">Portfolio</router-link>
       <router-link :to="{ path: '/#about' }" alt="About">About</router-link>
       <router-link :to="{ path: '/#contact' }" alt="Contact">Contact</router-link>
@@ -18,26 +17,12 @@
     <section id="portfolio">
       <h2>Portfolio</h2>
       <div id="featured" class="columns">
-        <!--<router-link
-          v-for="project in projects"
-          :data="projects"
-          :key="project.route.name"
-          :to="project.route"
-          :alt="project.title"
-          :class="project.company.slug">
-          <img :src="project.image" class="work">
-          <span class="wrapper">
-            <span class="company">{{project.company.name.short}}</span>
-            <span class="title">{{project.title}}</span>
-          </span>
-        </router-link>-->
-
         <router-link
           class="project"
           :to="{ name: 'alexaprofile' }"
           title="Alexa Profile">
           <span class="wrapper">
-            <img src="portfolio/alexa/profile/thumb.png" class="work">
+            <img src="./portfolio/alexa/profile/thumb.png" class="work">
             <span class="title">Alexa Profile</span>
             <span class="company">Alexa 2019</span>
           </span>
@@ -48,7 +33,7 @@
           :to="{ name: 'alexacortana' }"
           title="Alexa + Cortana">
           <span class="wrapper">
-            <img src="portfolio/alexa/alexa-cortana/thumb.png" class="work">
+            <img src="./portfolio/alexa/alexa-cortana/thumb.png" class="work">
             <span class="title">Alexa + Cortana</span>
             <span class="company">Alexa 2017</span>
           </span>
@@ -59,12 +44,11 @@
           :to="{ name: 'disneyvr' }"
           title="Filmmaking for VR">
           <span class="wrapper">
-            <img src="portfolio/disney/vr/thumb.png" class="work">
+            <img src="./portfolio/disney/vr/thumb.png" class="work">
             <span class="title">Filmmaking for VR</span>
             <span class="company">Disney 2014</span>
           </span>
         </router-link>
-
       </div>
 
       <div id="archive" class="columns">
@@ -157,11 +141,6 @@
           <a href="https://medium.com/@jasonbejot" title="Medium" target="_blank"><SVGMedium /></a>
         </div>
       </div>
-      <!--<div class="content">
-        <span class="left">Is it work related?<br><a href="http://linkedin.com/in/jasonbejot" target="_blank">Message me on LinkedIn</a></span>
-        <span class="center">Something other than work?<br><a href="http://twitter.com/jasonbejot" target="_blank">DM me on Twitter</a></span>
-        <span class="right">If all else fails...<br><a href="https://calendly.com/jasonbejot" target="_blank">Book a meeting</a></span>
-      </div>-->
     </section>
 
     <!--<section id="intro">
@@ -431,13 +410,6 @@
 
     .content {
       text-align: center;
-      /*display: grid;
-      grid-template-columns: [left] 1fr [center] 1fr [right] 1fr;
-      grid-gap: 3rem;
-      text-align: center;
-
-      @include screen-small { grid-template-columns: [left center right] 1fr; }*/
-      //@include screen-regular { grid-template-columns: [left center right] 1fr; }
     }
   }
 
