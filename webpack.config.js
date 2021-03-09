@@ -18,7 +18,9 @@ module.exports = {
 
   // webpack-dev-server
   devServer: {
-    hot: true
+    hot: true,
+    open: true,
+    publicPath: '/dist/'  // same as output.publicPath
   },
 
   module: {
@@ -52,17 +54,15 @@ module.exports = {
       },*/
 
       {
-        test: /\.scss$/,
+        test: /\.s[ac]ss$/i,
         use: [
           'vue-style-loader',
-          //'css-loader',
           { loader: 'css-loader', options: { importLoaders: 1 } },
           'postcss-loader',
-          //'sass-loader'
           {
             loader: 'sass-loader',
             options: {
-              data: `
+              additionalData: `
                 @import "styles/_fonts.scss";
                 @import "styles/_colors.scss";
                 @import "styles/_mixins.scss";
@@ -74,12 +74,13 @@ module.exports = {
       },
 
       {
-        test: /\.(png|jpg|gif|mp4)$/i,
+        test: /\.(png|jpe?g|gif|mp4)$/i,
         use: [
           {
             loader: 'file-loader',
             options: {
               name: '[hash].[ext]',
+              esModule: false,
               outputPath: 'assets',
               publicPath: 'dist/assets'
             }
