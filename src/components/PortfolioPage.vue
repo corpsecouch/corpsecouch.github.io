@@ -13,10 +13,10 @@
       <section id="title">
         <!--router-link :to="{ name: 'index' }" class="nav" id="prev" title="Go back"><Caret /></router-link>-->
         <div class="wrapper">
-          <span id="year"><slot name="year"></slot></span>
-          <span id="company"><slot name="company"></slot></span>
           <h1><slot name="title"></slot></h1>
           <p v-if="!!this.$slots.subtitle"><slot name="subtitle"></slot></p>
+          <span id="company"><slot name="company"></slot></span>
+          <span id="year"><slot name="year"></slot></span>
         </div>
         <!--<a class="nav" id="next" title="Next project"><Caret /></a>-->
       </section>
@@ -27,7 +27,7 @@
       </section>
 
       <section id="nda" v-if="nda">
-        <p>I'm covered by an NDA. This project has limited detail.</p>
+        <p>Due to an NDA I've limited the detail of this case study.</p>
       </section>
 
       <section id="content" v-if="!!this.$slots.content">
@@ -136,6 +136,18 @@
 
   #content {
     margin: 0 4rem 4rem 4rem;
+  }
+
+  #nda {
+    text-align: center;
+    margin: 6rem auto;
+    p {
+      background-color: $color-background-dark;
+      border-radius: 8px;
+      color: $color-lighttext;
+      display: inline;
+      padding: 0.5rem 1rem;
+    }
   }
 
   #hero {

@@ -3,7 +3,7 @@
     <template v-slot:title>Alexa + Cortana</template>
     <template v-slot:subtitle>The world's first AI assistant interoperability between two big-tech competitors.</template>
     <template v-slot:year>2017 - 2018</template>
-    <template v-slot:company>Amazon Alexa</template>
+    <template v-slot:company>Amazon</template>
     <template v-slot:hero>
       <img src="./alexa-cortana.png">
     </template>

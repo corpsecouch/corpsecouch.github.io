@@ -1,5 +1,5 @@
 <template>
-  <PortfolioPage>
+  <PortfolioPage nda="true">
     <template v-slot:title>Movie Slate</template>
     <template v-slot:company>Walt Disney Studios</template>
     <template v-slot:year>2016</template>

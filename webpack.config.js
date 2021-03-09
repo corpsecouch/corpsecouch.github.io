@@ -11,10 +11,17 @@ module.exports = {
 
   output: {
     filename: 'main.js',
+    //filename: '[name].bundle.js',
     //chunkFilename: 'bundles/[id].js',
     publicPath: 'dist/',
     path: path.resolve(__dirname, 'dist')
   },
+
+  /*optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },*/
 
   // webpack-dev-server
   devServer: {
