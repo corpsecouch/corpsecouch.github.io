@@ -1,39 +1,36 @@
 <template>
-  <PortfolioPage>
+  <PortfolioPage nda="true">
     <template v-slot:title>Alexa Profile</template>
-    <template v-slot:subtitle>Launching personal profiles for Alexa.</template>
+    <template v-slot:subtitle>The heart of personalization.</template>
     <template v-slot:company>Amazon Alexa</template>
     <template v-slot:year>2019</template>
-    <!--<template v-slot:content>
-      <img src="./profile.png">
-
-      <p>The challenge was to create a single place for people to manage their personal biometrics and security settings, what Alexa uses to recognize a person and verify their identity.</p>
-
-      <p>A profile sounds like a trivial thing, table-stakes for any app or service. But it's surprisingly complex when it's for an AI, people expect that AI to be communal, it's multi-modal (voice, app, 1P devices), it involves biometrics, and it's at Amazon scale.</p>
-
-      <p>By launching the Profile we opened up Alexa's ability to personalize. This started a fundamental transformation from an AI that didn't consider who she was interacting with to a deeply personal AI.</p>
-
-      <p>I owned the experience design, leading multiple cross-functional teams and designers across the Alexa organization.</p>
-    </template>-->
 
     <template v-slot:hero>
       <img src="./profile.png">
     </template>
 
     <template v-slot:challenge>
-      <p>The challenge was to create a single place for people to manage their personal biometrics and security settings, what Alexa uses to recognize a person and verify their identity.</p>
+      <p>Alexa customers needed a way to manage what Alexa knows about them as an individual – their biometrics, preference, privacy and security settings, etc.</p>
     </template>
 
     <template v-slot:process>
-      <p>A profile sounds like a trivial thing, table-stakes for any app or service. But it's surprisingly complex when it's for an AI, people expect that AI to be communal, it's multi-modal (voice, app, 1P devices), it involves biometrics, and it's at Amazon scale.</p>
+      <p>A profile sounds like a trivial thing, table-stakes for any app or service. There were four key challenges I needed to overcome to figure this out:</p>
+      <h4>Vision</h4>
+      <p>This was going to be a core strategic component to the holistic Alexa experience. I needed to squint into the future to see what a personal Alexa might look like.</p>
+      <h4>Audience</h4>
+      <p>Everyone in the world needed to be able to access their profile regardless of context. I needed to design for everyone and every modality.</p>
+      <h4>Systems Thinking &amp; Design</h4>
+      <p>I risked setting false expectations of personalization where there was none. I needed to design a solution that fits within and expands the holistic existing Alexa expereince.</p>
+      <h4>Durability &amp; Scalability</h4>
+      <p>Phase 2 is a real thing this time. I needed to design a solution that scales and evolves after it's launch, looking around the corner to plan for future needs and expectations.</p>
     </template>
 
     <template v-slot:outcome>
-      <p>By launching the Profile we opened up Alexa's ability to personalize. This started a fundamental transformation from an AI that didn't consider who she was interacting with to a deeply personal AI.</p>
+      <p>The launch of the Alexa Profile ushered in a paradigm shift, moving Alexa from an impersonal assistant to a personal one. It set the bar for profiles across Amazon by being the first profile launched for any Amazon product. The number of personalized Alexa experiences increases exponentially within the first year.</p>
     </template>
 
     <template v-slot:role>
-      <p>I owned the experience design, leading multiple cross-functional teams and designers across the Alexa organization.</p>
+      <p>I was the head of design for the program, leading multiple cross-functional teams and designers across the Alexa organization.</p>
     </template>
 
   </PortfolioPage>

@@ -13,8 +13,13 @@
 
 <style scoped lang="scss">
 .youtube {
-  position:relative;padding-top:56.25%;
+  position:relative;
+  padding-top:56.25%;
   background-color: $color-text-dark;
+  margin-top: 1rem;
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 iframe {

@@ -1,5 +1,5 @@
 <template>
-  <PortfolioPage>
+  <PortfolioPage nda="true">
     <!--<template v-slot:title>Big Hero 6 VR</template>-->
     <template v-slot:title>Filmmaking for VR</template>
     <template v-slot:subtitle>Pushing the boundaries of theatrical storytelling</template>

@@ -26,13 +26,22 @@
         <slot name="hero"></slot>
       </section>
 
+      <section id="nda" v-if="nda">
+        <p>I'm covered by an NDA. This project has limited detail.</p>
+      </section>
+
       <section id="content" v-if="!!this.$slots.content">
         <slot name="content"></slot>
       </section>
 
       <section id="challenge" class="columned" v-if="!this.$slots.content && !!this.$slots.challenge">
-        <h3>Challenge</h3>
+        <h3>Problem</h3>
         <div><slot name="challenge"></slot></div>
+      </section>
+
+      <section id="role" class="columned" v-if="!this.$slots.content && !!this.$slots.role">
+        <h3>My role</h3>
+        <div><slot name="role"></slot></div>
       </section>
 
       <section id="process" class="columned" v-if="!this.$slots.content && !!this.$slots.process">
@@ -43,11 +52,6 @@
       <section id="outcome" class="columned" v-if="!this.$slots.content && !!this.$slots.outcome">
         <h3>Outcome</h3>
         <div><slot name="outcome"></slot></div>
-      </section>
-
-      <section id="role" class="columned" v-if="!this.$slots.content && !!this.$slots.role">
-        <h3>My role</h3>
-        <div><slot name="role"></slot></div>
       </section>
 
       <!--<section id="news-awards" v-bind:class="columns" v-if="columns">-->
@@ -83,6 +87,8 @@
       Caret,
       Email
     },
+
+    props: ['nda'],
 
     computed: {
       columns: function() {
