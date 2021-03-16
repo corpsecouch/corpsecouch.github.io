@@ -6,13 +6,13 @@ module.exports = {
   mode: 'production',
 
   entry: {
-    index: './src/index.js'
+    app: { import: './src/app.js', filename: 'app.js' }
   },
 
   output: {
-    filename: 'main.js',
+    //filename: 'main.js',
     //filename: '[name].bundle.js',
-    //chunkFilename: 'bundles/[id].js',
+    chunkFilename: 'bundles/[id].js',
     publicPath: 'dist/',
     path: path.resolve(__dirname, 'dist')
   },
@@ -27,7 +27,7 @@ module.exports = {
   devServer: {
     hot: true,
     open: true,
-    publicPath: '/dist/'  // same as output.publicPath
+    publicPath: '/dist/'  // needs to be the same as output.publicPath
   },
 
   module: {
