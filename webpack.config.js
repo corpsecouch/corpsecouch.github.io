@@ -17,6 +17,13 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
 
+  performance: {
+    assetFilter: function(assetFilename) {
+      // only apply the performance filter to js files, not images
+      return assetFilename.endsWith('.js');
+    }
+  },
+
   /*optimization: {
     splitChunks: {
       chunks: 'all',
@@ -86,17 +93,6 @@ module.exports = {
         generator: {
           filename: 'assets/[hash][ext][query]'
         }
-        /*use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[hash].[ext]',
-              esModule: false,
-              outputPath: 'assets',
-              publicPath: 'dist/assets'
-            }
-          }
-        ]*/
       },
 
       /*{
