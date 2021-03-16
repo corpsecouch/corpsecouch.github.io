@@ -82,7 +82,8 @@ module.exports = {
 
       {
         test: /\.(png|jpe?g|gif|mp4)$/i,
-        use: [
+        type: 'asset/resource'
+        /*use: [
           {
             loader: 'file-loader',
             options: {
@@ -92,7 +93,7 @@ module.exports = {
               publicPath: 'dist/assets'
             }
           }
-        ]
+        ]*/
       },
 
       /*{
