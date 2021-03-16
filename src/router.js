@@ -91,13 +91,10 @@ MyPlugin.routes.forEach(e => {
 
 
 const router = new VueRouter({
-  //mode: 'history',
   routes: routes,
-
   scrollBehavior (to, from, savedPosition) {
-    //https://router.vuejs.org/guide/advanced/scroll-behavior.html
-    if (to.hash) {
-      return { selector: to.hash }
+    if (savedPosition) {
+      return savedPosition
     } else {
       return { x: 0, y: 0 }
     }
