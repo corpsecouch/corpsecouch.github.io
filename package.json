@@ -16,8 +16,13 @@
     "serve": "webpack serve"
   },
   "dependencies": {
+<<<<<<< HEAD
     "lodash": "^4.17.21",
     "vue": "^2.6.12",
+=======
+    "lodash": "^4.17.19",
+    "vue": "^2.6.11",
+>>>>>>> 74bf3b3e203983e8248f18846b77429a5bf892ce
     "vue-analytics": "^5.22.1",
     "vue-router": "^3.5.1"
   },
