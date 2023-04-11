@@ -1,9 +1,11 @@
 const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+//const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
+  //devTool: 'source-map',
 
   entry: {
     app: { import: './src/app.js', filename: 'app.js' }
@@ -14,7 +16,8 @@ module.exports = {
     //filename: '[name].bundle.js',
     chunkFilename: 'bundles/[id].js',
     publicPath: 'dist/',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    clean: true
   },
 
   performance: {
@@ -34,7 +37,27 @@ module.exports = {
   devServer: {
     hot: true,
     open: true,
-    publicPath: '/dist/'  // needs to be the same as output.publicPath
+    //publicPath: '/dist/'  // needs to be the same as output.publicPath
+    client: {
+      logging: 'verbose',
+      overlay: true
+    },
+    /*static: {
+      publicPath: 'dist/',
+      directory: path.resolve(__dirname, 'dist')
+    }*/
+    //static: './' // it works! (sorta)
+    static: [
+      {
+        directory: './',
+        publicPath: '/'
+      },
+      {
+        directory: './dist',
+        publicPath: '/'
+      }
+    ],
+    watchFiles: ['dist/**/*']
   },
 
   module: {
@@ -56,6 +79,13 @@ module.exports = {
             presets: ['@babel/preset-env']
           }
         }
+      },
+
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        enforce: "pre",
+        use: ['source-map-loader']
       },
 
       // this will apply to both plain `.css` files AND `<style>` blocks in `.vue` files
@@ -106,7 +136,8 @@ module.exports = {
   resolve: {
     extensions: ['.vue', '.js', '.css', '.scss'],
     alias: {
-      'vue$': 'vue/dist/vue.esm-browser.js',
+      // https://github.com/vuejs/core/tree/main/packages/vue#bundler-build-feature-flags
+      'vue$': 'vue/dist/vue.esm-bundler.js',
       'components': path.resolve(__dirname, 'src/components'),
       'pages': path.resolve(__dirname, 'src/pages'),
       'data': path.resolve(__dirname, 'src/data'),
@@ -117,6 +148,10 @@ module.exports = {
 
   plugins: [
     new VueLoaderPlugin(),
-    new CleanWebpackPlugin()
+    new webpack.DefinePlugin({
+      __VUE_OPTIONS_API__: JSON.stringify(true),
+      __VUE_PROD_DEVTOOLS__: JSON.stringify(false)
+    })
+    //new CleanWebpackPlugin({ verbose: true })
   ]
 };

@@ -1,5 +1,5 @@
 //import Vue from 'vue';
-//import VueRouter from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 
 //https://github.com/vihanb/babel-plugin-wildcard
 //import * from 'pages/portfolio/amazon/*'; // this doesn't work
@@ -21,10 +21,7 @@
     });
 });*/
 
-//console.log(MyPlugin.routes);
-
-
-Vue.use(VueRouter);
+//app.use(VueRouter);
 
 const routes = [
   { path: '/',                                          name: 'index',                        component: () => import('pages/Index') },
@@ -55,7 +52,7 @@ const routes = [
   { path: '/portfolio/phenomblue/tums',                 name:'pbtums',                        component: () => import('pages/portfolio/phenomblue/tums/tums') },
 
   { path: '/404',                                       name: '404',                          component: () => import('pages/FourOhFour') },
-  { path: '*',    redirect: '/404' }
+  { path: '/:pathMatch(.*)*',    redirect: '/404' }
 ];
 
 
@@ -89,9 +86,9 @@ MyPlugin.routes.forEach(e => {
     });
 });*/
 
-
-const router = new VueRouter({
+const router = createRouter({
   routes: routes,
+  history: createWebHistory(),
   scrollBehavior (to, from, savedPosition) {
     if (savedPosition) {
       return savedPosition
