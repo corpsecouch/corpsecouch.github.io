@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import router from './router';
-import VueAnalytics from 'vue-analytics';
+import VueAnalytics from 'vue-gtag';
 
 // google analytics
 // https://medium.com/dailyjs/tips-tricks-for-vue-analytics-87a9d2838915

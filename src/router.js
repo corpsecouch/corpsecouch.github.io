@@ -1,5 +1,5 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
+//import Vue from 'vue';
+//import VueRouter from 'vue-router';
 
 //https://github.com/vihanb/babel-plugin-wildcard
 //import * from 'pages/portfolio/amazon/*'; // this doesn't work

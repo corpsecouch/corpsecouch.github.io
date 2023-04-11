@@ -1,7 +1,7 @@
 import _ from 'lodash';
-import Vue from 'vue';
+import { createApp } from 'vue';
 import router from './router';
-import analytics from './analytics';
+//import analytics from './analytics';
 
 // *** plugins *** //
 
@@ -17,6 +17,6 @@ Vue.use(VeeValidate);*/
 /*import VModal from 'vue-js-modal';
 Vue.use(VModal);*/
 
-new Vue({
+createApp({
   router
-}).$mount('#app');
+}).mount('#app');

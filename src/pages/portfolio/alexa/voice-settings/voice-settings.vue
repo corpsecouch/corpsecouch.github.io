@@ -5,7 +5,7 @@
     <template v-slot:year>2018</template>
     <!--<template v-slot:hero><img src="./pr.png"></template>-->
     <template v-slot:content>
-      <p>Alexa is Amazon's voice-based personal assistant available on hundreds of millions of Echo and 3rd-party devices.<p>
+      <p>Alexa is Amazon's voice-based personal assistant available on hundreds of millions of Echo and 3rd-party devices.</p>
 
       <p>The challenge was...</p>
 
