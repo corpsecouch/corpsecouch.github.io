@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import { createApp } from 'vue';
 import router from './router';
-//import analytics from './analytics';
+import analytics from './analytics';
 
 // *** plugins *** //
 
