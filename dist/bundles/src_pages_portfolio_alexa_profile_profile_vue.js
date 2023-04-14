@@ -63,9 +63,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*!*******************************************************!*\
   !*** ./src/pages/portfolio/alexa/profile/profile.png ***!
   \*******************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((module) => {
 
-eval("module.exports = __webpack_require__.p + \"assets/17b88bbb0e1de961c38b.png\";\n\n//# sourceURL=webpack://website/./src/pages/portfolio/alexa/profile/profile.png?");
+eval("module.exports = \"/assets/17b88bbb0e1de961c38b.png\";\n\n//# sourceURL=webpack://website/./src/pages/portfolio/alexa/profile/profile.png?");
 
 /***/ })
 

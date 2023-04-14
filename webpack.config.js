@@ -1,6 +1,5 @@
 const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
-//const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
@@ -42,11 +41,6 @@ module.exports = {
       logging: 'verbose',
       overlay: true
     },
-    /*static: {
-      publicPath: 'dist/',
-      directory: path.resolve(__dirname, 'dist')
-    }*/
-    //static: './' // it works! (sorta)
     static: [
       {
         directory: './',
@@ -81,6 +75,7 @@ module.exports = {
         }
       },
 
+      // enables source map for easier debugging
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -121,7 +116,9 @@ module.exports = {
         test: /\.(png|jpe?g|gif|mp4)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'assets/[hash][ext][query]'
+          publicPath: '/assets/',
+          outputPath: 'assets/',
+          filename: '[hash][ext][query]'
         }
       },
 
@@ -152,6 +149,5 @@ module.exports = {
       __VUE_OPTIONS_API__: JSON.stringify(true),
       __VUE_PROD_DEVTOOLS__: JSON.stringify(false)
     })
-    //new CleanWebpackPlugin({ verbose: true })
   ]
 };

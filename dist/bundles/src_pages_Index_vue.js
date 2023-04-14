@@ -341,10 +341,10 @@ eval("// style-loader: Adds some css to the DOM by adding a <style> tag\n\n// lo
 /*!***********************************************************!*\
   !*** ./src/pages/portfolio/alexa/alexa-cortana/thumb.png ***!
   \***********************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((module) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"assets/27c200e434f901b3606f.png\";\n\n//# sourceURL=webpack://website/./src/pages/portfolio/alexa/alexa-cortana/thumb.png?");
+eval("module.exports = \"/assets/27c200e434f901b3606f.png\";\n\n//# sourceURL=webpack://website/./src/pages/portfolio/alexa/alexa-cortana/thumb.png?");
 
 /***/ }),
 
@@ -352,10 +352,10 @@ eval("module.exports = __webpack_require__.p + \"assets/27c200e434f901b3606f.png
 /*!*****************************************************!*\
   !*** ./src/pages/portfolio/alexa/profile/thumb.png ***!
   \*****************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((module) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"assets/59499d647df5b481b6dd.png\";\n\n//# sourceURL=webpack://website/./src/pages/portfolio/alexa/profile/thumb.png?");
+eval("module.exports = \"/assets/59499d647df5b481b6dd.png\";\n\n//# sourceURL=webpack://website/./src/pages/portfolio/alexa/profile/thumb.png?");
 
 /***/ }),
 
@@ -363,10 +363,10 @@ eval("module.exports = __webpack_require__.p + \"assets/59499d647df5b481b6dd.png
 /*!*************************************************!*\
   !*** ./src/pages/portfolio/disney/vr/thumb.png ***!
   \*************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((module) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"assets/c00a89e2f6a8b41e631d.png\";\n\n//# sourceURL=webpack://website/./src/pages/portfolio/disney/vr/thumb.png?");
+eval("module.exports = \"/assets/c00a89e2f6a8b41e631d.png\";\n\n//# sourceURL=webpack://website/./src/pages/portfolio/disney/vr/thumb.png?");
 
 /***/ })
 
