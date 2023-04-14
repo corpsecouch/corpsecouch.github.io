@@ -9,9 +9,9 @@
     </section>
 
     <section id="social">
-      <router-link :to="{ path: '/#portfolio' }" alt="Portfolio">Portfolio</router-link>
-      <router-link :to="{ path: '/#about' }" alt="About">About</router-link>
-      <router-link :to="{ path: '/#contact' }" alt="Contact">Contact</router-link>
+      <router-link :to="{ path: '/', hash: '#portfolio' }" alt="Portfolio">Portfolio</router-link>
+      <router-link :to="{ path: '/', hash: '#about' }" alt="About">About</router-link>
+      <router-link :to="{ path: '/', hash: '#contact' }" alt="Contact">Contact</router-link>
     </section>
 
     <section id="portfolio">
