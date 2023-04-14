@@ -372,7 +372,7 @@
     display: grid;
     grid-template-columns: [left] 1fr [right] 0.7fr;
     grid-auto-rows: 1fr;
-    grid-gap: 1.5rem;
+    grid-gap: 2.5rem;
 
     @include screen-small {
       //grid-template-columns: [left right] auto;
