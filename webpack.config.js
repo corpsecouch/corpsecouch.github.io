@@ -4,15 +4,12 @@ const webpack = require('webpack');
 
 module.exports = {
   mode: 'development',
-  //devTool: 'source-map',
 
   entry: {
     app: { import: './src/app.js', filename: 'app.js' }
   },
 
   output: {
-    //filename: 'main.js',
-    //filename: '[name].bundle.js',
     chunkFilename: 'bundles/[id].js',
     publicPath: 'dist/',
     path: path.resolve(__dirname, 'dist'),
@@ -26,17 +23,10 @@ module.exports = {
     }
   },
 
-  /*optimization: {
-    splitChunks: {
-      chunks: 'all',
-    },
-  },*/
-
   // webpack-dev-server
   devServer: {
     hot: true,
     open: true,
-    //publicPath: '/dist/'  // needs to be the same as output.publicPath
     client: {
       logging: 'verbose',
       overlay: true
@@ -121,11 +111,6 @@ module.exports = {
           filename: '[hash][ext][query]'
         }
       },
-
-      /*{
-        test: /\.html$/i,
-        loader: 'html-loader',
-      },*/
 
     ]
   },
