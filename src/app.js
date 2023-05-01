@@ -65,7 +65,8 @@ const isProd = process.env.NODE_ENV === 'production';
 
 app.use(VueGtag, {
   //id: 'UA-318678-4',
-  id: '364084982',
+  //id: '364084982',
+  id: 'G-G24FHEZ8YC',
   router,
   autoTracking: {
     exception: true
