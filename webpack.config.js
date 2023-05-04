@@ -1,25 +1,30 @@
 const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
 const webpack = require('webpack');
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: 'production',
 
   entry: {
-    app: { import: './src/app.js', filename: 'app.js' }
+    //app: { import: './src/app.js', filename: 'app.js' }
+    app: {
+      import: './src/app.js',
+      filename: 'app.js'
+    }
   },
 
   output: {
     chunkFilename: 'bundles/[id].js',
-    publicPath: 'dist/',
-    path: path.resolve(__dirname, 'dist'),
+    //publicPath: 'dist/',
+    path: path.resolve(__dirname, 'dist'),  // tells webpack to compile everything to 'dist'
     clean: true
   },
 
   performance: {
+    hints: false,
     assetFilter: function(assetFilename) {
-      // only apply the performance filter to js files, not images
-      return assetFilename.endsWith('.js');
+      return assetFilename.endsWith('.js'); // don't process js files
     }
   },
 
@@ -32,16 +37,16 @@ module.exports = {
       overlay: true
     },
     static: [
-      {
+      /*{
         directory: './',
         publicPath: '/'
-      },
+      },*/
       {
-        directory: './dist',
+        directory: './dist',  // serve files from dist as if it's serving from the root directory
         publicPath: '/'
       }
     ],
-    watchFiles: ['dist/**/*']
+    watchFiles: ['src/**/*'] // watch for file changes in dist
   },
 
   module: {
@@ -106,7 +111,8 @@ module.exports = {
         test: /\.(png|jpe?g|gif|mp4)$/i,
         type: 'asset/resource',
         generator: {
-          publicPath: '/dist/assets/',
+          //publicPath: '/dist/assets/',
+          publicPath: '/assets/',
           outputPath: 'assets/',
           filename: '[hash][ext][query]'
         }
@@ -133,6 +139,17 @@ module.exports = {
     new webpack.DefinePlugin({
       __VUE_OPTIONS_API__: JSON.stringify(true),
       __VUE_PROD_DEVTOOLS__: JSON.stringify(false)
+    }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: "*.*",        // move everything at the root of src to dist
+          context: "src/",
+          globOptions: {
+            ignore: "app.js"  // except app.js because that gets processed
+          }
+        }
+      ]
     })
   ]
 };
