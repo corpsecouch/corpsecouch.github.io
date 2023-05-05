@@ -66,18 +66,10 @@ const isProd = process.env.NODE_ENV === 'production';
 console.log("isProd:", isProd)
 
 app.use(VueGtag, {
-  //id: 'UA-318678-4',
-  //id: '364084982',
-  id: 'G-G24FHEZ8YC',
-  router,
-  autoTracking: {
-    exception: true
-  },
-  debug: {
-    enabled: !isProd,
-    sendHitTask: isProd
+  config: {
+      id: 'G-G24FHEZ8YC',
   }
-});
+}, router);
 
 
 
