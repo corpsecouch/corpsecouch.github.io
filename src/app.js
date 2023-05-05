@@ -8,8 +8,6 @@ const app = createApp({});
 /* *** router setup *** */
 /* ******************** */
 
-import { createRouter, createWebHistory } from 'vue-router';
-
 const routes = [
   { path: '/',                                          name: 'index',                        component: () => import('pages/Index') },
   /*
@@ -39,12 +37,14 @@ const routes = [
   { path: '/portfolio/phenomblue/tums',                 name:'pbtums',                        component: () => import('pages/portfolio/phenomblue/tums/tums') },
 
   { path: '/404',                                       name: '404',                          component: () => import('pages/FourOhFour') },
-  { path: '/:pathMatch(.*)*',    redirect: '/404' }
+  { path: '/:pathMatch(.*)*',                           redirect: '/404' }
 ];
+
+import { createRouter, createWebHashHistory } from 'vue-router';
 
 const router = createRouter({
   routes: routes,
-  history: createWebHistory(),
+  history: createWebHashHistory(),//createWebHistory(),
   scrollBehavior (to, from, savedPosition) {
     if (savedPosition) return savedPosition
     if (to.hash) return { el: to.hash, behavior: 'smooth' }
@@ -62,6 +62,8 @@ app.use(router);
 import VueGtag from 'vue-gtag';
 
 const isProd = process.env.NODE_ENV === 'production';
+
+console.log("isProd:", isProd)
 
 app.use(VueGtag, {
   //id: 'UA-318678-4',

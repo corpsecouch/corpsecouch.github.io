@@ -4,10 +4,10 @@ const webpack = require('webpack');
 const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
+  //mode: 'development',
   mode: 'production',
 
   entry: {
-    //app: { import: './src/app.js', filename: 'app.js' }
     app: {
       import: './src/app.js',
       filename: 'app.js'
@@ -71,12 +71,12 @@ module.exports = {
       },
 
       // enables source map for easier debugging
-      {
+      /*{
         test: /\.js$/,
         exclude: /node_modules/,
         enforce: "pre",
         use: ['source-map-loader']
-      },
+      },*/
 
       // this will apply to both plain `.css` files AND `<style>` blocks in `.vue` files
       /*{
@@ -143,11 +143,15 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: "*.*",        // move everything at the root of src to dist
+          from: "*.*",        // move everything (files with an extension) at the root of src to dist
           context: "src/",
           globOptions: {
             ignore: "app.js"  // except app.js because that gets processed
           }
+        },
+        {
+          from: "CNAME",        // move CNAME
+          context: "src/"
         }
       ]
     })
