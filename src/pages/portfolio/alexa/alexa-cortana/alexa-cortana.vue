@@ -35,44 +35,10 @@
 
     <template v-slot:news>
       <ul>
-        <li><NewsLink
-          url="https://www.theverge.com/2017/8/30/16224876/microsoft-amazon-cortana-alexa-partnership"
-          title="Microsoft and Amazon partner to integrate Alexa and Cortana digital assistants"
-          source="The Verge"></NewsLink></li>
-        <li><NewsLink
-          url="https://www.theverge.com/2018/5/7/17326808/microsoft-cortana-update-alexa-integration-build-2018"
-          title="Microsoft demonstrates Alexa and Cortana integration"
-          source="The Verge"></NewsLink></li>
-
-        <li><NewsLink
-          url="https://www.cnet.com/how-to/how-to-use-alexa-and-cortana-together/"
-          title="How to use Alexa and Cortana together"
-          source="cnet"></NewsLink></li>
-
-        <li><NewsLink
-          url="https://www.zdnet.com/article/the-alexa-cortana-integration-why-wasnt-this-bigger-news/"
-          title="The Alexa-Cortana integration: Why wasn't this bigger news?"
-          source="ZDnet"></NewsLink></li>
-
-        <li><NewsLink
-          url="https://lifehacker.com/how-to-use-cortana-and-alexa-together-1828386070"
-          title="How to Use Cortana and Alexa together"
-          source="Lifehacker"></NewsLink></li>
-
-        <li><NewsLink
-          url="https://techcrunch.com/2018/08/15/the-alexa-cortana-integration-is-now-available-in-a-public-preview/"
-          title="The Alexa-Cortana integration is now available in a public preview"
-          source="TechCrunch"></NewsLink></li>
-
-        <li><NewsLink
-          url="https://gizmodo.com/alexa-and-cortana-are-on-speaking-terms-1798622487"
-          title="Alexa and Cortana Are on Speaking Terms"
-          source="Gizmodo"></NewsLink></li>
-
-        <li><NewsLink
-          url="https://www.nytimes.com/2017/08/30/technology/amazon-alexa-microsoft-cortana.html"
-          title="‘Cortana, Open Alexa,’ Amazon Says. And Microsoft Agrees."
-          source="The New York Times"></NewsLink></li>
+        <li v-for="n in news"><NewsLink
+          :url="n.url"
+          :title="n.title"
+          :source="n.pub"></NewsLink></li>
       </ul>
     </template>
 
@@ -83,6 +49,7 @@
   import PortfolioPage from 'components/PortfolioPage';
   import NewsLink from 'components/NewsLink';
   import YouTubeVideo from 'components/YouTubeVideo';
+  import newsData from 'data/news-coverage';
 
   export default {
     name: 'AmazonAlexaCortana',
@@ -91,6 +58,12 @@
       PortfolioPage,
       NewsLink,
       YouTubeVideo
+    },
+
+    data() {
+      return {
+        news: _.filter(newsData, ['project', 'AmazonAlexaCortana'])
+      }
     }
   }
 </script>

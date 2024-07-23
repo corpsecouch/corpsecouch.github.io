@@ -1,8 +1,6 @@
 <template>
   <Page class="widthConstrained">
 
-    <!--<p>Experience design that looks around corners.</p>-->
-
     <section id="name">
       <h1>Jason Bejot</h1>
       <!--<p>Experience design that looks around corners.</p>-->
@@ -70,17 +68,16 @@
       <h2>About</h2>
       <div class="columns">
         <section class="left">
-          <!--<p>I always knew I wanted to positively impact people's lives. Even my motivation for getting a Computer Science degree was to entertain and enrich lives by making games.</p>
-          <p>Growing up on a large family farm, I filled my days with immersive storytelling by playing RPGs and running D&amp;D campaigns. Once I was in college, I realized I had a talent for understanding how people expected things to work and gravitated towards HCI.</p>
-          <p>After spending a few years as an engineering lead I made the switch to experience design. I've been able to create things that delight millions of people and drive business (of course). Combined with my science and technical background, I've found a passion for driving innovation and invention through the lens of the experience. As a result I was elected to the innovation council at Phenomblue, received three Disney Inventor Awards, a patent, launched a product incubator within Disney Studios and was handpicked by the Disney Studios CTO to spearhead a Studio-wide innovation initiative.</p>
-          <p>In a previous life I was musician writing and playing spacy guitar riffs in The Answer Team, touring and recording two albums. Then I was a biker tempting fate on the treacherous, twisty Southern California canyon roads.</p>
-          <p>I currently live in Seattle with my partner and child.</p>-->
-
-          <p>I'm an experience design and product leader with a background in computer science, innovation, and entreprenuership with 15+ years of professional leadership experience envisioning the future, crafting strategies, and delivering experiences.</p>
+          <!--<p>I'm an experience design and product leader with a background in computer science, innovation, and entreprenuership with 19 years of professional leadership experience envisioning the future, crafting strategies, and delivering experiences.</p>-->
+          <p>I'm a executive-level tech innovator with 19 years of professional experience having worked at Disney, Amazon, and Rocket Companies, and more.</p>
           <p>Growing up on a large family farm, I filled my days with immersive storytelling playing RPGs and running D&amp;D campaigns. Once I was in college, I realized I had a talent for understanding how people expected things to work and I gravitated towards HCI.</p>
           <p>After spending a few years as an engineering lead I made the switch to experience design. I found a real talent for invention and innovation combining my technical background with the focus on the human experience. As a result I've been elected to innovation councils, received patents and awards, launched innovation programs, and worked directly with C-suite executives at Fortune 500 companies on strategic projects.</p>
           <p>Along the way I became a musician, playing spacy guitar riffs in The Answer Team, touring and recording two albums.</p>
           <p>I currently live in Atlanta with my partner and kiddo.</p>
+
+          <!-- <p>I'm a cross-functional leader with 19 years of experience specializing in working on large scale, complex, and ambiguous projects.</p>
+          <p>I have experience across multiple industries including big tech, entertainment, b2b, advertising, and fintec most recently having worked for The Walt Disney Studios, Amazon, and Rocket Companies.</p>
+          <p>I have extensive experience going from 0-to-1 and transforming emerging technologies and ambiguity into effective, delightful experiences.</p> -->
 
         </section>
 
@@ -113,7 +110,7 @@
 
           <h3>News Coverage</h3>
           <ul id="news">
-            <li>TechCrunch</li>
+            <!--<li>TechCrunch</li>
             <li>Venturebeat</li>
             <li>The Verge</li>
             <li>Ars Technica</li>
@@ -123,7 +120,8 @@
             <li>Slate</li>
             <li>CNBC</li>
             <li>Washington Post</li>
-            <li>TechRadar</li>
+            <li>TechRadar</li>-->
+            <li v-for="n in newsAll">{{n}}</li>
           </ul>
         </section>
       </div>
@@ -199,6 +197,7 @@
   import SVGMedium from 'components/SVGMedium';
   import SVGLinkedIn from 'components/SVGLinkedIn';
   import Email from 'components/Email';
+  import newsData from 'data/news-coverage';
 
   export default {
     name: 'Index',
@@ -221,6 +220,9 @@
         [ 'year' ],
         [ 'desc' ]);
 
+      let news = _.map(newsData, 'pub');  // get all the names of the publications
+      news = _.uniq(news);  // filter out the non-unique publication names
+
       return {
 
         //projectsAll: portfolioData,
@@ -232,7 +234,9 @@
         // only return non-featured projects
         projectsArchived: _.filter(
           projects,
-          o => { return !o.featured; })
+          o => { return !o.featured; }),
+        
+        newsAll: news
 
       }
     }
