@@ -18,7 +18,7 @@
     <!-- ------------- -->
 
     <section id="about">
-      <h2>About</h2>
+      <!--<h2>About Me</h2>-->
       <div class="columns">
         <section class="left">
           <!--<p>I'm an experience design and product leader with a background in computer science, innovation, and entreprenuership with 19 years of professional leadership experience envisioning the future, crafting strategies, and delivering experiences.</p>-->
@@ -148,9 +148,10 @@
 
     <section id="contact">
       <!-- https://www.ionos.com/digitalguide/e-mail/e-mail-security/protecting-your-email-address-how-to-do-it/ -->
-      <h2>Contact</h2>
+      <h2>Contact Me</h2>
       <div class="content">
         <p>Let's shoot the shit.</p>
+        <!-- ADPlist widget -->
         <!--
           <section style="height: 496px; box-shadow: rgba(142, 151, 158, 0.15) 0px 4px 19px 0px; border-radius: 16px; overflow: hidden; width: 100%; max-width: 650px;"><iframe src="https://adplist.org/widgets/booking?src=jason-bejot" title="" width="100%" height="100%" loading="lazy" style="border: 0px;"></iframe></section>
         -->
@@ -162,50 +163,6 @@
         </div>
       </div>
     </section>
-
-    <!--<section id="intro">
-      <div class="container">
-        <p class="title separator">I'm not just another designer</p>
-        <p>I'm a technologist who designs experiences addressing the human side of innovation, how behavior and technology together can create a brighter future.</p>
-        <p>I work at the intersection of psychology, technology, and business.</p>
-      </div>
-    </section>
-
-    <section id="alexa" class="work dark">
-      <div class="container">
-        <p class="company separator">amazon alexa</p>
-        <p class="role">sr. ux design lead</p>
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. A, nec in eget elit orci consectetur nullam. Fringilla massa nisi erat elementum eu mauris. Quis sed tristique a adipiscing vitae quam tortor egestas fames. Proin dolor quis sit ultricies. Hendrerit mauris at gravida lectus viverra eu. Consectetur morbi.</p>
-        <a class="case-study">case studies</a>
-      </div>
-    </section>
-
-    <section id="disney" class="work">
-      <div class="container">
-        <p class="company separator">walt disney studios</p>
-        <p class="role">principal ux architect</p>
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. A, nec in eget elit orci consectetur nullam. Fringilla massa nisi erat elementum eu mauris. Quis sed tristique a adipiscing vitae quam tortor egestas fames. Proin dolor quis sit ultricies. Hendrerit mauris at gravida lectus viverra eu. Consectetur morbi.</p>
-        <a class="case-study">case studies</a>
-      </div>
-    </section>
-
-    <section id="ace-metrix" class="work dark">
-      <div class="container">
-        <p class="company separator">ace metrix</p>
-        <p class="role">creative director</p>
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. A, nec in eget elit orci consectetur nullam. Fringilla massa nisi erat elementum eu mauris. Quis sed tristique a adipiscing vitae quam tortor egestas fames. Proin dolor quis sit ultricies. Hendrerit mauris at gravida lectus viverra eu. Consectetur morbi.</p>
-        <a class="case-study">case studies</a>
-      </div>
-    </section>
-
-    <section id="phenomblue" class="work">
-      <div class="container">
-        <p class="company separator">phenomblue</p>
-        <p class="role">sr. ux designer</p>
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. A, nec in eget elit orci consectetur nullam. Fringilla massa nisi erat elementum eu mauris. Quis sed tristique a adipiscing vitae quam tortor egestas fames. Proin dolor quis sit ultricies. Hendrerit mauris at gravida lectus viverra eu. Consectetur morbi.</p>
-        <a class="case-study">case studies</a>
-      </div>
-    </section>-->
 
   </Page>
 </template>
