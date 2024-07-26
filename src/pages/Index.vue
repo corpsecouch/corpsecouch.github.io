@@ -7,10 +7,71 @@
     </section>
 
     <section id="social">
-      <router-link :to="{ path: '/', hash: '#portfolio' }" alt="Portfolio">Portfolio</router-link>
       <router-link :to="{ path: '/', hash: '#about' }" alt="About">About</router-link>
+      <router-link :to="{ path: '/', hash: '#portfolio' }" alt="Portfolio">Portfolio</router-link>
+      <router-link :to="{ path: '/', hash: '#news' }" alt="News">News</router-link>
       <router-link :to="{ path: '/', hash: '#contact' }" alt="Contact">Contact</router-link>
     </section>
+
+    <!-- ------------- -->
+    <!-- ABOUT SECTION -->
+    <!-- ------------- -->
+
+    <section id="about">
+      <h2>About</h2>
+      <div class="columns">
+        <section class="left">
+          <!--<p>I'm an experience design and product leader with a background in computer science, innovation, and entreprenuership with 19 years of professional leadership experience envisioning the future, crafting strategies, and delivering experiences.</p>-->
+          <p>I'm a executive-level tech innovator with 19 years of professional experience having worked at Disney, Amazon, and Rocket Companies, and more.</p>
+          <p>Growing up on a large family farm, I filled my days with immersive storytelling playing RPGs and running D&amp;D campaigns. Once I was in college, I realized I had a talent for understanding how people expected things to work and I gravitated towards HCI.</p>
+          <p>After spending a few years as an engineering lead I made the switch to experience design. I found a real talent for invention and innovation combining my technical background with the focus on the human experience. As a result I've been elected to innovation councils, received patents and awards, launched innovation programs, and worked directly with C-suite executives at Fortune 500 companies on strategic projects.</p>
+          <p>Along the way I became a musician, playing spacy guitar riffs in The Answer Team, touring and recording two albums.</p>
+          <p>I currently live in Atlanta with my partner and kiddo.</p>
+
+          <!-- <p>I'm a cross-functional leader with 19 years of experience specializing in working on large scale, complex, and ambiguous projects.</p>
+          <p>I have experience across multiple industries including big tech, entertainment, b2b, advertising, and fintec most recently having worked for The Walt Disney Studios, Amazon, and Rocket Companies.</p>
+          <p>I have extensive experience going from 0-to-1 and transforming emerging technologies and ambiguity into effective, delightful experiences.</p> -->
+
+        </section>
+
+        <section class="right">
+          <h3>Patents</h3>
+          <ul id="patents">
+            <li>
+              <span class="title">Physical Navigation Guided via Story‐Based Augmented and/or Mixed Reality Experiences</span>
+                <span class="number">us 15/593,258</span>
+            </li>
+            <li>
+              <span class="title">Recording High Fidelity Digital Immersive Experiences Through Off-Device Computation</span>
+                <span class="number">us 15/338,806</span>
+            </li>
+            <li>
+              <span class="title">Dynamically Changing a 3D Object into an Interactive 3D Menu</span>
+                <span class="number">us 14/734278</span>
+            </li>
+          </ul>
+
+          <h3>Recognition</h3>
+          <ul id="awards">
+            <li>Webby</li>
+            <li>FWA</li>
+            <li>W3</li>
+            <li>Disney Inventor</li>
+            <li>Best of Disney</li>
+            <li>Microsoft PhizzPop Challenge</li>
+          </ul>
+
+          <!--<h3>News Coverage</h3>
+          <ul id="news">
+            <li v-for="n in newsOrgs">{{n}}</li>
+          </ul>-->
+        </section>
+      </div>
+    </section>
+
+    <!-- ----------------- -->
+    <!-- PORTFOLIO SECTION -->
+    <!-- ----------------- -->
 
     <section id="portfolio">
       <h2>Portfolio</h2>
@@ -64,74 +125,35 @@
 
     </section>
 
-    <section id="about">
-      <h2>About</h2>
-      <div class="columns">
-        <section class="left">
-          <!--<p>I'm an experience design and product leader with a background in computer science, innovation, and entreprenuership with 19 years of professional leadership experience envisioning the future, crafting strategies, and delivering experiences.</p>-->
-          <p>I'm a executive-level tech innovator with 19 years of professional experience having worked at Disney, Amazon, and Rocket Companies, and more.</p>
-          <p>Growing up on a large family farm, I filled my days with immersive storytelling playing RPGs and running D&amp;D campaigns. Once I was in college, I realized I had a talent for understanding how people expected things to work and I gravitated towards HCI.</p>
-          <p>After spending a few years as an engineering lead I made the switch to experience design. I found a real talent for invention and innovation combining my technical background with the focus on the human experience. As a result I've been elected to innovation councils, received patents and awards, launched innovation programs, and worked directly with C-suite executives at Fortune 500 companies on strategic projects.</p>
-          <p>Along the way I became a musician, playing spacy guitar riffs in The Answer Team, touring and recording two albums.</p>
-          <p>I currently live in Atlanta with my partner and kiddo.</p>
+    <!-- ------------ -->
+    <!-- NEWS SECTION -->
+    <!-- ------------ -->
 
-          <!-- <p>I'm a cross-functional leader with 19 years of experience specializing in working on large scale, complex, and ambiguous projects.</p>
-          <p>I have experience across multiple industries including big tech, entertainment, b2b, advertising, and fintec most recently having worked for The Walt Disney Studios, Amazon, and Rocket Companies.</p>
-          <p>I have extensive experience going from 0-to-1 and transforming emerging technologies and ambiguity into effective, delightful experiences.</p> -->
-
-        </section>
-
-        <section class="right">
-          <h3>Patents</h3>
-          <ul id="patents">
-            <li>
-              <span class="title">Physical Navigation Guided via Story‐Based Augmented and/or Mixed Reality Experiences</span>
-                <span class="number">us 15/593,258</span>
-            </li>
-            <li>
-              <span class="title">Recording High Fidelity Digital Immersive Experiences Through Off-Device Computation</span>
-                <span class="number">us 15/338,806</span>
-            </li>
-            <li>
-              <span class="title">Dynamically Changing a 3D Object into an Interactive 3D Menu</span>
-                <span class="number">us 14/734278</span>
-            </li>
-          </ul>
-
-          <h3>Recognition</h3>
-          <ul id="awards">
-            <li>Webby</li>
-            <li>FWA</li>
-            <li>W3</li>
-            <li>Disney Inventor</li>
-            <li>Best of Disney</li>
-            <li>Microsoft PhizzPop Challenge</li>
-          </ul>
-
-          <h3>News Coverage</h3>
-          <ul id="news">
-            <!--<li>TechCrunch</li>
-            <li>Venturebeat</li>
-            <li>The Verge</li>
-            <li>Ars Technica</li>
-            <li>Lifehacker</li>
-            <li>CNet</li>
-            <li>PCMag</li>
-            <li>Slate</li>
-            <li>CNBC</li>
-            <li>Washington Post</li>
-            <li>TechRadar</li>-->
-            <li v-for="n in newsAll">{{n}}</li>
-          </ul>
-        </section>
+    <section id="news">
+      <h2>In The News</h2>
+      <div class="content">
+        <p>My work has been featured or mentioned in at least <strong>{{ newsCount }} articles</strong> (that I know of).</p>
+        <ul>
+            <li v-for="n in newsData"><NewsLink
+            :url="n.url"
+            :title="n.title"
+            :source="n.pub"></NewsLink></li>
+        </ul>
       </div>
     </section>
+
+    <!-- --------------- -->
+    <!-- CONTACT SECTION -->
+    <!-- --------------- -->
 
     <section id="contact">
       <!-- https://www.ionos.com/digitalguide/e-mail/e-mail-security/protecting-your-email-address-how-to-do-it/ -->
       <h2>Contact</h2>
       <div class="content">
         <p>Let's shoot the shit.</p>
+        <!--
+          <section style="height: 496px; box-shadow: rgba(142, 151, 158, 0.15) 0px 4px 19px 0px; border-radius: 16px; overflow: hidden; width: 100%; max-width: 650px;"><iframe src="https://adplist.org/widgets/booking?src=jason-bejot" title="" width="100%" height="100%" loading="lazy" style="border: 0px;"></iframe></section>
+        -->
         <p><Email /></p>
         <div id="social">
           <a href="https://twitter.com/jasonbejot" title="Twitter" target="_blank"><SVGTwitter /></a>
@@ -198,6 +220,7 @@
   import SVGLinkedIn from 'components/SVGLinkedIn';
   import Email from 'components/Email';
   import newsData from 'data/news-coverage';
+  import NewsLink from 'components/NewsLink';
 
   export default {
     name: 'Index',
@@ -207,7 +230,8 @@
       SVGTwitter,
       SVGMedium,
       SVGLinkedIn,
-      Email
+      Email,
+      NewsLink
     },
 
     data () {
@@ -220,23 +244,14 @@
         [ 'year' ],
         [ 'desc' ]);
 
-      let news = _.map(newsData, 'pub');  // get all the names of the publications
-      news = _.uniq(news);  // filter out the non-unique publication names
-
       return {
 
         //projectsAll: portfolioData,
-
-        /*projectsFeatured: _.filter(
-          portfolioData,
-          o => { return o.feature; }),*/
-
-        // only return non-featured projects
-        projectsArchived: _.filter(
-          projects,
-          o => { return !o.featured; }),
         
-        newsAll: news
+        projectsArchived: _.filter(projects, o => { return !o.featured; }), // only return non-featured projects
+        //newsOrgs: _.uniq(_.map(newsData, 'pub')),  // get all the unique names of the publications
+        newsCount: newsData.length,
+        newsData: newsData
 
       }
     }
@@ -387,11 +402,6 @@
     .left { grid-column: left; }
     .right { grid-column: right; }
 
-    ul {
-      list-style: none;
-      margin: 0;
-    }
-
     #patents {
       .number {
         font-size: 0.7rem;
@@ -406,6 +416,31 @@
       li + li {
         margin-top: 1rem;
       }
+    }
+  }
+
+  #news ul, #about ul {
+    list-style: none;
+    margin: 0;
+  }
+
+  #news {
+    p {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    li {
+      box-shadow: inset 2px 0 0 0 #c9d0d9;
+      padding-left: 1rem;
+
+      + li {
+        margin-top: 1rem;
+      }
+    }
+
+    strong {
+      font-weight: 600;
     }
   }
 

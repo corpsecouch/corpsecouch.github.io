@@ -61,7 +61,7 @@ app.use(router);
 
 import VueGtag from 'vue-gtag';
 
-const isProd = process.env.NODE_ENV === 'production';
+const isProd = process.env.NODE_ENV === 'dev'//'production';
 
 console.log("isProd:", isProd)
 
