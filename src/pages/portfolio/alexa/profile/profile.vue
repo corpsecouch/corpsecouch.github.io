@@ -1,5 +1,5 @@
 <template>
-  <PortfolioPage nda="true">
+  <PortfolioPage>
     <template v-slot:title>Alexa Profile</template>
     <template v-slot:subtitle>The heart of personalization.</template>
     <template v-slot:company>Amazon</template>

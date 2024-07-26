@@ -1,5 +1,5 @@
 <template>
-  <PortfolioPage nda="true">
+  <PortfolioPage>
     <template v-slot:title>Alexa + Cortana</template>
     <template v-slot:subtitle>The world's first AI assistant interoperability between two big-tech competitors.</template>
     <template v-slot:year>2017 - 2018</template>
