@@ -2,8 +2,7 @@
   <Page class="widthConstrained">
 
     <section id="name">
-      <h1>Jason Bejot</h1>
-      <!--<p>Experience design that looks around corners.</p>-->
+      <h1>Jason<br />Bejot</h1>
     </section>
 
     <section id="social">
@@ -19,22 +18,21 @@
 
     <section id="about">
       <!--<h2>About Me</h2>-->
+      <section>
+        <!--<p>I'm an experience design and product leader with a background in computer science, innovation, and entreprenuership with 19 years of professional leadership experience envisioning the future, crafting strategies, and delivering experiences.</p>-->
+        <p>I'm a executive-level tech innovator with 19 years of professional experience having worked at Disney, Amazon, and Rocket Companies, and more.</p>
+        <p>Growing up on a large family farm, I filled my days with immersive storytelling playing RPGs and running D&amp;D campaigns. Once I was in college, I realized I had a talent for understanding how people expected things to work and I gravitated towards HCI.</p>
+        <p>After spending a few years as an engineering lead I made the switch to experience design. I found a real talent for invention and innovation combining my technical background with the focus on the human experience. As a result I've been elected to innovation councils, received patents and awards, launched innovation programs, and worked directly with C-suite executives at Fortune 500 companies on strategic projects.</p>
+        <p>Along the way I became a musician, playing spacy guitar riffs in The Answer Team, touring and recording two albums.</p>
+        <p>I currently live in Atlanta with my partner and kiddo.</p>
+
+        <!-- <p>I'm a cross-functional leader with 19 years of experience specializing in working on large scale, complex, and ambiguous projects.</p>
+        <p>I have experience across multiple industries including big tech, entertainment, b2b, advertising, and fintec most recently having worked for The Walt Disney Studios, Amazon, and Rocket Companies.</p>
+        <p>I have extensive experience going from 0-to-1 and transforming emerging technologies and ambiguity into effective, delightful experiences.</p> -->
+      </section>
+
       <div class="columns">
         <section class="left">
-          <!--<p>I'm an experience design and product leader with a background in computer science, innovation, and entreprenuership with 19 years of professional leadership experience envisioning the future, crafting strategies, and delivering experiences.</p>-->
-          <p>I'm a executive-level tech innovator with 19 years of professional experience having worked at Disney, Amazon, and Rocket Companies, and more.</p>
-          <p>Growing up on a large family farm, I filled my days with immersive storytelling playing RPGs and running D&amp;D campaigns. Once I was in college, I realized I had a talent for understanding how people expected things to work and I gravitated towards HCI.</p>
-          <p>After spending a few years as an engineering lead I made the switch to experience design. I found a real talent for invention and innovation combining my technical background with the focus on the human experience. As a result I've been elected to innovation councils, received patents and awards, launched innovation programs, and worked directly with C-suite executives at Fortune 500 companies on strategic projects.</p>
-          <p>Along the way I became a musician, playing spacy guitar riffs in The Answer Team, touring and recording two albums.</p>
-          <p>I currently live in Atlanta with my partner and kiddo.</p>
-
-          <!-- <p>I'm a cross-functional leader with 19 years of experience specializing in working on large scale, complex, and ambiguous projects.</p>
-          <p>I have experience across multiple industries including big tech, entertainment, b2b, advertising, and fintec most recently having worked for The Walt Disney Studios, Amazon, and Rocket Companies.</p>
-          <p>I have extensive experience going from 0-to-1 and transforming emerging technologies and ambiguity into effective, delightful experiences.</p> -->
-
-        </section>
-
-        <section class="right">
           <h3>Patents</h3>
           <ul id="patents">
             <li>
@@ -50,7 +48,8 @@
                 <span class="number">us 14/734278</span>
             </li>
           </ul>
-
+        </section>
+        <section class="right">
           <h3>Recognition</h3>
           <ul id="awards">
             <li>Webby</li>
@@ -60,11 +59,6 @@
             <li>Best of Disney</li>
             <li>Microsoft PhizzPop Challenge</li>
           </ul>
-
-          <!--<h3>News Coverage</h3>
-          <ul id="news">
-            <li v-for="n in newsOrgs">{{n}}</li>
-          </ul>-->
         </section>
       </div>
     </section>
@@ -173,7 +167,123 @@
         </router-link>
       </div>-->
 
-      <div v-for="(value, key) in projects" class="company">
+      <!-- Rocket -->
+
+      <div class="company">
+        <h3>Rocket Companies</h3>
+        <div class="projects columns">
+          <router-link
+            class="project"
+            v-for="p in rocketData.projects"
+            :data="p"
+            :key="p.route.name"
+            :to="p.route"
+            :title="p.title">
+              <img :src="require(`${p.image}`)" class="work">
+              <span class="title">{{p.title}}</span>
+              <span class="company">{{p.year}}</span>
+          </router-link>
+        </div>
+        <div class="news" v-if="rocketData.news.all.length">
+          <p>{{ rocketData.news.all.length }} articles about my work at Rocket.</p>
+          <ul>
+              <li v-for="n in rocketData.news.top3"><NewsLink
+              :url="n.url"
+              :title="n.title"
+              :source="n.pub"></NewsLink></li>
+          </ul>
+          <router-link :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all the articles</router-link>
+        </div>
+      </div>
+
+      <!-- Amazon -->
+
+      <div class="company">
+        <h3>Amazon</h3>
+        <div class="projects columns">
+          <router-link
+            class="project"
+            v-for="p in amazonData.projects"
+            :data="p"
+            :key="p.route.name"
+            :to="p.route"
+            :title="p.title">
+              <img :src="require(`${p.image}`)" class="work">
+              <span class="title">{{p.title}}</span>
+              <span class="company">{{p.year}}</span>
+          </router-link>
+        </div>
+        <div class="news" v-if="amazonData.news.all.length">
+          <p>{{ amazonData.news.all.length }} articles about my work at Amazon.</p>
+          <ul>
+              <li v-for="n in amazonData.news.top3"><NewsLink
+              :url="n.url"
+              :title="n.title"
+              :source="n.pub"></NewsLink></li>
+          </ul>
+          <router-link :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all the articles</router-link>
+        </div>
+      </div>
+
+      <!-- Disney -->
+
+      <div class="company">
+        <h3>Walt Disney Company</h3>
+        <div class="projects columns">
+          <router-link
+            class="project"
+            v-for="p in disneyData.projects"
+            :data="p"
+            :key="p.route.name"
+            :to="p.route"
+            :title="p.title">
+              <img :src="require(`${p.image}`)" class="work rounded">
+              <span class="title">{{p.title}}</span>
+              <span class="company">{{p.year}}</span>
+          </router-link>
+        </div>
+        <div class="news" v-if="disneyData.news.all.length">
+          <p>{{ disneyData.news.all.length }} articles about my work at Disney.</p>
+          <ul>
+              <li v-for="n in disneyData.news.top3"><NewsLink
+              :url="n.url"
+              :title="n.title"
+              :source="n.pub"></NewsLink></li>
+          </ul>
+          <router-link :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all the articles</router-link>
+        </div>
+      </div>
+
+      <!-- Phenomblue -->
+
+      <div class="company">
+        <h3>Phenomblue</h3>
+        <div class="projects columns">
+          <router-link
+            class="project"
+            v-for="p in phenomblueData.projects"
+            :data="p"
+            :key="p.route.name"
+            :to="p.route"
+            :title="p.title">
+              <img :src="require(`${p.image}`)" class="work rounded">
+              <span class="title">{{p.title}}</span>
+              <span class="company">{{p.year}}</span>
+          </router-link>
+        </div>
+        <div class="news" v-if="phenomblueData.news.all.length">
+          <p>{{ phenomblueData.news.all.length }} articles about my work at Phenomblue.</p>
+          <ul>
+              <li v-for="n in phenomblueData.news.top3"><NewsLink
+              :url="n.url"
+              :title="n.title"
+              :source="n.pub"></NewsLink></li>
+          </ul>
+          <router-link :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all the articles</router-link>
+        </div>
+      </div>
+
+      <!--<div v-for="(value, key) in projects" class="company">
         <h3>{{ key }}</h3>
         <div class="columns">
           <router-link
@@ -183,13 +293,12 @@
             :key="p.route.name"
             :to="p.route"
             :title="p.title">
-              <!--<img :src="require(`${p.image}`)" class="work" :class="{ rounded: key == 'Phenomblue' }">-->
               <img :src="require(`${p.image}`)" class="work rounded">
               <span class="title">{{p.title}}</span>
               <span class="company">{{p.year}}</span>
           </router-link>
         </div>
-      </div>
+      </div>-->
 
     </section>
 
@@ -199,7 +308,7 @@
 
     <section id="news">
       <h2>In The News</h2>
-      <div class="content">
+      <div class="content news">
         <p>My work has been featured or mentioned in at least <strong>{{ newsCount }} articles</strong> (that I know of).</p>
         <ul>
             <li v-for="n in newsData"><NewsLink
@@ -285,16 +394,38 @@
         [ 'year' ],
         [ 'desc' ]);
 
-      projects = _.groupBy(
+      /*projects = _.groupBy(
         projects,
         o => { return o.company.name.long }
-      );
+      );*/
 
-      return {
+      let rocketData = { projects: {}, news: {} };
+      rocketData.projects = _.filter(projects, o => { return o.company.slug == "rocket"; });
+      rocketData.news.all = _.filter(newsData, o => { return o.company == "Rocket" });
+      rocketData.news.top3 = _.take(rocketData.news.all, 3);
 
-        projects: projects,
-        
-        projectsArchived: _.filter(projects, o => { return !o.featured; }), // only return non-featured projects
+      let amazonData = { projects: {}, news: {} };
+      amazonData.projects = _.filter(projects, o => { return o.company.slug == "amazon"; });
+      amazonData.news.all = _.filter(newsData, o => { return o.company == "Amazon" });
+      amazonData.news.top3 = _.take(amazonData.news.all, 3);
+
+      let disneyData = { projects: {}, news: {} };
+      disneyData.projects = _.filter(projects, o => { return o.company.slug == "disney"; });
+      disneyData.news.all = _.filter(newsData, o => { return o.company == "Disney" });
+      disneyData.news.top3 = _.take(disneyData.news.all, 3);
+
+      let phenomblueData = { projects: {}, news: {} };
+      phenomblueData.projects = _.filter(projects, o => { return o.company.slug == "phenomblue"; });
+      phenomblueData.news.all = _.filter(newsData, o => { return o.company == "Phenomblue" });
+      phenomblueData.news.top3 = _.take(phenomblueData.news.all, 3);
+
+      return {        
+        rocketData: rocketData,
+        amazonData: amazonData,
+        disneyData: disneyData,
+        phenomblueData: phenomblueData,
+
+        //projectsArchived: _.filter(projects, o => { return !o.featured; }), // only return non-featured projects
         //newsOrgs: _.uniq(_.map(newsData, 'pub')),  // get all the unique names of the publications
         newsCount: newsData.length,
         newsData: newsData
@@ -314,6 +445,14 @@
          url('/src/assets/fonts/Mainstay.ttf');
   }
 
+  h1 {
+   font-family: 'Mainstay';
+   text-transform: none;
+  letter-spacing: normal;
+  font-size: 5rem;
+  transform: rotate(-18deg);
+  }
+
   h2 {
     font-family: 'Mainstay';
     letter-spacing: normal;
@@ -331,9 +470,13 @@
   }
 
   #portfolio {
-    > div + div {
+    > .company + .company {
       margin-top: 7rem;
-    } 
+    }
+
+    .news {
+      margin-top: 3rem;
+    }
 
     h3 {
       font-size: 1.5rem;
@@ -341,10 +484,12 @@
       text-align: center;
     }
 
-    .rounded {
+    img.rounded {
       -webkit-border-radius: 16px;
       -moz-border-radius: 16px;
       border-radius: 16px;
+      box-shadow: 0 8px 6px -6px black;
+      margin-bottom: 1rem;
     }
   }
 
@@ -517,6 +662,7 @@
     grid-template-columns: [left] 1fr [right] 0.7fr;
     //grid-auto-rows: 1fr;
     grid-gap: 2.5rem;
+    margin-top: 3rem;
 
     @include screen-small {
       //grid-template-columns: [left right] auto;
@@ -544,15 +690,25 @@
     }
   }
 
-  #news ul, #about ul {
+  /*#news ul, */#about ul {
     list-style: none;
     margin: 0;
   }
 
-  #news {
+  .news {
+    ul{
+      list-style: none;
+      margin: 0;
+
+      + a {
+        margin-top: 2rem;
+        display: inline-block;
+      }
+    }
+
     p {
       margin-bottom: 2rem;
-      text-align: center;
+      //text-align: center;
     }
 
     li {
