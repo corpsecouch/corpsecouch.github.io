@@ -1,10 +1,10 @@
 const companies = {
   alexa: {
     name: {
-      long: 'Amazon Alexa',
-      short: 'Alexa'
+      long: 'Amazon',
+      short: 'Amazon'
     },
-    slug: 'alexa'
+    slug: 'amazon'
   },
   disney: {
     name: {
@@ -34,13 +34,7 @@ const data = [
     title:        'Alexa Profile',
     slug:         'profile',
     description:  'Connecting AIs from two of the world\'s largest companies; a world-first.',
-    //image:        '../portfolio/alexa/profile/thumb.png',
-    image: {
-      dir:  'portfolio/alexa/profile',
-      name: 'thumb',
-      ext:  'png'
-    },
-    //image:        randomImage(),
+    image:        './portfolio/alexa/profile/thumb.png',
     route: {
       name: 'alexaprofile'
     }
@@ -53,7 +47,7 @@ const data = [
     title:        'Presence Detection',
     slug:         'presence-detection',
     description:  'Connecting AIs from two of the world\'s largest companies; a world-first.',
-    image:        '/src/pages/portfolio/alexa/presence/thumb.jpg',//randomImage(),
+    image:        './portfolio/alexa/profile/thumb.png',
     route: {
       name: 'alexapresence'
     }
@@ -66,7 +60,7 @@ const data = [
     title:        'Personalized Skills',
     slug:         'personalized-skills',
     description:  'Connecting AIs from two of the world\'s largest companies; a world-first.',
-    image:        randomImage(),
+    image:        './portfolio/alexa/profile/thumb.png',
     route: {
       name: 'alexapersonalizedskills'
     }
@@ -79,7 +73,7 @@ const data = [
     title:        'Voice Settings',
     slug:         'voice-settings',
     description:  'Connecting AIs from two of the world\'s largest companies; a world-first.',
-    image:        randomImage(),
+    image:        './portfolio/alexa/profile/thumb.png',
     route: {
       name: 'alexavoicesettings'
     }
@@ -92,14 +86,7 @@ const data = [
     title:        'Alexa + Cortana',
     slug:         'alexa-cortana',
     description:  'Connecting AIs from two of the world\'s largest companies; a world-first.',
-    //image:     './dist/assets/portfolio/amazon/alexa-cortana/peek-lg.png',
-    //image:        '../portfolio/alexa/alexa-cortana/thumb.png',
-    image: {
-      dir:  'portfolio/alexa/alexa-cortana',
-      name: 'thumb',
-      ext:  'png'
-    },
-    //image:        randomImage(),
+    image:        './portfolio/alexa/alexa-cortana/thumb.png',
     route: {
       name: 'alexacortana'
     }
@@ -111,8 +98,7 @@ const data = [
     title:        'Enterprise Design System',
     slug:         'design-system',
     description:  'Creating an award-winning enterprise design system.',
-    //image:     './dist/assets/portfolio/disney/design-system/peek.png',
-    image:        randomImage(),
+    image:        './portfolio/disney/design-system/peek.png',
     route: {
       name: 'disneydesignsystem'
     }
@@ -124,8 +110,7 @@ const data = [
     title:        'Movie Greenlight',
     slug:         'greenlight',
     description:  'Innovating how Disney greenlights movies.',
-    //image:     './dist/assets/portfolio/disney/greenlight/peek.png',
-    image:        randomImage(),
+    image:        './portfolio/disney/greenlight/peek.png',
     route: {
       name: 'disneygreenlight'
     }
@@ -137,8 +122,7 @@ const data = [
     title:        'Innovation Incubator',
     slug:         'incubator',
     description:  'Transforming how Disney Studios innovates.',
-    //image:     './dist/assets/portfolio/disney/innovation-program/peek.png',
-    image:        randomImage(),
+    image:        './portfolio/disney/incubator/peek.png',
     route: {
       name: 'disneyinnovationprogram'
     }
@@ -151,14 +135,7 @@ const data = [
     title:        'Filmmaking for Virtual Reality',
     slug:         'vr',
     description:  'Leading the VR conversation.',
-    //image:     './dist/assets/portfolio/disney/vr/peek.png',
-    //image:        '../portfolio/disney/vr/thumb.png',
-    image: {
-      dir:  'portfolio/disney/vr',
-      name: 'thumb',
-      ext:  'png'
-    },
-    //image:        randomImage(),
+    image:        './portfolio/disney/vr/peek.png',
     route: {
       name: 'disneyvr'
     }
@@ -170,8 +147,7 @@ const data = [
     title:        'Movie Slate',
     slug:         'slate',
     description:  'Innovating how Disney plans and tracks their slate of upcoming movies.',
-    //image:     './dist/assets/portfolio/disney/slate/peek.png',
-    image:        randomImage(),
+    image:        './portfolio/disney/slate/peek.png',
     route: {
       name: 'disneymovieslate'
     }
@@ -183,8 +159,7 @@ const data = [
     title:        'Microsoft Genesis',
     slug:         'genesis',
     description:  'A 3D, social space simulator.',
-    //image:     './dist/assets/portfolio/phenomblue/genesis/peek.png',
-    image:        randomImage(),
+    image:        './portfolio/phenomblue/genesis/peek.png',
     route: {
       name: 'pbgenesis'
     }
@@ -199,8 +174,7 @@ const data = [
     title:        'My Wild Kingdom',
     slug:         'wild-kingdom',
     description:  'A groundbreaking adventure app that brings the wild to any situation',
-    //image:     './dist/assets/portfolio/phenomblue/my-wild-kingdom/peek.png'
-    image:        randomImage()
+    image:        './portfolio/phenomblue/wild-kingdom/peek.png',
   },
 
   {
@@ -212,8 +186,7 @@ const data = [
     title:        'Operation: Dino Dig',
     slug:         'dino-dig',
     description:  'Social computing for learning and exploration.',
-    //image:     './dist/assets/portfolio/phenomblue/dino-dig/peek.png'
-    image:        randomImage()
+    image:        './portfolio/phenomblue/dino-dig/peek.png',
   },
 
   {
@@ -225,8 +198,7 @@ const data = [
     title:        'Page',
     slug:         'page',
     description:  'Breaking down the "fifth wall" of reading and literature.',
-    //image:     './dist/assets/portfolio/phenomblue/page/peek.png'
-    image:        randomImage()
+    image:        './portfolio/phenomblue/page/peek.png',
   },
 
   {
@@ -238,8 +210,7 @@ const data = [
     title:        'Movie Lotto',
     slug:         'movie-lotto',
     description:  'Social gaming in theaters.',
-    //image:     './dist/assets/portfolio/phenomblue/movie-lotto/peek.png'
-    image:        randomImage()
+    image:        './portfolio/phenomblue/movie-lotto/peek.png',
   },
 
   {
@@ -248,7 +219,7 @@ const data = [
     title:        'Fantastic Future Me',
     slug:         'fantastic-future-me',
     description:  'Encouraging kids to reach their Future Me.',
-    image:     './dist/assets/portfolio/phenomblue/fantastic-future-me/peek.png',
+    image:        './portfolio/phenomblue/fantastic-future-me/peek.png',
     route: {
       name: 'pbfantasticfutureme'
     }
@@ -260,7 +231,7 @@ const data = [
     title:        'Moppet Mashup',
     slug:         'moppet-mashup',
     description:  'A social, large-format interactive experience.',
-    image:     './dist/assets/portfolio/phenomblue/moppet-mashup/peek.png',
+    image:        './portfolio/phenomblue/moppet-mashup/peek.png',
     route: {
       name: 'pbmoppetmashup'
     }
@@ -276,8 +247,7 @@ const data = [
     title:        'TUMS: Food Fight',
     slug:         'tums',
     description:  'A branded Facebook game.',
-    //image:     './dist/assets/portfolio/phenomblue/tums/peek.png'
-    image:        randomImage()
+    image:        './portfolio/phenomblue/tums/peek.png',
   },
 ]
 

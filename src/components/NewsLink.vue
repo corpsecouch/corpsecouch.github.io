@@ -17,17 +17,13 @@
 
 <style scoped lang="scss">
   a {
-    display: block;
-    //text-align: center;
+    //display: block;
   }
 
   .source {
     display: block;
     font-style: italic;
-    //font-size: 0.9rem;
     font-size: 0.7rem;
     margin-top: 0.25em;
-
-    //text-align: center;
   }
 </style>

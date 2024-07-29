@@ -73,9 +73,58 @@
     <!-- PORTFOLIO SECTION -->
     <!-- ----------------- -->
 
+    <!--<section id="portfolio2">
+      <h2>Portfolio</h2>
+      
+      <ul class="carousel">
+        <li class="slide columns" ref="slide1">
+          <div class="left">
+            <img src="./portfolio/alexa/profile/thumb.png">
+          </div>
+          <div class="right">
+            <span class="title">Alexa Profile</span>
+            <span class="company">Alexa 2019</span>
+            <div>
+              <span @click="goto('slide3')">Previous</span>
+              <span @click="goto('slide2')">Next</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="slide columns" ref="slide2">
+          <div class="left">
+            <img src="./portfolio/alexa/alexa-cortana/thumb.png">
+          </div>
+          <div class="right">
+            <span class="title">Alexa + Cortana</span>
+            <span class="company">Alexa 2017</span>
+            <div>
+              <span @click="goto('slide1')">Previous</span>
+              <span @click="goto('slide3')">Next</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="slide columns" ref="slide3">
+          <div class="left">
+            <img src="./portfolio/disney/vr/thumb.png">
+          </div>
+          <div class="right">
+            <span class="title">Filmmaking for VR</span>
+            <span class="company">Disney 2014</span>
+            <div>
+              <span @click="goto('slide2')">Previous</span>
+              <span @click="goto('slide1')">Next</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+      
+    </section>-->
+
     <section id="portfolio">
       <h2>Portfolio</h2>
-      <div id="featured" class="columns">
+      <!--<div id="featured" class="columns">
         <router-link
           class="project"
           :to="{ name: 'alexaprofile' }"
@@ -108,9 +157,9 @@
             <span class="company">Disney 2014</span>
           </span>
         </router-link>
-      </div>
+      </div>-->
 
-      <div id="archive" class="columns">
+      <!--<div id="archive" class="columns">
         <router-link
           class="project"
           v-for="p in projectsArchived"
@@ -118,9 +167,28 @@
           :key="p.route.name"
           :to="p.route"
           :title="p.title">
+            <img src="./portfolio/disney/vr/thumb.png" class="work">
             <span class="title">{{p.title}}</span>
             <span class="company">{{p.company.name.short}} {{p.year}}</span>
         </router-link>
+      </div>-->
+
+      <div v-for="(value, key) in projects" class="company">
+        <h3>{{ key }}</h3>
+        <div class="columns">
+          <router-link
+            class="project"
+            v-for="p in value"
+            :data="p"
+            :key="p.route.name"
+            :to="p.route"
+            :title="p.title">
+              <!--<img :src="require(`${p.image}`)" class="work" :class="{ rounded: key == 'Phenomblue' }">-->
+              <img :src="require(`${p.image}`)" class="work rounded">
+              <span class="title">{{p.title}}</span>
+              <span class="company">{{p.year}}</span>
+          </router-link>
+        </div>
       </div>
 
     </section>
@@ -148,18 +216,22 @@
 
     <section id="contact">
       <!-- https://www.ionos.com/digitalguide/e-mail/e-mail-security/protecting-your-email-address-how-to-do-it/ -->
-      <h2>Contact Me</h2>
-      <div class="content">
-        <p>Let's shoot the shit.</p>
-        <!-- ADPlist widget -->
-        <!--
-          <section style="height: 496px; box-shadow: rgba(142, 151, 158, 0.15) 0px 4px 19px 0px; border-radius: 16px; overflow: hidden; width: 100%; max-width: 650px;"><iframe src="https://adplist.org/widgets/booking?src=jason-bejot" title="" width="100%" height="100%" loading="lazy" style="border: 0px;"></iframe></section>
-        -->
-        <p><Email /></p>
-        <div id="social">
-          <a href="https://twitter.com/jasonbejot" title="Twitter" target="_blank"><SVGTwitter /></a>
-          <a href="https://linkedin.com/in/jasonbejot" title="LinkedIn" target="_blank"><SVGLinkedIn /></a>
-          <a href="https://medium.com/@jasonbejot" title="Medium" target="_blank"><SVGMedium /></a>
+      <div class="columns">
+        <div class="left">
+          <h2>Contact<br />Me</h2>
+        </div>
+        <div class="right content">
+          <p>Let's shoot the shit.</p>
+          <!-- ADPlist widget -->
+          <!--
+            <section style="height: 496px; box-shadow: rgba(142, 151, 158, 0.15) 0px 4px 19px 0px; border-radius: 16px; overflow: hidden; width: 100%; max-width: 650px;"><iframe src="https://adplist.org/widgets/booking?src=jason-bejot" title="" width="100%" height="100%" loading="lazy" style="border: 0px;"></iframe></section>
+          -->
+          <p><Email /></p>
+          <div id="social">
+            <a href="https://twitter.com/jasonbejot" title="Twitter" target="_blank"><SVGTwitter /></a>
+            <a href="https://linkedin.com/in/jasonbejot" title="LinkedIn" target="_blank"><SVGLinkedIn /></a>
+            <a href="https://medium.com/@jasonbejot" title="Medium" target="_blank"><SVGMedium /></a>
+          </div>
         </div>
       </div>
     </section>
@@ -191,6 +263,18 @@
       NewsLink
     },
 
+    methods: {
+      // https://stackoverflow.com/questions/61435070/scroll-down-when-clicked-with-vue-js
+      goto(ref) {
+        let el = this.$refs[ref];
+        
+        el.parentElement.scrollTo(
+          el.offsetLeft - el.parentElement.offsetLeft,
+          el.offsetTop
+          );
+      }
+    },
+
     data () {
 
       // remove all hidden projects and sort the rest
@@ -201,9 +285,14 @@
         [ 'year' ],
         [ 'desc' ]);
 
+      projects = _.groupBy(
+        projects,
+        o => { return o.company.name.long }
+      );
+
       return {
 
-        //projectsAll: portfolioData,
+        projects: projects,
         
         projectsArchived: _.filter(projects, o => { return !o.featured; }), // only return non-featured projects
         //newsOrgs: _.uniq(_.map(newsData, 'pub')),  // get all the unique names of the publications
@@ -217,6 +306,85 @@
 </script>
 
 <style scoped lang="scss">
+
+  @font-face {
+    font-family: 'Mainstay';
+    font-weight: normal;
+    src: url('/src/assets/fonts/Mainstay.otf'),
+         url('/src/assets/fonts/Mainstay.ttf');
+  }
+
+  h2 {
+    font-family: 'Mainstay';
+    letter-spacing: normal;
+    font-size: 5rem;
+    font-weight: normal;
+    line-height: 4.5rem;
+    text-transform: none;
+  }
+
+  .columns {
+    display: grid;
+    grid-auto-rows: 1fr;
+    .left { grid-column: left; }
+    .right { grid-column: right; }
+  }
+
+  #portfolio {
+    > div + div {
+      margin-top: 7rem;
+    } 
+
+    h3 {
+      font-size: 1.5rem;
+      padding: 0 0 2rem 0;
+      text-align: center;
+    }
+
+    .rounded {
+      -webkit-border-radius: 16px;
+      -moz-border-radius: 16px;
+      border-radius: 16px;
+    }
+  }
+
+  #contact {
+    .columns {
+      grid-template-columns: [left] max-content [right] 1fr;
+      grid-gap: 1.5rem;
+    }
+
+    h2 {
+      transform: rotate(-18deg);
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  /*#portfolio2 {
+    .carousel {
+      list-style: none;
+      display: flex;
+      overflow-x: scroll;
+      counter-reset: item;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+    }
+
+    .slide {
+      position: relative;
+      flex: 0 0 100%;
+      width: 100%;
+      counter-increment: item;
+    }
+
+    .columns {
+      grid-template-columns: [left] max-content [right] 1fr;
+      grid-gap: 1.5rem;
+    }
+  }*/
 
   #name {
     margin-bottom: 0;
@@ -243,12 +411,12 @@
 
   #portfolio {
     .columns {
-      display: grid;
+      //display: grid;
       //grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       //grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
-      grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
-      grid-auto-rows: 1fr;
-      grid-gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+      //grid-auto-rows: 1fr;
+      grid-gap: 3.5rem 1.5rem;
 
       @include screen-large { }
       @include screen-regular { }
@@ -345,9 +513,9 @@
   }
 
   #about .columns {
-    display: grid;
+    //display: grid;
     grid-template-columns: [left] 1fr [right] 0.7fr;
-    grid-auto-rows: 1fr;
+    //grid-auto-rows: 1fr;
     grid-gap: 2.5rem;
 
     @include screen-small {
@@ -356,8 +524,8 @@
       .right { margin-top: 1.5rem; }
     }
 
-    .left { grid-column: left; }
-    .right { grid-column: right; }
+    //.left { grid-column: left; }
+    //.right { grid-column: right; }
 
     #patents {
       .number {

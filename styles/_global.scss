@@ -95,7 +95,7 @@ h2 {
   }
 }
 
-h2::before, .divider::before {
+/*h2::before, */.divider::before {
   content: '';
   display: block;
   //margin: 6rem auto 1rem auto;
