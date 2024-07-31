@@ -1,11 +1,13 @@
+import companies from 'data/companies';
+
 const data = [
   {
-    pub:    'National Mortgage News',
-    title:  'Rocket Pro TPO teases AI-powered hotline',
-    url:    'https://www.nationalmortgagenews.com/news/rocket-pro-tpo-teases-ai-powered-hotline',
-    project:'',
-    year:   '',
-    company:'Rocket'
+    pub:      'National Mortgage News',
+    title:    'Rocket Pro TPO teases AI-powered hotline',
+    url:      'https://www.nationalmortgagenews.com/news/rocket-pro-tpo-teases-ai-powered-hotline',
+    project:  '',
+    year:     '',
+    company:  companies.rocket
   },
 
   {
@@ -14,7 +16,7 @@ const data = [
     url:    'https://nationalmortgageprofessional.com/news/rocket-pro-tpo-introduces-hotline-brokers',
     project:'',
     year:   '',
-    company:'Rocket'
+    company:  companies.rocket
   },
 
   {
@@ -23,7 +25,7 @@ const data = [
     url:    'https://www.themortgagenote.org/rocket-pro-tpo-announces-hotline-for-brokers-powered-by-ai/',
     project:'',
     year:   '',
-    company:'Rocket'
+    company:  companies.rocket
   },
 
   {
@@ -32,7 +34,7 @@ const data = [
     url:    'https://www.scotsmanguide.com/news/industry-watch-a-new-ai-hotline-at-rocket-a-program-for-real-estate-agents-at-guaranteed-rate-and-more/',
     project:'',
     year:   '',
-    company:'Rocket'
+    company:  companies.rocket
   },
   
   {
@@ -41,7 +43,7 @@ const data = [
     url:    'https://www.nytimes.com/2017/08/30/technology/amazon-alexa-microsoft-cortana.html',
     project:'AmazonAlexaCortana',
     year:   '',
-    company:'Amazon'
+    company:  companies.amazon
   },
   
   {
@@ -50,7 +52,7 @@ const data = [
     url:    'https://gizmodo.com/alexa-and-cortana-are-on-speaking-terms-1798622487',
     project:'AmazonAlexaCortana',
     year:   '',
-    company:'Amazon'
+    company:  companies.amazon
   },
   
   {
@@ -59,7 +61,7 @@ const data = [
     url:    'https://www.theverge.com/2017/8/30/16224876/microsoft-amazon-cortana-alexa-partnership',
     project:'AmazonAlexaCortana',
     year:   '',
-    company:'Amazon'
+    company:  companies.amazon
   },
   
   {
@@ -68,7 +70,7 @@ const data = [
     url:    'https://www.theverge.com/2018/5/7/17326808/microsoft-cortana-update-alexa-integration-build-2018',
     project:'AmazonAlexaCortana',
     year:   '',
-    company:'Amazon'
+    company:  companies.amazon
   },
   
   {
@@ -77,7 +79,7 @@ const data = [
     url:    'https://www.cnet.com/how-to/how-to-use-alexa-and-cortana-together/',
     project:'AmazonAlexaCortana',
     year:   '',
-    company:'Amazon'
+    company:  companies.amazon
   },
   
   {
@@ -86,7 +88,7 @@ const data = [
     url:    'https://www.zdnet.com/article/the-alexa-cortana-integration-why-wasnt-this-bigger-news/',
     project:'AmazonAlexaCortana',
     year:   '',
-    company:'Amazon'
+    company:  companies.amazon
   },
   
   {
@@ -95,7 +97,7 @@ const data = [
     url:    'https://lifehacker.com/how-to-use-cortana-and-alexa-together-1828386070',
     project:'AmazonAlexaCortana',
     year:   '',
-    company:'Amazon'
+    company:  companies.amazon
   },
   
   {
@@ -104,7 +106,7 @@ const data = [
     url:    'https://techcrunch.com/2018/08/15/the-alexa-cortana-integration-is-now-available-in-a-public-preview/',
     project:'AmazonAlexaCortana',
     year:   '',
-    company:'Amazon'
+    company:  companies.amazon
   },
 
   {
@@ -113,7 +115,7 @@ const data = [
     url:    'https://venturebeat.com/ai/microsoft-and-amazon-launch-alexa-cortana-public-preview-for-echo-speakers-and-windows-10-pcs/',
     project:'AmazonAlexaCortana',
     year:   '',
-    company:'Amazon'
+    company:  companies.amazon
   },
 
   {
@@ -122,7 +124,7 @@ const data = [
     url:    'https://venturebeat.com/ai/alexa-meets-cortana-microsoft-and-amazon-to-integrate-their-digital-assistants/',
     project:'AmazonAlexaCortana',
     year:   '',
-    company:'Amazon'
+    company:  companies.amazon
   },
 
   {
@@ -131,7 +133,7 @@ const data = [
     url:    'https://arstechnica.com/gadgets/2018/08/alexa-and-cortana-integration-starts-rolling-out-today/',
     project:'AmazonAlexaCortana',
     year:   '',
-    company:'Amazon'
+    company:  companies.amazon
   },
 
   {
@@ -140,7 +142,7 @@ const data = [
     url:    'https://arstechnica.com/gadgets/2017/08/cortana-and-alexa-are-coming-together-in-surprising-microsoftamazon-partnership/',
     project:'AmazonAlexaCortana',
     year:   '',
-    company:'Amazon'
+    company:  companies.amazon
   },
 
   {
@@ -149,7 +151,7 @@ const data = [
     url:    'https://www.pcmag.com/news/alexa-open-cortana-amazon-microsoft-team-up-on-voice',
     project:'AmazonAlexaCortana',
     year:   '',
-    company:'Amazon'
+    company:  companies.amazon
   },
 
   {
@@ -158,7 +160,7 @@ const data = [
     url:    'https://www.pcmag.com/news/alexa-and-cortana-become-smart-friends',
     project:'AmazonAlexaCortana',
     year:   '',
-    company:'Amazon'
+    company:  companies.amazon
   },
 
   {
@@ -167,7 +169,7 @@ const data = [
     url:    'https://slate.com/technology/2018/06/alexa-amazon-assistant-moving-to-your-laptop-does-it-make-sense.html',
     project:'AmazonAlexaCortana',
     year:   '',
-    company:'Amazon'
+    company:  companies.amazon
   },
 
   {
@@ -176,7 +178,7 @@ const data = [
     url:    'https://www.wired.com/story/alexa-cortana-team-up-wont-get-far-without-a-phone/',
     project:'AmazonAlexaCortana',
     year:   '',
-    company:'Amazon'
+    company:  companies.amazon
   },
 
   {
@@ -185,7 +187,7 @@ const data = [
     url:    'https://www.cnbc.com/2017/08/30/amazon-digital-voice-assistant-alexa-partners-with-microsoft-cortana.html',
     project:'AmazonAlexaCortana',
     year:   '',
-    company:'Amazon'
+    company:  companies.amazon
   },
 
   {
@@ -194,7 +196,7 @@ const data = [
     url:    'https://www.washingtonpost.com/technology/2018/08/16/microsoft-amazon-made-their-voice-assistants-into-friends-heres-how-that-relationship-works/',
     project:'AmazonAlexaCortana',
     year:   '',
-    company:'Amazon'
+    company:  companies.amazon
   },
 
   {
@@ -203,7 +205,7 @@ const data = [
     url:    'https://www.techradar.com/news/heres-what-alexa-and-cortana-windows-10-integration-looks-like',
     project:'AmazonAlexaCortana',
     year:   '',
-    company:'Amazon'
+    company:  companies.amazon
   },
 
   {
@@ -212,7 +214,7 @@ const data = [
     url:    'https://www.aboutamazon.com/news/devices/alexa-became-even-more-natural-and-useful-for-customers-in-2019',
     project:'',
     year:   '',
-    company:'Amazon'
+    company:  companies.amazon
   },
 
   {
@@ -221,7 +223,115 @@ const data = [
     url:    'https://voicebot.ai/2019/11/01/amazon-launches-alexa-skill-personalization-features/',
     project:'',
     year:   '',
-    company:'Amazon'
+    company:  companies.amazon
+  },
+
+  {
+    pub:    'The FWA',
+    title:  'An Elephant in the Room: Bringing Mutual of Omaha’s Wild Kingdom to Life on Mobile',
+    url:    'https://thefwa.com/article/an-elephant-in-the-room-bringing-mutual-of-omaha',
+    project:'my-wild-kingdom',
+    year:   '',
+    company:  companies.phenomblue
+  },
+
+  {
+    pub:    'Society of Digital Agencies (SoDA)',
+    title:  'My Wild Kingdom',
+    url:    'https://www.behance.net/gallery/11159475/My-Wild-Kingdom',
+    project:'my-wild-kingdomw',
+    year:   '',
+    company:  companies.phenomblue
+  },
+
+  {
+    pub:    'sixteen-nine',
+    title:  'DSE2012: PhenomBlue Bringing Interactive Surface To Las Vegas',
+    url:    'https://www.sixteen-nine.net/2012/03/05/dse2012-phenomblue-interactive-surface-to-lost-wages/',
+    project:'dino-dig',
+    year:   '',
+    company:  companies.phenomblue
+  },
+
+  {
+    pub:    'MediaPost',
+    title:  'Best Integrated with a Mobile Device: Movie Lotto, Phenomblue',
+    url:    'https://www.mediapost.com/publications/article/170926/best-integrated-with-a-mobile-device-movie-lotto.html',
+    project:'',
+    year:   'movie-lotto',
+    company:  companies.phenomblue
+  },
+
+  {
+    pub:    'Silicon Prairie News',
+    title:  'Phenomblue think tank produces Movie Lotto, Daydreamer',
+    url:    'https://siliconprairienews.com/2012/03/phenomblue-think-tank-produces-movie-lotto-daydreamer/',
+    project:'movie-lotto',
+    year:   '',
+    company:  companies.phenomblue
+  },
+
+  {
+    pub:    'Omaha Childrens Museum',
+    title:  'Fantastic Future Me',
+    url:    'http://www.ocm.org/exhibits-and-events/permanent-exhibits/fantastic-future-me/',
+    project:'fantastic-future-me',
+    year:   '',
+    company:  companies.phenomblue
+  },
+
+  {
+    pub:    'Google Books',
+    title:  'Making Hope Happen: Create the Future You Want for Yourself and Others',
+    url:    'https://books.google.com/books?id=ThcHBAAAQBAJ&pg=PA192&lpg=PA192&dq=phenomblue+fantastic+future+me&source=bl&ots=mwswQHIPTd&sig=ACfU3U3lUJYquuu6uJv4KSsmy6BnGVu6iA&hl=en&sa=X&ved=2ahUKEwjKsKaHj9_pAhVRLX0KHb9YAJkQ6AEwAnoECAoQAg#v=onepage&q=phenomblue%20fantastic%20future%20me&f=false',
+    project:'fantastic-future-me',
+    year:   '',
+    company:  companies.phenomblue
+  },
+
+  {
+    pub:    'Omaha Childrens Museum',
+    title:  'New Fantastic Future Me Exhibit Builds Hope in Children',
+    url:    'https://myemail.constantcontact.com/News-Release--Future-Me-Exhibit-Opening-Next-Week.html?soid=1011257236026&aid=k58hW7TGGq0',
+    project:'fantastic-future-me',
+    year:   '',
+    company:  companies.phenomblue
+  },
+
+  {
+    pub:    'Fast Company',
+    title:  'Five More Killer Apps for Microsoft Surface',
+    url:    'https://www.fastcompany.com/1298921/five-more-killer-apps-microsoft-surface',
+    project:'genesis',
+    year:   '',
+    company:  companies.phenomblue
+  },
+
+  {
+    pub:    'YouTube',
+    title:  'Interview with Phenomblue on Genesis, Microsoft Surface App',
+    url:    'https://www.youtube.com/watch?v=oI09o3Cq6N4',
+    project:'genesis',
+    year:   '',
+    company:  companies.phenomblue
+  },
+
+  {
+    pub:    'adeevee',
+    title:  'Big Omaha Conference: Moppet Mashup',
+    url:    'https://www.adeevee.com/2009/05/big-omaha-conference-moppet-mashup-design/',
+    project:'moppet-mashup',
+    year:   '',
+    company:  companies.phenomblue
+  },
+
+  {
+    pub:    'NUI (Natural User Interface)',
+    title:  'Moppet Mashup',
+    url:    'https://vimeo.com/channels/nui/4696222',
+    project:'moppet-mashup',
+    year:   '',
+    company:  companies.phenomblue
   }
 
 ]

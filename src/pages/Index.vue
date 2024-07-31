@@ -117,64 +117,17 @@
     </section>-->
 
     <section id="portfolio">
-      <h2>Portfolio</h2>
-      <!--<div id="featured" class="columns">
-        <router-link
-          class="project"
-          :to="{ name: 'alexaprofile' }"
-          title="Alexa Profile">
-          <span class="wrapper">
-            <img src="./portfolio/alexa/profile/thumb.png" class="work">
-            <span class="title">Alexa Profile</span>
-            <span class="company">Alexa 2019</span>
-          </span>
-        </router-link>
-
-        <router-link
-          class="project"
-          :to="{ name: 'alexacortana' }"
-          title="Alexa + Cortana">
-          <span class="wrapper">
-            <img src="./portfolio/alexa/alexa-cortana/thumb.png" class="work">
-            <span class="title">Alexa + Cortana</span>
-            <span class="company">Alexa 2017</span>
-          </span>
-        </router-link>
-
-        <router-link
-          class="project"
-          :to="{ name: 'disneyvr' }"
-          title="Filmmaking for VR">
-          <span class="wrapper">
-            <img src="./portfolio/disney/vr/thumb.png" class="work">
-            <span class="title">Filmmaking for VR</span>
-            <span class="company">Disney 2014</span>
-          </span>
-        </router-link>
-      </div>-->
-
-      <!--<div id="archive" class="columns">
-        <router-link
-          class="project"
-          v-for="p in projectsArchived"
-          :data="p"
-          :key="p.route.name"
-          :to="p.route"
-          :title="p.title">
-            <img src="./portfolio/disney/vr/thumb.png" class="work">
-            <span class="title">{{p.title}}</span>
-            <span class="company">{{p.company.name.short}} {{p.year}}</span>
-        </router-link>
-      </div>-->
+      <h2>&bull; P<span class="o">o</span>rtfolio &bull;</h2>
 
       <!-- Rocket -->
 
       <div class="company">
         <h3>Rocket Companies</h3>
+        <p>As the first Director of Conversational AI Design for Rocket Companies, I not only established the practice for the company I also cemented conversational AI as a company priority - a core part of it's business model and long term vision – ushering in it's investments into LLMs and generative AI.</p>
         <div class="projects columns">
           <router-link
             class="project"
-            v-for="p in rocketData.projects"
+            v-for="p in portfolioData.rocket.projects"
             :data="p"
             :key="p.route.name"
             :to="p.route"
@@ -184,15 +137,15 @@
               <span class="company">{{p.year}}</span>
           </router-link>
         </div>
-        <div class="news" v-if="rocketData.news.all.length">
-          <p>{{ rocketData.news.all.length }} articles about my work at Rocket.</p>
+        <div class="news" v-if="portfolioData.rocket.news.all.length">
+          <p>Articles about my work at Rocket:</p>
           <ul>
-              <li v-for="n in rocketData.news.top3"><NewsLink
+              <li v-for="n in portfolioData.rocket.news.top3"><NewsLink
               :url="n.url"
               :title="n.title"
               :source="n.pub"></NewsLink></li>
           </ul>
-          <router-link :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all the articles</router-link>
+          <router-link :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all the articles ({{ portfolioData.rocket.news.all.length }} total)</router-link>
         </div>
       </div>
 
@@ -200,10 +153,11 @@
 
       <div class="company">
         <h3>Amazon</h3>
+        <p>At Amazon, I was focused on all things Alexa identity, especially biometrics. I led the design of voice, modal, and device experiences for Alexa; starting with voice recognition then expanding to face recognition, authentication, authorization, profiles, and establishing the persoanlization guidelines. These are features used or available across every Echo device and has influenced every personalized experience.</p>
         <div class="projects columns">
           <router-link
             class="project"
-            v-for="p in amazonData.projects"
+            v-for="p in portfolioData.amazon.projects"
             :data="p"
             :key="p.route.name"
             :to="p.route"
@@ -213,26 +167,27 @@
               <span class="company">{{p.year}}</span>
           </router-link>
         </div>
-        <div class="news" v-if="amazonData.news.all.length">
-          <p>{{ amazonData.news.all.length }} articles about my work at Amazon.</p>
+        <div class="news" v-if="portfolioData.amazon.news.all.length">
+          <p>Articles about my work at Amazon:</p>
           <ul>
-              <li v-for="n in amazonData.news.top3"><NewsLink
+              <li v-for="n in portfolioData.amazon.news.top3"><NewsLink
               :url="n.url"
               :title="n.title"
               :source="n.pub"></NewsLink></li>
           </ul>
-          <router-link :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all the articles</router-link>
+          <router-link :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all the articles ({{ portfolioData.amazon.news.all.length }} total)</router-link>
         </div>
       </div>
 
       <!-- Disney -->
 
       <div class="company">
-        <h3>Walt Disney Company</h3>
+        <h3>Walt Disney Studios</h3>
+        <p>At Disney...</p>
         <div class="projects columns">
           <router-link
             class="project"
-            v-for="p in disneyData.projects"
+            v-for="p in portfolioData.disney.projects"
             :data="p"
             :key="p.route.name"
             :to="p.route"
@@ -242,15 +197,15 @@
               <span class="company">{{p.year}}</span>
           </router-link>
         </div>
-        <div class="news" v-if="disneyData.news.all.length">
-          <p>{{ disneyData.news.all.length }} articles about my work at Disney.</p>
+        <div class="news" v-if="portfolioData.disney.news.all.length">
+          <p>Articles about my work at Disney:</p>
           <ul>
-              <li v-for="n in disneyData.news.top3"><NewsLink
+              <li v-for="n in portfolioData.disney.news.top3"><NewsLink
               :url="n.url"
               :title="n.title"
               :source="n.pub"></NewsLink></li>
           </ul>
-          <router-link :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all the articles</router-link>
+          <router-link :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all the articles ({{ portfolioData.disney.news.all.length }} total)</router-link>
         </div>
       </div>
 
@@ -258,10 +213,11 @@
 
       <div class="company">
         <h3>Phenomblue</h3>
+        <p>Phenomblue was a digital brand experience agency. What does that even mean? It means I created digital experiences for brands including Microsoft, Gatorade, McDonalds, TUMS, and more.</p>
         <div class="projects columns">
           <router-link
             class="project"
-            v-for="p in phenomblueData.projects"
+            v-for="p in portfolioData.phenomblue.projects"
             :data="p"
             :key="p.route.name"
             :to="p.route"
@@ -271,34 +227,17 @@
               <span class="company">{{p.year}}</span>
           </router-link>
         </div>
-        <div class="news" v-if="phenomblueData.news.all.length">
-          <p>{{ phenomblueData.news.all.length }} articles about my work at Phenomblue.</p>
+        <div class="news" v-if="portfolioData.phenomblue.news.all.length">
+          <p>Articles about my work at Phenomblue:</p>
           <ul>
-              <li v-for="n in phenomblueData.news.top3"><NewsLink
+              <li v-for="n in portfolioData.phenomblue.news.top3"><NewsLink
               :url="n.url"
               :title="n.title"
               :source="n.pub"></NewsLink></li>
           </ul>
-          <router-link :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all the articles</router-link>
+          <router-link :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all the articles ({{ portfolioData.phenomblue.news.all.length }} total)</router-link>
         </div>
       </div>
-
-      <!--<div v-for="(value, key) in projects" class="company">
-        <h3>{{ key }}</h3>
-        <div class="columns">
-          <router-link
-            class="project"
-            v-for="p in value"
-            :data="p"
-            :key="p.route.name"
-            :to="p.route"
-            :title="p.title">
-              <img :src="require(`${p.image}`)" class="work rounded">
-              <span class="title">{{p.title}}</span>
-              <span class="company">{{p.year}}</span>
-          </router-link>
-        </div>
-      </div>-->
 
     </section>
 
@@ -307,9 +246,9 @@
     <!-- ------------ -->
 
     <section id="news">
-      <h2>In The News</h2>
+      <h2>&bull; In The News &bull;</h2>
       <div class="content news">
-        <p>My work has been featured or mentioned in at least <strong>{{ newsCount }} articles</strong> (that I know of).</p>
+        <p>My work has been featured or mentioned in at least <strong>{{ newsData.length }} articles</strong> (that I know of).</p>
         <ul>
             <li v-for="n in newsData"><NewsLink
             :url="n.url"
@@ -352,13 +291,14 @@
   // https://www.bestfolios.com/portfolio/dougseidman
 
   import Page from 'components/PageTemplate';
-  import portfolioData from 'data/portfolio';
+  import projectData from 'data/portfolio';
   import SVGTwitter from 'components/SVGTwitter';
   import SVGMedium from 'components/SVGMedium';
   import SVGLinkedIn from 'components/SVGLinkedIn';
   import Email from 'components/Email';
   import newsData from 'data/news-coverage';
   import NewsLink from 'components/NewsLink';
+  import companies from 'data/companies';
 
   export default {
     name: 'Index',
@@ -372,7 +312,7 @@
       NewsLink
     },
 
-    methods: {
+    /*methods: {
       // https://stackoverflow.com/questions/61435070/scroll-down-when-clicked-with-vue-js
       goto(ref) {
         let el = this.$refs[ref];
@@ -382,54 +322,32 @@
           el.offsetTop
           );
       }
-    },
+    },*/
 
     data () {
 
       // remove all hidden projects and sort the rest
       let projects = _.orderBy(
         _.filter(
-          portfolioData,
+          projectData,
           o => { return !o.hidden; }),
         [ 'year' ],
         [ 'desc' ]);
 
-      /*projects = _.groupBy(
-        projects,
-        o => { return o.company.name.long }
-      );*/
+      let portfolioData = {};
+      _.each(companies, (value, key) => {
+        portfolioData[value.slug] = {
+          projects: _.filter(projects, o => { return o.company.slug == value.slug; }),
+          news: {
+            all: _.filter(newsData, o => { return o.company.slug == value.slug })
+          }
+        }
+        portfolioData[value.slug].news.top3 = _.take(portfolioData[value.slug].news.all, 3)
+      });
 
-      let rocketData = { projects: {}, news: {} };
-      rocketData.projects = _.filter(projects, o => { return o.company.slug == "rocket"; });
-      rocketData.news.all = _.filter(newsData, o => { return o.company == "Rocket" });
-      rocketData.news.top3 = _.take(rocketData.news.all, 3);
-
-      let amazonData = { projects: {}, news: {} };
-      amazonData.projects = _.filter(projects, o => { return o.company.slug == "amazon"; });
-      amazonData.news.all = _.filter(newsData, o => { return o.company == "Amazon" });
-      amazonData.news.top3 = _.take(amazonData.news.all, 3);
-
-      let disneyData = { projects: {}, news: {} };
-      disneyData.projects = _.filter(projects, o => { return o.company.slug == "disney"; });
-      disneyData.news.all = _.filter(newsData, o => { return o.company == "Disney" });
-      disneyData.news.top3 = _.take(disneyData.news.all, 3);
-
-      let phenomblueData = { projects: {}, news: {} };
-      phenomblueData.projects = _.filter(projects, o => { return o.company.slug == "phenomblue"; });
-      phenomblueData.news.all = _.filter(newsData, o => { return o.company == "Phenomblue" });
-      phenomblueData.news.top3 = _.take(phenomblueData.news.all, 3);
-
-      return {        
-        rocketData: rocketData,
-        amazonData: amazonData,
-        disneyData: disneyData,
-        phenomblueData: phenomblueData,
-
-        //projectsArchived: _.filter(projects, o => { return !o.featured; }), // only return non-featured projects
-        //newsOrgs: _.uniq(_.map(newsData, 'pub')),  // get all the unique names of the publications
-        newsCount: newsData.length,
+      return {
+        portfolioData: portfolioData,
         newsData: newsData
-
       }
     }
 
@@ -446,11 +364,11 @@
   }
 
   h1 {
-   font-family: 'Mainstay';
-   text-transform: none;
-  letter-spacing: normal;
-  font-size: 5rem;
-  transform: rotate(-18deg);
+    font-family: 'Mainstay';
+    text-transform: none;
+    letter-spacing: normal;
+    font-size: 6rem;
+    transform: rotate(-18deg);
   }
 
   h2 {
@@ -460,6 +378,7 @@
     font-weight: normal;
     line-height: 4.5rem;
     text-transform: none;
+    //text-align: left;
   }
 
   .columns {
@@ -480,8 +399,12 @@
 
     h3 {
       font-size: 1.5rem;
-      padding: 0 0 2rem 0;
-      text-align: center;
+      //padding: 0 0 1rem 0;
+      //text-align: center;
+
+      + p {
+        padding: 0 0 3rem 0;
+      }
     }
 
     img.rounded {
@@ -501,6 +424,7 @@
 
     h2 {
       transform: rotate(-18deg);
+      text-align: center;
 
       &::before {
         display: none;
@@ -555,6 +479,12 @@
   }
 
   #portfolio {
+    h2 {
+      > .o {
+        letter-spacing: -0.55rem;
+      }
+    }
+
     .columns {
       //display: grid;
       //grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -655,6 +585,10 @@
       grid-gap: 2rem;
       //@include screen-small { grid-template-columns: auto; }
     }
+  }
+
+  #about {
+    
   }
 
   #about .columns {

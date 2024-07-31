@@ -1,35 +1,13 @@
-const companies = {
-  alexa: {
-    name: {
-      long: 'Amazon',
-      short: 'Amazon'
-    },
-    slug: 'amazon'
-  },
-  disney: {
-    name: {
-      long: 'Walt Disney Studios',
-      short: 'Disney'
-    },
-    slug: 'disney'
-  },
-  phenomblue: {
-    name: {
-      long: 'Phenomblue',
-      short: 'Phenomblue'
-    },
-    slug: 'phenomblue'
-  }
-}
+import companies from 'data/companies';
 
-const randomImage = function() {
+/*const randomImage = function() {
   return `https://picsum.photos/200?random=${ Math.random()*1000 }`;
-}
+}*/
 
 const data = [
   {
     featured: true,
-    company: companies.alexa,
+    company: companies.amazon,
     year:         '2019',
     title:        'Alexa Profile',
     slug:         'profile',
@@ -42,7 +20,7 @@ const data = [
 
   {
     hidden: true,
-    company: companies.alexa,
+    company: companies.amazon,
     year:         '2019',
     title:        'Presence Detection',
     slug:         'presence-detection',
@@ -55,7 +33,7 @@ const data = [
 
   {
     hidden: true,
-    company: companies.alexa,
+    company: companies.amazon,
     year:         '2019',
     title:        'Personalized Skills',
     slug:         'personalized-skills',
@@ -68,7 +46,7 @@ const data = [
 
   {
     hidden: true,
-    company: companies.alexa,
+    company: companies.amazon,
     year:         '2018',
     title:        'Voice Settings',
     slug:         'voice-settings',
@@ -81,7 +59,7 @@ const data = [
 
   {
     featured: true,
-    company: companies.alexa,
+    company: companies.amazon,
     year:         '2017',
     title:        'Alexa + Cortana',
     slug:         'alexa-cortana',
