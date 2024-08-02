@@ -5,7 +5,7 @@
       <h1>Jason<br />Bejot</h1>
     </section>
 
-    <section id="social">
+    <section class="menu">
       <router-link :to="{ path: '/', hash: '#about' }" alt="About">About</router-link>
       <router-link :to="{ path: '/', hash: '#portfolio' }" alt="Portfolio">Portfolio</router-link>
       <router-link :to="{ path: '/', hash: '#news' }" alt="News">News</router-link>
@@ -67,76 +67,37 @@
     <!-- PORTFOLIO SECTION -->
     <!-- ----------------- -->
 
-    <!--<section id="portfolio2">
-      <h2>Portfolio</h2>
-      
-      <ul class="carousel">
-        <li class="slide columns" ref="slide1">
-          <div class="left">
-            <img src="./portfolio/alexa/profile/thumb.png">
-          </div>
-          <div class="right">
-            <span class="title">Alexa Profile</span>
-            <span class="company">Alexa 2019</span>
-            <div>
-              <span @click="goto('slide3')">Previous</span>
-              <span @click="goto('slide2')">Next</span>
-            </div>
-          </div>
-        </li>
-
-        <li class="slide columns" ref="slide2">
-          <div class="left">
-            <img src="./portfolio/alexa/alexa-cortana/thumb.png">
-          </div>
-          <div class="right">
-            <span class="title">Alexa + Cortana</span>
-            <span class="company">Alexa 2017</span>
-            <div>
-              <span @click="goto('slide1')">Previous</span>
-              <span @click="goto('slide3')">Next</span>
-            </div>
-          </div>
-        </li>
-
-        <li class="slide columns" ref="slide3">
-          <div class="left">
-            <img src="./portfolio/disney/vr/thumb.png">
-          </div>
-          <div class="right">
-            <span class="title">Filmmaking for VR</span>
-            <span class="company">Disney 2014</span>
-            <div>
-              <span @click="goto('slide2')">Previous</span>
-              <span @click="goto('slide1')">Next</span>
-            </div>
-          </div>
-        </li>
-      </ul>
-      
-    </section>-->
-
     <section id="portfolio">
       <h2>&bull; P<span class="o">o</span>rtfolio &bull;</h2>
 
+      <section class="menu">
+        <router-link :to="{ path: '/', hash: '#rocket' }" alt="Rocket">Rocket</router-link>
+        <router-link :to="{ path: '/', hash: '#amazon' }" alt="Amazon">Amazon</router-link>
+        <router-link :to="{ path: '/', hash: '#disney' }" alt="Disney">Disney</router-link>
+        <router-link :to="{ path: '/', hash: '#phenomblue' }" alt="Phenomblue">Phenomblue</router-link>
+      </section>
+
       <!-- Rocket -->
 
-      <div class="company">
+      <div class="company" id="rocket">
         <h3>Rocket Companies</h3>
         <p>As the first Director of Conversational AI Design for Rocket Companies, I not only established the practice for the company I also cemented conversational AI as a company priority - a core part of it's business model and long term vision – ushering in it's investments into LLMs and generative AI.</p>
-        <div class="projects columns">
-          <router-link
-            class="project"
-            v-for="p in portfolioData.rocket.projects"
-            :data="p"
-            :key="p.route.name"
-            :to="p.route"
-            :title="p.title">
-              <img :src="require(`${p.image}`)" class="work">
-              <span class="title">{{p.title}}</span>
-              <span class="company">{{p.year}}</span>
-          </router-link>
-        </div>
+        <ul class="projects">
+          <li class="project" v-for="p in portfolioData.rocket.projects">
+            <div class="left">
+              <img :src="require(`${p.image}`)" class="rounded">
+            </div>
+            <div class="right">
+              <span class="title">{{ p.title }}</span>
+              <span class="year">{{ p.year }}</span>
+              <span class="description">{{ p.description }}</span>
+              <ul class="tags">
+                <li class="tag" v-for="tag in p.tags">{{ tag }}</li>
+              </ul>
+              <router-link class="link" :key="p.route.name" :to="p.route" :title="p.title">Read the case study</router-link>
+            </div>
+          </li>
+        </ul>
         <div class="news" v-if="portfolioData.rocket.news.all.length">
           <p>Articles about my work at Rocket:</p>
           <ul>
@@ -145,28 +106,31 @@
               :title="n.title"
               :source="n.pub"></NewsLink></li>
           </ul>
-          <router-link :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all the articles ({{ portfolioData.rocket.news.all.length }} total)</router-link>
+          <router-link :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all {{ portfolioData.rocket.news.all.length }} Rocket articles</router-link>
         </div>
       </div>
 
       <!-- Amazon -->
 
-      <div class="company">
+      <div class="company" id="amazon">
         <h3>Amazon</h3>
         <p>At Amazon, I was focused on all things Alexa identity, especially biometrics. I led the design of voice, modal, and device experiences for Alexa; starting with voice recognition then expanding to face recognition, authentication, authorization, profiles, and establishing the persoanlization guidelines. These are features used or available across every Echo device and has influenced every personalized experience.</p>
-        <div class="projects columns">
-          <router-link
-            class="project"
-            v-for="p in portfolioData.amazon.projects"
-            :data="p"
-            :key="p.route.name"
-            :to="p.route"
-            :title="p.title">
-              <img :src="require(`${p.image}`)" class="work">
-              <span class="title">{{p.title}}</span>
-              <span class="company">{{p.year}}</span>
-          </router-link>
-        </div>
+        <ul class="projects">
+          <li class="project" v-for="p in portfolioData.amazon.projects">
+            <div class="left">
+              <img :src="require(`${p.image}`)">
+            </div>
+            <div class="right">
+              <span class="title">{{ p.title }}</span>
+              <span class="year">{{ p.year }}</span>
+              <span class="description">{{ p.description }}</span>
+              <ul class="tags">
+                <li class="tag" v-for="tag in p.tags">{{ tag }}</li>
+              </ul>
+              <router-link class="link" :key="p.route.name" :to="p.route" :title="p.title">Read the case study</router-link>
+            </div>
+          </li>
+        </ul>
         <div class="news" v-if="portfolioData.amazon.news.all.length">
           <p>Articles about my work at Amazon:</p>
           <ul>
@@ -175,28 +139,31 @@
               :title="n.title"
               :source="n.pub"></NewsLink></li>
           </ul>
-          <router-link :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all the articles ({{ portfolioData.amazon.news.all.length }} total)</router-link>
+          <router-link :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all {{ portfolioData.amazon.news.all.length }} Amazon articles</router-link>
         </div>
       </div>
 
       <!-- Disney -->
 
-      <div class="company">
+      <div class="company" id="disney">
         <h3>Walt Disney Studios</h3>
         <p>At Disney...</p>
-        <div class="projects columns">
-          <router-link
-            class="project"
-            v-for="p in portfolioData.disney.projects"
-            :data="p"
-            :key="p.route.name"
-            :to="p.route"
-            :title="p.title">
-              <img :src="require(`${p.image}`)" class="work rounded">
-              <span class="title">{{p.title}}</span>
-              <span class="company">{{p.year}}</span>
-          </router-link>
-        </div>
+        <ul class="projects">
+          <li class="project" v-for="p in portfolioData.disney.projects">
+            <div class="left">
+              <img :src="require(`${p.image}`)" class="rounded">
+            </div>
+            <div class="right">
+              <span class="title">{{ p.title }}</span>
+              <span class="year">{{ p.year }}</span>
+              <span class="description">{{ p.description }}</span>
+              <ul class="tags">
+                <li class="tag" v-for="tag in p.tags">{{ tag }}</li>
+              </ul>
+              <router-link class="link" :key="p.route.name" :to="p.route" :title="p.title">Read the case study</router-link>
+            </div>
+          </li>
+        </ul>
         <div class="news" v-if="portfolioData.disney.news.all.length">
           <p>Articles about my work at Disney:</p>
           <ul>
@@ -205,28 +172,31 @@
               :title="n.title"
               :source="n.pub"></NewsLink></li>
           </ul>
-          <router-link :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all the articles ({{ portfolioData.disney.news.all.length }} total)</router-link>
+          <router-link :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all {{ portfolioData.disney.news.all.length }} Disney articles</router-link>
         </div>
       </div>
 
       <!-- Phenomblue -->
 
-      <div class="company">
+      <div class="company" id="phenomblue">
         <h3>Phenomblue</h3>
         <p>Phenomblue was a digital brand experience agency. What does that even mean? It means I created digital experiences for brands including Microsoft, Gatorade, McDonalds, TUMS, and more.</p>
-        <div class="projects columns">
-          <router-link
-            class="project"
-            v-for="p in portfolioData.phenomblue.projects"
-            :data="p"
-            :key="p.route.name"
-            :to="p.route"
-            :title="p.title">
-              <img :src="require(`${p.image}`)" class="work rounded">
-              <span class="title">{{p.title}}</span>
-              <span class="company">{{p.year}}</span>
-          </router-link>
-        </div>
+        <ul class="projects">
+          <li class="project" v-for="p in portfolioData.phenomblue.projects">
+            <div class="left">
+              <img :src="require(`${p.image}`)" class="rounded">
+            </div>
+            <div class="right">
+              <span class="title">{{ p.title }}</span>
+              <span class="year">{{ p.year }}</span>
+              <span class="description">{{ p.description }}</span>
+              <ul class="tags">
+                <li class="tag" v-for="tag in p.tags">{{ tag }}</li>
+              </ul>
+              <router-link class="link" :key="p.route.name" :to="p.route" :title="p.title">Read the case study</router-link>
+            </div>
+          </li>
+        </ul>
         <div class="news" v-if="portfolioData.phenomblue.news.all.length">
           <p>Articles about my work at Phenomblue:</p>
           <ul>
@@ -235,7 +205,7 @@
               :title="n.title"
               :source="n.pub"></NewsLink></li>
           </ul>
-          <router-link :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all the articles ({{ portfolioData.phenomblue.news.all.length }} total)</router-link>
+          <router-link :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all {{ portfolioData.phenomblue.news.all.length }} Phenomblue articles</router-link>
         </div>
       </div>
 
@@ -378,7 +348,6 @@
     font-weight: normal;
     line-height: 4.5rem;
     text-transform: none;
-    //text-align: left;
   }
 
   .columns {
@@ -389,30 +358,14 @@
   }
 
   #portfolio {
-    > .company + .company {
-      margin-top: 7rem;
-    }
+    > .company/* + .company*/ {
+      margin-top: 7rem; }
 
-    .news {
-      margin-top: 3rem;
-    }
+    .news { margin-top: 3rem; }
 
     h3 {
       font-size: 1.5rem;
-      //padding: 0 0 1rem 0;
-      //text-align: center;
-
-      + p {
-        padding: 0 0 3rem 0;
-      }
-    }
-
-    img.rounded {
-      -webkit-border-radius: 16px;
-      -moz-border-radius: 16px;
-      border-radius: 16px;
-      box-shadow: 0 8px 6px -6px black;
-      margin-bottom: 1rem;
+      + p { padding: 0 0 3rem 0; }
     }
   }
 
@@ -426,40 +379,21 @@
       transform: rotate(-18deg);
       text-align: center;
 
-      &::before {
-        display: none;
-      }
+      &::before { display: none; }
     }
   }
 
-  /*#portfolio2 {
-    .carousel {
-      list-style: none;
-      display: flex;
-      overflow-x: scroll;
-      counter-reset: item;
-      scroll-behavior: smooth;
-      scroll-snap-type: x mandatory;
-    }
-
-    .slide {
-      position: relative;
-      flex: 0 0 100%;
-      width: 100%;
-      counter-increment: item;
-    }
-
-    .columns {
-      grid-template-columns: [left] max-content [right] 1fr;
-      grid-gap: 1.5rem;
-    }
-  }*/
-
   #name {
     margin-bottom: 0;
-    p {
-      text-align: center;
-    }
+    p { text-align: center; }
+  }
+
+  .menu {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+
+    a { margin: 0 1.3rem; }
   }
 
   #social {
@@ -467,9 +401,7 @@
     display: flex;
     justify-content: center;
 
-    a {
-      margin: 0 1.3rem;
-    }
+    a { margin: 0 1.3rem; }
 
     svg {
       width: 2rem;
@@ -480,17 +412,11 @@
 
   #portfolio {
     h2 {
-      > .o {
-        letter-spacing: -0.55rem;
-      }
+      > .o { letter-spacing: -0.55rem; }
     }
 
     .columns {
-      //display: grid;
-      //grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      //grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
       grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-      //grid-auto-rows: 1fr;
       grid-gap: 3.5rem 1.5rem;
 
       @include screen-large { }
@@ -498,23 +424,87 @@
       @include screen-small { grid-template-columns: auto; }
     }
 
+    .projects {
+      margin: 0;
+      list-style: none;
+
+      .project {
+        display: grid;
+        grid-template-columns: [left] 40% [right] 1fr;
+        grid-column-gap: 2rem;
+
+        + .project { margin-top: 3.5rem; }
+        .left {
+          grid-column: left;
+
+          object-fit: contain;
+          > img {
+            width: 100%;
+
+            &.rounded {
+              -webkit-border-radius: 16px;
+              -moz-border-radius: 16px;
+              border-radius: 16px;
+              box-shadow: 0 8px 12px -7px black;
+            }
+          }
+        }
+        .right {
+          grid-column: right;
+          > * {
+            + * { margin-top: 1rem; }
+          }
+        }
+
+        .right > * {
+          + * { margin-top: 1rem; }
+        }
+
+        .title {
+          display: block;
+          font-size: 1.2rem;
+          font-weight: 500;
+        }
+
+        .year {
+          display: block;
+          font-style: italic;
+          font-weight: 200;
+          margin: 0;
+        }
+
+        .description { display: block; }
+
+        .tags {
+          list-style: none;
+          margin-left: 0;
+          display: flex;
+          flex-flow: row wrap;
+          gap: 0.2rem 0.5rem;
+          .tag {
+            background-color: $color-background-dark;
+            color: $color-text-light;
+            padding: 0 0.7rem;
+            border-radius: 1rem;
+            font-size: 0.8rem;
+          }
+        }
+
+        .link { display: inline-block; }
+      }
+    }
+
     a.project {
       text-decoration: none;
       text-align: center;
 
       &:hover {
-        .title {
-          text-decoration: underline;
-        }
+        .title { text-decoration: underline; }
 
-        .company {
-          text-decoration: none;
-        }
+        .company { text-decoration: none; }
       }
 
-      .title, .company {
-        display: block;
-      }
+      .title, .company { display: block; }
 
       .company {
         color: $color-text-dark;
@@ -526,7 +516,7 @@
       }
     }
 
-    #featured {
+    /*#featured {
       a {
         // https://spin.atomicobject.com/2015/07/14/css-responsive-square/
         position: relative;
@@ -578,7 +568,7 @@
           flex-shrink: 0;
         }
       }
-    }
+    }*/
 
     #archive {
       margin-top: 3rem;
@@ -587,14 +577,8 @@
     }
   }
 
-  #about {
-    
-  }
-
   #about .columns {
-    //display: grid;
     grid-template-columns: [left] 1fr [right] 0.7fr;
-    //grid-auto-rows: 1fr;
     grid-gap: 2.5rem;
     margin-top: 3rem;
 
@@ -604,9 +588,6 @@
       .right { margin-top: 1.5rem; }
     }
 
-    //.left { grid-column: left; }
-    //.right { grid-column: right; }
-
     #patents {
       .number {
         font-size: 0.7rem;
@@ -614,17 +595,13 @@
         margin-top: 0.25em;
       }
 
-      .title {
-        display: block;
-      }
+      .title { display: block; }
 
-      li + li {
-        margin-top: 1rem;
-      }
+      li + li { margin-top: 1rem; }
     }
   }
 
-  /*#news ul, */#about ul {
+  #about ul {
     list-style: none;
     margin: 0;
   }
@@ -640,31 +617,21 @@
       }
     }
 
-    p {
-      margin-bottom: 2rem;
-      //text-align: center;
-    }
+    p { margin-bottom: 2rem; }
 
     li {
       box-shadow: inset 2px 0 0 0 #c9d0d9;
       padding-left: 1rem;
 
-      + li {
-        margin-top: 1rem;
-      }
+      + li { margin-top: 1rem; }
     }
 
-    strong {
-      font-weight: 600;
-    }
+    strong { font-weight: 600; }
   }
 
   #contact {
     margin-bottom: 4rem;
-
-    .content {
-      text-align: center;
-    }
+    .content { text-align: center; }
   }
 
 </style>

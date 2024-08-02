@@ -7,11 +7,40 @@ import companies from 'data/companies';
 const data = [
   {
     featured: true,
+    company: companies.rocket,
+    year:         '202X',
+    title:        'Project One',
+    slug:         'project-one',
+    description:  'Connecting AIs from two of the world\'s largest companies; a world-first.',
+    tags:         ['mobile design', 'voice design', 'multi-modal design', 'AI design', 'conversational design'],
+    image:        './portfolio/rocket/project-one/thumb.png',
+    route: {
+      name: 'project-one'
+    }
+  },
+
+  {
+    featured: true,
+    company: companies.rocket,
+    year:         '202X',
+    title:        'Project Two',
+    slug:         'project-two',
+    description:  'Connecting AIs from two of the world\'s largest companies; a world-first.',
+    tags:         ['mobile design', 'voice design', 'multi-modal design', 'AI design', 'conversational design'],
+    image:        './portfolio/rocket/project-two/thumb.png',
+    route: {
+      name: 'project-two'
+    }
+  },
+
+  {
+    featured: true,
     company: companies.amazon,
     year:         '2019',
     title:        'Alexa Profile',
     slug:         'profile',
     description:  'Connecting AIs from two of the world\'s largest companies; a world-first.',
+    tags:         ['mobile design', 'voice design', 'multi-modal design', 'AI design', 'conversational design'],
     image:        './portfolio/alexa/profile/thumb.png',
     route: {
       name: 'alexaprofile'
@@ -64,6 +93,7 @@ const data = [
     title:        'Alexa + Cortana',
     slug:         'alexa-cortana',
     description:  'Connecting AIs from two of the world\'s largest companies; a world-first.',
+    tags:         ['voice design', 'multi-modal design', 'AI design', 'conversational design'],
     image:        './portfolio/alexa/alexa-cortana/thumb.png',
     route: {
       name: 'alexacortana'
@@ -76,6 +106,7 @@ const data = [
     title:        'Enterprise Design System',
     slug:         'design-system',
     description:  'Creating an award-winning enterprise design system.',
+    tags:         ['design system'],
     image:        './portfolio/disney/design-system/peek.png',
     route: {
       name: 'disneydesignsystem'
@@ -100,6 +131,7 @@ const data = [
     title:        'Innovation Incubator',
     slug:         'incubator',
     description:  'Transforming how Disney Studios innovates.',
+    tags:         ['r&d'],
     image:        './portfolio/disney/incubator/peek.png',
     route: {
       name: 'disneyinnovationprogram'
@@ -113,6 +145,7 @@ const data = [
     title:        'Filmmaking for Virtual Reality',
     slug:         'vr',
     description:  'Leading the VR conversation.',
+    tags:         ['vr design', 'creative direction'],
     image:        './portfolio/disney/vr/peek.png',
     route: {
       name: 'disneyvr'
@@ -137,6 +170,7 @@ const data = [
     title:        'Microsoft Genesis',
     slug:         'genesis',
     description:  'A 3D, social space simulator.',
+    tags:         ['game design', 'r&d', 'microsoft surface'],
     image:        './portfolio/phenomblue/genesis/peek.png',
     route: {
       name: 'pbgenesis'
@@ -152,6 +186,7 @@ const data = [
     title:        'My Wild Kingdom',
     slug:         'wild-kingdom',
     description:  'A groundbreaking adventure app that brings the wild to any situation',
+    tags:         ['mobile design'],
     image:        './portfolio/phenomblue/wild-kingdom/peek.png',
   },
 
@@ -164,6 +199,7 @@ const data = [
     title:        'Operation: Dino Dig',
     slug:         'dino-dig',
     description:  'Social computing for learning and exploration.',
+    tags:         ['microsoft surface'],
     image:        './portfolio/phenomblue/dino-dig/peek.png',
   },
 
@@ -176,6 +212,7 @@ const data = [
     title:        'Page',
     slug:         'page',
     description:  'Breaking down the "fifth wall" of reading and literature.',
+    tags:         ['ar design', 'mobile design', 'r&d'],
     image:        './portfolio/phenomblue/page/peek.png',
   },
 
@@ -188,6 +225,7 @@ const data = [
     title:        'Movie Lotto',
     slug:         'movie-lotto',
     description:  'Social gaming in theaters.',
+    tags:         ['design system', 'r&d'],
     image:        './portfolio/phenomblue/movie-lotto/peek.png',
   },
 
@@ -197,6 +235,7 @@ const data = [
     title:        'Fantastic Future Me',
     slug:         'fantastic-future-me',
     description:  'Encouraging kids to reach their Future Me.',
+    tags:         ['public installation'],
     image:        './portfolio/phenomblue/fantastic-future-me/peek.png',
     route: {
       name: 'pbfantasticfutureme'
@@ -209,6 +248,7 @@ const data = [
     title:        'Moppet Mashup',
     slug:         'moppet-mashup',
     description:  'A social, large-format interactive experience.',
+    tags:         ['microsoft surface', 'public installation', 'r&d'],
     image:        './portfolio/phenomblue/moppet-mashup/peek.png',
     route: {
       name: 'pbmoppetmashup'
@@ -225,6 +265,7 @@ const data = [
     title:        'TUMS: Food Fight',
     slug:         'tums',
     description:  'A branded Facebook game.',
+    tags:         ['game design'],
     image:        './portfolio/phenomblue/tums/peek.png',
   },
 ]
