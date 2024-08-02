@@ -108,7 +108,7 @@ module.exports = {
       },
 
       {
-        test: /\.(png|jpe?g|gif|mp4)$/i,
+        test: /\.(png|jpe?g|gif|mp4|ttf|otf)$/i,
         type: 'asset/resource',
         generator: {
           //publicPath: '/dist/assets/',

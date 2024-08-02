@@ -326,13 +326,6 @@
 
 <style scoped lang="scss">
 
-  @font-face {
-    font-family: 'Mainstay';
-    font-weight: normal;
-    src: url('/src/assets/fonts/Mainstay.otf'),
-         url('/src/assets/fonts/Mainstay.ttf');
-  }
-
   h1 {
     font-family: 'Mainstay';
     text-transform: none;
@@ -348,6 +341,11 @@
     font-weight: normal;
     line-height: 4.5rem;
     text-transform: none;
+
+    //font-size: 72px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .columns {
@@ -482,7 +480,7 @@
           flex-flow: row wrap;
           gap: 0.2rem 0.5rem;
           .tag {
-            background-color: $color-background-dark;
+            background-color: #9ec4ce;
             color: $color-text-light;
             padding: 0 0.7rem;
             border-radius: 1rem;

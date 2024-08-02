@@ -6,7 +6,6 @@ import companies from 'data/companies';
 
 const data = [
   {
-    featured: true,
     company: companies.rocket,
     year:         '202X',
     title:        'Project One',
@@ -20,7 +19,6 @@ const data = [
   },
 
   {
-    featured: true,
     company: companies.rocket,
     year:         '202X',
     title:        'Project Two',
