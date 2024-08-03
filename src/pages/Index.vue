@@ -100,13 +100,8 @@
         </ul>
         <div class="news" v-if="portfolioData.rocket.news.all.length">
           <p>Articles about my work at Rocket:</p>
-          <ul>
-              <li v-for="n in portfolioData.rocket.news.top3"><NewsLink
-              :url="n.url"
-              :title="n.title"
-              :source="n.pub"></NewsLink></li>
-          </ul>
-          <router-link :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all {{ portfolioData.rocket.news.all.length }} Rocket articles</router-link>
+          <NewsList :data="portfolioData.rocket.news.top3"></NewsList>
+          <router-link class="more-link" :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all {{ portfolioData.rocket.news.all.length }} Rocket articles</router-link>
         </div>
       </div>
 
@@ -133,13 +128,8 @@
         </ul>
         <div class="news" v-if="portfolioData.amazon.news.all.length">
           <p>Articles about my work at Amazon:</p>
-          <ul>
-              <li v-for="n in portfolioData.amazon.news.top3"><NewsLink
-              :url="n.url"
-              :title="n.title"
-              :source="n.pub"></NewsLink></li>
-          </ul>
-          <router-link :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all {{ portfolioData.amazon.news.all.length }} Amazon articles</router-link>
+          <NewsList :data="portfolioData.amazon.news.top3"></NewsList>
+          <router-link class="more-link" :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all {{ portfolioData.amazon.news.all.length }} Amazon articles</router-link>
         </div>
       </div>
 
@@ -166,13 +156,8 @@
         </ul>
         <div class="news" v-if="portfolioData.disney.news.all.length">
           <p>Articles about my work at Disney:</p>
-          <ul>
-              <li v-for="n in portfolioData.disney.news.top3"><NewsLink
-              :url="n.url"
-              :title="n.title"
-              :source="n.pub"></NewsLink></li>
-          </ul>
-          <router-link :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all {{ portfolioData.disney.news.all.length }} Disney articles</router-link>
+          <NewsList :data="portfolioData.disney.news.top3"></NewsList>
+          <router-link class="more-link" :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all {{ portfolioData.disney.news.all.length }} Disney articles</router-link>
         </div>
       </div>
 
@@ -199,13 +184,8 @@
         </ul>
         <div class="news" v-if="portfolioData.phenomblue.news.all.length">
           <p>Articles about my work at Phenomblue:</p>
-          <ul>
-              <li v-for="n in portfolioData.phenomblue.news.top3"><NewsLink
-              :url="n.url"
-              :title="n.title"
-              :source="n.pub"></NewsLink></li>
-          </ul>
-          <router-link :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all {{ portfolioData.phenomblue.news.all.length }} Phenomblue articles</router-link>
+          <NewsList :data="portfolioData.phenomblue.news.top3"></NewsList>
+          <router-link class="more-link" :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all {{ portfolioData.phenomblue.news.all.length }} Phenomblue articles</router-link>
         </div>
       </div>
 
@@ -219,12 +199,7 @@
       <h2>&bull; In The News &bull;</h2>
       <div class="content news">
         <p>My work has been featured or mentioned in at least <strong>{{ newsData.length }} articles</strong> (that I know of).</p>
-        <ul>
-            <li v-for="n in newsData"><NewsLink
-            :url="n.url"
-            :title="n.title"
-            :source="n.pub"></NewsLink></li>
-        </ul>
+        <NewsList :data="newsData"></NewsList>
       </div>
     </section>
 
@@ -267,8 +242,8 @@
   import SVGLinkedIn from 'components/SVGLinkedIn';
   import Email from 'components/Email';
   import newsData from 'data/news-coverage';
-  import NewsLink from 'components/NewsLink';
   import companies from 'data/companies';
+  import NewsList from 'components/NewsList';
 
   export default {
     name: 'Index',
@@ -279,7 +254,7 @@
       SVGMedium,
       SVGLinkedIn,
       Email,
-      NewsLink
+      NewsList
     },
 
     /*methods: {
@@ -341,11 +316,6 @@
     font-weight: normal;
     line-height: 4.5rem;
     text-transform: none;
-
-    //font-size: 72px;
-    background: -webkit-linear-gradient(#eee, #333);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 
   .columns {
@@ -356,7 +326,7 @@
   }
 
   #portfolio {
-    > .company/* + .company*/ {
+    > .company {
       margin-top: 7rem; }
 
     .news { margin-top: 3rem; }
@@ -467,8 +437,8 @@
         .year {
           display: block;
           font-style: italic;
-          font-weight: 200;
           margin: 0;
+          font-size: 0.7rem;
         }
 
         .description { display: block; }
@@ -605,24 +575,13 @@
   }
 
   .news {
-    ul{
-      list-style: none;
-      margin: 0;
 
-      + a {
-        margin-top: 2rem;
-        display: inline-block;
-      }
+    .more-link {
+      margin-top: 2rem;
+      display: block;
     }
 
     p { margin-bottom: 2rem; }
-
-    li {
-      box-shadow: inset 2px 0 0 0 #c9d0d9;
-      padding-left: 1rem;
-
-      + li { margin-top: 1rem; }
-    }
 
     strong { font-weight: 600; }
   }

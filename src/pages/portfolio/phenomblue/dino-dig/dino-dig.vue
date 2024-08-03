@@ -13,12 +13,7 @@
     </template>
 
     <template v-slot:news>
-      <ul>
-        <li><NewsLink
-          url="https://www.sixteen-nine.net/2012/03/05/dse2012-phenomblue-interactive-surface-to-lost-wages/"
-          title="DSE2012: PhenomBlue Bringing Interactive Surface To Las Vegas"
-          source="sixteen-nine"></NewsLink></li>
-      </ul>
+      <NewsList :data="news"></NewsList>
     </template>
 
   </PortfolioPage>
@@ -27,7 +22,8 @@
 <script>
   import PortfolioPage from 'components/PortfolioPage';
   import YouTubeVideo from 'components/YouTubeVideo';
-  import NewsLink from 'components/NewsLink';
+  import NewsList from 'components/NewsList';
+  import newsData from 'data/news-coverage';
 
   export default {
     name: 'PhenomblueDinoDig',
@@ -35,7 +31,13 @@
     components: {
       PortfolioPage,
       YouTubeVideo,
-      NewsLink
+      NewsList
+    },
+
+    data () {
+      return {
+        news: _.filter(newsData, ['project', 'PhenomblueDinoDig'])
+      }
     }
   }
 </script>

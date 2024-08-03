@@ -34,12 +34,7 @@
     </template>
 
     <template v-slot:news>
-      <ul>
-        <li v-for="n in news"><NewsLink
-          :url="n.url"
-          :title="n.title"
-          :source="n.pub"></NewsLink></li>
-      </ul>
+      <NewsList :data="news"></NewsList>
     </template>
 
   </PortfolioPage>
@@ -47,17 +42,17 @@
 
 <script>
   import PortfolioPage from 'components/PortfolioPage';
-  import NewsLink from 'components/NewsLink';
   import YouTubeVideo from 'components/YouTubeVideo';
   import newsData from 'data/news-coverage';
+  import NewsList from 'components/NewsList';
 
   export default {
     name: 'AmazonAlexaCortana',
 
     components: {
       PortfolioPage,
-      NewsLink,
-      YouTubeVideo
+      YouTubeVideo,
+      NewsList
     },
 
     data() {

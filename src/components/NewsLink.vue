@@ -1,29 +1,25 @@
 <template>
-  <!--<span><a v-bind:href="url" target="_blank">{{ title }}</a> &mdash; {{ source }}</span>-->
-  <span class="newslink"><a v-bind:href="url" target="_blank">{{ title }}</a><span class="source">{{ source }}</span></span>
+  <span class="newslink">
+    <a v-bind:href="url" target="_blank"><slot name="title"></slot></a>
+    <span class="source"><slot name="source"></slot></span>
+  </span>
 </template>
 
 <script>
-
   export default {
     name: 'NewsLink',
     props: [
-      'url',
-      'title',
-      'source'
+      'url'
     ]
   }
 </script>
 
 <style scoped lang="scss">
-  a {
-    //display: block;
-  }
-
   .source {
     display: block;
     font-style: italic;
     font-size: 0.7rem;
-    margin-top: 0.25em;
+    margin-top: 0;
+    line-height: 1rem;
   }
 </style>

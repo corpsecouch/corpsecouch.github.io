@@ -230,7 +230,7 @@ const data = [
     pub:    'The FWA',
     title:  'An Elephant in the Room: Bringing Mutual of Omaha’s Wild Kingdom to Life on Mobile',
     url:    'https://thefwa.com/article/an-elephant-in-the-room-bringing-mutual-of-omaha',
-    project:'my-wild-kingdom',
+    project:'PhenomblueMyWildKingdom',
     year:   '',
     company:  companies.phenomblue
   },
@@ -239,7 +239,7 @@ const data = [
     pub:    'Society of Digital Agencies (SoDA)',
     title:  'My Wild Kingdom',
     url:    'https://www.behance.net/gallery/11159475/My-Wild-Kingdom',
-    project:'my-wild-kingdomw',
+    project:'PhenomblueMyWildKingdom',
     year:   '',
     company:  companies.phenomblue
   },
@@ -248,7 +248,7 @@ const data = [
     pub:    'sixteen-nine',
     title:  'DSE2012: PhenomBlue Bringing Interactive Surface To Las Vegas',
     url:    'https://www.sixteen-nine.net/2012/03/05/dse2012-phenomblue-interactive-surface-to-lost-wages/',
-    project:'dino-dig',
+    project:'PhenomblueDinoDig',
     year:   '',
     company:  companies.phenomblue
   },
@@ -257,8 +257,8 @@ const data = [
     pub:    'MediaPost',
     title:  'Best Integrated with a Mobile Device: Movie Lotto, Phenomblue',
     url:    'https://www.mediapost.com/publications/article/170926/best-integrated-with-a-mobile-device-movie-lotto.html',
-    project:'',
-    year:   'movie-lotto',
+    project:'PhenomblueMovieLotto',
+    year:   '',
     company:  companies.phenomblue
   },
 
@@ -266,7 +266,7 @@ const data = [
     pub:    'Silicon Prairie News',
     title:  'Phenomblue think tank produces Movie Lotto, Daydreamer',
     url:    'https://siliconprairienews.com/2012/03/phenomblue-think-tank-produces-movie-lotto-daydreamer/',
-    project:'movie-lotto',
+    project:'PhenomblueMovieLotto',
     year:   '',
     company:  companies.phenomblue
   },
@@ -275,7 +275,7 @@ const data = [
     pub:    'Omaha Childrens Museum',
     title:  'Fantastic Future Me',
     url:    'http://www.ocm.org/exhibits-and-events/permanent-exhibits/fantastic-future-me/',
-    project:'fantastic-future-me',
+    project:'PhenomblueFantasticFutureMe',
     year:   '',
     company:  companies.phenomblue
   },
@@ -284,7 +284,7 @@ const data = [
     pub:    'Google Books',
     title:  'Making Hope Happen: Create the Future You Want for Yourself and Others',
     url:    'https://books.google.com/books?id=ThcHBAAAQBAJ&pg=PA192&lpg=PA192&dq=phenomblue+fantastic+future+me&source=bl&ots=mwswQHIPTd&sig=ACfU3U3lUJYquuu6uJv4KSsmy6BnGVu6iA&hl=en&sa=X&ved=2ahUKEwjKsKaHj9_pAhVRLX0KHb9YAJkQ6AEwAnoECAoQAg#v=onepage&q=phenomblue%20fantastic%20future%20me&f=false',
-    project:'fantastic-future-me',
+    project:'PhenomblueFantasticFutureMe',
     year:   '',
     company:  companies.phenomblue
   },
@@ -293,7 +293,7 @@ const data = [
     pub:    'Omaha Childrens Museum',
     title:  'New Fantastic Future Me Exhibit Builds Hope in Children',
     url:    'https://myemail.constantcontact.com/News-Release--Future-Me-Exhibit-Opening-Next-Week.html?soid=1011257236026&aid=k58hW7TGGq0',
-    project:'fantastic-future-me',
+    project:'PhenomblueFantasticFutureMe',
     year:   '',
     company:  companies.phenomblue
   },
@@ -302,7 +302,7 @@ const data = [
     pub:    'Fast Company',
     title:  'Five More Killer Apps for Microsoft Surface',
     url:    'https://www.fastcompany.com/1298921/five-more-killer-apps-microsoft-surface',
-    project:'genesis',
+    project:'PhenomblueGenesis',
     year:   '',
     company:  companies.phenomblue
   },
@@ -311,7 +311,7 @@ const data = [
     pub:    'YouTube',
     title:  'Interview with Phenomblue on Genesis, Microsoft Surface App',
     url:    'https://www.youtube.com/watch?v=oI09o3Cq6N4',
-    project:'genesis',
+    project:'PhenomblueGenesis',
     year:   '',
     company:  companies.phenomblue
   },
@@ -320,7 +320,7 @@ const data = [
     pub:    'adeevee',
     title:  'Big Omaha Conference: Moppet Mashup',
     url:    'https://www.adeevee.com/2009/05/big-omaha-conference-moppet-mashup-design/',
-    project:'moppet-mashup',
+    project:'PhenomblueMoppetMashup',
     year:   '',
     company:  companies.phenomblue
   },
@@ -329,7 +329,7 @@ const data = [
     pub:    'NUI (Natural User Interface)',
     title:  'Moppet Mashup',
     url:    'https://vimeo.com/channels/nui/4696222',
-    project:'moppet-mashup',
+    project:'PhenomblueMoppetMashup',
     year:   '',
     company:  companies.phenomblue
   }

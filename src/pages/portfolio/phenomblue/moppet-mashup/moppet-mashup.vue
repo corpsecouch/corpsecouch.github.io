@@ -22,16 +22,7 @@
     </template>
 
     <template v-slot:news>
-      <ul>
-        <li><NewsLink
-          url="https://www.adeevee.com/2009/05/big-omaha-conference-moppet-mashup-design/"
-          title="Big Omaha Conference: Moppet Mashup"
-          source="adeevee"></NewsLink></li>
-        <li><NewsLink
-          url="https://vimeo.com/channels/nui/4696222"
-          title="Moppet Mashup"
-          source="NUI (Natual User Interface)"></NewsLink></li>
-      </ul>
+      <NewsList :data="news"></NewsList>
     </template>
 
   </PortfolioPage>
@@ -40,7 +31,8 @@
 <script>
   import PortfolioPage from 'components/PortfolioPage';
   import YouTubeVideo from 'components/YouTubeVideo';
-  import NewsLink from 'components/NewsLink';
+  import newsData from 'data/news-coverage';
+  import NewsList from 'components/NewsList';
 
   export default {
     name: 'PhenomblueMoppetMashup',
@@ -48,7 +40,13 @@
     components: {
       PortfolioPage,
       YouTubeVideo,
-      NewsLink
+      NewsList
+    },
+
+    data() {
+      return {
+        news: _.filter(newsData, ['project', 'PhenomblueMoppetMashup'])
+      }
     }
   }
 </script>

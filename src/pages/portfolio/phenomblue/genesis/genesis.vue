@@ -22,16 +22,7 @@ We developed a custom menu system that was intuitive and complemented the experi
     </template>
 
     <template v-slot:news>
-      <ul>
-        <li><NewsLink
-          url="https://www.fastcompany.com/1298921/five-more-killer-apps-microsoft-surface"
-          title="Five More Killer Apps for Microsoft Surface"
-          source="Fast Company"></NewsLink></li>
-        <li><NewsLink
-          url="https://www.youtube.com/watch?v=oI09o3Cq6N4"
-          title="Interview with Phenomblue on Genesis, Microsoft Surface App"
-          source="YouTube"></NewsLink></li>
-      </ul>
+      <NewsList :data="news"></NewsList>
     </template>
 
   </PortfolioPage>
@@ -40,7 +31,8 @@ We developed a custom menu system that was intuitive and complemented the experi
 <script>
   import PortfolioPage from 'components/PortfolioPage';
   import YouTubeVideo from 'components/YouTubeVideo';
-  import NewsLink from 'components/NewsLink';
+  import newsData from 'data/news-coverage';
+  import NewsList from 'components/NewsList';
 
   export default {
     name: 'PhenomblueGenesis',
@@ -48,7 +40,13 @@ We developed a custom menu system that was intuitive and complemented the experi
     components: {
       PortfolioPage,
       YouTubeVideo,
-      NewsLink
+      NewsList
+    },
+
+    data() {
+      return {
+        news: _.filter(newsData, ['project', 'PhenomblueGenesis'])
+      }
     }
   }
 </script>

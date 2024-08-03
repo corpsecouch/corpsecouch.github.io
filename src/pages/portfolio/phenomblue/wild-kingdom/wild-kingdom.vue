@@ -22,16 +22,7 @@
     </template>
 
     <template v-slot:news>
-      <ul>
-        <li><NewsLink
-          url="https://thefwa.com/article/an-elephant-in-the-room-bringing-mutual-of-omaha"
-          title="An Elephant in the Room: Bringing Mutual of Omaha’s Wild Kingdom to Life on Mobile"
-          source="The FWA"></NewsLink></li>
-        <li><NewsLink
-          url="https://www.behance.net/gallery/11159475/My-Wild-Kingdom"
-          title="My Wild Kingdom"
-          source="Society of Digital Agencies (SoDA)"></NewsLink></li>
-      </ul>
+      <NewsList :data="news"></NewsList>
     </template>
   </PortfolioPage>
 </template>
@@ -39,7 +30,8 @@
 <script>
   import PortfolioPage from 'components/PortfolioPage';
   import YouTubeVideo from 'components/YouTubeVideo';
-  import NewsLink from 'components/NewsLink';
+  import newsData from 'data/news-coverage';
+  import NewsList from 'components/NewsList';
 
   export default {
     name: 'PhenomblueMyWildKingdom',
@@ -47,7 +39,13 @@
     components: {
       PortfolioPage,
       YouTubeVideo,
-      NewsLink
+      NewsList
+    },
+
+    data() {
+      return {
+        news: _.filter(newsData, ['project', 'PhenomblueMyWildKingdom'])
+      }
     }
   }
 </script>

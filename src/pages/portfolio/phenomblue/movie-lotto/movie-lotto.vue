@@ -22,16 +22,7 @@
     </template>
 
     <template v-slot:news>
-      <ul>
-        <li><NewsLink
-          url="https://www.mediapost.com/publications/article/170926/best-integrated-with-a-mobile-device-movie-lotto.html"
-          title="Best Integrated with a Mobile Device: Movie Lotto, Phenomblue"
-          source="MediaPost"></NewsLink></li>
-        <li><NewsLink
-          url="https://siliconprairienews.com/2012/03/phenomblue-think-tank-produces-movie-lotto-daydreamer/"
-          title="Phenomblue think tank produces Movie Lotto, Daydreamer"
-          source="Silicon Prairie News"></NewsLink></li>
-      </ul>
+      <NewsList :data="news"></NewsList>
     </template>
 
   </PortfolioPage>
@@ -41,6 +32,8 @@
   import PortfolioPage from 'components/PortfolioPage';
   import YouTubeVideo from 'components/YouTubeVideo';
   import NewsLink from 'components/NewsLink';
+  import newsData from 'data/news-coverage';
+  import NewsList from 'components/NewsList';
 
   export default {
     name: 'PhenomblueMovieLotto',
@@ -48,7 +41,13 @@
     components: {
       PortfolioPage,
       YouTubeVideo,
-      NewsLink
+      NewsList
+    },
+
+    data() {
+      return {
+        news: _.filter(newsData, ['project', 'PhenomblueMovieLotto'])
+      }
     }
   }
 </script>
