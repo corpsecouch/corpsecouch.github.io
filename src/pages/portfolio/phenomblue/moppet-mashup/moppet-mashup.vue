@@ -13,6 +13,7 @@
     </template>
 
     <template v-slot:awards>
+      <AwardList :data="awards"></AwardList>
       <ul>
         <li><NewsLink
           url="https://www.webbyawards.com/winners/2010/advertising-media/individual-categories/mobile-experience-marketing/moppet-mashup-live/?/"
@@ -33,19 +34,25 @@
   import YouTubeVideo from 'components/YouTubeVideo';
   import newsData from 'data/news-coverage';
   import NewsList from 'components/NewsList';
+  import AwardList from 'components/AwardList.vue';
+  import awardData from 'data/awards';
+
+  const name = 'PhenomblueMoppetMashup';
 
   export default {
-    name: 'PhenomblueMoppetMashup',
+    name: name,
 
     components: {
       PortfolioPage,
       YouTubeVideo,
-      NewsList
+      NewsList,
+      AwardList
     },
 
     data() {
       return {
-        news: _.filter(newsData, ['project', 'PhenomblueMoppetMashup'])
+        news: _.filter(newsData, ['project', name]),
+        awards: _.filter(awardData, ['project', name])
       }
     }
   }

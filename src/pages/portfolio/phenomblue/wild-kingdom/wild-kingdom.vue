@@ -13,12 +13,7 @@
     </template>
 
     <template v-slot:awards>
-      <ul>
-        <li><NewsLink
-          url="https://thefwa.com/cases/my-wild-kingdom"
-          title="Mobile of the Day - May 6, 2013"
-          source="The FWA"></NewsLink></li>
-      </ul>
+      <AwardList :data="awards"></AwardList>
     </template>
 
     <template v-slot:news>
@@ -32,19 +27,25 @@
   import YouTubeVideo from 'components/YouTubeVideo';
   import newsData from 'data/news-coverage';
   import NewsList from 'components/NewsList';
+  import AwardList from 'components/AwardList.vue';
+  import awardData from 'data/awards';
+
+  const name = 'PhenomblueMyWildKingdom';
 
   export default {
-    name: 'PhenomblueMyWildKingdom',
+    name: name,
 
     components: {
       PortfolioPage,
       YouTubeVideo,
-      NewsList
+      NewsList,
+      AwardList
     },
 
     data() {
       return {
-        news: _.filter(newsData, ['project', 'PhenomblueMyWildKingdom'])
+        news: _.filter(newsData, ['project', name]),
+        awards: _.filter(awardData, ['project', name])
       }
     }
   }

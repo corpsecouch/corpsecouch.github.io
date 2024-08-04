@@ -13,12 +13,7 @@
     </template>
 
     <template v-slot:awards>
-      <ul>
-        <li><NewsLink
-          url=""
-          title="2012 Digital Out-of-Home Awards Finalist"
-          source="MediaPost"></NewsLink></li>
-      </ul>
+      <AwardList :data="awards"></AwardList>
     </template>
 
     <template v-slot:news>
@@ -34,19 +29,25 @@
   import NewsLink from 'components/NewsLink';
   import newsData from 'data/news-coverage';
   import NewsList from 'components/NewsList';
+  import AwardList from 'components/AwardList.vue';
+  import awardData from 'data/awards';
+
+  const name = 'PhenomblueMovieLotto';
 
   export default {
-    name: 'PhenomblueMovieLotto',
+    name: name,
 
     components: {
       PortfolioPage,
       YouTubeVideo,
-      NewsList
+      NewsList,
+      AwardList
     },
 
     data() {
       return {
-        news: _.filter(newsData, ['project', 'PhenomblueMovieLotto'])
+        news: _.filter(newsData, ['project', name]),
+        awards: _.filter(awardData, ['project', name])
       }
     }
   }

@@ -80,8 +80,10 @@
       <!-- Rocket -->
 
       <div class="company" id="rocket">
+
         <h3>Rocket Companies</h3>
         <p>As the first Director of Conversational AI Design for Rocket Companies, I not only established the practice for the company I also cemented conversational AI as a company priority - a core part of it's business model and long term vision – ushering in it's investments into LLMs and generative AI.</p>
+        
         <ul class="projects">
           <li class="project" v-for="p in portfolioData.rocket.projects">
             <div class="left">
@@ -98,18 +100,27 @@
             </div>
           </li>
         </ul>
+
+        <div class="awards" v-if="portfolioData.rocket.awards.length">
+          <p>{{ portfolioData.rocket.awards.length }} award{{ portfolioData.rocket.awards.length > 1 ? 's' : '' }} for my Rocket work:</p>
+          <AwardList :data="portfolioData.rocket.awards"></AwardList>
+        </div>
+
         <div class="news" v-if="portfolioData.rocket.news.all.length">
           <p>Articles about my work at Rocket:</p>
           <NewsList :data="portfolioData.rocket.news.top3"></NewsList>
           <router-link class="more-link" :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all {{ portfolioData.rocket.news.all.length }} Rocket articles</router-link>
         </div>
+        
       </div>
 
       <!-- Amazon -->
 
       <div class="company" id="amazon">
+
         <h3>Amazon</h3>
         <p>At Amazon, I was focused on all things Alexa identity, especially biometrics. I led the design of voice, modal, and device experiences for Alexa; starting with voice recognition then expanding to face recognition, authentication, authorization, profiles, and establishing the persoanlization guidelines. These are features used or available across every Echo device and has influenced every personalized experience.</p>
+        
         <ul class="projects">
           <li class="project" v-for="p in portfolioData.amazon.projects">
             <div class="left">
@@ -126,18 +137,27 @@
             </div>
           </li>
         </ul>
+
+        <div class="awards" v-if="portfolioData.amazon.awards.length">
+          <p>{{ portfolioData.amazon.awards.length }} award{{ portfolioData.amazon.awards.length > 1 ? 's' : '' }} for my Amazon work:</p>
+          <AwardList :data="portfolioData.amazon.awards"></AwardList>
+        </div>
+
         <div class="news" v-if="portfolioData.amazon.news.all.length">
           <p>Articles about my work at Amazon:</p>
           <NewsList :data="portfolioData.amazon.news.top3"></NewsList>
           <router-link class="more-link" :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all {{ portfolioData.amazon.news.all.length }} Amazon articles</router-link>
         </div>
+
       </div>
 
       <!-- Disney -->
 
       <div class="company" id="disney">
+
         <h3>Walt Disney Studios</h3>
         <p>At Disney...</p>
+        
         <ul class="projects">
           <li class="project" v-for="p in portfolioData.disney.projects">
             <div class="left">
@@ -154,18 +174,27 @@
             </div>
           </li>
         </ul>
+
+        <div class="awards" v-if="portfolioData.disney.awards.length">
+          <p>{{ portfolioData.disney.awards.length }} award{{ portfolioData.disney.awards.length > 1 ? 's' : '' }} for my Disney work:</p>
+          <AwardList :data="portfolioData.disney.awards"></AwardList>
+        </div>
+
         <div class="news" v-if="portfolioData.disney.news.all.length">
           <p>Articles about my work at Disney:</p>
           <NewsList :data="portfolioData.disney.news.top3"></NewsList>
           <router-link class="more-link" :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all {{ portfolioData.disney.news.all.length }} Disney articles</router-link>
         </div>
+
       </div>
 
       <!-- Phenomblue -->
 
       <div class="company" id="phenomblue">
+
         <h3>Phenomblue</h3>
         <p>Phenomblue was a digital brand experience agency. What does that even mean? It means I created digital experiences for brands including Microsoft, Gatorade, McDonalds, TUMS, and more.</p>
+        
         <ul class="projects">
           <li class="project" v-for="p in portfolioData.phenomblue.projects">
             <div class="left">
@@ -182,11 +211,18 @@
             </div>
           </li>
         </ul>
+
+        <div class="awards" v-if="portfolioData.phenomblue.awards.length">
+          <p>{{ portfolioData.phenomblue.awards.length }} award{{ portfolioData.phenomblue.awards.length > 1 ? 's' : '' }} for my Phenomblue work:</p>
+          <AwardList :data="portfolioData.phenomblue.awards"></AwardList>
+        </div>
+
         <div class="news" v-if="portfolioData.phenomblue.news.all.length">
           <p>Articles about my work at Phenomblue:</p>
           <NewsList :data="portfolioData.phenomblue.news.top3"></NewsList>
           <router-link class="more-link" :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all {{ portfolioData.phenomblue.news.all.length }} Phenomblue articles</router-link>
         </div>
+
       </div>
 
     </section>
@@ -244,6 +280,8 @@
   import newsData from 'data/news-coverage';
   import companies from 'data/companies';
   import NewsList from 'components/NewsList';
+  import AwardList from 'components/AwardList';
+  import awardsData from 'data/awards';
 
   export default {
     name: 'Index',
@@ -254,7 +292,8 @@
       SVGMedium,
       SVGLinkedIn,
       Email,
-      NewsList
+      NewsList,
+      AwardList
     },
 
     /*methods: {
@@ -273,20 +312,26 @@
 
       // remove all hidden projects and sort the rest
       let projects = _.orderBy(
-        _.filter(
-          projectData,
-          o => { return !o.hidden; }),
+        _.filter(projectData, o => { return !o.hidden; }),
         [ 'year' ],
         [ 'desc' ]);
 
       let portfolioData = {};
       _.each(companies, (value, key) => {
         portfolioData[value.slug] = {
+
           projects: _.filter(projects, o => { return o.company.slug == value.slug; }),
+
+          awards: _.orderBy(
+            _.filter(awardsData, o => { return o.company.slug == value.slug }),
+            o => { return o.date.year; },
+            ['desc']),
+
           news: {
             all: _.filter(newsData, o => { return o.company.slug == value.slug })
           }
         }
+        
         portfolioData[value.slug].news.top3 = _.take(portfolioData[value.slug].news.all, 3)
       });
 
@@ -329,7 +374,7 @@
     > .company {
       margin-top: 7rem; }
 
-    .news { margin-top: 3rem; }
+    .news, .awards { margin-top: 3rem; }
 
     h3 {
       font-size: 1.5rem;
@@ -574,7 +619,7 @@
     margin: 0;
   }
 
-  .news {
+  .news, .awards {
 
     .more-link {
       margin-top: 2rem;
