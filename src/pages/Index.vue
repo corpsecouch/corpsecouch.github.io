@@ -395,8 +395,9 @@
 
   #portfolio {
     .menu {
-      flex-direction: row;
+      flex-flow: row wrap;
       column-gap: 4rem;
+      row-gap: 2rem;
       a { margin: 0; }
       .rocket, .disney, .phenomblue, .amazon {
         img { height: 42px; }
