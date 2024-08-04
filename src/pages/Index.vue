@@ -73,10 +73,16 @@
       <h2>&bull; P<span class="o">o</span>rtfolio &bull;</h2>
 
       <section class="menu">
+        <!--
         <router-link :to="{ path: '/', hash: '#rocket' }" alt="Rocket">Rocket</router-link>
         <router-link :to="{ path: '/', hash: '#amazon' }" alt="Amazon">Amazon</router-link>
         <router-link :to="{ path: '/', hash: '#disney' }" alt="Disney">Disney</router-link>
         <router-link :to="{ path: '/', hash: '#phenomblue' }" alt="Phenomblue">Phenomblue</router-link>
+        -->
+        <router-link :to="{ path: '/', hash: '#rocket' }" alt="Rocket" class="rocket"><img src="../assets/rocket.png"></router-link>
+        <router-link :to="{ path: '/', hash: '#amazon' }" alt="Amazon" class="amazon"><img src="../assets/amazon.png"></router-link>
+        <router-link :to="{ path: '/', hash: '#disney' }" alt="Disney" class="disney"><img src="../assets/disney.png"></router-link>
+        <router-link :to="{ path: '/', hash: '#phenomblue' }" alt="Phenomblue" class="phenomblue"><img src="../assets/phenomblue.png"></router-link>
       </section>
 
       <!-- Rocket -->
@@ -388,6 +394,15 @@
   }
 
   #portfolio {
+    .menu {
+      flex-direction: row;
+      column-gap: 4rem;
+      a { margin: 0; }
+      .rocket, .disney, .phenomblue, .amazon {
+        img { height: 42px; }
+      }
+    }
+
     > .company {
       margin-top: 7rem; }
 
