@@ -86,7 +86,7 @@
         <h3>Rocket Companies</h3>
         <p>As the first Director of Conversational AI Design for Rocket Companies, I not only established the practice for the company I also cemented conversational AI as a company priority - a core part of it's business model and long term vision – ushering in it's investments into LLMs and generative AI.</p>
         
-        <ul class="projects">
+        <!--<ul class="projects">
           <li class="project" v-for="p in portfolioData.rocket.projects">
             <div class="left">
               <img :src="require(`${p.image}`)" class="rounded">
@@ -101,7 +101,11 @@
               <router-link class="link" :key="p.route.name" :to="p.route" :title="p.title">Read the case study</router-link>
             </div>
           </li>
-        </ul>
+        </ul>-->
+
+        <div class="projects">
+          <p>Case studies coming soon.</p>
+        </div>
 
         <div class="awards" v-if="portfolioData.rocket.awards.length">
           <p>{{ portfolioData.rocket.awards.length }} award{{ portfolioData.rocket.awards.length > 1 ? 's' : '' }} for my Rocket work:</p>
@@ -158,7 +162,7 @@
       <div class="company" id="disney">
 
         <h3>Walt Disney Studios</h3>
-        <p>At Disney...</p>
+        <p>At Disney, I was leading the UX design of the Studio's digital transformation of it's enterprise tools and processes. I also went deep into emerging technologies and R&D, especially design-driven innovation.</p>
         
         <ul class="projects">
           <li class="project" v-for="p in portfolioData.disney.projects">
@@ -363,6 +367,17 @@
     font-weight: normal;
     line-height: 4.5rem;
     text-transform: none;
+  }
+
+  #rocket {
+    .projects > p {
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: lightgray;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+    }
   }
 
   .columns {
