@@ -129,11 +129,11 @@
         
         <ul class="projects">
           <li class="project" v-for="p in portfolioData.amazon.projects">
-            <div class="left">
+            <div class="left" @click="gotoProject(p.route)">
               <img :src="require(`${p.image}`)">
             </div>
             <div class="right">
-              <span class="title">{{ p.title }}</span>
+              <span class="title" @click="gotoProject(p.route)">{{ p.title }}</span>
               <span class="year">{{ p.year }}</span>
               <span class="description">{{ p.description }}</span>
               <ul class="tags">
@@ -166,11 +166,11 @@
         
         <ul class="projects">
           <li class="project" v-for="p in portfolioData.disney.projects">
-            <div class="left">
+            <div class="left" @click="gotoProject(p.route)">
               <img :src="require(`${p.image}`)" class="rounded">
             </div>
             <div class="right">
-              <span class="title">{{ p.title }}</span>
+              <span class="title" @click="gotoProject(p.route)">{{ p.title }}</span>
               <span class="year">{{ p.year }}</span>
               <span class="description">{{ p.description }}</span>
               <ul class="tags">
@@ -203,11 +203,11 @@
         
         <ul class="projects">
           <li class="project" v-for="p in portfolioData.phenomblue.projects">
-            <div class="left">
+            <div class="left" @click="gotoProject(p.route)">
               <img :src="require(`${p.image}`)" class="rounded">
             </div>
             <div class="right">
-              <span class="title">{{ p.title }}</span>
+              <span class="title" @click="gotoProject(p.route)">{{ p.title }}</span>
               <span class="year">{{ p.year }}</span>
               <span class="description">{{ p.description }}</span>
               <ul class="tags">
@@ -302,17 +302,21 @@
       AwardList
     },
 
-    /*methods: {
+    methods: {
       // https://stackoverflow.com/questions/61435070/scroll-down-when-clicked-with-vue-js
-      goto(ref) {
+      /*goto(ref) {
         let el = this.$refs[ref];
         
         el.parentElement.scrollTo(
           el.offsetLeft - el.parentElement.offsetLeft,
           el.offsetTop
           );
+      }*/
+
+      gotoProject(route) {
+        this.$router.push(route);
       }
-    },*/
+    },
 
     data () {
 
@@ -470,14 +474,14 @@
 
       .project {
         display: grid;
-        grid-template-columns: [left] 40% [right] 1fr;
+        grid-template-columns: [left] 33% [right] 1fr;
         grid-column-gap: 2rem;
 
         + .project { margin-top: 3.5rem; }
         .left {
           grid-column: left;
-
           object-fit: contain;
+          &:hover { cursor: pointer; }
           > img {
             width: 100%;
 
@@ -504,6 +508,7 @@
           display: block;
           font-size: 1.2rem;
           font-weight: 500;
+          &:hover { cursor: pointer; }
         }
 
         .year {
