@@ -51,9 +51,7 @@
     </template>
 
     <template v-slot:awards>
-      <ul>
-        <li>Best of Disney 2014</li>
-      </ul>
+      <AwardList :data="awards"></AwardList>
     </template>
 
   </PortfolioPage>
@@ -61,12 +59,23 @@
 
 <script>
   import PortfolioPage from 'components/PortfolioPage';
+  import AwardList from 'components/AwardList.vue';
+  import awardData from 'data/awards';
+
+  const name = 'DisneyDesignSystem';
 
   export default {
-    name: 'DisneyDesignSystem',
+    name: name,
 
     components: {
-      PortfolioPage
+      PortfolioPage,
+      AwardList
+    },
+
+    data () {
+      return {
+        awards: _.filter(awardData, ['project', name])
+      }
     }
   }
 </script>

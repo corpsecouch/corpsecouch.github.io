@@ -14,12 +14,6 @@
 
     <template v-slot:awards>
       <AwardList :data="awards"></AwardList>
-      <ul>
-        <li><NewsLink
-          url="https://www.webbyawards.com/winners/2010/advertising-media/individual-categories/mobile-experience-marketing/moppet-mashup-live/?/"
-          title="2010 Honoree"
-          source="The Webby Awards"></NewsLink></li>
-      </ul>
     </template>
 
     <template v-slot:news>
