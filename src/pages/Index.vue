@@ -113,9 +113,9 @@
         </div>
 
         <div class="news" v-if="portfolioData.rocket.news.all.length">
-          <p>Articles about my work at Rocket:</p>
+          <p>{{ portfolioData.rocket.news.all.length }} articles about my work at Rocket:</p>
           <NewsList :data="portfolioData.rocket.news.top3"></NewsList>
-          <router-link class="more-link" :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all {{ portfolioData.rocket.news.all.length }} Rocket articles</router-link>
+          <router-link class="more-link" :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all the articles</router-link>
         </div>
         
       </div>
@@ -150,9 +150,9 @@
         </div>
 
         <div class="news" v-if="portfolioData.amazon.news.all.length">
-          <p>Articles about my work at Amazon:</p>
+          <p>{{ portfolioData.amazon.news.all.length }} articles about my work at Amazon:</p>
           <NewsList :data="portfolioData.amazon.news.top3"></NewsList>
-          <router-link class="more-link" :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all {{ portfolioData.amazon.news.all.length }} Amazon articles</router-link>
+          <router-link class="more-link" :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all the articles</router-link>
         </div>
 
       </div>
@@ -187,9 +187,9 @@
         </div>
 
         <div class="news" v-if="portfolioData.disney.news.all.length">
-          <p>Articles about my work at Disney:</p>
+          <p>{{ portfolioData.disney.news.all.length }} articles about my work at Disney:</p>
           <NewsList :data="portfolioData.disney.news.top3"></NewsList>
-          <router-link class="more-link" :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all {{ portfolioData.disney.news.all.length }} Disney articles</router-link>
+          <router-link class="more-link" :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all the articles</router-link>
         </div>
 
       </div>
@@ -224,9 +224,9 @@
         </div>
 
         <div class="news" v-if="portfolioData.phenomblue.news.all.length">
-          <p>Articles about my work at Phenomblue:</p>
+          <p>{{ portfolioData.phenomblue.news.all.length }} articles about my work at Phenomblue:</p>
           <NewsList :data="portfolioData.phenomblue.news.top3"></NewsList>
-          <router-link class="more-link" :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all {{ portfolioData.phenomblue.news.all.length }} Phenomblue articles</router-link>
+          <router-link class="more-link" :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all the articles</router-link>
         </div>
 
       </div>
