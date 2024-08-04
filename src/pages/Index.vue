@@ -219,7 +219,7 @@
               <ul class="tags">
                 <li class="tag" v-for="tag in p.tags">{{ tag }}</li>
               </ul>
-              <router-link class="link" :key="p.route.name" :to="p.route" :title="p.title">Read the case study</router-link>
+              <router-link class="link" :key="p.route.name" :to="p.route" :title="p.title">Check out this project</router-link>
             </div>
           </li>
         </ul>
