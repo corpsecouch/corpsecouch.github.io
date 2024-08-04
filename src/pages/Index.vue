@@ -31,6 +31,7 @@
         <p>I have extensive experience going from 0-to-1 and transforming emerging technologies and ambiguity into effective, delightful experiences.</p> -->
       </section>
 
+      <!--
       <div class="columns">
         <section class="left">
           <h3>Patents</h3>
@@ -61,6 +62,7 @@
           </ul>
         </section>
       </div>
+      -->
     </section>
 
     <!-- ----------------- -->

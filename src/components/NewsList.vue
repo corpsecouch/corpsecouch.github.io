@@ -31,8 +31,8 @@
     margin: 0;
 
     li {
-      box-shadow: inset 2px 0 0 0 #c9d0d9;
-      padding-left: 1rem;
+      //box-shadow: inset 2px 0 0 0 #c9d0d9;
+      //padding-left: 1rem;
 
       + li { margin-top: 1rem; }
     }
