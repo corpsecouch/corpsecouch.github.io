@@ -42,7 +42,8 @@
     display: inline-flex;
     flex-direction: row;
     column-gap: 1rem;
-    background-color: gold;
+    //background-color: gold;
+    background-image: linear-gradient(to top, #ffd700, #ffd918, #ffdc25, #ffde30, #ffe039);
     border-radius: 8px;
     padding: 6px 12px;
     box-shadow: 0 8px 12px -7px rgba(0, 0, 0, 0.2);

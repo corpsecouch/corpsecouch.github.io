@@ -527,7 +527,8 @@
           flex-flow: row wrap;
           gap: 0.2rem 0.5rem;
           .tag {
-            background-color: #9ec4ce;
+            //background-color: #9ec4ce;
+            background-color: $color-background-dark;
             color: $color-text-light;
             padding: 0 0.7rem;
             border-radius: 1rem;
