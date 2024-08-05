@@ -1,9 +1,9 @@
 <template>
   <PortfolioPage>
-    <template v-slot:title>Movie Greenlight</template>
+    <template v-slot:title>Creative Affairs Story Tracking &amp; Library</template>
     <template v-slot:company>Walt Disney Studios</template>
     <template v-slot:year>2017</template>
-    <!--<template v-slot:hero><img src="./full.png"></template>-->
+    <template v-slot:hero><img src="./full.png"></template>
 
     <!--<template v-slot:hero>
       <img src="./full.png">
