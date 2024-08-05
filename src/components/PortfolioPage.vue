@@ -2,7 +2,12 @@
   <Page class="work widthConstrained">
 
     <div id="navs">
-      <router-link :to="{ name: 'index' }">Jason Bejot</router-link>
+      <!--<router-link :to="{ name: 'index' }">Jason Bejot</router-link>-->
+      <router-link :to="{ name: 'index', hash: '#about' }" alt="About">About</router-link>
+      <router-link :to="{ name: 'index', hash: '#portfolio' }" alt="Portfolio">Portfolio</router-link>
+      <span class="name"><router-link :to="{ name: 'index' }">Jason<br />Bejot</router-link></span>
+      <router-link :to="{ name: 'index', hash: '#news' }" alt="News">News</router-link>
+      <router-link :to="{ name: 'index', hash: '#contact' }" alt="Contact">Contact</router-link>
       <!--<span>
         <router-link :to="{ name: 'portfolio' }" class="right">Portfolio</router-link>
         <router-link :to="{ name: 'about' }" class="right">About</router-link>
@@ -109,21 +114,40 @@
   #navs {
     position: fixed;
     width: 100%;
+    height: 3rem;
     top: 0;
     left: 0;
     background-color: $color-background-light;
     padding: 1rem;
     display: flex;
-    //justify-content: space-between;
     justify-content: center;
+    column-gap: 2rem;
     font-size: 0.9rem;
+    box-shadow: 0 8px 12px -7px rgba(0, 0, 0, 0.1);
 
-    a {
-      color: $color-text-dark;
-      text-transform: uppercase;
-      text-decoration: none;
-      //flex-grow: 0;
-      margin: 0 1rem;
+    .name {
+      background-color: $color-background-light;
+      padding: 2rem;
+      border-radius: 100%;
+      width: 7rem;
+      height: 7rem;
+      position: relative;
+      top: -3rem;
+      box-shadow: 0 8px 12px -7px rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        color: $color-text-dark;
+        text-decoration: none;
+        display: block;
+        font-family: 'Mainstay';
+        transform: rotate(-18deg);
+        letter-spacing: normal;
+        margin-top: 1.4rem;
+        font-size: 1.4rem;
+      }
     }
 
     /*@include screen-small {
