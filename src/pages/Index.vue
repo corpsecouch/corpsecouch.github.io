@@ -108,12 +108,12 @@
         </div>
 
         <div class="awards" v-if="portfolioData.rocket.awards.length">
-          <p>{{ portfolioData.rocket.awards.length }} award{{ portfolioData.rocket.awards.length > 1 ? 's' : '' }} for my Rocket work:</p>
+          <p>I received {{ portfolioData.rocket.awards.length }} award{{ portfolioData.rocket.awards.length > 1 ? 's' : '' }} for my Rocket work:</p>
           <AwardList :data="portfolioData.rocket.awards"></AwardList>
         </div>
 
         <div class="news" v-if="portfolioData.rocket.news.all.length">
-          <p>{{ portfolioData.rocket.news.all.length }} articles about my work at Rocket:</p>
+          <p>There are at least {{ portfolioData.rocket.news.all.length }} articles about my work at Rocket. These are the most recent:</p>
           <NewsList :data="portfolioData.rocket.news.top3"></NewsList>
           <router-link class="more-link" :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all the articles</router-link>
         </div>
@@ -145,12 +145,12 @@
         </ul>
 
         <div class="awards" v-if="portfolioData.amazon.awards.length">
-          <p>{{ portfolioData.amazon.awards.length }} award{{ portfolioData.amazon.awards.length > 1 ? 's' : '' }} for my Amazon work:</p>
+          <p>I received {{ portfolioData.amazon.awards.length }} award{{ portfolioData.amazon.awards.length > 1 ? 's' : '' }} for my Amazon work:</p>
           <AwardList :data="portfolioData.amazon.awards"></AwardList>
         </div>
 
         <div class="news" v-if="portfolioData.amazon.news.all.length">
-          <p>{{ portfolioData.amazon.news.all.length }} articles about my work at Amazon:</p>
+          <p>There are at least {{ portfolioData.amazon.news.all.length }} articles about my work at Amazon. These are the most recent:</p>
           <NewsList :data="portfolioData.amazon.news.top3"></NewsList>
           <router-link class="more-link" :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all the articles</router-link>
         </div>
@@ -182,12 +182,12 @@
         </ul>
 
         <div class="awards" v-if="portfolioData.disney.awards.length">
-          <p>{{ portfolioData.disney.awards.length }} award{{ portfolioData.disney.awards.length > 1 ? 's' : '' }} for my Disney work:</p>
+          <p>I received {{ portfolioData.disney.awards.length }} award{{ portfolioData.disney.awards.length > 1 ? 's' : '' }} for my Disney work:</p>
           <AwardList :data="portfolioData.disney.awards"></AwardList>
         </div>
 
         <div class="news" v-if="portfolioData.disney.news.all.length">
-          <p>{{ portfolioData.disney.news.all.length }} articles about my work at Disney:</p>
+          <p>There are at least {{ portfolioData.disney.news.all.length }} articles about my work at Disney. These are the most recent:</p>
           <NewsList :data="portfolioData.disney.news.top3"></NewsList>
           <router-link class="more-link" :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all the articles</router-link>
         </div>
@@ -219,12 +219,12 @@
         </ul>
 
         <div class="awards" v-if="portfolioData.phenomblue.awards.length">
-          <p>{{ portfolioData.phenomblue.awards.length }} award{{ portfolioData.phenomblue.awards.length > 1 ? 's' : '' }} for my Phenomblue work:</p>
+          <p>I received {{ portfolioData.phenomblue.awards.length }} award{{ portfolioData.phenomblue.awards.length > 1 ? 's' : '' }} for my Phenomblue work:</p>
           <AwardList :data="portfolioData.phenomblue.awards"></AwardList>
         </div>
 
         <div class="news" v-if="portfolioData.phenomblue.news.all.length">
-          <p>{{ portfolioData.phenomblue.news.all.length }} articles about my work at Phenomblue:</p>
+          <p>There are at least {{ portfolioData.phenomblue.news.all.length }} articles about my work at Phenomblue. These are the most recent:</p>
           <NewsList :data="portfolioData.phenomblue.news.top3"></NewsList>
           <router-link class="more-link" :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all the articles</router-link>
         </div>
