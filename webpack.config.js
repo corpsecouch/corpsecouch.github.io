@@ -4,8 +4,8 @@ const webpack = require('webpack');
 const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  //mode: 'development',
-  mode: 'production',
+  mode: 'development',
+  //mode: 'production',
 
   entry: {
     app: {
