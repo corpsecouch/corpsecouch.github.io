@@ -361,6 +361,11 @@
   }
 
   #rocket {
+    h3 {
+      background-image: url(../assets/rocket.png);
+      //width: 165px;
+      height: 64px;
+    }
     .projects > p {
       display: inline-block;
       padding: 8px 16px;
@@ -368,6 +373,30 @@
       font-size: 1rem;
       font-weight: 600;
       border-radius: 8px;
+    }
+  }
+
+  #amazon {
+    h3 {
+      background-image: url(../assets/amazon.png);
+      //width: 157px;
+      height: 64px;
+    }
+  }
+
+  #disney {
+    h3 {
+      background-image: url(../assets/disney.png);
+      //width: 142px;
+      height: 64px;
+    }
+  }
+
+  #phenomblue {
+    h3 {
+      background-image: url(../assets/phenomblue.png);
+      //width: 217px;
+      height: 64px;
     }
   }
 
@@ -379,6 +408,9 @@
   }
 
   #portfolio {
+    padding-top: 4rem;
+    margin-top: 8rem;
+
     .menu {
       flex-flow: row wrap;
       column-gap: 4rem;
@@ -390,7 +422,17 @@
     }
 
     > .company {
-      margin-top: 7rem; }
+      padding-top: 2rem;
+      margin-top: 7rem;
+
+      > h3 {
+        background-repeat: no-repeat;
+        background-position-x: center;
+        text-indent: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
 
     .news, .awards { margin-top: 3rem; }
 

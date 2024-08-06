@@ -66,6 +66,42 @@
   h3 {
     font-size: 1.5rem;
     margin-bottom: 1.3rem;
+
+    text-indent: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  #rocket {
+    h3 {
+      background-image: url(../assets/rocket.png);
+      height: 64px;
+    }
+  }
+
+  #amazon {
+    h3 {
+      background-image: url(../assets/amazon.png);
+      height: 64px;
+    }
+  }
+
+  #disney {
+    h3 {
+      background-image: url(../assets/disney.png);
+      height: 64px;
+    }
+  }
+
+  #phenomblue {
+    h3 {
+      background-image: url(../assets/phenomblue.png);
+      height: 64px;
+    }
   }
 
   section + section {
