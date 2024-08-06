@@ -1,49 +1,11 @@
 <template>
   <div id="page">
 
-    <!--<header>
-
-      <span id="menu-button" v-on:click="menuHidden = !menuHidden">
-        <svg class="open" v-if="menuHidden" viewBox="0 0 100 80">
-          <rect y="0"   width="100"   height="10" rx="6"></rect>
-          <rect y="30"  width="100"   height="10" rx="6"></rect>
-          <rect y="60"  width="100"   height="10" rx="6"></rect>
-        </svg>
-
-        <svg class="close" v-if="!menuHidden" viewBox="0 0 40 40">
-          <line x1="0" y1="0" x2="40" y2="40"></line>
-          <line x1="40" y1="0" x2="0" y2="40"></line>
-        </svg>
-      </span>
-
-    </header>
-
-    <div id="menu-screen" :class="{ hidden: !menuHidden }">
-      <router-link :to="{ name: 'index' }">Work</router-link>
-      <router-link :to="{ name: 'about' }">About</router-link>
-      <router-link :to="{ name: 'contact' }">Contact</router-link>
-    </div>-->
-
     <main>
       <slot></slot>
     </main>
 
     <footer class="divider">
-      <!--<div class="links">
-        <span class="site">
-          <router-link :to="{ name: 'about' }" alt="About">About</router-link>
-          <router-link :to="{ name: 'work' }" alt="Work">Work</router-link>
-          <router-link :to="{ name: 'contact' }" alt="Contact">Contact</router-link>
-        </span>
-        <span class="social">
-          <router-link :to="{ name: 'about' }" alt="Twitter">twitter</router-link>
-          <router-link :to="{ name: 'work' }" alt="LinkedIn">linkedin</router-link>
-          <router-link :to="{ name: 'contact' }" alt="Medium">medium</router-link>
-        </span>
-      </div>-->
-      <!--<div class="copyright">
-        &copy; Jason Bejot
-      </div>-->
       Built from scratch with care.
       <span id="copyright">&copy; Jason Bejot</span>
     </footer>

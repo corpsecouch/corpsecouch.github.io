@@ -10,6 +10,7 @@ const app = createApp({});
 
 const routes = [
   { path: '/',                                          name: 'index',                        component: () => import('pages/Index') },
+  { path: '/news',                                      name: 'news',                         component: () => import('pages/News') },
   /*
   { path: '/#about',                                    name: 'about',                        component: Index },
   { path: '/#portfolio',                                name: 'portfolio',                    component: Index },

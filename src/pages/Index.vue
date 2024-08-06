@@ -8,7 +8,7 @@
     <section class="menu">
       <router-link :to="{ path: '/', hash: '#about' }" alt="About">About</router-link>
       <router-link :to="{ path: '/', hash: '#portfolio' }" alt="Portfolio">Portfolio</router-link>
-      <router-link :to="{ path: '/', hash: '#news' }" alt="News">News</router-link>
+      <router-link :to="{ name: 'news' }" alt="News">News</router-link>
       <router-link :to="{ path: '/', hash: '#contact' }" alt="Contact">Contact</router-link>
     </section>
 
@@ -115,7 +115,7 @@
         <div class="news" v-if="portfolioData.rocket.news.all.length">
           <p>There are at least {{ portfolioData.rocket.news.all.length }} articles about my work at Rocket. These are the most recent:</p>
           <NewsList :data="portfolioData.rocket.news.top3"></NewsList>
-          <router-link class="more-link" :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all the articles</router-link>
+          <router-link class="more-link" :to="{ name: 'news', hash: '#rocket' }" alt="See all the articles">See all the articles</router-link>
         </div>
         
       </div>
@@ -152,7 +152,7 @@
         <div class="news" v-if="portfolioData.amazon.news.all.length">
           <p>There are at least {{ portfolioData.amazon.news.all.length }} articles about my work at Amazon. These are the most recent:</p>
           <NewsList :data="portfolioData.amazon.news.top3"></NewsList>
-          <router-link class="more-link" :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all the articles</router-link>
+          <router-link class="more-link" :to="{ name: 'news', hash: '#amazon' }" alt="See all the articles">See all the articles</router-link>
         </div>
 
       </div>
@@ -189,7 +189,7 @@
         <div class="news" v-if="portfolioData.disney.news.all.length">
           <p>There are at least {{ portfolioData.disney.news.all.length }} articles about my work at Disney. These are the most recent:</p>
           <NewsList :data="portfolioData.disney.news.top3"></NewsList>
-          <router-link class="more-link" :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all the articles</router-link>
+          <router-link class="more-link" :to="{ name: 'news', hash: '#disney' }" alt="See all the articles">See all the articles</router-link>
         </div>
 
       </div>
@@ -226,7 +226,7 @@
         <div class="news" v-if="portfolioData.phenomblue.news.all.length">
           <p>There are at least {{ portfolioData.phenomblue.news.all.length }} articles about my work at Phenomblue. These are the most recent:</p>
           <NewsList :data="portfolioData.phenomblue.news.top3"></NewsList>
-          <router-link class="more-link" :to="{ path: '/', hash: '#news' }" alt="See all the articles">See all the articles</router-link>
+          <router-link class="more-link" :to="{ name: 'news', hash: '#phenomblue' }" alt="See all the articles">See all the articles</router-link>
         </div>
 
       </div>
