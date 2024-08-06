@@ -9,7 +9,7 @@
       <router-link :to="{ name: 'index', hash: '#contact' }" alt="Contact">Contact</router-link>
     </header>
 
-    <h1 id="page-title"><slot name="title">Title</slot></h1>
+    <h1 id="page-title" v-if="!!this.$slots.title"><slot name="title">Title</slot></h1>
     <slot></slot>
     
   </Page>

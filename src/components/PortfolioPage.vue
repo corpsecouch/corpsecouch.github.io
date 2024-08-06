@@ -1,29 +1,13 @@
 <template>
-  <Page class="work widthConstrained">
-
-    <div id="navs">
-      <!--<router-link :to="{ name: 'index' }">Jason Bejot</router-link>-->
-      <router-link :to="{ name: 'index', hash: '#about' }" alt="About">About</router-link>
-      <router-link :to="{ name: 'index', hash: '#portfolio' }" alt="Portfolio">Portfolio</router-link>
-      <span class="name"><router-link :to="{ name: 'index' }">Jason<br />Bejot</router-link></span>
-      <router-link :to="{ name: 'index', hash: '#news' }" alt="News">News</router-link>
-      <router-link :to="{ name: 'index', hash: '#contact' }" alt="Contact">Contact</router-link>
-      <!--<span>
-        <router-link :to="{ name: 'portfolio' }" class="right">Portfolio</router-link>
-        <router-link :to="{ name: 'about' }" class="right">About</router-link>
-        <router-link :to="{ name: 'contact' }" class="right">Contact</router-link>
-      </span>-->
-    </div>
+  <Subpage class="work widthConstrained">
 
       <section id="title">
-        <!--router-link :to="{ name: 'index' }" class="nav" id="prev" title="Go back"><Caret /></router-link>-->
         <div class="wrapper">
           <h1><slot name="title"></slot></h1>
           <p v-if="!!this.$slots.subtitle"><slot name="subtitle"></slot></p>
           <span id="company"><slot name="company"></slot></span>
           <span id="year"><slot name="year"></slot></span>
         </div>
-        <!--<a class="nav" id="next" title="Next project"><Caret /></a>-->
       </section>
 
       <!-- might be ok to get rid of hero -->
@@ -59,28 +43,26 @@
         <div><slot name="outcome"></slot></div>
       </section>
 
-      <!--<section id="news-awards" v-bind:class="columns" v-if="columns">-->
-        <section id="awards" class="columned left" v-if="!!this.$slots.awards">
-          <h3>awards</h3>
-          <slot name="awards"></slot>
-        </section>
+      <section id="awards" class="columned left" v-if="!!this.$slots.awards">
+        <h3>awards</h3>
+        <slot name="awards"></slot>
+      </section>
 
-        <section id="news" class="columned right" v-if="!!this.$slots.news">
-          <h3>in the news</h3>
-          <slot name="news"></slot>
-        </section>
-      <!--</section>-->
+      <section id="news" class="columned right" v-if="!!this.$slots.news">
+        <h3>in the news</h3>
+        <slot name="news"></slot>
+      </section>
 
       <section id="contact">
         <p>Want to talk about this project?</p>
         <p><Email /></p>
       </section>
 
-  </Page>
+  </Subpage>
 </template>
 
 <script>
-  import Page from 'components/PageTemplate'
+  import Subpage from 'components/Subpage'
   import Caret from 'components/Caret'
   import Email from 'components/Email'
 
@@ -88,7 +70,7 @@
     name: 'PortfolioPage',
 
     components: {
-      Page,
+      Subpage,
       Caret,
       Email
     },
@@ -149,13 +131,6 @@
         font-size: 1.4rem;
       }
     }
-
-    /*@include screen-small {
-      span {
-        display: none;
-      }
-      justify-content: center;
-    }*/
   }
 
   #content {
@@ -186,7 +161,6 @@
     grid-template-columns: [left] 8rem [right] auto;
 
     @include screen-small {
-      //grid-template-columns: [left right] auto;
       display: block;
     }
 
@@ -230,24 +204,6 @@
 
   }
 
-
-  /*#prev-project, #next-project {
-    position: absolute;
-    top: 0;
-    height: 100vh;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-  }
-
-  #prev-project {
-    left: 0;
-  }
-
-  #next-project {
-    right: 0;
-  }*/
-
   #title {
     display: flex;
     justify-content: space-between;
@@ -266,62 +222,5 @@
     #prev svg {
       transform: rotate(90deg);
     }
-
-    /*#next svg {
-      transform: rotate(-90deg);
-    }*/
   }
-
-  /*#content {
-    position: relative;
-    top: $portfolio-offset;
-    //top: -1.5rem;
-    @include screen-small { top: 0; }
-    //background-color: $color-background-light;
-    //padding: 3rem 0;
-  }
-
-  .content {
-    width: 70%;
-    @include screen-large { width: 770px; }
-  }*/
-
-  /*#masthead {
-    width: 70%;
-    margin: auto;
-    @include screen-small { width: 100%; }
-  }*/
-
-  /*#title {
-    height: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $color-background-dark;
-  }*/
-
-  /*#title-background {
-    height: 42vh;
-    background-color: $color-background-dark;
-  }
-
-  #title {
-    padding-bottom: 4vh;
-    color: $color-text-light;
-    font-size: 1.3rem;
-    @include font-raleway;
-    font-size: 200;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    text-align: center;
-    position: sticky;
-    top: 10rem;
-  }*/
-
-  /*#content {
-    width: 70%;
-    @include screen-small { width: 90%; }
-    margin: auto;
-    padding: 3rem 0;
-  }*/
 </style>
