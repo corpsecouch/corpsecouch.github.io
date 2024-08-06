@@ -112,9 +112,9 @@
           <AwardList :data="portfolioData.rocket.awards"></AwardList>
         </div>
 
-        <div class="news" v-if="portfolioData.rocket.news.all.length">
-          <p>There are at least {{ portfolioData.rocket.news.all.length }} articles about my work at Rocket. These are the most recent:</p>
-          <NewsList :data="portfolioData.rocket.news.top3"></NewsList>
+        <div class="news" v-if="portfolioData.rocket.news.total">
+          <p>There are at least {{ portfolioData.rocket.news.total }} articles about my work at Rocket. These are the most recent:</p>
+          <NewsList :data="portfolioData.rocket.news.data"></NewsList>
           <router-link class="more-link" :to="{ name: 'news', hash: '#rocket' }" alt="See all the articles">See all the articles</router-link>
         </div>
         
@@ -149,9 +149,9 @@
           <AwardList :data="portfolioData.amazon.awards"></AwardList>
         </div>
 
-        <div class="news" v-if="portfolioData.amazon.news.all.length">
-          <p>There are at least {{ portfolioData.amazon.news.all.length }} articles about my work at Amazon. These are the most recent:</p>
-          <NewsList :data="portfolioData.amazon.news.top3"></NewsList>
+        <div class="news" v-if="portfolioData.amazon.news.total">
+          <p>There are at least {{ portfolioData.amazon.news.total }} articles about my work at Amazon. These are the most recent:</p>
+          <NewsList :data="portfolioData.amazon.news.data"></NewsList>
           <router-link class="more-link" :to="{ name: 'news', hash: '#amazon' }" alt="See all the articles">See all the articles</router-link>
         </div>
 
@@ -186,9 +186,9 @@
           <AwardList :data="portfolioData.disney.awards"></AwardList>
         </div>
 
-        <div class="news" v-if="portfolioData.disney.news.all.length">
-          <p>There are at least {{ portfolioData.disney.news.all.length }} articles about my work at Disney. These are the most recent:</p>
-          <NewsList :data="portfolioData.disney.news.top3"></NewsList>
+        <div class="news" v-if="portfolioData.disney.news.total">
+          <p>There are at least {{ portfolioData.disney.news.total }} articles about my work at Disney. These are the most recent:</p>
+          <NewsList :data="portfolioData.disney.news.data"></NewsList>
           <router-link class="more-link" :to="{ name: 'news', hash: '#disney' }" alt="See all the articles">See all the articles</router-link>
         </div>
 
@@ -223,26 +223,14 @@
           <AwardList :data="portfolioData.phenomblue.awards"></AwardList>
         </div>
 
-        <div class="news" v-if="portfolioData.phenomblue.news.all.length">
-          <p>There are at least {{ portfolioData.phenomblue.news.all.length }} articles about my work at Phenomblue. These are the most recent:</p>
-          <NewsList :data="portfolioData.phenomblue.news.top3"></NewsList>
+        <div class="news" v-if="portfolioData.phenomblue.news.total">
+          <p>There are at least {{ portfolioData.phenomblue.news.total }} articles about my work at Phenomblue. These are the most recent:</p>
+          <NewsList :data="portfolioData.phenomblue.news.data"></NewsList>
           <router-link class="more-link" :to="{ name: 'news', hash: '#phenomblue' }" alt="See all the articles">See all the articles</router-link>
         </div>
 
       </div>
 
-    </section>
-
-    <!-- ------------ -->
-    <!-- NEWS SECTION -->
-    <!-- ------------ -->
-
-    <section id="news">
-      <h2>&bull; In The News &bull;</h2>
-      <div class="content news">
-        <p>My work has been featured or mentioned in at least <strong>{{ newsData.length }} articles</strong> (that I know of).</p>
-        <NewsList :data="newsData"></NewsList>
-      </div>
     </section>
 
     <!-- --------------- -->
@@ -338,11 +326,10 @@
             ['desc']),
 
           news: {
-            all: _.filter(newsData, o => { return o.company.slug == value.slug })
+            total: _.filter(newsData, o => { return o.company.slug == value.slug }).length,
+            data: _.take(_.filter(newsData, o => { return o.company.slug == value.slug }), 3)
           }
         }
-        
-        portfolioData[value.slug].news.top3 = _.take(portfolioData[value.slug].news.all, 3)
       });
 
       return {
