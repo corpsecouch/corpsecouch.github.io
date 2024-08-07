@@ -3,6 +3,9 @@ import { createApp } from 'vue';
 const app = createApp({});
 
 
+//const isProd = process.env.NODE_ENV === 'production';
+const isProd = process.env.NODE_ENV === 'dev';
+
 
 /* ******************** */
 /* *** router setup *** */
@@ -66,14 +69,7 @@ app.use(router);
 
 import VueGtag from 'vue-gtag';
 
-//const isProd = process.env.NODE_ENV === 'production';
-const isProd = process.env.NODE_ENV === 'dev';
-
-app.use(VueGtag, {
-  config: {
-      id: 'G-G24FHEZ8YC',
-  }
-}, router);
+if(isProd) app.use(VueGtag, { config: { id: 'G-G24FHEZ8YC', } }, router);
 
 
 
