@@ -86,6 +86,7 @@
             <span><a class="adplist" href="https://adplist.org/mentors/jason-bejot" title="ADPList" target="_blank"><SVGADPList />ADPList</a></span>
             <span><a class="medium" href="https://medium.com/@jasonbejot" title="Medium" target="_blank"><SVGMedium />Medium</a></span>
             <span><a class="twitter" href="https://twitter.com/jasonbejot" title="X (Twitter)" target="_blank"><SVGTwitter />X (Twitter)</a></span>
+            <span><a class="github" href="https://github.com/corpsecouch" title="Github" target="_blank"><SVGGithub />Github</a></span>
           </div>
         </div>
       </div>
@@ -272,6 +273,7 @@
   import SVGLinkedIn from 'components/SVGLinkedIn';
   import SVGEmail from 'components/SVGEmail';
   import SVGADPList from 'components/SVGADPList';
+  import SVGGithub from 'components/SVGGithub';
   import Email from 'components/Email';
   import newsData from 'data/news-coverage';
   import companies from 'data/companies';
@@ -289,6 +291,7 @@
       SVGLinkedIn,
       SVGEmail,
       SVGADPList,
+      SVGGithub,
       Email,
       NewsList,
       AwardList
@@ -446,10 +449,15 @@
     border: dotted black 3px;
     border-radius: 16px;
     padding: 2rem 4rem;
-    
+
     .columns {
       grid-template-columns: [left] max-content [right] 1fr;
       grid-gap: 1.5rem;
+
+      .left {
+        display: flex;
+        align-items: center;
+      }
 
       .right {
         display: flex;
@@ -461,8 +469,7 @@
     h2 {
       transform: rotate(-18deg);
       text-align: center;
-      margin-top: 2.3rem;
-      margin-bottom: 0;
+      margin: 0;
 
       &::before { display: none; }
     }
