@@ -31,5 +31,10 @@
 </script>
 
 <style scoped lang="scss">
-
+  a {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    column-gap: 0.6rem;
+  }
 </style>
