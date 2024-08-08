@@ -3,8 +3,8 @@ import { createApp } from 'vue';
 const app = createApp({});
 
 
-//const isProd = process.env.NODE_ENV === 'production';
-const isProd = process.env.NODE_ENV === 'dev';
+const isProd = process.env.NODE_ENV === 'production';
+//const isProd = process.env.NODE_ENV === 'dev';
 
 
 /* ******************** */
