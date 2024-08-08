@@ -1,5 +1,6 @@
 <template>
-  <p><a :href="e1 + e2">{{ e2 }}</a></p>
+  <!--<p><a :href="e1 + e2">{{ e2 }}</a></p>-->
+  <a :href="e1 + e2"><slot name="icon"></slot>{{ e2 }}</a>
 </template>
 
 <script>

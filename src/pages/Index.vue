@@ -65,6 +65,32 @@
       -->
     </section>
 
+    <!-- --------------- -->
+    <!-- CONTACT SECTION -->
+    <!-- --------------- -->
+
+    <section id="contact">
+      <!-- https://www.ionos.com/digitalguide/e-mail/e-mail-security/protecting-your-email-address-how-to-do-it/ -->
+      <div class="columns">
+        <div class="left">
+          <h2>Contact<br />Me</h2>
+        </div>
+        <div class="right content">
+          <!-- ADPlist widget -->
+          <!--
+            <section style="height: 496px; box-shadow: rgba(142, 151, 158, 0.15) 0px 4px 19px 0px; border-radius: 16px; overflow: hidden; width: 100%; max-width: 650px;"><iframe src="https://adplist.org/widgets/booking?src=jason-bejot" title="" width="100%" height="100%" loading="lazy" style="border: 0px;"></iframe></section>
+          -->
+          <div id="social">
+            <span><Email class="email"><template v-slot:icon><SVGEmail /></template></Email></span>
+            <span><a class="linkedin" href="https://linkedin.com/in/jasonbejot" title="LinkedIn" target="_blank"><SVGLinkedIn />LinkedIn</a></span>
+            <span><a class="adplist" href="https://adplist.org/mentors/jason-bejot" title="ADPList" target="_blank"><SVGADPList />ADPList</a></span>
+            <span><a class="medium" href="https://medium.com/@jasonbejot" title="Medium" target="_blank"><SVGMedium />Medium</a></span>
+            <span><a class="twitter" href="https://twitter.com/jasonbejot" title="X (Twitter)" target="_blank"><SVGTwitter />X (Twitter)</a></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ----------------- -->
     <!-- PORTFOLIO SECTION -->
     <!-- ----------------- -->
@@ -233,32 +259,6 @@
 
     </section>
 
-    <!-- --------------- -->
-    <!-- CONTACT SECTION -->
-    <!-- --------------- -->
-
-    <section id="contact">
-      <!-- https://www.ionos.com/digitalguide/e-mail/e-mail-security/protecting-your-email-address-how-to-do-it/ -->
-      <div class="columns">
-        <div class="left">
-          <h2>Contact<br />Me</h2>
-        </div>
-        <div class="right content">
-          <p>Let's shoot the shit.</p>
-          <!-- ADPlist widget -->
-          <!--
-            <section style="height: 496px; box-shadow: rgba(142, 151, 158, 0.15) 0px 4px 19px 0px; border-radius: 16px; overflow: hidden; width: 100%; max-width: 650px;"><iframe src="https://adplist.org/widgets/booking?src=jason-bejot" title="" width="100%" height="100%" loading="lazy" style="border: 0px;"></iframe></section>
-          -->
-          <p><Email /></p>
-          <div id="social">
-            <a href="https://twitter.com/jasonbejot" title="Twitter" target="_blank"><SVGTwitter /></a>
-            <a href="https://linkedin.com/in/jasonbejot" title="LinkedIn" target="_blank"><SVGLinkedIn /></a>
-            <a href="https://medium.com/@jasonbejot" title="Medium" target="_blank"><SVGMedium /></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </Page>
 </template>
 
@@ -270,6 +270,8 @@
   import SVGTwitter from 'components/SVGTwitter';
   import SVGMedium from 'components/SVGMedium';
   import SVGLinkedIn from 'components/SVGLinkedIn';
+  import SVGEmail from 'components/SVGEmail';
+  import SVGADPList from 'components/SVGADPList';
   import Email from 'components/Email';
   import newsData from 'data/news-coverage';
   import companies from 'data/companies';
@@ -285,6 +287,8 @@
       SVGTwitter,
       SVGMedium,
       SVGLinkedIn,
+      SVGEmail,
+      SVGADPList,
       Email,
       NewsList,
       AwardList
@@ -363,7 +367,6 @@
   #rocket {
     h3 {
       background-image: url(../assets/rocket.png);
-      //width: 165px;
       height: 64px;
     }
     .projects > p {
@@ -379,7 +382,6 @@
   #amazon {
     h3 {
       background-image: url(../assets/amazon.png);
-      //width: 157px;
       height: 64px;
     }
   }
@@ -387,7 +389,6 @@
   #disney {
     h3 {
       background-image: url(../assets/disney.png);
-      //width: 142px;
       height: 64px;
     }
   }
@@ -395,7 +396,6 @@
   #phenomblue {
     h3 {
       background-image: url(../assets/phenomblue.png);
-      //width: 217px;
       height: 64px;
     }
   }
@@ -443,14 +443,26 @@
   }
 
   #contact {
+    border: dotted black 3px;
+    border-radius: 16px;
+    padding: 2rem 4rem;
+    
     .columns {
       grid-template-columns: [left] max-content [right] 1fr;
       grid-gap: 1.5rem;
+
+      .right {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+      }
     }
 
     h2 {
       transform: rotate(-18deg);
       text-align: center;
+      margin-top: 2.3rem;
+      margin-bottom: 0;
 
       &::before { display: none; }
     }
@@ -470,17 +482,22 @@
   }
 
   #social {
-    margin-top: 3rem;
     display: flex;
-    justify-content: center;
+    flex-flow: column nowrap;
+    row-gap: 1rem;
 
-    a { margin: 0 1.3rem; }
+    a {
+      display: inline-flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      column-gap: 0.6rem;
+    }
 
-    svg {
+    /*svg {
       width: 2rem;
       height: 2rem;
       fill: $color-text-dark;
-    }
+    }*/
   }
 
   #portfolio {
@@ -691,11 +708,6 @@
     p { margin-bottom: 2rem; }
 
     strong { font-weight: 600; }
-  }
-
-  #contact {
-    margin-bottom: 4rem;
-    .content { text-align: center; }
   }
 
 </style>
