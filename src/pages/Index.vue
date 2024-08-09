@@ -3,6 +3,7 @@
 
     <section id="name">
       <h1>Jason<br />Bejot</h1>
+      <img src="../assets/photo1-circle.jpg">
     </section>
 
     <section class="menu">
@@ -350,13 +351,13 @@
 
 <style scoped lang="scss">
 
-  h1 {
+  /*h1 {
     font-family: 'Mainstay';
     text-transform: none;
     letter-spacing: normal;
     font-size: 6rem;
     transform: rotate(-18deg);
-  }
+  }*/
 
   h2 {
     font-family: 'Mainstay';
@@ -673,6 +674,33 @@
       margin-top: 3rem;
       grid-gap: 2rem;
       //@include screen-small { grid-template-columns: auto; }
+    }
+  }
+
+  #name {
+    position: relative;
+
+    h1 {
+      position: relative;
+      left: -6rem;
+      font-family: 'Mainstay';
+      text-transform: none;
+      letter-spacing: normal;
+      font-size: 6rem;
+      transform: rotate(-18deg);
+    }
+
+    img {
+      width: 19rem;
+      position: absolute;
+      top: -3rem;
+      right: 6rem;
+      z-index: -1;
+      border: dashed grey 1px;
+      border-radius: 100%;
+      padding: 0.3rem;
+      @include screen-regular { right: 10%; }
+      @include screen-small { right: 0; }
     }
   }
 
