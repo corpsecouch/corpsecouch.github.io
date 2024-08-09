@@ -31,7 +31,8 @@
     display: inline-flex;
     flex-direction: row;
     column-gap: 1rem;
-    box-shadow: inset 2px 0 0 0 #c9d0d9;
+    //box-shadow: inset 2px 0 0 0 #c9d0d9;
+    border-left: solid 1px #c9d0d9;
     padding-left: 1rem;
   }
   .source {
