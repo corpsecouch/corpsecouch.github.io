@@ -98,7 +98,7 @@
     <!-- ----------------- -->
 
     <section id="portfolio">
-      <h2>&bull; P<span class="o">o</span>rtfolio &bull;</h2>
+      <h2><!--&bull; -->P<span class="o">o</span>rtfolio<!-- &bull;--></h2>
 
       <section class="menu">
         <router-link :to="{ path: '/', hash: '#rocket' }" alt="Rocket" class="rocket"><img src="../assets/rocket.png"></router-link>
@@ -682,6 +682,9 @@
       letter-spacing: normal;
       font-size: 6rem;
       transform: rotate(-18deg);
+      @include screen-xsmall {
+        left: 0;
+      }
     }
 
     img {
@@ -695,6 +698,12 @@
       padding: 0.3rem;
       @include screen-regular { right: 10%; }
       @include screen-small { right: 0; }
+      @include screen-xsmall {
+        right: 0;
+        width: 10rem;
+        top: auto;
+        bottom: -5rem;
+      }
     }
   }
 
