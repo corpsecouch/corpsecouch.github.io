@@ -17,10 +17,16 @@
       <p>A profile sounds like a trivial thing, table-stakes for any app or service. There were four key challenges I needed to overcome to figure this out:</p>
       <h4>Vision</h4>
       <p>This was going to be a core strategic component to the holistic Alexa experience. I needed to squint into the future to see what a personal Alexa might look like.</p>
+      <img class="sample" src="./profile1.png">
+      <p class="subtext">A sample of what the Alexa Profile would unlock.</p>
       <h4>Audience</h4>
       <p>Everyone in the world needed to be able to access their profile regardless of context. I needed to design for everyone and every modality.</p>
+      <img class="sample" src="./profile2.png">
+      <p class="subtext">A peek into the extensive usability testing.</p>
       <h4>Systems Thinking &amp; Design</h4>
       <p>I risked setting false expectations of personalization where there was none. I needed to design a solution that fits within and expands the holistic existing Alexa expereince.</p>
+      <img class="sample" src="./profile3.png">
+      <p class="subtext">One of many flows to show how this ties the ecosystem together.</p>
       <h4>Durability &amp; Scalability</h4>
       <p>Phase 2 is a real thing this time. I needed to design a solution that scales and evolves after it's launch, looking around the corner to plan for future needs and expectations.</p>
     </template>
@@ -49,5 +55,21 @@
 </script>
 
 <style scoped lang="scss">
+  img.sample {
+    width: 100%;
+    margin-top: 1rem;
+
+    + p.subtext {
+      color: grey;
+      font-size: 0.8rem;
+      font-style: italic;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+  }
+
+  p.subtext + *, img.sample + * {
+    margin-top: 3rem;
+  }
 
 </style>
