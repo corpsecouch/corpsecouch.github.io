@@ -351,14 +351,6 @@
 
 <style scoped lang="scss">
 
-  /*h1 {
-    font-family: 'Mainstay';
-    text-transform: none;
-    letter-spacing: normal;
-    font-size: 6rem;
-    transform: rotate(-18deg);
-  }*/
-
   h2 {
     font-family: 'Mainstay';
     letter-spacing: normal;
@@ -447,17 +439,19 @@
   }
 
   #contact {
-    border: dotted black 3px;
-    border-radius: 16px;
-    padding: 2rem 4rem;
+    //border: dotted black 3px;
+    //border-radius: 16px;
+    //padding: 2rem 4rem;
 
     .columns {
-      grid-template-columns: [left] max-content [right] 1fr;
+      grid-template-columns: [left] 1fr [right] 1fr;
+      @include screen-small { grid-template-columns: [left right] auto; }
       grid-gap: 1.5rem;
 
       .left {
         display: flex;
         align-items: center;
+        justify-content: space-around;
       }
 
       .right {
