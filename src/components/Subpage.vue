@@ -55,6 +55,11 @@
     font-size: 0.9rem;
     box-shadow: 0 8px 12px -7px rgba(0, 0, 0, 0.1);
 
+    @include screen-xsmall {
+      justify-content: space-evenly;
+      column-gap: 0;
+    }
+
     .name {
       background-color: $color-background-light;
       padding: 2rem;
