@@ -684,6 +684,7 @@
       transform: rotate(-18deg);
       @include screen-xsmall {
         left: 0;
+        top: -4rem;
       }
     }
 
@@ -702,7 +703,8 @@
         right: 0;
         width: 10rem;
         top: auto;
-        bottom: -5rem;
+        //bottom: -5rem;
+        bottom: -2rem;
       }
     }
   }
