@@ -15,6 +15,7 @@
 <style scoped lang="scss">
   .illustration {
     margin-bottom: 3rem;
+    padding: 1rem;
   }
 
   img {

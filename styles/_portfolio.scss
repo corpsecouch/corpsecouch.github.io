@@ -17,7 +17,7 @@ img.work, #page.work #content img {
 
 #page.work {
   #title {
-    margin-bottom: 0;
+    margin-bottom: 12rem;
 
     * {
       margin-top: 0;
@@ -37,6 +37,7 @@ img.work, #page.work #content img {
 
     #year {
       margin-left: 0.5rem;
+      display: block;
     }
   }
 

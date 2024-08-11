@@ -24,7 +24,7 @@
       </section>
 
       <section id="challenge" class="columned" v-if="!this.$slots.content && !!this.$slots.challenge">
-        <h3>Problem</h3>
+        <h3>The Challenge</h3>
         <div><slot name="challenge"></slot></div>
       </section>
 
@@ -33,14 +33,14 @@
         <div><slot name="role"></slot></div>
       </section>
 
-      <section id="process" class="columned" v-if="!this.$slots.content && !!this.$slots.process">
-        <h3>Process</h3>
-        <div><slot name="process"></slot></div>
+      <section id="outcome" class="columned" v-if="!this.$slots.content && !!this.$slots.outcome">
+        <h3>The Outcome</h3>
+        <div><slot name="outcome"></slot></div>
       </section>
 
-      <section id="outcome" class="columned" v-if="!this.$slots.content && !!this.$slots.outcome">
-        <h3>Outcome</h3>
-        <div><slot name="outcome"></slot></div>
+      <section id="process" class="columned" v-if="!this.$slots.content && !!this.$slots.process">
+        <h3>My Process</h3>
+        <div><slot name="process"></slot></div>
       </section>
 
       <section id="awards" class="columned left" v-if="!!this.$slots.awards">
@@ -88,6 +88,11 @@
 </script>
 
 <style scoped lang="scss">
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
   #contact {
     text-align: center;
     margin: 8rem;
@@ -154,6 +159,10 @@
   }
 
   .columned {
+    margin: 4rem 0;
+  }
+
+  /*.columned {
     margin: 4rem;
     display: grid;
     grid-auto-rows: 1fr;
@@ -176,7 +185,7 @@
     div {
       grid-column: right;
     }
-  }
+  }*/
 
   #news-awards {
     margin: 0 0 8rem 0;
