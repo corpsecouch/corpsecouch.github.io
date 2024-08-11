@@ -14,20 +14,20 @@ const isProd = process.env.NODE_ENV === 'dev';
 const routes = [
   { path: '/',                                          name: 'index',                        component: () => import('pages/Index') },
   { path: '/news',                                      name: 'news',                         component: () => import('pages/News') },
+  { path: '/portfolio',                                 name: 'portfolio',                    component: () => import('pages/Portfolio') },
   /*
   { path: '/#about',                                    name: 'about',                        component: Index },
-  { path: '/#portfolio',                                name: 'portfolio',                    component: Index },
   { path: '/#contact',                                  name: 'contact',                      component: Index },
   */
 
-  { path: '/portfolio/rocket/project-one',              name:'project-one',                   component: () => import('pages/portfolio/rocket/project-one/project-one') },
-  { path: '/portfolio/rocket/project-two',              name:'project-two',                   component: () => import('pages/portfolio/rocket/project-two/project-two') },
+  //{ path: '/portfolio/rocket/project-one',              name:'project-one',                   component: () => import('pages/portfolio/rocket/project-one/project-one') },
+  //{ path: '/portfolio/rocket/project-two',              name:'project-two',                   component: () => import('pages/portfolio/rocket/project-two/project-two') },
 
   { path: '/portfolio/amazon/alexa-cortana',            name:'alexacortana',                  component: () => import('pages/portfolio/alexa/alexa-cortana/alexa-cortana') },
-  { path: '/portfolio/amazon/presence',                 name:'alexapresence',                 component: () => import('pages/portfolio/alexa/presence/presence') },
-  { path: '/portfolio/amazon/personalized-skills',      name:'alexapersonalizedskills',       component: () => import('pages/portfolio/alexa/personalized-skills/personalized-skills') },
+  //{ path: '/portfolio/amazon/presence',                 name:'alexapresence',                 component: () => import('pages/portfolio/alexa/presence/presence') },
+  //{ path: '/portfolio/amazon/personalized-skills',      name:'alexapersonalizedskills',       component: () => import('pages/portfolio/alexa/personalized-skills/personalized-skills') },
   { path: '/portfolio/amazon/profile',                  name:'alexaprofile',                  component: () => import('pages/portfolio/alexa/profile/profile') },
-  { path: '/portfolio/amazon/voice-settings',           name:'alexavoicesettings',            component: () => import('pages/portfolio/alexa/voice-settings/voice-settings') },
+  //{ path: '/portfolio/amazon/voice-settings',           name:'alexavoicesettings',            component: () => import('pages/portfolio/alexa/voice-settings/voice-settings') },
 
   { path: '/portfolio/disney/design-system',            name:'disneydesignsystem',            component: () => import('pages/portfolio/disney/design-system/design-system') },
   { path: '/portfolio/disney/greenlight',               name:'disneygreenlight',              component: () => import('pages/portfolio/disney/greenlight/greenlight') },
