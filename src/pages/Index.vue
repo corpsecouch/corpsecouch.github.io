@@ -24,7 +24,15 @@
         <p>I'm a executive-level tech innovator with 19 years of professional experience having worked at Disney, Amazon, and Rocket Companies, and more.</p>
         <p>Growing up on a large family farm, I filled my days with immersive storytelling playing RPGs and running D&amp;D campaigns. Once I was in college, I realized I had a talent for understanding how people expected things to work and I gravitated towards HCI.</p>
         <p>After spending a few years as an engineering lead I made the switch to experience design. I found a real talent for invention and innovation combining my technical background with the focus on the human experience. As a result I've been elected to innovation councils, received patents and awards, launched innovation programs, and worked directly with C-suite executives at Fortune 500 companies on strategic projects.</p>
-        <p>Along the way I became a musician, playing spacy guitar riffs in The Answer Team, touring and recording two albums.</p>
+        <div id="music" class="columns">
+          <div class="left">
+            <p>Along the way I became a musician, playing spacy guitar riffs in The Answer Team, touring and recording two albums.</p>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2oFXTgnIh7MmeadK8482zc?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+          <div class="right">
+            <img src="../assets/guitar.jpg">
+          </div>
+        </div>
         <p>I currently live in Atlanta with my partner and kiddo.</p>
 
         <!-- <p>I'm a cross-functional leader with 19 years of experience specializing in working on large scale, complex, and ambiguous projects.</p>
@@ -712,7 +720,7 @@
   #about .columns {
     grid-template-columns: [left] 1fr [right] 0.7fr;
     grid-gap: 2.5rem;
-    margin-top: 3rem;
+    //margin-top: 3rem;
 
     @include screen-small {
       //grid-template-columns: [left right] auto;
@@ -748,6 +756,20 @@
     p { margin-bottom: 2rem; }
 
     strong { font-weight: 600; }
+  }
+
+  #music {
+    &.columns {
+      margin-top: 1.3rem;
+    }
+
+    img {
+      width: 19rem;
+    }
+
+    p {
+      margin-bottom: 1.3rem;
+    }
   }
 
 </style>
