@@ -42,19 +42,32 @@
       <p>I was the head of design for the program, leading multiple cross-functional teams and designers across the Alexa organization.</p>
     </template>
 
+    <template v-slot:news>
+      <NewsList :data="news"></NewsList>
+    </template>
+
   </PortfolioPage>
 </template>
 
 <script>
   import PortfolioPage from 'components/PortfolioPage';
-  import Illustration from 'components/Illustration'
+  import Illustration from 'components/Illustration';
+  import newsData from 'data/news-coverage';
+  import NewsList from 'components/NewsList';
 
   export default {
     name: 'AmazonProfile',
 
     components: {
       PortfolioPage,
-      Illustration
+      Illustration,
+      NewsList
+    },
+
+    data() {
+      return {
+        news: _.filter(newsData, ['project', 'AmazonProfile'])
+      }
     }
   }
 </script>

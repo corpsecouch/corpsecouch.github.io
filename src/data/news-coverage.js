@@ -36,6 +36,24 @@ const data = [
     year:   '',
     company:  companies.rocket
   },
+
+  {
+    pub:    'Amazon',
+    title:  'Alexa Profiles',
+    url:    'https://www.amazon.com/alexa-profiles/b?ie=UTF8&node=23804562011',
+    project:'AmazonProfile',
+    year:   '',
+    company:  companies.amazon
+  },
+
+  {
+    pub:    'voicebot.ai',
+    title:  'Alexa Developers Can Now Personalize Voice Skills With Names and Phone Numbers',
+    url:    'https://voicebot.ai/2020/05/28/alexa-developers-can-now-personalize-voice-skills-with-names-and-phone-numbers/',
+    project:'AmazonProfile',
+    year:   '',
+    company:  companies.amazon
+  },
   
   {
     pub:    'The New York Times',
