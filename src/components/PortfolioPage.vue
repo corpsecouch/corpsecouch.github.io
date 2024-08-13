@@ -16,7 +16,7 @@
       </section>
 
       <section id="nda" v-if="nda">
-        <p>Due to an NDA I've limited the detail of this case study.</p>
+        <p>I've limited the details of this public case study due to the sensitive nature of the project and the confidentiality of <slot name="company"></slot>.</p>
       </section>
 
       <section id="content" v-if="!!this.$slots.content">
@@ -149,7 +149,7 @@
       background-color: $color-background-dark;
       border-radius: 8px;
       color: $color-lighttext;
-      display: inline;
+      display: block;
       padding: 0.5rem 1rem;
     }
   }
