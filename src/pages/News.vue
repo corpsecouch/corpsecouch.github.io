@@ -1,7 +1,7 @@
 <template>
   <Subpage>
     
-    <template v-slot:title>&bull; In The News &bull;</template>
+    <template v-slot:title>In The News</template>
 
     <div id="news-list">
       <p>My work has been featured or mentioned in at least <strong>{{ newsData.total }} articles</strong> (that I know of).</p>
