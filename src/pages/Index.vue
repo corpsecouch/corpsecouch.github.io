@@ -24,7 +24,7 @@
         <p>I'm an executive-level tech innovator with 19 years of professional experience, having worked at Disney, Amazon, and Rocket Companies, and more.</p>
         <p>Growing up on a large family farm, I filled my days with immersive storytelling playing RPGs and running D&amp;D campaigns. Once I was in college, I realized I had a talent for understanding how people expected things to work, which led me to gravitate toward HCI.</p>
         <p>After spending a few years as an engineering lead I made the switch to experience design. I found a real talent for invention and innovation combining my technical background with the focus on the human experience. As a result I've been elected to innovation councils, received patents and awards, launched innovation programs, and worked directly with C-suite executives at Fortune 500 companies on strategic projects.</p>
-        <div id="music" class="columns">
+        <!--<div id="music" class="columns">
           <div class="left">
             <p>Along the way I became a musician, playing spacey guitar riffs in The Answer Team, touring and recording two albums.</p>
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2oFXTgnIh7MmeadK8482zc?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -32,12 +32,31 @@
           <div class="right">
             <img src="../assets/guitar.jpg">
           </div>
-        </div>
+        </div>-->
         <p>I currently live in Atlanta with my partner and kiddo.</p>
 
         <!-- <p>I'm a cross-functional leader with 19 years of experience specializing in working on large scale, complex, and ambiguous projects.</p>
         <p>I have experience across multiple industries including big tech, entertainment, b2b, advertising, and fintec most recently having worked for The Walt Disney Studios, Amazon, and Rocket Companies.</p>
         <p>I have extensive experience going from 0-to-1 and transforming emerging technologies and ambiguity into effective, delightful experiences.</p> -->
+      </section>
+
+      <section id="music">
+        <h2>Musicial Life</h2>
+        <div class="columns">
+          <div class="left">
+            <p>At some point I became a musician, playing spacey guitar riffs in The Answer Team. We were based out of Omaha, Nebraska and, when we were active, we toured and recorded two albums.</p>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2oFXTgnIh7MmeadK8482zc?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+          <div class="right">
+            <img src="../assets/guitar.jpg">
+          </div>
+        </div>
+      </section>
+
+      <section id="mentorship">
+        <h2>Mentorship</h2>
+        <section style="height: 598px; box-shadow: rgba(142, 151, 158, 0.15) 0px 4px 19px 0px; border-radius: 12px; overflow: hidden; width: 100%;"><iframe src="https://adplist.org/widgets/booking?src=jason-bejot" title="Mentorship Session" width="100%" height="100%" loading="lazy" style="border: 0px;"></iframe></section>
+        <section style="padding: 16px; height: 496px; box-shadow: rgba(142, 151, 158, 0.15) 0px 4px 19px 0px; border-radius: 12px; overflow: hidden; width: 100%;"><iframe src="https://adplist.org/widgets/reviews?src=jason-bejot" title="All Reviews" width="100%" height="100%" loading="lazy" style="border: 0px;"></iframe></section>
       </section>
 
       <!--
@@ -142,6 +161,19 @@
     line-height: 4.5rem;
     text-transform: none;
   }
+
+  #about > section {
+    + section {
+      margin-top: 7rem;
+    }
+
+    > h2 {
+      text-align: left;
+      font-size: 3rem;
+      line-height: normal;
+      margin: 0 0 1rem 0;
+    }
+  } 
 
   .columns {
     display: grid;
@@ -282,7 +314,7 @@
   }
 
   #music {
-    &.columns {
+    .columns {
       margin-top: 1.3rem;
     }
 
@@ -292,6 +324,12 @@
 
     p {
       margin-bottom: 1.3rem;
+    }
+  }
+
+  #mentorship {
+    section + section {
+      margin-top: 2rem;
     }
   }
 
