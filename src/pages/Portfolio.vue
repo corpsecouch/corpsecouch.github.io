@@ -322,11 +322,11 @@
     }
   }
 
-  .news, .awards { margin-top: 3rem; }
+  .news, .awards { margin-top: 4rem; }
 
   h3 {
     font-size: 1.5rem;
-    + p { padding: 0 0 3rem 0; }
+    + p { padding: 1rem 0 4rem 0; }
   }
 
   /*#portfolio {
