@@ -13,7 +13,7 @@ const isProd = process.env.NODE_ENV === 'dev';
 
 const routes = [
   { path: '/',                                          name: 'index',                        component: () => import('pages/Index') },
-  { path: '/news',                                      name: 'news',                         component: () => import('pages/News') },
+  { path: '/press',                                     name: 'press',                        component: () => import('pages/Press') },
   { path: '/portfolio',                                 name: 'portfolio',                    component: () => import('pages/Portfolio') },
   /*
   { path: '/#about',                                    name: 'about',                        component: Index },

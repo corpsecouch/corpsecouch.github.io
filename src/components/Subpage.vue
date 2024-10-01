@@ -5,7 +5,7 @@
       <router-link :to="{ name: 'index', hash: '#about' }" alt="About">About</router-link>
       <router-link :to="{ name: 'portfolio' }" alt="Portfolio">Portfolio</router-link>
       <span class="name"><router-link :to="{ name: 'index' }">Jason<br />Bejot</router-link></span>
-      <router-link :to="{ name: 'news' }" alt="News">News</router-link>
+      <router-link :to="{ name: 'press' }" alt="Press">Press</router-link>
       <router-link :to="{ name: 'index', hash: '#contact' }" alt="Contact">Contact</router-link>
     </header>
 

@@ -9,7 +9,7 @@
     <section class="menu">
       <router-link :to="{ path: '/', hash: '#about' }" alt="About">About</router-link>
       <router-link :to="{ name: 'portfolio' }" alt="Portfolio">Portfolio</router-link>
-      <router-link :to="{ name: 'news' }" alt="News">News</router-link>
+      <router-link :to="{ name: 'press' }" alt="Press">Press</router-link>
       <router-link :to="{ path: '/', hash: '#contact' }" alt="Contact">Contact</router-link>
     </section>
 

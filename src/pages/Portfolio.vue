@@ -42,7 +42,7 @@
       <div class="news" v-if="portfolioData.rocket.news.total">
         <p>There are at least {{ portfolioData.rocket.news.total }} articles about my work at Rocket. These are the most recent:</p>
         <NewsList :data="portfolioData.rocket.news.data"></NewsList>
-        <router-link class="more-link" :to="{ name: 'news', hash: '#rocket' }" alt="See all the articles">See all the articles</router-link>
+        <router-link class="more-link" :to="{ name: 'press', hash: '#rocket' }" alt="See all the articles">See all the articles</router-link>
       </div>
       
     </div>
@@ -79,7 +79,7 @@
       <div class="news" v-if="portfolioData.amazon.news.total">
         <p>There are at least {{ portfolioData.amazon.news.total }} articles about my work at Amazon. These are the most recent:</p>
         <NewsList :data="portfolioData.amazon.news.data"></NewsList>
-        <router-link class="more-link" :to="{ name: 'news', hash: '#amazon' }" alt="See all the articles">See all the articles</router-link>
+        <router-link class="more-link" :to="{ name: 'press', hash: '#amazon' }" alt="See all the articles">See all the articles</router-link>
       </div>
 
     </div>
@@ -116,7 +116,7 @@
       <div class="news" v-if="portfolioData.disney.news.total">
         <p>There are at least {{ portfolioData.disney.news.total }} articles about my work at Disney. These are the most recent:</p>
         <NewsList :data="portfolioData.disney.news.data"></NewsList>
-        <router-link class="more-link" :to="{ name: 'news', hash: '#disney' }" alt="See all the articles">See all the articles</router-link>
+        <router-link class="more-link" :to="{ name: 'press', hash: '#disney' }" alt="See all the articles">See all the articles</router-link>
       </div>
 
     </div>
@@ -153,7 +153,7 @@
       <div class="news" v-if="portfolioData.phenomblue.news.total">
         <p>There are at least {{ portfolioData.phenomblue.news.total }} articles about my work at Phenomblue. These are the most recent:</p>
         <NewsList :data="portfolioData.phenomblue.news.data"></NewsList>
-        <router-link class="more-link" :to="{ name: 'news', hash: '#phenomblue' }" alt="See all the articles">See all the articles</router-link>
+        <router-link class="more-link" :to="{ name: 'press', hash: '#phenomblue' }" alt="See all the articles">See all the articles</router-link>
       </div>
 
     </div>

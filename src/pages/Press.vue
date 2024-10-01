@@ -1,7 +1,7 @@
 <template>
   <Subpage>
     
-    <template v-slot:title>In The News</template>
+    <template v-slot:title>In The Press</template>
 
     <div id="news-list">
       <p>My work has been featured or mentioned in at least <strong>{{ newsData.total }} articles</strong> (that I know of).</p>
@@ -37,7 +37,7 @@
   import news from 'data/news-coverage';
   import companies from 'data/companies';
 
-  const name = 'NewsPage';
+  const name = 'PressPage';
 
   export default {
     name: name,
