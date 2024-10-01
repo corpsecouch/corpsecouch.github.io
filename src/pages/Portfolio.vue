@@ -16,14 +16,14 @@
 
       <h3>Rocket Companies</h3>
       <p>As the first Director of Conversational AI Design for Rocket Companies, I not only established the practice for the company I also cemented conversational AI as a company priority - a core part of it's business model and long term vision – ushering in it's investments into LLMs and generative AI.</p>
-      
-      <!--<ul class="projects">
+
+      <ul class="projects">
         <li class="project" v-for="p in portfolioData.rocket.projects">
-          <div class="left">
+          <div class="left" @click="gotoProject(p.route)">
             <img :src="require(`${p.image}`)" class="rounded">
           </div>
           <div class="right">
-            <span class="title">{{ p.title }}</span>
+            <span class="title" @click="gotoProject(p.route)">{{ p.title }}</span>
             <span class="year">{{ p.year }}</span>
             <span class="description">{{ p.description }}</span>
             <ul class="tags">
@@ -32,11 +32,7 @@
             <router-link class="link" :key="p.route.name" :to="p.route" :title="p.title">Read the case study</router-link>
           </div>
         </li>
-      </ul>-->
-
-      <div class="projects">
-        <p>Case studies coming soon.</p>
-      </div>
+      </ul>
 
       <div class="awards" v-if="portfolioData.rocket.awards.length">
         <p>I received {{ portfolioData.rocket.awards.length }} award{{ portfolioData.rocket.awards.length > 1 ? 's' : '' }} for my Rocket work:</p>

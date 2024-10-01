@@ -1,9 +1,9 @@
 p<template>
   <PortfolioPage>
-    <template v-slot:title>Alexa + Cortana</template>
-    <template v-slot:subtitle>The world's first AI assistant interoperability between two big-tech competitors.</template>
-    <template v-slot:year>2017 - 2018</template>
-    <template v-slot:company>Amazon</template>
+    <template v-slot:title>Gen AI Mortgage Banker</template>
+    <template v-slot:subtitle>Something super compelling and cool.</template>
+    <template v-slot:year>2023 - 2024</template>
+    <template v-slot:company>Rocket</template>
     <!--<template v-slot:hero>
       <img src="./alexa-cortana.png">
     </template>-->
@@ -48,21 +48,19 @@ p<template>
 <script>
   import PortfolioPage from 'components/PortfolioPage';
   import NewsLink from 'components/NewsLink';
-  import YouTubeVideo from 'components/YouTubeVideo';
   import newsData from 'data/news-coverage';
 
   export default {
-    name: 'AmazonAlexaCortana',
+    name: 'RocketProjectTwo',
 
     components: {
       PortfolioPage,
-      NewsLink,
-      YouTubeVideo
+      NewsLink
     },
 
     data() {
       return {
-        news: _.filter(newsData, ['project', 'AmazonAlexaCortana'])
+        news: _.filter(newsData, ['project', 'RocketProjectTwo'])
       }
     }
   }

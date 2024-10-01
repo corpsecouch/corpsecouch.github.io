@@ -20,8 +20,8 @@ const routes = [
   { path: '/#contact',                                  name: 'contact',                      component: Index },
   */
 
-  //{ path: '/portfolio/rocket/project-one',              name:'project-one',                   component: () => import('pages/portfolio/rocket/project-one/project-one') },
-  //{ path: '/portfolio/rocket/project-two',              name:'project-two',                   component: () => import('pages/portfolio/rocket/project-two/project-two') },
+  { path: '/portfolio/rocket/ironbear',                 name:'rocketironbear',                component: () => import('pages/portfolio/rocket/ironbear/ironbear') },
+  //{ path: '/portfolio/rocket/project-two',              name:'rocketprojecttwo',                   component: () => import('pages/portfolio/rocket/project-two/project-two') },
 
   { path: '/portfolio/amazon/alexa-cortana',            name:'alexacortana',                  component: () => import('pages/portfolio/alexa/alexa-cortana/alexa-cortana') },
   //{ path: '/portfolio/amazon/presence',                 name:'alexapresence',                 component: () => import('pages/portfolio/alexa/presence/presence') },
