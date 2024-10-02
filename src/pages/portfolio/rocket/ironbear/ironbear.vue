@@ -44,8 +44,8 @@
     </template>
 
     <template v-slot:outcome>
-      <p>We launched the MVP during after hours. After observing client and mortgage banker success, we incrementally added more capabilities to the generative AI agent as well as for mortgage chat bankers. This initiatve led to a significant increase in client experience and lead success rates. It also provided the architectural foundation to provide a robust, centralized conversational API.</p>
-      <YouTubeVideo src="https://www.youtube.com/embed/N6T9_MEJIh4"></YouTubeVideo>
+      <p>We increased Rocket Mortgage's client experience scores and mortgage lead success KPIs by launching a new full-browser, generative AI & human-agent chat experience at the end of the primary digital lead form. This product also overhauled the conversational AI architectural foundation establishing a more robust and centralized conversational AI API.</p>
+      <YouTubeVideo src="https://www.youtube.com/embed/9BHhCdaoqZ8"></YouTubeVideo>
     </template>
 
   </PortfolioPage>
