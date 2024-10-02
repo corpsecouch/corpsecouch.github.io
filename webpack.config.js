@@ -4,6 +4,7 @@ const webpack = require('webpack');
 const CopyPlugin = require("copy-webpack-plugin");
 const SitemapPlugin = require('sitemap-webpack-plugin').default;
 
+// needed for auto generating the sitemap xml
 const routesData = require('./src/data/routes.js');
 const paths = routesData.map((route) => {
   return '/#' + route.path;
@@ -164,6 +165,7 @@ module.exports = {
       ]
     }),
 
+    // auto generates the sitemap xml
     new SitemapPlugin({ base: 'https://jasonbejot.com', paths: paths })
   ]
 };
