@@ -6,96 +6,83 @@
       <img src="../assets/photo1-circle.jpg">
     </section>
 
-    <section class="menu">
+    <!--<section class="menu">
       <router-link :to="{ path: '/', hash: '#about' }" alt="About">About</router-link>
       <router-link :to="{ name: 'portfolio' }" alt="Portfolio">Portfolio</router-link>
       <router-link :to="{ name: 'press' }" alt="Press">Press</router-link>
       <router-link :to="{ path: '/', hash: '#contact' }" alt="Contact">Contact</router-link>
+    </section>-->
+
+    <section id="intro">
+      <p>Award-winning design leader, technologist, inventor, and founder. Passionate about the intersection of people &amp; technology, design-driven innovation, and the creative application of emerging technology.</p>
+      <p>I'm currently open to new work: <Email></Email></p>
     </section>
 
-    <!-- ------------- -->
-    <!-- ABOUT SECTION -->
-    <!-- ------------- -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <p>Rocket Mortgage, Amazon, Disney, Ace Metrix, Phenomblue, IndieBooker, SongGrab (founder), Make Believe Studios (co-founder), Orajen, SAIC, USACE</p>
+      <p>Connect with me on <a href="https://linkedin.com/in/jasonbejot" title="LinkedIn" target="_blank">LinkedIn</a>.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>I've worked on and led hundreds of projects over my 19 year career. This is just a short list in no particular order:</p>
+      <p>Rocket Mortgage Generative AI IVR, Rocket Companies Personalization Strategic Initiative, Rocket Companies AI-powered lead generation, Rocket Mortgage AI Vision &amp; Strategic Initiative, Alexa Profile, Alexa Personalization Program, Alexa & Cortana Integration, Disney Enterprise Design System, Alexa Voice PIN, Alexa Voice ID, Alexa Face ID, Disney Filmmaking with Virtual Reality, Disney Non-Linear Storytelling with Augmented Reality</p>
+      <p>Dive into some a few of these projects on my <router-link :to="{ name: 'portfolio' }" alt="Portfolio">portfolio</router-link>.</p>
+    </section>
 
     <section id="about">
-      <!--<h2>About Me</h2>-->
-      <section>
-        <!--<p>I'm an experience design and product leader with a background in computer science, innovation, and entreprenuership with 19 years of professional leadership experience envisioning the future, crafting strategies, and delivering experiences.</p>-->
-        <p>I'm an executive-level tech innovator with 19 years of professional experience, having worked at Disney, Amazon, and Rocket Companies, and more.</p>
-        <p>Growing up on a large family farm, I filled my days with immersive storytelling playing RPGs and running D&amp;D campaigns. Once I was in college, I realized I had a talent for understanding how people expected things to work, which led me to gravitate toward HCI.</p>
-        <p>After spending a few years as an engineering lead I made the switch to experience design. I found a real talent for invention and innovation combining my technical background with the focus on the human experience. As a result I've been elected to innovation councils, received patents and awards, launched innovation programs, and worked directly with C-suite executives at Fortune 500 companies on strategic projects.</p>
-        <!--<div id="music" class="columns">
-          <div class="left">
-            <p>Along the way I became a musician, playing spacey guitar riffs in The Answer Team, touring and recording two albums.</p>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2oFXTgnIh7MmeadK8482zc?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          </div>
-          <div class="right">
-            <img src="../assets/guitar.jpg">
-          </div>
-        </div>-->
-        <p>I currently live in Atlanta with my partner and kiddo.</p>
+      <h2>Bio</h2>
+      <!--<p>I'm an experience design and product leader with a background in computer science, innovation, and entreprenuership with 19 years of professional leadership experience envisioning the future, crafting strategies, and delivering experiences.</p>-->
+      <p>I'm an executive-level tech innovator with 19 years of professional experience, having worked at Disney, Amazon, and Rocket Companies, and more.</p>
+      
+      <p>Growing up on a large family farm, I filled my days with immersive storytelling playing RPGs and running D&amp;D campaigns. Once I was in college, I realized I had a talent for understanding how people expected things to work, which led me to gravitate toward HCI.</p>
 
-        <!-- <p>I'm a cross-functional leader with 19 years of experience specializing in working on large scale, complex, and ambiguous projects.</p>
-        <p>I have experience across multiple industries including big tech, entertainment, b2b, advertising, and fintec most recently having worked for The Walt Disney Studios, Amazon, and Rocket Companies.</p>
-        <p>I have extensive experience going from 0-to-1 and transforming emerging technologies and ambiguity into effective, delightful experiences.</p> -->
-      </section>
+      <p>After spending a few years as an engineering lead I made the switch to experience design. I found a real talent for invention and innovation combining my technical background with the focus on the human experience. As a result I've been elected to innovation councils, received patents and awards, launched innovation programs, and worked directly with C-suite executives at Fortune 500 companies on strategic projects.</p>
+      
+      <img src="../assets/guitar.jpg">
 
-      <section id="music">
-        <h2>Musicial Life</h2>
-        <div class="columns">
-          <div class="left">
-            <p>At some point I became a musician, playing spacey guitar riffs in The Answer Team. We were based out of Omaha, Nebraska and, when we were active, we toured and recorded two albums.</p>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2oFXTgnIh7MmeadK8482zc?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          </div>
-          <div class="right">
-            <img src="../assets/guitar.jpg">
-          </div>
-        </div>
-      </section>
+      <p>At some point I became a musician, playing spacey guitar riffs in The Answer Team. We were based out of Omaha, Nebraska and, when we were active, we toured and recorded two albums. You can check out The Answer Team's music on <a href="https://open.spotify.com/artist/3mMaoKi4PaOLhYFdAknELD?si=mci-mk0ASMiM1bro9ey0NA" target="_blank">Spotify</a>.</p>
 
-      <section id="mentorship">
-        <h2>Mentorship</h2>
-        <section style="height: 598px; box-shadow: rgba(142, 151, 158, 0.15) 0px 4px 19px 0px; border-radius: 12px; overflow: hidden; width: 100%;"><iframe src="https://adplist.org/widgets/booking?src=jason-bejot" title="Mentorship Session" width="100%" height="100%" loading="lazy" style="border: 0px;"></iframe></section>
-        <section style="padding: 16px; height: 496px; box-shadow: rgba(142, 151, 158, 0.15) 0px 4px 19px 0px; border-radius: 12px; overflow: hidden; width: 100%;"><iframe src="https://adplist.org/widgets/reviews?src=jason-bejot" title="All Reviews" width="100%" height="100%" loading="lazy" style="border: 0px;"></iframe></section>
-      </section>
-
-      <!--
-      <div class="columns">
-        <section class="left">
-          <h3>Patents</h3>
-          <ul id="patents">
-            <li>
-              <span class="title">Physical Navigation Guided via Story‐Based Augmented and/or Mixed Reality Experiences</span>
-                <span class="number">us 15/593,258</span>
-            </li>
-            <li>
-              <span class="title">Recording High Fidelity Digital Immersive Experiences Through Off-Device Computation</span>
-                <span class="number">us 15/338,806</span>
-            </li>
-            <li>
-              <span class="title">Dynamically Changing a 3D Object into an Interactive 3D Menu</span>
-                <span class="number">us 14/734278</span>
-            </li>
-          </ul>
-        </section>
-        <section class="right">
-          <h3>Recognition</h3>
-          <ul id="awards">
-            <li>Webby</li>
-            <li>FWA</li>
-            <li>W3</li>
-            <li>Disney Inventor</li>
-            <li>Best of Disney</li>
-            <li>Microsoft PhizzPop Challenge</li>
-          </ul>
-        </section>
-      </div>
-      -->
+      <p>I currently live in Atlanta with my partner, <a href="https://www.ktmcbratney.com/" target="_blank">Kt McBratney</a>, and kiddo.</p>
     </section>
 
-    <!-- --------------- -->
-    <!-- CONTACT SECTION -->
-    <!-- --------------- -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <p>Leadership, Innovation, Vision Crafting, Strategy, Direction, Storytelling, Research &amp; Development, Design Thinking, 0-to-1 Delivery, UX Design, Product Design, Conversational Design, Voice Design, Rapid Prototyping</p>
+    </section>
+
+    <section id="press">
+      <h2>Press</h2>
+      <p>I know of at least {{ news.total }} articles that cover my work. Here's a random sample:</p>
+      <NewsList :data="news.data"></NewsList>
+      <p><router-link class="more-link" :to="{ name: 'press'}" alt="See all the articles">See all {{ news.total }} articles</router-link></p>
+    </section>
+
+    <section id="awards">
+      <h2>Awards</h2>
+      <p>I've received {{ awards.total }} awards for my work. Here's a big list of them:</p>
+      <AwardList :data="awards.data"></AwardList>
+    </section>
+
+    <!--<section id="music">
+      <h2>Musicial Life</h2>
+      <div class="columns">
+        <div class="left">
+          <p>At some point I became a musician, playing spacey guitar riffs in The Answer Team. We were based out of Omaha, Nebraska and, when we were active, we toured and recorded two albums.</p>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2oFXTgnIh7MmeadK8482zc?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <div class="right">
+          <img src="../assets/guitar.jpg">
+        </div>
+      </div>
+    </section>-->
+
+    <section id="mentorship">
+      <h2>Mentorship</h2>
+      <section style="height: 598px; box-shadow: rgba(142, 151, 158, 0.15) 0px 4px 19px 0px; border-radius: 12px; overflow: hidden; width: 100%;"><iframe src="https://adplist.org/widgets/booking?src=jason-bejot" title="Mentorship Session" width="100%" height="100%" loading="lazy" style="border: 0px;"></iframe></section>
+      <section style="padding: 16px; height: 496px; box-shadow: rgba(142, 151, 158, 0.15) 0px 4px 19px 0px; border-radius: 12px; overflow: hidden; width: 100%;"><iframe src="https://adplist.org/widgets/reviews?src=jason-bejot" title="All Reviews" width="100%" height="100%" loading="lazy" style="border: 0px;"></iframe></section>
+    </section>
 
     <section id="contact">
       <!-- https://www.ionos.com/digitalguide/e-mail/e-mail-security/protecting-your-email-address-how-to-do-it/ -->
@@ -134,6 +121,10 @@
   import SVGADPList from 'components/SVGADPList';
   import SVGGithub from 'components/SVGGithub';
   import Email from 'components/Email';
+  import AwardList from 'components/AwardList';
+  import awardsData from 'data/awards';
+  import NewsList from 'components/NewsList';
+  import newsData from 'data/news-coverage';
 
   export default {
     name: 'Index',
@@ -146,7 +137,22 @@
       SVGEmail,
       SVGADPList,
       SVGGithub,
-      Email
+      Email,
+      AwardList,
+      NewsList
+    },
+
+    data () {
+      return {
+        awards: {
+          total: awardsData.length,
+          data: _.orderBy(awardsData, o => { return o.date.year; }, ['desc'])
+        },
+        news: {
+          total: newsData.length,
+          data: _.sampleSize(newsData, 6)
+        }
+      }
     }
   }
 </script>
@@ -154,26 +160,59 @@
 <style scoped lang="scss">
 
   h2 {
-    font-family: 'Mainstay';
+    font-family: 'Afacad Flux';
     letter-spacing: normal;
-    font-size: 5rem;
-    font-weight: normal;
-    line-height: 4.5rem;
+    font-weight: 500;
     text-transform: none;
+    text-align: left;
+    font-size: 1.8rem;
+    line-height: normal;
+    margin: 0 0 1rem 0;
+    border-bottom: dashed grey 1px;
+
+    + p {
+      margin-top: 0;
+    }
   }
 
-  #about > section {
+  main > section {
+    margin: 0;
     + section {
       margin-top: 7rem;
     }
+  }
 
-    > h2 {
-      text-align: left;
-      font-size: 3rem;
-      line-height: normal;
-      margin: 0 0 1rem 0;
+  p {
+    + ul {
+      margin-top: 1.3rem;
     }
-  } 
+  }
+
+  #name {
+    margin: 12rem 0;
+  }
+
+  #about {
+    img {
+      width: 35%;
+      float: right;
+      border-radius: 10px;
+      margin-left: 1rem;
+    }
+  }
+
+  #contact {
+    margin-top: 12rem;
+    margin-bottom: 6rem;
+
+    h2 {
+      font-size: 5rem;
+      line-height: 4.5rem;
+      font-family: 'Mainstay';
+      font-weight: normal;
+      border: none;
+    }
+  }
 
   .columns {
     display: grid;
@@ -313,7 +352,7 @@
     margin: 0;
   }
 
-  #music {
+  /*#music {
     .columns {
       margin-top: 1.3rem;
     }
@@ -325,7 +364,7 @@
     p {
       margin-bottom: 1.3rem;
     }
-  }
+  }*/
 
   #mentorship {
     section + section {
