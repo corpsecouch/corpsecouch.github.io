@@ -28,7 +28,7 @@
       <h2>Projects</h2>
       <p>I've worked on and led hundreds of projects over my 19 year career. This is just a short list in no particular order:</p>
       <p>Rocket Mortgage Generative AI IVR, Rocket Companies Personalization Strategic Initiative, Rocket Companies AI-powered lead generation, Rocket Mortgage AI Vision &amp; Strategic Initiative, Alexa Profile, Alexa Personalization Program, Alexa & Cortana Integration, Disney Enterprise Design System, Alexa Voice PIN, Alexa Voice ID, Alexa Face ID, Disney Filmmaking with Virtual Reality, Disney Non-Linear Storytelling with Augmented Reality</p>
-      <p>Dive into some a few of these projects on my <router-link :to="{ name: 'portfolio' }" alt="Portfolio">portfolio</router-link>.</p>
+      <p>Dive into some of these projects on my <router-link :to="{ name: 'portfolio' }" alt="Portfolio">portfolio</router-link>.</p>
     </section>
 
     <section id="about">
@@ -39,7 +39,7 @@
       <p>Growing up on a large family farm, I filled my days with immersive storytelling playing RPGs and running D&amp;D campaigns. Once I was in college, I realized I had a talent for understanding how people expected things to work, which led me to gravitate toward HCI.</p>
 
       <p>After spending a few years as an engineering lead I made the switch to experience design. I found a real talent for invention and innovation combining my technical background with the focus on the human experience. As a result I've been elected to innovation councils, received patents and awards, launched innovation programs, and worked directly with C-suite executives at Fortune 500 companies on strategic projects.</p>
-      
+
       <img src="../assets/guitar.jpg">
 
       <p>At some point I became a musician, playing spacey guitar riffs in The Answer Team. We were based out of Omaha, Nebraska and, when we were active, we toured and recorded two albums. You can check out The Answer Team's music on <a href="https://open.spotify.com/artist/3mMaoKi4PaOLhYFdAknELD?si=mci-mk0ASMiM1bro9ey0NA" target="_blank">Spotify</a>.</p>
