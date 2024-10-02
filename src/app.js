@@ -12,13 +12,44 @@ const isProd = process.env.NODE_ENV === 'dev';
 /* ******************** */
 
 const routes = [
+  { name: 'index',                        component: () => import('pages/Index') },
+  { name: 'press',                        component: () => import('pages/Press') },
+  { name: 'portfolio',                    component: () => import('pages/Portfolio') },
+
+  { name:'rocketironbear',                component: () => import('pages/portfolio/rocket/ironbear/ironbear') },
+
+  { name:'alexacortana',                  component: () => import('pages/portfolio/alexa/alexa-cortana/alexa-cortana') },
+  { name:'alexaprofile',                  component: () => import('pages/portfolio/alexa/profile/profile') },
+
+  { name:'disneydesignsystem',            component: () => import('pages/portfolio/disney/design-system/design-system') },
+  { name:'disneygreenlight',              component: () => import('pages/portfolio/disney/greenlight/greenlight') },
+  { name:'disneyinnovationprogram',       component: () => import('pages/portfolio/disney/incubator/incubator') },
+  { name:'disneymovieslate',              component: () => import('pages/portfolio/disney/slate/slate') },
+  { name:'disneyvr',                      component: () => import('pages/portfolio/disney/vr/vr') },
+
+  { name:'pbgenesis',                     component: () => import('pages/portfolio/phenomblue/genesis/genesis') },
+  { name:'pbdinodig',                     component: () => import('pages/portfolio/phenomblue/dino-dig/dino-dig') },
+  { name:'pbmovielotto',                  component: () => import('pages/portfolio/phenomblue/movie-lotto/movie-lotto') },
+  { name:'pbfantasticfutureme',           component: () => import('pages/portfolio/phenomblue/fantastic-future-me/fantastic-future-me') },
+  { name:'pbmoppetmashup',                component: () => import('pages/portfolio/phenomblue/moppet-mashup/moppet-mashup') },
+  { name:'pbwildkingdom',                 component: () => import('pages/portfolio/phenomblue/wild-kingdom/wild-kingdom') },
+  { name:'pbpage',                        component: () => import('pages/portfolio/phenomblue/page/page') },
+  { name:'pbtums',                        component: () => import('pages/portfolio/phenomblue/tums/tums') },
+
+  { name: '404',                          component: () => import('pages/FourOhFour') },
+  { path: '/:pathMatch(.*)*',             redirect: '/404' }
+]
+
+import routesData from 'data/routes';
+_.merge(routes, routesData);
+
+/*const routes = [
   { path: '/',                                          name: 'index',                        component: () => import('pages/Index') },
   { path: '/press',                                     name: 'press',                        component: () => import('pages/Press') },
   { path: '/portfolio',                                 name: 'portfolio',                    component: () => import('pages/Portfolio') },
-  /*
-  { path: '/#about',                                    name: 'about',                        component: Index },
-  { path: '/#contact',                                  name: 'contact',                      component: Index },
-  */
+  
+  //{ path: '/#about',                                    name: 'about',                        component: Index },
+  //{ path: '/#contact',                                  name: 'contact',                      component: Index },
 
   { path: '/portfolio/rocket/ironbear',                 name:'rocketironbear',                component: () => import('pages/portfolio/rocket/ironbear/ironbear') },
   //{ path: '/portfolio/rocket/project-two',              name:'rocketprojecttwo',                   component: () => import('pages/portfolio/rocket/project-two/project-two') },
@@ -46,7 +77,7 @@ const routes = [
 
   { path: '/404',                                       name: '404',                          component: () => import('pages/FourOhFour') },
   { path: '/:pathMatch(.*)*',                           redirect: '/404' }
-];
+];*/
 
 import { createRouter, createWebHashHistory } from 'vue-router';
 

@@ -1,0 +1,72 @@
+"use strict";
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+(self["webpackChunkjasonbejot_com"] = self["webpackChunkjasonbejot_com"] || []).push([["src_pages_portfolio_disney_greenlight_greenlight_vue"],{
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-1.use!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[6].use[0]!./src/pages/portfolio/disney/greenlight/greenlight.vue?vue&type=script&lang=js":
+/*!************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-1.use!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[6].use[0]!./src/pages/portfolio/disney/greenlight/greenlight.vue?vue&type=script&lang=js ***!
+  \************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var components_PortfolioPage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! components/PortfolioPage */ \"./src/components/PortfolioPage.vue\");\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\n  name: 'DisneyGreenlight',\n  components: {\n    PortfolioPage: components_PortfolioPage__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\n  }\n});\n\n//# sourceURL=webpack://jasonbejot.com/./src/pages/portfolio/disney/greenlight/greenlight.vue?./node_modules/babel-loader/lib/index.js??clonedRuleSet-1.use!./node_modules/vue-loader/dist/index.js??ruleSet%5B1%5D.rules%5B6%5D.use%5B0%5D");
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-1.use!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[6].use[0]!./src/pages/portfolio/disney/greenlight/greenlight.vue?vue&type=template&id=50f0e77f":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-1.use!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[6].use[0]!./src/pages/portfolio/disney/greenlight/greenlight.vue?vue&type=template&id=50f0e77f ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"render\": () => (/* binding */ render)\n/* harmony export */ });\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.esm-bundler.js\");\n/* harmony import */ var _full_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./full.png */ \"./src/pages/portfolio/disney/greenlight/full.png\");\n\n\nvar _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)(\"img\", {\n  src: _full_png__WEBPACK_IMPORTED_MODULE_1__\n}, null, -1 /* HOISTED */);\nvar _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)(\"p\", null, \"The challenge was to fix the anitquated enterprise tools the story development team were using to develop and greenlight movie ideas.\", -1 /* HOISTED */);\nvar _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)(\"p\", null, \"All movies go through a greenlighting process, when it goes into production. It’s a long and intense where multiple teams gather, critique and develop story ideas and eventually decide whether they are Disney enough. Most stories never make it through. There's a team dedicated to managing the entire process.\", -1 /* HOISTED */);\nvar _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)(\"p\", null, \"I worked closely with the story development team, the users, and studio executives to deeply understand the painpoints and issues plaguing the current process.\", -1 /* HOISTED */);\nvar _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)(\"p\", null, \"We delivered a new movie greenlighting process with a set of custom tools to support it that fully integrated with the overall studio filmmaking process. We reduced the story development lifecycle time and increased the story development efficiency and effectiveness.\", -1 /* HOISTED */);\nvar _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)(\"p\", null, \"This new process coupled with the right tools enabled Disney to scale it's story development across all of it's theatrical segments including Pixar, Lucasfilm, Animation, Touchstone, and Live Action.\", -1 /* HOISTED */);\nvar _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)(\"p\", null, \"I owned the experience design, leading the cross-functional product team and a team of senior designers.\", -1 /* HOISTED */);\n\nfunction render(_ctx, _cache, $props, $setup, $data, $options) {\n  var _component_PortfolioPage = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)(\"PortfolioPage\");\n  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_PortfolioPage, {\n    nda: \"true\"\n  }, {\n    title: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {\n      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(\"Creative Affairs Story Tracking & Library\")];\n    }),\n    company: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {\n      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(\"Walt Disney Studios\")];\n    }),\n    year: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {\n      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(\"2017\")];\n    }),\n    hero: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {\n      return [_hoisted_1];\n    }),\n    challenge: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {\n      return [_hoisted_2];\n    }),\n    process: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {\n      return [_hoisted_3, _hoisted_4];\n    }),\n    outcome: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {\n      return [_hoisted_5, _hoisted_6];\n    }),\n    role: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {\n      return [_hoisted_7];\n    }),\n    _: 1 /* STABLE */\n  });\n}\n\n//# sourceURL=webpack://jasonbejot.com/./src/pages/portfolio/disney/greenlight/greenlight.vue?./node_modules/babel-loader/lib/index.js??clonedRuleSet-1.use!./node_modules/vue-loader/dist/templateLoader.js??ruleSet%5B1%5D.rules%5B2%5D!./node_modules/vue-loader/dist/index.js??ruleSet%5B1%5D.rules%5B6%5D.use%5B0%5D");
+
+/***/ }),
+
+/***/ "./src/pages/portfolio/disney/greenlight/greenlight.vue":
+/*!**************************************************************!*\
+  !*** ./src/pages/portfolio/disney/greenlight/greenlight.vue ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _greenlight_vue_vue_type_template_id_50f0e77f__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./greenlight.vue?vue&type=template&id=50f0e77f */ \"./src/pages/portfolio/disney/greenlight/greenlight.vue?vue&type=template&id=50f0e77f\");\n/* harmony import */ var _greenlight_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./greenlight.vue?vue&type=script&lang=js */ \"./src/pages/portfolio/disney/greenlight/greenlight.vue?vue&type=script&lang=js\");\n/* harmony import */ var _Users_jason_Source_Code_corpsecouch_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ \"./node_modules/vue-loader/dist/exportHelper.js\");\n\n\n\n\n;\nconst __exports__ = /*#__PURE__*/(0,_Users_jason_Source_Code_corpsecouch_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(_greenlight_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"], [['render',_greenlight_vue_vue_type_template_id_50f0e77f__WEBPACK_IMPORTED_MODULE_0__.render],['__file',\"src/pages/portfolio/disney/greenlight/greenlight.vue\"]])\n/* hot reload */\nif (false) {}\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);\n\n//# sourceURL=webpack://jasonbejot.com/./src/pages/portfolio/disney/greenlight/greenlight.vue?");
+
+/***/ }),
+
+/***/ "./src/pages/portfolio/disney/greenlight/greenlight.vue?vue&type=script&lang=js":
+/*!**************************************************************************************!*\
+  !*** ./src/pages/portfolio/disney/greenlight/greenlight.vue?vue&type=script&lang=js ***!
+  \**************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_1_use_node_modules_vue_loader_dist_index_js_ruleSet_1_rules_6_use_0_greenlight_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])\n/* harmony export */ });\n/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_1_use_node_modules_vue_loader_dist_index_js_ruleSet_1_rules_6_use_0_greenlight_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-1.use!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[1].rules[6].use[0]!./greenlight.vue?vue&type=script&lang=js */ \"./node_modules/babel-loader/lib/index.js??clonedRuleSet-1.use!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[6].use[0]!./src/pages/portfolio/disney/greenlight/greenlight.vue?vue&type=script&lang=js\");\n \n\n//# sourceURL=webpack://jasonbejot.com/./src/pages/portfolio/disney/greenlight/greenlight.vue?");
+
+/***/ }),
+
+/***/ "./src/pages/portfolio/disney/greenlight/greenlight.vue?vue&type=template&id=50f0e77f":
+/*!********************************************************************************************!*\
+  !*** ./src/pages/portfolio/disney/greenlight/greenlight.vue?vue&type=template&id=50f0e77f ***!
+  \********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"render\": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_1_use_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_1_rules_6_use_0_greenlight_vue_vue_type_template_id_50f0e77f__WEBPACK_IMPORTED_MODULE_0__.render)\n/* harmony export */ });\n/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_1_use_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_1_rules_6_use_0_greenlight_vue_vue_type_template_id_50f0e77f__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-1.use!../../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[1].rules[6].use[0]!./greenlight.vue?vue&type=template&id=50f0e77f */ \"./node_modules/babel-loader/lib/index.js??clonedRuleSet-1.use!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[6].use[0]!./src/pages/portfolio/disney/greenlight/greenlight.vue?vue&type=template&id=50f0e77f\");\n\n\n//# sourceURL=webpack://jasonbejot.com/./src/pages/portfolio/disney/greenlight/greenlight.vue?");
+
+/***/ }),
+
+/***/ "./src/pages/portfolio/disney/greenlight/full.png":
+/*!********************************************************!*\
+  !*** ./src/pages/portfolio/disney/greenlight/full.png ***!
+  \********************************************************/
+/***/ ((module) => {
+
+eval("module.exports = \"/assets/01b2c78f4adc9e01b35d.png\";\n\n//# sourceURL=webpack://jasonbejot.com/./src/pages/portfolio/disney/greenlight/full.png?");
+
+/***/ })
+
+}]);

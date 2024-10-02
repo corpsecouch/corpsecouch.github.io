@@ -2,6 +2,12 @@ const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
 const webpack = require('webpack');
 const CopyPlugin = require("copy-webpack-plugin");
+const SitemapPlugin = require('sitemap-webpack-plugin').default;
+
+const routesData = require('./src/data/routes.js');
+const paths = routesData.map((route) => {
+  return '/#' + route.path;
+});
 
 module.exports = {
   mode: 'development',
@@ -136,10 +142,12 @@ module.exports = {
 
   plugins: [
     new VueLoaderPlugin(),
+
     new webpack.DefinePlugin({
       __VUE_OPTIONS_API__: JSON.stringify(true),
       __VUE_PROD_DEVTOOLS__: JSON.stringify(false)
     }),
+
     new CopyPlugin({
       patterns: [
         {
@@ -154,6 +162,8 @@ module.exports = {
           context: "src/"
         }
       ]
-    })
+    }),
+
+    new SitemapPlugin({ base: 'https://jasonbejot.com', paths: paths })
   ]
 };
