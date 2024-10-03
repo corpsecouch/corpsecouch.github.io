@@ -38,11 +38,13 @@ const routes = [
 import routesData from 'data/routes';
 _.merge(routes, routesData);
 
-import { createRouter, createWebHashHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
+//import { createRouter, createWebHashHistory } from 'vue-router';
 
 const router = createRouter({
   routes: routes,
-  history: createWebHashHistory(),//createWebHistory(),
+  history: createWebHistory(),
+  //history: createWebHashHistory(),
   scrollBehavior (to, from, savedPosition) {
     if (savedPosition) return savedPosition
     if (to.hash) return { el: to.hash, behavior: 'smooth' }
@@ -51,6 +53,16 @@ const router = createRouter({
 });
 
 app.use(router);
+
+import VueMeta from 'vue-meta'
+const { generate } = VueMeta;
+const rawMetaInfo = {
+  meta: [{ charset: 'butts' }]
+}
+
+const metaInfo = generate(rawMetaInfo /*, yourOptions*/)
+
+const HEAD = metaInfo.script.text() + metaInfo.meta.text()
 
 
 /* ****************************** */
