@@ -30,13 +30,15 @@ const routes = [
   { name: 'pbmoppetmashup',               component: () => import('pages/portfolio/phenomblue/moppet-mashup/moppet-mashup') },
   { name: 'pbwildkingdom',                component: () => import('pages/portfolio/phenomblue/wild-kingdom/wild-kingdom') },
   { name: 'pbpage',                       component: () => import('pages/portfolio/phenomblue/page/page') },
-  { name: 'pbtums',                       component: () => import('pages/portfolio/phenomblue/tums/tums') },
+  //{ name: 'pbtums',                       component: () => import('pages/portfolio/phenomblue/tums/tums') },
   { name: '404',                          component: () => import('pages/FourOhFour') },
   { path: '/:pathMatch(.*)*',             redirect: '/404' }
 ]
 
 import routesData from 'data/routes';
 _.merge(routes, routesData);
+
+console.log(routes);
 
 import { createRouter, createWebHistory } from 'vue-router';
 //import { createRouter, createWebHashHistory } from 'vue-router';
@@ -52,17 +54,13 @@ const router = createRouter({
   }
 });
 
+// dynamically changes the title of each page based on it's route
+router.beforeEach((to, from) => {
+  document.title = to.meta.title;
+})
+
 app.use(router);
 
-import VueMeta from 'vue-meta'
-const { generate } = VueMeta;
-const rawMetaInfo = {
-  meta: [{ charset: 'butts' }]
-}
-
-const metaInfo = generate(rawMetaInfo /*, yourOptions*/)
-
-const HEAD = metaInfo.script.text() + metaInfo.meta.text()
 
 
 /* ****************************** */
