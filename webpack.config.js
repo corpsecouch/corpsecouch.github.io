@@ -7,8 +7,8 @@ const SitemapPlugin = require('sitemap-webpack-plugin').default;
 // needed for auto generating the sitemap xml
 const routesData = require('./src/data/routes.js');
 const paths = routesData.map((route) => {
-  //return '/#' + route.path; // only used if the router is using web hash history
-  return route.path;
+  return '/#' + route.path; // only used if the router is using web hash history
+  //return route.path;
 });
 
 module.exports = {

@@ -38,13 +38,13 @@ const routes = [
 import routesData from 'data/routes';
 _.merge(routes, routesData);
 
-import { createRouter, createWebHistory } from 'vue-router';
-//import { createRouter, createWebHashHistory } from 'vue-router';
+//import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 
 const router = createRouter({
   routes: routes,
-  history: createWebHistory(),
-  //history: createWebHashHistory(),
+  //history: createWebHistory(),
+  history: createWebHashHistory(),
   scrollBehavior (to, from, savedPosition) {
     if (savedPosition) return savedPosition
     if (to.hash) return { el: to.hash, behavior: 'smooth' }
