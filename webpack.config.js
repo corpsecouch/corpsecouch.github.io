@@ -12,8 +12,8 @@ const paths = routesData.map((route) => {
 });
 
 module.exports = {
-  mode: 'development',
-  //mode: 'production',
+  //mode: 'development',
+  mode: 'production',
 
   entry: {
     app: {

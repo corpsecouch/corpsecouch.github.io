@@ -3,8 +3,8 @@ import { createApp } from 'vue';
 const app = createApp({});
 
 
-//const isProd = process.env.NODE_ENV === 'production';
-const isProd = process.env.NODE_ENV === 'dev';
+const isProd = process.env.NODE_ENV === 'production';
+//const isProd = process.env.NODE_ENV === 'dev';
 
 
 /* ******************** */
@@ -37,8 +37,6 @@ const routes = [
 
 import routesData from 'data/routes';
 _.merge(routes, routesData);
-
-console.log(routes);
 
 import { createRouter, createWebHistory } from 'vue-router';
 //import { createRouter, createWebHashHistory } from 'vue-router';
