@@ -2,11 +2,11 @@
   <Page class="widthConstrained">
 
     <header>
-      <router-link :to="{ name: 'index', hash: '#about' }" alt="About">About</router-link>
-      <router-link :to="{ name: 'portfolio' }" alt="Portfolio">Portfolio</router-link>
-      <span class="name"><router-link :to="{ name: 'index' }">Jason<br />Bejot</router-link></span>
-      <router-link :to="{ name: 'press' }" alt="Press">Press</router-link>
-      <router-link :to="{ name: 'index', hash: '#contact' }" alt="Contact">Contact</router-link>
+      <a href="/#about" alt="About">About</a>
+      <a href="/portfolio/" alt="Portfolio">Portfolio</a>
+      <span class="name"><a href="/">Jason<br />Bejot</a></span>
+      <a href="/press/" alt="Press">Press</a>
+      <a href="/#contact" alt="Contact">Contact</a>
     </header>
 
     <h1 id="page-title" v-if="!!this.$slots.title"><slot name="title">Title</slot></h1>
