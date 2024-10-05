@@ -12,7 +12,7 @@
 </template>
 
 <script>
-  import AwardItem from 'components/AwardItem';
+  import AwardItem from '/src/components/AwardItem';
 
   export default {
     name: 'AwardList',
@@ -27,13 +27,13 @@
   }
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="css">
   ul {
     list-style: none;
     margin: 0;
 
     li {
-      + li { margin-top: 1rem; }
+      & + li { margin-top: 1rem; }
     }
   }
 </style>

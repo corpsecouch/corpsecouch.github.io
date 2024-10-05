@@ -10,6 +10,6 @@
   }
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="css">
   img { width: 32px; }
 </style>

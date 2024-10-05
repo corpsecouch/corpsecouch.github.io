@@ -1,4 +1,4 @@
-import companies from 'data/companies';
+import companies from '@data/companies';
 
 /*const randomImage = function() {
   return `https://picsum.photos/200?random=${ Math.random()*1000 }`;
@@ -22,13 +22,10 @@ const data = [
     company: companies.rocket,
     year:         '2023',
     title:        'Conversational Lead Funnel',
-    slug:         'ironbear',
     description:  'Overhauling the mortgage top-of-funnel with conversational AI.',
     tags:         ['UI design', 'AI design', 'conversational design'],
-    image:        './portfolio/rocket/ironbear/thumb.png',
-    route: {
-      name: 'rocketironbear'
-    }
+    image:        require('@assets/portfolio/rocket/ironbear/thumb.png'),
+    url:          '/portfolio/rocket-ironbear.html'
   },
 
   {
@@ -36,104 +33,89 @@ const data = [
     company: companies.amazon,
     year:         '2019',
     title:        'Alexa Profile',
-    slug:         'profile',
     description:  'Connecting AIs from two of the world\'s largest companies; a world-first.',
     tags:         ['mobile design', 'voice design', 'multi-modal design', 'AI design', 'conversational design'],
-    image:        './portfolio/alexa/profile/thumb.png',
-    route: {
-      name: 'alexaprofile'
-    }
+    image:        require('@assets/portfolio/amazon/profile/thumb.png'),
+    url:          '/portfolio/amazon-profile.html',
   },
 
-  {
-    hidden: true,
-    company: companies.amazon,
-    year:         '2019',
-    title:        'Presence Detection',
-    slug:         'presence-detection',
-    description:  'Connecting AIs from two of the world\'s largest companies; a world-first.',
-    image:        './portfolio/alexa/profile/thumb.png',
-    route: {
-      name: 'alexapresence'
-    }
-  },
+  // {
+  //   hidden: true,
+  //   company: companies.amazon,
+  //   year:         '2019',
+  //   title:        'Presence Detection',
+  //   slug:         'presence-detection',
+  //   description:  'Connecting AIs from two of the world\'s largest companies; a world-first.',
+  //   image:        require('@portfolio/amazon/profile/thumb.png'),
+  //   route: {
+  //     name: 'alexapresence'
+  //   }
+  // },
 
-  {
-    hidden: true,
-    company: companies.amazon,
-    year:         '2019',
-    title:        'Personalized Skills',
-    slug:         'personalized-skills',
-    description:  'Connecting AIs from two of the world\'s largest companies; a world-first.',
-    image:        './portfolio/alexa/profile/thumb.png',
-    route: {
-      name: 'alexapersonalizedskills'
-    }
-  },
+  // {
+  //   hidden: true,
+  //   company: companies.amazon,
+  //   year:         '2019',
+  //   title:        'Personalized Skills',
+  //   slug:         'personalized-skills',
+  //   description:  'Connecting AIs from two of the world\'s largest companies; a world-first.',
+  //   image:        require('@portfolio/amazon/profile/thumb.png'),
+  //   route: {
+  //     name: 'alexapersonalizedskills'
+  //   }
+  // },
 
-  {
-    hidden: true,
-    company: companies.amazon,
-    year:         '2018',
-    title:        'Voice Settings',
-    slug:         'voice-settings',
-    description:  'Connecting AIs from two of the world\'s largest companies; a world-first.',
-    image:        './portfolio/alexa/profile/thumb.png',
-    route: {
-      name: 'alexavoicesettings'
-    }
-  },
+  // {
+  //   hidden: true,
+  //   company: companies.amazon,
+  //   year:         '2018',
+  //   title:        'Voice Settings',
+  //   slug:         'voice-settings',
+  //   description:  'Connecting AIs from two of the world\'s largest companies; a world-first.',
+  //   image:        require('@portfolio/amazon/profile/thumb.png'),
+  //   route: {
+  //     name: 'alexavoicesettings'
+  //   }
+  // },
 
   {
     featured: true,
     company: companies.amazon,
     year:         '2017',
     title:        'Alexa + Cortana',
-    slug:         'alexa-cortana',
     description:  'Connecting AIs from two of the world\'s largest companies; a world-first.',
     tags:         ['voice design', 'multi-modal design', 'AI design', 'conversational design'],
-    image:        './portfolio/alexa/alexa-cortana/thumb.png',
-    route: {
-      name: 'alexacortana'
-    }
+    image:        require('@assets/portfolio/amazon/alexa-cortana/thumb.png'),
+    url:          '/portfolio/amazon-alexa-cortana.html',
   },
 
   {
     company: companies.disney,
     year:         '2014',
     title:        'Enterprise Design System',
-    slug:         'design-system',
     description:  'Creating an award-winning enterprise design system.',
     tags:         ['design system'],
-    image:        './portfolio/disney/design-system/peek.png',
-    route: {
-      name: 'disneydesignsystem'
-    }
+    image:        require('@assets/portfolio/disney/design-system/peek.png'),
+    url:          '/portfolio/disney-design-system.html',
   },
 
   {
     company: companies.disney,
     year:         '2017',
     title:        'Movie Greenlight',
-    slug:         'greenlight',
     description:  'Innovating how Disney greenlights movies.',
-    image:        './portfolio/disney/greenlight/peek.png',
-    route: {
-      name: 'disneygreenlight'
-    }
+    image:        require('@assets/portfolio/disney/greenlight/peek.png'),
+    url:          '/portfolio/disney-greenlight.html',
   },
 
   {
     company: companies.disney,
     year:         '2017',
     title:        'Innovation Incubator',
-    slug:         'incubator',
     description:  'Transforming how Disney Studios innovates.',
     tags:         ['r&d'],
-    image:        './portfolio/disney/incubator/peek.png',
-    route: {
-      name: 'disneyinnovationprogram'
-    }
+    image:        require('@assets/portfolio/disney/incubator/peek.png'),
+    url:          '/portfolio/disney-incubator.html',
   },
 
   {
@@ -141,131 +123,101 @@ const data = [
     company: companies.disney,
     year:         '2014',
     title:        'Filmmaking for Virtual Reality',
-    slug:         'vr',
     description:  'Leading the VR conversation.',
     tags:         ['vr design', 'creative direction'],
-    image:        './portfolio/disney/vr/peek.png',
-    route: {
-      name: 'disneyvr'
-    }
+    image:        require('@assets/portfolio/disney/vr/peek.png'),
+    url:          '/portfolio/disney-vr.html',
   },
 
   {
     company: companies.disney,
     year:         '2016',
     title:        'Movie Slate',
-    slug:         'slate',
     description:  'Innovating how Disney plans and tracks their slate of upcoming movies.',
-    image:        './portfolio/disney/slate/peek.png',
-    route: {
-      name: 'disneymovieslate'
-    }
+    image:        require('@assets/portfolio/disney/slate/peek.png'),
+    url:          '/portfolio/disney-slate.html',
   },
 
   {
     company: companies.phenomblue,
     year:         '2009',
     title:        'Microsoft Genesis',
-    slug:         'genesis',
     description:  'A 3D, social space simulator.',
     tags:         ['game design', 'r&d', 'microsoft surface'],
-    image:        './portfolio/phenomblue/genesis/peek.png',
-    route: {
-      name: 'pbgenesis'
-    }
+    image:        require('@assets/portfolio/phenomblue/genesis/peek.png'),
+    url:          '/portfolio/phenomblue-genesis.html',
   },
 
   {
     company: companies.phenomblue,
     year:         '2013',
-    route: {
-      name: 'pbwildkingdom'
-    },
     title:        'My Wild Kingdom',
-    slug:         'wild-kingdom',
     description:  'A groundbreaking adventure app that brings the wild to any situation',
     tags:         ['mobile design'],
-    image:        './portfolio/phenomblue/wild-kingdom/peek.png',
+    image:        require('@assets/portfolio/phenomblue/wild-kingdom/peek.png'),
+    url:          '/portfolio/phenomblue-wild-kingdom.html',
   },
 
   {
     company: companies.phenomblue,
     year:         '2012',
-    route: {
-      name: 'pbdinodig'
-    },
     title:        'Operation: Dino Dig',
-    slug:         'dino-dig',
     description:  'Social computing for learning and exploration.',
     tags:         ['microsoft surface'],
-    image:        './portfolio/phenomblue/dino-dig/peek.png',
+    image:        require('@assets/portfolio/phenomblue/dino-dig/peek.png'),
+    url:          '/portfolio/phenomblue-dino-dig.html',
   },
 
   {
     company: companies.phenomblue,
     year:         '2013',
-    route: {
-      name: 'pbpage'
-    },
     title:        'Page',
-    slug:         'page',
     description:  'Breaking down the "fifth wall" of reading and literature.',
     tags:         ['ar design', 'mobile design', 'r&d'],
-    image:        './portfolio/phenomblue/page/peek.png',
+    image:        require('@assets/portfolio/phenomblue/page/peek.png'),
+    url:          '/portfolio/phenomblue-page.html',
   },
 
   {
     company: companies.phenomblue,
     year:         '2012',
-    route: {
-      name: 'pbmovielotto'
-    },
     title:        'Movie Lotto',
-    slug:         'movie-lotto',
     description:  'Social gaming in theaters.',
     tags:         ['design system', 'r&d'],
-    image:        './portfolio/phenomblue/movie-lotto/peek.png',
+    image:        require('@assets/portfolio/phenomblue/movie-lotto/peek.png'),
+    url:          '/portfolio/phenomblue-movie-lotto.html',
   },
 
   {
     company: companies.phenomblue,
     year:         '2012',
     title:        'Fantastic Future Me',
-    slug:         'fantastic-future-me',
     description:  'Encouraging kids to reach their Future Me.',
     tags:         ['public installation'],
-    image:        './portfolio/phenomblue/fantastic-future-me/peek.png',
-    route: {
-      name: 'pbfantasticfutureme'
-    }
+    image:        require('@assets/portfolio/phenomblue/fantastic-future-me/peek.png'),
+    url:          '/portfolio/phenomblue-fantastic-future-me.html',
   },
 
   {
     company: companies.phenomblue,
     year:         '2009',
     title:        'Moppet Mashup',
-    slug:         'moppet-mashup',
     description:  'A social, large-format interactive experience.',
     tags:         ['microsoft surface', 'public installation', 'r&d'],
-    image:        './portfolio/phenomblue/moppet-mashup/peek.png',
-    route: {
-      name: 'pbmoppetmashup'
-    }
+    image:        require('@assets/portfolio/phenomblue/moppet-mashup/peek.png'),
+    url:          '/portfolio/phenomblue-moppet-mashup.html',
   },
 
-  {
-    hidden: true,
-    company: companies.phenomblue,
-    year:         '2012',
-    route: {
-      name: 'pbtums'
-    },
-    title:        'TUMS: Food Fight',
-    slug:         'tums',
-    description:  'A branded Facebook game.',
-    tags:         ['game design'],
-    image:        './portfolio/phenomblue/tums/peek.png',
-  },
+  // {
+  //   hidden: true,
+  //   company: companies.phenomblue,
+  //   year:         '2012',
+  //   title:        'TUMS: Food Fight',
+  //   description:  'A branded Facebook game.',
+  //   tags:         ['game design'],
+  //   image:        require('@/pages/portfolio/phenomblue/tums/peek.png'),
+  //   url:          new URL('@portfolio/phenomblue/tums/index.html', import.meta.url).href
+  // },
 ]
 
 export default data;

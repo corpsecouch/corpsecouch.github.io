@@ -11,37 +11,19 @@
   "license": "ISC",
   "homepage": "https://github.com/corpsecouch/corpsecouch.github.io#readme",
   "scripts": {
-    "build-old": "npx webpack --config webpack.config.js",
-    "build": "webpack",
-    "serve": "webpack serve",
-    "deploy": "gh-pages -d dist"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "lodash": "^4.17.21",
     "vue": "^3.2.47",
-    "vue-gtag": "^2.0.1",
-    "vue-router": "^4.1.6"
+    "vue-gtag": "^2.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.21.4",
-    "@babel/preset-env": "^7.21.4",
-    "autoprefixer": "^10.4.14",
-    "babel-loader": "^9.1.2",
-    "browser-sync": "^2.29.1",
-    "copy-webpack-plugin": "^11.0.0",
-    "css-loader": "^6.7.3",
-    "gh-pages": "^5.0.0",
-    "html-loader": "^4.2.0",
-    "node-sass": "^8.0.0",
-    "postcss-loader": "^7.2.4",
-    "sass-loader": "^13.2.2",
-    "sitemap-webpack-plugin": "^1.1.1",
-    "source-map-loader": "^4.0.1",
-    "vue-loader": "^17.0.1",
-    "vue-style-loader": "^4.1.3",
-    "vue-template-compiler": "^2.7.14",
-    "webpack": "^5.78.0",
-    "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^4.13.2"
+    "@vitejs/plugin-vue": "^5.1.4",
+    "sass": "^1.79.4",
+    "vite": "^5.4.8",
+    "vite-plugin-require": "^1.2.14"
   }
 }

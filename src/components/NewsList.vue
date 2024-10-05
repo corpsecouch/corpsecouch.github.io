@@ -10,7 +10,7 @@
 </template>
 
 <script>
-  import NewsLink from 'components/NewsLink';
+  import NewsLink from '/src/components/NewsLink';
 
   export default {
     name: 'NewsList',
@@ -25,16 +25,13 @@
   }
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="css">
   ul {
     list-style: none;
     margin: 0;
 
     li {
-      //box-shadow: inset 2px 0 0 0 #c9d0d9;
-      //padding-left: 1rem;
-
-      + li { margin-top: 1rem; }
+      & + li { margin-top: 1rem; }
     }
   }
 </style>

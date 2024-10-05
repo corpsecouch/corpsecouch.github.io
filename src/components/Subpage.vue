@@ -16,7 +16,7 @@
 </template>
 
 <script>
-  import Page from 'components/PageTemplate'
+  import Page from './PageTemplate'
 
   export default {
     name: 'Subpage',
@@ -27,7 +27,8 @@
   }
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="css">
+
   #page {
     padding-top: 6rem;
   }
@@ -47,7 +48,7 @@
     height: 3rem;
     top: 0;
     left: 0;
-    background-color: $color-background-light;
+    background-color: var(--color-background-light);
     padding: 1rem;
     display: flex;
     justify-content: center;
@@ -55,13 +56,8 @@
     font-size: 0.9rem;
     box-shadow: 0 8px 12px -7px rgba(0, 0, 0, 0.1);
 
-    @include screen-xsmall {
-      justify-content: space-evenly;
-      column-gap: 0;
-    }
-
     .name {
-      background-color: $color-background-light;
+      background-color: var(--color-background-light);
       padding: 2rem;
       border-radius: 100%;
       width: 7rem;
@@ -74,7 +70,7 @@
       align-items: center;
 
       a {
-        color: $color-text-dark;
+        color: var(--color-text-dark);
         text-decoration: none;
         display: block;
         font-family: 'Mainstay';
@@ -83,6 +79,14 @@
         margin-top: 1.4rem;
         font-size: 1.4rem;
       }
+    }
+  }
+
+  /* max-width: xsmall screen */
+  @media all and (max-width: 600px) {
+    header {
+      justify-content: space-evenly;
+      column-gap: 0;
     }
   }
 </style>

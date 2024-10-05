@@ -12,7 +12,7 @@
   }
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="css">
   .illustration {
     margin-bottom: 3rem;
     padding: 1rem;

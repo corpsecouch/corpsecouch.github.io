@@ -3,15 +3,8 @@
 
     <section id="name">
       <h1>Jason<br />Bejot</h1>
-      <img src="../assets/photo1-circle.jpg">
+      <img src="@assets/photo1-circle.jpg">
     </section>
-
-    <!--<section class="menu">
-      <router-link :to="{ path: '/', hash: '#about' }" alt="About">About</router-link>
-      <router-link :to="{ name: 'portfolio' }" alt="Portfolio">Portfolio</router-link>
-      <router-link :to="{ name: 'press' }" alt="Press">Press</router-link>
-      <router-link :to="{ path: '/', hash: '#contact' }" alt="Contact">Contact</router-link>
-    </section>-->
 
     <section id="intro">
       <p>Award-winning design leader, technologist, inventor, and founder. Passionate about the intersection of people &amp; technology, design-driven innovation, and the creative application of emerging technology.</p>
@@ -28,7 +21,7 @@
       <h2>Projects</h2>
       <p>I've worked on and led hundreds of projects over my 19 year career. This is just a short list in no particular order:</p>
       <p>Rocket Mortgage Generative AI IVR, Rocket Companies Personalization Strategic Initiative, Rocket Companies AI-powered lead generation, Rocket Mortgage AI Vision &amp; Strategic Initiative, Alexa Profile, Alexa Personalization Program, Alexa & Cortana Integration, Disney Enterprise Design System, Alexa Voice PIN, Alexa Voice ID, Alexa Face ID, Disney Filmmaking with Virtual Reality, Disney Non-Linear Storytelling with Augmented Reality</p>
-      <p>Dive into some of these projects on my <router-link :to="{ name: 'portfolio' }" alt="Portfolio">portfolio</router-link>.</p>
+      <p>Dive into some of these projects on my <a href="/portfolio/">portfolio</a>.</p>
     </section>
 
     <section id="about">
@@ -40,7 +33,7 @@
 
       <p>After spending a few years as an engineering lead I made the switch to experience design. I found a real talent for invention and innovation combining my technical background with the focus on the human experience. As a result I've been elected to innovation councils, received patents and awards, launched innovation programs, and worked directly with C-suite executives at Fortune 500 companies on strategic projects.</p>
 
-      <img src="../assets/guitar.jpg">
+      <img src="@assets/guitar.jpg">
 
       <p>At some point I became a musician, playing spacey guitar riffs in The Answer Team. We were based out of Omaha, Nebraska and, when we were active, we toured and recorded two albums. You can check out The Answer Team's music on <a href="https://open.spotify.com/artist/3mMaoKi4PaOLhYFdAknELD?si=mci-mk0ASMiM1bro9ey0NA" target="_blank">Spotify</a>.</p>
 
@@ -56,7 +49,7 @@
       <h2>Press</h2>
       <p>I know of at least {{ news.total }} articles that cover my work. Here's a random sample:</p>
       <NewsList :data="news.data"></NewsList>
-      <p><router-link class="more-link" :to="{ name: 'press'}" alt="See all the articles">See all {{ news.total }} articles</router-link></p>
+      <p><a class="more-link" href="/press/" alt="See all the articles">See all {{ news.total }} articles</a></p>
     </section>
 
     <section id="awards">
@@ -65,23 +58,12 @@
       <AwardList :data="awards.data"></AwardList>
     </section>
 
-    <!--<section id="music">
-      <h2>Musicial Life</h2>
-      <div class="columns">
-        <div class="left">
-          <p>At some point I became a musician, playing spacey guitar riffs in The Answer Team. We were based out of Omaha, Nebraska and, when we were active, we toured and recorded two albums.</p>
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2oFXTgnIh7MmeadK8482zc?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div>
-        <div class="right">
-          <img src="../assets/guitar.jpg">
-        </div>
-      </div>
-    </section>-->
-
     <section id="mentorship">
       <h2>Mentorship</h2>
+      <!--
       <section style="height: 598px; box-shadow: rgba(142, 151, 158, 0.15) 0px 4px 19px 0px; border-radius: 12px; overflow: hidden; width: 100%;"><iframe src="https://adplist.org/widgets/booking?src=jason-bejot" title="Mentorship Session" width="100%" height="100%" loading="lazy" style="border: 0px;"></iframe></section>
       <section style="padding: 16px; height: 496px; box-shadow: rgba(142, 151, 158, 0.15) 0px 4px 19px 0px; border-radius: 12px; overflow: hidden; width: 100%;"><iframe src="https://adplist.org/widgets/reviews?src=jason-bejot" title="All Reviews" width="100%" height="100%" loading="lazy" style="border: 0px;"></iframe></section>
+      -->
     </section>
 
     <section id="contact">
@@ -113,51 +95,54 @@
 <script>
   // https://www.bestfolios.com/portfolio/dougseidman
 
-  import Page from 'components/PageTemplate';
-  import SVGTwitter from 'components/SVGTwitter';
-  import SVGMedium from 'components/SVGMedium';
-  import SVGLinkedIn from 'components/SVGLinkedIn';
-  import SVGEmail from 'components/SVGEmail';
-  import SVGADPList from 'components/SVGADPList';
-  import SVGGithub from 'components/SVGGithub';
-  import Email from 'components/Email';
-  import AwardList from 'components/AwardList';
-  import awardsData from 'data/awards';
-  import NewsList from 'components/NewsList';
-  import newsData from 'data/news-coverage';
+  import Page from '/src/components/PageTemplate';
+  import Email from '/src/components/Email';
+  import SVGTwitter from '/src/components/SVGTwitter';
+  import SVGMedium from '/src/components/SVGMedium';
+  import SVGLinkedIn from '/src/components/SVGLinkedIn';
+  import SVGEmail from '/src/components/SVGEmail';
+  import SVGADPList from '/src/components/SVGADPList';
+  import SVGGithub from '/src/components/SVGGithub';
+  import AwardList from '/src/components/AwardList';
+  import awardsData from '/src/data/awards';
+  import NewsList from '/src/components/NewsList';
+  import newsData from '/src/data/news-coverage';
+
+  import _ from 'lodash';
 
   export default {
     name: 'Index',
 
     components: {
       Page,
+      Email,
       SVGTwitter,
       SVGMedium,
       SVGLinkedIn,
       SVGEmail,
       SVGADPList,
       SVGGithub,
-      Email,
       AwardList,
       NewsList
     },
 
-    data () {
-      return {
-        awards: {
-          total: awardsData.length,
-          data: _.orderBy(awardsData, o => { return o.date.year; }, ['desc'])
-        },
-        news: {
-          total: newsData.length,
-          data: _.sampleSize(newsData, 6)
-        }
-      }
+data () {
+  return {
+    awards: {
+      total: awardsData.length,
+      data: _.orderBy(awardsData, o => { return o.date.year; }, ['desc'])
+    },
+    news: {
+      total: newsData.length,
+      data: _.sampleSize(newsData, 6)
     }
+  }
+}
   }
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="css">
+
 
   h2 {
     font-family: 'Afacad Flux';
@@ -170,27 +155,19 @@
     margin: 0 0 1rem 0;
     border-bottom: dashed grey 1px;
 
-    + p {
+    & + p {
       margin-top: 0;
     }
   }
 
   main > section {
     margin: 0;
-    + section {
-      margin-top: 7rem;
-    }
+    & + section { margin-top: 7rem; }
   }
 
-  p {
-    + ul {
-      margin-top: 1.3rem;
-    }
-  }
+  p + ul { margin-top: 1.3rem; }
 
-  #name {
-    margin: 12rem 0;
-  }
+  #name { margin: 12rem 0; }
 
   #about {
     img {
@@ -222,13 +199,14 @@
   }
 
   #contact {
-    //border: dotted black 3px;
-    //border-radius: 16px;
-    //padding: 2rem 4rem;
-
     .columns {
       grid-template-columns: [left] 1fr [right] 1fr;
-      @include screen-small { grid-template-columns: [left right] auto; }
+
+      /* max-width: small screen */
+      @media all and (max-width: 680px) {
+        grid-template-columns: [left right] auto;
+      }
+      
       grid-gap: 1.5rem;
 
       .left {
@@ -277,12 +255,6 @@
       align-items: center;
       column-gap: 0.6rem;
     }
-
-    /*svg {
-      width: 2rem;
-      height: 2rem;
-      fill: $color-text-dark;
-    }*/
   }
 
   #name {
@@ -296,7 +268,9 @@
       letter-spacing: normal;
       font-size: 6rem;
       transform: rotate(-18deg);
-      @include screen-xsmall {
+
+      /* max-width: xsmall screen */
+      @media all and (max-width: 600px) {
         left: 0;
         top: -4rem;
       }
@@ -311,13 +285,22 @@
       border: dashed grey 1px;
       border-radius: 100%;
       padding: 0.3rem;
-      @include screen-regular { right: 10%; }
-      @include screen-small { right: 0; }
-      @include screen-xsmall {
+
+      /* max-width: regular screen */
+      @media all and (max-width: 910px) {
+        right: 10%;
+      }
+
+      /* max-width: small screen */
+      @media all and (max-width: 680px) {
+        right: 0;
+      }
+
+      /* max-width: xsmall screen */
+      @media all and (max-width: 600px) {
         right: 0;
         width: 10rem;
         top: auto;
-        //bottom: -5rem;
         bottom: -2rem;
       }
     }
@@ -326,13 +309,13 @@
   #about .columns {
     grid-template-columns: [left] 1fr [right] 0.7fr;
     grid-gap: 2.5rem;
-    //margin-top: 3rem;
 
-    @include screen-small {
-      //grid-template-columns: [left right] auto;
+    /* max-width: small screen */
+    @media all and (max-width: 680px) {
       display: block;
       .right { margin-top: 1.5rem; }
     }
+    
 
     #patents {
       .number {
@@ -351,20 +334,6 @@
     list-style: none;
     margin: 0;
   }
-
-  /*#music {
-    .columns {
-      margin-top: 1.3rem;
-    }
-
-    img {
-      width: 19rem;
-    }
-
-    p {
-      margin-bottom: 1.3rem;
-    }
-  }*/
 
   #mentorship {
     section + section {

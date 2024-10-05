@@ -5,7 +5,8 @@
 
 <script>
 
-  import Encryption from 'globals/encryption';
+  import Encryption from '/src/globals/encryption';
+  import _ from 'lodash';
 
   export default {
     name: 'Email',
@@ -30,7 +31,7 @@
   }
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="css">
   a {
     display: inline-flex;
     flex-flow: row nowrap;

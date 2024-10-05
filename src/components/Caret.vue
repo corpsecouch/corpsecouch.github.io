@@ -12,8 +12,8 @@
   }
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="css">
   svg {
-    fill: $color-text-dark;
+    fill: var(--color-text-dark);
   }
 </style>

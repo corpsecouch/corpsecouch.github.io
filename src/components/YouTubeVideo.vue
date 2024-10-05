@@ -11,11 +11,11 @@
   }
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="css">
 .youtube {
   position:relative;
   padding-top:56.25%;
-  background-color: $color-text-dark;
+  background-color: var(--color-text-dark);
   margin-top: 1rem;
   &:first-child {
     margin-top: 0;

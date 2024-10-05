@@ -1,0 +1,266 @@
+/* *** variables *** */
+
+$z-title: 999;
+$z-menu: 9999;
+$z-menu-button: 99999;
+$content-width-max: 800px; //991px;
+$screen-width-max: $content-width-max + 110px;
+$portfolio-offset: -4vh;
+
+
+/* *** mixins *** */
+
+/* screen sizes */
+@mixin screen-sm {
+  @media all and (max-width: 575px) { @content; }
+}
+
+@mixin screen-md {
+  @media all and (max-width: 768px) { @content; }
+}
+
+@mixin screen-lg {
+  @media all and (max-width: 991px) { @content; }
+}
+
+@mixin screen-xl {
+  /*@media all and (max-width: 1199px) { @content; }*/
+  @media all and (min-width: 992px) { @content; }
+}
+
+
+
+@mixin screen-xsmall {
+  @media all and (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin screen-small {
+  //@media all and (max-width: 578px) {
+  @media all and (max-width: 680px) {
+    //margin: 0 auto;
+    //width: 100%;
+    @content;
+  }
+}
+
+@mixin screen-regular {
+  @media all and (max-width: $screen-width-max) {
+    //margin: 0 auto;
+    //width: 100%;
+    @content;
+  }
+}
+
+@mixin screen-large {
+  @media all and (min-width: $screen-width-max) {
+    //margin: 0 auto;
+    //width: $content-width-max;
+    @content;
+  }
+}
+
+/*@mixin content-breakpoint {
+  @include screen-regular { }
+  @include screen-large { }
+}*/
+
+
+/* fonts */
+@mixin font-raleway {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400; // regular
+}
+
+/*@mixin font-baskerville {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 400;
+}*/
+
+/*@mixin font-roboto-slab {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+}*/
+
+/*@mixin font-josefin-slab {
+  font-family: 'Josefin Slab', serif;
+  font-weight: 400;
+}*/
+
+
+/* *** fonts *** */
+
+//@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100;300;400;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
+@font-face {
+  font-family: 'Mainstay';
+  font-weight: normal;
+  src: url('/src/assets/fonts/Mainstay.otf'),
+        url('/src/assets/fonts/Mainstay.ttf');
+}
+
+
+/* *** colors *** */
+
+//$color-backgroundgrey: #1c1c1c;
+$color-link: rgb(247, 72, 82);
+$color-lighttext: rgba(255, 255, 255, 0.8);
+$color-darktext: rgba(51, 51, 51, 1);
+$color-grey: rgba(51, 51, 51, 0.8);
+
+$color-background-dark: #1B1B1B;
+$color-background-light: #FDFDFD;
+$color-background-grey: #d2d2d2;
+$color-text-dark: #1B1B1B;
+$color-text-light: #FFFFFF;
+$color-text-link: #26B0EB;
+
+// https://digitalsynopsis.com/design/2019-color-trends-worlds-most-popular-colors/
+
+$color-19-germany: #00ced1;
+$color-19-plasticpink: #ff1493;
+$color-19-protonpurple: #8a2be2;
+$color-19-korea: #2e8b57;
+
+
+//https://paletton.com/#uid=32k0u0kllllaAySfYr9qIfxwg9I
+$color-primary: #7E9F35;
+$color-secondary: #A7383D;
+$color-tertiary: #562A72;
+
+
+
+/* *** globals *** */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-size: 0;
+  font: inherit;
+  vertical-align: baseline;
+  letter-spacing: 0.02rem;
+  word-spacing: 0.1rem;
+}
+
+.widthConstrained {
+  margin: auto;
+  width: 90%;
+  @include screen-large { width: $content-width-max; }
+}
+
+main > section {
+  margin: 12rem 0;
+}
+
+html {
+  background-color: $color-background-light;
+  @include font-raleway;
+  color: $color-darktext;
+  line-height: 1;
+  font-size: 16px;
+}
+
+p, footer, ul {
+  line-height: 1.5em;
+  font-size: 1rem;
+}
+
+ul {
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+
+  &:first-child { margin-top: 0; }
+}
+
+/** + p {*/
+p {
+  margin-top: 1.3em;
+
+  &:first-child { margin-top: 0; }
+}
+
+a {
+  color: $color-link;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 300;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/*img {
+  margin-top: 3em;
+
+  + * { margin-top: 3em; }
+
+  &:first-child { margin-top: 0; }
+}*/
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 100;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 1em 0;
+}
+
+h2 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 5rem;
+  letter-spacing: 0.1em;
+
+  &::before {
+    margin: 6rem auto 1rem auto;
+    /*content: '';
+    display: block;
+    margin: 6rem auto 1rem auto;
+    //width: 42px;
+    //height: 6px;
+    width: 4rem;
+    height: 2px;
+    box-shadow: inset 0 4px 0 0 #c9d0d9;*/
+  }
+}
+
+/*h2::before, */.divider::before {
+  content: '';
+  display: block;
+  //margin: 6rem auto 1rem auto;
+  margin: 0 auto 1rem auto;
+  width: 4rem;
+  height: 2px;
+  box-shadow: inset 0 4px 0 0 #c9d0d9;
+}
+
+h3 {
+  font-weight: 600;
+  text-transform: uppercase;
+  //margin-bottom: 0.5rem;
+  margin: 3rem 0 0.5rem 0;
+  line-height: 1.5rem;
+
+  &:first-child { margin-top: 0; }
+}
+
+h4 {
+  font-weight: 600;
+  margin-top: 1.5rem;
+  &:first-child { margin-top: 0; }
+  & + * { margin-top: 0; }
+}
+
+@import "styles/_portfolio";

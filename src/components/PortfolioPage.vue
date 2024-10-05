@@ -62,9 +62,9 @@
 </template>
 
 <script>
-  import Subpage from 'components/Subpage'
-  import Caret from 'components/Caret'
-  import Email from 'components/Email'
+  import Subpage from '@components/Subpage'
+  import Caret from '@components/Caret'
+  import Email from '@components/Email'
 
   export default {
     name: 'PortfolioPage',
@@ -87,7 +87,67 @@
   }
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="css">
+  /* imported */
+  /* needs cleaned up! */
+
+  #page.work {
+    #title {
+      margin-bottom: 12rem;
+
+      * {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        text-align: center;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      #year, #company {
+        font-size: 0.9rem;
+        display: inline;
+        padding-top: 1rem;
+      }
+
+      #year {
+        margin-left: 0.5rem;
+        display: block;
+      }
+    }
+
+    #hero img {
+      width: 100%;
+    }
+
+    #content {
+      img {
+        width: 100%;
+        max-height: 440px;
+        /*background-color: $color-text-dark;
+        background-repeat: no-repeat;
+        background-position: center;
+        object-fit: none;*/
+      }
+
+      * + p {
+        margin-bottom: 1.3rem;
+      }
+    }
+
+    ul {
+      margin: 0;
+      list-style: none;
+
+      li + li {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  /* not imported */
+
   h3 {
     font-size: 1.2rem;
     font-weight: 500;
@@ -104,7 +164,7 @@
     height: 3rem;
     top: 0;
     left: 0;
-    background-color: $color-background-light;
+    background-color: var(--color-background-light);
     padding: 1rem;
     display: flex;
     justify-content: center;
@@ -113,7 +173,7 @@
     box-shadow: 0 8px 12px -7px rgba(0, 0, 0, 0.1);
 
     .name {
-      background-color: $color-background-light;
+      background-color: var(--color-background-light);
       padding: 2rem;
       border-radius: 100%;
       width: 7rem;
@@ -126,7 +186,7 @@
       align-items: center;
 
       a {
-        color: $color-text-dark;
+        color: var(--color-text-dark);
         text-decoration: none;
         display: block;
         font-family: 'Mainstay';
@@ -146,9 +206,9 @@
     text-align: center;
     margin: 6rem auto;
     p {
-      background-color: $color-background-dark;
+      background-color: var(--color-background-dark);
       border-radius: 8px;
-      color: $color-lighttext;
+      color: var(--color-lighttext);
       display: block;
       padding: 0.5rem 1rem;
     }
@@ -199,9 +259,9 @@
     &.double {
       grid-template-columns: [left] 1fr [right] 1fr;
 
-      @include screen-small {
+      /* @include screen-small {
         grid-template-columns: [left right] auto;
-      }
+      } */
     }
 
     &.single {
