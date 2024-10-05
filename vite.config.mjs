@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
 import vitePluginRequire from 'vite-plugin-require'
+import Sitemap from 'vite-plugin-sitemap'
 
 // https://vitejs.dev/config/
 // https://vueschool.io/articles/vuejs-tutorials/how-to-migrate-from-vue-cli-to-vite/
@@ -12,7 +13,12 @@ export default defineConfig({
 
   plugins: [
     vue(),
-    vitePluginRequire.default()
+    vitePluginRequire.default(),
+    Sitemap({ 
+      hostname: 'https://jasonbejot.com/',
+      extensions: ['html'],
+      readable: true
+    })
   ],
 
   appType: 'mpa',
@@ -23,21 +29,21 @@ export default defineConfig({
         main:                         resolve(__dirname, 'index.html'),
         press:                        resolve(__dirname, 'press/index.html'),
         portfolio:                    resolve(__dirname, 'portfolio/index.html'),
-        projectIronbear:              resolve(__dirname, 'portfolio/rocket-ironbear.html'),
-        projectProfile:               resolve(__dirname, 'portfolio/amazon-profile.html'),
-        projectAlexaCortana:          resolve(__dirname, 'portfolio/amazon-alexa-cortana.html'),
-        projectDesignSystem:          resolve(__dirname, 'portfolio/disney-design-system.html'),
-        projectGreenlight:            resolve(__dirname, 'portfolio/disney-greenlight.html'),
-        projectIncubator:             resolve(__dirname, 'portfolio/disney-incubator.html'),
-        projectSlate:                 resolve(__dirname, 'portfolio/disney-slate.html'),
-        projectVR:                    resolve(__dirname, 'portfolio/disney-vr.html'),
-        projectDinoDig:               resolve(__dirname, 'portfolio/phenomblue-dino-dig.html'),
-        projectFantasticFutureMe:     resolve(__dirname, 'portfolio/phenomblue-fantastic-future-me.html'),
-        projectGenesis:               resolve(__dirname, 'portfolio/phenomblue-genesis.html'),
-        projectMoppetMashup:          resolve(__dirname, 'portfolio/phenomblue-moppet-mashup.html'),
-        projectMovieLotto:            resolve(__dirname, 'portfolio/phenomblue-movie-lotto.html'),
-        projectPage:                  resolve(__dirname, 'portfolio/phenomblue-page.html'),
-        projectWildKingdom:           resolve(__dirname, 'portfolio/phenomblue-wild-kingdom.html'),
+        projectIronbear:              resolve(__dirname, 'portfolio/rocket-ironbear/index.html'),
+        projectProfile:               resolve(__dirname, 'portfolio/amazon-profile/index.html'),
+        projectAlexaCortana:          resolve(__dirname, 'portfolio/amazon-alexa-cortana/index.html'),
+        projectDesignSystem:          resolve(__dirname, 'portfolio/disney-design-system/index.html'),
+        projectGreenlight:            resolve(__dirname, 'portfolio/disney-greenlight/index.html'),
+        projectIncubator:             resolve(__dirname, 'portfolio/disney-incubator/index.html'),
+        projectSlate:                 resolve(__dirname, 'portfolio/disney-slate/index.html'),
+        projectVR:                    resolve(__dirname, 'portfolio/disney-vr/index.html'),
+        projectDinoDig:               resolve(__dirname, 'portfolio/phenomblue-dino-dig/index.html'),
+        projectFantasticFutureMe:     resolve(__dirname, 'portfolio/phenomblue-fantastic-future-me/index.html'),
+        projectGenesis:               resolve(__dirname, 'portfolio/phenomblue-genesis/index.html'),
+        projectMoppetMashup:          resolve(__dirname, 'portfolio/phenomblue-moppet-mashup/index.html'),
+        projectMovieLotto:            resolve(__dirname, 'portfolio/phenomblue-movie-lotto/index.html'),
+        projectPage:                  resolve(__dirname, 'portfolio/phenomblue-page/index.html'),
+        projectWildKingdom:           resolve(__dirname, 'portfolio/phenomblue-wild-kingdom/index.html'),
       },
     }
   },

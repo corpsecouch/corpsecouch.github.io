@@ -24,6 +24,7 @@
     "@vitejs/plugin-vue": "^5.1.4",
     "sass": "^1.79.4",
     "vite": "^5.4.8",
-    "vite-plugin-require": "^1.2.14"
+    "vite-plugin-require": "^1.2.14",
+    "vite-plugin-sitemap": "^0.7.1"
   }
 }
