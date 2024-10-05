@@ -50,6 +50,7 @@ export default defineConfig({
       "@": resolve(__dirname, "./src"),
       "@data": resolve(__dirname, "./data"),
       "@assets": resolve(__dirname, "./assets"),
+      "@globals": resolve(__dirname, "./src/globals"),
       "@portfolio": resolve(__dirname, "./portfolio"),
       "@components": resolve(__dirname, "./components")
     }
