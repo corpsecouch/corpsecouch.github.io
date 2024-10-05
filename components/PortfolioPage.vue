@@ -117,10 +117,6 @@
       }
     }
 
-    #hero img {
-      width: 100%;
-    }
-
     #content {
       img {
         width: 100%;
@@ -214,9 +210,9 @@
     }
   }
 
-  #hero {
-    margin: 12rem 0 4rem 0;
-  }
+  #hero { margin: 12rem 0 4rem 0; }
+
+  #hero :slotted(img) { width: 100%; }
 
   .columned {
     margin: 4rem 0;
