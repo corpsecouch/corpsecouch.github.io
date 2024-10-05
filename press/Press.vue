@@ -32,10 +32,10 @@
 </template>
 
 <script>
-  import Subpage from '@/components/Subpage';
-  import NewsList from '@/components/NewsList';
-  import news from '@/data/news-coverage';
-  import companies from '@/data/companies';
+  import Subpage from '@components/Subpage';
+  import NewsList from '@components/NewsList';
+  import news from '@data/news-coverage';
+  import companies from '@data/companies';
 
   import _ from 'lodash';
 

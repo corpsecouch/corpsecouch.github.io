@@ -95,18 +95,18 @@
 <script>
   // https://www.bestfolios.com/portfolio/dougseidman
 
-  import Page from '/src/components/PageTemplate';
-  import Email from '/src/components/Email';
-  import SVGTwitter from '/src/components/SVGTwitter';
-  import SVGMedium from '/src/components/SVGMedium';
-  import SVGLinkedIn from '/src/components/SVGLinkedIn';
-  import SVGEmail from '/src/components/SVGEmail';
-  import SVGADPList from '/src/components/SVGADPList';
-  import SVGGithub from '/src/components/SVGGithub';
-  import AwardList from '/src/components/AwardList';
-  import awardsData from '/src/data/awards';
-  import NewsList from '/src/components/NewsList';
-  import newsData from '/src/data/news-coverage';
+  import Page from '@components/PageTemplate';
+  import Email from '@components/Email';
+  import SVGTwitter from '@components/SVGTwitter';
+  import SVGMedium from '@components/SVGMedium';
+  import SVGLinkedIn from '@components/SVGLinkedIn';
+  import SVGEmail from '@components/SVGEmail';
+  import SVGADPList from '@components/SVGADPList';
+  import SVGGithub from '@components/SVGGithub';
+  import AwardList from '@components/AwardList';
+  import awardsData from '@data/awards';
+  import NewsList from '@components/NewsList';
+  import newsData from '@data/news-coverage';
 
   import _ from 'lodash';
 
