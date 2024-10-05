@@ -5,7 +5,7 @@
 
 <script>
 
-  import Encryption from '/src/globals/encryption';
+  import Encryption from '@globals/encryption';
   import _ from 'lodash';
 
   export default {
