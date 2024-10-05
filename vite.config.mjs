@@ -16,7 +16,8 @@ export default defineConfig({
     vitePluginRequire.default(),
     Sitemap({ 
       hostname: 'https://jasonbejot.com/',
-      readable: true
+      readable: true,
+      exclude: [ '/404' ]
     })
   ],
 
@@ -43,6 +44,7 @@ export default defineConfig({
         projectMovieLotto:            resolve(__dirname, 'portfolio/phenomblue-movie-lotto/index.html'),
         projectPage:                  resolve(__dirname, 'portfolio/phenomblue-page/index.html'),
         projectWildKingdom:           resolve(__dirname, 'portfolio/phenomblue-wild-kingdom/index.html'),
+        notFound:                     resolve(__dirname, '404.html'),
       },
     }
   },

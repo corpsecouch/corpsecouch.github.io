@@ -60,10 +60,8 @@
 
     <section id="mentorship">
       <h2>Mentorship</h2>
-      <!--
       <section style="height: 598px; box-shadow: rgba(142, 151, 158, 0.15) 0px 4px 19px 0px; border-radius: 12px; overflow: hidden; width: 100%;"><iframe src="https://adplist.org/widgets/booking?src=jason-bejot" title="Mentorship Session" width="100%" height="100%" loading="lazy" style="border: 0px;"></iframe></section>
       <section style="padding: 16px; height: 496px; box-shadow: rgba(142, 151, 158, 0.15) 0px 4px 19px 0px; border-radius: 12px; overflow: hidden; width: 100%;"><iframe src="https://adplist.org/widgets/reviews?src=jason-bejot" title="All Reviews" width="100%" height="100%" loading="lazy" style="border: 0px;"></iframe></section>
-      -->
     </section>
 
     <section id="contact">

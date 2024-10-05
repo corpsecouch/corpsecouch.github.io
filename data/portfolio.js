@@ -25,7 +25,7 @@ const data = [
     description:  'Overhauling the mortgage top-of-funnel with conversational AI.',
     tags:         ['UI design', 'AI design', 'conversational design'],
     image:        require('@assets/portfolio/rocket/ironbear/thumb.png'),
-    url:          '/portfolio/rocket-ironbear.html'
+    url:          '/portfolio/rocket-ironbear/'
   },
 
   {
@@ -36,7 +36,7 @@ const data = [
     description:  'Connecting AIs from two of the world\'s largest companies; a world-first.',
     tags:         ['mobile design', 'voice design', 'multi-modal design', 'AI design', 'conversational design'],
     image:        require('@assets/portfolio/amazon/profile/thumb.png'),
-    url:          '/portfolio/amazon-profile.html',
+    url:          '/portfolio/amazon-profile/',
   },
 
   // {
@@ -86,7 +86,7 @@ const data = [
     description:  'Connecting AIs from two of the world\'s largest companies; a world-first.',
     tags:         ['voice design', 'multi-modal design', 'AI design', 'conversational design'],
     image:        require('@assets/portfolio/amazon/alexa-cortana/thumb.png'),
-    url:          '/portfolio/amazon-alexa-cortana.html',
+    url:          '/portfolio/amazon-alexa-cortana/',
   },
 
   {
@@ -96,7 +96,7 @@ const data = [
     description:  'Creating an award-winning enterprise design system.',
     tags:         ['design system'],
     image:        require('@assets/portfolio/disney/design-system/peek.png'),
-    url:          '/portfolio/disney-design-system.html',
+    url:          '/portfolio/disney-design-system/',
   },
 
   {
@@ -105,7 +105,7 @@ const data = [
     title:        'Movie Greenlight',
     description:  'Innovating how Disney greenlights movies.',
     image:        require('@assets/portfolio/disney/greenlight/peek.png'),
-    url:          '/portfolio/disney-greenlight.html',
+    url:          '/portfolio/disney-greenlight/',
   },
 
   {
@@ -115,7 +115,7 @@ const data = [
     description:  'Transforming how Disney Studios innovates.',
     tags:         ['r&d'],
     image:        require('@assets/portfolio/disney/incubator/peek.png'),
-    url:          '/portfolio/disney-incubator.html',
+    url:          '/portfolio/disney-incubator/',
   },
 
   {
@@ -126,7 +126,7 @@ const data = [
     description:  'Leading the VR conversation.',
     tags:         ['vr design', 'creative direction'],
     image:        require('@assets/portfolio/disney/vr/peek.png'),
-    url:          '/portfolio/disney-vr.html',
+    url:          '/portfolio/disney-vr/',
   },
 
   {
@@ -135,7 +135,7 @@ const data = [
     title:        'Movie Slate',
     description:  'Innovating how Disney plans and tracks their slate of upcoming movies.',
     image:        require('@assets/portfolio/disney/slate/peek.png'),
-    url:          '/portfolio/disney-slate.html',
+    url:          '/portfolio/disney-slate/',
   },
 
   {
@@ -145,7 +145,7 @@ const data = [
     description:  'A 3D, social space simulator.',
     tags:         ['game design', 'r&d', 'microsoft surface'],
     image:        require('@assets/portfolio/phenomblue/genesis/peek.png'),
-    url:          '/portfolio/phenomblue-genesis.html',
+    url:          '/portfolio/phenomblue-genesis/',
   },
 
   {
@@ -155,7 +155,7 @@ const data = [
     description:  'A groundbreaking adventure app that brings the wild to any situation',
     tags:         ['mobile design'],
     image:        require('@assets/portfolio/phenomblue/wild-kingdom/peek.png'),
-    url:          '/portfolio/phenomblue-wild-kingdom.html',
+    url:          '/portfolio/phenomblue-wild-kingdom/',
   },
 
   {
@@ -165,7 +165,7 @@ const data = [
     description:  'Social computing for learning and exploration.',
     tags:         ['microsoft surface'],
     image:        require('@assets/portfolio/phenomblue/dino-dig/peek.png'),
-    url:          '/portfolio/phenomblue-dino-dig.html',
+    url:          '/portfolio/phenomblue-dino-dig/',
   },
 
   {
@@ -175,7 +175,7 @@ const data = [
     description:  'Breaking down the "fifth wall" of reading and literature.',
     tags:         ['ar design', 'mobile design', 'r&d'],
     image:        require('@assets/portfolio/phenomblue/page/peek.png'),
-    url:          '/portfolio/phenomblue-page.html',
+    url:          '/portfolio/phenomblue-page/',
   },
 
   {
@@ -185,7 +185,7 @@ const data = [
     description:  'Social gaming in theaters.',
     tags:         ['design system', 'r&d'],
     image:        require('@assets/portfolio/phenomblue/movie-lotto/peek.png'),
-    url:          '/portfolio/phenomblue-movie-lotto.html',
+    url:          '/portfolio/phenomblue-movie-lotto/',
   },
 
   {
@@ -195,7 +195,7 @@ const data = [
     description:  'Encouraging kids to reach their Future Me.',
     tags:         ['public installation'],
     image:        require('@assets/portfolio/phenomblue/fantastic-future-me/peek.png'),
-    url:          '/portfolio/phenomblue-fantastic-future-me.html',
+    url:          '/portfolio/phenomblue-fantastic-future-me/',
   },
 
   {
@@ -205,7 +205,7 @@ const data = [
     description:  'A social, large-format interactive experience.',
     tags:         ['microsoft surface', 'public installation', 'r&d'],
     image:        require('@assets/portfolio/phenomblue/moppet-mashup/peek.png'),
-    url:          '/portfolio/phenomblue-moppet-mashup.html',
+    url:          '/portfolio/phenomblue-moppet-mashup/',
   },
 
   // {

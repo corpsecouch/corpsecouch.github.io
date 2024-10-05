@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import Page from 'components/PageTemplate'
+  import Page from '@components/PageTemplate'
 
   export default {
     name: 'FourOhFour',
