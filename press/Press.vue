@@ -79,22 +79,22 @@
   }
 
   #rocket h3 {
-    background-image: url('@/assets/rocket.png');
+    background-image: url('@assets/rocket.png');
     height: 64px;
   }
 
   #amazon h3 {
-    background-image: url('@/assets/amazon.png');
+    background-image: url('@assets/amazon.png');
     height: 64px;
   }
 
   #disney h3 {
-    background-image: url('@/assets/disney.png');
+    background-image: url('@assets/disney.png');
     height: 64px;
   }
 
   #phenomblue h3 {
-    background-image: url('@/assets/phenomblue.png');
+    background-image: url('@assets/phenomblue.png');
     height: 64px;
   }
 

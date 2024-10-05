@@ -4,10 +4,10 @@
     <template v-slot:title>P<span class="o">o</span>rtfolio</template>
 
     <section id="menu">
-      <a href="#rocket" alt="Rocket" class="rocket"><img src="@/assets/rocket.png"></a>
-      <a href="#amazon" alt="Amazon" class="amazon"><img src="@/assets/amazon.png"></a>
-      <a href="#disney" alt="Disney" class="disney"><img src="@/assets/disney.png"></a>
-      <a href="#phenomblue" alt="Phenomblue" class="phenomblue"><img src="@/assets/phenomblue.png"></a>
+      <a href="#rocket" alt="Rocket" class="rocket"><img src="@assets/rocket.png"></a>
+      <a href="#amazon" alt="Amazon" class="amazon"><img src="@assets/amazon.png"></a>
+      <a href="#disney" alt="Disney" class="disney"><img src="@assets/disney.png"></a>
+      <a href="#phenomblue" alt="Phenomblue" class="phenomblue"><img src="@assets/phenomblue.png"></a>
     </section>
 
     <!-- Rocket -->
@@ -260,7 +260,7 @@
 
   #rocket {
     h3 {
-      background-image: url('@/assets/rocket.png');
+      background-image: url('@assets/rocket.png');
       height: 64px;
     }
     .projects > p {
@@ -275,21 +275,21 @@
 
   #amazon {
     h3 {
-      background-image: url('@/assets/amazon.png');
+      background-image: url('@assets/amazon.png');
       height: 64px;
     }
   }
 
   #disney {
     h3 {
-      background-image: url('@/assets/disney.png');
+      background-image: url('@assets/disney.png');
       height: 64px;
     }
   }
 
   #phenomblue {
     h3 {
-      background-image: url('@/assets/phenomblue.png');
+      background-image: url('@assets/phenomblue.png');
       height: 64px;
     }
   }

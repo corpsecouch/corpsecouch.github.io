@@ -46,8 +46,8 @@
 @font-face {
   font-family: 'Mainstay';
   font-weight: normal;
-  src: url('/src/assets/fonts/Mainstay.otf'),
-        url('/src/assets/fonts/Mainstay.ttf');
+  src: url('@assets/fonts/Mainstay.otf'),
+        url('@assets/fonts/Mainstay.ttf');
 }
 
 

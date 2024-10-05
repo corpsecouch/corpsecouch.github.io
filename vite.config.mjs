@@ -49,7 +49,7 @@ export default defineConfig({
     alias: {
       "@": resolve(__dirname, "./src"),
       "@data": resolve(__dirname, "./data"),
-      "@assets": resolve(__dirname, "./src/assets"),
+      "@assets": resolve(__dirname, "./assets"),
       "@portfolio": resolve(__dirname, "./portfolio"),
       "@components": resolve(__dirname, "./components")
     }
