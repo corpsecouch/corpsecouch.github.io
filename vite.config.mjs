@@ -16,7 +16,6 @@ export default defineConfig({
     vitePluginRequire.default(),
     Sitemap({ 
       hostname: 'https://jasonbejot.com/',
-      extensions: ['html'],
       readable: true
     })
   ],
