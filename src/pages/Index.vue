@@ -140,8 +140,6 @@ data () {
 </script>
 
 <style scoped lang="css">
-
-
   h2 {
     font-family: 'Afacad Flux';
     letter-spacing: normal;
@@ -153,9 +151,7 @@ data () {
     margin: 0 0 1rem 0;
     border-bottom: dashed grey 1px;
 
-    & + p {
-      margin-top: 0;
-    }
+    & + p { margin-top: 0; }
   }
 
   main > section {
@@ -165,7 +161,18 @@ data () {
 
   p + ul { margin-top: 1.3rem; }
 
-  #name { margin: 12rem 0; }
+  .columns {
+    display: grid;
+    grid-auto-rows: 1fr;
+    .left { grid-column: left; }
+    .right { grid-column: right; }
+  }
+
+
+
+  /* *************** */
+  /* *** #about *** */
+  /* *************** */
 
   #about {
     img {
@@ -175,6 +182,12 @@ data () {
       margin-left: 1rem;
     }
   }
+
+
+
+  /* **************** */
+  /* *** #contact *** */
+  /* **************** */
 
   #contact {
     margin-top: 12rem;
@@ -187,25 +200,13 @@ data () {
       font-weight: normal;
       border: none;
     }
-  }
 
-  .columns {
-    display: grid;
-    grid-auto-rows: 1fr;
-    .left { grid-column: left; }
-    .right { grid-column: right; }
-  }
-
-  #contact {
     .columns {
       grid-template-columns: [left] 1fr [right] 1fr;
+      grid-gap: 1.5rem;
 
       /* max-width: small screen */
-      @media all and (max-width: 680px) {
-        grid-template-columns: [left right] auto;
-      }
-      
-      grid-gap: 1.5rem;
+      @media all and (max-width: 680px) { grid-template-columns: [left right] auto; }
 
       .left {
         display: flex;
@@ -229,18 +230,11 @@ data () {
     }
   }
 
-  #name {
-    margin-bottom: 0;
-    p { text-align: center; }
-  }
 
-  .menu {
-    margin-top: 3rem;
-    display: flex;
-    justify-content: center;
 
-    a { margin: 0 1.3rem; }
-  }
+  /* *************** */
+  /* *** #social *** */
+  /* *************** */
 
   #social {
     display: flex;
@@ -255,8 +249,16 @@ data () {
     }
   }
 
+
+
+  /* ************* */
+  /* *** #name *** */
+  /* ************* */
+
   #name {
     position: relative;
+    margin: 12rem 0;
+    /* p { text-align: center; } */
 
     h1 {
       position: relative;
@@ -285,14 +287,10 @@ data () {
       padding: 0.3rem;
 
       /* max-width: regular screen */
-      @media all and (max-width: 910px) {
-        right: 10%;
-      }
+      @media all and (max-width: 910px) { right: 10%; }
 
       /* max-width: small screen */
-      @media all and (max-width: 680px) {
-        right: 0;
-      }
+      @media all and (max-width: 680px) { right: 0; }
 
       /* max-width: xsmall screen */
       @media all and (max-width: 600px) {
@@ -304,34 +302,11 @@ data () {
     }
   }
 
-  #about .columns {
-    grid-template-columns: [left] 1fr [right] 0.7fr;
-    grid-gap: 2.5rem;
 
-    /* max-width: small screen */
-    @media all and (max-width: 680px) {
-      display: block;
-      .right { margin-top: 1.5rem; }
-    }
-    
 
-    #patents {
-      .number {
-        font-size: 0.7rem;
-        text-transform: uppercase;
-        margin-top: 0.25em;
-      }
-
-      .title { display: block; }
-
-      li + li { margin-top: 1rem; }
-    }
-  }
-
-  #about ul {
-    list-style: none;
-    margin: 0;
-  }
+  /* ******************* */
+  /* *** #mentorship *** */
+  /* ******************* */
 
   #mentorship {
     section + section {
