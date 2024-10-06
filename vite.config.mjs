@@ -9,7 +9,7 @@ import Sitemap from 'vite-plugin-sitemap'
 // https://vite.dev/guide/build.html#multi-page-app
 
 export default defineConfig({
-  mode: 'development',
+  // mode: 'development',
 
   plugins: [
     vue(),
