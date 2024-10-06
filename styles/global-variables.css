@@ -1,0 +1,102 @@
+/* *************** */
+/* *** imports *** */
+/* *************** */
+
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
+/* ***************** */
+/* *** variables *** */
+/* ***************** */
+
+:root {
+  --z-menu: 9999;
+  --content-width-max: 800px;
+  /* --screen-width-max: calc(var(--content-width-max) + 110px); */
+  --screen-width-max: 910px;
+
+  /* --screen-xsmall-max-width: 600px; */
+  /* --screen-small-max-width: 680px; */
+
+  /* --screen-regular-max-width: var(--screen-width-max); */
+  /* --screen-regular-max-width: 910px; */
+
+  /* --screen-large-max-width: var(--screen-width-max); */
+  /* --screen-large-max-width: 910px; */
+
+  --font-raleway-family: 'Raleway', sans-serif;
+  --font-raleway-regular: 400;
+
+  --color-background-light: #FDFDFD;
+  --color-background-dark: #1B1B1B;
+  --color-text-dark: #1b1b1b;
+  --color-text-light: #FFFFFF;
+  --color-darktext: rgba(51, 51, 51, 1);
+  --color-lighttext: rgba(255, 255, 255, 0.8);
+  --color-link: rgb(247, 72, 82);
+}
+
+
+
+/* ************* */
+/* *** fonts *** */
+/* ************* */
+
+@font-face {
+  font-family: 'Mainstay';
+  font-weight: normal;
+  src: url('@assets/fonts/Mainstay.otf'),
+        url('@assets/fonts/Mainstay.ttf');
+}
+
+
+/*$z-title: 999;*/
+/*$z-menu-button: 99999;*/
+/*$portfolio-offset: -4vh;*/
+
+
+/* *** mixins *** */
+
+/* screen sizes */
+/* @mixin screen-sm {
+  @media all and (max-width: 575px) { @content; }
+}
+
+@mixin screen-md {
+  @media all and (max-width: 768px) { @content; }
+}
+
+@mixin screen-lg {
+  @media all and (max-width: 991px) { @content; }
+}
+
+@mixin screen-xl {
+  @media all and (min-width: 992px) { @content; }
+} */
+
+
+/* *** fonts *** */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100;300;400;600;700&display=swap'); */
+
+
+/* *** colors *** */
+
+/* $color-grey: rgba(51, 51, 51, 0.8); */
+/* $color-background-grey: #d2d2d2; */
+/* $color-text-link: #26B0EB; */
+
+/* https://digitalsynopsis.com/design/2019-color-trends-worlds-most-popular-colors/ */
+/* $color-19-germany: #00ced1;
+$color-19-plasticpink: #ff1493;
+$color-19-protonpurple: #8a2be2;
+$color-19-korea: #2e8b57; */
+
+/* https://paletton.com/#uid=32k0u0kllllaAySfYr9qIfxwg9I */
+/* $color-primary: #7E9F35;
+$color-secondary: #A7383D;
+$color-tertiary: #562A72; */
