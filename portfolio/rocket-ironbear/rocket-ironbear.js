@@ -3,6 +3,8 @@ import App from './Rocket-Ironbear.vue'
 import VueGtag from 'vue-gtag'
 import {_isProd, _GtagID } from '@globals/vars'
 
+// https://launchpad.rocketmortgage.com/?isAiChat=true
+
 createApp(App)
 .use(VueGtag, {
     pageTrackerTemplate(to) {

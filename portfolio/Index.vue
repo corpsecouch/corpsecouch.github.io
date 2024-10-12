@@ -19,18 +19,20 @@
 
       <ul class="projects">
         <li class="project" v-for="p in portfolioData.rocket.projects" @click="gotoProject(p.url)">
-          <div class="left">
-            <img :src="p.image" class="rounded">
+          <span class="title">{{ p.title }}</span>
+          
+          <!-- <div class="product-image"> -->
+          <div :class="p.preview.type + '-image'">
+            <img :src="p.preview.image" class="rounded">
           </div>
-          <div class="right">
-            <span class="title">{{ p.title }}</span>
-            <span class="year">{{ p.year }}</span>
-            <span class="description">{{ p.description }}</span>
-            <ul class="tags" v-if="p.tags">
-              <li class="tag" v-for="tag in p.tags">{{ tag }}</li>
-            </ul>
-             <a :href="p.url" :title="p.title" class="link">Read the case study</a>
-          </div>
+
+          <span class="description">{{ p.description }}</span>
+
+          <ul class="tags" v-if="p.tags">
+            <li class="tag" v-for="tag in p.tags">{{ tag }}</li>
+          </ul>
+
+          <a :href="p.url" :title="p.title" class="link">Read the case study</a>
         </li>
       </ul>
 
@@ -56,18 +58,19 @@
       
       <ul class="projects">
         <li class="project" v-for="p in portfolioData.amazon.projects" @click="gotoProject(p.url)">
-          <div class="left">
-            <img :src="p.image">
+          <span class="title">{{ p.title }}</span>
+          
+          <div :class="p.preview.type + '-image'">
+            <img :src="p.preview.image" class="rounded">
           </div>
-          <div class="right">
-            <span class="title">{{ p.title }}</span>
-            <span class="year">{{ p.year }}</span>
-            <span class="description">{{ p.description }}</span>
-            <ul class="tags" v-if="p.tags">
-              <li class="tag" v-for="tag in p.tags">{{ tag }}</li>
-            </ul>
-            <a :href="p.url" :title="p.title" class="link">Read the case study</a>
-          </div>
+
+          <span class="description">{{ p.description }}</span>
+
+          <ul class="tags" v-if="p.tags">
+            <li class="tag" v-for="tag in p.tags">{{ tag }}</li>
+          </ul>
+
+          <a :href="p.url" :title="p.title" class="link">Read the case study</a>
         </li>
       </ul>
 
@@ -93,18 +96,19 @@
       
       <ul class="projects">
         <li class="project" v-for="p in portfolioData.disney.projects" @click="gotoProject(p.url)">
-          <div class="left">
-            <img :src="p.image" class="rounded">
+          <span class="title">{{ p.title }}</span>
+          
+          <div :class="p.preview.type + '-image'">
+            <img :src="p.preview.image" class="rounded">
           </div>
-          <div class="right">
-            <span class="title">{{ p.title }}</span>
-            <span class="year">{{ p.year }}</span>
-            <span class="description">{{ p.description }}</span>
-            <ul class="tags" v-if="p.tags">
-              <li class="tag" v-for="tag in p.tags">{{ tag }}</li>
-            </ul>
-            <a :href="p.url" :title="p.title" class="link">Read the case study</a>
-          </div>
+
+          <span class="description">{{ p.description }}</span>
+
+          <ul class="tags" v-if="p.tags">
+            <li class="tag" v-for="tag in p.tags">{{ tag }}</li>
+          </ul>
+
+          <a :href="p.url" :title="p.title" class="link">Read the case study</a>
         </li>
       </ul>
 
@@ -130,18 +134,19 @@
       
       <ul class="projects">
         <li class="project" v-for="p in portfolioData.phenomblue.projects" @click="gotoProject(p.url)">
-          <div class="left">
-            <img :src="p.image" class="rounded">
+          <span class="title">{{ p.title }}</span>
+          
+          <div :class="p.preview.type + '-image'">
+            <img :src="p.preview.image" class="rounded">
           </div>
-          <div class="right">
-            <span class="title">{{ p.title }}</span>
-            <span class="year">{{ p.year }}</span>
-            <span class="description">{{ p.description }}</span>
-            <ul class="tags" v-if="p.tags">
-              <li class="tag" v-for="tag in p.tags">{{ tag }}</li>
-            </ul>
-            <a :href="p.url" :title="p.title" class="link">Check out this project</a>
-          </div>
+
+          <span class="description">{{ p.description }}</span>
+
+          <ul class="tags" v-if="p.tags">
+            <li class="tag" v-for="tag in p.tags">{{ tag }}</li>
+          </ul>
+
+          <a :href="p.url" :title="p.title" class="link">Check out this project</a>
         </li>
       </ul>
 
@@ -352,40 +357,29 @@
     list-style: none;
 
     .project {
-      display: grid;
-      grid-template-columns: [left] 33% [right] 1fr;
-      grid-column-gap: 2rem;
 
       &:hover { cursor: pointer; }
 
       + .project { margin-top: 3.5rem; }
 
-      .left {
-        grid-column: left;
-        object-fit: contain;
-
-        > img {
+      .product-image, .title-image {
+        img {
           width: 100%;
+          margin-top: 1rem;
 
-          &.rounded {
+          /* &.rounded {
             -webkit-border-radius: 16px;
             -moz-border-radius: 16px;
             border-radius: 16px;
             box-shadow: 0 8px 12px -7px black;
-          }
+          } */
         }
       }
 
-      .right {
-        grid-column: right;
-        /* > * {
-          + * { margin-top: 1rem; }
-        } */
+      .product-image img {
+        padding: 3rem;
+        /* background-color: lightgreen; */
       }
-
-      /* .right > * {
-        + * { margin-top: 1rem; }
-      } */
 
       .title {
         display: block;

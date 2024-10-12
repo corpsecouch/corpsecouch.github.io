@@ -82,9 +82,5 @@
     grid-auto-rows: 1fr;
     grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
     grid-gap: 3.5rem 1.5rem;
-
-    /*& + div {
-
-    }*/
   }
 </style>
