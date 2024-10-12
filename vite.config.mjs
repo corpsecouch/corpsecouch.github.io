@@ -17,7 +17,9 @@ export default defineConfig({
     Sitemap({ 
       hostname: 'https://jasonbejot.com/',
       readable: true,
-      exclude: [ '/404' ]
+      exclude: [ '/404' ],
+      generateRobotsTxt: true,
+      changefreq: 'weekly'
     })
   ],
 
