@@ -27,7 +27,7 @@
       </section>
 
       <section id="challenge" v-if="!this.$slots.content && !!this.$slots.challenge">
-        <h3>Challenge</h3>
+        <!-- <h3>Challenge</h3> -->
         <div><slot name="challenge"></slot></div>
       </section>
 
