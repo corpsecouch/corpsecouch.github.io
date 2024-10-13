@@ -26,33 +26,33 @@
         <slot name="content"></slot>
       </section>
 
-      <section id="challenge" class="columned" v-if="!this.$slots.content && !!this.$slots.challenge">
-        <h3>The Challenge</h3>
+      <section id="challenge" v-if="!this.$slots.content && !!this.$slots.challenge">
+        <h3>Challenge</h3>
         <div><slot name="challenge"></slot></div>
       </section>
 
-      <section id="role" class="columned" v-if="!this.$slots.content && !!this.$slots.role">
-        <h3>My role</h3>
+      <section id="role" v-if="!this.$slots.content && !!this.$slots.role">
+        <h3>My Role</h3>
         <div><slot name="role"></slot></div>
       </section>
 
-      <section id="outcome" class="columned" v-if="!this.$slots.content && !!this.$slots.outcome">
-        <h3>The Outcome</h3>
+      <section id="outcome" v-if="!this.$slots.content && !!this.$slots.outcome">
+        <h3>Outcome</h3>
         <div><slot name="outcome"></slot></div>
       </section>
 
-      <section id="process" class="columned" v-if="!this.$slots.content && !!this.$slots.process">
-        <h3>My Process</h3>
+      <section id="process" v-if="!this.$slots.content && !!this.$slots.process">
+        <h3>Process</h3>
         <div><slot name="process"></slot></div>
       </section>
 
-      <section id="awards" class="columned left" v-if="!!this.$slots.awards">
-        <h3>awards</h3>
+      <section id="awards" v-if="!!this.$slots.awards">
+        <h3>Awards</h3>
         <slot name="awards"></slot>
       </section>
 
-      <section id="news" class="columned right" v-if="!!this.$slots.news">
-        <h3>in the news</h3>
+      <section id="news" v-if="!!this.$slots.news">
+        <h3>Press</h3>
         <slot name="news"></slot>
       </section>
 
@@ -102,7 +102,7 @@
     #title {
       /* margin-bottom: 12rem; */
       margin: 0;
-      padding: 12rem 0;
+      padding: 12rem 0 6rem 0;
       background-color: whitesmoke;
       background-image: linear-gradient(0deg, var(--color-background-light) 5%, transparent 120%);
 
@@ -157,8 +157,20 @@
   /* not imported */
 
   h3 {
-    font-size: 1.2rem;
+    /* font-size: 1.2rem;
+    font-weight: 500; */
+
+    font-family: 'Afacad Flux';
+    letter-spacing: normal;
     font-weight: 500;
+    text-transform: none;
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: normal;
+    margin: 0 0 1rem 0;
+    border-bottom: dashed grey 1px;
+
+    & + p { margin-top: 0; }
   }
 
   #contact {
@@ -229,9 +241,19 @@
     padding: 0 3rem;
   }
 
-  .columned {
+  /* .columned {
     margin: 4rem 0;
+  } */
+
+  section {
+    margin: 0;
+    + section {
+      margin: 0 0 4rem 0;
+    }
   }
+  /* section + section {
+    margin: 4rem 0 0 0;
+  } */
 
   /*.columned {
     margin: 4rem;

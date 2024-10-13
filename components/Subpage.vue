@@ -44,6 +44,7 @@
 
   header {
     position: fixed;
+    z-index: var(--z-menu);
     width: 100%;
     height: 3rem;
     top: 0;
