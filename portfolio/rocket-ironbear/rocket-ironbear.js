@@ -9,7 +9,7 @@ createApp(App)
 .use(VueGtag, {
     pageTrackerTemplate(to) {
         return {
-            page_title: document.title,
+            page_title: 'Portfolio: Ironbear',
             page_path: to.path
         }
     },

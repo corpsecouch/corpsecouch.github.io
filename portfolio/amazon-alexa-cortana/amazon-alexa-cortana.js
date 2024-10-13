@@ -7,7 +7,7 @@ createApp(App)
 .use(VueGtag, {
     pageTrackerTemplate(to) {
         return {
-            page_title: document.title,
+            page_title: 'Portfolio: Alexa + Cortana',
             page_path: to.path
         }
     },

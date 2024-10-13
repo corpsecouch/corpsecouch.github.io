@@ -7,7 +7,7 @@ createApp(App)
 .use(VueGtag, {
     pageTrackerTemplate(to) {
         return {
-            page_title: document.title,
+            page_title: 'Portfolio: Fantastic Future Me',
             page_path: to.path
         }
     },
