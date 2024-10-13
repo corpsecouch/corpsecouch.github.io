@@ -3,12 +3,12 @@
 
     <template v-slot:title>P<span class="o">o</span>rtfolio</template>
 
-    <section id="menu">
+    <!-- <section id="menu">
       <a href="#rocket" alt="Rocket" class="rocket"><img src="@assets/rocket.png"></a>
       <a href="#amazon" alt="Amazon" class="amazon"><img src="@assets/amazon.png"></a>
       <a href="#disney" alt="Disney" class="disney"><img src="@assets/disney.png"></a>
       <a href="#phenomblue" alt="Phenomblue" class="phenomblue"><img src="@assets/phenomblue.png"></a>
-    </section>
+    </section> -->
 
     <!-- Rocket -->
 
@@ -18,15 +18,14 @@
       <p>As the first Director of Conversational AI Design for Rocket Companies, I not only established the practice for the company I also cemented conversational AI as a company priority - a core part of it's business model and long term vision – ushering in it's investments into LLMs and generative AI.</p>
 
       <ul class="projects">
-        <li class="project" v-for="p in portfolioData.rocket.projects" @click="gotoProject(p.url)">
-          <span class="title">{{ p.title }}</span>
-          
-          <!-- <div class="product-image"> -->
+        <li class="project" v-for="p in portfolioData.rocket.projects" @click="gotoProject(p.url)" :style="{'background-color': p.preview.color}">
           <div :class="p.preview.type + '-image'">
             <img :src="p.preview.image" class="rounded">
           </div>
 
-          <span class="description">{{ p.description }}</span>
+          <span class="title">{{ p.title }}</span>
+
+          <span class="description">{{ p.year }} &mdash; {{ p.description }}</span>
 
           <ul class="tags" v-if="p.tags">
             <li class="tag" v-for="tag in p.tags">{{ tag }}</li>
@@ -57,14 +56,14 @@
       <p>At Amazon, I was focused on all things Alexa identity, especially biometrics. I led the design of voice, modal, and device experiences for Alexa; starting with voice recognition then expanding to face recognition, authentication, authorization, profiles, and establishing the persoanlization guidelines. These are features used or available across every Echo device and has influenced every personalized experience.</p>
       
       <ul class="projects">
-        <li class="project" v-for="p in portfolioData.amazon.projects" @click="gotoProject(p.url)">
-          <span class="title">{{ p.title }}</span>
-          
+        <li class="project" v-for="p in portfolioData.amazon.projects" @click="gotoProject(p.url)" :style="{'background-color': p.preview.color}">
           <div :class="p.preview.type + '-image'">
             <img :src="p.preview.image" class="rounded">
           </div>
 
-          <span class="description">{{ p.description }}</span>
+          <span class="title">{{ p.title }}</span>
+
+          <span class="description">{{ p.year }} &mdash; {{ p.description }}</span>
 
           <ul class="tags" v-if="p.tags">
             <li class="tag" v-for="tag in p.tags">{{ tag }}</li>
@@ -95,14 +94,14 @@
       <p>At Disney, I was leading the UX design of the Studio's digital transformation of it's enterprise tools and processes. I also went deep into emerging technologies and R&D, especially design-driven innovation.</p>
       
       <ul class="projects">
-        <li class="project" v-for="p in portfolioData.disney.projects" @click="gotoProject(p.url)">
-          <span class="title">{{ p.title }}</span>
-          
+        <li class="project" v-for="p in portfolioData.disney.projects" @click="gotoProject(p.url)" :style="{'background-color': p.preview.color}">
           <div :class="p.preview.type + '-image'">
             <img :src="p.preview.image" class="rounded">
           </div>
 
-          <span class="description">{{ p.description }}</span>
+          <span class="title">{{ p.title }}</span>
+
+          <span class="description">{{ p.year }} &mdash; {{ p.description }}</span>
 
           <ul class="tags" v-if="p.tags">
             <li class="tag" v-for="tag in p.tags">{{ tag }}</li>
@@ -133,14 +132,14 @@
       <p>Phenomblue was a digital brand experience agency. What does that even mean? It means I created digital experiences for brands including Microsoft, Gatorade, McDonalds, TUMS, and more.</p>
       
       <ul class="projects">
-        <li class="project" v-for="p in portfolioData.phenomblue.projects" @click="gotoProject(p.url)">
-          <span class="title">{{ p.title }}</span>
-          
+        <li class="project" v-for="p in portfolioData.phenomblue.projects" @click="gotoProject(p.url)" :style="{'background-color': p.preview.color}">
           <div :class="p.preview.type + '-image'">
             <img :src="p.preview.image" class="rounded">
           </div>
 
-          <span class="description">{{ p.description }}</span>
+          <span class="title">{{ p.title }}</span>
+
+          <span class="description">{{ p.year }} &mdash; {{ p.description }}</span>
 
           <ul class="tags" v-if="p.tags">
             <li class="tag" v-for="tag in p.tags">{{ tag }}</li>
@@ -255,7 +254,7 @@
   #rocket {
     h3 {
       background-image: url('@assets/rocket.png');
-      height: 64px;
+      /* height: 64px; */
     }
     .projects > p {
       display: inline-block;
@@ -270,21 +269,21 @@
   #amazon {
     h3 {
       background-image: url('@assets/amazon.png');
-      height: 64px;
+      /* height: 64px; */
     }
   }
 
   #disney {
     h3 {
       background-image: url('@assets/disney.png');
-      height: 64px;
+      /* height: 64px; */
     }
   }
 
   #phenomblue {
     h3 {
       background-image: url('@assets/phenomblue.png');
-      height: 64px;
+      /* height: 64px; */
     }
   }
 
@@ -318,8 +317,6 @@
     display: flex;
     justify-content: center;
 
-    /* //a { margin: 0 1.3rem; } */
-
     a { margin: 0; }
 
     .rocket, .disney, .phenomblue, .amazon { img { height: 42px; } }
@@ -335,20 +332,18 @@
       text-indent: 100%;
       overflow: hidden;
       white-space: nowrap;
+      background-size: contain;
+      height: 84px;
     }
   }
 
-  .news, .awards { margin-top: 4rem; }
+  .awards { margin-top: 4rem; }
+  .news { margin-top: 6rem; }
 
   h3 {
     font-size: 1.5rem;
     + p { padding: 1rem 0 4rem 0; }
   }
-
-  /*#portfolio {
-    padding-top: 4rem;
-    margin-top: 8rem; 
-  }*/
 
   .o { letter-spacing: -0.55rem; }
 
@@ -357,15 +352,19 @@
     list-style: none;
 
     .project {
+      padding: 3rem;
+      background-color: whitesmoke;
+      background-image: linear-gradient(0deg, var(--color-background-light) 5%, transparent 120%);
 
       &:hover { cursor: pointer; }
 
-      + .project { margin-top: 3.5rem; }
+      /* + .project { margin-top: 3.5rem; } */
+      + .project { margin-top: 4rem; }
 
       .product-image, .title-image {
         img {
           width: 100%;
-          margin-top: 1rem;
+          /* margin-top: 1rem; */
 
           /* &.rounded {
             -webkit-border-radius: 16px;
@@ -377,14 +376,17 @@
       }
 
       .product-image img {
-        padding: 3rem;
-        /* background-color: lightgreen; */
+        /* padding: 3rem; */
+        /* background-image: linear-gradient(10deg, rgba(255, 255, 255, 1) 10%, transparent 50%, transparent); */
+        /* background-image: linear-gradient(6deg, var(--color-background-light), transparent 120%); */
       }
 
       .title {
         display: block;
-        font-size: 1.2rem;
+        /* font-size: 1.2rem; */
+        font-size: 1.4rem;
         font-weight: 500;
+        margin-top: 1rem;
         /* &:hover { cursor: pointer; } */
       }
 

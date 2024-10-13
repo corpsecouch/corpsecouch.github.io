@@ -26,7 +26,8 @@ const data = [
     tags:         ['UI design', 'AI design', 'conversational design'],
     preview:      {
       image:  require('@assets/portfolio/rocket/ironbear/thumb.png'),
-      type:   'product'
+      type:   'product',
+      color:  'lightcoral'
     },
     url:          '/portfolio/rocket-ironbear/'
   },
@@ -40,7 +41,8 @@ const data = [
     tags:         ['mobile design', 'voice design', 'multi-modal design', 'AI design', 'conversational design'],
     preview:      {
       image:  require('@assets/portfolio/amazon/profile/thumb.png'),
-      type:   'product'
+      type:   'product',
+      color:  'lightskyblue'
     },
     url:          '/portfolio/amazon-profile/',
   },
@@ -93,7 +95,8 @@ const data = [
     tags:         ['voice design', 'multi-modal design', 'AI design', 'conversational design'],
     preview:      {
       image:  require('@assets/portfolio/amazon/alexa-cortana/thumb.png'),
-      type:   'product'
+      type:   'product',
+      color:  'lightsalmon',
     },
     url:          '/portfolio/amazon-alexa-cortana/',
   },
@@ -106,7 +109,8 @@ const data = [
     tags:         ['design system'],
     preview:      {
       image:  require('@assets/portfolio/disney/design-system/preview.png'),
-      type:   'product'
+      type:   'product',
+      color:  'blueviolet',
     },
     url:          '/portfolio/disney-design-system/',
   },
@@ -118,7 +122,8 @@ const data = [
     description:  'Innovating how Disney greenlights movies.',
     preview:      {
       image:  require('@assets/portfolio/disney/greenlight/preview.png'),
-      type:   'product'
+      type:   'product',
+      color:  'lightblue',
     },
     url:          '/portfolio/disney-greenlight/',
   },
@@ -145,7 +150,8 @@ const data = [
     tags:         ['vr design', 'creative direction'],
     preview:      {
       image:  require('@assets/portfolio/disney/vr/thumb.png'),
-      type:   'product'
+      type:   'product',
+      color:  'chartreuse',
     },
     url:          '/portfolio/disney-vr/',
   },
@@ -183,7 +189,8 @@ const data = [
     tags:         ['mobile design'],
     preview:      {
       image:  require('@assets/portfolio/phenomblue/wild-kingdom/preview.png'),
-      type:   'product'
+      type:   'product',
+      color:  'wheat',
     },
     url:          '/portfolio/phenomblue-wild-kingdom/',
   },
