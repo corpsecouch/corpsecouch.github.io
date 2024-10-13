@@ -5,10 +5,11 @@
     <template v-slot:company>Phenomblue</template>
 
     <template v-slot:hero>
-      <YouTubeVideo src="https://www.youtube.com/embed/JkaGrZDk_RY"></YouTubeVideo>
+      <img src="@assets/portfolio/phenomblue/genesis/preview.png">
     </template>
 
     <template v-slot:content>
+      <YouTubeVideo src="https://www.youtube.com/embed/JkaGrZDk_RY"></YouTubeVideo>
       <p>Genesis is a 3D, real-time, multi-person space simulator created specifically for the Microsoft Surface 1.0.</p>
       <p>Debuted in 2009 at the South by Southwest (SXSW) Interactive Festival</p>
       <p>Featured chroma-depth 3D with custom designed 3D glasses</p>

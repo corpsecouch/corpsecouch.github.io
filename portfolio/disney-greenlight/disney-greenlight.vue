@@ -1,9 +1,12 @@
 <template>
-  <PortfolioPage nda="true">
+  <PortfolioPage nda="true" pcolor="lightblue">
     <template v-slot:title>Creative Affairs Story Tracking &amp; Library</template>
     <template v-slot:company>Walt Disney Studios</template>
     <template v-slot:year>2017</template>
-    <template v-slot:hero><img src="@assets/portfolio/disney/greenlight/full.png"></template>
+    <template v-slot:hero>
+      <!-- <img src="@assets/portfolio/disney/greenlight/full.png"> -->
+      <img src="@assets/portfolio/disney/greenlight/preview.png">
+    </template>
 
     <!--<template v-slot:hero>
       <img src="./full.png">

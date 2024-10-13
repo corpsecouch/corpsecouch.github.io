@@ -1,12 +1,13 @@
 <template>
-  <PortfolioPage nda="true">
+  <PortfolioPage nda="true" pcolor="lightskyblue">
     <template v-slot:title>Alexa Profile</template>
     <template v-slot:subtitle>The heart of personalization.</template>
     <template v-slot:company>Amazon</template>
     <template v-slot:year>2019</template>
 
     <template v-slot:hero>
-      <img src="@assets/portfolio/amazon/profile/profile.png">
+      <!-- <img src="@assets/portfolio/amazon/profile/profile.png"> -->
+       <img src="@assets/portfolio/amazon/profile/thumb.png">
     </template>
 
     <template v-slot:challenge>

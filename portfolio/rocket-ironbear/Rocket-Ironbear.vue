@@ -1,8 +1,11 @@
 <template>
-  <PortfolioPage>
+  <PortfolioPage pcolor="lightcoral">
     <template v-slot:title>Conversational Lead Funnel</template>
     <template v-slot:year>2023</template>
     <template v-slot:company>Rocket Mortgage</template>
+    <template v-slot:hero>
+      <img src="@assets/portfolio/rocket/ironbear/thumb.png">
+    </template>
 
     <template v-slot:challenge>
       <p>Every Rocket Mortgage client starts in the same place, filling out one of two digital lead forms then talking with a mortgage banker. The primary lead form, however, ends at a frustrating dead end while the client unexpectedly receives a phone call. The hypothesis is this experience was the primary driver for low top-of-funnel success rates. The challenge was to <strong>measurably improve the lead form experience without negatively impacting lead flow.</strong></p>

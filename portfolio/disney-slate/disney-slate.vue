@@ -3,6 +3,9 @@
     <template v-slot:title>Movie Slate</template>
     <template v-slot:company>Walt Disney Studios</template>
     <template v-slot:year>2016</template>
+    <template v-slot:hero>
+      <img src="@assets/portfolio/disney/slate/preview.png">
+    </template>
 
     <!--<template v-slot:hero>
       <img src="./full.png">

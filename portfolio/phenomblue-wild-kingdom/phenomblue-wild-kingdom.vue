@@ -1,14 +1,15 @@
 <template>
-  <PortfolioPage>
+  <PortfolioPage pcolor="wheat">
     <template v-slot:title>My Wild Kingdom</template>
     <template v-slot:year>2013</template>
     <template v-slot:company>Phenomblue</template>
 
     <template v-slot:hero>
-      <YouTubeVideo src="https://www.youtube.com/embed/HoZxKh5Q3CY"></YouTubeVideo>
+      <img src="@assets/portfolio/phenomblue/wild-kingdom/preview.png">
     </template>
 
     <template v-slot:content>
+      <YouTubeVideo src="https://www.youtube.com/embed/HoZxKh5Q3CY"></YouTubeVideo>
       <p>Mutual of Omaha's My Wild Kingdom is a groundbreaking adventure app that brings the wild to any situation. Whatever you can imagine, My Wild Kingdom makes it a reality. Hold a giraffe in your hand, put a giant elephant on the freeway or sneak an alligator into your family portrait. Like the animal kingdom itself, it can adapt to almost any environment.</p>
     </template>
 

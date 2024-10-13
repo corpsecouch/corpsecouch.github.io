@@ -1,11 +1,12 @@
 <template>
-  <PortfolioPage nda="true">
+  <PortfolioPage nda="true" pcolor="lightsalmon">
     <template v-slot:title>Alexa + Cortana</template>
     <template v-slot:subtitle>The world's first AI assistant interoperability between two big-tech competitors.</template>
     <template v-slot:year>2017 - 2018</template>
     <template v-slot:company>Amazon</template>
     <template v-slot:hero>
-      <img src="@assets/portfolio/amazon/alexa-cortana/alexa-cortana.png">
+      <!-- <img src="@assets/portfolio/amazon/alexa-cortana/alexa-cortana.png"> -->
+      <img src="@assets/portfolio/amazon/alexa-cortana/thumb.png">
     </template>
 
     <template v-slot:challenge>

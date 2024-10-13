@@ -3,6 +3,9 @@
     <template v-slot:title>Innovation Incubator</template>
     <template v-slot:company>Walt Disney Studios</template>
     <template v-slot:year>2017</template>
+    <template v-slot:hero>
+      <img src="@assets/portfolio/disney/incubator/preview.png">
+    </template>
 
     <!--<template v-slot:hero>
       <img src="./full.png">

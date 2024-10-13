@@ -5,10 +5,11 @@
     <template v-slot:company>Phenomblue</template>
 
     <template v-slot:hero>
-      <YouTubeVideo src="https://www.youtube.com/embed/_l6rD1AM4qo"></YouTubeVideo>
+      <img src="@assets/portfolio/phenomblue/movie-lotto/preview.png">
     </template>
 
     <template v-slot:content>
+      <YouTubeVideo src="https://www.youtube.com/embed/_l6rD1AM4qo"></YouTubeVideo>
       <p>Movie Lotto is a casual, multi-user, multi-screen gaming platform for movie theaters to provide next-level interactive entertainment before a movie begins.</p>
     </template>
 

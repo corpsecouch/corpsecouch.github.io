@@ -1,10 +1,12 @@
 <template>
-  <PortfolioPage nda="true">
-    <!--<template v-slot:title>Big Hero 6 VR</template>-->
+  <PortfolioPage nda="true" pcolor="chartreuse">
     <template v-slot:title>Filmmaking for VR</template>
     <template v-slot:subtitle>Pushing the boundaries of theatrical storytelling</template>
     <template v-slot:year>2014</template>
     <template v-slot:company>Walt Disney Studios</template>
+    <template v-slot:hero>
+      <img src="@assets/portfolio/disney/vr/thumb.png">
+    </template>
 
     <!--<template v-slot:content>
       <p>In 2014, virtual reality (VR) was at an inflection point. The technology was mature enough and had gained enough attention from a-list filmmakers to consider it a serious storytelling medium. Disney Studios created VR technology and experiences to showcase the potential of VR for theatrical-level storytelling.</p>
@@ -14,9 +16,9 @@
       <p>I worked closely with filmmakers, VR experts, studio executives, engineers and my design team to deliver a groundbreaking, fully immersive, multi-platform VR experience across. I also got hands-on with research and interaction design.</p>
     </template>-->
 
-    <template v-slot:hero>
-      <img src="@assets/portfolio/disney/vr/vr.png">
-    </template>
+      <!-- <template v-slot:hero>
+        <img src="@assets/portfolio/disney/vr/vr.png">
+      </template> -->
 
     <template v-slot:challenge>
       <p>The challenge was to educate and inspire A-list filmmakers and studio executives on the potential of VR and how it could be used to tell theatrical-level stories.</p>

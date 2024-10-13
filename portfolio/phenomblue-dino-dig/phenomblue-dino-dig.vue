@@ -3,12 +3,16 @@
     <template v-slot:title>Operation: Dino Dig</template>
     <template v-slot:year>2012</template>
     <template v-slot:company>Phenomblue</template>
-
     <template v-slot:hero>
-      <YouTubeVideo src="https://www.youtube.com/embed/UGvu78DYris"></YouTubeVideo>
+      <img src="@assets/portfolio/phenomblue/dino-dig/preview.png">
     </template>
 
+    <!-- <template v-slot:hero>
+      <YouTubeVideo src="https://www.youtube.com/embed/UGvu78DYris"></YouTubeVideo>
+    </template> -->
+
     <template v-slot:content>
+      <YouTubeVideo src="https://www.youtube.com/embed/UGvu78DYris"></YouTubeVideo>
       <p>Operation: Dino Dig is a social learning and exploration experience. Utilizing Microsoft Surface 2.0, people use real-world tools to interact with the digital experience and with each other.</p>
     </template>
 

@@ -5,10 +5,11 @@
     <template v-slot:year>2009</template>
 
     <template v-slot:hero>
-      <YouTubeVideo src="https://www.youtube.com/embed/FqURhpK_aCM"></YouTubeVideo>
+      <img src="@assets/portfolio/phenomblue/moppet-mashup/peek.png">
     </template>
 
     <template v-slot:content>
+      <YouTubeVideo src="https://www.youtube.com/embed/FqURhpK_aCM"></YouTubeVideo>
       <p>A large-format interactive social experience, leveraging Microsoft Surface 1.0, for the 2009 Big Omaha conference.</p>
     </template>
 

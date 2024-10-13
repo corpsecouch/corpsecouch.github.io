@@ -1,7 +1,10 @@
 <template>
-  <Subpage class="work widthConstrained">
+  <Subpage class="work">
 
-      <section id="title">
+      <section id="title" :style="{'background-color': pcolor}">
+        <section id="hero" v-if="!!this.$slots.hero">
+          <slot name="hero"></slot>
+        </section>
         <div class="wrapper">
           <h1><slot name="title"></slot></h1>
           <p v-if="!!this.$slots.subtitle"><slot name="subtitle"></slot></p>
@@ -11,9 +14,9 @@
       </section>
 
       <!-- might be ok to get rid of hero -->
-      <section id="hero" v-if="!!this.$slots.hero">
+      <!-- <section id="hero" v-if="!!this.$slots.hero">
         <slot name="hero"></slot>
-      </section>
+      </section> -->
 
       <section id="nda" v-if="nda">
         <p>I've limited the details of this public case study due to the sensitive nature of the project and the confidentiality of <slot name="company"></slot>.</p>
@@ -75,7 +78,7 @@
       Email
     },
 
-    props: ['nda'],
+    props: ['nda', 'pcolor'],
 
     computed: {
       columns: function() {
@@ -88,16 +91,24 @@
 </script>
 
 <style scoped lang="css">
+  #page {
+    padding-top: 0rem;
+  }
+
   /* imported */
   /* needs cleaned up! */
 
   #page.work {
     #title {
-      margin-bottom: 12rem;
+      /* margin-bottom: 12rem; */
+      margin: 0;
+      padding: 12rem 0;
+      background-color: whitesmoke;
+      background-image: linear-gradient(0deg, var(--color-background-light) 5%, transparent 120%);
 
       * {
-        margin-top: 0;
-        margin-bottom: 1rem;
+        /* margin-top: 0;
+        margin-bottom: 1rem; */
         text-align: center;
 
         &:last-child {
@@ -107,12 +118,13 @@
 
       #year, #company {
         font-size: 0.9rem;
-        display: inline;
+        /* display: inline; */
+        display: block;
         padding-top: 1rem;
       }
 
       #year {
-        margin-left: 0.5rem;
+        /* margin-left: 0.5rem; */
         display: block;
       }
     }
@@ -210,9 +222,12 @@
     }
   }
 
-  #hero { margin: 12rem 0 4rem 0; }
+  /* #hero { margin: 12rem 0 4rem 0; } */
 
-  #hero :slotted(img) { width: 100%; }
+  #hero :slotted(img) {
+    width: 100%;
+    padding: 0 3rem;
+  }
 
   .columned {
     margin: 4rem 0;
@@ -270,8 +285,8 @@
   }
 
   #title {
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
 
     .nav {
       flex-shrink: 0;

@@ -242,6 +242,10 @@
 
 <style scoped lang="css">
 
+  Subpage {
+    margin-top: 6rem;
+  }
+
   h2 {
     font-family: 'Mainstay';
     letter-spacing: normal;
