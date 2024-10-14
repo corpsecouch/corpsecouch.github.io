@@ -19,6 +19,9 @@
       </section> -->
 
       <section id="nda" v-if="nda">
+        <div class="icon">
+          <SVGHidden />
+        </div>
         <p>I've limited the details of this public case study due to the sensitive nature of the project and the confidentiality of <slot name="company"></slot>.</p>
       </section>
 
@@ -68,6 +71,7 @@
   import Subpage from '@components/Subpage'
   import Caret from '@components/Caret'
   import Email from '@components/Email'
+  import SVGHidden from '@components/SVGHidden'
 
   export default {
     name: 'PortfolioPage',
@@ -75,7 +79,8 @@
     components: {
       Subpage,
       Caret,
-      Email
+      Email,
+      SVGHidden
     },
 
     props: ['nda', 'pcolor'],
@@ -223,14 +228,43 @@
   }
 
   #nda {
-    text-align: center;
-    margin: 6rem auto;
+    /* text-align: center; */
+    /* margin: 6rem auto; */
+
+    /* background-color: var(--color-background-dark); */
+    /* border-radius: 8px; */
+
+    /* display: grid; */
+    /* grid-auto-rows: 1fr; */
+    /* grid-gap: 1.5rem; */
+    /* grid-template-columns: auto auto; */
+
+    /* padding: 0.5rem 1rem; */
+
+
+
+    background-color: var(--color-background-dark);
+    border-radius: 8px;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: auto auto;
+    padding: 1rem;
+    margin: 6rem;
+    text-align: left;
+
+
+    .icon {
+      width: 2.5rem;
+      display: flex;
+    }
+
     p {
-      background-color: var(--color-background-dark);
-      border-radius: 8px;
+      /* background-color: var(--color-background-dark);
+      border-radius: 8px; */
       color: var(--color-lighttext);
-      display: block;
-      padding: 0.5rem 1rem;
+      /* display: block; */
+      /* padding: 0.5rem 1rem; */
+      margin: 0;
     }
   }
 
