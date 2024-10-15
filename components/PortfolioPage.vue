@@ -13,9 +13,15 @@
         </div>
       </section>
 
-      <!-- might be ok to get rid of hero -->
-      <!-- <section id="hero" v-if="!!this.$slots.hero">
-        <slot name="hero"></slot>
+      <!-- <section id="callouts">
+        <div class="press">
+          <span class="count"></span>
+          <span class="description">Articles</span>
+        </div>
+        <div class="awards">
+          <span class="count"></span>
+          <span class="description">Awards</span>
+        </div>
       </section> -->
 
       <section id="nda" v-if="nda">

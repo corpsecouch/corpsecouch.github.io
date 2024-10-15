@@ -17,6 +17,11 @@
       <h3>Rocket Companies</h3>
       <p>As the first Director of Conversational AI Design for Rocket Companies, I not only established the practice for the company I also cemented conversational AI as a company priority - a core part of it's business model and long term vision – ushering in it's investments into LLMs and generative AI.</p>
 
+      <Callouts
+        :pressTotal="portfolioData.rocket.news.total"
+        pressURL="/press/#rocket"
+        :awardsTotal="portfolioData.rocket.awards.length" />
+
       <ul class="projects">
         <li class="project" v-for="p in portfolioData.rocket.projects" @click="gotoProject(p.url)" :style="{'background-color': p.preview.color}">
           <div :class="p.preview.type + '-image'">
@@ -55,6 +60,11 @@
       <h3>Amazon</h3>
       <p>At Amazon, I was focused on all things Alexa identity, especially biometrics. I led the design of voice, modal, and device experiences for Alexa; starting with voice recognition then expanding to face recognition, authentication, authorization, profiles, and establishing the persoanlization guidelines. These are features used or available across every Echo device and has influenced every personalized experience.</p>
       
+      <Callouts
+        :pressTotal="portfolioData.amazon.news.total"
+        pressURL="/press/#amazon"
+        :awardsTotal="portfolioData.amazon.awards.length" />
+
       <ul class="projects">
         <li class="project" v-for="p in portfolioData.amazon.projects" @click="gotoProject(p.url)" :style="{'background-color': p.preview.color}">
           <div :class="p.preview.type + '-image'">
@@ -93,6 +103,11 @@
       <h3>Walt Disney Studios</h3>
       <p>At Disney, I was leading the UX design of the Studio's digital transformation of it's enterprise tools and processes. I also went deep into emerging technologies and R&D, especially design-driven innovation.</p>
       
+      <Callouts
+        :pressTotal="portfolioData.disney.news.total"
+        pressURL="/press/#disney"
+        :awardsTotal="portfolioData.disney.awards.length" />
+
       <ul class="projects">
         <li class="project" v-for="p in portfolioData.disney.projects" @click="gotoProject(p.url)" :style="{'background-color': p.preview.color}">
           <div :class="p.preview.type + '-image'">
@@ -131,6 +146,11 @@
       <h3>Phenomblue</h3>
       <p>Phenomblue was a digital brand experience agency. What does that even mean? It means I created digital experiences for brands including Microsoft, Gatorade, McDonalds, TUMS, and more.</p>
       
+      <Callouts
+        :pressTotal="portfolioData.phenomblue.news.total"
+        pressURL="/press/#phenomblue"
+        :awardsTotal="portfolioData.phenomblue.awards.length" />
+
       <ul class="projects">
         <li class="project" v-for="p in portfolioData.phenomblue.projects" @click="gotoProject(p.url)" :style="{'background-color': p.preview.color}">
           <div :class="p.preview.type + '-image'">
@@ -175,6 +195,7 @@
   import NewsList from '@components/NewsList';
   import AwardList from '@components/AwardList';
   import awardsData from '@data/awards';
+  import Callouts from '@components/Callouts.vue';
 
   import _ from 'lodash';
 
@@ -184,7 +205,8 @@
     components: {
       Subpage,
       NewsList,
-      AwardList
+      AwardList,
+      Callouts
     },
 
     methods: {
@@ -242,8 +264,8 @@
 
 <style scoped lang="css">
 
-  Subpage {
-    margin-top: 6rem;
+  #callouts {
+    margin-top: 1.3rem;
   }
 
   h2 {
@@ -346,7 +368,8 @@
 
   h3 {
     font-size: 1.5rem;
-    + p { padding: 1rem 0 4rem 0; }
+    margin-bottom: 0;
+    /* + p { padding: 1rem 0 4rem 0; } */
   }
 
   .o { letter-spacing: -0.55rem; }

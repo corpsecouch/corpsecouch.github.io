@@ -3,7 +3,7 @@
   <div class="item">
 
     <div class="icon">
-      <SVGAward />
+      <SVGAwardOriginal />
     </div>
 
     <div class="content">
@@ -28,11 +28,11 @@
 </template>
 
 <script>
-  import SVGAward from '@components/SVGAward';
+  import SVGAwardOriginal from '@components/SVGAwardOriginal';
 
   export default {
     name: 'AwardItem',
-    components: { SVGAward },
+    components: { SVGAwardOriginal },
     props: [ 'url' ]
   }
 </script>
