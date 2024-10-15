@@ -30,6 +30,7 @@ export default defineConfig({
       input: {
         main:                         resolve(__dirname, 'index.html'),
         press:                        resolve(__dirname, 'press/index.html'),
+        awards:                       resolve(__dirname, 'awards/index.html'),
         portfolio:                    resolve(__dirname, 'portfolio/index.html'),
         projectIronbear:              resolve(__dirname, 'portfolio/rocket-ironbear/index.html'),
         projectProfile:               resolve(__dirname, 'portfolio/amazon-profile/index.html'),

@@ -47,15 +47,17 @@
 
     <section id="press">
       <h2>Press</h2>
-      <p>I know of at least {{ news.total }} articles that cover my work. Here's a random sample:</p>
+      <p>I know of at least <a href="/press/">{{ news.total }} articles</a> that cover my work. Here's a random sample:</p>
       <NewsList :data="news.data"></NewsList>
-      <p><a class="more-link" href="/press/" alt="See all the articles">See all {{ news.total }} articles</a></p>
+      <p><a class="more-link" href="/press/" alt="See all the articles">See all the articles</a></p>
     </section>
 
     <section id="awards">
       <h2>Awards</h2>
-      <p>I've received {{ awards.total }} awards for my work. Here's a big list of them:</p>
+      <!-- <p>I've received {{ awards.total }} awards for my work. Here's a big list of them:</p> -->
+      <p>I've received <a href="/awards/">{{ awards.total }} awards</a> for my work. Here's a few random ones.:</p>
       <AwardList :data="awards.data"></AwardList>
+      <p><a class="more-link" href="/awards/" alt="See all my awards">See all my awards</a></p>
     </section>
 
     <section id="mentorship">
@@ -128,7 +130,8 @@ data () {
   return {
     awards: {
       total: awardsData.length,
-      data: _.orderBy(awardsData, o => { return o.date.year; }, ['desc'])
+      // data: _.orderBy(awardsData, o => { return o.date.year; }, ['desc'])
+      data: _.sampleSize(_.orderBy(awardsData, o => { return o.date.year; }, ['desc']), 3)
     },
     news: {
       total: newsData.length,

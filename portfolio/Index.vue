@@ -20,7 +20,8 @@
       <Callouts
         :pressTotal="portfolioData.rocket.news.total"
         pressURL="/press/#rocket"
-        :awardsTotal="portfolioData.rocket.awards.length" />
+        :awardsTotal="portfolioData.rocket.awards.length"
+        awardsURL="/awards/#rocket" />
 
       <ul class="projects">
         <li class="project" v-for="p in portfolioData.rocket.projects" @click="gotoProject(p.url)" :style="{'background-color': p.preview.color}">
@@ -40,16 +41,16 @@
         </li>
       </ul>
 
-      <div class="awards" v-if="portfolioData.rocket.awards.length">
+      <!-- <div class="awards" v-if="portfolioData.rocket.awards.length">
         <p>I received {{ portfolioData.rocket.awards.length }} award{{ portfolioData.rocket.awards.length > 1 ? 's' : '' }} for my Rocket work:</p>
         <AwardList :data="portfolioData.rocket.awards"></AwardList>
-      </div>
+      </div> -->
 
-      <div class="news" v-if="portfolioData.rocket.news.total">
+      <!-- <div class="news" v-if="portfolioData.rocket.news.total">
         <p>There are at least {{ portfolioData.rocket.news.total }} articles about my work at Rocket. These are the most recent:</p>
         <NewsList :data="portfolioData.rocket.news.data"></NewsList>
          <a class="more-link" href="/press/#rocket" alt="See all the articles">See all the articles</a>
-      </div>
+      </div> -->
       
     </div>
 
@@ -63,7 +64,8 @@
       <Callouts
         :pressTotal="portfolioData.amazon.news.total"
         pressURL="/press/#amazon"
-        :awardsTotal="portfolioData.amazon.awards.length" />
+        :awardsTotal="portfolioData.amazon.awards.length"
+        awardsURL="/awards/#amazon" />
 
       <ul class="projects">
         <li class="project" v-for="p in portfolioData.amazon.projects" @click="gotoProject(p.url)" :style="{'background-color': p.preview.color}">
@@ -83,16 +85,16 @@
         </li>
       </ul>
 
-      <div class="awards" v-if="portfolioData.amazon.awards.length">
+      <!-- <div class="awards" v-if="portfolioData.amazon.awards.length">
         <p>I received {{ portfolioData.amazon.awards.length }} award{{ portfolioData.amazon.awards.length > 1 ? 's' : '' }} for my Amazon work:</p>
         <AwardList :data="portfolioData.amazon.awards"></AwardList>
-      </div>
+      </div> -->
 
-      <div class="news" v-if="portfolioData.amazon.news.total">
+      <!-- <div class="news" v-if="portfolioData.amazon.news.total">
         <p>There are at least {{ portfolioData.amazon.news.total }} articles about my work at Amazon. These are the most recent:</p>
         <NewsList :data="portfolioData.amazon.news.data"></NewsList>
         <a class="more-link" href="/press/#amazon" alt="See all the articles">See all the articles</a>
-      </div>
+      </div> -->
 
     </div>
 
@@ -106,7 +108,8 @@
       <Callouts
         :pressTotal="portfolioData.disney.news.total"
         pressURL="/press/#disney"
-        :awardsTotal="portfolioData.disney.awards.length" />
+        :awardsTotal="portfolioData.disney.awards.length"
+        awardsURL="/awards/#disney" />
 
       <ul class="projects">
         <li class="project" v-for="p in portfolioData.disney.projects" @click="gotoProject(p.url)" :style="{'background-color': p.preview.color}">
@@ -126,16 +129,16 @@
         </li>
       </ul>
 
-      <div class="awards" v-if="portfolioData.disney.awards.length">
+      <!-- <div class="awards" v-if="portfolioData.disney.awards.length">
         <p>I received {{ portfolioData.disney.awards.length }} award{{ portfolioData.disney.awards.length > 1 ? 's' : '' }} for my Disney work:</p>
         <AwardList :data="portfolioData.disney.awards"></AwardList>
-      </div>
+      </div> -->
 
-      <div class="news" v-if="portfolioData.disney.news.total">
+      <!-- <div class="news" v-if="portfolioData.disney.news.total">
         <p>There are at least {{ portfolioData.disney.news.total }} articles about my work at Disney. These are the most recent:</p>
         <NewsList :data="portfolioData.disney.news.data"></NewsList>
         <a class="more-link" href="/press/#disney" alt="See all the articles">See all the articles</a>
-      </div>
+      </div> -->
 
     </div>
 
@@ -149,7 +152,8 @@
       <Callouts
         :pressTotal="portfolioData.phenomblue.news.total"
         pressURL="/press/#phenomblue"
-        :awardsTotal="portfolioData.phenomblue.awards.length" />
+        :awardsTotal="portfolioData.phenomblue.awards.length"
+        awardsURL="/awards/#phenomblue" />
 
       <ul class="projects">
         <li class="project" v-for="p in portfolioData.phenomblue.projects" @click="gotoProject(p.url)" :style="{'background-color': p.preview.color}">
@@ -169,16 +173,16 @@
         </li>
       </ul>
 
-      <div class="awards" v-if="portfolioData.phenomblue.awards.length">
+      <!-- <div class="awards" v-if="portfolioData.phenomblue.awards.length">
         <p>I received {{ portfolioData.phenomblue.awards.length }} award{{ portfolioData.phenomblue.awards.length > 1 ? 's' : '' }} for my Phenomblue work:</p>
         <AwardList :data="portfolioData.phenomblue.awards"></AwardList>
-      </div>
+      </div> -->
 
-      <div class="news" v-if="portfolioData.phenomblue.news.total">
+      <!-- <div class="news" v-if="portfolioData.phenomblue.news.total">
         <p>There are at least {{ portfolioData.phenomblue.news.total }} articles about my work at Phenomblue. These are the most recent:</p>
         <NewsList :data="portfolioData.phenomblue.news.data"></NewsList>
         <a class="more-link" href="/press/#phenomblue" alt="See all the articles">See all the articles</a>
-      </div>
+      </div> -->
 
     </div>
 

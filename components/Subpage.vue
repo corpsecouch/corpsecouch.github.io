@@ -2,8 +2,9 @@
   <Page class="widthConstrained">
 
     <header>
-      <a href="/#about" alt="About">About</a>
+      <!-- <a href="/#about" alt="About">About</a> -->
       <a href="/portfolio/" alt="Portfolio">Portfolio</a>
+      <a href="/awards/" alt="Awards">Awards</a>
       <span class="name"><a href="/">Jason<br />Bejot</a></span>
       <a href="/press/" alt="Press">Press</a>
       <a href="/#contact" alt="Contact">Contact</a>

@@ -1,29 +1,30 @@
 <template>
   <Subpage>
     
-    <template v-slot:title>Press Coverage</template>
+    <template v-slot:title>Awards</template>
 
-    <div id="news-list">
-      <p>My work has been featured or mentioned in at least <strong>{{ newsData.total }} articles</strong> (that I know of).</p>
+    <p>Me or my work has been recognized with <strong>{{ data.total }} awards</strong>.</p>
 
-      <section id="rocket" v-if="newsData.rocket.length">
-        <h3>Rocket News</h3>
-        <NewsList :data="newsData.rocket"></NewsList>
+    <div id="awards-list">
+      
+      <section id="rocket" v-if="data.rocket.length">
+        <h3>Rocket Awards</h3>
+        <AwardList :data="data.rocket"></AwardList>
       </section>
 
-      <section id="amazon" v-if="newsData.amazon.length">
-        <h3>Amazon News</h3>
-        <NewsList :data="newsData.amazon"></NewsList>
+      <section id="amazon" v-if="data.amazon.length">
+        <h3>Amazon Awards</h3>
+        <AwardList :data="data.amazon"></AwardList>
       </section>
 
-      <section id="disney" v-if="newsData.disney.length">
-        <h3>Disney News</h3>
-        <NewsList :data="newsData.disney"></NewsList>
+      <section id="disney" v-if="data.disney.length">
+        <h3>Disney Awards</h3>
+        <AwardList :data="data.disney"></AwardList>
       </section>
 
-      <section id="phenomblue" v-if="newsData.phenomblue.length">
-        <h3>Phenomblue News</h3>
-        <NewsList :data="newsData.phenomblue"></NewsList>
+      <section id="phenomblue" v-if="data.phenomblue.length">
+        <h3>Phenomblue Awards</h3>
+        <AwardList :data="data.phenomblue"></AwardList>
       </section>
 
     </div>
@@ -33,32 +34,32 @@
 
 <script>
   import Subpage from '@components/Subpage';
-  import NewsList from '@components/NewsList';
-  import news from '@data/news-coverage';
+  import AwardList from '@components/AwardList';
+  import awards from '@data/awards';
   import companies from '@data/companies';
 
   import _ from 'lodash';
 
-  const name = 'PressPage';
+  const name = 'AwardsPage';
 
   export default {
     name: name,
 
     components: {
       Subpage,
-      NewsList
+      AwardList
     },
 
     data () {
-      let newsData = {};
+      let data = {};
       _.each(companies, (value, key) => {
-        newsData[value.slug] = _.filter(news, o => { return o.company.slug == value.slug })
+        data[value.slug] = _.filter(awards, o => { return o.company.slug == value.slug })
       });
 
-      newsData.total = news.length;
+      data.total = awards.length;
 
       return {
-        newsData: newsData
+        data: data
       }
     }
   }
@@ -105,7 +106,7 @@
     margin-top: 3rem;
   }
 
-  #news-list {
+  #awards-list {
     margin-top: 4rem;
 
     > section {

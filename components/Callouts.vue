@@ -9,7 +9,7 @@
     
     <div class="awards" v-if="awardsTotal">
       <span class="count">{{ awardsTotal }}</span>
-      <span class="description">Award{{ awardsTotal > 1 ? 's' : '' }}</span>
+      <a class="description" :href="awardsURL">Award{{ awardsTotal > 1 ? 's' : '' }}</a>
     </div>
 
     <!-- <div class="press" v-if="pressTotal">
@@ -49,7 +49,8 @@
     props: [
       'pressTotal',
       'pressURL',
-      'awardsTotal'
+      'awardsTotal',
+      'awardsURL'
     ]
   }
 </script>
