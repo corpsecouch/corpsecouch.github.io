@@ -1,5 +1,4 @@
 <template>
-  <!-- <Page class="widthConstrained"> -->
   <Page>
 
     <header>
@@ -17,7 +16,7 @@
 </template>
 
 <script>
-  import Page from './PageTemplate'
+  import Page from '@components/PageTemplate'
 
   export default {
     name: 'Subpage',

@@ -105,15 +105,12 @@
 
   #page.work {
     #title {
-      /* margin-bottom: 12rem; */
       margin: 0;
       padding: 12rem 0 6rem 0;
       background-color: whitesmoke;
       background-image: linear-gradient(0deg, var(--color-background-light) 5%, transparent 120%);
 
       * {
-        /* margin-top: 0;
-        margin-bottom: 1rem; */
         text-align: center;
 
         &:last-child {
@@ -123,13 +120,11 @@
 
       #year, #company {
         font-size: 0.9rem;
-        /* display: inline; */
         display: block;
         padding-top: 1rem;
       }
 
       #year {
-        /* margin-left: 0.5rem; */
         display: block;
       }
     }
@@ -138,10 +133,6 @@
       img {
         width: 100%;
         max-height: 440px;
-        /*background-color: $color-text-dark;
-        background-repeat: no-repeat;
-        background-position: center;
-        object-fit: none;*/
       }
 
       * + p {
@@ -162,9 +153,6 @@
   /* not imported */
 
   h3 {
-    /* font-size: 1.2rem;
-    font-weight: 500; */
-
     font-family: 'Afacad Flux';
     letter-spacing: normal;
     font-weight: 500;
@@ -228,21 +216,6 @@
   }
 
   #nda {
-    /* text-align: center; */
-    /* margin: 6rem auto; */
-
-    /* background-color: var(--color-background-dark); */
-    /* border-radius: 8px; */
-
-    /* display: grid; */
-    /* grid-auto-rows: 1fr; */
-    /* grid-gap: 1.5rem; */
-    /* grid-template-columns: auto auto; */
-
-    /* padding: 0.5rem 1rem; */
-
-
-
     background-color: var(--color-background-dark);
     border-radius: 8px;
     display: grid;
@@ -259,25 +232,15 @@
     }
 
     p {
-      /* background-color: var(--color-background-dark);
-      border-radius: 8px; */
       color: var(--color-lighttext);
-      /* display: block; */
-      /* padding: 0.5rem 1rem; */
       margin: 0;
     }
   }
-
-  /* #hero { margin: 12rem 0 4rem 0; } */
 
   #hero :slotted(img) {
     width: 100%;
     padding: 0 3rem;
   }
-
-  /* .columned {
-    margin: 4rem 0;
-  } */
 
   section {
     margin: 0;
@@ -285,34 +248,6 @@
       margin: 4rem 0 0 0;
     }
   }
-  /* section + section {
-    margin: 4rem 0 0 0;
-  } */
-
-  /*.columned {
-    margin: 4rem;
-    display: grid;
-    grid-auto-rows: 1fr;
-    grid-gap: 1.5rem;
-    grid-template-columns: [left] 8rem [right] auto;
-
-    @include screen-small {
-      display: block;
-    }
-
-    h3 {
-      grid-column: left;
-      text-align: right;
-
-      @include screen-small {
-        text-align: left;
-      }
-    }
-
-    div {
-      grid-column: right;
-    }
-  }*/
 
   #news-awards {
     margin: 0 0 8rem 0;
@@ -325,10 +260,6 @@
 
     &.double {
       grid-template-columns: [left] 1fr [right] 1fr;
-
-      /* @include screen-small {
-        grid-template-columns: [left right] auto;
-      } */
     }
 
     &.single {
@@ -341,9 +272,6 @@
   }
 
   #title {
-    /* display: flex;
-    justify-content: space-between; */
-
     .nav {
       flex-shrink: 0;
       flex-grow: 0;
