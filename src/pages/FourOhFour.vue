@@ -1,5 +1,5 @@
 <template>
-  <Page>
+  <Page class="widthConstrained">
     <section class="content">
       <h1>Not Found!</h1>
     </section>

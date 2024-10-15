@@ -1,7 +1,8 @@
 <template>
   <Subpage class="work">
 
-      <section id="title" :style="{'background-color': pcolor}">
+    <section id="title" :style="{'background-color': pcolor}">
+      <div class="widthConstrained">
         <section id="hero" v-if="!!this.$slots.hero">
           <slot name="hero"></slot>
         </section>
@@ -11,19 +12,10 @@
           <span id="company"><slot name="company"></slot></span>
           <span id="year"><slot name="year"></slot></span>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- <section id="callouts">
-        <div class="press">
-          <span class="count"></span>
-          <span class="description">Articles</span>
-        </div>
-        <div class="awards">
-          <span class="count"></span>
-          <span class="description">Awards</span>
-        </div>
-      </section> -->
-
+    <div class="widthConstrained">
       <section id="nda" v-if="nda">
         <div class="icon">
           <SVGHidden />
@@ -69,6 +61,8 @@
         <p>Want to talk about this project?</p>
         <p><Email /></p>
       </section>
+
+    </div>
 
   </Subpage>
 </template>
@@ -288,7 +282,7 @@
   section {
     margin: 0;
     + section {
-      margin: 0 0 4rem 0;
+      margin: 4rem 0 0 0;
     }
   }
   /* section + section {

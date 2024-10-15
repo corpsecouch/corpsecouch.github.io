@@ -1,5 +1,5 @@
 <template>
-  <Subpage>
+  <Subpage class="widthConstrained">
 
     <template v-slot:title>P<span class="o">o</span>rtfolio</template>
 

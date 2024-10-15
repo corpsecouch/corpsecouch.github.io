@@ -1,8 +1,8 @@
 <template>
-  <Page class="widthConstrained">
+  <!-- <Page class="widthConstrained"> -->
+  <Page>
 
     <header>
-      <!-- <a href="/#about" alt="About">About</a> -->
       <a href="/portfolio/" alt="Portfolio">Portfolio</a>
       <a href="/awards/" alt="Awards">Awards</a>
       <span class="name"><a href="/">Jason<br />Bejot</a></span>
