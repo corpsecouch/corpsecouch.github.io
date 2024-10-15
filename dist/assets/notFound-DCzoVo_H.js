@@ -1,1 +1,0 @@
-import{_ as s,P as n,a as t,w as a,r as c,o as r,b as o,g as p,i as _,h as l}from"./analytics-C6t-eCUL.js";const u={name:"FourOhFour",components:{Page:n}},i=o("section",{class:"content"},[o("h1",null,"Not Found!")],-1);function m(f,h,g,P,$,x){const e=c("Page");return r(),t(e,null,{default:a(()=>[i]),_:1})}const d=s(u,[["render",m]]);p(d).use(_,l("404")).mount("#app");
