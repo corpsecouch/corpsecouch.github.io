@@ -24,6 +24,14 @@
       <p>Dive into some of these projects on my <a href="/portfolio/">portfolio</a>.</p>
     </section>
 
+    <section id="awards">
+      <h2>Recognition</h2>
+      <!-- <p>I've received {{ awards.total }} awards for my work. Here's a big list of them:</p> -->
+      <p>I've received <a href="/awards/">{{ awards.total }} awards</a> for my work. Here's a few random ones.:</p>
+      <AwardList :data="awards.data"></AwardList>
+      <p><a class="more-link" href="/awards/" alt="See all my awards">See all my awards</a></p>
+    </section>
+
     <section id="about">
       <h2>Bio</h2>
       <!--<p>I'm an experience design and product leader with a background in computer science, innovation, and entreprenuership with 19 years of professional leadership experience envisioning the future, crafting strategies, and delivering experiences.</p>-->
@@ -50,14 +58,6 @@
       <p>I know of at least <a href="/press/">{{ news.total }} articles</a> that cover my work. Here's a random sample:</p>
       <NewsList :data="news.data"></NewsList>
       <p><a class="more-link" href="/press/" alt="See all the articles">See all the articles</a></p>
-    </section>
-
-    <section id="awards">
-      <h2>Awards</h2>
-      <!-- <p>I've received {{ awards.total }} awards for my work. Here's a big list of them:</p> -->
-      <p>I've received <a href="/awards/">{{ awards.total }} awards</a> for my work. Here's a few random ones.:</p>
-      <AwardList :data="awards.data"></AwardList>
-      <p><a class="more-link" href="/awards/" alt="See all my awards">See all my awards</a></p>
     </section>
 
     <section id="mentorship">

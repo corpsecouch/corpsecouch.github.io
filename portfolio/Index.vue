@@ -407,7 +407,7 @@
       }
 
       .product-image img {
-        /* padding: 3rem; */
+        padding: 3rem;
         /* background-image: linear-gradient(10deg, rgba(255, 255, 255, 1) 10%, transparent 50%, transparent); */
         /* background-image: linear-gradient(6deg, var(--color-background-light), transparent 120%); */
       }
@@ -456,7 +456,7 @@
     }
   }
 
-  .news, .awards {
+  /* .news, .awards {
     .more-link {
       margin-top: 2rem;
       display: block;
@@ -465,6 +465,6 @@
     p { margin-bottom: 2rem; }
 
     strong { font-weight: 600; }
-  }
+  } */
 
 </style>

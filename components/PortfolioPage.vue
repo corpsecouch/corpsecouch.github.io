@@ -252,9 +252,9 @@
     background-color: var(--color-background-dark);
     border-radius: 8px;
     display: grid;
-    grid-gap: 1rem;
+    grid-gap: 1.5rem;
     grid-template-columns: auto auto;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     margin: 6rem;
     text-align: left;
 
