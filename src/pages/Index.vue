@@ -27,7 +27,7 @@
     <section id="awards">
       <h2>Recognition</h2>
       <!-- <p>I've received {{ awards.total }} awards for my work. Here's a big list of them:</p> -->
-      <p>I've received <a href="/awards/">{{ awards.total }} awards</a> for my work. Here's a few random ones.:</p>
+      <p>I've received <a href="/awards/">{{ awards.total }} awards</a> for my work. Here's a few random ones:</p>
       <AwardList :data="awards.data"></AwardList>
       <p><a class="more-link" href="/awards/" alt="See all my awards">See all my awards</a></p>
     </section>
