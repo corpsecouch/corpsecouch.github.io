@@ -20,6 +20,11 @@
     background-color: whitesmoke;
     margin-bottom: 3rem;
     padding: 2rem 2rem 1.5rem 2rem;
+
+    /* max-width: xsmall screen */
+    @media all and (max-width: 600px) {
+      padding: 1rem;
+    }
   }
 
   img {

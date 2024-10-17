@@ -173,9 +173,9 @@ data () {
 
 
 
-  /* *************** */
+  /* ************** */
   /* *** #about *** */
-  /* *************** */
+  /* ************** */
 
   #about {
     img {
@@ -183,6 +183,14 @@ data () {
       float: right;
       border-radius: 10px;
       margin-left: 1rem;
+
+      /* max-width: xsmall screen */
+      @media all and (max-width: 600px) {
+        float: none;
+        width: 100%;
+        margin-top: 1rem;
+        margin-left: 0;
+      }
     }
   }
 
@@ -261,6 +269,12 @@ data () {
   #name {
     position: relative;
     margin: 12rem 0;
+
+    /* max-width: xsmall screen */
+    @media all and (max-width: 600px) {
+      margin-bottom: 0;
+    }
+
     /* p { text-align: center; } */
 
     h1 {
@@ -276,6 +290,7 @@ data () {
       @media all and (max-width: 600px) {
         left: 0;
         top: -4rem;
+        margin-bottom: 2rem;
       }
     }
 
@@ -297,10 +312,13 @@ data () {
 
       /* max-width: xsmall screen */
       @media all and (max-width: 600px) {
-        right: 0;
+        /* right: 0;
         width: 10rem;
         top: auto;
-        bottom: -2rem;
+        bottom: -2rem; */
+        position: relative;
+        display: block;
+        margin: auto;
       }
     }
   }

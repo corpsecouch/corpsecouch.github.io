@@ -85,5 +85,8 @@
     grid-auto-rows: 1fr;
     grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
     grid-gap: 3.5rem 1.5rem;
+
+    /* max-width: xsmall screen */
+    @media all and (max-width: 600px) { display: block; }
   }
 </style>

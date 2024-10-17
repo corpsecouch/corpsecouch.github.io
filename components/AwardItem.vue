@@ -55,6 +55,7 @@
 
   .icon {
     width: 2.5rem;
+    flex-shrink: 0;
   }
 
   .context {

@@ -103,6 +103,10 @@
   /* imported */
   /* needs cleaned up! */
 
+  h1 {
+    word-wrap: break-word;
+  }
+  
   #page.work {
     #title {
       margin: 0;
@@ -168,7 +172,7 @@
 
   #contact {
     text-align: center;
-    margin: 8rem;
+    margin: 8rem 0;
   }
 
   #navs {
@@ -211,9 +215,9 @@
     }
   }
 
-  #content {
+  /* #content {
     margin: 0 4rem 4rem 4rem;
-  }
+  } */
 
   #nda {
     background-color: var(--color-background-dark);
@@ -225,10 +229,22 @@
     margin: 6rem;
     text-align: left;
 
+    /* max-width: xsmall screen */
+    @media all and (max-width: 600px) {
+      display: block;
+      margin: 3rem 0;
+    }
+
 
     .icon {
       width: 2.5rem;
       display: flex;
+
+      /* max-width: xsmall screen */
+      @media all and (max-width: 600px) {
+        margin: auto;
+        padding-bottom: 1rem;
+      }
     }
 
     p {

@@ -389,20 +389,15 @@
 
       &:hover { cursor: pointer; }
 
+      /* max-width: xsmall screen */
+      @media all and (max-width: 600px) { padding: 1.5rem; }
+
       /* + .project { margin-top: 3.5rem; } */
       + .project { margin-top: 4rem; }
 
       .product-image, .title-image {
         img {
           width: 100%;
-          /* margin-top: 1rem; */
-
-          /* &.rounded {
-            -webkit-border-radius: 16px;
-            -moz-border-radius: 16px;
-            border-radius: 16px;
-            box-shadow: 0 8px 12px -7px black;
-          } */
         }
       }
 
@@ -410,6 +405,9 @@
         padding: 3rem;
         /* background-image: linear-gradient(10deg, rgba(255, 255, 255, 1) 10%, transparent 50%, transparent); */
         /* background-image: linear-gradient(6deg, var(--color-background-light), transparent 120%); */
+
+        /* max-width: xsmall screen */
+        @media all and (max-width: 600px) { padding: 0; }
       }
 
       .title {
