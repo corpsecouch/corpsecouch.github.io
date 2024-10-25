@@ -268,6 +268,9 @@
 
 <style scoped lang="css">
 
+/* https://css-irl.info/css-halftone-patterns/ */
+/* https://leanrada.com/notes/pure-css-halftone/ */
+
   #callouts {
     margin-top: 1.3rem;
   }

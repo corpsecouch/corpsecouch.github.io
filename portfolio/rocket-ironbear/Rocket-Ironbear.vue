@@ -11,6 +11,10 @@
       <p>Every Rocket Mortgage client starts in the same place, filling out one of two digital lead forms then talking with a mortgage banker. The primary lead form, however, ends at a frustrating dead end while the client unexpectedly receives a phone call. The hypothesis is this experience was the primary driver for low top-of-funnel success rates. The challenge was to <strong>measurably improve the lead form experience without negatively impacting lead flow.</strong></p>
     </template>
 
+    <!-- <template v-slot:role>
+      <p>Flibbity flim-flam.</p>
+    </template> -->
+
     <template v-slot:process>
       <h4>Validate Assumptions</h4>
       <p>We assumed people clients didn't like the dead-end and the disjointed experience of receiving a phone call from a mortgage banker within seconds of filling out a form. We also assumed most clients would prefer a chat experience with a mortgage banker versus a phone call. So, we asked clients what they wanted to do at the end of the form, get a call or chat. We ran this "smoke test" for two weeks on a slice of traffic. The results strongly indicated <strong>clients at the end of the lead form preferred chatting versus getting a phone call.</strong></p>
