@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import App from './pages/FourOhFour.vue'
+import App from './FourOhFour.vue'
 import VueGtag from 'vue-gtag'
 import config from '@globals/analytics'
 

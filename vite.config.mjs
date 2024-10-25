@@ -35,7 +35,7 @@ const pages = [
   {
     name: 'press',
     filename: 'press/index.html',
-    entry: '/press/press.js',
+    entry: '/src/press/press.js',
     data: {
       title: 'Press'
     }
@@ -44,7 +44,7 @@ const pages = [
   {
     name: 'awards',
     filename: 'awards/index.html',
-    entry: '/awards/awards.js',
+    entry: '/src/awards/awards.js',
     data: {
       title: 'Awards'
     }
@@ -53,7 +53,7 @@ const pages = [
   {
     name: 'portfolio',
     filename: 'portfolio/index.html',
-    entry: '/portfolio/index.js',
+    entry: '/src/portfolio/index.js',
     data: {
       title: 'Portfolio'
     }
@@ -62,7 +62,7 @@ const pages = [
   {
     name: 'projectIronbear',
     filename: 'portfolio/rocket-ironbear/index.html',
-    entry: '/portfolio/rocket-ironbear/rocket-ironbear.js',
+    entry: '/src/portfolio/rocket-ironbear/rocket-ironbear.js',
     data: {
       title: 'Conversational Lead Funnel'
     }
@@ -71,7 +71,7 @@ const pages = [
   {
     name: 'projectProfile',
     filename: 'portfolio/amazon-profile/index.html',
-    entry: '/portfolio/amazon-profile/amazon-profile.js',
+    entry: '/src/portfolio/amazon-profile/amazon-profile.js',
     data: {
       title: 'Alexa Profile'
     }
@@ -80,7 +80,7 @@ const pages = [
   {
     name: 'projectAlexaCortana',
     filename: 'portfolio/amazon-alexa-cortana/index.html',
-    entry: '/portfolio/amazon-alexa-cortana/amazon-alexa-cortana.js',
+    entry: '/src/portfolio/amazon-alexa-cortana/amazon-alexa-cortana.js',
     data: {
       title: 'Alexa + Cortana'
     }
@@ -89,7 +89,7 @@ const pages = [
   {
     name: 'projectDesignSystem',
     filename: 'portfolio/disney-design-system/index.html',
-    entry: '/portfolio/disney-design-system/disney-design-system.js',
+    entry: '/src/portfolio/disney-design-system/disney-design-system.js',
     data: {
       title: 'Disney Enterprise Design System'
     }
@@ -98,7 +98,7 @@ const pages = [
   {
     name: 'projectDesignSystem',
     filename: 'portfolio/disney-design-system/index.html',
-    entry: '/portfolio/disney-design-system/disney-design-system.js',
+    entry: '/src/portfolio/disney-design-system/disney-design-system.js',
     data: {
       title: 'Disney Enterprise Design System'
     }
@@ -107,7 +107,7 @@ const pages = [
   {
     name: 'projectGreenlight',
     filename: 'portfolio/disney-greenlight/index.html',
-    entry: '/portfolio/disney-greenlight/disney-greenlight.js',
+    entry: '/src/portfolio/disney-greenlight/disney-greenlight.js',
     data: {
       title: 'Disney Movie Greenlight'
     }
@@ -116,7 +116,7 @@ const pages = [
   {
     name: 'projectIncubator',
     filename: 'portfolio/disney-design-system/index.html',
-    entry: '/portfolio/disney-design-system/disney-design-system.js',
+    entry: '/src/portfolio/disney-design-system/disney-design-system.js',
     data: {
       title: 'Disney Innovation Incubator'
     }
@@ -125,7 +125,7 @@ const pages = [
   {
     name: 'projectSlate',
     filename: 'portfolio/disney-incubator/index.html',
-    entry: '/portfolio/disney-incubator/disney-incubator.js',
+    entry: '/src/portfolio/disney-incubator/disney-incubator.js',
     data: {
       title: 'Disney Movie Slate'
     }
@@ -134,7 +134,7 @@ const pages = [
   {
     name: 'projectVR',
     filename: 'portfolio/disney-vr/index.html',
-    entry: '/portfolio/disney-vr/disney-vr.js',
+    entry: '/src/portfolio/disney-vr/disney-vr.js',
     data: {
       title: 'Filmmaking for Virtual Reality'
     }
@@ -143,7 +143,7 @@ const pages = [
   {
     name: 'projectDinoDig',
     filename: 'portfolio/phenomblue-dino-dig/index.html',
-    entry: '/portfolio/phenomblue-dino-dig/phenomblue-dino-dig.js',
+    entry: '/src/portfolio/phenomblue-dino-dig/phenomblue-dino-dig.js',
     data: {
       title: 'Operation: Dino Dig'
     }
@@ -152,7 +152,7 @@ const pages = [
   {
     name: 'projectFantasticFutureMe',
     filename: 'portfolio/phenomblue-fantastic-future-me/index.html',
-    entry: '/portfolio/phenomblue-fantastic-future-me/phenomblue-fantastic-future-me.js',
+    entry: '/src/portfolio/phenomblue-fantastic-future-me/phenomblue-fantastic-future-me.js',
     data: {
       title: 'Fantastic Future Me'
     }
@@ -161,7 +161,7 @@ const pages = [
   {
     name: 'projectGenesis',
     filename: 'portfolio/phenomblue-genesis/index.html',
-    entry: '/portfolio/phenomblue-genesis/phenomblue-genesis.js',
+    entry: '/src/portfolio/phenomblue-genesis/phenomblue-genesis.js',
     data: {
       title: 'Microsoft Genesis'
     }
@@ -170,7 +170,7 @@ const pages = [
   {
     name: 'projectMoppetMashup',
     filename: 'portfolio/phenomblue-moppet-mashup/index.html',
-    entry: '/portfolio/phenomblue-moppet-mashup/phenomblue-moppet-mashup.js',
+    entry: '/src/portfolio/phenomblue-moppet-mashup/phenomblue-moppet-mashup.js',
     data: {
       title: 'Moppet Mashup'
     }
@@ -179,7 +179,7 @@ const pages = [
   {
     name: 'projectMovieLotto',
     filename: 'portfolio/phenomblue-movie-lotto/index.html',
-    entry: '/portfolio/phenomblue-movie-lotto/phenomblue-movie-lotto.js',
+    entry: '/src/portfolio/phenomblue-movie-lotto/phenomblue-movie-lotto.js',
     data: {
       title: 'Movie Lotto'
     }
@@ -188,7 +188,7 @@ const pages = [
   {
     name: 'projectPage',
     filename: 'portfolio/phenomblue-page/index.html',
-    entry: '/portfolio/phenomblue-page/phenomblue-page.js',
+    entry: '/src/portfolio/phenomblue-page/phenomblue-page.js',
     data: {
       title: 'Page'
     }
@@ -197,7 +197,7 @@ const pages = [
   {
     name: 'projectWildKingdom',
     filename: 'portfolio/phenomblue-wild-kingdom/index.html',
-    entry: '/portfolio/phenomblue-wild-kingdom/phenomblue-wild-kingdom.js',
+    entry: '/src/portfolio/phenomblue-wild-kingdom/phenomblue-wild-kingdom.js',
     data: {
       title: 'My Wild Kingdom'
     }
@@ -225,6 +225,7 @@ const rewrites = [
  */
 export default defineConfig({
   appType: 'mpa',
+  publicDir: 'src/public',
 
   plugins: [
     vue(),
@@ -244,7 +245,7 @@ export default defineConfig({
 
     createMpaPlugin({
       htmlMinify: false,
-      template: 'templates/template.html',
+      template: 'src/templates/template.html',
       rewrites: rewrites,
       previewRewrites: rewrites,
       pages: pages
@@ -287,11 +288,12 @@ export default defineConfig({
 
     alias: {
       "@": resolve(__dirname, "./src"),
-      "@data": resolve(__dirname, "./data"),
-      "@assets": resolve(__dirname, "./assets"),
-      "@globals": resolve(__dirname, "./globals"),
-      "@portfolio": resolve(__dirname, "./portfolio"),
-      "@components": resolve(__dirname, "./components")
+      "@data": resolve(__dirname, "./src/data"),
+      "@styles": resolve(__dirname, "./src/styles"),
+      "@assets": resolve(__dirname, "./src/assets"),
+      "@globals": resolve(__dirname, "./src/globals"),
+      "@portfolio": resolve(__dirname, "./src/portfolio"),
+      "@components": resolve(__dirname, "./src/components")
     }
   }
 })
