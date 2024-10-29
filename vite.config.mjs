@@ -433,7 +433,7 @@ export default defineConfig({
       transformHtml(html, ctx) {
         return {
           html,
-          tags: ctx.page.tags
+          tags: ctx.page.tags ? ctx.page.tags : []
         }
       }
     })
