@@ -20,7 +20,17 @@ const pages = [
     entry: '/src/main.js',
     data: {
       title: ''
-    }
+    },
+    tags: [
+      {
+        tag: 'link',
+        injectTo: 'head-prepend',
+        attrs: {
+          rel: 'canonical',
+          href: 'https://jasonbejot.com/'
+        }
+      }
+    ]
   },
 
   {
@@ -38,7 +48,17 @@ const pages = [
     entry: '/src/press/press.js',
     data: {
       title: 'Press'
-    }
+    },
+    tags: [
+      {
+        tag: 'link',
+        injectTo: 'head-prepend',
+        attrs: {
+          rel: 'canonical',
+          href: 'https://jasonbejot.com/press/'
+        }
+      }
+    ]
   },
 
   {
@@ -47,7 +67,17 @@ const pages = [
     entry: '/src/awards/awards.js',
     data: {
       title: 'Awards'
-    }
+    },
+    tags: [
+      {
+        tag: 'link',
+        injectTo: 'head-prepend',
+        attrs: {
+          rel: 'canonical',
+          href: 'https://jasonbejot.com/awards/'
+        }
+      }
+    ]
   },
 
   {
@@ -56,7 +86,17 @@ const pages = [
     entry: '/src/portfolio/index.js',
     data: {
       title: 'Portfolio'
-    }
+    },
+    tags: [
+      {
+        tag: 'link',
+        injectTo: 'head-prepend',
+        attrs: {
+          rel: 'canonical',
+          href: 'https://jasonbejot.com/portfolio/'
+        }
+      }
+    ]
   },
 
   {
@@ -65,7 +105,17 @@ const pages = [
     entry: '/src/portfolio/rocket-ironbear/rocket-ironbear.js',
     data: {
       title: 'Conversational Lead Funnel'
-    }
+    },
+    tags: [
+      {
+        tag: 'link',
+        injectTo: 'head-prepend',
+        attrs: {
+          rel: 'canonical',
+          href: 'https://jasonbejot.com/portfolio/rocket-ironbear/'
+        }
+      }
+    ]
   },
 
   {
@@ -74,7 +124,17 @@ const pages = [
     entry: '/src/portfolio/amazon-profile/amazon-profile.js',
     data: {
       title: 'Alexa Profile'
-    }
+    },
+    tags: [
+      {
+        tag: 'link',
+        injectTo: 'head-prepend',
+        attrs: {
+          rel: 'canonical',
+          href: 'https://jasonbejot.com/portfolio/amazon-profile/'
+        }
+      }
+    ]
   },
 
   {
@@ -83,7 +143,17 @@ const pages = [
     entry: '/src/portfolio/amazon-alexa-cortana/amazon-alexa-cortana.js',
     data: {
       title: 'Alexa + Cortana'
-    }
+    },
+    tags: [
+      {
+        tag: 'link',
+        injectTo: 'head-prepend',
+        attrs: {
+          rel: 'canonical',
+          href: 'https://jasonbejot.com/portfolio/amazon-alexa-cortana/'
+        }
+      }
+    ]
   },
 
   {
@@ -92,16 +162,17 @@ const pages = [
     entry: '/src/portfolio/disney-design-system/disney-design-system.js',
     data: {
       title: 'Disney Enterprise Design System'
-    }
-  },
-
-  {
-    name: 'projectDesignSystem',
-    filename: 'portfolio/disney-design-system/index.html',
-    entry: '/src/portfolio/disney-design-system/disney-design-system.js',
-    data: {
-      title: 'Disney Enterprise Design System'
-    }
+    },
+    tags: [
+      {
+        tag: 'link',
+        injectTo: 'head-prepend',
+        attrs: {
+          rel: 'canonical',
+          href: 'https://jasonbejot.com/portfolio/disney-design-system/'
+        }
+      }
+    ]
   },
 
   {
@@ -110,25 +181,55 @@ const pages = [
     entry: '/src/portfolio/disney-greenlight/disney-greenlight.js',
     data: {
       title: 'Disney Movie Greenlight'
-    }
+    },
+    tags: [
+      {
+        tag: 'link',
+        injectTo: 'head-prepend',
+        attrs: {
+          rel: 'canonical',
+          href: 'https://jasonbejot.com/portfolio/disney-greenlight/'
+        }
+      }
+    ]
   },
 
   {
     name: 'projectIncubator',
-    filename: 'portfolio/disney-design-system/index.html',
-    entry: '/src/portfolio/disney-design-system/disney-design-system.js',
+    filename: 'portfolio/disney-incubator/index.html',
+    entry: '/src/portfolio/disney-incubator/disney-incubator.js',
     data: {
       title: 'Disney Innovation Incubator'
-    }
+    },
+    tags: [
+      {
+        tag: 'link',
+        injectTo: 'head-prepend',
+        attrs: {
+          rel: 'canonical',
+          href: 'https://jasonbejot.com/portfolio/disney-incubator/'
+        }
+      }
+    ]
   },
 
   {
     name: 'projectSlate',
-    filename: 'portfolio/disney-incubator/index.html',
-    entry: '/src/portfolio/disney-incubator/disney-incubator.js',
+    filename: 'portfolio/disney-slate/index.html',
+    entry: '/src/portfolio/disney-slate/disney-slate.js',
     data: {
       title: 'Disney Movie Slate'
-    }
+    },
+    tags: [
+      {
+        tag: 'link',
+        injectTo: 'head-prepend',
+        attrs: {
+          rel: 'canonical',
+          href: 'https://jasonbejot.com/portfolio/disney-slate/'
+        }
+      }
+    ]
   },
 
   {
@@ -137,7 +238,17 @@ const pages = [
     entry: '/src/portfolio/disney-vr/disney-vr.js',
     data: {
       title: 'Filmmaking for Virtual Reality'
-    }
+    },
+    tags: [
+      {
+        tag: 'link',
+        injectTo: 'head-prepend',
+        attrs: {
+          rel: 'canonical',
+          href: 'https://jasonbejot.com/portfolio/disney-vr/'
+        }
+      }
+    ]
   },
 
   {
@@ -146,7 +257,17 @@ const pages = [
     entry: '/src/portfolio/phenomblue-dino-dig/phenomblue-dino-dig.js',
     data: {
       title: 'Operation: Dino Dig'
-    }
+    },
+    tags: [
+      {
+        tag: 'link',
+        injectTo: 'head-prepend',
+        attrs: {
+          rel: 'canonical',
+          href: 'https://jasonbejot.com/portfolio/phenomblue-dino-dig/'
+        }
+      }
+    ]
   },
 
   {
@@ -155,7 +276,17 @@ const pages = [
     entry: '/src/portfolio/phenomblue-fantastic-future-me/phenomblue-fantastic-future-me.js',
     data: {
       title: 'Fantastic Future Me'
-    }
+    },
+    tags: [
+      {
+        tag: 'link',
+        injectTo: 'head-prepend',
+        attrs: {
+          rel: 'canonical',
+          href: 'https://jasonbejot.com/portfolio/phenomblue-fantastic-future-me/'
+        }
+      }
+    ]
   },
 
   {
@@ -164,7 +295,17 @@ const pages = [
     entry: '/src/portfolio/phenomblue-genesis/phenomblue-genesis.js',
     data: {
       title: 'Microsoft Genesis'
-    }
+    },
+    tags: [
+      {
+        tag: 'link',
+        injectTo: 'head-prepend',
+        attrs: {
+          rel: 'canonical',
+          href: 'https://jasonbejot.com/portfolio/phenomblue-genesis/'
+        }
+      }
+    ]
   },
 
   {
@@ -173,7 +314,17 @@ const pages = [
     entry: '/src/portfolio/phenomblue-moppet-mashup/phenomblue-moppet-mashup.js',
     data: {
       title: 'Moppet Mashup'
-    }
+    },
+    tags: [
+      {
+        tag: 'link',
+        injectTo: 'head-prepend',
+        attrs: {
+          rel: 'canonical',
+          href: 'https://jasonbejot.com/portfolio/phenomblue-moppet-mashup/'
+        }
+      }
+    ]
   },
 
   {
@@ -182,7 +333,17 @@ const pages = [
     entry: '/src/portfolio/phenomblue-movie-lotto/phenomblue-movie-lotto.js',
     data: {
       title: 'Movie Lotto'
-    }
+    },
+    tags: [
+      {
+        tag: 'link',
+        injectTo: 'head-prepend',
+        attrs: {
+          rel: 'canonical',
+          href: 'https://jasonbejot.com/portfolio/phenomblue-movie-lotto/'
+        }
+      }
+    ]
   },
 
   {
@@ -191,7 +352,17 @@ const pages = [
     entry: '/src/portfolio/phenomblue-page/phenomblue-page.js',
     data: {
       title: 'Page'
-    }
+    },
+    tags: [
+      {
+        tag: 'link',
+        injectTo: 'head-prepend',
+        attrs: {
+          rel: 'canonical',
+          href: 'https://jasonbejot.com/portfolio/phenomblue-page/'
+        }
+      }
+    ]
   },
 
   {
@@ -200,7 +371,17 @@ const pages = [
     entry: '/src/portfolio/phenomblue-wild-kingdom/phenomblue-wild-kingdom.js',
     data: {
       title: 'My Wild Kingdom'
-    }
+    },
+    tags: [
+      {
+        tag: 'link',
+        injectTo: 'head-prepend',
+        attrs: {
+          rel: 'canonical',
+          href: 'https://jasonbejot.com/portfolio/phenomblue-wild-kingdom/'
+        }
+      }
+    ]
   }
 ]
 
@@ -248,7 +429,13 @@ export default defineConfig({
       template: 'src/templates/template.html',
       rewrites: rewrites,
       previewRewrites: rewrites,
-      pages: pages
+      pages: pages,
+      transformHtml(html, ctx) {
+        return {
+          html,
+          tags: ctx.page.tags
+        }
+      }
     })
   ],
 
