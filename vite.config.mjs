@@ -2,13 +2,15 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
 import vitePluginRequire from 'vite-plugin-require'
-//import Sitemap from 'vite-plugin-sitemap'
+import Sitemap from 'vite-plugin-sitemap'
 import { createMpaPlugin } from 'vite-plugin-virtual-mpa'
 
 // https://vitejs.dev/config/
 // https://vueschool.io/articles/vuejs-tutorials/how-to-migrate-from-vue-cli-to-vite/
 // https://vite.dev/guide/build.html#multi-page-app
 // https://github.com/jbaubree/vite-plugin-sitemap
+
+const hostname = 'https://jasonbejot.com/'
 
 /*
  * Set up all the pages used with createMpaPlugin
@@ -27,7 +29,7 @@ const pages = [
         injectTo: 'head-prepend',
         attrs: {
           rel: 'canonical',
-          href: 'https://jasonbejot.com/'
+          href: hostname
         }
       }
     ]
@@ -55,7 +57,7 @@ const pages = [
         injectTo: 'head-prepend',
         attrs: {
           rel: 'canonical',
-          href: 'https://jasonbejot.com/press/'
+          href: hostname + 'press/'
         }
       }
     ]
@@ -74,7 +76,7 @@ const pages = [
         injectTo: 'head-prepend',
         attrs: {
           rel: 'canonical',
-          href: 'https://jasonbejot.com/awards/'
+          href: hostname + 'awards/'
         }
       }
     ]
@@ -93,7 +95,7 @@ const pages = [
         injectTo: 'head-prepend',
         attrs: {
           rel: 'canonical',
-          href: 'https://jasonbejot.com/portfolio/'
+          href: hostname + 'portfolio/'
         }
       }
     ]
@@ -112,7 +114,7 @@ const pages = [
         injectTo: 'head-prepend',
         attrs: {
           rel: 'canonical',
-          href: 'https://jasonbejot.com/portfolio/rocket-ironbear/'
+          href: hostname + 'portfolio/rocket-ironbear/'
         }
       }
     ]
@@ -131,7 +133,7 @@ const pages = [
         injectTo: 'head-prepend',
         attrs: {
           rel: 'canonical',
-          href: 'https://jasonbejot.com/portfolio/amazon-profile/'
+          href: hostname + 'portfolio/amazon-profile/'
         }
       }
     ]
@@ -150,7 +152,7 @@ const pages = [
         injectTo: 'head-prepend',
         attrs: {
           rel: 'canonical',
-          href: 'https://jasonbejot.com/portfolio/amazon-alexa-cortana/'
+          href: hostname + 'portfolio/amazon-alexa-cortana/'
         }
       }
     ]
@@ -169,7 +171,7 @@ const pages = [
         injectTo: 'head-prepend',
         attrs: {
           rel: 'canonical',
-          href: 'https://jasonbejot.com/portfolio/disney-design-system/'
+          href: hostname + 'portfolio/disney-design-system/'
         }
       }
     ]
@@ -188,7 +190,7 @@ const pages = [
         injectTo: 'head-prepend',
         attrs: {
           rel: 'canonical',
-          href: 'https://jasonbejot.com/portfolio/disney-greenlight/'
+          href: hostname + 'portfolio/disney-greenlight/'
         }
       }
     ]
@@ -207,7 +209,7 @@ const pages = [
         injectTo: 'head-prepend',
         attrs: {
           rel: 'canonical',
-          href: 'https://jasonbejot.com/portfolio/disney-incubator/'
+          href: hostname + 'portfolio/disney-incubator/'
         }
       }
     ]
@@ -226,7 +228,7 @@ const pages = [
         injectTo: 'head-prepend',
         attrs: {
           rel: 'canonical',
-          href: 'https://jasonbejot.com/portfolio/disney-slate/'
+          href: hostname + 'portfolio/disney-slate/'
         }
       }
     ]
@@ -245,7 +247,7 @@ const pages = [
         injectTo: 'head-prepend',
         attrs: {
           rel: 'canonical',
-          href: 'https://jasonbejot.com/portfolio/disney-vr/'
+          href: hostname + 'portfolio/disney-vr/'
         }
       }
     ]
@@ -264,7 +266,7 @@ const pages = [
         injectTo: 'head-prepend',
         attrs: {
           rel: 'canonical',
-          href: 'https://jasonbejot.com/portfolio/phenomblue-dino-dig/'
+          href: hostname + 'portfolio/phenomblue-dino-dig/'
         }
       }
     ]
@@ -283,7 +285,7 @@ const pages = [
         injectTo: 'head-prepend',
         attrs: {
           rel: 'canonical',
-          href: 'https://jasonbejot.com/portfolio/phenomblue-fantastic-future-me/'
+          href: hostname + 'portfolio/phenomblue-fantastic-future-me/'
         }
       }
     ]
@@ -302,7 +304,7 @@ const pages = [
         injectTo: 'head-prepend',
         attrs: {
           rel: 'canonical',
-          href: 'https://jasonbejot.com/portfolio/phenomblue-genesis/'
+          href: hostname + 'portfolio/phenomblue-genesis/'
         }
       }
     ]
@@ -321,7 +323,7 @@ const pages = [
         injectTo: 'head-prepend',
         attrs: {
           rel: 'canonical',
-          href: 'https://jasonbejot.com/portfolio/phenomblue-moppet-mashup/'
+          href: hostname + 'portfolio/phenomblue-moppet-mashup/'
         }
       }
     ]
@@ -340,7 +342,7 @@ const pages = [
         injectTo: 'head-prepend',
         attrs: {
           rel: 'canonical',
-          href: 'https://jasonbejot.com/portfolio/phenomblue-movie-lotto/'
+          href: hostname + 'portfolio/phenomblue-movie-lotto/'
         }
       }
     ]
@@ -359,7 +361,7 @@ const pages = [
         injectTo: 'head-prepend',
         attrs: {
           rel: 'canonical',
-          href: 'https://jasonbejot.com/portfolio/phenomblue-page/'
+          href: hostname + 'portfolio/phenomblue-page/'
         }
       }
     ]
@@ -378,7 +380,7 @@ const pages = [
         injectTo: 'head-prepend',
         attrs: {
           rel: 'canonical',
-          href: 'https://jasonbejot.com/portfolio/phenomblue-wild-kingdom/'
+          href: hostname + 'portfolio/phenomblue-wild-kingdom/'
         }
       }
     ]
@@ -412,17 +414,14 @@ export default defineConfig({
     vue(),
     vitePluginRequire.default(),
 
-    /*
-     * sitemap sucks, doesn't produce the right urls
-     * keeping it here for now in case i figure it out
-     */
-    // Sitemap({ 
-    //   hostname: 'https://jasonbejot.com/',
-    //   readable: true,
-    //   exclude: [ '/404' ],
-    //   generateRobotsTxt: true,
-    //   changefreq: 'weekly'
-    // })
+    Sitemap({ 
+      hostname: hostname,
+      readable: true,
+      exclude: [ '/404' ],
+      generateRobotsTxt: false, // doesn't seem to work when set to true
+      changefreq: 'weekly',
+      extensions: '/' // forces a trailing slash, which is what I want
+    }),
 
     createMpaPlugin({
       htmlMinify: false,
