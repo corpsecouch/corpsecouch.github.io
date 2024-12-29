@@ -19,7 +19,7 @@ const pages = [
   {
     name: 'index',
     filename: 'index.html',
-    entry: '/src/main.js',
+    entry: '/src/index.js',
     data: {
       title: ''
     },
