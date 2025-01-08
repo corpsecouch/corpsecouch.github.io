@@ -3,9 +3,9 @@ import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
 import vitePluginRequire from 'vite-plugin-require'
 // import Sitemap from 'vite-plugin-sitemap'
-import Sitemap from 'vite-plugin-sitemap'
 import { createMpaPlugin } from 'vite-plugin-virtual-mpa'
 import { hostname } from './globals.mjs'
+import Sitemap from './sitemap.mjs'
 
 // https://vitejs.dev/config/
 // https://vueschool.io/articles/vuejs-tutorials/how-to-migrate-from-vue-cli-to-vite/
@@ -15,15 +15,8 @@ import { hostname } from './globals.mjs'
 import Pages from './pages.mjs'
 const pages = await Pages('.page.mjs', './src')
 
-const sitemap = { routes: [], changefreq: {}, priority: {}, lastmod: {} }
-for(let i = 0; i < pages.length; i++) {
-  if(pages[i].sitemap && pages[i].sitemap.route) {
-    sitemap.routes.push(pages[i].sitemap.route)
-    if(pages[i].sitemap.changefreq) sitemap.changefreq[pages[i].sitemap.route] = pages[i].sitemap.changefreq
-    if(pages[i].sitemap.priority) sitemap.priority[pages[i].sitemap.route] = pages[i].sitemap.priority
-    if(pages[i].sitemap.lastmod) sitemap.lastmod[pages[i].sitemap.route] = pages[i].sitemap.lastmod
-  }
-}
+const sitemaps = []
+for(let i = 0; i < pages.length; i++) if(pages[i].sitemap) sitemaps.push(pages[i].sitemap)
 
 /*
  * Set up all the pages used with createMpaPlugin
@@ -427,17 +420,22 @@ export default defineConfig({
     vue(),
     vitePluginRequire.default(),
 
-    Sitemap({ 
-      hostname: hostname,
-      readable: true,
-      // exclude: [ '/404' ],
-      generateRobotsTxt: false, // doesn't seem to work when set to true
-      // changefreq: 'weekly',
-      // extensions: '/' // forces a trailing slash, which is what I want
-      dynamicRoutes: sitemap.routes,
-      changefreq: sitemap.changefreq,
-      priority: sitemap.priority,
-      lastmod: sitemap.lastmod
+    // Sitemap({ 
+    //   hostname: hostname,
+    //   readable: true,
+    //   // exclude: [ '/404' ],
+    //   generateRobotsTxt: false, // doesn't seem to work when set to true
+    //   // changefreq: 'weekly',
+    //   // extensions: '/' // forces a trailing slash, which is what I want
+    //   dynamicRoutes: sitemap.routes,
+    //   changefreq: sitemap.changefreq,
+    //   priority: sitemap.priority,
+    //   lastmod: sitemap.lastmod
+    // }),
+
+    Sitemap({
+      baseURL: hostname,
+      urls: sitemaps
     }),
 
     createMpaPlugin({

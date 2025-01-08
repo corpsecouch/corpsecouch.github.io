@@ -1,12 +1,16 @@
 import { hostname } from '../globals.mjs'
 
+const route = '/'
+
 export default {
     name: 'index',
     filename: 'index.html',
     entry: '/src/index.js',
     sitemap: {
-        route: '/',
-        changefreq: 'monthly'
+        route: route,
+        changefreq: 'weekly',
+        priority: 1,
+        lastmod: new Date()
     },
     data: {
         title: ''
@@ -17,7 +21,7 @@ export default {
             injectTo: 'head-prepend',
             attrs: {
                 rel: 'canonical',
-                href: hostname
+                href: hostname + route
             }
         }
     ]

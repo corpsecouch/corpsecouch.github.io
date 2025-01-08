@@ -1,9 +1,17 @@
 import { hostname } from '../../../globals.mjs'
 
+const route = '/portfolio/phenomblue-moppet-mashup/'
+
 export default {
   name: 'projectMoppetMashup',
     filename: 'portfolio/phenomblue-moppet-mashup/index.html',
     entry: '/src/portfolio/phenomblue-moppet-mashup/phenomblue-moppet-mashup.js',
+    sitemap: {
+        route: route,
+        changefreq: 'monthly',
+        priority: 0.9,
+        lastmod: new Date()
+    },
     data: {
       title: 'Moppet Mashup'
     },
@@ -13,7 +21,7 @@ export default {
         injectTo: 'head-prepend',
         attrs: {
           rel: 'canonical',
-          href: hostname + 'portfolio/phenomblue-moppet-mashup/'
+          href: hostname + route
         }
       }
     ]

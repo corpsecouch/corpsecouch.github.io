@@ -1,4 +1,4 @@
-import { hostname } from '../globals.mjs'
+// import { hostname } from '@globals/globals.mjs'
 
 export default {
     name: '404',

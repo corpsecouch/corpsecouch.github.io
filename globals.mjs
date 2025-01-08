@@ -1,3 +1,3 @@
-const hostname = 'https://jasonbejot.com/'
+const hostname = 'https://jasonbejot.com'
 
 export { hostname }
