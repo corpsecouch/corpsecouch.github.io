@@ -20,7 +20,17 @@ export default function Sitemap(options={}) {
         if(url.changefreq) vals.push(`\t\t<changefreq>${url.changefreq}</changefreq>\n`)
         if(url.priority) vals.push(`\t\t<priority>${url.priority.toFixed(1)}</priority>\n`)
         if(url.lastmod) vals.push(`\t\t<lastmod>${format(url.lastmod, "yyyy-MM-dd'T'HH:mm:sss'Z'")}</lastmod>\n`)
-        
+        if(url.video){
+            url.video.map((video) => {
+                vals.push(`\t\t<video:video>\n`)
+                vals.push(`\t\t\t<video:thumbnail_loc>${video.thumbnail}</video:thumbnail_loc>\n`)
+                vals.push(`\t\t\t<video:title>${video.title}</video:title>\n`)
+                vals.push(`\t\t\t<video:description>${video.description}</video:description>\n`)
+                vals.push(`\t\t\t<video:player_loc>${video.player}</video:player_loc>\n`)
+                vals.push(`\t\t</video:video>\n`)
+            })
+        }
+
         return `\t<url>\n${vals.join('')}\t</url>\n`
     })
 

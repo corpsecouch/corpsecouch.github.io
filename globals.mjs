@@ -1,3 +1,4 @@
 const hostname = 'https://jasonbejot.com'
+const static_route = '/static'
 
-export { hostname }
+export { hostname, static_route }
