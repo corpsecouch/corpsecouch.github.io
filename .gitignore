@@ -1,4 +1,10 @@
+# node specific
 node_modules
+
 #app/**/*.js
 *.js.map
 build
+
+# vitepress specific
+src/.vitepress/dist
+src/.vitepress/cache
