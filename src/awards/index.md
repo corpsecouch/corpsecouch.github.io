@@ -5,7 +5,7 @@
 
 # Awards
 
-Me or my work has been recognized with 15 awards.
+Me or my work has been recognized with **{{ data.total }} awards**.
 
 <section id="rocket" v-if="data.rocket.length">
     <h3>Rocket Awards</h3>
