@@ -1,5 +1,5 @@
 <script setup>
-    import { data } from '../data/news-coverage.data'
+    import { data } from './press.data'
     import NewsList from '../components/NewsList.vue'
 </script>
 

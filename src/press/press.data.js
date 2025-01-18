@@ -1,4 +1,4 @@
-import { companies } from './companies.data';
+import { companies } from '../globals/companies.data';
 import _ from 'lodash'
 
 export const press = [
