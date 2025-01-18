@@ -12,7 +12,8 @@
 </template>
 
 <script>
-  import AwardItem from '@components/AwardItem';
+  // import AwardItem from '@components/AwardItem';
+  import AwardItem from './AwardItem.vue'
 
   export default {
     name: 'AwardList',

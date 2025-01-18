@@ -1,4 +1,4 @@
-const data = {
+export const companies = {
   rocket: {
     name: {
       long: 'Rocket Companies',
@@ -32,4 +32,10 @@ const data = {
   }
 }
 
-export default data;
+export default {
+  // vitepress data loader
+  load() {
+    console.log('load companies')
+    return companies;
+  }
+}

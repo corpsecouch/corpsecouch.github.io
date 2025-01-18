@@ -25,7 +25,7 @@ hero:
 
 Award-winning design leader, technologist, inventor, and founder. Passionate about the intersection of people & technology, design-driven innovation, and the creative application of emerging technology.
 
-I'm currently open to new work: hello@jasonbejot.com
+I'm currently open to new work: [hello@jasonbejot.com](hello@jasonbejot.com)
 
 ## Experience
 Rocket Mortgage, Amazon, Disney, Ace Metrix, Phenomblue, IndieBooker, SongGrab (founder), Make Believe Studios (co-founder), Orajen, SAIC, USACE

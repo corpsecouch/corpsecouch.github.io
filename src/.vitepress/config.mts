@@ -39,7 +39,9 @@ export default defineConfig({
 
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Awards', link: '/awards/' },
+      { text: 'Press', link: '/press/' },
+      { text: 'Portfolio', link: '/portfolio/' }
     ],
 
     // sidebar: [

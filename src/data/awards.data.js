@@ -1,6 +1,8 @@
-import companies from '@data/companies';
+// import companies from '@data/companies';
+import { companies } from './companies.data'
+import _ from 'lodash'
 
-const data = [
+export const awards = [
   {
     org:      'Amazon',
     award:    'Alexa Q2 Award',
@@ -208,4 +210,16 @@ const data = [
 
 ]
 
-export default data;
+// vitepress data loader
+export default {
+  load() {
+    let data = {}
+    _.each(companies, (value, key) => {
+      data[value.slug] = _.filter(awards, o => { return o.company.slug == value.slug })
+    });
+
+    data.total = awards.length;
+
+    return data;
+  }
+}
