@@ -32,6 +32,11 @@ export default defineConfig({
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    footer: {
+      message: 'Built from scratch with care.',
+      copyright: '© Jason Bejot'
+    },
+
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Examples', link: '/markdown-examples' }
