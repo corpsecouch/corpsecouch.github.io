@@ -11,12 +11,9 @@
   "license": "ISC",
   "homepage": "https://github.com/corpsecouch/corpsecouch.github.io#readme",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "docs:dev": "vitepress dev src",
-    "docs:build": "vitepress build src",
-    "docs:preview": "vitepress preview src"
+    "dev": "vitepress dev src",
+    "build": "vitepress build src",
+    "preview": "vitepress preview src"
   },
   "dependencies": {
     "lodash": "^4.17.21",
