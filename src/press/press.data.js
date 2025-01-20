@@ -1,7 +1,7 @@
 import { companies } from '../globals/companies.data';
 import _ from 'lodash'
 
-export const press = [
+const data = [
   {
     pub:      'National Mortgage News',
     title:    'Rocket Pro TPO teases AI-powered hotline',
@@ -358,13 +358,14 @@ export const press = [
 // vitepress data loader
 export default {
   load() {
-    let data = {};
-      _.each(companies, (value, key) => {
-        data[value.slug] = _.filter(press, o => { return o.company.slug == value.slug })
-      });
+    // let data = {};
+    //   _.each(companies, (value, key) => {
+    //     data[value.slug] = _.filter(press, o => { return o.company.slug == value.slug })
+    //   });
 
-      data.total = press.length;
+    //   data.total = press.length;
 
-      return data
+    //   return data
+    return data
   }
 }

@@ -14,11 +14,29 @@ export default defineConfig({
     lastmodDateOnly: true
   },
 
+  // https://vitepress.dev/reference/site-config#example-using-google-analytics
+  // head: [
+  //   [
+  //     'script',
+  //     { async: '', src: `https://www.googletagmanager.com/gtag/js?id=${GTAG_ID}` }
+  //   ],
+  //   [
+  //     'script',
+  //     {},
+  //     `window.dataLayer = window.dataLayer || [];
+  //     function gtag(){dataLayer.push(arguments);}
+  //     gtag('js', new Date());
+  //     gtag('config', '${GTAG_ID}', {
+  //         'send_page_view': true
+  //     });`
+  //   ]
+  // ]
+
   // add canonical urls to each page
   // https://vitepress.dev/reference/site-config#example-adding-a-canonical-url-link
   transformPageData(pageData) {
-    console.log('transformPageData')
-    console.log(pageData)
+    // console.log('transformPageData')
+    // console.log(pageData)
     const canonicalUrl = `${hostname}/${pageData.relativePath}`
       .replace(/index\.md$/, '')
       .replace(/\.md$/, '.html')

@@ -1,6 +1,14 @@
 <script setup>
-    import { data } from '../data/awards.data'
+    import { data as awards } from './awards.data'
+    import { data as companies } from '../globals/companies.data'
     import AwardList from '../components/AwardList.vue'
+    import _ from 'lodash'
+
+    const data = {}
+    _.each(companies, (value, key) => {
+        data[value.slug] = _.filter(awards, o => { return o.company.slug == value.slug })
+    });
+    data.total = awards.length;
 </script>
 
 # Awards

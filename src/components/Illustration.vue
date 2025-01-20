@@ -1,6 +1,7 @@
 <template>
   <div class="illustration">
-    <img :src="imagesrc">
+    <!-- <img :src="imagesrc"> -->
+     <slot name="image"></slot>
     <p class="subtext" v-if="!!this.$slots.subtext"><slot name="subtext"></slot></p>
   </div>
 </template>
@@ -8,7 +9,7 @@
 <script>
   export default {
     name: 'Illustration',
-    props: [ 'imagesrc' ]
+    // props: [ 'imagesrc' ]
   }
 </script>
 
@@ -27,7 +28,7 @@
     }
   }
 
-  img {
+  :deep(img) {
     width: 100%;
     /* margin-top: 1rem; */
     filter: drop-shadow(0px 2px 0.5rem rgba(0, 0, 0, 0.2));

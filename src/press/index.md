@@ -1,6 +1,14 @@
 <script setup>
-    import { data } from './press.data'
+    import { data as press } from './press.data'
+    import { data as companies } from '../globals/companies.data'
     import NewsList from '../components/NewsList.vue'
+    import _ from 'lodash'
+
+    const data = {}
+    _.each(companies, (value, key) => {
+        data[value.slug] = _.filter(press, o => { return o.company.slug == value.slug })
+    });
+    data.total = press.length;
 </script>
 
 # Press

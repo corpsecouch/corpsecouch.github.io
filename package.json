@@ -3,6 +3,7 @@
   "version": "3.2.4",
   "description": "",
   "private": true,
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/corpsecouch/corpsecouch.github.io.git"

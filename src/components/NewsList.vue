@@ -10,7 +10,7 @@
 </template>
 
 <script>
-  import NewsLink from './/NewsLink.vue';
+  import NewsLink from './NewsLink.vue';
 
   export default {
     name: 'NewsList',
