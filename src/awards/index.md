@@ -1,3 +1,8 @@
+---
+layout: 'page'
+title: Awards
+---
+
 <script setup>
     import { data as awards } from './awards.data'
     import { data as companies } from '../globals/companies.data'
@@ -15,22 +20,44 @@
 
 Me or my work has been recognized with **{{ data.total }} awards**.
 
-<section id="rocket" v-if="data.rocket.length">
-    <h3>Rocket Awards</h3>
-    <AwardList :data="data.rocket"></AwardList>
-</section>
+<h2 :class="[$style.logo, $style.amazon]">Amazon Awards</h2>
+<AwardList :data="data.amazon"></AwardList>
 
-<section id="amazon" v-if="data.amazon.length">
-    <h3>Amazon Awards</h3>
-    <AwardList :data="data.amazon"></AwardList>
-</section>
+<h2 :class="[$style.logo, $style.disney]">Disney Awards</h2>
+<AwardList :data="data.disney"></AwardList>
 
-<section id="disney" v-if="data.disney.length">
-    <h3>Disney Awards</h3>
-    <AwardList :data="data.disney"></AwardList>
-</section>
+<h2 :class="[$style.logo, $style.phenomblue]">Phenomblue Awards</h2>
+<AwardList :data="data.phenomblue"></AwardList>
 
-<section id="phenomblue" v-if="data.phenomblue.length">
-    <h3>Phenomblue Awards</h3>
-    <AwardList :data="data.phenomblue"></AwardList>
-</section>
+<style module>
+    h1 {
+        margin-bottom: 3rem;
+    }
+
+    h2 {
+        margin-top: 3rem;
+    }
+
+    h2.logo {
+        background-repeat: no-repeat;
+        background-position-x: left;
+        background-size: contain;
+        height: 64px;
+        text-indent: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-bottom: 1.3rem;
+    }
+
+    h2.logo.amazon {
+        background-image: url('/assets/logos/amazon.png');
+    }
+
+    h2.logo.disney {
+        background-image: url('/assets/logos/disney.png');
+    }
+
+    h2.logo.phenomblue {
+        background-image: url('/assets/logos/phenomblue.png');
+    }
+</style>
