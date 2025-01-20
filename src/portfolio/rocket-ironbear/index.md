@@ -1,8 +1,8 @@
 ---
 layout:         'case study'
-company:        'rocket'
 
 preview:
+    company:        'rocket'
     image:      '/portfolio/rocket-ironbear/thumb.png'
     type:       'product'
     color:      'lightcoral'

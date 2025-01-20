@@ -1,8 +1,8 @@
 ---
 layout:         'case study'
-company:        'disney'
 
 preview:
+    company:        'disney'
     image:      '/portfolio/disney-design-system/thumb.png'
     type:       'product'
     color:      'blueviolet'

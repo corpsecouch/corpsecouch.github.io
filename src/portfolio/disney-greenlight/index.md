@@ -1,8 +1,8 @@
 ---
 layout:         'case study'
-company:        'disney'
 
 preview:
+    company:        'disney'
     image:      '/portfolio/disney-greenlight/thumb.png'
     type:       'product'
     color:      'lightblue'

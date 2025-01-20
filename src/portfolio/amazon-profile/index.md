@@ -1,8 +1,8 @@
 ---
 layout:         'case study'
-company:        'amazon'
 
 preview:
+    company:        'amazon'
     image:          '/portfolio/amazon-profile/thumb.png'
     type:           'product'
     color:          'lightskyblue'

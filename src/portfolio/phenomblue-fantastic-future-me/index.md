@@ -1,8 +1,8 @@
 ---
 layout:         'case study'
-company:        'phenomblue'
 
 preview:
+    company:        'phenomblue'
     image:      '/portfolio/phenomblue-fantastic-future-me/thumb.png'
     type:       'title'
     year:           '2012'

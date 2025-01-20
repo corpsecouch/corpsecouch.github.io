@@ -1,8 +1,8 @@
 ---
 layout:         'case study'
-company:        'disney'
 
 preview:
+    company:        'disney'
     image:      '/portfolio/disney-vr/thumb.png'
     type:       'product'
     color:      'chartreuse'

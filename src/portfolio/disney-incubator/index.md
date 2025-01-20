@@ -1,8 +1,8 @@
 ---
 layout:         'case study'
-company:        'disney'
 
 preview:
+    company:        'disney'
     image:      '/portfolio/disney-incubator/thumb.png'
     type:       'product'
     year:           '2017'
