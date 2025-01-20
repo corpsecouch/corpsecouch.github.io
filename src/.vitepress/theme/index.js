@@ -2,12 +2,10 @@
 
 import DefaultTheme from 'vitepress/theme'
 import CaseStudy from './case-study.vue'
-
-console.log('theme!')
+import './styles.css'
 
 export default {
     extends: DefaultTheme,
-    // layout: CaseStudy
     enhanceApp({ app }) {
         app.component('case study', CaseStudy)
     }

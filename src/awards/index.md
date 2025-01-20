@@ -20,44 +20,15 @@ title: Awards
 
 Me or my work has been recognized with **{{ data.total }} awards**.
 
-<h2 :class="[$style.logo, $style.amazon]">Amazon Awards</h2>
+<h2 class="logo amazon">Amazon Awards</h2>
 <AwardList :data="data.amazon"></AwardList>
 
-<h2 :class="[$style.logo, $style.disney]">Disney Awards</h2>
+<h2 class="logo disney">Disney Awards</h2>
 <AwardList :data="data.disney"></AwardList>
 
-<h2 :class="[$style.logo, $style.phenomblue]">Phenomblue Awards</h2>
+<h2 class="logo phenomblue">Phenomblue Awards</h2>
 <AwardList :data="data.phenomblue"></AwardList>
 
 <style module>
-    h1 {
-        margin-bottom: 3rem;
-    }
-
-    h2 {
-        margin-top: 3rem;
-    }
-
-    h2.logo {
-        background-repeat: no-repeat;
-        background-position-x: left;
-        background-size: contain;
-        height: 64px;
-        text-indent: 100%;
-        overflow: hidden;
-        white-space: nowrap;
-        margin-bottom: 1.3rem;
-    }
-
-    h2.logo.amazon {
-        background-image: url('/assets/logos/amazon.png');
-    }
-
-    h2.logo.disney {
-        background-image: url('/assets/logos/disney.png');
-    }
-
-    h2.logo.phenomblue {
-        background-image: url('/assets/logos/phenomblue.png');
-    }
+    
 </style>

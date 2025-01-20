@@ -1,3 +1,8 @@
+---
+layout: 'page'
+title: 'Press'
+---
+
 <script setup>
     import { data as press } from './press.data'
     import { data as companies } from '../globals/companies.data'
@@ -15,22 +20,11 @@
 
 My work has been featured or mentioned in at least **{{ data.total }} articles** (that I know of).
 
-<section id="rocket" v-if="data.rocket.length">
-    <h3>Rocket News</h3>
-    <NewsList :data="data.rocket"></NewsList>
-</section>
+<h2 class="logo rocket">Rocket News</h2>
+<NewsList :data="data.rocket"></NewsList>
 
-<section id="amazon" v-if="data.amazon.length">
-    <h3>Amazon News</h3>
-    <NewsList :data="data.amazon"></NewsList>
-</section>
+<h2 class="logo amazon">Amazon News</h2>
+<NewsList :data="data.amazon"></NewsList>
 
-<section id="disney" v-if="data.disney.length">
-    <h3>Disney News</h3>
-    <NewsList :data="data.disney"></NewsList>
-</section>
-
-<section id="phenomblue" v-if="data.phenomblue.length">
-    <h3>Phenomblue News</h3>
-    <NewsList :data="data.phenomblue"></NewsList>
-</section>
+<h2 class="logo phenomblue">Phenomblue News</h2>
+<NewsList :data="data.phenomblue"></NewsList>
