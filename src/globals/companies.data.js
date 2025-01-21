@@ -35,7 +35,6 @@ export const companies = {
 export default {
   // vitepress data loader
   load() {
-    console.log('load companies')
     return companies;
   }
 }
