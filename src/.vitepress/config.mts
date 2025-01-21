@@ -9,7 +9,7 @@ const _GtagID = 'G-G24FHEZ8YC';
 export default defineConfig({
   title: "Jason Bejot",
 
-  description: "Jason Bejot's website",
+  description: "The personal website for Jason Bejot",
 
   vite: {
     resolve: {
