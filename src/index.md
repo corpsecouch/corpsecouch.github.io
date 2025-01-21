@@ -1,9 +1,9 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
-layout: home
+# layout: home
 
-hero:
-  name: "Jason Bejot"
+# hero:
+#   name: "Jason Bejot"
 #   text: "Jason Bejot's website"
 #   tagline: My great project tagline
 #   actions:
