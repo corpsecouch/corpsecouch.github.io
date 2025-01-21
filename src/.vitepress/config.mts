@@ -8,8 +8,9 @@ const _GtagID = 'G-G24FHEZ8YC';
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Jason Bejot",
-
   description: "The personal website for Jason Bejot",
+
+  outDir: '../dist',
 
   vite: {
     resolve: {
