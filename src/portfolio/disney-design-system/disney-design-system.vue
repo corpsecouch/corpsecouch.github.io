@@ -4,7 +4,7 @@
     <template v-slot:year>2014</template>
     <template v-slot:company>Walt Disney Studios</template>
     <template v-slot:hero>
-      <img src="@assets/portfolio/disney/design-system/preview.png">
+      <img src="/portfolio/disney-design-system/thumb.png">
     </template>
 
     <!--<template v-slot:hero>
@@ -63,7 +63,7 @@
 <script>
   import PortfolioPage from '@components/PortfolioPage';
   import AwardList from '@components/AwardList.vue';
-  import awardData from '@data/awards';
+  import { data as awardData } from '@awards/awards.data';
   import _ from 'lodash';
 
   const name = 'DisneyDesignSystem';

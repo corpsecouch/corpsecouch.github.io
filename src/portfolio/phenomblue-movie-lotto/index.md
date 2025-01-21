@@ -1,5 +1,5 @@
 ---
-layout:         'case study'
+# layout:         'case study'
 
 preview:
     company:        'phenomblue'
@@ -10,26 +10,28 @@ preview:
     description:    'Social gaming in theaters.'
     tags:         ['design system', 'r&d']
 
-hero:
-    title:      'Movie Lotto'
-    year:       '2012'
-    company:    'Phenomblue'
-    image:      '/portfolio/phenomblue-movie-lotto/thumb.png'
+# hero:
+#     title:      'Movie Lotto'
+#     year:       '2012'
+#     company:    'Phenomblue'
+#     image:      '/portfolio/phenomblue-movie-lotto/thumb.png'
 ---
 
 <script setup>
-    import YouTubeVideo from '../../components/YouTubeVideo.vue'
-    import NewsList from '../../components/NewsList.vue'
-    import AwardList from '../../components/AwardList.vue'
-    import _ from 'lodash'
-    import { data as pressData } from '../../press/press.data'
-    import { data as awardsData } from '../../awards/awards.data'
+    // import YouTubeVideo from '../../components/YouTubeVideo.vue'
+    // import NewsList from '../../components/NewsList.vue'
+    // import AwardList from '../../components/AwardList.vue'
+    // import _ from 'lodash'
+    // import { data as pressData } from '../../press/press.data'
+    // import { data as awardsData } from '../../awards/awards.data'
 
-    const press = _.filter(pressData, ['project', 'PhenomblueMoppetMashup'])
-    const awards = _.filter(awardsData, ['project', 'PhenomblueMoppetMashup'])
+    // const press = _.filter(pressData, ['project', 'PhenomblueMoppetMashup'])
+    // const awards = _.filter(awardsData, ['project', 'PhenomblueMoppetMashup'])
+
+    import Page from './phenomblue-movie-lotto.vue'
 </script>
-
-Movie Lotto is a casual, multi-user, multi-screen gaming platform for movie theaters to provide next-level interactive entertainment before a movie begins.
+<Page></Page>
+<!-- Movie Lotto is a casual, multi-user, multi-screen gaming platform for movie theaters to provide next-level interactive entertainment before a movie begins.
 
 <YouTubeVideo src="https://www.youtube.com/embed/_l6rD1AM4qo"></YouTubeVideo>
 
@@ -37,4 +39,4 @@ Movie Lotto is a casual, multi-user, multi-screen gaming platform for movie thea
 <AwardList :data="awards"></AwardList>
 
 ## News
-<NewsList :data="press"></NewsList>
+<NewsList :data="press"></NewsList> -->

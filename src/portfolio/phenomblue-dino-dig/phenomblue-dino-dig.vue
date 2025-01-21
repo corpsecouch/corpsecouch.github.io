@@ -4,7 +4,7 @@
     <template v-slot:year>2012</template>
     <template v-slot:company>Phenomblue</template>
     <template v-slot:hero>
-      <img src="@assets/portfolio/phenomblue/dino-dig/preview.png">
+      <img src="/portfolio/phenomblue-dino-dig/thumb.png">
     </template>
 
     <!-- <template v-slot:hero>
@@ -27,7 +27,7 @@
   import PortfolioPage from '@components/PortfolioPage';
   import YouTubeVideo from '@components/YouTubeVideo';
   import NewsList from '@components/NewsList';
-  import newsData from '@data/news-coverage';
+  import { data as newsData } from '@press/press.data';
   import _ from 'lodash';
 
   export default {
@@ -46,7 +46,3 @@
     }
   }
 </script>
-
-<style scoped lang="scss">
-
-</style>

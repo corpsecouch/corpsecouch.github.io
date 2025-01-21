@@ -3,7 +3,7 @@
 
     <section id="name">
       <h1>Jason<br />Bejot</h1>
-      <img src="@assets/photo1-circle.jpg">
+      <img src="/assets/photos/photo1-circle.jpg">
     </section>
 
     <section id="intro">
@@ -41,7 +41,7 @@
 
       <p>After spending a few years as an engineering lead I made the switch to experience design. I found a real talent for invention and innovation combining my technical background with the focus on the human experience. As a result I've been elected to innovation councils, received patents and awards, launched innovation programs, and worked directly with C-suite executives at Fortune 500 companies on strategic projects.</p>
 
-      <img src="@assets/guitar.jpg">
+      <img src="/assets/photos/guitar.jpg">
 
       <p>At some point I became a musician, playing spacey guitar riffs in The Answer Team. We were based out of Omaha, Nebraska and, when we were active, we toured and recorded two albums. You can check out The Answer Team's music on <a href="https://open.spotify.com/artist/3mMaoKi4PaOLhYFdAknELD?si=mci-mk0ASMiM1bro9ey0NA" target="_blank">Spotify</a>.</p>
 
@@ -104,9 +104,9 @@
   import SVGADPList from '@components/SVGADPList';
   import SVGGithub from '@components/SVGGithub';
   import AwardList from '@components/AwardList';
-  import awardsData from '@data/awards';
+  import { data as awardsData } from '@awards/awards.data';
   import NewsList from '@components/NewsList';
-  import newsData from '@data/news-coverage';
+  import { data as newsData } from '@press/press.data';
 
   import _ from 'lodash';
 

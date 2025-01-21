@@ -1,5 +1,5 @@
 <template>
-  <img src="@assets/icon-adplist.png">
+  <img src="/assets/icons/icon-adplist.png">
 </template>
 
 <script>

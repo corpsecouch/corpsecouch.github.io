@@ -24,33 +24,22 @@
         awardsURL="/awards/#rocket" />
 
       <ul class="projects">
-        <li class="project" v-for="p in portfolioData.rocket.projects" @click="gotoProject(p.url)" :style="{'background-color': p.preview.color}">
-          <div :class="p.preview.type + '-image'">
-            <img :src="p.preview.image" class="rounded">
+        <li class="project" v-for="p in portfolioData.rocket.projects" @click="gotoProject(p.url)" :style="{'background-color': p.frontmatter.preview.color}">
+          <div :class="p.frontmatter.preview.type + '-image'">
+            <img :src="p.frontmatter.preview.image" class="rounded">
           </div>
 
-          <span class="title">{{ p.title }}</span>
+          <span class="title">{{ p.frontmatter.preview.title }}</span>
 
-          <span class="description">{{ p.year }} &mdash; {{ p.description }}</span>
+          <span class="description">{{ p.frontmatter.preview.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
 
-          <ul class="tags" v-if="p.tags">
-            <li class="tag" v-for="tag in p.tags">{{ tag }}</li>
+          <ul class="tags" v-if="p.frontmatter.preview.tags">
+            <li class="tag" v-for="tag in p.frontmatter.preview.tags">{{ tag }}</li>
           </ul>
 
-          <a :href="p.url" :title="p.title" class="link">Read the case study</a>
+          <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Read the case study</a>
         </li>
       </ul>
-
-      <!-- <div class="awards" v-if="portfolioData.rocket.awards.length">
-        <p>I received {{ portfolioData.rocket.awards.length }} award{{ portfolioData.rocket.awards.length > 1 ? 's' : '' }} for my Rocket work:</p>
-        <AwardList :data="portfolioData.rocket.awards"></AwardList>
-      </div> -->
-
-      <!-- <div class="news" v-if="portfolioData.rocket.news.total">
-        <p>There are at least {{ portfolioData.rocket.news.total }} articles about my work at Rocket. These are the most recent:</p>
-        <NewsList :data="portfolioData.rocket.news.data"></NewsList>
-         <a class="more-link" href="/press/#rocket" alt="See all the articles">See all the articles</a>
-      </div> -->
       
     </div>
 
@@ -68,33 +57,22 @@
         awardsURL="/awards/#amazon" />
 
       <ul class="projects">
-        <li class="project" v-for="p in portfolioData.amazon.projects" @click="gotoProject(p.url)" :style="{'background-color': p.preview.color}">
-          <div :class="p.preview.type + '-image'">
-            <img :src="p.preview.image" class="rounded">
+        <li class="project" v-for="p in portfolioData.amazon.projects" @click="gotoProject(p.url)" :style="{'background-color': p.frontmatter.preview.color}">
+          <div :class="p.frontmatter.preview.type + '-image'">
+            <img :src="p.frontmatter.preview.image" class="rounded">
           </div>
 
-          <span class="title">{{ p.title }}</span>
+          <span class="title">{{ p.frontmatter.preview.title }}</span>
 
-          <span class="description">{{ p.year }} &mdash; {{ p.description }}</span>
+          <span class="description">{{ p.frontmatter.preview.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
 
-          <ul class="tags" v-if="p.tags">
-            <li class="tag" v-for="tag in p.tags">{{ tag }}</li>
+          <ul class="tags" v-if="p.frontmatter.preview.tags">
+            <li class="tag" v-for="tag in p.frontmatter.preview.tags">{{ tag }}</li>
           </ul>
 
-          <a :href="p.url" :title="p.title" class="link">Read the case study</a>
+          <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Read the case study</a>
         </li>
       </ul>
-
-      <!-- <div class="awards" v-if="portfolioData.amazon.awards.length">
-        <p>I received {{ portfolioData.amazon.awards.length }} award{{ portfolioData.amazon.awards.length > 1 ? 's' : '' }} for my Amazon work:</p>
-        <AwardList :data="portfolioData.amazon.awards"></AwardList>
-      </div> -->
-
-      <!-- <div class="news" v-if="portfolioData.amazon.news.total">
-        <p>There are at least {{ portfolioData.amazon.news.total }} articles about my work at Amazon. These are the most recent:</p>
-        <NewsList :data="portfolioData.amazon.news.data"></NewsList>
-        <a class="more-link" href="/press/#amazon" alt="See all the articles">See all the articles</a>
-      </div> -->
 
     </div>
 
@@ -112,33 +90,22 @@
         awardsURL="/awards/#disney" />
 
       <ul class="projects">
-        <li class="project" v-for="p in portfolioData.disney.projects" @click="gotoProject(p.url)" :style="{'background-color': p.preview.color}">
-          <div :class="p.preview.type + '-image'">
-            <img :src="p.preview.image" class="rounded">
+        <li class="project" v-for="p in portfolioData.disney.projects" @click="gotoProject(p.url)" :style="{'background-color': p.frontmatter.preview.color}">
+          <div :class="p.frontmatter.preview.type + '-image'">
+            <img :src="p.frontmatter.preview.image" class="rounded">
           </div>
 
-          <span class="title">{{ p.title }}</span>
+          <span class="title">{{ p.frontmatter.preview.title }}</span>
 
-          <span class="description">{{ p.year }} &mdash; {{ p.description }}</span>
+          <span class="description">{{ p.frontmatter.preview.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
 
-          <ul class="tags" v-if="p.tags">
-            <li class="tag" v-for="tag in p.tags">{{ tag }}</li>
+          <ul class="tags" v-if="p.frontmatter.preview.tags">
+            <li class="tag" v-for="tag in p.frontmatter.preview.tags">{{ tag }}</li>
           </ul>
 
-          <a :href="p.url" :title="p.title" class="link">Read the case study</a>
+          <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Read the case study</a>
         </li>
       </ul>
-
-      <!-- <div class="awards" v-if="portfolioData.disney.awards.length">
-        <p>I received {{ portfolioData.disney.awards.length }} award{{ portfolioData.disney.awards.length > 1 ? 's' : '' }} for my Disney work:</p>
-        <AwardList :data="portfolioData.disney.awards"></AwardList>
-      </div> -->
-
-      <!-- <div class="news" v-if="portfolioData.disney.news.total">
-        <p>There are at least {{ portfolioData.disney.news.total }} articles about my work at Disney. These are the most recent:</p>
-        <NewsList :data="portfolioData.disney.news.data"></NewsList>
-        <a class="more-link" href="/press/#disney" alt="See all the articles">See all the articles</a>
-      </div> -->
 
     </div>
 
@@ -156,33 +123,22 @@
         awardsURL="/awards/#phenomblue" />
 
       <ul class="projects">
-        <li class="project" v-for="p in portfolioData.phenomblue.projects" @click="gotoProject(p.url)" :style="{'background-color': p.preview.color}">
-          <div :class="p.preview.type + '-image'">
-            <img :src="p.preview.image" class="rounded">
+        <li class="project" v-for="p in portfolioData.phenomblue.projects" @click="gotoProject(p.url)" :style="{'background-color': p.frontmatter.preview.color}">
+          <div :class="p.frontmatter.preview.type + '-image'">
+            <img :src="p.frontmatter.preview.image" class="rounded">
           </div>
 
-          <span class="title">{{ p.title }}</span>
+          <span class="title">{{ p.frontmatter.preview.title }}</span>
 
-          <span class="description">{{ p.year }} &mdash; {{ p.description }}</span>
+          <span class="description">{{ p.frontmatter.preview.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
 
-          <ul class="tags" v-if="p.tags">
-            <li class="tag" v-for="tag in p.tags">{{ tag }}</li>
+          <ul class="tags" v-if="p.frontmatter.preview.tags">
+            <li class="tag" v-for="tag in p.frontmatter.preview.tags">{{ tag }}</li>
           </ul>
 
-          <a :href="p.url" :title="p.title" class="link">Check out this project</a>
+          <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Check out this project</a>
         </li>
       </ul>
-
-      <!-- <div class="awards" v-if="portfolioData.phenomblue.awards.length">
-        <p>I received {{ portfolioData.phenomblue.awards.length }} award{{ portfolioData.phenomblue.awards.length > 1 ? 's' : '' }} for my Phenomblue work:</p>
-        <AwardList :data="portfolioData.phenomblue.awards"></AwardList>
-      </div> -->
-
-      <!-- <div class="news" v-if="portfolioData.phenomblue.news.total">
-        <p>There are at least {{ portfolioData.phenomblue.news.total }} articles about my work at Phenomblue. These are the most recent:</p>
-        <NewsList :data="portfolioData.phenomblue.news.data"></NewsList>
-        <a class="more-link" href="/press/#phenomblue" alt="See all the articles">See all the articles</a>
-      </div> -->
 
     </div>
 
@@ -193,12 +149,10 @@
   // https://www.bestfolios.com/portfolio/dougseidman
 
   import Subpage from '@components/Subpage';
-  import projectData from '@data/portfolio';
-  import newsData from '@data/news-coverage';
-  import companies from '@data/companies';
-  import NewsList from '@components/NewsList';
-  import AwardList from '@components/AwardList';
-  import awardsData from '@data/awards';
+  import { data as projectData } from '@portfolio/portfolio.data';
+  import { data as newsData } from '@press/press.data';
+  import { data as companies } from '@globals/companies.data';
+  import { data as awardsData } from '@awards/awards.data';
   import Callouts from '@components/Callouts.vue';
 
   import _ from 'lodash';
@@ -208,8 +162,6 @@
 
     components: {
       Subpage,
-      NewsList,
-      AwardList,
       Callouts
     },
 
@@ -225,7 +177,6 @@
       }*/
 
       gotoProject(url) {
-        //this.$router.push(route);
         window.location.href = url
       }
     },
@@ -234,16 +185,15 @@
 
       // remove all hidden projects and sort the rest
       let projects = _.orderBy(
-        _.filter(projectData, o => { return !o.hidden; }),
-        [ 'year' ],
+        _.filter(projectData, o => { return o.frontmatter.preview; }),
+        [ 'frontmatter.preview.year' ],
         [ 'desc' ]);
 
       let portfolioData = {};
       _.each(companies, (value, key) => {
         portfolioData[value.slug] = {
 
-          //projects: _.filter(projects, o => { return o.company.slug == value.slug; }),
-          projects: _.filter(projects, o => { return o.company.slug == value.slug; }),
+          projects: _.filter(projects, o => { return o.frontmatter.preview.company == value.slug; }),
 
           awards: _.orderBy(
             _.filter(awardsData, o => { return o.company.slug == value.slug }),
@@ -286,7 +236,7 @@
 
   #rocket {
     h3 {
-      background-image: url('@assets/rocket.png');
+      background-image: url('/assets/logos/rocket.png');
       /* height: 64px; */
     }
     .projects > p {
@@ -301,21 +251,21 @@
 
   #amazon {
     h3 {
-      background-image: url('@assets/amazon.png');
+      background-image: url('/assets/logos/amazon.png');
       /* height: 64px; */
     }
   }
 
   #disney {
     h3 {
-      background-image: url('@assets/disney.png');
+      background-image: url('/assets/logos/disney.png');
       /* height: 64px; */
     }
   }
 
   #phenomblue {
     h3 {
-      background-image: url('@assets/phenomblue.png');
+      background-image: url('/assets/logos/phenomblue.png');
       /* height: 64px; */
     }
   }

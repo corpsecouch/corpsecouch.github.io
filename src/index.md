@@ -22,8 +22,13 @@ hero:
 #   - title: Feature C
 #     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
+<script setup>
+  import Index from './Index.vue'
+</script>
 
-Award-winning design leader, technologist, inventor, and founder. Passionate about the intersection of people & technology, design-driven innovation, and the creative application of emerging technology.
+<Index></Index>
+
+<!-- Award-winning design leader, technologist, inventor, and founder. Passionate about the intersection of people & technology, design-driven innovation, and the creative application of emerging technology.
 
 I'm currently open to new work: [hello@jasonbejot.com](mailto:hello@jasonbejot.com)
 
@@ -69,4 +74,4 @@ I know of at least [39 articles](./press/index.md) that cover my work. Here's a 
 - [ADPList](https://adplist.org/mentors/jason-bejot)
 - [Medium](https://medium.com/@jasonbejot)
 - [X (Twitter)](https://twitter.com/jasonbejot)
-- [Github](https://github.com/corpsecouch)
+- [Github](https://github.com/corpsecouch) -->

@@ -1,5 +1,5 @@
 ---
-layout:         'case study'
+# layout:         'case study'
 
 preview:
     company:        'disney'
@@ -11,16 +11,19 @@ preview:
     description:    'Leading the VR conversation.'
     tags:           ['vr design', 'creative direction']
 
-hero:
-    title:      'Filmmaking for VR'
-    year:       '2014'
-    company:    'Walt Disney Studios'
-    subtitle:   'Pushing the boundaries of theatrical storytelling'
-    image:      '/portfolio/disney-vr/thumb.png'
-    color:      'chartreuse'
+# hero:
+#     title:      'Filmmaking for VR'
+#     year:       '2014'
+#     company:    'Walt Disney Studios'
+#     subtitle:   'Pushing the boundaries of theatrical storytelling'
+#     image:      '/portfolio/disney-vr/thumb.png'
+#     color:      'chartreuse'
 ---
-
-## Challenge
+<script setup>
+    import Page from './disney-vr.vue'
+</script>
+<Page></Page>
+<!-- ## Challenge
 The challenge was to educate and inspire A-list filmmakers and studio executives on the potential of VR and how it could be used to tell theatrical-level stories.
 
 ## Process
@@ -34,4 +37,4 @@ We delivered groundbreaking, multi-platform VR experiences that showcased VR's p
 We also hosted a VR conference on the Disney Studio Lot where we showcased our VR experiences along with VR from other major film studios.
 
 ## Role
-I owned the experience design, leading the cross-functional R&D team and managing a team of senior designers.
+I owned the experience design, leading the cross-functional R&D team and managing a team of senior designers. -->

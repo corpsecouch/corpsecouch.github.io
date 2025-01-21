@@ -1,5 +1,5 @@
 ---
-layout:         'case study'
+# layout:         'case study'
 
 preview:
     company:        'amazon'
@@ -11,26 +11,26 @@ preview:
     description:    'The heart of personalization.'
     tags:           ['mobile design', 'voice design', 'multi-modal design', 'AI design', 'conversational design']
 
-hero:
-    title:      'Alexa Profile'
-    year:       '2019'
-    company:    'Amazon'
-    subtitle:   'The heart of personalization.'
-    image:      '/portfolio/amazon-profile/thumb.png'
-    color:      'lightsalmon'
+# hero:
+#     title:      'Alexa Profile'
+#     year:       '2019'
+#     company:    'Amazon'
+#     subtitle:   'The heart of personalization.'
+#     image:      '/portfolio/amazon-profile/thumb.png'
+#     color:      'lightsalmon'
 ---
 
 <script setup>
-    import Illustration from '../../components/Illustration.vue'
-    // import YouTubeVideo from '../../components/YouTubeVideo.vue'
-    import NewsList from '../../components/NewsList.vue'
-    import _ from 'lodash'
+    // import Illustration from '../../components/Illustration.vue'
+    // import NewsList from '../../components/NewsList.vue'
+    // import _ from 'lodash'
 
-    import { data as pressData } from '../../press/press.data'
-    const press = _.filter(pressData, ['project', 'AmazonProfile'])
+    // import { data as pressData } from '../../press/press.data'
+    // const press = _.filter(pressData, ['project', 'AmazonProfile'])
+    import Page from './Amazon-Profile.vue'
 </script>
-
-## Challenge
+<Page></Page>
+<!-- ## Challenge
 Alexa customers needed a way to manage what Alexa knows about them as an individual – their biometrics, preference, privacy and security settings, etc.
 
 ## Process
@@ -70,4 +70,4 @@ The launch of the Alexa Profile ushered in a paradigm shift, moving Alexa from a
 I was the head of design for the program, leading multiple cross-functional teams and designers across the Alexa organization.
 
 ## News
-<NewsList :data="press"></NewsList>
+<NewsList :data="press"></NewsList> -->

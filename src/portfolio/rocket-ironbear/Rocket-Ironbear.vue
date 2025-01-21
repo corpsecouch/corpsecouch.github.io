@@ -4,7 +4,7 @@
     <template v-slot:year>2023</template>
     <template v-slot:company>Rocket Mortgage</template>
     <template v-slot:hero>
-      <img src="@assets/portfolio/rocket/ironbear/thumb.png">
+      <img src="/portfolio/rocket-ironbear/thumb.png">
     </template>
 
     <template v-slot:challenge>
@@ -19,23 +19,31 @@
       <h4>Validate Assumptions</h4>
       <p>We assumed people clients didn't like the dead-end and the disjointed experience of receiving a phone call from a mortgage banker within seconds of filling out a form. We also assumed most clients would prefer a chat experience with a mortgage banker versus a phone call. So, we asked clients what they wanted to do at the end of the form, get a call or chat. We ran this "smoke test" for two weeks on a slice of traffic. The results strongly indicated <strong>clients at the end of the lead form preferred chatting versus getting a phone call.</strong></p>
 
-      <Illustration :imagesrc="require('@assets/portfolio/rocket/ironbear/dead-end.png')">
+      <!-- <Illustration :imagesrc="require('@assets/portfolio/rocket/ironbear/dead-end.png')"> -->
+      <Illustration>
+        <template v-slot:image><img src="/portfolio/rocket-ironbear/dead-end.png"></template>
         <template v-slot:subtext>The original dead end of the lead form.</template>
       </Illustration>
 
       <h4>Design</h4>
       <p>We created a full-screen/full-browser conversational UI that enabled clients to chat with our conversational AI and mortgage bankers. The AI was powered by ChatGPT and integrated with Salesforce for mortgage banker chats. We also added light personalization by leveraging client info gathered from the lead form including their name, property type, and local time of day.</p>
 
-      <Illustration :imagesrc="require('@assets/portfolio/rocket/ironbear/design.png')">
+      <Illustration>
+      <!-- <Illustration :imagesrc="require('@assets/portfolio/rocket/ironbear/design.png')"> -->
+        <template v-slot:image><img src="/portfolio/rocket-ironbear/design.png"></template>
         <template v-slot:subtext>The new conversational UI.</template>
       </Illustration>
 
       <div class="columns">
-        <Illustration :imagesrc="require('@assets/portfolio/rocket/ironbear/animation.gif')">
+        <Illustration>
+        <!-- <Illustration :imagesrc="require('@assets/portfolio/rocket/ironbear/animation.gif')"> -->
+          <template v-slot:image><img src="/portfolio/rocket-ironbear/animation.gif"></template>
           <template v-slot:subtext>Transitioning from the lead form to the chat UI.</template>
         </Illustration>
 
-        <Illustration :imagesrc="require('@assets/portfolio/rocket/ironbear/chat.gif')">
+        <Illustration>
+        <!-- <Illustration :imagesrc="require('@assets/portfolio/rocket/ironbear/chat.gif')"> -->
+          <template v-slot:image><img src="/portfolio/rocket-ironbear/chat.gif"></template>
           <template v-slot:subtext>Chatting with an AI and a mortgage banker in the new UI.</template>
         </Illustration>
 
@@ -44,7 +52,9 @@
       <h4>Derisking</h4>
       <p>Mortgage bankers aren't staffed 24/7 yet launching during core hours poses the highest business risk. We found that a large percentage of clients submit leads during after hours, aren't able to get immediate help, and have lower success rates. This presented us with the opportunity for lower risk and greater positive impact. Aligning with the banking business, we staffed mortgage chat bankers during after hours.</p>
 
-      <Illustration :imagesrc="require('@assets/portfolio/rocket/ironbear/photo.jpg')">
+      <Illustration>
+      <!-- <Illustration :imagesrc="require('@assets/portfolio/rocket/ironbear/photo.jpg')"> -->
+        <template v-slot:image><img src="/portfolio/rocket-ironbear/photo.jpg"></template>
         <template v-slot:subtext>Launch night – design, product, engineering, data, and business all in one room.</template>
       </Illustration>
     </template>
@@ -60,7 +70,7 @@
 <script>
   import PortfolioPage from '@components/PortfolioPage';
   import NewsLink from '@components/NewsLink';
-  import newsData from '@data/news-coverage';
+  import { data as newsData } from '@press/press.data';
   import YouTubeVideo from '@components/YouTubeVideo';
   import Illustration from '@components/Illustration';
   import _ from 'lodash';

@@ -5,7 +5,7 @@
     <template v-slot:year>2014</template>
     <template v-slot:company>Walt Disney Studios</template>
     <template v-slot:hero>
-      <img src="@assets/portfolio/disney/vr/thumb.png">
+      <img src="/portfolio/disney-vr/thumb.png">
     </template>
 
     <!--<template v-slot:content>
@@ -52,7 +52,3 @@
     }
   }
 </script>
-
-<style scoped lang="css">
-
-</style>

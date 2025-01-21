@@ -1,5 +1,5 @@
 ---
-layout:         'case study'
+# layout:         'case study'
 
 preview:
     company:        'amazon'
@@ -11,26 +11,27 @@ preview:
     description:    'Connecting AIs from two of the worlds largest companies; a world first.'
     tags:           ['voice design', 'multi-modal design', 'AI design', 'conversational design']
 
-hero:
-    title:      'Alexa + Cortana'
-    year:       '2017 - 2018'
-    company:    'Amazon'
-    subtitle:   'The worlds first AI assistant interoperability between two big-tech competitors.'
-    image:      '/portfolio/amazon-alexa-cortana/thumb.png'
-    color:      'lightsalmon'
+# hero:
+#     title:      'Alexa + Cortana'
+#     year:       '2017 - 2018'
+#     company:    'Amazon'
+#     subtitle:   'The worlds first AI assistant interoperability between two big-tech competitors.'
+#     image:      '/portfolio/amazon-alexa-cortana/thumb.png'
+#     color:      'lightsalmon'
 ---
 
 <script setup>
-    import Illustration from '../../components/Illustration.vue'
-    import YouTubeVideo from '../../components/YouTubeVideo.vue'
-    import NewsList from '../../components/NewsList.vue'
-    import _ from 'lodash'
-    import { data as pressData } from '../../press/press.data'
+    // import Illustration from '../../components/Illustration.vue'
+    // import YouTubeVideo from '../../components/YouTubeVideo.vue'
+    // import NewsList from '../../components/NewsList.vue'
+    // import _ from 'lodash'
+    // import { data as pressData } from '../../press/press.data'
 
-    const press = _.filter(pressData, ['project', 'AmazonAlexaCortana'])
+    // const press = _.filter(pressData, ['project', 'AmazonAlexaCortana'])
+    import Page from './amazon-alexa-cortana.vue'
 </script>
-
-## Challenge
+<Page></Page>
+<!-- ## Challenge
 Both Amazon and Microsoft wanted to scale their AI assistants – more capabilities, more users, more developers. Jeff and Satya saw that bringing Alexa and Cortana together could accomplish this. A one-of-a-kind partnership between Amazon and Microsoft was established to figure this out.
 
 ## Process
@@ -72,4 +73,4 @@ The launch of Alexa + Cortana scaled the availability of both AIs to more than o
 I was the head of design for the program spanning both Amazon and Microsoft. I led cross-functional teams across both companines.
 
 ## News
-<NewsList :data="press"></NewsList>
+<NewsList :data="press"></NewsList> -->

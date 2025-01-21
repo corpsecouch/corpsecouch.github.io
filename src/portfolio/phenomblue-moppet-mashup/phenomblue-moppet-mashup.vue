@@ -5,7 +5,7 @@
     <template v-slot:year>2009</template>
 
     <template v-slot:hero>
-      <img src="@assets/portfolio/phenomblue/moppet-mashup/peek.png">
+      <img src="/portfolio/phenomblue-moppet-mashup/thumb.png">
     </template>
 
     <template v-slot:content>
@@ -27,10 +27,10 @@
 <script>
   import PortfolioPage from '@components/PortfolioPage';
   import YouTubeVideo from '@components/YouTubeVideo';
-  import newsData from '@data/news-coverage';
+  import { data as newsData } from '@press/press.data';
   import NewsList from '@components/NewsList';
   import AwardList from '@components/AwardList.vue';
-  import awardData from '@data/awards';
+  import {data as awardData } from '@awards/awards.data';
   import _ from 'lodash';
 
   const name = 'PhenomblueMoppetMashup';
@@ -53,7 +53,3 @@
     }
   }
 </script>
-
-<style scoped lang="scss">
-
-</style>

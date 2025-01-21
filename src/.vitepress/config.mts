@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { resolve } from 'path'
 
 const hostname = 'https://jasonbejot.com'
 
@@ -7,6 +8,26 @@ export default defineConfig({
   title: "Jason Bejot",
 
   description: "Jason Bejot's website",
+
+  vite: {
+    resolve: {
+        
+      extensions: ['.js', '.vue'],
+  
+      alias: {
+        "@": resolve(__dirname, "../"),
+        // "@data": resolve(__dirname, "../data"),
+        "@styles": resolve(__dirname, "../styles"),
+        "@assets": resolve(__dirname, "../assets"),
+        "@static": resolve(__dirname, "../"),
+        "@globals": resolve(__dirname, "../globals"),
+        "@portfolio": resolve(__dirname, "../portfolio"),
+        "@components": resolve(__dirname, "../components"),
+        "@press": resolve(__dirname, '../press'),
+        "@awards": resolve(__dirname, '../awards')
+      }
+    }
+  },
 
   // https://vitepress.dev/guide/sitemap-generation
   sitemap: {
@@ -35,8 +56,6 @@ export default defineConfig({
   // add canonical urls to each page
   // https://vitepress.dev/reference/site-config#example-adding-a-canonical-url-link
   transformPageData(pageData) {
-    // console.log('transformPageData')
-    // console.log(pageData)
     const canonicalUrl = `${hostname}/${pageData.relativePath}`
       .replace(/index\.md$/, '')
       .replace(/\.md$/, '.html')
@@ -48,19 +67,19 @@ export default defineConfig({
     ])
   },
 
-  themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
-    footer: {
-      message: 'Built from scratch with care.',
-      copyright: '© Jason Bejot'
-    },
+  // themeConfig: {
+  //   // https://vitepress.dev/reference/default-theme-config
+  //   footer: {
+  //     message: 'Built from scratch with care.',
+  //     copyright: '© Jason Bejot'
+  //   },
 
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Awards', link: '/awards/' },
-      { text: 'Press', link: '/press/' },
-      { text: 'Portfolio', link: '/portfolio/' }
-    ],
+  //   nav: [
+  //     { text: 'Home', link: '/' },
+  //     { text: 'Awards', link: '/awards/' },
+  //     { text: 'Press', link: '/press/' },
+  //     { text: 'Portfolio', link: '/portfolio/' }
+  //   ],
 
     // sidebar: [
     //   {
@@ -75,5 +94,5 @@ export default defineConfig({
     // socialLinks: [
     //   { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     // ]
-  }
+  // }
 })

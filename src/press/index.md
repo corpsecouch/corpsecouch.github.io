@@ -4,19 +4,23 @@ title: 'Press'
 ---
 
 <script setup>
-    import { data as press } from './press.data'
-    import { data as companies } from '../globals/companies.data'
-    import NewsList from '../components/NewsList.vue'
-    import _ from 'lodash'
+    // import { data as press } from './press.data'
+    // import { data as companies } from '@globals/companies.data'
+    // import NewsList from '@components/NewsList.vue'
+    // import _ from 'lodash'
 
-    const data = {}
-    _.each(companies, (value, key) => {
-        data[value.slug] = _.filter(press, o => { return o.company.slug == value.slug })
-    });
-    data.total = press.length;
+    import PressPage from './Press.vue'
+
+    // const data = {}
+    // _.each(companies, (value, key) => {
+    //     data[value.slug] = _.filter(press, o => { return o.company.slug == value.slug })
+    // });
+    // data.total = press.length;
 </script>
 
-# Press
+<PressPage></PressPage>
+
+<!-- # Press
 
 My work has been featured or mentioned in at least **{{ data.total }} articles** (that I know of).
 
@@ -27,4 +31,4 @@ My work has been featured or mentioned in at least **{{ data.total }} articles**
 <NewsList :data="data.amazon"></NewsList>
 
 <h2 class="logo phenomblue">Phenomblue News</h2>
-<NewsList :data="data.phenomblue"></NewsList>
+<NewsList :data="data.phenomblue"></NewsList> -->

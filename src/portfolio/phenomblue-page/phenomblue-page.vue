@@ -5,7 +5,7 @@
     <template v-slot:company>Phenomblue</template>
 
     <template v-slot:hero>
-      <img src="@assets/portfolio/phenomblue/page/preview.png">
+      <img src="/portfolio/phenomblue-page/thumb.png">
     </template>
 
     <template v-slot:content>

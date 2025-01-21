@@ -5,7 +5,7 @@
     <template v-slot:company>Phenomblue</template>
 
     <template v-slot:hero>
-      <img src="@assets/portfolio/phenomblue/fantastic-future-me/preview.png">
+      <img src="/portfolio/phenomblue-fantastic-future-me/thumb.png">
     </template>
 
     <template v-slot:content>
@@ -24,7 +24,7 @@
   import PortfolioPage from '@components/PortfolioPage';
   import YouTubeVideo from '@components/YouTubeVideo';
   import NewsList from '@components/NewsList';
-  import newsData from '@data/news-coverage';
+  import { data as newsData } from '@press/press.data';
   import _ from 'lodash';
 
   export default {

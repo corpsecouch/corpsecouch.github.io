@@ -34,8 +34,10 @@
 <script>
   import Subpage from '@components/Subpage';
   import NewsList from '@components/NewsList';
-  import news from '@data/news-coverage';
-  import companies from '@data/companies';
+  // import news from '@data/news-coverage';
+  // import companies from '@data/companies';
+  import { data as news } from './press.data';
+  import { data as companies } from '@globals/companies.data'
 
   import _ from 'lodash';
 
@@ -82,22 +84,22 @@
   }
 
   #rocket h3 {
-    background-image: url('@assets/rocket.png');
+    background-image: url('/assets/logos/rocket.png');
     height: 64px;
   }
 
   #amazon h3 {
-    background-image: url('@assets/amazon.png');
+    background-image: url('/assets/logos/amazon.png');
     height: 64px;
   }
 
   #disney h3 {
-    background-image: url('@assets/disney.png');
+    background-image: url('/assets/logos/disney.png');
     height: 64px;
   }
 
   #phenomblue h3 {
-    background-image: url('@assets/phenomblue.png');
+    background-image: url('/assets/logos/phenomblue.png');
     height: 64px;
   }
 

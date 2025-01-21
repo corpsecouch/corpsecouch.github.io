@@ -2,45 +2,48 @@
 layout: 'subpage'
 title: 'Portfolio'
 ---
-
 <script setup>
-    import { data as projects } from './portfolio.data'
-    import { data as companies } from '../globals/companies.data'
-    import { data as awardsData } from '../awards/awards.data'
-    import { data as pressData } from '../press/press.data'
-    import Callouts from '../components/Callouts.vue'
-    import _ from 'lodash'
+    import Portfolio from './Portfolio.vue'
 
-    const filteredProjects = _.orderBy(
-        _.filter(projects, o => { return o.frontmatter.preview; }),
-        ['frontmatter.preview.year'],
-        ['desc']
-    )
+    // import { data as projects } from './portfolio.data'
+    // import { data as companies } from '../globals/companies.data'
+    // import { data as awardsData } from '../awards/awards.data'
+    // import { data as pressData } from '../press/press.data'
+    // import Callouts from '../components/Callouts.vue'
+    // import _ from 'lodash'
 
-    const data = {}
-    _.each(companies, (value, key) => {
-        data[value.slug] = {
+    // const filteredProjects = _.orderBy(
+    //     _.filter(projects, o => { return o.frontmatter.preview; }),
+    //     ['frontmatter.preview.year'],
+    //     ['desc']
+    // )
 
-          projects: _.filter(filteredProjects, o => { return o.frontmatter.preview.company == value.slug; }),
+    // const data = {}
+    // _.each(companies, (value, key) => {
+    //     data[value.slug] = {
 
-          awards: _.orderBy(
-            _.filter(awardsData, o => { return o.company.slug == value.slug }),
-            o => { return o.date.year; },
-            ['desc']),
+    //       projects: _.filter(filteredProjects, o => { return o.frontmatter.preview.company == value.slug; }),
 
-          news: {
-            total: _.filter(pressData, o => { return o.company.slug == value.slug }).length,
-            data: _.take(_.filter(pressData, o => { return o.company.slug == value.slug }), 3)
-          }
-        }
-    });
+    //       awards: _.orderBy(
+    //         _.filter(awardsData, o => { return o.company.slug == value.slug }),
+    //         o => { return o.date.year; },
+    //         ['desc']),
 
-    const gotoProject = function(url) {
-        window.location.href = url
-    }
+    //       news: {
+    //         total: _.filter(pressData, o => { return o.company.slug == value.slug }).length,
+    //         data: _.take(_.filter(pressData, o => { return o.company.slug == value.slug }), 3)
+    //       }
+    //     }
+    // });
+
+    // const gotoProject = function(url) {
+    //     window.location.href = url
+    // }
 </script>
 
-<h1 :class="$style.pagetitle">Portfolio</h1>
+<Portfolio></Portfolio>
+
+<!-- <h1 :class="$style.pagetitle">Portfolio</h1>
 
 <h2 :class="$style.logo" class="logo rocket">Rocket Companies</h2>
 
@@ -136,10 +139,10 @@ Phenomblue was a digital brand experience agency. What does that even mean? It m
             </ul>
         <a :href="p.url" :title="p.frontmatter.preview.title" :class="$style.link">Check out this project</a>
     </li>
-</ul>
+</ul> -->
 
 <style module>
-    h1.pagetitle {
+    /* h1.pagetitle {
         font-family: Mainstay;
         letter-spacing: normal;
         font-size: 5rem;
@@ -205,5 +208,5 @@ Phenomblue was a digital brand experience agency. What does that even mean? It m
 
     img.product {
         padding: 3rem;
-    }
+    } */
 </style>

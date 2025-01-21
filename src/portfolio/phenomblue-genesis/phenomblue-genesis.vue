@@ -5,7 +5,7 @@
     <template v-slot:company>Phenomblue</template>
 
     <template v-slot:hero>
-      <img src="@assets/portfolio/phenomblue/genesis/preview.png">
+      <img src="/portfolio/phenomblue-genesis/thumb.png">
     </template>
 
     <template v-slot:content>
@@ -32,7 +32,7 @@ We developed a custom menu system that was intuitive and complemented the experi
 <script>
   import PortfolioPage from '@components/PortfolioPage';
   import YouTubeVideo from '@components/YouTubeVideo';
-  import newsData from '@data/news-coverage';
+  import { data as newsData } from '@press/press.data';
   import NewsList from '@components/NewsList';
   import _ from 'lodash';
 

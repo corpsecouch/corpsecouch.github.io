@@ -4,7 +4,7 @@
     <template v-slot:company>Walt Disney Studios</template>
     <template v-slot:year>2017</template>
     <template v-slot:hero>
-      <img src="@assets/portfolio/disney/incubator/preview.png">
+      <img src="/portfolio/disney-incubator/thumb.png">
     </template>
 
     <!--<template v-slot:hero>

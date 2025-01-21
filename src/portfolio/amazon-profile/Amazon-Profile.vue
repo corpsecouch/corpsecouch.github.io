@@ -7,7 +7,7 @@
 
     <template v-slot:hero>
       <!-- <img src="@assets/portfolio/amazon/profile/profile.png"> -->
-       <img src="@assets/portfolio/amazon/profile/thumb.png">
+       <img src="/portfolio/amazon-profile/thumb.png">
     </template>
 
     <template v-slot:challenge>
@@ -18,17 +18,23 @@
       <p>A profile sounds like a trivial thing, table-stakes for any app or service. There were four key challenges I needed to overcome to figure this out:</p>
       <h4>Vision</h4>
       <p>This was going to be a core strategic component to the holistic Alexa experience. I needed to squint into the future to see what a personal Alexa might look like.</p>
-      <Illustration :imagesrc="require('@assets/portfolio/amazon/profile/profile1.png')">
+      <!-- <Illustration :imagesrc="require('@assets/portfolio/amazon/profile/profile1.png')"> -->
+      <Illustration>
+        <template v-slot:image><img src="/portfolio/amazon-profile/profile1.png"></template>
         <template v-slot:subtext>A sample of what the Alexa Profile would unlock.</template>
       </Illustration>
       <h4>Audience</h4>
       <p>Everyone in the world needed to be able to access their profile regardless of context. I needed to design for everyone and every modality.</p>
-      <Illustration :imagesrc="require('@assets/portfolio/amazon/profile/profile2.png')">
+      <!-- <Illustration :imagesrc="require('@assets/portfolio/amazon/profile/profile2.png')"> -->
+      <Illustration>
+        <template v-slot:image><img src="/portfolio/amazon-profile/profile2.png"></template>
         <template v-slot:subtext>A peek into the extensive usability testing.</template>
       </Illustration>
       <h4>Systems Thinking &amp; Design</h4>
       <p>I risked setting false expectations of personalization where there was none. I needed to design a solution that fits within and expands the holistic existing Alexa expereince.</p>
-      <Illustration :imagesrc="require('@assets/portfolio/amazon/profile/profile3.png')">
+      <!-- <Illustration :imagesrc="require('@assets/portfolio/amazon/profile/profile3.png')"> -->
+      <Illustration>
+        <template v-slot:image><img src="/portfolio/amazon-profile/profile3.png"></template>
         <template v-slot:subtext>One of many flows to show how this ties the ecosystem together.</template>
       </Illustration>
       <h4>Durability &amp; Scalability</h4>
@@ -53,7 +59,7 @@
 <script>
   import PortfolioPage from '@components/PortfolioPage';
   import Illustration from '@components/Illustration';
-  import newsData from '@data/news-coverage';
+  import { data as newsData } from '@press/press.data';
   import NewsList from '@components/NewsList';
   import _ from 'lodash';
 

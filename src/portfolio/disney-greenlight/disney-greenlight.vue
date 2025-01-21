@@ -5,7 +5,7 @@
     <template v-slot:year>2017</template>
     <template v-slot:hero>
       <!-- <img src="@assets/portfolio/disney/greenlight/full.png"> -->
-      <img src="@assets/portfolio/disney/greenlight/preview.png">
+      <img src="/portfolio/disney-greenlight/thumb.png">
     </template>
 
     <!--<template v-slot:hero>

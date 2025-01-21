@@ -1,5 +1,5 @@
 ---
-layout:         'case study'
+# layout:         'case study'
 
 preview:
     company:        'disney'
@@ -11,24 +11,24 @@ preview:
     description:    'Creating an award-winning enterprise design system.'
     tags:           ['design system']
 
-hero:
-    title:      'Enterprise Design System'
-    year:       '2014'
-    company:    'Walt Disney Studios'
-    # subtitle:   'None'
-    image:      '/portfolio/disney-design-system/thumb.png'
-    color:      'blueviolet'
+# hero:
+#     title:      'Enterprise Design System'
+#     year:       '2014'
+#     company:    'Walt Disney Studios'
+#     image:      '/portfolio/disney-design-system/thumb.png'
+#     color:      'blueviolet'
 ---
 
 <script setup>
-    import AwardList from '../../components/AwardList.vue'
-    import _ from 'lodash'
-    import { data as awardsData } from '../../awards/awards.data'
+    // import AwardList from '../../components/AwardList.vue'
+    // import _ from 'lodash'
+    // import { data as awardsData } from '../../awards/awards.data'
 
-    const awards = _.filter(awardsData, ['project', 'DisneyDesignSystem'])
+    // const awards = _.filter(awardsData, ['project', 'DisneyDesignSystem'])
+    import Page from './disney-design-system.vue'
 </script>
-
-## Challenge
+<Page></Page>
+<!-- ## Challenge
 The business of Disney Studios depends on custom internal enterprise applications. These applications should look and behave consistently as if they were originally created as a part of the same product suite. With hundreds of these mission critical applications, created by various people across many years, consistency is nonexistent. Efficiency and effectiveness from both business operations and product development both suffer because of this.
 
 ## Process
@@ -45,4 +45,4 @@ Post-launch, it increased the speed of product development, established cross-pr
 I founded and owned and program from concept to launch. Afterwards, I was the stakeholder as it transitioned to a larger team and released subsequent versions.
 
 ## Awards
-<AwardList :data="awards"></AwardList>
+<AwardList :data="awards"></AwardList> -->
