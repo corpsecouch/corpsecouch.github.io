@@ -1,7 +1,7 @@
 <template>
 
-    <section :style="{'background-color': frontmatter.hero.color}">
-      <div>
+    <section :id="$style.hero" :style="{'background-color': frontmatter.hero.color}">
+      <div class="container">
         <section id="hero">
           <img :src="frontmatter.hero.image">
         </section>
@@ -14,7 +14,7 @@
       </div>
     </section>
     
-    <Content />
+    <Content class="container" />
 </template>
 
 <script setup>
@@ -30,3 +30,10 @@
 
     // const { Layout } = DefaultTheme
 </script>
+
+<style module>
+  #hero {
+    padding: 12rem 0 6rem;
+    background-image: linear-gradient(0deg, var(--vp-c-bg) 5%, transparent 120%);
+  }
+</style>

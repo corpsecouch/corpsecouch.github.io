@@ -4,7 +4,7 @@ layout:         'case study'
 preview:
     company:        'disney'
     image:      '/portfolio/disney-incubator/thumb.png'
-    type:       'product'
+    type:       'title'
     year:           '2017'
     title:          'Innovation Incubator'
     description:    'Transforming how Disney Studios innovates.'

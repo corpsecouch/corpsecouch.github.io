@@ -57,6 +57,7 @@
 
 <style scoped lang="css">
   #callouts {
+    margin-top: 1.3rem;
     display: flex;
     margin-bottom: 4rem;
     justify-content: space-around;

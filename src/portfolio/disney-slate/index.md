@@ -4,7 +4,7 @@ layout:         'case study'
 preview:
     company:        'disney'
     image:      '/portfolio/disney-slate/thumb.png'
-    type:       'product'
+    type:       'title'
     year:           '2016'
     title:          'Movie Slate'
     description:    'Innovating how Disney plans and tracks their slate of upcoming movies.'

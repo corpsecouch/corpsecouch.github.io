@@ -1,10 +1,90 @@
+/* ************* */
+/* *** Fonts *** */
+/* ************* */
+
+/* Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Mainstay */
+@font-face {
+    font-family: 'Mainstay';
+    font-weight: normal;
+    src: url('../../assets/fonts/Mainstay.otf'),
+         url('../../assets/fonts/Mainstay.ttf');
+}
+
+
+/* ***************** */
+/* *** Variables *** */
+/* ***************** */
+
+:root {
+    --container-width-max: 800px;
+    --color-link: rgb(247, 72, 82);
+    --vp-font-family-base: "Raleway", sans-serif
+}
+
+
+/* ************** */
+/* *** Styles *** */
+/* ************** */
+
+h1, h2, h3 {
+    font-weight: bold;
+    line-height: 2em;
+}
+
 h1 {
-    margin-bottom: 3rem;
+    /* margin-bottom: 3rem;
+    font-size: 3rem;
+    text-align: center; */
+
+    font-size: 2.4rem;
+    font-weight: 100;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 1em 0;
 }
 
 h2 {
     margin-top: 3rem;
+    font-size: 1.6rem;
 }
+
+h3 {
+    /* margin-top: 1.3rem; */
+    font-size: 1.3rem
+}
+
+a {
+    color: var(--color-link);
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    margin-top: 1rem;
+    line-height: 1.5em  ;
+}
+
+
+.container {
+    margin: auto;
+    width: 100%;
+    /* padding: 0 2rem; */
+}
+
+/* min-width: large screen */
+@media all and (min-width: 910px) {
+    .container { width: var(--container-width-max); }
+  }
+
 
 h2.logo {
     background-repeat: no-repeat;
@@ -17,18 +97,10 @@ h2.logo {
     margin-bottom: 1.3rem;
 }
 
-h2.logo.rocket {
-    background-image: url('/assets/logos/rocket.png');
-}
+h2.logo.rocket { background-image: url('/assets/logos/rocket.png'); }
 
-h2.logo.amazon {
-    background-image: url('/assets/logos/amazon.png');
-}
+h2.logo.amazon { background-image: url('/assets/logos/amazon.png'); }
 
-h2.logo.disney {
-    background-image: url('/assets/logos/disney.png');
-}
+h2.logo.disney { background-image: url('/assets/logos/disney.png'); }
 
-h2.logo.phenomblue {
-    background-image: url('/assets/logos/phenomblue.png');
-}
+h2.logo.phenomblue { background-image: url('/assets/logos/phenomblue.png'); }
