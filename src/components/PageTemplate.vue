@@ -5,10 +5,10 @@
       <slot></slot>
     </main>
 
-    <footer class="divider">
+    <!-- <footer class="divider">
       Built from scratch with care.
       <span id="copyright">&copy; Jason Bejot</span>
-    </footer>
+    </footer> -->
   </div>
 </template>
 

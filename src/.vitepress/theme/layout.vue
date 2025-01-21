@@ -1,6 +1,10 @@
 <template>
     <NotFound v-if="page.isNotFound" />
     <Content v-else />
+    <footer class="divider">
+      Built from scratch with care.
+      <span id="copyright">&copy; Jason Bejot</span>
+    </footer>
 </template>
 
 <script setup>
