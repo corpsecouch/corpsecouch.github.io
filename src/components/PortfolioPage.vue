@@ -3,12 +3,12 @@
 
     <section id="title" :style="{'background-color': pcolor}">
       <div class="widthConstrained">
-        <section id="hero" v-if="!!this.$slots.hero">
+        <section id="hero" v-if="!!$slots.hero">
           <slot name="hero"></slot>
         </section>
         <div class="wrapper">
           <h1><slot name="title"></slot></h1>
-          <p v-if="!!this.$slots.subtitle"><slot name="subtitle"></slot></p>
+          <p v-if="!!$slots.subtitle"><slot name="subtitle"></slot></p>
           <span id="company"><slot name="company"></slot></span>
           <span id="year"><slot name="year"></slot></span>
         </div>
@@ -23,36 +23,36 @@
         <p>I've limited the details of this public case study due to the sensitive nature of the project and the confidentiality of <slot name="company"></slot>.</p>
       </section>
 
-      <section id="content" v-if="!!this.$slots.content">
+      <section id="content" v-if="!!$slots.content">
         <slot name="content"></slot>
       </section>
 
-      <section id="challenge" v-if="!this.$slots.content && !!this.$slots.challenge">
+      <section id="challenge" v-if="!$slots.content && !!$slots.challenge">
         <!-- <h3>Challenge</h3> -->
         <div><slot name="challenge"></slot></div>
       </section>
 
-      <section id="role" v-if="!this.$slots.content && !!this.$slots.role">
+      <section id="role" v-if="!$slots.content && !!$slots.role">
         <h3>My Role</h3>
         <div><slot name="role"></slot></div>
       </section>
 
-      <section id="outcome" v-if="!this.$slots.content && !!this.$slots.outcome">
+      <section id="outcome" v-if="!$slots.content && !!$slots.outcome">
         <h3>Outcome</h3>
         <div><slot name="outcome"></slot></div>
       </section>
 
-      <section id="process" v-if="!this.$slots.content && !!this.$slots.process">
+      <section id="process" v-if="!$slots.content && !!$slots.process">
         <h3>Process</h3>
         <div><slot name="process"></slot></div>
       </section>
 
-      <section id="awards" v-if="!!this.$slots.awards">
+      <section id="awards" v-if="!!$slots.awards">
         <h3>Awards</h3>
         <slot name="awards"></slot>
       </section>
 
-      <section id="news" v-if="!!this.$slots.news">
+      <section id="news" v-if="!!$slots.news">
         <h3>Press</h3>
         <slot name="news"></slot>
       </section>

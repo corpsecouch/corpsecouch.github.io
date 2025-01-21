@@ -2,7 +2,7 @@
   <div class="illustration">
     <!-- <img :src="imagesrc"> -->
      <slot name="image"></slot>
-    <p class="subtext" v-if="!!this.$slots.subtext"><slot name="subtext"></slot></p>
+    <p class="subtext" v-if="!!$slots.subtext"><slot name="subtext"></slot></p>
   </div>
 </template>
 

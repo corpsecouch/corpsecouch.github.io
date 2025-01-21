@@ -9,7 +9,7 @@
       <a href="/#contact" alt="Contact">Contact</a>
     </header>
 
-    <h1 id="page-title" v-if="!!this.$slots.title"><slot name="title">Title</slot></h1>
+    <h1 id="page-title" v-if="!!$slots.title"><slot name="title">Title</slot></h1>
     <slot></slot>
     
   </Page>
