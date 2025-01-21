@@ -1,6 +1,9 @@
 ---
 # layout:         'case study'
 
+analytics:
+    title: 'Portfolio: Movie Lotto'
+
 preview:
     company:        'phenomblue'
     image:      '/portfolio/phenomblue-movie-lotto/thumb.png'

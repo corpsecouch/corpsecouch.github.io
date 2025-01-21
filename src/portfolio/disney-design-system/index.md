@@ -1,6 +1,9 @@
 ---
 # layout:         'case study'
 
+analytics:
+    title: 'Portfolio: Hex'
+
 preview:
     company:        'disney'
     image:      '/portfolio/disney-design-system/thumb.png'

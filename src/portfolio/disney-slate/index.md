@@ -1,6 +1,9 @@
 ---
 layout:         'case study'
 
+analytics:
+    title: 'Portfolio: Slate'
+
 preview:
     company:        'disney'
     image:      '/portfolio/disney-slate/thumb.png'

@@ -1,6 +1,9 @@
 ---
 layout: 'subpage'
 title: 'Press'
+
+analytics:
+  title: 'Press'
 ---
 
 <script setup>

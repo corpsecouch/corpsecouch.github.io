@@ -1,6 +1,9 @@
 ---
 # layout:         'case study'
 
+analytics:
+    title: 'Portfolio: VR'
+
 preview:
     company:        'disney'
     image:      '/portfolio/disney-vr/thumb.png'

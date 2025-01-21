@@ -1,6 +1,9 @@
 ---
 # layout:         'case study'
 
+analytics:
+    title: 'Portfolio: Star Lab'
+
 preview:
     company:        'disney'
     image:      '/portfolio/disney-incubator/thumb.png'

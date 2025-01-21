@@ -1,6 +1,9 @@
 ---
 # layout:         'case study'
 
+analytics:
+    title: 'Portfolio: My Wild Kingdom'
+
 preview:
     company:        'phenomblue'
     image:      '/portfolio/phenomblue-wild-kingdom/thumb.png'

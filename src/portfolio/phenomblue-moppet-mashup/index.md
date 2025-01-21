@@ -1,6 +1,9 @@
 ---
 # layout:         'case study'
 
+analytics:
+    title: 'Portfolio: Moppet Mashup'
+
 preview:
     company:        'phenomblue'
     image:      '/portfolio/phenomblue-moppet-mashup/thumb.png'

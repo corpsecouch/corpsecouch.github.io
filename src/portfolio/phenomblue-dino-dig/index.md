@@ -1,6 +1,9 @@
 ---
 # layout:         'case study'
 
+analytics:
+    title: 'Portfolio: Dino Dig'
+
 preview:
     company:        'phenomblue'
     image:      '/portfolio/phenomblue-dino-dig/thumb.png'

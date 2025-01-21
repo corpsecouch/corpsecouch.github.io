@@ -21,6 +21,11 @@
 #     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 #   - title: Feature C
 #     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+
+# title: 'Home'
+
+analytics:
+  title: 'Index'
 ---
 <script setup>
   import Index from './Index.vue'

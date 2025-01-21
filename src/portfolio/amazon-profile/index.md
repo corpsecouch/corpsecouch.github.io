@@ -1,6 +1,9 @@
 ---
 # layout:         'case study'
 
+analytics:
+    title:  'Portfolio: Alexa Profile'
+
 preview:
     company:        'amazon'
     image:          '/portfolio/amazon-profile/thumb.png'

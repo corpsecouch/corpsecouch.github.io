@@ -1,6 +1,9 @@
 ---
 layout: 'subpage'
-title: Awards
+title: 'Awards'
+
+analytics:
+    title: 'Awards'
 ---
 
 <script setup>

@@ -2,6 +2,8 @@ import { defineConfig } from 'vitepress'
 import { resolve } from 'path'
 
 const hostname = 'https://jasonbejot.com'
+const _isProd = process.env.NODE_ENV === 'production';
+const _GtagID = 'G-G24FHEZ8YC';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -61,8 +63,10 @@ export default defineConfig({
       .replace(/\.md$/, '.html')
 
     pageData.frontmatter.head ??= []
+
     // add canonical urls to each page
     pageData.frontmatter.head.push(['link', { rel: 'canonical', href: canonicalUrl }])
+
     // add favicons to each page
     pageData.frontmatter.head.push(['link', { rel:'apple-touch-icon-precomposed', sizes: '57x57', href: '/apple-touch-icon-57x57.png'}])
     pageData.frontmatter.head.push(['link', { rel:'apple-touch-icon-precomposed', sizes: '60x60', href: '/apple-touch-icon-60x60.png'}])
@@ -79,6 +83,25 @@ export default defineConfig({
     pageData.frontmatter.head.push(['link', { rel:'icon', type: 'image/png', sizes: '96x96', href: '/favicon-96x96.png'}])
     pageData.frontmatter.head.push(['link', { rel:'icon', type: 'image/png', sizes: '128x128', href: '/favicon-128x128.png'}])
     pageData.frontmatter.head.push(['link', { rel:'icon', type: 'image/png', sizes: '196x196', href: '/favicon-196x196.png'}])
+
+    // add google analytics to each page
+    if(_isProd && pageData.frontmatter.analytics && !pageData.frontmatter.analytics.disabled && pageData.frontmatter.analytics.title) {
+      pageData.frontmatter.head.push([
+        'script',
+        { async: '', src: `https://www.googletagmanager.com/gtag/js?id=${_GtagID}` }
+      ])
+      pageData.frontmatter.head.push([
+        'script',
+          {},
+          `window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${_GtagID}', {
+              'send_page_view': true,
+              'page_title': '${pageData.frontmatter.analytics.title}'
+          });`
+      ])
+    }
   },
 
   // themeConfig: {

@@ -1,6 +1,9 @@
 ---
 # layout:         'case study'
 
+analytics:
+    title: 'Portfolio: Ironbear'
+
 preview:
     company:        'rocket'
     image:      '/portfolio/rocket-ironbear/thumb.png'
