@@ -1,8 +1,13 @@
 <template>
-    <Content />
+    <NotFound v-if="page.isNotFound" />
+    <Content v-else />
 </template>
 
 <script setup>
+    import { useData } from 'vitepress'
+    import NotFound from '../../404.md'
+    const { page, frontmatter } = useData()
+
     // import DefaultTheme from 'vitepress/theme'
     
     // import { useData } from 'vitepress'

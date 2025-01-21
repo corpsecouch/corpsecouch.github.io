@@ -37,25 +37,6 @@ export default defineConfig({
     lastmodDateOnly: true
   },
 
-  // https://vitepress.dev/reference/site-config#example-using-google-analytics
-  // head: [
-  //   [
-  //     'script',
-  //     { async: '', src: `https://www.googletagmanager.com/gtag/js?id=${GTAG_ID}` }
-  //   ],
-  //   [
-  //     'script',
-  //     {},
-  //     `window.dataLayer = window.dataLayer || [];
-  //     function gtag(){dataLayer.push(arguments);}
-  //     gtag('js', new Date());
-  //     gtag('config', '${GTAG_ID}', {
-  //         'send_page_view': true
-  //     });`
-  //   ]
-  // ]
-
-  
   // https://vitepress.dev/reference/site-config#example-adding-a-canonical-url-link
   transformPageData(pageData) {
     const canonicalUrl = `${hostname}/${pageData.relativePath}`
@@ -85,6 +66,7 @@ export default defineConfig({
     pageData.frontmatter.head.push(['link', { rel:'icon', type: 'image/png', sizes: '196x196', href: '/favicon-196x196.png'}])
 
     // add google analytics to each page
+    // https://vitepress.dev/reference/site-config#example-using-google-analytics
     if(_isProd && pageData.frontmatter.analytics && !pageData.frontmatter.analytics.disabled && pageData.frontmatter.analytics.title) {
       pageData.frontmatter.head.push([
         'script',
