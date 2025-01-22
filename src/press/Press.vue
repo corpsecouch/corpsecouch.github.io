@@ -36,7 +36,7 @@
   import NewsList from '@components/NewsList';
   // import news from '@data/news-coverage';
   // import companies from '@data/companies';
-  import { data as news } from './press.data';
+  import { data as news } from '@press/press.data';
   import { data as companies } from '@globals/companies.data'
 
   import _ from 'lodash';

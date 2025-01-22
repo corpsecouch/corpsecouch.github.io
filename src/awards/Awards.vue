@@ -35,9 +35,7 @@
 <script>
   import Subpage from '@components/Subpage';
   import AwardList from '@components/AwardList';
-  // import awards from '@data/awards';
-  // import companies from '@data/companies';
-  import { data as awards } from './awards.data'
+  import { data as awards } from '@awards/awards.data'
   import { data as companies } from '@globals/companies.data'
 
   import _ from 'lodash';

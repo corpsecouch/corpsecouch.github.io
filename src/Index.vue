@@ -95,7 +95,7 @@
 <script>
   // https://www.bestfolios.com/portfolio/dougseidman
 
-  import Page from '@components/PageTemplate';
+  import Page from '@components/Subpage';
   import Email from '@components/Email';
   import SVGTwitter from '@components/SVGTwitter';
   import SVGMedium from '@components/SVGMedium';
