@@ -35,6 +35,28 @@ export default defineConfig({
     lastmodDateOnly: true
   },
 
+
+  /* ******************** */
+  /* * google analytics * */
+  /* ******************** */
+
+  // https://vitepress.dev/reference/site-config#example-using-google-analytics
+
+  head: [
+    [
+      'script',
+      { async: '', src: `https://www.googletagmanager.com/gtag/js?id=${_GtagID}` }
+    ],
+    [
+      'script',
+      {},
+      `window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '${_GtagID}');`
+    ]
+  ],
+
   
   transformPageData(pageData) {
 
@@ -77,8 +99,8 @@ export default defineConfig({
     /* ******************** */
 
     // https://vitepress.dev/reference/site-config#example-using-google-analytics
-    
-    let analyticsEnabled = false
+
+    /*let analyticsEnabled = false
     let page_title = false
 
     // determine if analytics are enabled
@@ -144,7 +166,7 @@ export default defineConfig({
 
       }
       
-    }
+    }*/
   },
 
   // themeConfig: {
