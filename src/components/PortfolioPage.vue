@@ -1,8 +1,6 @@
 <template>
-  <!-- wootz -->
   <Subpage>
   <div class="work">
-<!-- woooooot -->
     <section id="title" :style="{'background-color': pcolor}">
       <div class="widthConstrained">
         <section id="hero" v-if="!!$slots.hero">

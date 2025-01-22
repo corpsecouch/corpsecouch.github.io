@@ -1,35 +1,37 @@
 <template>
-  <Subpage class="widthConstrained">
-    
-    <template v-slot:title>Awards</template>
-
-    <p>Me or my work has been recognized with <strong>{{ data.total }} awards</strong>.</p>
-
-    <div id="awards-list">
+  <div class="widthConstrained">
+    <Subpage>
       
-      <section id="rocket" v-if="data.rocket.length">
-        <h3>Rocket Awards</h3>
-        <AwardList :data="data.rocket"></AwardList>
-      </section>
+      <template v-slot:title>Awards</template>
 
-      <section id="amazon" v-if="data.amazon.length">
-        <h3>Amazon Awards</h3>
-        <AwardList :data="data.amazon"></AwardList>
-      </section>
+      <p>Me or my work has been recognized with <strong>{{ data.total }} awards</strong>.</p>
 
-      <section id="disney" v-if="data.disney.length">
-        <h3>Disney Awards</h3>
-        <AwardList :data="data.disney"></AwardList>
-      </section>
+      <div id="awards-list">
+        
+        <section id="rocket" v-if="data.rocket.length">
+          <h3>Rocket Awards</h3>
+          <AwardList :data="data.rocket"></AwardList>
+        </section>
 
-      <section id="phenomblue" v-if="data.phenomblue.length">
-        <h3>Phenomblue Awards</h3>
-        <AwardList :data="data.phenomblue"></AwardList>
-      </section>
+        <section id="amazon" v-if="data.amazon.length">
+          <h3>Amazon Awards</h3>
+          <AwardList :data="data.amazon"></AwardList>
+        </section>
 
-    </div>
+        <section id="disney" v-if="data.disney.length">
+          <h3>Disney Awards</h3>
+          <AwardList :data="data.disney"></AwardList>
+        </section>
 
-  </Subpage>
+        <section id="phenomblue" v-if="data.phenomblue.length">
+          <h3>Phenomblue Awards</h3>
+          <AwardList :data="data.phenomblue"></AwardList>
+        </section>
+
+      </div>
+
+    </Subpage>
+  </div>
 </template>
 
 <script>

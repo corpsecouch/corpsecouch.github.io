@@ -1,148 +1,150 @@
 <template>
-  <Subpage class="widthConstrained">
+  <div class="widthConstrained">
+    <Subpage>
 
-    <template v-slot:title>P<span class="o">o</span>rtfolio</template>
+      <template v-slot:title>P<span class="o">o</span>rtfolio</template>
 
-    <!-- <section id="menu">
-      <a href="#rocket" alt="Rocket" class="rocket"><img src="@assets/rocket.png"></a>
-      <a href="#amazon" alt="Amazon" class="amazon"><img src="@assets/amazon.png"></a>
-      <a href="#disney" alt="Disney" class="disney"><img src="@assets/disney.png"></a>
-      <a href="#phenomblue" alt="Phenomblue" class="phenomblue"><img src="@assets/phenomblue.png"></a>
-    </section> -->
+      <!-- <section id="menu">
+        <a href="#rocket" alt="Rocket" class="rocket"><img src="@assets/rocket.png"></a>
+        <a href="#amazon" alt="Amazon" class="amazon"><img src="@assets/amazon.png"></a>
+        <a href="#disney" alt="Disney" class="disney"><img src="@assets/disney.png"></a>
+        <a href="#phenomblue" alt="Phenomblue" class="phenomblue"><img src="@assets/phenomblue.png"></a>
+      </section> -->
 
-    <!-- Rocket -->
+      <!-- Rocket -->
 
-    <div class="company" id="rocket">
+      <div class="company" id="rocket">
 
-      <h3>Rocket Companies</h3>
-      <p>As the first Director of Conversational AI Design for Rocket Companies, I not only established the practice for the company I also cemented conversational AI as a company priority - a core part of it's business model and long term vision – ushering in it's investments into LLMs and generative AI.</p>
+        <h3>Rocket Companies</h3>
+        <p>As the first Director of Conversational AI Design for Rocket Companies, I not only established the practice for the company I also cemented conversational AI as a company priority - a core part of it's business model and long term vision – ushering in it's investments into LLMs and generative AI.</p>
 
-      <Callouts
-        :pressTotal="portfolioData.rocket.news.total"
-        pressURL="/press/#rocket"
-        :awardsTotal="portfolioData.rocket.awards.length"
-        awardsURL="/awards/#rocket" />
+        <Callouts
+          :pressTotal="portfolioData.rocket.news.total"
+          pressURL="/press/#rocket"
+          :awardsTotal="portfolioData.rocket.awards.length"
+          awardsURL="/awards/#rocket" />
 
-      <ul class="projects">
-        <li class="project" v-for="p in portfolioData.rocket.projects" @click="gotoProject(p.url)" :style="{'background-color': p.frontmatter.preview.color}">
-          <div :class="p.frontmatter.preview.type + '-image'">
-            <img :src="p.frontmatter.preview.image" class="rounded">
-          </div>
+        <ul class="projects">
+          <li class="project" v-for="p in portfolioData.rocket.projects" @click="gotoProject(p.url)" :style="{'background-color': p.frontmatter.preview.color}">
+            <div :class="p.frontmatter.preview.type + '-image'">
+              <img :src="p.frontmatter.preview.image" class="rounded">
+            </div>
 
-          <span class="title">{{ p.frontmatter.preview.title }}</span>
+            <span class="title">{{ p.frontmatter.preview.title }}</span>
 
-          <span class="description">{{ p.frontmatter.preview.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
+            <span class="description">{{ p.frontmatter.preview.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
 
-          <ul class="tags" v-if="p.frontmatter.preview.tags">
-            <li class="tag" v-for="tag in p.frontmatter.preview.tags">{{ tag }}</li>
-          </ul>
+            <ul class="tags" v-if="p.frontmatter.preview.tags">
+              <li class="tag" v-for="tag in p.frontmatter.preview.tags">{{ tag }}</li>
+            </ul>
 
-          <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Read the case study</a>
-        </li>
-      </ul>
-      
-    </div>
+            <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Read the case study</a>
+          </li>
+        </ul>
+        
+      </div>
 
-    <!-- Amazon -->
+      <!-- Amazon -->
 
-    <div class="company" id="amazon">
+      <div class="company" id="amazon">
 
-      <h3>Amazon</h3>
-      <p>At Amazon, I was focused on all things Alexa identity, especially biometrics. I led the design of voice, modal, and device experiences for Alexa; starting with voice recognition then expanding to face recognition, authentication, authorization, profiles, and establishing the persoanlization guidelines. These are features used or available across every Echo device and has influenced every personalized experience.</p>
-      
-      <Callouts
-        :pressTotal="portfolioData.amazon.news.total"
-        pressURL="/press/#amazon"
-        :awardsTotal="portfolioData.amazon.awards.length"
-        awardsURL="/awards/#amazon" />
+        <h3>Amazon</h3>
+        <p>At Amazon, I was focused on all things Alexa identity, especially biometrics. I led the design of voice, modal, and device experiences for Alexa; starting with voice recognition then expanding to face recognition, authentication, authorization, profiles, and establishing the persoanlization guidelines. These are features used or available across every Echo device and has influenced every personalized experience.</p>
+        
+        <Callouts
+          :pressTotal="portfolioData.amazon.news.total"
+          pressURL="/press/#amazon"
+          :awardsTotal="portfolioData.amazon.awards.length"
+          awardsURL="/awards/#amazon" />
 
-      <ul class="projects">
-        <li class="project" v-for="p in portfolioData.amazon.projects" @click="gotoProject(p.url)" :style="{'background-color': p.frontmatter.preview.color}">
-          <div :class="p.frontmatter.preview.type + '-image'">
-            <img :src="p.frontmatter.preview.image" class="rounded">
-          </div>
+        <ul class="projects">
+          <li class="project" v-for="p in portfolioData.amazon.projects" @click="gotoProject(p.url)" :style="{'background-color': p.frontmatter.preview.color}">
+            <div :class="p.frontmatter.preview.type + '-image'">
+              <img :src="p.frontmatter.preview.image" class="rounded">
+            </div>
 
-          <span class="title">{{ p.frontmatter.preview.title }}</span>
+            <span class="title">{{ p.frontmatter.preview.title }}</span>
 
-          <span class="description">{{ p.frontmatter.preview.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
+            <span class="description">{{ p.frontmatter.preview.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
 
-          <ul class="tags" v-if="p.frontmatter.preview.tags">
-            <li class="tag" v-for="tag in p.frontmatter.preview.tags">{{ tag }}</li>
-          </ul>
+            <ul class="tags" v-if="p.frontmatter.preview.tags">
+              <li class="tag" v-for="tag in p.frontmatter.preview.tags">{{ tag }}</li>
+            </ul>
 
-          <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Read the case study</a>
-        </li>
-      </ul>
+            <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Read the case study</a>
+          </li>
+        </ul>
 
-    </div>
+      </div>
 
-    <!-- Disney -->
+      <!-- Disney -->
 
-    <div class="company" id="disney">
+      <div class="company" id="disney">
 
-      <h3>Walt Disney Studios</h3>
-      <p>At Disney, I was leading the UX design of the Studio's digital transformation of it's enterprise tools and processes. I also went deep into emerging technologies and R&D, especially design-driven innovation.</p>
-      
-      <Callouts
-        :pressTotal="portfolioData.disney.news.total"
-        pressURL="/press/#disney"
-        :awardsTotal="portfolioData.disney.awards.length"
-        awardsURL="/awards/#disney" />
+        <h3>Walt Disney Studios</h3>
+        <p>At Disney, I was leading the UX design of the Studio's digital transformation of it's enterprise tools and processes. I also went deep into emerging technologies and R&D, especially design-driven innovation.</p>
+        
+        <Callouts
+          :pressTotal="portfolioData.disney.news.total"
+          pressURL="/press/#disney"
+          :awardsTotal="portfolioData.disney.awards.length"
+          awardsURL="/awards/#disney" />
 
-      <ul class="projects">
-        <li class="project" v-for="p in portfolioData.disney.projects" @click="gotoProject(p.url)" :style="{'background-color': p.frontmatter.preview.color}">
-          <div :class="p.frontmatter.preview.type + '-image'">
-            <img :src="p.frontmatter.preview.image" class="rounded">
-          </div>
+        <ul class="projects">
+          <li class="project" v-for="p in portfolioData.disney.projects" @click="gotoProject(p.url)" :style="{'background-color': p.frontmatter.preview.color}">
+            <div :class="p.frontmatter.preview.type + '-image'">
+              <img :src="p.frontmatter.preview.image" class="rounded">
+            </div>
 
-          <span class="title">{{ p.frontmatter.preview.title }}</span>
+            <span class="title">{{ p.frontmatter.preview.title }}</span>
 
-          <span class="description">{{ p.frontmatter.preview.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
+            <span class="description">{{ p.frontmatter.preview.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
 
-          <ul class="tags" v-if="p.frontmatter.preview.tags">
-            <li class="tag" v-for="tag in p.frontmatter.preview.tags">{{ tag }}</li>
-          </ul>
+            <ul class="tags" v-if="p.frontmatter.preview.tags">
+              <li class="tag" v-for="tag in p.frontmatter.preview.tags">{{ tag }}</li>
+            </ul>
 
-          <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Read the case study</a>
-        </li>
-      </ul>
+            <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Read the case study</a>
+          </li>
+        </ul>
 
-    </div>
+      </div>
 
-    <!-- Phenomblue -->
+      <!-- Phenomblue -->
 
-    <div class="company" id="phenomblue">
+      <div class="company" id="phenomblue">
 
-      <h3>Phenomblue</h3>
-      <p>Phenomblue was a digital brand experience agency. What does that even mean? It means I created digital experiences for brands including Microsoft, Gatorade, McDonalds, TUMS, and more.</p>
-      
-      <Callouts
-        :pressTotal="portfolioData.phenomblue.news.total"
-        pressURL="/press/#phenomblue"
-        :awardsTotal="portfolioData.phenomblue.awards.length"
-        awardsURL="/awards/#phenomblue" />
+        <h3>Phenomblue</h3>
+        <p>Phenomblue was a digital brand experience agency. What does that even mean? It means I created digital experiences for brands including Microsoft, Gatorade, McDonalds, TUMS, and more.</p>
+        
+        <Callouts
+          :pressTotal="portfolioData.phenomblue.news.total"
+          pressURL="/press/#phenomblue"
+          :awardsTotal="portfolioData.phenomblue.awards.length"
+          awardsURL="/awards/#phenomblue" />
 
-      <ul class="projects">
-        <li class="project" v-for="p in portfolioData.phenomblue.projects" @click="gotoProject(p.url)" :style="{'background-color': p.frontmatter.preview.color}">
-          <div :class="p.frontmatter.preview.type + '-image'">
-            <img :src="p.frontmatter.preview.image" class="rounded">
-          </div>
+        <ul class="projects">
+          <li class="project" v-for="p in portfolioData.phenomblue.projects" @click="gotoProject(p.url)" :style="{'background-color': p.frontmatter.preview.color}">
+            <div :class="p.frontmatter.preview.type + '-image'">
+              <img :src="p.frontmatter.preview.image" class="rounded">
+            </div>
 
-          <span class="title">{{ p.frontmatter.preview.title }}</span>
+            <span class="title">{{ p.frontmatter.preview.title }}</span>
 
-          <span class="description">{{ p.frontmatter.preview.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
+            <span class="description">{{ p.frontmatter.preview.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
 
-          <ul class="tags" v-if="p.frontmatter.preview.tags">
-            <li class="tag" v-for="tag in p.frontmatter.preview.tags">{{ tag }}</li>
-          </ul>
+            <ul class="tags" v-if="p.frontmatter.preview.tags">
+              <li class="tag" v-for="tag in p.frontmatter.preview.tags">{{ tag }}</li>
+            </ul>
 
-          <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Check out this project</a>
-        </li>
-      </ul>
+            <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Check out this project</a>
+          </li>
+        </ul>
 
-    </div>
+      </div>
 
-  </Subpage>
+    </Subpage>
+  </div>
 </template>
 
 <script>

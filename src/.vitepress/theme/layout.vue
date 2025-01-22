@@ -4,9 +4,11 @@
 
     <main>
 
-        <NotFound v-if="page.isNotFound" />
+        <div class="widthConstrained" v-if="page.isNotFound">
+            <NotFound />
+        </div>
 
-        <Content class="widthConstrained" v-else />
+        <Content v-else />
 
     </main>
 
