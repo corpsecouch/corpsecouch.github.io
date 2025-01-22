@@ -1,5 +1,4 @@
 <template>
-  <Subpage>
   <div class="work">
     <section id="title" :style="{'background-color': pcolor}">
       <div class="widthConstrained">
@@ -65,11 +64,9 @@
     </div>
 
   </div>
-  </Subpage>
 </template>
 
 <script>
-  import Subpage from '@components/Subpage'
   import Caret from '@components/Caret'
   import Email from '@components/Email'
   import SVGHidden from '@components/SVGHidden'
@@ -78,7 +75,6 @@
     name: 'PortfolioPage',
 
     components: {
-      Subpage,
       Caret,
       Email,
       SVGHidden

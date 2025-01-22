@@ -1,6 +1,6 @@
 <template>
-  <div class="widthConstrained">
-    <Page>
+  <!-- <div class="widthConstrained"> -->
+    <!-- <Page> -->
 
       <section id="name">
         <h1>Jason<br />Bejot</h1>
@@ -90,14 +90,14 @@
         </div>
       </section>
 
-    </Page>
-  </div>
+    <!-- </Page> -->
+  <!-- </div> -->
 </template>
 
 <script>
   // https://www.bestfolios.com/portfolio/dougseidman
 
-  import Page from '@components/Subpage';
+  // import Page from '@components/Subpage';
   import Email from '@components/Email';
   import SVGTwitter from '@components/SVGTwitter';
   import SVGMedium from '@components/SVGMedium';
@@ -116,7 +116,7 @@
     name: 'Index',
 
     components: {
-      Page,
+      // Page,
       Email,
       SVGTwitter,
       SVGMedium,

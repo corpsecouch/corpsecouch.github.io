@@ -1,41 +1,32 @@
 <template>
-  <div class="widthConstrained">
-    <Subpage>
+    <p>Me or my work has been recognized with <strong>{{ data.total }} awards</strong>.</p>
+
+    <div id="awards-list">
       
-      <template v-slot:title>Awards</template>
+      <section id="rocket" v-if="data.rocket.length">
+        <h3>Rocket Awards</h3>
+        <AwardList :data="data.rocket"></AwardList>
+      </section>
 
-      <p>Me or my work has been recognized with <strong>{{ data.total }} awards</strong>.</p>
+      <section id="amazon" v-if="data.amazon.length">
+        <h3>Amazon Awards</h3>
+        <AwardList :data="data.amazon"></AwardList>
+      </section>
 
-      <div id="awards-list">
-        
-        <section id="rocket" v-if="data.rocket.length">
-          <h3>Rocket Awards</h3>
-          <AwardList :data="data.rocket"></AwardList>
-        </section>
+      <section id="disney" v-if="data.disney.length">
+        <h3>Disney Awards</h3>
+        <AwardList :data="data.disney"></AwardList>
+      </section>
 
-        <section id="amazon" v-if="data.amazon.length">
-          <h3>Amazon Awards</h3>
-          <AwardList :data="data.amazon"></AwardList>
-        </section>
+      <section id="phenomblue" v-if="data.phenomblue.length">
+        <h3>Phenomblue Awards</h3>
+        <AwardList :data="data.phenomblue"></AwardList>
+      </section>
 
-        <section id="disney" v-if="data.disney.length">
-          <h3>Disney Awards</h3>
-          <AwardList :data="data.disney"></AwardList>
-        </section>
-
-        <section id="phenomblue" v-if="data.phenomblue.length">
-          <h3>Phenomblue Awards</h3>
-          <AwardList :data="data.phenomblue"></AwardList>
-        </section>
-
-      </div>
-
-    </Subpage>
-  </div>
+    </div>
 </template>
 
 <script>
-  import Subpage from '@components/Subpage';
   import AwardList from '@components/AwardList';
   import { data as awards } from '@awards/awards.data'
   import { data as companies } from '@globals/companies.data'
@@ -48,7 +39,6 @@
     name: name,
 
     components: {
-      Subpage,
       AwardList
     },
 

@@ -1,12 +1,18 @@
 <template>
 
-    <Header />
+    <Header v-if="frontmatter.layout !== 'home'" />
 
     <main>
 
-        <div class="widthConstrained" v-if="page.isNotFound">
-            <NotFound />
-        </div>
+        <NotFound v-if="page.isNotFound" />
+
+        <Page v-else-if="frontmatter.layout === 'home'" />
+
+        <Page v-else-if="frontmatter.layout === 'page'">
+            <template v-slot:title>{{frontmatter.title}}</template>
+        </Page>
+
+        <!-- <Page v-else-if="frontmatter.layout === 'case study'" /> -->
 
         <Content v-else />
 
@@ -22,7 +28,9 @@
     /* components */
     import Header from '@components/Header.vue'
     import Footer from '@components/Footer.vue'
-    import NotFound from '@/404.md'
+    import NotFound from './404.vue'
+    import Page from './page.vue'
+    // import CaseStudy from '../../components/PortfolioPage.vue'
 
     const { page, frontmatter } = useData()
 

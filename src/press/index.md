@@ -1,6 +1,6 @@
 ---
-layout: 'subpage'
-title: 'Press'
+layout: 'page'
+title: 'Press Coverage'
 
 analytics:
   title: 'Press'
