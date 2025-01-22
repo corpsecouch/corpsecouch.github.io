@@ -1,5 +1,5 @@
 <template>
-  <Page class="widthConstrained">
+  <Page>
 
     <section id="name">
       <h1>Jason<br />Bejot</h1>
@@ -157,7 +157,8 @@ data () {
     & + p { margin-top: 0; }
   }
 
-  main > section {
+  /* main > section { */
+  section {
     margin: 0;
     & + section { margin-top: 7rem; }
   }

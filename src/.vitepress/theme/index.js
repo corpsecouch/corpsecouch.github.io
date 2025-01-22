@@ -4,7 +4,10 @@
 // import CaseStudy from './case-study.vue'
 // import Page from './page.vue'
 import Layout from './layout.vue'
-// import './styles.css'
+
+/* styles */
+import './variables.css'
+import './styles.css'
 
 export default {
     // extends: DefaultTheme,

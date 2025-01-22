@@ -1,15 +1,27 @@
 <template>
-    <NotFound v-if="page.isNotFound" />
-    <Content v-else />
-    <footer class="divider">
-      Built from scratch with care.
-      <span id="copyright">&copy; Jason Bejot</span>
-    </footer>
+
+    <Header />
+
+    <main>
+
+        <NotFound v-if="page.isNotFound" />
+
+        <Content class="widthConstrained" v-else />
+
+    </main>
+
+    <Footer />
+
 </template>
 
 <script setup>
     import { useData } from 'vitepress'
-    import NotFound from '../../404.md'
+
+    /* components */
+    import Header from '@components/Header.vue'
+    import Footer from '@components/Footer.vue'
+    import NotFound from '@/404.md'
+
     const { page, frontmatter } = useData()
 
     // import DefaultTheme from 'vitepress/theme'

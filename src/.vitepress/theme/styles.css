@@ -17,6 +17,9 @@
 .widthConstrained {
   margin: auto;
   width: 90%;
+
+  padding-top: 6rem;
+
 }
 
 /* min-width: large screen */
@@ -24,9 +27,9 @@
   .widthConstrained { width: var(--content-width-max); }
 }
 
-main > section {
+/* main > section {
   margin: 12rem 0;
-}
+} */
 
 html {
   background-color: var(--color-background-light);

@@ -1,6 +1,8 @@
 <template>
-  <Subpage class="work">
-
+  <!-- wootz -->
+  <Subpage>
+  <div class="work">
+<!-- woooooot -->
     <section id="title" :style="{'background-color': pcolor}">
       <div class="widthConstrained">
         <section id="hero" v-if="!!$slots.hero">
@@ -64,6 +66,7 @@
 
     </div>
 
+  </div>
   </Subpage>
 </template>
 
@@ -96,7 +99,9 @@
 </script>
 
 <style scoped lang="css">
-  #page {
+  /* #page { */
+  /* main { */
+  .work {
     padding-top: 0rem;
   }
 
@@ -107,7 +112,8 @@
     word-wrap: break-word;
   }
   
-  #page.work {
+  /* #page.work { */
+  .work {
     #title {
       margin: 0;
       padding: 12rem 0 6rem 0;
