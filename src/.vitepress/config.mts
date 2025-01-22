@@ -19,10 +19,7 @@ export default defineConfig({
   
       alias: {
         "@": resolve(__dirname, "../"),
-        // "@data": resolve(__dirname, "../data"),
         "@styles": resolve(__dirname, "../styles"),
-        // "@assets": resolve(__dirname, "../assets"),
-        // "@static": resolve(__dirname, "../"),
         "@globals": resolve(__dirname, "../globals"),
         "@portfolio": resolve(__dirname, "../portfolio"),
         "@components": resolve(__dirname, "../components"),
@@ -38,18 +35,27 @@ export default defineConfig({
     lastmodDateOnly: true
   },
 
-  // https://vitepress.dev/reference/site-config#example-adding-a-canonical-url-link
+  
   transformPageData(pageData) {
-    const canonicalUrl = `${hostname}/${pageData.relativePath}`
-      .replace(/index\.md$/, '')
-      .replace(/\.md$/, '.html')
 
     pageData.frontmatter.head ??= []
 
-    // add canonical urls to each page
+    /* ****************** */
+    /* * canonical urls * */
+    /* ****************** */
+
+    // https://vitepress.dev/reference/site-config#example-adding-a-canonical-url-link
+    
+    const canonicalUrl = `${hostname}/${pageData.relativePath}`
+    .replace(/index\.md$/, '')
+    .replace(/\.md$/, '.html')
+
     pageData.frontmatter.head.push(['link', { rel: 'canonical', href: canonicalUrl }])
 
-    // add favicons to each page
+    /* ************ */
+    /* * favicons * */
+    /* ************ */
+
     pageData.frontmatter.head.push(['link', { rel:'apple-touch-icon-precomposed', sizes: '57x57', href: '/apple-touch-icon-57x57.png'}])
     pageData.frontmatter.head.push(['link', { rel:'apple-touch-icon-precomposed', sizes: '60x60', href: '/apple-touch-icon-60x60.png'}])
     pageData.frontmatter.head.push(['link', { rel:'apple-touch-icon-precomposed', sizes: '72x72', href: '/apple-touch-icon-72x72.png'}])
@@ -66,24 +72,78 @@ export default defineConfig({
     pageData.frontmatter.head.push(['link', { rel:'icon', type: 'image/png', sizes: '128x128', href: '/favicon-128x128.png'}])
     pageData.frontmatter.head.push(['link', { rel:'icon', type: 'image/png', sizes: '196x196', href: '/favicon-196x196.png'}])
 
-    // add google analytics to each page
+    /* ******************** */
+    /* * google analytics * */
+    /* ******************** */
+
     // https://vitepress.dev/reference/site-config#example-using-google-analytics
-    if(_isProd && pageData.frontmatter.analytics && !pageData.frontmatter.analytics.disabled && pageData.frontmatter.analytics.title) {
+    
+    let analyticsEnabled = false
+    let page_title = false
+
+    // determine if analytics are enabled
+    if(_isProd) {
+      if(!pageData.frontmatter.analytics) {
+        analyticsEnabled = true
+      }
+      else if(!pageData.frontmatter.analytics.disabled) {
+        analyticsEnabled = true
+      }
+    }
+
+    // console.log('analytics endabled?', analyticsEnabled)
+
+    // determine what page name should be sent
+    if(analyticsEnabled) {
+      if(pageData.frontmatter.analytics && pageData.frontmatter.analytics.title) {
+        page_title = pageData.frontmatter.analytics.title
+      }
+    }
+
+    // if(_isProd && pageData.frontmatter.analytics && !pageData.frontmatter.analytics.disabled && pageData.frontmatter.analytics.title) {
+    if(analyticsEnabled) {
+
+      // attach the google tag script
       pageData.frontmatter.head.push([
         'script',
         { async: '', src: `https://www.googletagmanager.com/gtag/js?id=${_GtagID}` }
       ])
-      pageData.frontmatter.head.push([
-        'script',
-          {},
-          `window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${_GtagID}', {
-              'send_page_view': true,
-              'page_title': '${pageData.frontmatter.analytics.title}'
-          });`
-      ])
+      
+      if(page_title) {
+
+        // console.log('log:', page_title)
+
+        // run the google tag script with a custom page title
+        pageData.frontmatter.head.push([
+          'script',
+            {},
+            `window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${_GtagID}', {
+                'send_page_view': true,
+                'page_title': '${pageData.frontmatter.analytics.title}'
+            });`
+        ])
+
+      } else {
+
+        // console.log('log:', 'undefined page title')
+
+        // run the google tag script without a custom page title
+        pageData.frontmatter.head.push([
+          'script',
+            {},
+            `window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${_GtagID}', {
+                'send_page_view': true
+            });`
+        ])
+
+      }
+      
     }
   },
 
