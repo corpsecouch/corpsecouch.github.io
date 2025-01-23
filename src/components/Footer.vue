@@ -1,7 +1,7 @@
 <template>
-  <footer class="divider">
+  <footer :class="$style.footer" class="divider">
     Built from scratch with care.
-    <span id="copyright">&copy; Jason Bejot</span>
+    <span :class="$style.copyright">&copy; Jason Bejot</span>
   </footer>
 </template>
 
@@ -11,8 +11,8 @@
   }
 </script>
 
-<style scoped lang="css">
-  footer {
+<style module lang="css">
+  .footer {
     width: 100%;
     display: block;
     padding: 3rem 0;
@@ -20,7 +20,7 @@
     text-align: center;
   }
 
-  #copyright {
+  .copyright {
     text-transform: uppercase;
     display: block;
     margin-top: 1.5rem;
