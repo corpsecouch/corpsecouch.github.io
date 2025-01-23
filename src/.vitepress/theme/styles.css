@@ -14,17 +14,18 @@
   word-spacing: 0.1rem;
 }
 
-.widthConstrained {
+.widthConstrained, .container {
   margin: auto;
   width: 90%;
+}
 
-  padding-top: 6rem;
-
+.widthConstrained {
+  padding-top: 9rem;
 }
 
 /* min-width: large screen */
 @media all and (min-width: 910px) {
-  .widthConstrained { width: var(--content-width-max); }
+  .widthConstrained, .container { width: var(--content-width-max); }
 }
 
 /* main > section {

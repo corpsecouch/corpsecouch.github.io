@@ -1,10 +1,13 @@
 <template>
-  <header>
-    <a href="/portfolio/" alt="Portfolio">Portfolio</a>
-    <a href="/awards/" alt="Awards">Awards</a>
-    <span class="name"><a href="/">Jason<br />Bejot</a></span>
-    <a href="/press/" alt="Press">Press</a>
-    <a href="/#contact" alt="Contact">Contact</a>
+  <header :class="$style.header">
+    <div class="container">
+      <span :class="$style.name"><a href="/" alt="Home">Jason<br />Bejot</a></span>
+      <a href="/portfolio/" alt="Portfolio">Portfolio</a>
+      <a href="/articles/" alt="Articles">Articles</a>
+      <a href="/awards/" alt="Awards">Awards</a>
+      <a href="/press/" alt="Press">Press</a>
+      <a href="/#contact" alt="Contact">Contact</a>
+    </div>
   </header>
 </template>
 
@@ -14,53 +17,46 @@
   }
 </script>
 
-<style scoped lang="css">
-  header {
-    position: fixed;
+<style module lang="css">
+  .header {
     z-index: var(--z-menu);
     width: 100%;
-    height: 3rem;
-    top: 0;
-    left: 0;
-    background-color: var(--color-background-light);
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    column-gap: 2rem;
+    padding: 1.6rem 0;
     font-size: 0.9rem;
-    box-shadow: 0 8px 12px -7px rgba(0, 0, 0, 0.1);
+    position: absolute;
+  }
 
-    .name {
-      background-color: var(--color-background-light);
-      padding: 2rem;
-      border-radius: 100%;
-      width: 7rem;
-      height: 7rem;
-      position: relative;
-      top: -3rem;
-      box-shadow: 0 8px 12px -7px rgba(0, 0, 0, 0.2);
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  .header a {
+    color: var(--color-text-dark);
+  }
 
-      a {
-        color: var(--color-text-dark);
-        text-decoration: none;
-        display: block;
-        font-family: 'Mainstay';
-        transform: rotate(-18deg);
-        letter-spacing: normal;
-        margin-top: 1.4rem;
-        font-size: 1.4rem;
-      }
+  .header > div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 1.6rem;
+  }
+
+  .name {
+    flex-grow: 1;
+    a {
+      text-decoration: none;
+      display: inline-block;
+      font-family: 'Mainstay';
+      transform: rotate(-18deg);
+      letter-spacing: normal;
+      font-size: 1.4rem;
+    }
+    a:hover {
+      text-decoration:none;
     }
   }
 
   /* max-width: xsmall screen */
   @media all and (max-width: 600px) {
-    header {
+    .header > div {
       justify-content: space-evenly;
-      column-gap: 0;
+      /* column-gap: 0; */
     }
   }
 </style>
