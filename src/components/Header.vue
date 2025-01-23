@@ -1,7 +1,8 @@
 <template>
   <header :class="$style.header">
     <div class="container">
-      <span :class="$style.name"><a href="/" alt="Home">Jason<br />Bejot</a></span>
+      <!-- <span :class="$style.name"><a href="/" alt="Home">Jason<br />Bejot</a></span> -->
+      <span :class="$style.name"><a href="/" alt="Home">Jason</a></span>
       <a href="/portfolio/" alt="Portfolio">Portfolio</a>
       <a href="/articles/" alt="Articles">Articles</a>
       <a href="/awards/" alt="Awards">Awards</a>

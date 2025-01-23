@@ -1,6 +1,7 @@
 <template>
 
-    <Header v-if="frontmatter.layout !== 'home'" />
+    <!-- <Header v-if="frontmatter.layout !== 'home'" /> -->
+    <Header />
 
     <main>
 
