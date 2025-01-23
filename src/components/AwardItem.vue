@@ -1,16 +1,16 @@
 <template>
   
-  <div class="item">
+  <div :class="$style.item">
 
-    <div class="icon">
+    <div :class="$style.icon">
       <SVGAwardOriginal />
     </div>
 
-    <div class="content">
+    <div :class="$style.content">
       <span><slot name="award"></slot> – <slot name="for"></slot></span>
       
-      <div class="context">
-        <span class="org">
+      <div :class="$style.context">
+        <span :class="$style.org">
           <template v-if="url">
             <a v-bind:href="url" target="_blank"><slot name="org"></slot></a>
           </template>
@@ -19,7 +19,7 @@
           </template>
         </span>
 
-        <span class="when"><slot name="when"></slot></span>
+        <span :class="$style.when"><slot name="when"></slot></span>
       </div>
 
     </div>
@@ -38,7 +38,7 @@
   }
 </script>
 
-<style scoped lang="css">
+<style module lang="css">
   .item {
     display: inline-flex;
     flex-direction: row;
@@ -49,7 +49,7 @@
     box-shadow: 0 8px 12px -7px rgba(0, 0, 0, 0.2);
   }
 
-  a {
+  .item a {
     color: var(--color-darktext);
     text-decoration: underline;
   }
