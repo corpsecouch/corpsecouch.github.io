@@ -13,7 +13,8 @@ export default defineConfig({
   outDir: '../dist',
 
   rewrites: {
-    'articles/archive/:slug/:file*': 'articles/:slug*'
+    // 'articles/archive/:slug/:file*': 'articles/:slug*'
+    'articles/archive/:slug*' : 'articles/:slug*'
   },
 
   vite: {
@@ -63,7 +64,7 @@ export default defineConfig({
 
   
   transformPageData(pageData) {
-
+    
     pageData.frontmatter.head ??= []
 
     /* ****************** */

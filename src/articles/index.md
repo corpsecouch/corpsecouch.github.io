@@ -8,8 +8,13 @@ title: 'Articles'
   import Articles from '@components/Articles'
   import _ from 'lodash'
 
+  import { useData, useRoute, useRouter } from 'vitepress'
+
+  const { page } = useData()
+
   let articles = _.map(data, (article) => {
     article.frontmatter.date = new Date(article.frontmatter.date)
+    article.url = `${article.url}`.replace(/archive\//, '')
     return article
   })
 
