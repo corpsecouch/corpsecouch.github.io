@@ -21,7 +21,7 @@
                 day: 'numeric'})}}</template>
         </Article>
 
-        <!-- <Page v-else-if="frontmatter.layout === 'case study'" /> -->
+        <!-- <CaseStudy v-else-if="frontmatter.layout === 'case study'" /> -->
 
         <Content v-else />
 
@@ -40,7 +40,7 @@
     import NotFound from './404.vue'
     import Page from './page.vue'
     import Article from './article.vue'
-    // import CaseStudy from '../../components/PortfolioPage.vue'
+    // import CaseStudy from './case study.vue'
 
     const { page, frontmatter } = useData()
 

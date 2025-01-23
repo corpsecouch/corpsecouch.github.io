@@ -110,7 +110,8 @@
   .work {
     #title {
       margin: 0;
-      padding: 12rem 0 6rem 0;
+      /* padding: 12rem 0 6rem 0; */
+      padding: 6rem 0 6rem 0;
       background-color: whitesmoke;
       background-image: linear-gradient(0deg, var(--color-background-light) 5%, transparent 120%);
 
