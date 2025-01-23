@@ -20,12 +20,8 @@
 </template>
 
 <script>
-  import Video from '@components/YouTubeVideo.vue'
   export default {
-    name: 'Article',
-    components: {
-      Video
-    }
+    name: 'Article'
   }
 </script>
 
@@ -60,18 +56,29 @@
 
     img { width: 100%; }
 
-    p {
-      /* margin: 0 0 1.3rem 0; */
-      margin: 1.3rem 0;
-    }
+    p { margin: 1.3rem 0; }
 
     ol { margin-left: 1.8rem; }
 
     li { margin: 1.3rem 0; }
+
+    hr {
+      border-top: solid 1px #c9d0d9;
+      width: 70%;
+      margin: 2rem auto;
+    }
+
+    blockquote {
+      text-align: center;
+      font-style: italic;
+      padding: 0 2rem;
+
+      p { margin: 1.3rem 0; }
+    }
   }
 
   .author {
-    border-top: solid 1px #c9d0d9;
+    border-top: dashed 1px #c9d0d9;
   }
   
 </style>
