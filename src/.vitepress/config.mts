@@ -12,10 +12,14 @@ export default defineConfig({
 
   outDir: '../dist',
 
+  rewrites: {
+    'articles/archive/:slug/:file*': 'articles/:slug*'
+  },
+
   vite: {
     resolve: {
         
-      extensions: ['.js', '.vue'],
+      extensions: ['.js', '.vue', '.md'],
   
       alias: {
         "@": resolve(__dirname, "../"),
@@ -42,20 +46,20 @@ export default defineConfig({
 
   // https://vitepress.dev/reference/site-config#example-using-google-analytics
 
-  head: [
-    [
-      'script',
-      { async: '', src: `https://www.googletagmanager.com/gtag/js?id=${_GtagID}` }
-    ],
-    [
-      'script',
-      {},
-      `window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '${_GtagID}');`
-    ]
-  ],
+  // head: [
+  //   [
+  //     'script',
+  //     { async: '', src: `https://www.googletagmanager.com/gtag/js?id=${_GtagID}` }
+  //   ],
+  //   [
+  //     'script',
+  //     {},
+  //     `window.dataLayer = window.dataLayer || [];
+  //     function gtag(){dataLayer.push(arguments);}
+  //     gtag('js', new Date());
+  //     gtag('config', '${_GtagID}');`
+  //   ]
+  // ],
 
   
   transformPageData(pageData) {

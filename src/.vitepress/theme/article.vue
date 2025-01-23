@@ -1,0 +1,77 @@
+<template>
+  <div class="widthConstrained">
+    
+    <section :class="$style.hero">
+      <h1 v-if="!!$slots.title"><slot name="title">Title</slot></h1>
+      <p v-if="!!$slots.subtitle" :class="$style.subtitle"><slot name="subtitle">Subtitle</slot></p>
+      <p v-if="!!$slots.date" :class="$style.date"><slot name="date">Date</slot></p>
+    </section>
+
+    <section :class="$style.content">
+      <Content />
+    </section>
+
+    <section :class="$style.author">
+      <h2>About the author</h2>
+      <p>Jason Bejot is a leader of product design and strategy specializing in conversational AI. He’s a UX designer with a computer science degree with 19 years of experience having worked at Disney, Amazon, and Rocket Companies. Jason has received three patents in AR and VR and has received 15 awards for his engineering and design work.</p>
+    </section>
+
+  </div>
+</template>
+
+<script>
+  import Video from '@components/YouTubeVideo.vue'
+  export default {
+    name: 'Article',
+    components: {
+      Video
+    }
+  }
+</script>
+
+<style module lang="css">
+  
+  .hero {
+    margin-top: 3rem;
+
+    h1 {
+      text-align: left;
+      font-weight: 400;
+      letter-spacing: normal;
+      font-size: 2rem;
+      text-transform: none;
+      margin: 0;
+    }
+  }
+
+  .content, .author {
+    margin-top: 3rem;
+
+    h2 {
+      text-align: left;
+      margin: 3rem 0 0 0;
+      line-height: 1.5em;
+      font-weight: 500;
+      font-size: 1.3rem;
+    }
+  }
+
+  .content {
+
+    img { width: 100%; }
+
+    p {
+      /* margin: 0 0 1.3rem 0; */
+      margin: 1.3rem 0;
+    }
+
+    ol { margin-left: 1.8rem; }
+
+    li { margin: 1.3rem 0; }
+  }
+
+  .author {
+    border-top: solid 1px #c9d0d9;
+  }
+  
+</style>

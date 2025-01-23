@@ -12,6 +12,15 @@
             <template v-slot:title>{{frontmatter.title}}</template>
         </Page>
 
+        <Article v-else-if="frontmatter.layout === 'article'">
+            <template v-slot:title>{{frontmatter.title}}</template>
+            <template v-slot:subtitle>{{frontmatter.subtitle}}</template>
+            <template v-slot:date>{{new Date(frontmatter.date).toLocaleString(undefined, {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'})}}</template>
+        </Article>
+
         <!-- <Page v-else-if="frontmatter.layout === 'case study'" /> -->
 
         <Content v-else />
@@ -30,6 +39,7 @@
     import Footer from '@components/Footer.vue'
     import NotFound from './404.vue'
     import Page from './page.vue'
+    import Article from './article.vue'
     // import CaseStudy from '../../components/PortfolioPage.vue'
 
     const { page, frontmatter } = useData()
