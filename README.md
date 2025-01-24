@@ -1,14 +1,14 @@
 # jasonbejot.com
-This site is built on Vue.js.
+This site is built using VitePress.
 
 ## Installation
-To install the dependencies run `npm install`.
-
-## Building
-The site is built using webpack. Simply run `npm run build`. The entire site is built to `/dist`.
+To install dependencies run `npm install`.
 
 ## Development
-Webpack is set up to serve the site from `/dist` during development. Simply run `npm run serve`. The webpack server is also configured for hot updates, it will build and serve any changes in `/src`.
+Run `npm run dev` to run a local web server with hot updates. All source files are in `/src`.
+
+## Building
+There's little need to build manually. It's configured to build to the `.vitepress/dist` folder which github is set to ignore. The only real reason to build is to check that it will build once pushed to GitHub.
 
 ## Deployment
-The site is using Github Pages configured to serve from the gh-pages branch. To deploy just the `/dist` folder to gh-pages, simply run `npm run deploy`.
+The site is served on Github Pages. It's configured to automatically build and deploy on every push to the 'main' branch.
