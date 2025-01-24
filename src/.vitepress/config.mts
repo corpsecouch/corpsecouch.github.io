@@ -10,7 +10,7 @@ export default defineConfig({
   title: "Jason Bejot",
   description: "The personal website for Jason Bejot",
 
-  outDir: '../dist',
+  // outDir: '../dist',
 
   rewrites: {
     'portfolio/projects/:slug*' : 'portfolio/:slug*',
