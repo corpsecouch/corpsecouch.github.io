@@ -5,7 +5,7 @@ date: '2024-08-19T12:00'
 layout: 'article'
 ---
 
-![](./hero.jpg)
+![](./hero.jpeg)
 
 Years ago, I came across the concept that 80% of your users only use 20% of your design. This was on [Google’s Conversational Design guidelines](https://developers.google.com/assistant/conversation-design/design-for-the-long-tail), and at the time, I took it largely at face value:
 
