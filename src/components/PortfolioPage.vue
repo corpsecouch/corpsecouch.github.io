@@ -7,14 +7,14 @@
         </section>
         <div class="wrapper">
           <h1><slot name="title"></slot></h1>
-          <p v-if="!!$slots.subtitle"><slot name="subtitle"></slot></p>
+          <p id="subtitle" v-if="!!$slots.subtitle"><slot name="subtitle"></slot></p>
           <span id="company"><slot name="company"></slot></span>
           <span id="year"><slot name="year"></slot></span>
         </div>
       </div>
     </section>
 
-    <div class="widthConstrained">
+    <div class="container">
       <section id="nda" v-if="nda">
         <div class="icon">
           <SVGHidden />
@@ -93,12 +93,6 @@
 </script>
 
 <style scoped lang="css">
-  /* #page { */
-  /* main { */
-  .work {
-    padding-top: 0rem;
-  }
-
   /* imported */
   /* needs cleaned up! */
 
@@ -108,6 +102,8 @@
   
   /* #page.work { */
   .work {
+    padding-top: 0rem;
+
     #title {
       margin: 0;
       /* padding: 12rem 0 6rem 0; */
@@ -115,22 +111,23 @@
       background-color: whitesmoke;
       background-image: linear-gradient(0deg, var(--color-background-light) 5%, transparent 120%);
 
-      * {
+      /* * {
         text-align: center;
 
         &:last-child {
           margin-bottom: 0;
         }
+      } */
+
+      #subtitle {
+        text-align: center;
       }
 
       #year, #company {
         font-size: 0.9rem;
         display: block;
         padding-top: 1rem;
-      }
-
-      #year {
-        display: block;
+        text-align: center;
       }
     }
 
