@@ -1,7 +1,6 @@
 <template>
   <header :class="$style.header">
     <div class="container">
-      <!-- <span :class="$style.name"><a href="/" alt="Home">Jason<br />Bejot</a></span> -->
       <span :class="$style.name"><a href="/" alt="Home">Jason</a></span>
       <a href="/portfolio/" alt="Portfolio">Portfolio</a>
       <a href="/articles/" alt="Articles">Articles</a>
@@ -56,12 +55,4 @@
       text-decoration:none;
     }
   }
-
-  /* max-width: xsmall screen */
-  /* @media all and (max-width: 600px) {
-    .header > div {
-      justify-content: space-evenly;
-      column-gap: 0;
-    }
-  } */
 </style>

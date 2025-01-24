@@ -1,6 +1,5 @@
 <template>
 
-    <!-- <Header v-if="frontmatter.layout !== 'home'" /> -->
     <Header />
 
     <main>
@@ -22,8 +21,6 @@
                 day: 'numeric'})}}</template>
         </Article>
 
-        <!-- <CaseStudy v-else-if="frontmatter.layout === 'case study'" /> -->
-
         <Content v-else />
 
     </main>
@@ -41,19 +38,6 @@
     import NotFound from './404.vue'
     import Page from './page.vue'
     import Article from './article.vue'
-    // import CaseStudy from './case study.vue'
 
     const { page, frontmatter } = useData()
-
-    // import DefaultTheme from 'vitepress/theme'
-    
-    // import { useData } from 'vitepress'
-    // const { frontmatter } = useData()
-
-    // import { data as pressData } from '../../press/press.data'
-    // const press = frontmatter.projectId ? _.filter(newsData, ['project', frontmatter.projectId]) : []
-    // console.log(frontmatter.value.Target)
-    // console.log(press)
-
-    // const { Layout } = DefaultTheme
 </script>
