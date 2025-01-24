@@ -299,4 +299,4 @@ export const projects = [
 //   }
 // }
 
-export default createContentLoader('portfolio/**/*.md')
+export default createContentLoader('portfolio/projects/**/*.md')

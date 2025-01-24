@@ -13,6 +13,7 @@ export default defineConfig({
   outDir: '../dist',
 
   rewrites: {
+    'portfolio/projects/:slug*' : 'portfolio/:slug*',
     'articles/archive/:slug*' : 'articles/:slug*'
   },
 

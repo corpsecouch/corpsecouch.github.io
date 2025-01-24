@@ -182,6 +182,12 @@
         [ 'frontmatter.preview.year' ],
         [ 'desc' ]);
 
+      // fix the urls due to the route rewrites
+      projects = _.map(projects, (project) => {
+        project.url = `${project.url}`.replace(/projects\//, '')
+        return project
+      })
+
       let portfolioData = {};
       _.each(companies, (value, key) => {
         portfolioData[value.slug] = {
