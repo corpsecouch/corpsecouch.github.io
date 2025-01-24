@@ -1,8 +1,7 @@
 ---
 # layout:         'case study'
 
-analytics:
-    title: 'Portfolio: Dino Dig'
+title: 'Operation: Dino Dig'
 
 preview:
     company:        'phenomblue'

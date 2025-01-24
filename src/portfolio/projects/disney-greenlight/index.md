@@ -1,8 +1,7 @@
 ---
 # layout:         'case study'
 
-analytics:
-    title: 'Portfolio: CASTL'
+title: 'Movie Greenlight'
 
 preview:
     company:        'disney'

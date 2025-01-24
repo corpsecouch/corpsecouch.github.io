@@ -1,8 +1,7 @@
 ---
 # layout:         'case study'
 
-analytics:
-    title: 'Portfolio: Genesis'
+title: 'Microsoft Genesis'
 
 preview:
     company:        'phenomblue'

@@ -1,8 +1,7 @@
 ---
 # layout:         'case study'
 
-analytics:
-    title: 'Portfolio: My Wild Kingdom'
+title: 'My Wild Kingdom'
 
 preview:
     company:        'phenomblue'

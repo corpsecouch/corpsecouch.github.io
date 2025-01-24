@@ -1,8 +1,7 @@
 ---
 # layout:         'case study'
 
-analytics:
-    title: 'Portfolio: Star Lab'
+title: 'Disney Innovation Incubator'
 
 preview:
     company:        'disney'

@@ -1,8 +1,7 @@
 ---
 # layout:         'case study'
 
-analytics:
-    title: 'Portfolio: VR'
+title: 'Filmmaking for VR'
 
 preview:
     company:        'disney'

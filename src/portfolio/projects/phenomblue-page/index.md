@@ -1,8 +1,7 @@
 ---
 # layout:         'case study'
 
-analytics:
-    title: 'Portfolio: Page'
+title: 'Page'
 
 preview:
     company:        'phenomblue'

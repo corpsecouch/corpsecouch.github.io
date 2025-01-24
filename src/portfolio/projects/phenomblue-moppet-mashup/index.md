@@ -1,8 +1,7 @@
 ---
 # layout:         'case study'
 
-analytics:
-    title: 'Portfolio: Moppet Mashup'
+title: 'Moppet Mashup'
 
 preview:
     company:        'phenomblue'

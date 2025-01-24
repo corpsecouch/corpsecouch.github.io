@@ -1,8 +1,7 @@
 ---
 # layout:         'case study'
 
-analytics:
-    title: 'Portfolio: Ironbear'
+title: 'Conversational Lead Funnel'
 
 preview:
     company:        'rocket'

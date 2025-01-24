@@ -1,8 +1,7 @@
 ---
 # layout:         'case study'
 
-analytics:
-    title: 'Portfolio: Hex'
+title: 'Disney Design System'
 
 preview:
     company:        'disney'

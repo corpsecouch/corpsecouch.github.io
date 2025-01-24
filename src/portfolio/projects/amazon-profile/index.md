@@ -1,8 +1,7 @@
 ---
 # layout:         'case study'
 
-analytics:
-    title:  'Portfolio: Alexa Profile'
+title:  'Alexa Profile'
 
 preview:
     company:        'amazon'
