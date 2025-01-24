@@ -1,22 +1,20 @@
 <template>
-  <div class="illustration">
-    <!-- <img :src="imagesrc"> -->
-     <slot name="image"></slot>
-    <p class="subtext" v-if="!!$slots.subtext"><slot name="subtext"></slot></p>
+  <div :class="$style.illustration">
+    <slot name="image"></slot>
+    <img v-if="$props.src" :src="$props.src" />
+    <p :class="$style.subtext" v-if="!!$slots.subtext"><slot name="subtext"></slot></p>
   </div>
 </template>
 
 <script>
   export default {
     name: 'Illustration',
-    // props: [ 'imagesrc' ]
+    props: [ 'src' ]
   }
 </script>
 
-<style scoped lang="css">
+<style module lang="css">
   .illustration {
-    /* margin-bottom: 3rem;
-    padding: 1rem; */
     margin-top: 1rem;
     background-color: whitesmoke;
     margin-bottom: 3rem;
@@ -26,12 +24,19 @@
     @media all and (max-width: 600px) {
       padding: 1rem;
     }
-  }
 
-  :deep(img) {
-    width: 100%;
-    /* margin-top: 1rem; */
-    filter: drop-shadow(0px 2px 0.5rem rgba(0, 0, 0, 0.2));
+    img {
+      width: 100%
+    }
+
+    &:deep(img) {
+      width: 100%;
+      filter: drop-shadow(0px 2px 0.5rem rgba(0, 0, 0, 0.2));
+    }
+
+    p {
+      margin: 0.6rem 0 0 0;
+    }
   }
 
   .subtext {
@@ -39,6 +44,5 @@
     font-size: 0.8rem;
     font-style: italic;
     text-align: center;
-    /* margin-top: 0.5rem; */
   }
 </style>
