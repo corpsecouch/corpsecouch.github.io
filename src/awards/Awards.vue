@@ -99,7 +99,7 @@
   }
 
   #awards-list {
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
 
     > section {
       margin-top: 4rem;

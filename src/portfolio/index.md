@@ -1,9 +1,6 @@
 ---
 layout: 'page'
 title: 'Portfolio'
-
-analytics:
-    title: 'Portfolio'
 ---
 <script setup>
     import Portfolio from './Portfolio.vue'

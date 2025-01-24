@@ -1,34 +1,33 @@
 <template>
-    <div id="news-list">
-      <p>My work has been featured or mentioned in at least <strong>{{ newsData.total }} articles</strong> (that I know of).</p>
+  <p>My work has been featured or mentioned in at least <strong>{{ newsData.total }} articles</strong> (that I know of).</p>
 
-      <section id="rocket" v-if="newsData.rocket.length">
-        <h3>Rocket News</h3>
-        <NewsList :data="newsData.rocket"></NewsList>
-      </section>
+  <div id="news-list">
+    
+    <section id="rocket" v-if="newsData.rocket.length">
+      <h3>Rocket News</h3>
+      <NewsList :data="newsData.rocket"></NewsList>
+    </section>
 
-      <section id="amazon" v-if="newsData.amazon.length">
-        <h3>Amazon News</h3>
-        <NewsList :data="newsData.amazon"></NewsList>
-      </section>
+    <section id="amazon" v-if="newsData.amazon.length">
+      <h3>Amazon News</h3>
+      <NewsList :data="newsData.amazon"></NewsList>
+    </section>
 
-      <section id="disney" v-if="newsData.disney.length">
-        <h3>Disney News</h3>
-        <NewsList :data="newsData.disney"></NewsList>
-      </section>
+    <section id="disney" v-if="newsData.disney.length">
+      <h3>Disney News</h3>
+      <NewsList :data="newsData.disney"></NewsList>
+    </section>
 
-      <section id="phenomblue" v-if="newsData.phenomblue.length">
-        <h3>Phenomblue News</h3>
-        <NewsList :data="newsData.phenomblue"></NewsList>
-      </section>
+    <section id="phenomblue" v-if="newsData.phenomblue.length">
+      <h3>Phenomblue News</h3>
+      <NewsList :data="newsData.phenomblue"></NewsList>
+    </section>
 
-    </div>
+  </div>
 </template>
 
 <script>
   import NewsList from '@components/NewsList';
-  // import news from '@data/news-coverage';
-  // import companies from '@data/companies';
   import { data as news } from '@press/press.data';
   import { data as companies } from '@globals/companies.data'
 
@@ -100,7 +99,7 @@
   }
 
   #news-list {
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
 
     > section {
       margin-top: 4rem;

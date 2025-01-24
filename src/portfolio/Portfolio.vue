@@ -1,5 +1,9 @@
 <template>
 
+
+  <p>Having so many years of experience and a background across industries and careers, I've been involved with too many projects to list. Here I've provided a curated list of work that's either highly impactful, important, or I'm simply proud of. I hope you enjoy reading about them as much as I did bringing them to life.</p>
+  <p>Reach out to me at <Email></Email> if you'd like to discuss some of my work or how we might work together.</p>
+
   <!-- Rocket -->
 
   <div class="company" id="rocket">
@@ -137,12 +141,12 @@
 <script>
   // https://www.bestfolios.com/portfolio/dougseidman
 
-  // import Subpage from '@components/Subpage';
   import { data as projectData } from '@portfolio/portfolio.data';
   import { data as newsData } from '@press/press.data';
   import { data as companies } from '@globals/companies.data';
   import { data as awardsData } from '@awards/awards.data';
   import Callouts from '@components/Callouts.vue';
+  import Email from '@components/Email';
 
   import _ from 'lodash';
 
@@ -150,8 +154,8 @@
     name: 'Portfolio',
 
     components: {
-      // Subpage,
-      Callouts
+      Callouts,
+      Email
     },
 
     methods: {
@@ -298,6 +302,11 @@
     padding-top: 2rem;
     margin-top: 7rem;
 
+    &:first-child {
+      padding-top: 0;
+      margin-top: 0;
+    }
+
     > h3 {
       background-repeat: no-repeat;
       background-position-x: center;
@@ -305,7 +314,8 @@
       overflow: hidden;
       white-space: nowrap;
       background-size: contain;
-      height: 84px;
+      /* height: 84px; */
+      height: 64px;
     }
   }
 
