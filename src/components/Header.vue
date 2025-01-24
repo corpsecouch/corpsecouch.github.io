@@ -36,10 +36,14 @@
     justify-content: flex-end;
     align-items: center;
     column-gap: 1.6rem;
+    flex-wrap: wrap;
+    row-gap: 1rem;
   }
 
   .name {
     flex-grow: 1;
+    min-width: 30%;
+
     a {
       text-decoration: none;
       display: inline-block;
@@ -54,10 +58,10 @@
   }
 
   /* max-width: xsmall screen */
-  @media all and (max-width: 600px) {
+  /* @media all and (max-width: 600px) {
     .header > div {
       justify-content: space-evenly;
-      /* column-gap: 0; */
+      column-gap: 0;
     }
-  }
+  } */
 </style>
