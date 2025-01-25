@@ -19,6 +19,24 @@ title: 'Articles'
     return article
   })
 
+  // _.each(articles, (article, key) => {
+  //   const next = key + 1 < articles.length ? key + 1 : null
+  //   article.frontmatter.next = null
+  //   if(next != null) {
+  //     article.frontmatter.next = {}
+  //     article.frontmatter.next.url = articles[next].url
+  //     article.frontmatter.next.text = articles[next].frontmatter.title
+  //   }
+
+  //   const prev = key - 1 >= 0 ? key - 1 : null
+  //   article.frontmatter.prev = null
+  //   if(prev != null) {
+  //     article.frontmatter.prev = {}
+  //     article.frontmatter.prev.url = articles[prev].url
+  //     article.frontmatter.prev.text = articles[prev].frontmatter.title
+  //   }
+  // })
+
   articles = _.orderBy(data, ['frontmatter.date'], ['desc'])
 </script>
 
