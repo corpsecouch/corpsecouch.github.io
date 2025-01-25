@@ -22,14 +22,7 @@ There’s the hard-line stance of “just learn Unity or SketchUp”. However, t
 ## MR-specific Device Not Required
 Access to a Hololens, Meta2 or other mixed reality device shouldn’t be the hurdle to creating mixed reality experiences. The ideal tool should be able to use widely available devices, like smartphones. Yes, MR experiences are different between, for example, a Hololens and an iPhone. Being able to rapidly test on a iPhone before moving to a Hololens is still extremely valuable.
 
-<Illustration>
-    <template v-slot:image>
-
-![](./one.jpg)
-
-</template>
-    <template v-slot:subtext>Goggles not required for rapid testing</template>
-</Illustration>
+![](./one.jpg "Goggles not required for rapid testing")
 
 ## Utilize The Device Camera
 This is the one thing that none of the VR prototyping tools enable, yet. If you can test on a phone then enable the camera and pass the feed through to the preview. It’s not perfect but it at least get’s the designer one step closer to the actual experience.
@@ -37,14 +30,7 @@ This is the one thing that none of the VR prototyping tools enable, yet. If you 
 ## Simulate User Interactions
 Mixed reality experiences need interactions because people want to touch what they see. When your prototyping you need the ability to simulate all sorts of interactions: touch, gestures, etc.
 
-<Illustration>
-    <template v-slot:image>
-
-![](./two.gif)
-
-</template>
-    <template v-slot:subtext>Gotta drag that shoe around somehow</template>
-</Illustration>
+![](./two.gif "Gotta drag that shoe around somehow")
 
 ## Simulate Context
 The heart of all mixed reality experiences is it’s context. Where, when, what does it see, what does the user see, is the mixed part of the reality blocking a critical or dangerous part actual reality? The MR prototyping tool needs to have a robust way of simulating different contexts. The designer and developer won’t always be able to create in the context the experience will be used to do rapid desk testing. For instance, if the MR experience is for fire fighters you won’t find designers on their laptop in the middle of a burning building. Maybe metaphorically, but not literally. The tool needs to support that.

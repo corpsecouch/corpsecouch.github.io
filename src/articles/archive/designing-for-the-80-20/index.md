@@ -17,14 +17,7 @@ Years ago, I came across the concept that 80% of your users only use 20% of your
 
 This makes a lot of sense for conversation design. The vast majority of what’s possible in a conversational AI is obfuscated, hidden from users until they bump into it. I’d argue this is generally true for non-conversational products as well: different modality, same principle.
 
-<Illustration>
-    <template v-slot:image>
-
-![](./one.png)
-
-</template>
-    <template v-slot:subtext>Illustration from Google’s conversational design guidelines</template>
-</Illustration>
+![](./one.png "Illustration from Google’s conversational design guidelines")
 
 There are schools of thought suggesting that those 80% of use cases aren’t priorities, that they should only be “good enough”, or that they can be backlogged for phase 2. Let’s be honest — phase 2 never happens. Even Google’s guidelines say this:
 
