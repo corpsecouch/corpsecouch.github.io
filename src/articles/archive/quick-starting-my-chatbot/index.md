@@ -22,14 +22,7 @@ So, I signed up. This was my first chatbot, I had no idea what I was doing. Foll
 
 After about thirty minutes of tinkering and following instructions I was ready to have my mind blown. I opened a trusty command prompt and asked my bot how the weather was…
 
-<Illustration>
-    <template v-slot:image>
-
-![](./one.png)
-
-</template>
-    <template v-slot:subtext>Humor must be hereditary</template>
-</Illustration>
+![](./one.png "Humor must be hereditary")
 
 Not sure it’s weather source is trustworthy. Either that or the Internet of Things has truly become u-butt-quitous. Puns totally intended.
 

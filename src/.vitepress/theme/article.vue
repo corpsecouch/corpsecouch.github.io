@@ -75,6 +75,23 @@
 
       p { margin: 1.3rem 0; }
     }
+
+    figure {
+      margin: 3rem 0;
+
+      img {
+        width: inherit;
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+
+      figcaption {
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 0.8rem;
+      }
+    }
   }
 
   .author {

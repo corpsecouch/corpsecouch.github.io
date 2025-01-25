@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { resolve } from 'path'
+import { figure } from '@mdit/plugin-figure'
 
 const hostname = 'https://jasonbejot.com'
 const _isProd = process.env.NODE_ENV === 'production';
@@ -38,6 +39,20 @@ export default defineConfig({
     'articles/archive/:slug*' : 'articles/:slug*'
   },
 
+  /* ************************** */
+  /* * markdown configuration * */
+  /* ************************** */
+
+  markdown: {
+    config: (md) => {
+      md.use(figure) // https://mdit-plugins.github.io/figure.html#demo
+    }
+  },
+
+  /* ********************** */
+  /* * vite configuration * */
+  /* ********************** */
+
   vite: {
     resolve: {
         
@@ -54,6 +69,10 @@ export default defineConfig({
       }
     }
   },
+
+  /* ************************* */
+  /* * sitemap configuration * */
+  /* ************************* */
 
   // https://vitepress.dev/guide/sitemap-generation
   sitemap: {

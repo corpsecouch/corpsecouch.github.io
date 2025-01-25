@@ -15,44 +15,19 @@ Let’s be honest with ourselves for a moment, we UX practitioners have no idea 
 
 Call Hank Pym, it’s time to get tiny.
 
-<Illustration>
-    <template v-slot:image>
-
-![](./one.webp)
-
-</template>
-    <template v-slot:subtext>Careful in there, Hank</template>
-</Illustration>
+![](./one.webp "Careful in there, Hank")
 
 Think of reality at the quantum level. The stuff that atoms are made of. Neutrinos, quarks, electrons, photons, etc are all particles. At this minuscule scale reality gets weird. How weird, you might ask? Well, for instance, particles don’t exist within a single position in space and time. You can’t say that one exists at a specific x and y coordinate. Particles exist within a range of probabilities called it’s [wave function](https://en.wikipedia.org/wiki/Wave_function).
 
 We can describe our designs as wave functions. We don’t know what the outcome (position) or effect (momentum) our designs will have. They exist within a range of probabilities. Of course, this is all before testing and validation.
 
-<Illustration>
-    <template v-slot:image>
-
-![](./two.webp)
-
-</template>
-    <template v-slot:subtext>
-    
-A simple wave function via [Louyah Fatoohi](http://www.louayfatoohi.com/2013/01/philosophy/presenting-ignorance-as-knowledge-the-standard-interpretation-of-quantum-mechanics/)
-    
-</template>
-</Illustration>
+![](./two.webp "A simple wave function via Louyah Fatoohi")
 
 See where I’m going with this?
 
 When we talk about our designs we use a bunch of terms to describe it’s tangible and intangible properties. Things like height, width, transparency, flow, color, roundness and timing are all common examples. As we design experiences we are essentially assigning properties to various things. One could argue that a design is just a localized set of properties.
 
-<Illustration>
-    <template v-slot:image>
-
-![](./three.webp)
-
-</template>
-    <template v-slot:subtext>Proof of properties in the wild</template>
-</Illustration>
+![](./three.webp "Proof of properties in the wild")
 
 In the quantum realm, [a particle](https://en.wikipedia.org/wiki/Particle_%28disambiguation%29) is a thing that has a bunch of properties that we can assign to it. Sounds like a design to me and a pretty tight parallel between the two fields. Physicists also use some fun terminology to name their properties. Describing the flavor or spin of our designs could liven things up.
 
@@ -85,14 +60,7 @@ To be honest I promised something like teleportation. Getting to the heart of th
 
 Think of a particle in a quantum sized box. When the particle is close to a wall it’s wave function extends outside the box, past the wall. There’s a slightly higher probability that particle’s wave function will collapse on the opposite side of the wall. That little bit of probability is all it needs. One moment it’s in the box, the next moment it’s escaped.
 
-<Illustration>
-    <template v-slot:image>
-
-![](./four.webp)
-
-</template>
-    <template v-slot:subtext>Easier to go through than around</template>
-</Illustration>
+![](./four.webp "Easier to go through than around")
 
 This phenomenon is sounds unreal but it’s mathematically proven, observed and harnessed. A bunch a super science-y tech and everyday things like [pressure sensors](https://en.wikipedia.org/wiki/Quantum_tunnelling_composite) are based off of it. It was even recently discovered that [water quantum tunnels though stuff](http://phys.org/news/2016-04-state-molecule.html).
 
@@ -102,25 +70,11 @@ Every once in a while we’ll design an experience that shows up beyond these pr
 
 Probably one of the more recent epic examples of an experience quantum tunneling itself to failure was the [iOS 6 version of Apple Maps](http://theamazingios6maps.tumblr.com/).
 
-<Illustration>
-    <template v-slot:image>
-
-![](./five.webp)
-
-</template>
-    <template v-slot:subtext>Apple Maps circa 2012</template>
-</Illustration>
+![](./five.webp "Apple Maps circa 2012")
 
 Viral videos are a perfect example of transcending expectation. Someone shoots an innocuous video and becomes an overnight sensation. The original “Old Spice Guy” commercial is a great case study. Designed to target females it appealed to just about everyone and went on to launch more products for the brand not to mention a cultural phenomenon.
 
-<Illustration>
-    <template v-slot:image>
-
-![](./six.webp)
-
-</template>
-    <template v-slot:subtext>You want to smell like Isaiah Mustafa</template>
-</Illustration>
+![](./six.webp "You want to smell like Isaiah Mustafa")
 
 We don’t see transcendent experiences happening every day but science reliably harnesses quantum tunneling. Entrepreneurs try really hard and venture capitalists pour tons of money in to start-ups attempting to create breakthrough experiences. How do we reliably tunnel through our requirements?
 
