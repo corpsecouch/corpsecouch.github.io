@@ -38,11 +38,7 @@ We just described a design two different ways, probability and properties, but w
 
 This quantum mechanics explains this conundrum as the [wave-particle duality](https://en.wikipedia.org/wiki/Wave%E2%80%93particle_duality). Neither description, by itself, can fully describe the behavior of quantum things. Albert Einstein, society’s beloved genius, has a great quote about this:
 
----
-
 > It seems as though we must use sometimes the one theory and sometimes the other, while at times we may use either. We are faced with a new kind of difficulty. We have two contradictory pictures of reality; separately neither of them fully explains the phenomena of light, but together they do.
-
----
 
 This is our experience design duality. We need both descriptions of an experience design to fully explain it.
 
@@ -90,7 +86,5 @@ Looking at user experience through the lens of science reveals tons of compellin
 How would Heisenberg’s uncertainty principle apply to measuring our designs? Since physics describe the laws of nature and experience design can be described by physics is design a law of nature? What are the philosophical implications of quantifying experience design this way?
 
 Deep questions for another time.
-
----
 
 > A big thanks to [James Brush](https://medium.com/@jimbojones) for keeping my science in check. He’s a real physicist, I just play one on the internet.

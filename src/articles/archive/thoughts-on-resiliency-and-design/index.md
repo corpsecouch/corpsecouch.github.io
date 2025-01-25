@@ -14,11 +14,7 @@ A car’s engine (the solution) needs air and fuel (the inputs) to turn the car�
 
 A common question I hear from product designers wanting to break into conversation design is “How do I do conversation design?”. This leaves me wondering, where’s the disconnect? Why is it so hard to grasp this concept? Thinking about efficiency, I had a brainwave. Stick with me while I try to lay it all out.
 
----
-
 > Modern product design is caught in the trap of efficiency.
-
----
 
 Entire solutions aren’t designed all at once, generally speaking, like a mobile app or an e-comm site. They’re created in parts, iteratively, and snapped together like an imaginary Lego set. Each has its own set of problems, inputs, and outputs:
 
@@ -34,11 +30,7 @@ This is the world the vast majority of product designers operate in: designing e
 ## So what about resiliency?
 Resiliency is almost the opposite of efficiency, depending on how you look at it. A resilient solution is one that wont break when the inputs change, it will still produce an output.
 
----
-
 > The very nature of conversation design is resiliency over efficiency.
-
----
 
 This, I think, is where product designers start to struggle wrapping their heads around conversation design. A conversational AI should always respond to the person no matter what they say. Every time someone interacts, there’s a response. There’s always exceptions, but that’s a foundational and overarching principal of conversation design. With non-conversational product design, there’s only a response when you hit a button, or some other pre-determined interactive element like an image in a carousel.
 

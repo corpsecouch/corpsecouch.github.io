@@ -13,11 +13,7 @@ People are falling into a trap: the mindset that they aren’t innovative becaus
 ## Innovation Defined
 It’s important that we start here. Bear with me on this. You might be surprised that you don’t know the definition of the word. Innovation is defined simply as:
 
----
-
 > “The introduction of something new” - [Merriam-Webster](http://www.merriam-webster.com/dictionary/innovation)
-
----
 
 That’s a definition that doesn’t mince words. Let’s break down its key elements: introduction, something and new.
 

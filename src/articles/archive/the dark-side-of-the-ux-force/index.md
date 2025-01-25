@@ -16,11 +16,7 @@ This is an interesting situation. As practicing UX professionals we know that we
 
 What is Dark UX? Here’s how [darkpatterns.org](http://darkpatterns.org/) defines it:
 
----
-
 > A Dark Pattern is a user interface that has been carefully crafted to trick users into doing things, such as buying insurance with their purchase or signing up for recurring bills.
-
----
 
 Essentially it’s old fashioned manipulation. By reversing people’s natural behavior and expectations someone with malintent can accomplish terrible goals.
 

@@ -69,11 +69,19 @@
     }
 
     blockquote {
-      text-align: center;
+      /* text-align: center;
       font-style: italic;
       padding: 0 2rem;
 
-      p { margin: 1.3rem 0; }
+      p { margin: 1.3rem 0; } */
+
+      font-style: italic;
+      font-weight: 300;
+      margin: 2rem 0;
+      padding: 0.5rem 2rem;
+      border-left: solid 2px var(--color-background-dark);
+
+      p { margin: 0; }
     }
 
     figure {
