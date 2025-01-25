@@ -7,7 +7,6 @@ const _GtagID = 'G-G24FHEZ8YC';
 
 function analytics():any {
   if(_isProd) {
-    console.log('isprod')
     return [
       [
         'script',
@@ -23,7 +22,6 @@ function analytics():any {
       ]
     ]
   } else {
-    console.log('isnotprod')
     return []
   }
 }
