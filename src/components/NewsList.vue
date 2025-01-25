@@ -1,6 +1,6 @@
 <template>
-  <ul>
-    <li v-for="item in data">
+  <ul :class="$style.articles">
+    <li :class="$style.article" v-for="item in data">
       <NewsLink :url="item.url">
         <template v-slot:title>{{ item.title }}</template>
         <template v-slot:source>{{ item.pub }}</template>
@@ -25,13 +25,11 @@
   }
 </script>
 
-<style scoped lang="css">
-  ul {
+<style module lang="css">
+  .articles {
     list-style: none;
     margin: 0;
 
-    li {
-      & + li { margin-top: 1rem; }
-    }
+    .article + .article { margin-top: 1rem; }
   }
 </style>
