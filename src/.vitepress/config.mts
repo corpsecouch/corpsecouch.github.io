@@ -5,6 +5,29 @@ const hostname = 'https://jasonbejot.com'
 const _isProd = process.env.NODE_ENV === 'production';
 const _GtagID = 'G-G24FHEZ8YC';
 
+function analytics():any {
+  if(_isProd) {
+    console.log('isprod')
+    return [
+      [
+        'script',
+        { async: '', src: `https://www.googletagmanager.com/gtag/js?id=${_GtagID}` }
+      ],
+      [
+        'script',
+        {},
+        `window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${_GtagID}');`
+      ]
+    ]
+  } else {
+    console.log('isnotprod')
+    return []
+  }
+}
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Jason Bejot",
@@ -47,20 +70,22 @@ export default defineConfig({
 
   // https://vitepress.dev/reference/site-config#example-using-google-analytics
 
-  head: [
-    [
-      'script',
-      { async: '', src: `https://www.googletagmanager.com/gtag/js?id=${_GtagID}` }
-    ],
-    [
-      'script',
-      {},
-      `window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '${_GtagID}');`
-    ]
-  ],
+  head: analytics(),
+
+  // head: [
+  //   [
+  //     'script',
+  //     { async: '', src: `https://www.googletagmanager.com/gtag/js?id=${_GtagID}` }
+  //   ],
+  //   [
+  //     'script',
+  //     {},
+  //     `window.dataLayer = window.dataLayer || [];
+  //     function gtag(){dataLayer.push(arguments);}
+  //     gtag('js', new Date());
+  //     gtag('config', '${_GtagID}');`
+  //   ]
+  // ],
 
   
   transformPageData(pageData) {
