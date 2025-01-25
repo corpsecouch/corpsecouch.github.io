@@ -2,6 +2,8 @@
 title: 'Quick Starting My Chatbot'
 date: '2016-11-11T12:00'
 layout: 'article'
+preview:
+    text: 'Chatbots are an intriguing, naturalish way of interaction. It was past time I built one.'
 ---
 
 ![](./hero.png)

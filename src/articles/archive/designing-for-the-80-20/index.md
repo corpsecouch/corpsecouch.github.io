@@ -3,6 +3,8 @@ title: 'Designing for the 80/20'
 subtitle: 'Every part of your design is important, especially the edge cases.'
 date: '2024-08-19T12:00'
 layout: 'article'
+preview:
+    text: 'Every part of your design is important, especially the edge cases.'
 ---
 
 ![](./hero.jpeg)

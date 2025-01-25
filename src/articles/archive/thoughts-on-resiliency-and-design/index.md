@@ -2,6 +2,8 @@
 title: 'Thoughts on Resiliency & Design'
 date: '2024-11-04T12:00'
 layout: 'article'
+preview:
+    text: 'A common question from product designers is “How do I do conversation design?”. There''s a disconnect in grasping the concept.'
 ---
 
 ![](./hero.jpg)

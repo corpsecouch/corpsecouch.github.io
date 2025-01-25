@@ -15,6 +15,7 @@ title: 'Articles'
   let articles = _.map(data, (article) => {
     article.frontmatter.date = new Date(article.frontmatter.date)
     article.url = `${article.url}`.replace(/archive\//, '')
+    if(!article.frontmatter.preview) article.frontmatter.preview = {}
     return article
   })
 

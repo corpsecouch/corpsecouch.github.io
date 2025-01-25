@@ -2,6 +2,7 @@
   <ul :class="$style.articles">
     <li :class="$style.article" v-for="article in data">
       <a :class="$style.title" :href="article.url">{{ article.frontmatter.title }}</a>
+      <p v-if="article.frontmatter.preview.text">{{ article.frontmatter.preview.text }}</p>
       <span :class="$style.date">{{ new Date(article.frontmatter.date).toLocaleString(undefined, {
         year: 'numeric',
         month: 'long',
@@ -29,13 +30,20 @@
     margin-top: 2rem;
   }
 
+  .article p {
+    margin: 0;
+    /* font-weight: 300; */
+    font-size: 0.9rem;
+  }
+
   .title {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.1rem;
   }
 
   .date {
     display: block;
     font-size: 0.9rem;
+    font-weight: 300;
   }
 </style>

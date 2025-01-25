@@ -2,6 +2,8 @@
 title: 'The Mixed Reality Prototyping Tool Designers Need'
 date: '2017-04-12T12:00'
 layout: 'article'
+preview:
+    text: 'To push MR from the labs and into the streets designers need the right tools.'
 ---
 
 ![](./hero.jpg)
