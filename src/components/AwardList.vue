@@ -1,6 +1,6 @@
 <template>
-  <ul>
-    <li v-for="item in data">
+  <ul :class="$style.awards">
+    <li :class="$style.award" v-for="item in data">
       <AwardItem :url="item.url">
         <template v-slot:award>{{ item.award }}</template>
         <template v-slot:for>{{ item.for }}</template>
@@ -28,13 +28,11 @@
   }
 </script>
 
-<style scoped lang="css">
-  ul {
+<style module lang="css">
+  .awards {
     list-style: none;
     margin: 0;
 
-    li {
-      & + li { margin-top: 1rem; }
-    }
+    .award + .award { margin-top: 1rem; }
   }
 </style>
