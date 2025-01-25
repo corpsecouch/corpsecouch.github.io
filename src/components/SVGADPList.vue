@@ -1,5 +1,5 @@
 <template>
-  <img src="/assets/icons/icon-adplist.png">
+  <img :class="$style.img" src="/assets/icons/icon-adplist.png">
 </template>
 
 <script>
@@ -9,6 +9,6 @@
   }
 </script>
 
-<style scoped lang="css">
-  img { width: 32px; }
+<style module lang="css">
+  .img { width: 32px; }
 </style>

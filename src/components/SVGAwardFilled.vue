@@ -8,7 +8,3 @@
     name: 'SVGAwardFilled'
   }
 </script>
-
-<style scoped lang="css">
-
-</style>

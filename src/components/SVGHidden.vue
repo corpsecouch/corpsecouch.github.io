@@ -1,5 +1,5 @@
 <template>
-  <svg xmlns:x="http://ns.adobe.com/Extensibility/1.0/" xmlns:i="http://ns.adobe.com/AdobeIllustrator/10.0/" xmlns:graph="http://ns.adobe.com/Graphs/1.0/" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="-949 951 100 100" style="enable-background:new -949 951 100 100;" xml:space="preserve">
+  <svg :class="$style.svg" xmlns:x="http://ns.adobe.com/Extensibility/1.0/" xmlns:i="http://ns.adobe.com/AdobeIllustrator/10.0/" xmlns:graph="http://ns.adobe.com/Graphs/1.0/" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="-949 951 100 100" style="enable-background:new -949 951 100 100;" xml:space="preserve">
     <switch>
       <g i:extraneous="self">
         <g>
@@ -19,8 +19,8 @@
   }
 </script>
 
-<style scoped lang="css">
-  svg {
+<style module lang="css">
+  .svg {
     fill: var(--color-lighttext);
   }
 </style>

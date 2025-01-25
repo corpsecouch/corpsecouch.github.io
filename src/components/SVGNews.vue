@@ -4,12 +4,7 @@
 </template>
 
 <script>
-
   export default {
     name: 'SVGNews'
   }
 </script>
-
-<style scoped lang="css">
-
-</style>

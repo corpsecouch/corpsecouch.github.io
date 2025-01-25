@@ -8,7 +8,3 @@
     name: 'SVGAwardOriginal'
   }
 </script>
-
-<style scoped lang="css">
-
-</style>
