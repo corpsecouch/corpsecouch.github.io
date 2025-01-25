@@ -1,9 +1,7 @@
 <template>
-  <div class="item">
-    <div class="content">
-      <a v-bind:href="url" target="_blank"><slot name="title"></slot></a>
-      <span class="source"><slot name="source"></slot></span>
-    </div>
+  <div :class="$style.item">
+    <a v-bind:href="url" target="_blank"><slot name="title"></slot></a>
+    <span :class="$style.source"><slot name="source"></slot></span>
   </div>
 </template>
 
@@ -14,11 +12,10 @@
   }
 </script>
 
-<style scoped lang="css">
+<style module lang="css">
   .item {
     display: inline-flex;
-    flex-direction: row;
-    column-gap: 1rem;
+    flex-direction: column;
     border-left: solid 1px #c9d0d9;
     padding-left: 1rem;
   }
