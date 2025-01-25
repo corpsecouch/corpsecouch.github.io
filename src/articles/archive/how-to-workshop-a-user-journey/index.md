@@ -4,6 +4,7 @@ date: '2017-04-26T12:00'
 layout: 'article'
 preview:
     text: 'Still leaning on research and endless iteration to define your user journeys? There is a better way.'
+medium: 'https://medium.com/humanfriendly/how-to-workshop-a-user-journey-a35bf62e88cb'
 ---
 
 UX designers are always designing around user flows and user journeys. Or they need to define new ones. Traditionally you would do a bunch of discovery, diagram it out, validate it and iterate until it’s accepted. That way is time consuming and your stakeholders question why you’re spending their money not designing.

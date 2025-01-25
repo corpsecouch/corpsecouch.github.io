@@ -4,6 +4,7 @@ date: '2017-04-12T12:00'
 layout: 'article'
 preview:
     text: 'To push MR from the labs and into the streets designers need the right tools.'
+medium: 'https://medium.com/prototypr/the-mixed-reality-prototyping-tool-designers-need-eb4f36045715'
 ---
 
 ![](./hero.jpg)

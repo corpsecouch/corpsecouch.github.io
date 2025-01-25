@@ -7,6 +7,11 @@
       <p v-if="!!$slots.date" :class="$style.date"><slot name="date">Date</slot></p>
     </section>
 
+    <!-- <section>
+      <a v-if="!!$props.medium" :href="$props.medium">Medium</a>
+      <a v-if="!!$props.substack" :href="$props.substack">Substack</a>
+    </section> -->
+
     <section :class="$style.content">
       <Content />
     </section>
@@ -21,7 +26,11 @@
 
 <script>
   export default {
-    name: 'Article'
+    name: 'Article',
+    props: [
+      'medium',
+      'substack'
+    ]
   }
 </script>
 

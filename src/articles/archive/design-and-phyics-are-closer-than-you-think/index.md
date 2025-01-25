@@ -4,6 +4,7 @@ date: '2016-10-27T12:00'
 layout: 'article'
 preview:
     text: 'Quantum mechanics can describe a lot about UX including it''s freaky teleportation-esque phenomenon. Let''s science the shit out of this.'
+medium: 'https://medium.com/@jasonbejot/design-physics-are-closer-than-you-think-a494e67a2ed2'
 ---
 
 ![](./hero.webp)

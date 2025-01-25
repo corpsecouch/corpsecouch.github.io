@@ -4,6 +4,7 @@ date: '2015-10-17T12:00'
 layout: 'article'
 preview:
     text: 'One night, I asked some conferece speakers “Wouldn’t it be cool if someone from Zynga gave a presentation on Dark UX?” Jaws dropped.'
+medium: 'https://medium.com/@jasonbejot/the-dark-side-of-the-ux-force-e32897555bcf'
 ---
 
 One night, during a recent UX conference, I was eating with a group of conference speakers and fellow attendees. Burgers and beer were flowing freely when I unwittingly mentioned “Wouldn’t it be cool if someone from Zynga gave a presentation on Dark UX?”
