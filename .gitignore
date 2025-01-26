@@ -8,3 +8,5 @@ build
 # vitepress specific
 src/.vitepress/dist
 src/.vitepress/cache
+
+drafts/
