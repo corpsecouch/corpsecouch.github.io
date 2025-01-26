@@ -7,10 +7,11 @@
       <p v-if="!!$slots.date" :class="$style.date"><slot name="date">Date</slot></p>
     </section>
 
-    <!-- <section>
+    <section :class="$style.publishers" v-if="!!$props.medium || !!$props.substack">
+      <span>Also available on:</span>
       <a v-if="!!$props.medium" :href="$props.medium">Medium</a>
       <a v-if="!!$props.substack" :href="$props.substack">Substack</a>
-    </section> -->
+    </section>
 
     <section :class="$style.content">
       <Content />
@@ -49,7 +50,7 @@
     }
   }
 
-  .content, .author {
+  .content, .author, .publishers {
     margin-top: 3rem;
 
     h2 {
@@ -59,6 +60,15 @@
       font-weight: 500;
       font-size: 1.3rem;
     }
+  }
+
+  .publishers {
+    font-size: 0.8rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    column-gap: 0.5rem;
+    font-weight: 300;
   }
 
   .content {
