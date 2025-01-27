@@ -4,6 +4,7 @@ date: '2015-12-04T12:00'
 layout: 'article'
 preview:
     text: 'NASA is releasing the highest resolution images it has of Pluto. That might not seem that important but it’s huge.'
+    image: 'hero.webp'
 medium: 'https://medium.com/@jasonbejot/the-importance-of-pluto-b84fde26f02e'
 ---
 

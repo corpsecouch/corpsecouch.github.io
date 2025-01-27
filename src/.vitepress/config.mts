@@ -54,6 +54,43 @@ export default defineConfig({
   /* ********************** */
 
   vite: {
+    build: {
+      rollupOptions: {
+        output: {
+          assetFileNames: (chunkInfo):string => {
+            let url:string = '[name]-[hash][extname]'
+
+            if(chunkInfo.names) {
+
+              if(chunkInfo.originalFileNames.length) {
+
+                if(chunkInfo.originalFileNames[0].match(/articles\/archive/i)) {
+
+                  const exts = ['jpg', 'png', 'webp', 'jpeg', 'gif']
+
+                  for(var i = 0; i < exts.length; i++){
+
+                    if(chunkInfo.names[0].match(new RegExp(`\.${exts[i]}$`, 'i'))) {
+                      
+                      url = chunkInfo.originalFileNames[0].replace(/archive\//i, '')
+                      break
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+            
+            return 'assets/' + url
+          } 
+        }
+      }
+    },
+
     resolve: {
         
       extensions: ['.js', '.vue', '.md'],
