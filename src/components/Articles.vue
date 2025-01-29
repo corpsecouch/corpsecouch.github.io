@@ -9,7 +9,7 @@
           month: 'long',
           day: 'numeric'}) }}</span>
       </div>
-      <img :class="$style.right" v-if="article.frontmatter.preview.image" :src="article.frontmatter.preview.image">
+      <img :class="$style.right" v-if="article.frontmatter.preview.imageurl" :src="article.frontmatter.preview.imageurl">
     </li>
   </ul>
 </template>

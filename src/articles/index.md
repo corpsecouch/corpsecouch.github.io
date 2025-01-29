@@ -14,11 +14,16 @@ title: 'Articles'
 
   let articles = _.map(data, (article) => {
     article.frontmatter.date = new Date(article.frontmatter.date)
-    const originalUrl = article.url
+
+    // remove 'archive' from the url; it's still in there even with a route rewrite
     article.url = `${article.url}`.replace(/archive\//, '')
+
+    // make sure there's a preview object in the frontmatter
     if(!article.frontmatter.preview) article.frontmatter.preview = {}
-    // if(article.frontmatter.preview.image) article.frontmatter.preview.image = '/assets' + article.url + article.frontmatter.preview.image
-    if(article.frontmatter.preview.image) article.frontmatter.preview.image = originalUrl + article.frontmatter.preview.image
+
+    // create a full url for the preview image
+    if(article.frontmatter.preview.image) article.frontmatter.preview.imageurl = article.url + article.frontmatter.preview.image
+    
     return article
   })
 

@@ -6,6 +6,8 @@ const hostname = 'https://jasonbejot.com'
 const _isProd = process.env.NODE_ENV === 'production';
 const _GtagID = 'G-G24FHEZ8YC';
 
+console.log('_isProd:', _isProd)
+
 function analytics():any {
   if(_isProd) {
     return [
@@ -35,8 +37,8 @@ export default defineConfig({
   // outDir: '../dist',
 
   rewrites: {
-    'portfolio/projects/:slug*' : 'portfolio/:slug*',
-    'articles/archive/:slug*' : 'articles/:slug*'
+    'articles/archive/:article*' : 'articles/:article*',
+    'portfolio/projects/:project*' : 'portfolio/:project*'
   },
 
   /* ************************** */
@@ -66,13 +68,16 @@ export default defineConfig({
 
                 if(chunkInfo.originalFileNames[0].match(/articles\/archive/i)) {
 
+                  // only act on these file types
                   const exts = ['jpg', 'png', 'webp', 'jpeg', 'gif']
 
                   for(var i = 0; i < exts.length; i++){
 
                     if(chunkInfo.names[0].match(new RegExp(`\.${exts[i]}$`, 'i'))) {
                       
+                      // move article images to the same folder as the article, not the assets folder
                       url = chunkInfo.originalFileNames[0].replace(/archive\//i, '')
+                      
                       break
 
                     }
@@ -85,7 +90,7 @@ export default defineConfig({
 
             }
             
-            return 'assets/' + url
+            return url
           } 
         }
       }
