@@ -1,7 +1,8 @@
 ---
-layout:         'case study'
+# layout:         'case study'
 
-title: 'Disney Slate'
+title: Disney Slate
+description: A case study about designing how Disney Studio's plans movie releases.
 
 preview:
     company:        'disney'

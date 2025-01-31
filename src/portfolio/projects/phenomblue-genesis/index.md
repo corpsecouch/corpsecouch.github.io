@@ -1,7 +1,8 @@
 ---
 # layout:         'case study'
 
-title: 'Microsoft Genesis'
+title: Microsoft Genesis
+description: A case study on designing a chroma-depth 3d, mulit-user space simulator for the Microsoft Surface.
 
 preview:
     company:        'phenomblue'
@@ -9,7 +10,7 @@ preview:
     type:       'title'
     year:           '2009'
     title:          'Microsoft Genesis'
-    description:    'Encouraging kids to reach their Future Me.'
+    description:    A chroma-depth 3D, real-time, multi-person space simulator.
     tags:         ['public installation']
 
 # hero:

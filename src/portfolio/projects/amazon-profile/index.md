@@ -1,7 +1,8 @@
 ---
 # layout:         'case study'
 
-title:  'Alexa Profile'
+title:  Alexa Profile
+description: A case study about leading the design and launch of the Alexa Profile.
 
 preview:
     company:        'amazon'

@@ -1,7 +1,8 @@
 ---
 # layout:         'case study'
 
-title: 'Movie Greenlight'
+title: Movie Greenlight
+description: A case study about creating the platform for developing Disney theatrical stories.
 
 preview:
     company:        'disney'

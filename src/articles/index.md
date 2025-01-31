@@ -1,6 +1,7 @@
 ---
-layout: 'page'
-title: 'Articles'
+layout: page
+title: Articles
+description: The collection of articles, blog posts, and thought pieces I've written over the years.
 ---
 
 <script setup>

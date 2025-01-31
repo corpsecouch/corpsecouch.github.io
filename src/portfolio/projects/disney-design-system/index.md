@@ -1,7 +1,8 @@
 ---
 # layout:         'case study'
 
-title: 'Disney Design System'
+title: Disney Design System
+description: A case study about creating Disney Studio's enterprise design system.
 
 preview:
     company:        'disney'

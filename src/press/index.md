@@ -1,9 +1,7 @@
 ---
-layout: 'page'
-title: 'Press Coverage'
-
-analytics:
-  title: 'Press'
+layout: page
+title: Press Coverage
+description: A collection of the press coverage about me and my work.
 ---
 
 <script setup>

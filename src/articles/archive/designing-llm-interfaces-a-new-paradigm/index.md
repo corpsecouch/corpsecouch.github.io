@@ -1,6 +1,7 @@
 ---
 title: 'Designing LLM interfaces: a new paradigm'
 date: '2024-11-08T12:00'
+description: Designing an interface for an LLM is deceptively complex, it might even cause you to reframe how you approach design.
 layout: 'article'
 preview:
     text: 'Designing an interface for an LLM is deceptively complex, it might even cause you to reframe how you approach design.'

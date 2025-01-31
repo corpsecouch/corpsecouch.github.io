@@ -1,6 +1,7 @@
 ---
 title: 'The Importance of Pluto'
 date: '2015-12-04T12:00'
+description: 'NASA is releasing the highest resolution images it has of Pluto. That might not seem that important but it’s huge.'
 layout: 'article'
 preview:
     text: 'NASA is releasing the highest resolution images it has of Pluto. That might not seem that important but it’s huge.'

@@ -1,7 +1,8 @@
 ---
 # layout:         'case study'
 
-title: 'Moppet Mashup'
+title: Moppet Mashup
+description: A case study on designing a large-format, social interactive experience.
 
 preview:
     company:        'phenomblue'

@@ -1,6 +1,7 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
+description: Award-winning design leader, technologist, and inventor. Expert on Conversational AI & Design.
 
 # hero:
 #   name: "Jason Bejot"
@@ -23,9 +24,6 @@ layout: home
 #     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 # title: 'Home'
-
-analytics:
-  title: 'Index'
 ---
 <script setup>
   import Index from './Index.vue'

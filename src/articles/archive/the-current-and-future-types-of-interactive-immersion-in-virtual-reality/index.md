@@ -1,6 +1,7 @@
 ---
 title: 'The Current and Future Types of Interactive Immersion in Virtual Reality'
 date: '2015-12-10T12:00'
+description: 'Virtual Reality, by it’s very nature, is an immersive experience but it needs to level up before it can be truly appreciated.'
 layout: 'article'
 preview:
     text: 'Virtual Reality, by it’s very nature, is an immersive experience but it needs to level up before it can be truly appreciated.'

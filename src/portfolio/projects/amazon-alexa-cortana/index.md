@@ -1,7 +1,8 @@
 ---
 # layout:         'case study'
 
-title:  'Alexa + Cortana'
+title:  Alexa + Cortana
+description: A case study about connecting Alexa and Cortana together.
 
 preview:
     company:        'amazon'

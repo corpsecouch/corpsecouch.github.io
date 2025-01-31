@@ -1,9 +1,7 @@
 ---
-layout: 'page'
-title: 'Awards'
-
-analytics:
-    title: 'Awards'
+layout: page
+title: Awards
+description: The comprehensive list of awards I've won for my work.
 ---
 
 <script setup>

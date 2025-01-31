@@ -1,7 +1,8 @@
 ---
 # layout:         'case study'
 
-title: 'Fantastic Future Me'
+title: Fantastic Future Me
+description: A case study on desinging an interactive, multi-user museum experience for the Omaha Children's Museum
 
 preview:
     company:        'phenomblue'

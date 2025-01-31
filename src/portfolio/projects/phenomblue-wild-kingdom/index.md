@@ -1,7 +1,8 @@
 ---
 # layout:         'case study'
 
-title: 'My Wild Kingdom'
+title: My Wild Kingdom
+description: A case study on designing a groundbreaking AR mobile app.
 
 preview:
     company:        'phenomblue'

@@ -2,6 +2,7 @@
 # layout:         'case study'
 
 title: 'Operation: Dino Dig'
+description: A case study on designing a branded social computing experience for the Microsoft Surface.
 
 preview:
     company:        'phenomblue'

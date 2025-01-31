@@ -1,7 +1,8 @@
 ---
 # layout:         'case study'
 
-title: 'Page'
+title: Page
+description: A case study on creating an immersive AR experience to break down the "fifth wall" between technology and literature.
 
 preview:
     company:        'phenomblue'

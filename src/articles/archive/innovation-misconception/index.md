@@ -1,6 +1,7 @@
 ---
 title: 'Innovation Misconception'
 date: '2016-03-02T12:00'
+description: 'People are falling into a trap: the mindset that they aren''t innovative because they haven''t thought of the next big idea. They simply have the wrong idea about what innovation is.'
 layout: 'article'
 preview:
     text: 'People are falling into a trap: the mindset that they aren''t innovative because they haven''t thought of the next big idea. They simply have the wrong idea about what innovation is.'

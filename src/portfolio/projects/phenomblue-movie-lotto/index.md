@@ -1,7 +1,8 @@
 ---
 # layout:         'case study'
 
-title: 'Movie Lotto'
+title: Movie Lotto
+description: A case study on creating a casual, multi-user, multi-screen experience for theaters.
 
 preview:
     company:        'phenomblue'

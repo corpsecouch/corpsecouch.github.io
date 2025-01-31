@@ -1,6 +1,7 @@
 ---
-layout: 'page'
-title: 'Portfolio'
+layout: page
+title: Portfolio
+description: Curated collection of case studies about my work.
 ---
 <script setup>
     import Portfolio from './Portfolio.vue'

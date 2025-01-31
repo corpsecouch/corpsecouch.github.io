@@ -1,6 +1,7 @@
 ---
 title: 'We''re Living In The Future'
-subtitle: 'It just doesn''t look like what we expected'
+subtitle:  'It just doesn''t look like what we expected'
+description: 'It just doesn''t look like what we expected'
 date: '2025-01-16T12:00'
 layout: 'article'
 preview:

@@ -2,6 +2,7 @@
 layout: article
 title: Companies are conversational
 subtitle: Not just LLMs or chatbots
+description: Every click, ad, push notification, and customer service call is part of an intentionally designed conversation.
 date: 2025-01-31T12:00
 preview:
   text: Every click, ad, push notification, and customer service call is part of an intentionally designed conversation.

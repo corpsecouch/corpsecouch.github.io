@@ -1,6 +1,7 @@
 ---
 title: 'How to workshop a user journey'
 date: '2017-04-26T12:00'
+description: Still leaning on research and endless iteration to define your user journeys? There is a better way.
 layout: 'article'
 preview:
     text: 'Still leaning on research and endless iteration to define your user journeys? There is a better way.'

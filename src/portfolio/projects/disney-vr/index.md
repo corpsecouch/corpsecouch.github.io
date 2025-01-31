@@ -1,7 +1,8 @@
 ---
 # layout:         'case study'
 
-title: 'Filmmaking for VR'
+title: Filmmaking for VR
+description: A case study on leading the design of a set of ground-breaking tools for filmmaking in VR.
 
 preview:
     company:        'disney'

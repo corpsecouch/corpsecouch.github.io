@@ -1,7 +1,8 @@
 ---
 # layout:         'case study'
 
-title: 'Conversational Lead Funnel'
+title: Conversational Lead Funnel
+description: A case study on overhauling the mortgage top-of-funnel using conversational AI.
 
 preview:
     company:        'rocket'

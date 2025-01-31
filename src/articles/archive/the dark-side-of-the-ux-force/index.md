@@ -1,6 +1,7 @@
 ---
 title: 'The Dark Side of the UX Force'
 date: '2015-10-17T12:00'
+description: 'One night, I asked some conferece speakers “Wouldn’t it be cool if someone from Zynga gave a presentation on Dark UX?” Jaws dropped.'
 layout: 'article'
 preview:
     text: 'One night, I asked some conferece speakers “Wouldn’t it be cool if someone from Zynga gave a presentation on Dark UX?” Jaws dropped.'

@@ -1,5 +1,6 @@
 ---
 title: 'A pro resume tip you probably haven''t heard of'
+description: Instead of tossing your resume into the void and hoping someone sees it, look at your resume the way an ATS would.
 date: '2024-11-14T12:00'
 layout: 'article'
 preview:

@@ -1,7 +1,7 @@
 ---
 layout: article
 title: My favorite books, movies, and music from 2024
-subtitle: 
+description: What I consumed in 2024 that stuck with me long after I finished it.
 date: 2025-01-26T12:00
 preview:
     text: What I consumed in 2024 that stuck with me long after I finished it.
