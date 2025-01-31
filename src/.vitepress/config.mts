@@ -32,9 +32,6 @@ function analytics():any {
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Jason Bejot",
-  description: "The personal website for Jason Bejot",
-
-  // outDir: '../dist',
 
   rewrites: {
     'articles/archive/:article*' : 'articles/:article*',
