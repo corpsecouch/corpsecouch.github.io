@@ -148,6 +148,25 @@ export default defineConfig({
 
     pageData.frontmatter.head ??= []
 
+    /* ****************************** */
+    /* * structed date for articles * */
+    /* ****************************** */
+    
+    if(pageData.frontmatter.layout == 'article') {
+      pageData.frontmatter.head.push([
+        'script',
+        {
+          type: 'application/ld+json'
+        },
+        `{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": "${pageData.frontmatter.title}",
+          "datePublished": "${pageData.frontmatter.date}"
+        }`
+      ])
+    }
+
     /* ****************** */
     /* * canonical urls * */
     /* ****************** */
