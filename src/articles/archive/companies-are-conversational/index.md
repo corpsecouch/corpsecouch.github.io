@@ -6,8 +6,8 @@ date: 2025-01-31T12:00
 preview:
   text: Every click, ad, push notification, and customer service call is part of an intentionally designed conversation.
   image: hero.png
-medium: 
-substack:
+medium: https://medium.com/@jasonbejot/companies-are-conversational-17b0369ff77f
+substack: https://open.substack.com/pub/jasonbejot/p/companies-are-conversational
 ---
 ![](hero.png)
 
