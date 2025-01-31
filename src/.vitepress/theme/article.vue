@@ -4,7 +4,7 @@
     <section :class="$style.hero">
       <h1 v-if="!!$slots.title"><slot name="title">Title</slot></h1>
       <p v-if="!!$slots.subtitle" :class="$style.subtitle"><slot name="subtitle">Subtitle</slot></p>
-      <p v-if="!!$slots.date" :class="$style.date"><slot name="date">Date</slot></p>
+      <p v-if="!!$slots.date" :class="$style.date">Published <slot name="date">Date</slot></p>
     </section>
 
     <section :class="$style.publishers" v-if="!!$props.medium || !!$props.substack">
@@ -50,7 +50,7 @@
     }
   }
 
-  .content, .author, .publishers {
+  .content, .author {
     margin-top: 3rem;
 
     h2 {
@@ -62,13 +62,21 @@
     }
   }
 
-  .publishers {
+  .publishers, .date {
     font-size: 0.8rem;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     column-gap: 0.5rem;
     font-weight: 300;
+  }
+
+  .date {
+    margin-top: 2.2rem;
+  }
+
+  .publishers {
+    margin-top: 0.6rem;
   }
 
   .content {
