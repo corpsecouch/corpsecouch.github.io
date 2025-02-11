@@ -139,7 +139,8 @@ export default defineConfig({
       structuredDataPlugin.transformPageData(pageData, {
         type: 'BlogPosting',
         headline: pageData.frontmatter.title,
-        datePublished: pageData.frontmatter.date
+        datePublished: pageData.frontmatter.date,
+        author: 'Jason Bejot'
       })
     }
 

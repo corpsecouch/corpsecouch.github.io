@@ -9,7 +9,11 @@ export default {
               "@context": "https://schema.org",
               "@type": "${config.type}",
               "headline": "${config.headline}",
-              "datePublished": "${config.datePublished}"
+              "datePublished": "${config.datePublished}",
+              "author": [{
+                "@type": "Person",
+                "name": "${config.author}"
+              }]
             }`
           ])
     }
