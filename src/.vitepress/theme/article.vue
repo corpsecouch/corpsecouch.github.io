@@ -85,6 +85,8 @@
 
     p { margin: 1.3rem 0; }
 
+    em { font-style: italic; }
+
     ol { margin-left: 1.8rem; }
 
     li { margin: 1.3rem 0; }
