@@ -15,7 +15,7 @@ export default (function(){
             article.frontmatter.date = new Date(article.frontmatter.date)
 
             // remove 'archive' from the url; it's still in there even with a route rewrite
-            article.url = `${article.url}`.replace(/archive\//, '')
+            if(process.env.NODE_ENV === 'production') article.url = `${article.url}`.replace(/archive\//, '')
 
             // make sure there's a preview object in the frontmatter
             if(!article.frontmatter.preview) article.frontmatter.preview = {}
