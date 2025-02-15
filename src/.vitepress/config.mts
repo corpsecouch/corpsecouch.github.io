@@ -6,6 +6,8 @@ import canonicalPlugin from './vitepress-plugin-canonical-urls.mjs'
 import structuredDataPlugin from './vitepress-plugin-structure-data.mjs'
 import googleAnalyticsPlugin from './vitepress-plugin-google-analytics.mjs'
 
+import { getImageFullUrl } from '../articles/articles.data'
+
 const hostname:string = 'https://jasonbejot.com'
 const _isProd:boolean = process.env.NODE_ENV === 'production';
 const _GtagID:string = 'G-G24FHEZ8YC';
@@ -140,7 +142,8 @@ export default defineConfig({
         type: 'BlogPosting',
         headline: pageData.frontmatter.title,
         datePublished: pageData.frontmatter.date,
-        author: 'Jason Bejot'
+        author: 'Jason Bejot',
+        images: [getImageFullUrl(pageData.frontmatter.preview.image, pageData.relativePath, hostname)]
       })
     }
 
