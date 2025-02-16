@@ -1,6 +1,4 @@
 <template>
-    <p>Me or my work has been recognized with <strong>{{ data.total }} awards</strong>.</p>
-
     <div id="awards-list">
       
       <section id="rocket" v-if="data.rocket.length">
@@ -28,10 +26,6 @@
 
 <script>
   import AwardList from '@components/AwardList';
-  import { data as awards } from '@awards/awards.data'
-  import { data as companies } from '@globals/companies.data'
-
-  import _ from 'lodash';
 
   const name = 'AwardsPage';
 
@@ -41,19 +35,10 @@
     components: {
       AwardList
     },
-
-    data () {
-      let data = {};
-      _.each(companies, (value, key) => {
-        data[value.slug] = _.filter(awards, o => { return o.company.slug == value.slug })
-      });
-
-      data.total = awards.length;
-
-      return {
-        data: data
-      }
-    }
+    
+    props: [
+      'data'
+    ]
   }
 </script>
 
