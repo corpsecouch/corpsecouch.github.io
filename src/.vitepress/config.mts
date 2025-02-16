@@ -6,7 +6,7 @@ import canonicalPlugin from './vitepress-plugin-canonical-urls.mjs'
 import structuredDataPlugin from './vitepress-plugin-structure-data.mjs'
 import googleAnalyticsPlugin from './vitepress-plugin-google-analytics.mjs'
 
-import { getImageFullUrl } from '../articles/articles.data'
+import { getImageFullUrl } from '../articles/articles.utils.js'
 
 const hostname:string = 'https://jasonbejot.com'
 const _isProd:boolean = process.env.NODE_ENV === 'production';
