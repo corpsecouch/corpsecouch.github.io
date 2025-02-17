@@ -16,8 +16,6 @@ const getImageRelativeUrl = function(filename, path) {
 }
 
 const getImageFullUrl = function(filename, path, root) {
-    console.log('getImageFullUrl')
-    console.log(filename, " : ", path, " : ", root)
     return trimEndSlash(getArticleFullUrl(path, root)) + '/' + trimFrontSlash(filename)
 }
 
