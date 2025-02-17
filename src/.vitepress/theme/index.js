@@ -2,18 +2,26 @@
 
 import Layout from './layout.vue'
 
-/* components */
-import YouTubeVideo from '@components/YouTubeVideo.vue'
-// import Illustration from '@components/Illustration.vue'
+/* ************************* */
+/* *** global components *** */
+/* ************************* */
 
-/* styles */
+import YouTubeVideo from '@components/YouTubeVideo.vue'
+
+/* ********************* */
+/* *** global styles *** */
+/* ********************* */
+
 import './variables.css'
 import './styles.css'
 
 export default {
+
+    // set the global layout
     Layout: Layout,
+
+    // register global components
     enhanceApp({ app }) {
         app.component('Video', YouTubeVideo)
-        // app.component('Illustration', Illustration)
     }
 }
