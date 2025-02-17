@@ -1,5 +1,5 @@
-const trimEndSlash = function(str) { return str.replace(/\/$/, '') }
-const trimFrontSlash = function(str) { return str.replace(/^\//,'') }
+const trimEndSlash = function(str) { return str ? str.replace(/\/$/, '') : '' }
+const trimFrontSlash = function(str) { return str ? str.replace(/^\//,'') : '' }
 
 const getArticleRelativeUrl = function(path) {
     let url = `${path}`.replace(/index\.md$/,'')
@@ -16,6 +16,8 @@ const getImageRelativeUrl = function(filename, path) {
 }
 
 const getImageFullUrl = function(filename, path, root) {
+    console.log('getImageFullUrl')
+    console.log(filename, " : ", path, " : ", root)
     return trimEndSlash(getArticleFullUrl(path, root)) + '/' + trimFrontSlash(filename)
 }
 
