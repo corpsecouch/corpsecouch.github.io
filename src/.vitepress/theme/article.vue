@@ -87,6 +87,8 @@
 
     em { font-style: italic; }
 
+    strong { font-weight: bold; }
+
     ol { margin-left: 1.8rem; }
 
     li { margin: 1.3rem 0; }
