@@ -33,6 +33,8 @@ description: The collection of articles, blog posts, and thought pieces I've wri
   }
 </style>
 
+The collection of articles, blog posts, and thought pieces I've written over the years.
+
 <div v-for="year in years">
   <h2>{{ year }}</h2>
   <Articles :data="articles[year]"></Articles>
