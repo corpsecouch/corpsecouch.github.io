@@ -6,7 +6,9 @@ layout: 'article'
 preview:
     text: 'Chatbots are an intriguing, naturalish way of interaction. It was past time I built one.'
     image: 'hero.png'
-medium: 'https://medium.com/a-chatbots-life/quick-starting-my-chatbot-f35e12788669'
+links:
+  - name: Medium
+    url: https://medium.com/a-chatbots-life/quick-starting-my-chatbot-f35e12788669
 ---
 
 ![](./hero.png)

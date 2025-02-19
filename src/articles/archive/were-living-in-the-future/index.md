@@ -7,8 +7,11 @@ layout: 'article'
 preview:
     text: 'It just doesn''t look like what we expected'
     image: 'hero.jpg'
-medium: 'https://medium.com/@jasonbejot/were-living-in-the-future-313c89b9857c'
-substack: 'https://substack.com/home/post/p-154951608'
+links:
+  - name: Medium
+    url: https://medium.com/@jasonbejot/were-living-in-the-future-313c89b9857c
+  - name: Substack
+    url: https://jasonbejot.substack.com/p/were-living-in-the-future?r=3eits
 ---
 
 ![](./hero.jpg)

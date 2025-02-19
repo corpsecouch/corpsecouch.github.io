@@ -6,7 +6,9 @@ layout: 'article'
 preview:
     text: 'To push MR from the labs and into the streets designers need the right tools.'
     image: 'hero.jpg'
-medium: 'https://medium.com/prototypr/the-mixed-reality-prototyping-tool-designers-need-eb4f36045715'
+links:
+  - name: Medium
+    url: https://medium.com/prototypr/the-mixed-reality-prototyping-tool-designers-need-eb4f36045715
 ---
 
 ![](./hero.jpg)

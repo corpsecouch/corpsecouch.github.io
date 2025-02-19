@@ -12,7 +12,7 @@
             <template v-slot:title>{{frontmatter.title}}</template>
         </Page>
 
-        <Article v-else-if="frontmatter.layout === 'article'" v-bind:medium="frontmatter.medium" v-bind:substack="frontmatter.substack">
+        <Article v-else-if="frontmatter.layout === 'article'" v-bind:links="frontmatter.links">
             <template v-slot:title>{{frontmatter.title}}</template>
             <template v-slot:subtitle>{{frontmatter.subtitle}}</template>
             <template v-slot:date>{{new Date(frontmatter.date).toLocaleString(undefined, {

@@ -7,8 +7,13 @@ description: Unlock innovation and grow high-performing teams without the baggag
 preview:
   text: Unlock innovation and grow high-performing teams without the baggage of perfection.
   image: filenaming.jpg
-medium: https://medium.com/@jasonbejot/how-to-lead-for-growth-and-innovation-1debb7a66b25
-substack: https://jasonbejot.substack.com/p/how-to-lead-for-growth-and-innovation
+links:
+  - name: Medium
+    url: https://medium.com/@jasonbejot/how-to-lead-for-growth-and-innovation-1debb7a66b25
+  - name: Substack
+    url: https://jasonbejot.substack.com/p/how-to-lead-for-growth-and-innovation
+  - name: LinkedIn
+    url: https://www.linkedin.com/pulse/how-lead-growth-innovation-jason-bejot-arape
 ---
 I'm a natural perfectionist. When I'm at work, whatever I do has to be completely buttoned-up. It has to be so good no one can poke holes in it. I've been a UX designer for 15 years, and striving for perfection was a trap that I put myself in. When I started leading teams, thankfully, I had the self awareness and mentorship to realize I shouldn't lead others into the trap I set for myself.
 

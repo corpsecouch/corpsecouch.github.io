@@ -5,8 +5,9 @@ description: What I consumed in 2024 that stuck with me long after I finished it
 date: 2025-01-26T12:00
 preview:
     text: What I consumed in 2024 that stuck with me long after I finished it.
-medium: https://medium.com/@jasonbejot/my-favorite-books-movies-and-music-from-2024-7b7983ad7308
-substack:
+links:
+  - name: Medium
+    url: https://medium.com/@jasonbejot/my-favorite-books-movies-and-music-from-2024-7b7983ad7308
 ---
 This is the very first time I've shared my favorites from the past year. And, yes, it's almost the end of January but better late than never.
 

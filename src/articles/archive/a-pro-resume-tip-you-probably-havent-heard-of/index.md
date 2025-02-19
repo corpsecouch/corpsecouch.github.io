@@ -6,8 +6,11 @@ layout: 'article'
 preview:
     text: 'Instead of tossing your resume into the void and hoping someone sees it, look at your resume the way an ATS would.'
     image: 'hero.jpg'
-medium: 'https://medium.com/@jasonbejot/a-pro-resume-tip-you-probably-havent-heard-of-804e7b0389a9'
-substack: 'https://substack.com/home/post/p-151453495'
+links:
+  - name: Medium
+    url: https://medium.com/@jasonbejot/a-pro-resume-tip-you-probably-havent-heard-of-804e7b0389a9
+  - name: Substack
+    url: https://jasonbejot.substack.com/p/a-pro-resume-tip-you-probably-havent?r=3eits
 ---
 
 ![](./hero.jpg)

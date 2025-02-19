@@ -6,8 +6,11 @@ layout: 'article'
 preview:
     text: 'A common question from product designers is “How do I do conversation design?”. There''s a disconnect in grasping the concept.'
     image: 'hero.jpg'
-medium: 'https://medium.com/@jasonbejot/thoughts-on-resiliency-design-fb5ff5a21cdf'
-substack: 'https://substack.com/home/post/p-151157170'
+links:
+  - name: Medium
+    url: https://medium.com/@jasonbejot/thoughts-on-resiliency-design-fb5ff5a21cdf
+  - name: Substack
+    url: https://jasonbejot.substack.com/p/thoughts-on-resiliency-and-design?r=3eits
 ---
 
 ![](./hero.jpg)

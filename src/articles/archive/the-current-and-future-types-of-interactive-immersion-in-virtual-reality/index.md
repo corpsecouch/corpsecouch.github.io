@@ -6,7 +6,9 @@ layout: 'article'
 preview:
     text: 'Virtual Reality, by it’s very nature, is an immersive experience but it needs to level up before it can be truly appreciated.'
     image: 'hero.webp'
-medium: 'https://medium.com/virtual-reality-pop/the-current-and-future-types-of-interactive-immersion-in-virtual-reality-25a56734b619'
+links:
+  - name: Medium
+    url: https://medium.com/virtual-reality-pop/the-current-and-future-types-of-interactive-immersion-in-virtual-reality-25a56734b619
 ---
 
 ![](./hero.webp)

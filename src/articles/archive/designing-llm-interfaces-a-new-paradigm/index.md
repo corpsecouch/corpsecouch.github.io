@@ -6,8 +6,11 @@ layout: 'article'
 preview:
     text: 'Designing an interface for an LLM is deceptively complex, it might even cause you to reframe how you approach design.'
     image: 'hero.jpg'
-medium: 'https://medium.com/@jasonbejot/designing-llm-interfaces-a-new-paradigm-11dd40e2c4a1'
-substack: 'https://substack.com/home/post/p-151380720'
+links:
+  - name: Medium
+    url: https://medium.com/@jasonbejot/designing-llm-interfaces-a-new-paradigm-11dd40e2c4a1
+  - name: Substack
+    url: https://jasonbejot.substack.com/p/designing-llm-interfaces-a-new-paradigm?r=3eits
 ---
 
 ![](./hero.jpg)

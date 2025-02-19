@@ -7,10 +7,9 @@
       <p v-if="!!$slots.date" :class="$style.date">Published <slot name="date">Date</slot></p>
     </section>
 
-    <section :class="$style.publishers" v-if="!!$props.medium || !!$props.substack">
+    <section :class="$style.publishers" v-if="!!$props.links">
       <span>Also available on:</span>
-      <a v-if="!!$props.medium" :href="$props.medium">Medium</a>
-      <a v-if="!!$props.substack" :href="$props.substack">Substack</a>
+      <a v-for="link in $props.links" :href="link.url">{{ link.name }}</a>
     </section>
 
     <section :class="$style.content">
@@ -30,7 +29,8 @@
     name: 'Article',
     props: [
       'medium',
-      'substack'
+      'substack',
+      'links'
     ]
   }
 </script>

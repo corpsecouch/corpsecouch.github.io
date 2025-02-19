@@ -7,8 +7,11 @@ description: Great leadership isn’t about where you sit, it’s about how you 
 preview:
   text: Great leadership isn’t about where you sit, it’s about how you show up. Explore key traits and skills that help you lead from anywhere.
   image: hero.webp
-medium: https://medium.com/@jasonbejot/leadership-isnt-a-title-it-s-what-you-do-dbc048df229b
-substack: https://open.substack.com/pub/jasonbejot/p/leadership-isnt-a-titleits-what-you
+links:
+  - name: Medium
+    url: https://medium.com/@jasonbejot/leadership-isnt-a-title-it-s-what-you-do-dbc048df229b
+  - name: Substack
+    url: https://open.substack.com/pub/jasonbejot/p/leadership-isnt-a-titleits-what-you
 ---
 ![](./hero.webp)
 
