@@ -18,20 +18,22 @@
       awardsURL="/awards/#rocket" />
 
     <ul class="projects">
-      <li class="project" v-for="p in portfolioData.rocket.projects" @click="gotoProject(p.url)" :style="{'background-color': p.frontmatter.preview.color}">
+      <li class="project" v-for="(p, index) in portfolioData.rocket.projects" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.preview.color} : false">
         <div :class="p.frontmatter.preview.type + '-image'">
           <img :src="p.frontmatter.preview.image" class="rounded">
         </div>
 
-        <span class="title">{{ p.frontmatter.preview.title }}</span>
+        <div>
+          <span class="title">{{ p.frontmatter.preview.title }}</span>
 
-        <span class="description">{{ p.frontmatter.preview.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
+          <span class="description">{{ p.frontmatter.preview.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
 
-        <ul class="tags" v-if="p.frontmatter.preview.tags">
-          <li class="tag" v-for="tag in p.frontmatter.preview.tags">{{ tag }}</li>
-        </ul>
+          <ul class="tags" v-if="p.frontmatter.preview.tags">
+            <li class="tag" v-for="tag in p.frontmatter.preview.tags">{{ tag }}</li>
+          </ul>
 
-        <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Read the case study</a>
+          <!-- <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Read the case study</a> -->
+        </div>
       </li>
     </ul>
     
@@ -51,20 +53,21 @@
       awardsURL="/awards/#amazon" />
 
     <ul class="projects">
-      <li class="project" v-for="p in portfolioData.amazon.projects" @click="gotoProject(p.url)" :style="{'background-color': p.frontmatter.preview.color}">
+      <li class="project" v-for="(p, index) in portfolioData.amazon.projects" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.preview.color} : false">
         <div :class="p.frontmatter.preview.type + '-image'">
           <img :src="p.frontmatter.preview.image" class="rounded">
         </div>
+        <div>
+          <span class="title">{{ p.frontmatter.preview.title }}</span>
 
-        <span class="title">{{ p.frontmatter.preview.title }}</span>
+          <span class="description">{{ p.frontmatter.preview.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
 
-        <span class="description">{{ p.frontmatter.preview.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
+          <ul class="tags" v-if="p.frontmatter.preview.tags">
+            <li class="tag" v-for="tag in p.frontmatter.preview.tags">{{ tag }}</li>
+          </ul>
 
-        <ul class="tags" v-if="p.frontmatter.preview.tags">
-          <li class="tag" v-for="tag in p.frontmatter.preview.tags">{{ tag }}</li>
-        </ul>
-
-        <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Read the case study</a>
+          <!-- <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Read the case study</a> -->
+        </div>
       </li>
     </ul>
 
@@ -84,20 +87,21 @@
       awardsURL="/awards/#disney" />
 
     <ul class="projects">
-      <li class="project" v-for="p in portfolioData.disney.projects" @click="gotoProject(p.url)" :style="{'background-color': p.frontmatter.preview.color}">
+      <li class="project" v-for="(p, index) in portfolioData.disney.projects" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.preview.color} : false">
         <div :class="p.frontmatter.preview.type + '-image'">
           <img :src="p.frontmatter.preview.image" class="rounded">
         </div>
+        <div>
+          <span class="title">{{ p.frontmatter.preview.title }}</span>
 
-        <span class="title">{{ p.frontmatter.preview.title }}</span>
+          <span class="description">{{ p.frontmatter.preview.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
 
-        <span class="description">{{ p.frontmatter.preview.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
+          <ul class="tags" v-if="p.frontmatter.preview.tags">
+            <li class="tag" v-for="tag in p.frontmatter.preview.tags">{{ tag }}</li>
+          </ul>
 
-        <ul class="tags" v-if="p.frontmatter.preview.tags">
-          <li class="tag" v-for="tag in p.frontmatter.preview.tags">{{ tag }}</li>
-        </ul>
-
-        <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Read the case study</a>
+          <!-- <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Read the case study</a> -->
+        </div>
       </li>
     </ul>
 
@@ -117,20 +121,21 @@
       awardsURL="/awards/#phenomblue" />
 
     <ul class="projects">
-      <li class="project" v-for="p in portfolioData.phenomblue.projects" @click="gotoProject(p.url)" :style="{'background-color': p.frontmatter.preview.color}">
+      <li class="project" v-for="(p,index) in portfolioData.phenomblue.projects" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.preview.color} : false">
         <div :class="p.frontmatter.preview.type + '-image'">
           <img :src="p.frontmatter.preview.image" class="rounded">
         </div>
+        <div>
+          <span class="title">{{ p.frontmatter.preview.title }}</span>
 
-        <span class="title">{{ p.frontmatter.preview.title }}</span>
+          <span class="description">{{ p.frontmatter.preview.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
 
-        <span class="description">{{ p.frontmatter.preview.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
+          <ul class="tags" v-if="p.frontmatter.preview.tags">
+            <li class="tag" v-for="tag in p.frontmatter.preview.tags">{{ tag }}</li>
+          </ul>
 
-        <ul class="tags" v-if="p.frontmatter.preview.tags">
-          <li class="tag" v-for="tag in p.frontmatter.preview.tags">{{ tag }}</li>
-        </ul>
-
-        <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Check out this project</a>
+          <!-- <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Check out this project</a> -->
+        </div>
       </li>
     </ul>
 
@@ -331,7 +336,6 @@
   h3 {
     font-size: 1.5rem;
     margin-bottom: 0;
-    /* + p { padding: 1rem 0 4rem 0; } */
   }
 
   .o { letter-spacing: -0.55rem; }
@@ -341,40 +345,50 @@
     list-style: none;
 
     .project {
-      padding: 3rem;
-      background-color: whitesmoke;
-      background-image: linear-gradient(0deg, var(--color-background-light) 5%, transparent 120%);
+      padding: 1.5rem;
 
-      &:hover { cursor: pointer; }
+      display: grid;
+      grid-auto-rows: 1fr;
+      grid-template-columns: 1fr 2fr;
+      grid-column-gap: 1.5rem;
 
-      /* max-width: xsmall screen */
-      @media all and (max-width: 600px) { padding: 1.5rem; }
-
-      /* + .project { margin-top: 3.5rem; } */
-      + .project { margin-top: 4rem; }
+      &:hover {
+        cursor: pointer;
+        .title {
+          text-decoration: underline;
+        }
+        /* transition: all 0.3s;
+        background-image: linear-gradient(-20deg, var(--color-background-light) 5%, transparent 120%);
+        background-color: whitesmoke; */
+      }
 
       .product-image, .title-image {
         img {
           width: 100%;
+          /* max-width: xsmall screen */
+          @media all and (max-width: 600px) { padding: 0; }
         }
       }
 
-      .product-image img {
+      &:first-child {
+        display: block;
         padding: 3rem;
-        /* background-image: linear-gradient(10deg, rgba(255, 255, 255, 1) 10%, transparent 50%, transparent); */
-        /* background-image: linear-gradient(6deg, var(--color-background-light), transparent 120%); */
-
-        /* max-width: xsmall screen */
-        @media all and (max-width: 600px) { padding: 0; }
+        background-color: whitesmoke;
+        background-image: linear-gradient(0deg, var(--color-background-light) 5%, transparent 120%);
+        .product-image img { padding: 3rem; }
+        .title { margin-top: 1rem; }
       }
+
+      /* max-width: xsmall screen */
+      @media all and (max-width: 600px) { padding: 1.5rem; }
+
+      + .project { margin-top: 1rem; }
 
       .title {
         display: block;
-        /* font-size: 1.2rem; */
         font-size: 1.4rem;
         font-weight: 500;
-        margin-top: 1rem;
-        /* &:hover { cursor: pointer; } */
+        /* margin-top: 1rem; */
       }
 
       .year {
@@ -396,7 +410,6 @@
         flex-flow: row wrap;
         gap: 0.2rem 0.5rem;
         .tag {
-          /* //background-color: #9ec4ce; */
           background-color: var(--color-background-dark);
           color: var(--color-text-light);
           padding: 0 0.7rem;
@@ -411,16 +424,5 @@
       }
     }
   }
-
-  /* .news, .awards {
-    .more-link {
-      margin-top: 2rem;
-      display: block;
-    }
-
-    p { margin-bottom: 2rem; }
-
-    strong { font-weight: 600; }
-  } */
 
 </style>
