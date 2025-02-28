@@ -7,6 +7,7 @@ import structuredDataPlugin from './vitepress-plugin-structure-data.mjs'
 import googleAnalyticsPlugin from './vitepress-plugin-google-analytics.mjs'
 
 import { getImageFullUrl } from '../articles/articles.utils.js'
+import _ from 'lodash'
 
 const hostname:string = 'https://jasonbejot.com'
 const _isProd:boolean = process.env.NODE_ENV === 'production';
@@ -102,7 +103,14 @@ export default defineConfig({
   // https://vitepress.dev/guide/sitemap-generation
   sitemap: {
     hostname: hostname,
-    lastmodDateOnly: true
+    lastmodDateOnly: true,
+    transformItems(items) {
+      let filtered_items = _.filter(items, (item) => {
+        // prevent application urls from being added to the sitemap
+        return !item.url.match(/^applications\//i)
+      })
+      return filtered_items
+    }
   },
   
   transformPageData(pageData) {

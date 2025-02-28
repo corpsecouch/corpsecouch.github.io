@@ -21,6 +21,11 @@
                 day: 'numeric'})}}</template>
         </Article>
 
+        <Application v-else-if="frontmatter.layout === 'application'" v-bind:video="frontmatter.video">
+            <template v-slot:role>{{ frontmatter.role }}</template>
+            <template v-slot:company>{{ frontmatter.company }}</template>
+        </Application>
+
         <Content v-else />
 
     </main>
@@ -38,6 +43,7 @@
     import NotFound from './404.vue'
     import Page from './page.vue'
     import Article from './article.vue'
+    import Application from './application.vue'
 
     const { page, frontmatter } = useData()
 </script>
