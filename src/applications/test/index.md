@@ -4,6 +4,12 @@ title: Application One
 role: Director of Something
 company: The Best Company
 video: https://www.youtube.com/embed/2aeYrgPDrdU
+logos: true
+socials: true
+projects:
+    - amazon-alexa-cortana
+    - amazon-profile
+    - disney-design-system
 ---
 
 <script setup>

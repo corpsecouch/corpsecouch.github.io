@@ -21,9 +21,13 @@
                 day: 'numeric'})}}</template>
         </Article>
 
-        <Application v-else-if="frontmatter.layout === 'application'" v-bind:video="frontmatter.video">
-            <template v-slot:role>{{ frontmatter.role }}</template>
-            <template v-slot:company>{{ frontmatter.company }}</template>
+        <Application v-else-if="frontmatter.layout === 'application'"
+            v-bind:video="frontmatter.video"
+            v-bind:projects="frontmatter.projects"
+            v-bind:logos="frontmatter.logos"
+            v-bind:socials="frontmatter.socials">
+                <template v-slot:role>{{ frontmatter.role }}</template>
+                <template v-slot:company>{{ frontmatter.company }}</template>
         </Application>
 
         <Content v-else />

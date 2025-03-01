@@ -1,33 +1,175 @@
 <template>
   <div class="widthConstrained">
 
-    <section :class="$style.title">
-      <div :class="$style.me"><img src="/assets/photos/photo1-circle.jpg"></div>
-      <div :class="$style.words">
-        <h1><slot name="role">Role Title</slot></h1>
-        <h2><slot name="company">Company Name</slot></h2>    
+    <section :class="$style.top">
+      <div :class="$style.title">
+        <div :class="$style.me"><img src="/assets/photos/photo1-circle.jpg"></div>
+        <div :class="$style.words">
+          <h1><slot name="role">Role Title</slot></h1>
+          <h2><slot name="company">Company Name</slot></h2>    
+        </div>
+      </div>
+
+      <div :class="$style.video" v-if="!!$props.video">
+        <Video :src="$props.video"></Video>
       </div>
     </section>
+    
+    <section :class="$style.sales">
+      <div :class="$style.logos" v-if="!!$props.logos">
+        <h2>As seen at...</h2>
+        <ul>
+          <li><img src="/assets/logos/disney.png"></li>
+          <li><img src="/assets/logos/amazon.png"></li>
+          <li><img src="/assets/logos/rocket.png"></li>
+        </ul>
+      </div>
 
-    <section :class="$style.video">
-      <Video :src="$props.video"></Video>
-    </section>
+      <section :class="$style.content">
+        <Content />
+      </section>
 
-    <section :class="$style.content">
-      <Content />
+      <div :class="$style.portfolio" v-if="!!$props.projects">
+        <h2>A few projects from my portfolio</h2>
+        <ul>
+          <li v-for="p in newfunc($props.projects)" @click="gotoProject(p.url)">
+            <div :class="p.frontmatter.preview.type + '-image'">
+              <img :src="p.frontmatter.preview.image">
+            </div>
+            <span class="title">{{ p.frontmatter.preview.title }}</span>
+          </li>
+        </ul>
+        <p>Check out the rest of <a href="/portfolio/">my portfolio</a>.</p>
+      </div>
+
+      <div :class="$style.socials" v-if="!!$props.socials">
+        <h2>Where you can find me</h2>
+        <ul>
+          <li><a href="https://linkedin.com/in/jasonbejot" title="LinkedIn" target="_blank">LinkedIn</a></li>
+          <li><a href="https://adplist.org/mentors/jason-bejot" title="ADPList" target="_blank">ADPList</a></li>
+          <li><a href="https://medium.com/@jasonbejot" title="Medium" target="_blank">Medium</a></li>
+          <li><a href="https://substack.com/@jasonbejot" title="Substack" target="_blank">Substack</a></li>
+          <li><a href="https://github.com/corpsecouch" title="Github" target="_blank">Github</a></li>
+        </ul>
+      </div>
     </section>
 
   </div>
 </template>
 
 <script>
+  import { data as projectData } from '@portfolio/portfolio.data';
+  import _ from 'lodash'
+
   export default {
     name: 'Application',
-    props:['video']
+    props:[
+      'video',
+      'projects',
+      'logos',
+      'socials'
+    ],
+    methods: {
+      
+      gotoProject(url) {
+        window.location.href = url
+      },
+
+      newfunc(filter) {
+        // TODO: do something if there is no filter, or it's empty
+
+        let rval = _.filter(projectData, (project) => {
+          let end = project.url.match(/^\/.*\/(.*)\/$/i)[1]
+          return end ? _.includes(filter, end) : false
+        })
+        
+        return rval;
+      }
+    }
+
   }
 </script>
 
 <style module lang="css">
+
+  .sales {
+    > * { padding: 3rem 0; }
+    > *:nth-child(even) {
+      background-color: whitesmoke;
+      padding: 3rem;
+    }
+  }
+
+  .socials, .logos, .portfolio {
+    h2 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+  }
+
+  .portfolio {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    ul {
+      list-style: none;
+      margin: 3rem 0 ;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 1rem;
+      li {
+        cursor: pointer;
+        border-radius: 12px;
+        padding: 1rem 0;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: space-between;
+        &:hover {
+          /* background-color: whitesmoke; */
+          background-color: rgba(0, 0, 0, 0.04);
+          transition: all 0.4s;
+        }
+        img {
+          width: 100%;
+          padding: 1rem;
+        }
+      }
+    }
+  }
+
+  .socials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+
+    ul {
+      margin: 0;
+      list-style: none;
+      li + li {
+        margin-top: 0.8rem;
+      }
+    }
+  }
+
+  .logos {
+    ul {
+      list-style: none;
+      margin: 2rem 0 0 0;
+      padding: 0;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+      li {
+        margin: 0;
+        padding: 0;
+        img {
+          width: 7rem;
+        }
+      }
+    }
+  }
 
   .title {
     margin-bottom: 4rem;
@@ -61,15 +203,14 @@
     }
   }
 
-  .content {
-    margin-top: 3rem;
-
+  section.content {
     h2 {
       text-align: left;
       margin: 3rem 0 0 0;
       line-height: 1.5em;
       font-weight: 500;
       font-size: 1.3rem;
+      &:first-child { margin-top: 0; }
     }
 
     img { width: 100%; }
@@ -82,7 +223,10 @@
 
     ol { margin-left: 1.8rem; }
 
-    li { margin: 1.3rem 0; }
+    li {
+      margin: 1.3rem 0;
+      &:last-child { margin-bottom: 0; }
+    }
 
     hr {
       border-top: solid 1px #c9d0d9;
