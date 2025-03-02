@@ -19,8 +19,13 @@ export default defineConfig({
   title: "Jason Bejot",
 
   rewrites: {
+    // where articles will be served from
     'articles/archive/:article*' : 'articles/:article*',
+
+    // where portfolio projects will be served from
     'portfolio/projects/:project*' : 'portfolio/:project*',
+
+    // where application landing pages will be served from
     'applications/:pre*-:slug' : 'apps/:slug'
   },
 
