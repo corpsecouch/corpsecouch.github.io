@@ -52,6 +52,10 @@
           <li><a href="https://github.com/corpsecouch" title="Github" target="_blank">Github</a></li>
         </ul>
       </div>
+
+      <!-- <div :class="$style.cta">
+        <p>Let's make something great together.</p>
+      </div> -->
     </section>
 
   </div>
@@ -92,11 +96,40 @@
 
 <style module lang="css">
 
+  /* .cta {
+    text-align: center;
+    p {
+      border: dashed grey 1px;
+      padding: 1rem 1.8rem;
+      display: inline;
+      border-radius: 12px;
+    }
+  } */
+
+  .top, .sales {
+    > * { padding: 5rem 0; }
+  }
+
+  .top {
+    > *:last-child { padding-bottom: 0; }
+  }
+
   .sales {
-    > * { padding: 3rem 0; }
+    /* > * { padding: 5rem 0; } */
+
+    /* > *:nth-child(odd) {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    } */
+
     > *:nth-child(even) {
       background-color: whitesmoke;
       padding: 3rem;
+
+      /* max-width: small screen */
+      @media all and (max-width: 680px) {
+        padding: 1rem;
+      }
     }
   }
 
@@ -136,6 +169,14 @@
         }
       }
     }
+
+    /* max-width: small screen */
+    @media all and (max-width: 680px) {
+      ul {
+        display: flex;
+        flex-flow: column nowrap;
+      }
+    }
   }
 
   .socials {
@@ -154,6 +195,7 @@
   }
 
   .logos {
+    /* max-width: 100%; */
     ul {
       list-style: none;
       margin: 2rem 0 0 0;
@@ -161,6 +203,7 @@
       display: flex;
       flex-flow: row nowrap;
       justify-content: space-evenly;
+      column-gap: 2rem;
       li {
         margin: 0;
         padding: 0;
@@ -169,15 +212,21 @@
         }
       }
     }
+
+    /* max-width: small screen */
+    @media all and (max-width: 680px) {
+      img { width: 100% !important; }
+    }
   }
 
   .title {
-    margin-bottom: 4rem;
+    /* margin-bottom: 4rem; */
     display: grid;
     grid-template-columns: 0.1fr 1fr 1.5fr 0.1fr;
     column-gap: 3rem;
     align-content: center;
     justify-content: center;
+    max-width: 100%;
 
     img {
       width: 100%;
@@ -195,10 +244,26 @@
       flex-flow: column nowrap;
       justify-content: center;
       row-gap: 2rem;
+      max-width: 100%;
 
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.6rem; }
       h1, h2 {
         text-align: left;
         margin: 0;
+        word-wrap: break-word;
+      }
+    }
+
+    /* max-width: small screen */
+    @media all and (max-width: 680px) {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      row-gap: 2rem;
+      .me { width: 50%; }
+      .words {
+        h1, h2 { text-align: center; }
       }
     }
   }

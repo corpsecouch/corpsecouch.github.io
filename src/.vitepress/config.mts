@@ -13,8 +13,6 @@ const hostname:string = 'https://jasonbejot.com'
 const _isProd:boolean = process.env.NODE_ENV === 'production';
 const _GtagID:string = 'G-G24FHEZ8YC';
 
-console.log('_isProd:', _isProd)
-
 // https://vitepress.dev/reference/site-config
 
 export default defineConfig({
@@ -22,7 +20,8 @@ export default defineConfig({
 
   rewrites: {
     'articles/archive/:article*' : 'articles/:article*',
-    'portfolio/projects/:project*' : 'portfolio/:project*'
+    'portfolio/projects/:project*' : 'portfolio/:project*',
+    'applications/:pre*-:slug' : 'apps/:slug'
   },
 
   /* ************************** */
@@ -107,7 +106,7 @@ export default defineConfig({
     transformItems(items) {
       let filtered_items = _.filter(items, (item) => {
         // prevent application urls from being added to the sitemap
-        return !item.url.match(/^applications\//i)
+        return !item.url.match(/^apps\//i)
       })
       return filtered_items
     }
