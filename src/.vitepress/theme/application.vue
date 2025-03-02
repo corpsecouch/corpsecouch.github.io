@@ -17,7 +17,7 @@
     
     <section :class="$style.sales">
       <div :class="$style.logos" v-if="!!$props.logos">
-        <h2>As seen at...</h2>
+        <h2>Previously at...</h2>
         <ul>
           <li><img src="/assets/logos/disney.png"></li>
           <li><img src="/assets/logos/amazon.png"></li>
@@ -158,6 +158,12 @@
         flex-flow: column nowrap;
         align-items: center;
         justify-content: space-between;
+        span {
+          color: var(--color-link);
+          &:hover {
+            text-decoration: underline;
+          }
+        }
         &:hover {
           /* background-color: whitesmoke; */
           background-color: rgba(0, 0, 0, 0.04);
