@@ -3,7 +3,7 @@ layout: application
 title: Design Program Manager, Strategic Initiatives
 role: Design Program Manager, Strategic Initiatives
 company: Block
-video: https://www.youtube.com/embed/AQHZ4axb64A
+video: https://www.youtube.com/embed/WTDaB3X8Hi4
 logos: true
 socials: true
 projects:
