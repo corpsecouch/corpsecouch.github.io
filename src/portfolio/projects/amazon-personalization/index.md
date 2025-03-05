@@ -8,7 +8,8 @@ preview:
     company:        'amazon'
     image:          '/portfolio/amazon-personalization/thumb.png'
     type:           'product'
-    color:          'lightcoral'
+    color: lightskyblue
+    # color:  lightsalmon
     year:           '2019'
     title:          'Alexa Personalization'
     description:    'How I wrote the book on personalization for Alexa.'

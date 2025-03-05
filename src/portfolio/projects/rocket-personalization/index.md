@@ -8,7 +8,7 @@ preview:
     company:        'rocket'
     image:      '/portfolio/rocket-personalization/thumb.png'
     type:       'product'
-    color:      'lightcoral'
+    color: lightcoral
     year:           '2023'
     title:          'Rocket Personalization Strategy'
     description:    'Establishing the personalization strategy for Rocket Companies.'
