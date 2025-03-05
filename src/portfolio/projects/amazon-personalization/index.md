@@ -1,6 +1,6 @@
 ---
 # layout: portfolio
-title: Alexa Personalization
+title: Alexa Personalization HIG
 description: A case study on how I established the Human Interface Guidelines of personalization for Alexa.
 nda: true
 
@@ -11,7 +11,7 @@ preview:
     color: lightskyblue
     # color:  lightsalmon
     year:           '2019'
-    title:          'Alexa Personalization'
+    title:          'Alexa Personalization HIG'
     description:    'How I wrote the book on personalization for Alexa.'
     tags:           ['strategy', 'artificial intelligence', 'leadership', 'personalization']
 ---
