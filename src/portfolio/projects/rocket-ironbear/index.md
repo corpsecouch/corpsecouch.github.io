@@ -12,7 +12,7 @@ preview:
     year:           '2023'
     title:          'Conversational Lead Funnel'
     description:    'Overhauling the mortgage top-of-funnel with conversational AI.'
-    tags:           ['UI design', 'AI design', 'conversational design']
+    tags:           ['artificial intelligence', 'conversational ai', 'leadership', 'personalization']
 
 # hero:
 #     title:      'Conversational Lead Funnel'
