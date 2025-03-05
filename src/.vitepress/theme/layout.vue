@@ -30,6 +30,14 @@
                 <template v-slot:company>{{ frontmatter.company }}</template>
         </Application>
 
+        <!-- <Portfolio v-else-if="frontmatter.layout === 'portfolio'"
+            v-bind:nda="frontmatter.nda"
+            v-bind:color="frontmatter.preview.color">
+                <template v-slot:title>{{ frontmatter.title }}</template>
+                <template v-slot:year>{{ frontmatter.preview.year }}</template>
+                <template v-slot:company>{{ frontmatter.preview.company }}</template>
+        </Portfolio> -->
+
         <Content v-else />
 
     </main>
@@ -48,6 +56,7 @@
     import Page from './page.vue'
     import Article from './article.vue'
     import Application from './application.vue'
+    // import Portfolio from './portfolio.vue'
 
     const { page, frontmatter } = useData()
 </script>

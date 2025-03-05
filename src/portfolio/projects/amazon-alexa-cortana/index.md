@@ -8,7 +8,8 @@ preview:
     company:        'amazon'
     image:          '/portfolio/amazon-alexa-cortana/thumb.png'
     type:           'product'
-    color:          'lightsalmon'
+    color: lightskyblue
+    # color: lightsalmon
     year:           '2017'
     title:          'Alexa + Cortana'
     description:    'Connecting AIs from two of the worlds largest companies; a world first.'
