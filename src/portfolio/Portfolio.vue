@@ -352,6 +352,9 @@
       grid-template-columns: 1fr 2fr;
       grid-column-gap: 1.5rem;
 
+      /* max-width: xsmall screen */
+      @media all and (max-width: 600px) { display: block; }
+
       &:hover {
         cursor: pointer;
         .title {
@@ -373,9 +376,15 @@
       &:first-child {
         display: block;
         padding: 3rem;
+        /* max-width: xsmall screen */
+        @media all and (max-width: 600px) { padding: 1.5rem; }
         background-color: whitesmoke;
         background-image: linear-gradient(0deg, var(--color-background-light) 5%, transparent 120%);
-        .product-image img { padding: 3rem; }
+        .product-image img {
+          padding: 3rem;
+          /* max-width: xsmall screen */
+          @media all and (max-width: 600px) { padding: 0; }
+        }
         .title { margin-top: 1rem; }
       }
 
