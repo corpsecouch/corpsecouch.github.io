@@ -7,12 +7,11 @@ import structuredDataPlugin from './vitepress-plugin-structure-data.mjs'
 import googleAnalyticsPlugin from './vitepress-plugin-google-analytics.mjs'
 
 import { getImageFullUrl } from '../articles/articles.utils.js'
+import _ from 'lodash'
 
 const hostname:string = 'https://jasonbejot.com'
 const _isProd:boolean = process.env.NODE_ENV === 'production';
 const _GtagID:string = 'G-G24FHEZ8YC';
-
-console.log('_isProd:', _isProd)
 
 // https://vitepress.dev/reference/site-config
 
@@ -20,8 +19,14 @@ export default defineConfig({
   title: "Jason Bejot",
 
   rewrites: {
+    // where articles will be served from
     'articles/archive/:article*' : 'articles/:article*',
-    'portfolio/projects/:project*' : 'portfolio/:project*'
+
+    // where portfolio projects will be served from
+    'portfolio/projects/:project*' : 'portfolio/:project*',
+
+    // where application landing pages will be served from
+    'applications/:pre*-:slug' : 'apps/:slug'
   },
 
   /* ************************** */
@@ -102,7 +107,14 @@ export default defineConfig({
   // https://vitepress.dev/guide/sitemap-generation
   sitemap: {
     hostname: hostname,
-    lastmodDateOnly: true
+    lastmodDateOnly: true,
+    transformItems(items) {
+      let filtered_items = _.filter(items, (item) => {
+        // prevent application urls from being added to the sitemap
+        return !item.url.match(/^apps\//i)
+      })
+      return filtered_items
+    }
   },
   
   transformPageData(pageData) {

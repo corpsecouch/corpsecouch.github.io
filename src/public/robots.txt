@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /apps/
 Allow: /
 
 Sitemap: https://jasonbejot.com/sitemap.xml
