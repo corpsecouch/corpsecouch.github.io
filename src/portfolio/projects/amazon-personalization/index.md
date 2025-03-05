@@ -1,46 +1,51 @@
 ---
-# layout:         'case study'
-
-title: Personalization
-description: A case study on personalization
+# layout: portfolio
+title: Alexa Personalization
+description: A case study on how I established the Human Interface Guidelines of personalization for Alexa.
+nda: true
 
 preview:
     company:        'amazon'
-    image:      '/portfolio/amazon-personalization/thumb.png'
-    type:       'product'
-    color:      'lightcoral'
-    year:           '20XX'
-    title:          'Personalization'
-    description:    'A case study on personalziation'
-    tags:           ['strategy', 'artificial intelligence', 'leadership']
+    image:          '/portfolio/amazon-personalization/thumb.png'
+    type:           'product'
+    color:          'lightcoral'
+    year:           '2019'
+    title:          'Alexa Personalization'
+    description:    'How I wrote the book on personalization for Alexa.'
+    tags:           ['strategy', 'artificial intelligence', 'leadership', 'personalization']
 ---
 
 <script setup>
+    import { useData } from 'vitepress'
     import PortfolioPage from '@components/PortfolioPage';
+    const { frontmatter } = useData()
 </script>
 
-<PortfolioPage pcolor="lightcoral">
-    <template v-slot:title>Personalization</template>
-    <template v-slot:year>20XX</template>
+<PortfolioPage :pcolor="frontmatter.preview.color" :nda="frontmatter.nda">
+    <template v-slot:title>{{ frontmatter.title }}</template>
+    <template v-slot:year>{{ frontmatter.preview.year }}</template>
     <template v-slot:company>Amazon</template>
     <template v-slot:hero>
-      <img src="/portfolio/rocket-ironbear/thumb.png">
+      <img src="/portfolio/amazon-personalization/thumb.png">
     </template>
     <template v-slot:challenge>
-        <p>There was no personalization
-        Very little of the RKT experience was personalized.
-        Clients expected it but Rocket didn’t provide it.
-        Multiple industry reports and competitive analysis showed fintech clients expected a personalized experience which also contributes to higher revenues and increased trust specifically for fintech, a large body of client feedback corroborated that.</p>
+      <p>Prior to the release of voice identification, Alexa had no idea whom it was talking with. Voice identification unlocked the opportunity for Alexa to provide truely personalized experiences. This was a new paradigm for Alexa and smart assistants in general; a personalized voice assistant.</p>
+      <p>Through quantitative and qualitative research, we knew that:</p>
+      <ul>
+        <li>A majority (60+%) of users want Alexa to respond in a way that is specific to them as an individual</li>
+        <li>At least half (50+%) of users perceive personalized experiences as valuable</li>
+      </ul>
+      <p>With personalization being possible, the problem was lack of knowledge across the Alexa org on what personalization is, how it works, how to make them, and what makes a personalized experience good.</p>
     </template>
     <template v-slot:outcome>
-      <p>We increased Rocket Mortgage's client experience scores and mortgage lead success KPIs by launching a new full-browser, generative AI & human-agent chat experience at the end of the primary digital lead form. This product also overhauled the conversational AI architectural foundation establishing a more robust and centralized conversational AI API.</p>
+      <p>The Personalization HIG unlocked quality and consistency at scale. It provided cross-functional teams the resources they need to understand the underlying technical components, the product requirements, the experience guidelines, as well as best practices and reusable patterns.</p>
+      <p>It was a huge success. The Personalization HIG was celebrated by teams and senior leaders across up and across the Alexa organization.</p>
     </template>
     <template v-slot:process>
-      <h4>Validate Assumptions</h4>
-      <p>We assumed people clients didn't like the dead-end and the disjointed experience of receiving a phone call from a mortgage banker within seconds of filling out a form. We also assumed most clients would prefer a chat experience with a mortgage banker versus a phone call. So, we asked clients what they wanted to do at the end of the form, get a call or chat. We ran this "smoke test" for two weeks on a slice of traffic. The results strongly indicated <strong>clients at the end of the lead form preferred chatting versus getting a phone call.</strong></p>
-      <h4>Design</h4>
-      <p>We created a full-screen/full-browser conversational UI that enabled clients to chat with our conversational AI and mortgage bankers. The AI was powered by ChatGPT and integrated with Salesforce for mortgage banker chats. We also added light personalization by leveraging client info gathered from the lead form including their name, property type, and local time of day.</p>
-      <h4>Derisking</h4>
-      <p>Mortgage bankers aren't staffed 24/7 yet launching during core hours poses the highest business risk. We found that a large percentage of clients submit leads during after hours, aren't able to get immediate help, and have lower success rates. This presented us with the opportunity for lower risk and greater positive impact. Aligning with the banking business, we staffed mortgage chat bankers during after hours.</p>
+      <p>Alexa has an internal Alexa HIG (Human Interface Guidelines) which establishes the quality bar for good Alexa experiences. Everyone making Alexa experiences, not just designers, are kept accountable to the content of the HIG. When it came to personalization, the solution was two-fold:</p>
+      <ul>
+        <li><strong>Publish:</strong> Extend the Alexa HIG to include personalization</li>
+        <li><strong>Communicate:</strong> Broadly share the new personalization content</li>
+      </ul>
     </template>
 </PortfolioPage>
