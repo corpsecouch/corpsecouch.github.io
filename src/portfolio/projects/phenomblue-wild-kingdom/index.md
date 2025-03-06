@@ -5,6 +5,7 @@ description: A case study on designing a groundbreaking AR mobile app.
 keys:
   project: PhenomblueWildKingdom
   company: phenomblue
+featured: true
 
 preview:
     image:      '/portfolio/phenomblue-wild-kingdom/thumb.png'

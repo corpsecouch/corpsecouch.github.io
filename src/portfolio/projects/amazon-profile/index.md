@@ -7,6 +7,7 @@ keys:
   project: AmazonProfile
   company: amazon
 nda: true
+featured: true
 
 preview:
     image:          '/portfolio/amazon-profile/thumb.png'

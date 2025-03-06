@@ -6,9 +6,9 @@ keys:
   project: DisneyDesignSystem
   company: disney
 nda: true
+featured: true
 
 preview:
-    # company:        'disney'
     image:      '/portfolio/disney-design-system/thumb.png'
     type:       'product'
     color:      'blueviolet'

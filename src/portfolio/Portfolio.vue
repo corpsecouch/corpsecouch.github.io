@@ -184,8 +184,8 @@
       // remove all hidden projects and sort the rest
       let projects = _.orderBy(
         _.filter(projectData, o => { return o.frontmatter.preview; }),
-        [ 'frontmatter.preview.year' ],
-        [ 'desc' ]);
+        [ 'frontmatter.featured', 'frontmatter.preview.year' ],
+        [ 'asc', 'desc' ]);
 
       // fix the urls due to the route rewrites
       projects = _.map(projects, (project) => {
