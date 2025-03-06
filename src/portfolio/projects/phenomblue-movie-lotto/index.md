@@ -16,6 +16,6 @@ preview:
     description:    'Social gaming in theaters.'
 ---
 
-Movie Lotto is a casual, multi-user, multi-screen gaming platform for movie theaters to provide next-level interactive entertainment before a movie begins.
-
 <Video src="https://www.youtube.com/embed/_l6rD1AM4qo"></Video>
+
+Movie Lotto is a casual, multi-user, multi-screen gaming platform for movie theaters to provide next-level interactive entertainment before a movie begins.

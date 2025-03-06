@@ -16,6 +16,6 @@ preview:
     description:    'A social, large-format interactive experience.'
 ---
 
-A large-format interactive social experience, leveraging Microsoft Surface 1.0, for the 2009 Big Omaha conference.
-
 <Video src="https://www.youtube.com/embed/FqURhpK_aCM"></Video>
+
+A large-format interactive social experience, leveraging Microsoft Surface 1.0, for the 2009 Big Omaha conference.
