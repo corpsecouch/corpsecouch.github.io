@@ -197,7 +197,7 @@
       _.each(companies, (value, key) => {
         portfolioData[value.slug] = {
 
-          projects: _.filter(projects, o => { return o.frontmatter.preview.company == value.slug; }),
+          projects: _.filter(projects, o => { return o.frontmatter.keys.company == value.slug; }),
 
           awards: _.orderBy(
             _.filter(awardsData, o => { return o.company.slug == value.slug }),

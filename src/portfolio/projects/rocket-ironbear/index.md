@@ -3,9 +3,11 @@
 
 title: Conversational Lead Funnel
 description: A case study on overhauling the mortgage top-of-funnel using conversational AI.
+keys:
+  project: RocketIronbear
+  company: rocket
 
 preview:
-    company:        'rocket'
     image:      '/portfolio/rocket-ironbear/thumb.png'
     type:       'product'
     color: lightcoral
@@ -13,18 +15,9 @@ preview:
     title:          'Conversational Lead Funnel'
     description:    'Overhauling the mortgage top-of-funnel with conversational AI.'
     tags:           ['artificial intelligence', 'conversational ai', 'leadership', 'personalization']
-
-# hero:
-#     title:      'Conversational Lead Funnel'
-#     year:       '2023'
-#     company:    'Rocket Mortgage'
-#     image:      '/portfolio/rocket-ironbear/thumb.png'
-#     color:      'lightcoral'
 ---
 
 <script setup>
-    // import Illustration from '../../components/Illustration.vue'
-    // import YouTubeVideo from '../../components/YouTubeVideo.vue'
     import Page from './Rocket-Ironbear.vue'
 </script>
 

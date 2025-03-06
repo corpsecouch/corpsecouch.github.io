@@ -30,13 +30,15 @@
                 <template v-slot:company>{{ frontmatter.company }}</template>
         </Application>
 
-        <!-- <Portfolio v-else-if="frontmatter.layout === 'portfolio'"
+        <Portfolio v-else-if="frontmatter.layout === 'portfolio'"
+            v-bind:keyProject="frontmatter.keys.project"
+            v-bind:keyCompany="frontmatter.keys.company"
             v-bind:nda="frontmatter.nda"
-            v-bind:color="frontmatter.preview.color">
-                <template v-slot:title>{{ frontmatter.title }}</template>
-                <template v-slot:year>{{ frontmatter.preview.year }}</template>
-                <template v-slot:company>{{ frontmatter.preview.company }}</template>
-        </Portfolio> -->
+            v-bind:color="frontmatter.preview.color"
+            v-bind:hero="frontmatter.preview.image"
+            v-bind:title="frontmatter.title"
+            v-bind:year="frontmatter.preview.year"
+            v-bind:subtitle="frontmatter.subtitle" />
 
         <Content v-else />
 
@@ -56,7 +58,7 @@
     import Page from './page.vue'
     import Article from './article.vue'
     import Application from './application.vue'
-    // import Portfolio from './portfolio.vue'
+    import Portfolio from './portfolio.vue'
 
     const { page, frontmatter } = useData()
 </script>
