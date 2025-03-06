@@ -13,7 +13,7 @@
   }
 </script>
 
-<style module lang="css">
+<style module lang="scss">
   .title {
     font-family: 'Afacad Flux';
     letter-spacing: 0.1em;

@@ -35,7 +35,7 @@
   }
 </script>
 
-<style module lang="css">
+<style module lang="scss">
   
   .hero {
     margin-top: 3rem;

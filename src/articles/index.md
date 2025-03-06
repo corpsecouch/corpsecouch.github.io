@@ -23,7 +23,7 @@ description: The collection of articles, blog posts, and thought pieces I've wri
   }, ['desc'])
 </script>
 
-<style module>
+<style module lang="scss">
   h2 {
     text-align: left;
     margin: 3rem 0 0 0;

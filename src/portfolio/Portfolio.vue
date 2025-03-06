@@ -220,7 +220,7 @@
   }
 </script>
 
-<style scoped lang="css">
+<style scoped lang="scss">
 
 /* https://css-irl.info/css-halftone-patterns/ */
 /* https://leanrada.com/notes/pure-css-halftone/ */
@@ -365,26 +365,30 @@
         background-color: whitesmoke; */
       }
 
-      .product-image, .title-image {
+      /* .product-image, .title-image { */
         img {
           width: 100%;
           /* max-width: xsmall screen */
           @media all and (max-width: 600px) { padding: 0; }
         }
-      }
+      /* } */
 
       &:first-child {
         display: block;
         padding: 3rem;
-        /* max-width: xsmall screen */
-        @media all and (max-width: 600px) { padding: 1.5rem; }
         background-color: whitesmoke;
         background-image: linear-gradient(0deg, var(--color-background-light) 5%, transparent 120%);
+
+        /* max-width: xsmall screen */
+        @media all and (max-width: 600px) { padding: 1.5rem; }
+        
         .product-image img {
           padding: 3rem;
+
           /* max-width: xsmall screen */
           @media all and (max-width: 600px) { padding: 0; }
         }
+
         .title { margin-top: 1rem; }
       }
 

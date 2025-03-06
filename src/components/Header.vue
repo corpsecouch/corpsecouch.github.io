@@ -17,7 +17,7 @@
   }
 </script>
 
-<style module lang="css">
+<style module lang="scss">
   .header {
     z-index: var(--z-menu);
     width: 100%;

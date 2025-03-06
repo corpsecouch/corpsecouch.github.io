@@ -85,7 +85,7 @@
 
 </script>
 
-<style module lang="css">
+<style module lang="scss">
   
   .news, .awards, .content {
     h2 {

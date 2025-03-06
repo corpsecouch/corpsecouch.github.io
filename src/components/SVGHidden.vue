@@ -19,8 +19,9 @@
   }
 </script>
 
-<style module lang="css">
+<style module lang="scss">
   .svg {
     fill: var(--color-lighttext);
+    width: 100%;
   }
 </style>

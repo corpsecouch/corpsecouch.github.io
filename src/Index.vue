@@ -135,7 +135,7 @@ data () {
   }
 </script>
 
-<style scoped lang="css">
+<style scoped lang="scss">
   h2 {
     font-family: 'Afacad Flux';
     letter-spacing: normal;

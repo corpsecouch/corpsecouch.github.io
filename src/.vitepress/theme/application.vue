@@ -94,7 +94,7 @@
   }
 </script>
 
-<style module lang="css">
+<style module lang="scss">
 
   /* .cta {
     text-align: center;
