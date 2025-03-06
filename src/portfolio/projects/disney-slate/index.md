@@ -6,11 +6,12 @@ keys:
   project: DisneySlate
   company: disney
 nda: true
-
+hero:
+  type: title
+  # color: lightskyblue
+  image: /portfolio/disney-slate/thumb.png
+year: 2016
 preview:
-    image:      '/portfolio/disney-slate/thumb.png'
-    type:       'title'
-    year:           '2016'
     title:          'Movie Slate'
     description:    'Innovating how Disney plans and tracks their slate of upcoming movies.'
 ---

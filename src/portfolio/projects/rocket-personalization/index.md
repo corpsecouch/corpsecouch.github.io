@@ -6,15 +6,15 @@ keys:
   project: RocketPersonalization
   company: rocket
 nda: true
-
+hero:
+  type: product
+  color: lightcoral
+  image: /portfolio/rocket-personalization/thumb.png
+year: 2023
+tags: ['strategy', 'artificial intelligence', 'leadership', 'personalization']
 preview:
-    image:      '/portfolio/rocket-personalization/thumb.png'
-    type:       'product'
-    color: lightcoral
-    year:           '2023'
     title:          'Rocket Personalization Strategy'
     description:    'Establishing the personalization strategy for Rocket Companies.'
-    tags:           ['strategy', 'artificial intelligence', 'leadership', 'personalization']
 ---
 
 Large financial decisions are a very personal thing. Through research, we knew that clients desired a personal experience, expected that their experience was personals, and assumed that it was. However, we also knew that Rocket was known as "The Big Red Machine" where everyone is treated like a number. We also knew that personalized experiences contribute to higher revenues and increased trust especcially for fintech.

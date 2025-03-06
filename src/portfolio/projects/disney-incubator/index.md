@@ -6,14 +6,15 @@ keys:
   project: DisneyIncubator
   company: disney
 nda: true
-
+hero:
+  type: title
+  # color: lightskyblue
+  image: /portfolio/disney-incubator/thumb.png
+year: 2017
+tags: ['r&d']
 preview:
-    image:      '/portfolio/disney-incubator/thumb.png'
-    type:       'title'
-    year:           '2017'
     title:          'Innovation Incubator'
     description:    'Transforming how Disney Studios innovates.'
-    tags:           ['r&d']
 ---
 
 The product teams responsible for the Studios enterprise tools have tight budgets and timelines. The tools themselves were build using common web technologies. This left the product teams very little room to test or explore risky or unproven ideas, eventually leading to products and engineers that stagnated.

@@ -8,16 +8,15 @@ keys:
   company: amazon
 nda: true
 featured: true
-
+hero:
+  type: product
+  color: lightskyblue
+  image: /portfolio/amazon-profile/thumb.png
+year: 2019
+tags: ['mobile design', 'voice design', 'multi-modal design', 'AI design', 'conversational design', 'personalization']
 preview:
-    image:          '/portfolio/amazon-profile/thumb.png'
-    type:           'product'
-    color: lightskyblue
-    # color:  lightsalmon
-    year:           '2019'
     title:          'Alexa Profile'
     description:    'The heart of personalization.'
-    tags:           ['mobile design', 'voice design', 'multi-modal design', 'AI design', 'conversational design', 'personalization']
 ---
 
 Alexa customers needed a way to manage what Alexa knows about them as an individual – their biometrics, preference, privacy and security settings, etc.

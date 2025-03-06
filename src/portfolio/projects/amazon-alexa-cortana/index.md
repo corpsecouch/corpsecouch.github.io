@@ -7,16 +7,15 @@ keys:
   project: AmazonAlexaCortana
   company: amazon
 nda: true
-
+hero:
+  type: product
+  color: lightskyblue
+  image: /portfolio/amazon-alexa-cortana/thumb.png
+year: 2017
+tags: ['voice design', 'multi-modal design', 'AI design', 'conversational design']
 preview:
-    image:          '/portfolio/amazon-alexa-cortana/thumb.png'
-    type:           'product'
-    color: lightskyblue
-    # color: lightsalmon
-    year:           '2017'
     title:          'Alexa + Cortana'
     description:    'Connecting AIs from two of the worlds largest companies; a world first.'
-    tags:           ['voice design', 'multi-modal design', 'AI design', 'conversational design']
 ---
 
 Both Amazon and Microsoft wanted to scale their AI assistants – more capabilities, more users, more developers. Jeff and Satya saw that bringing Alexa and Cortana together could accomplish this. A one-of-a-kind partnership between Amazon and Microsoft was established to figure this out.

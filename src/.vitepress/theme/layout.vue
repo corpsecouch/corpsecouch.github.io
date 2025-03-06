@@ -34,10 +34,10 @@
             v-bind:keyProject="frontmatter.keys.project"
             v-bind:keyCompany="frontmatter.keys.company"
             v-bind:nda="frontmatter.nda"
-            v-bind:color="frontmatter.preview.color"
-            v-bind:hero="frontmatter.preview.image"
+            v-bind:color="frontmatter.hero.color"
+            v-bind:hero="frontmatter.hero.image"
             v-bind:title="frontmatter.title"
-            v-bind:year="frontmatter.preview.year"
+            v-bind:year="frontmatter.year"
             v-bind:subtitle="frontmatter.subtitle" />
 
         <Content v-else />

@@ -5,14 +5,15 @@ description: A case study on designing a chroma-depth 3d, mulit-user space simul
 keys:
   project: PhenomblueGenesis
   company: phenomblue
-
+hero:
+  type: title
+  # color: lightskyblue
+  image: /portfolio/phenomblue-genesis/thumb.png
+year: 2009
+tags: ['public installation']
 preview:
-    image:      '/portfolio/phenomblue-genesis/thumb.png'
-    type:       'title'
-    year:           '2009'
     title:          'Microsoft Genesis'
     description:    A chroma-depth 3D, real-time, multi-person space simulator.
-    tags:         ['public installation']
 ---
 
 <!-- - Genesis is a 3D, real-time, multi-person space simulator created specifically for the Microsoft Surface 1.0

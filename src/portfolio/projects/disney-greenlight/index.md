@@ -6,13 +6,13 @@ keys:
   project: DisneyGreenlight
   company: disney
 nda: true
+hero:
+  type: product
+  color: lightblue
+  image: /portfolio/disney-greenlight/thumb.png
+year: 2017
 
 preview:
-    # company:        'disney'
-    image:      '/portfolio/disney-greenlight/thumb.png'
-    type:       'product'
-    color:      'lightblue'
-    year:           '2017'
     title:          'Movie Greenlight'
     description:    'Innovating how Disney greenlights movies.'
 ---

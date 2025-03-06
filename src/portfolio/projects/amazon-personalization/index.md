@@ -6,16 +6,15 @@ keys:
   project: AmazonPersonalization
   company: amazon
 nda: true
-
+hero:
+  type: product
+  color: lightskyblue
+  image: /portfolio/amazon-personalization/thumb.png
+year: 2019
+tags: ['strategy', 'artificial intelligence', 'leadership', 'personalization']
 preview:
-    image:          '/portfolio/amazon-personalization/thumb.png'
-    type:           'product'
-    color: lightskyblue
-    # color:  lightsalmon
-    year:           '2019'
     title:          'Alexa Personalization HIG'
     description:    'How I wrote the book on personalization for Alexa.'
-    tags:           ['strategy', 'artificial intelligence', 'leadership', 'personalization']
 ---
 
 Prior to the release of voice identification, Alexa had no idea whom it was talking with. Voice identification unlocked the opportunity for Alexa to provide truely personalized experiences. This was a new paradigm for Alexa and smart assistants in general; a personalized voice assistant.

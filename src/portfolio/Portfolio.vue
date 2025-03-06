@@ -18,18 +18,18 @@
       awardsURL="/awards/#rocket" />
 
     <ul class="projects">
-      <li class="project" v-for="(p, index) in portfolioData.rocket.projects" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.preview.color} : false">
-        <div :class="p.frontmatter.preview.type + '-image'">
-          <img :src="p.frontmatter.preview.image" class="rounded">
+      <li class="project" v-for="(p, index) in portfolioData.rocket.projects" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.hero.color} : false">
+        <div :class="p.frontmatter.hero.type + '-image'">
+          <img :src="p.frontmatter.hero.image" class="rounded">
         </div>
 
         <div>
           <span class="title">{{ p.frontmatter.preview.title }}</span>
 
-          <span class="description">{{ p.frontmatter.preview.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
+          <span class="description">{{ p.frontmatter.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
 
-          <ul class="tags" v-if="p.frontmatter.preview.tags">
-            <li class="tag" v-for="tag in p.frontmatter.preview.tags">{{ tag }}</li>
+          <ul class="tags" v-if="p.frontmatter.tags">
+            <li class="tag" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
           </ul>
 
           <!-- <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Read the case study</a> -->
@@ -53,17 +53,17 @@
       awardsURL="/awards/#amazon" />
 
     <ul class="projects">
-      <li class="project" v-for="(p, index) in portfolioData.amazon.projects" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.preview.color} : false">
-        <div :class="p.frontmatter.preview.type + '-image'">
-          <img :src="p.frontmatter.preview.image" class="rounded">
+      <li class="project" v-for="(p, index) in portfolioData.amazon.projects" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.hero.color} : false">
+        <div :class="p.frontmatter.hero.type + '-image'">
+          <img :src="p.frontmatter.hero.image" class="rounded">
         </div>
         <div>
           <span class="title">{{ p.frontmatter.preview.title }}</span>
 
-          <span class="description">{{ p.frontmatter.preview.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
+          <span class="description">{{ p.frontmatter.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
 
-          <ul class="tags" v-if="p.frontmatter.preview.tags">
-            <li class="tag" v-for="tag in p.frontmatter.preview.tags">{{ tag }}</li>
+          <ul class="tags" v-if="p.frontmatter.tags">
+            <li class="tag" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
           </ul>
 
           <!-- <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Read the case study</a> -->
@@ -87,17 +87,17 @@
       awardsURL="/awards/#disney" />
 
     <ul class="projects">
-      <li class="project" v-for="(p, index) in portfolioData.disney.projects" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.preview.color} : false">
-        <div :class="p.frontmatter.preview.type + '-image'">
-          <img :src="p.frontmatter.preview.image" class="rounded">
+      <li class="project" v-for="(p, index) in portfolioData.disney.projects" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.hero.color} : false">
+        <div :class="p.frontmatter.hero.type + '-image'">
+          <img :src="p.frontmatter.hero.image" class="rounded">
         </div>
         <div>
           <span class="title">{{ p.frontmatter.preview.title }}</span>
 
-          <span class="description">{{ p.frontmatter.preview.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
+          <span class="description">{{ p.frontmatter.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
 
-          <ul class="tags" v-if="p.frontmatter.preview.tags">
-            <li class="tag" v-for="tag in p.frontmatter.preview.tags">{{ tag }}</li>
+          <ul class="tags" v-if="p.frontmatter.tags">
+            <li class="tag" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
           </ul>
 
           <!-- <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Read the case study</a> -->
@@ -121,17 +121,17 @@
       awardsURL="/awards/#phenomblue" />
 
     <ul class="projects">
-      <li class="project" v-for="(p,index) in portfolioData.phenomblue.projects" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.preview.color} : false">
-        <div :class="p.frontmatter.preview.type + '-image'">
-          <img :src="p.frontmatter.preview.image" class="rounded">
+      <li class="project" v-for="(p,index) in portfolioData.phenomblue.projects" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.hero.color} : false">
+        <div :class="p.frontmatter.hero.type + '-image'">
+          <img :src="p.frontmatter.hero.image" class="rounded">
         </div>
         <div>
           <span class="title">{{ p.frontmatter.preview.title }}</span>
 
-          <span class="description">{{ p.frontmatter.preview.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
+          <span class="description">{{ p.frontmatter.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
 
-          <ul class="tags" v-if="p.frontmatter.preview.tags">
-            <li class="tag" v-for="tag in p.frontmatter.preview.tags">{{ tag }}</li>
+          <ul class="tags" v-if="p.frontmatter.tags">
+            <li class="tag" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
           </ul>
 
           <!-- <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Check out this project</a> -->
@@ -184,7 +184,7 @@
       // remove all hidden projects and sort the rest
       let projects = _.orderBy(
         _.filter(projectData, o => { return o.frontmatter.preview; }),
-        [ 'frontmatter.featured', 'frontmatter.preview.year' ],
+        [ 'frontmatter.featured', 'frontmatter.year' ],
         [ 'asc', 'desc' ]);
 
       // fix the urls due to the route rewrites

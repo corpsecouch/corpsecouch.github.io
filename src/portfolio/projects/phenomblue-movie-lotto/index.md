@@ -5,14 +5,15 @@ description: A case study on creating a casual, multi-user, multi-screen experie
 keys:
   project: PhenomblueMovieLotto
   company: phenomblue
-
+hero:
+  type: title
+  # color: lightskyblue
+  image: /portfolio/phenomblue-movie-lotto/thumb.png
+year: 2012
+tags: ['design system', 'r&d']
 preview:
-    image:      '/portfolio/phenomblue-movie-lotto/thumb.png'
-    type:       'title'
-    year:           '2012'
     title:          'Movie Lotto'
     description:    'Social gaming in theaters.'
-    tags:         ['design system', 'r&d']
 ---
 
 Movie Lotto is a casual, multi-user, multi-screen gaming platform for movie theaters to provide next-level interactive entertainment before a movie begins.

@@ -6,15 +6,15 @@ description: A case study on overhauling the mortgage top-of-funnel using conver
 keys:
   project: RocketIronbear
   company: rocket
-
+hero:
+  type: product
+  color: lightcoral
+  image: /portfolio/rocket-ironbear/thumb.png
+year: 2023
+tags: ['artificial intelligence', 'conversational ai', 'leadership', 'personalization']
 preview:
-    image:      '/portfolio/rocket-ironbear/thumb.png'
-    type:       'product'
-    color: lightcoral
-    year:           '2023'
     title:          'Conversational Lead Funnel'
     description:    'Overhauling the mortgage top-of-funnel with conversational AI.'
-    tags:           ['artificial intelligence', 'conversational ai', 'leadership', 'personalization']
 ---
 
 <script setup>

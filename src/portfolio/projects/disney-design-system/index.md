@@ -7,15 +7,16 @@ keys:
   company: disney
 nda: true
 featured: true
+hero:
+  type: product
+  color: blueviolet
+  image: /portfolio/disney-design-system/thumb.png
+year: 2014
+tags: ['design system']
 
 preview:
-    image:      '/portfolio/disney-design-system/thumb.png'
-    type:       'product'
-    color:      'blueviolet'
-    year:           '2014'
     title:          'Enterprise Design System'
     description:    'Creating an award-winning enterprise design system.'
-    tags:           ['design system']
 ---
 
 The business of Disney Studios depends on custom internal enterprise applications. These applications should look and behave consistently as if they were originally created as a part of the same product suite. With hundreds of these mission critical applications, created by various people across many years, consistency is nonexistent. Efficiency and effectiveness from both business operations and product development both suffer because of this.

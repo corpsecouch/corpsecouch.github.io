@@ -6,15 +6,15 @@ description: A case study on leading the design of a set of ground-breaking tool
 keys:
   project: DisneyVR
   company: disney
-
+hero:
+  type: product
+  color: chartreuse
+  image: /portfolio/disney-vr/thumb.png
+year: 2014
+tags: ['vr design', 'creative direction', 'r&d']
 preview:
-    image:      '/portfolio/disney-vr/thumb.png'
-    type:       'product'
-    color:      'chartreuse'
-    year:           '2014'
     title:          'Filmmaking for Virtual Reality'
     description:    'Leading the VR conversation.'
-    tags:           ['vr design', 'creative direction']
 ---
 
 The challenge was to educate and inspire A-list filmmakers and studio executives on the potential of VR and how it could be used to tell theatrical-level stories.
