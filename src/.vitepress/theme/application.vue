@@ -86,6 +86,13 @@
           let end = project.url.match(/^\/.*\/(.*)\/$/i)[1]
           return end ? _.includes(filter, end) : false
         })
+
+        // remove 'projects' from the url
+        rval = _.forEach(rval, (val) => {
+          val.url = _.join(_.slice(val.url.match(/^(.*)\/projects\/(.*)$/i), 1), '/')
+        });
+
+        console.log(rval)
         
         return rval;
       }
