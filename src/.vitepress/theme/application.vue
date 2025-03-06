@@ -91,8 +91,6 @@
         rval = _.forEach(rval, (val) => {
           val.url = _.join(_.slice(val.url.match(/^(.*)\/projects\/(.*)$/i), 1), '/')
         });
-
-        console.log(rval)
         
         return rval;
       }
