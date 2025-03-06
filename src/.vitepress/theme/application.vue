@@ -137,6 +137,7 @@
     h2 {
       margin: 0;
       font-size: 1.1rem;
+      text-align: center;
     }
   }
 
