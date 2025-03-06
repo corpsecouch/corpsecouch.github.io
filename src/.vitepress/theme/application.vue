@@ -33,8 +33,8 @@
         <h2>A few projects from my portfolio</h2>
         <ul>
           <li v-for="p in newfunc($props.projects)" @click="gotoProject(p.url)">
-            <div :class="p.frontmatter.preview.type + '-image'">
-              <img :src="p.frontmatter.preview.image">
+            <div :class="p.frontmatter.type + '-image'">
+              <img :src="p.frontmatter.hero.image">
             </div>
             <span class="title">{{ p.frontmatter.preview.title }}</span>
           </li>
