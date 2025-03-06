@@ -155,7 +155,10 @@
       /* max-width: xsmall screen */
       @media all and (max-width: 600px) { padding: 1rem; }
 
-      img { width: 100% }
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
 
       &:deep(img) {
         width: 100%;
