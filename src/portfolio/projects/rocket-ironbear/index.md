@@ -47,11 +47,27 @@ We created a full-screen/full-browser conversational UI that enabled clients to 
 
 ![The new conversational UI.](/portfolio/rocket-ironbear/design.png)
 
-![Transitioning from the lead form to the chat UI.](/portfolio/rocket-ironbear/animation.gif)
+<div :class="$style.columns">
 
-![Chatting with an AI and a mortgage banker in the new UI.](/portfolio/rocket-ironbear/chat.gif)
+  ![Transitioning from the lead form to the chat UI.](/portfolio/rocket-ironbear/animation.gif)
+  
+  ![Chatting with an AI and a mortgage banker in the new UI.](/portfolio/rocket-ironbear/chat.gif)
+
+</div>
 
 ### Derisking
 Mortgage bankers aren't staffed 24/7 yet launching during core hours poses the highest business risk. We found that a large percentage of clients submit leads during after hours, aren't able to get immediate help, and have lower success rates. This presented us with the opportunity for lower risk and greater positive impact. Aligning with the banking business, we staffed mortgage chat bankers during after hours.
 
 <!-- ![Launch night – design, product, engineering, data, and business all in one room.](/portfolio/rocket-ironbear/photo.jpg) -->
+
+<style module>
+  .columns {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    grid-gap: 3.5rem 1.5rem;
+
+    /* max-width: xsmall screen */
+    @media all and (max-width: 600px) { display: block; }
+  }
+</style>
