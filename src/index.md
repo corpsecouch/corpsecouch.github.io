@@ -1,7 +1,7 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
-description: Award-winning design leader, technologist, and inventor. Expert on Conversational AI & Design.
+# description: Award-winning design leader, technologist, and inventor. Expert on Conversational AI & Design.
 
 # hero:
 #   name: "Jason Bejot"

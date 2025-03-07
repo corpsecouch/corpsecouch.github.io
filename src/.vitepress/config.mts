@@ -17,6 +17,7 @@ const _GtagID:string = 'G-G24FHEZ8YC';
 
 export default defineConfig({
   title: "Jason Bejot",
+  description: "Hi, I'm Jason. Executive leader, award-winning designer, inventor, and expert in conversational AI and personalization.",
 
   rewrites: {
     // where articles will be served from
