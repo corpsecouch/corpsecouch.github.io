@@ -25,7 +25,8 @@
         </ul>
       </div>
 
-      <section :class="$style.content">
+      <!-- <section :class="$style.content"> -->
+      <section class="md">
         <Content />
       </section>
 
@@ -208,7 +209,6 @@
   }
 
   .logos {
-    /* max-width: 100%; */
     ul {
       list-style: none;
       margin: 2rem 0 0 0;
@@ -233,7 +233,6 @@
   }
 
   .title {
-    /* margin-bottom: 4rem; */
     display: grid;
     grid-template-columns: 0.1fr 1fr 1.5fr 0.1fr;
     column-gap: 3rem;
@@ -277,65 +276,6 @@
       .me { width: 50%; }
       .words {
         h1, h2 { text-align: center; }
-      }
-    }
-  }
-
-  section.content {
-    h2 {
-      text-align: left;
-      margin: 3rem 0 0 0;
-      line-height: 1.5em;
-      font-weight: 500;
-      font-size: 1.3rem;
-      &:first-child { margin-top: 0; }
-    }
-
-    img { width: 100%; }
-
-    p { margin: 1.3rem 0; }
-
-    em { font-style: italic; }
-
-    strong { font-weight: bold; }
-
-    ol { margin-left: 1.8rem; }
-
-    li {
-      margin: 1.3rem 0;
-      &:last-child { margin-bottom: 0; }
-    }
-
-    hr {
-      border-top: solid 1px #c9d0d9;
-      width: 70%;
-      margin: 2rem auto;
-    }
-
-    blockquote {
-      font-style: italic;
-      font-weight: 300;
-      margin: 2rem 0;
-      padding: 0.5rem 2rem;
-      border-left: solid 2px var(--color-background-dark);
-
-      p { margin: 0; }
-    }
-
-    figure {
-      margin: 3rem 0;
-
-      img {
-        width: inherit;
-        max-width: 100%;
-        display: block;
-        margin: 0 auto;
-      }
-
-      figcaption {
-        text-align: center;
-        margin-top: 1rem;
-        font-size: 0.8rem;
       }
     }
   }

@@ -4,15 +4,15 @@
 
     <main>
 
-        <NotFound v-if="page.isNotFound" />
+        <NotFound v-if="page.isNotFound" id="404" />
 
-        <Page v-else-if="frontmatter.layout === 'home'" />
+        <Page v-else-if="frontmatter.layout === 'home'" id="home" />
 
         <Page v-else-if="frontmatter.layout === 'page'">
             <template v-slot:title>{{frontmatter.title}}</template>
         </Page>
 
-        <Article v-else-if="frontmatter.layout === 'article'" v-bind:links="frontmatter.links">
+        <Article v-else-if="frontmatter.layout === 'article'" id="article" v-bind:links="frontmatter.links">
             <template v-slot:title>{{frontmatter.title}}</template>
             <template v-slot:subtitle>{{frontmatter.subtitle}}</template>
             <template v-slot:date>{{new Date(frontmatter.date).toLocaleString(undefined, {
@@ -21,7 +21,7 @@
                 day: 'numeric'})}}</template>
         </Article>
 
-        <Application v-else-if="frontmatter.layout === 'application'"
+        <Application v-else-if="frontmatter.layout === 'application'" id="application"
             v-bind:video="frontmatter.video"
             v-bind:projects="frontmatter.projects"
             v-bind:logos="frontmatter.logos"
@@ -30,7 +30,7 @@
                 <template v-slot:company>{{ frontmatter.company }}</template>
         </Application>
 
-        <Portfolio v-else-if="frontmatter.layout === 'portfolio'"
+        <Portfolio v-else-if="frontmatter.layout === 'portfolio'" id="portfolio"
             v-bind:keyProject="frontmatter.keys.project"
             v-bind:keyCompany="frontmatter.keys.company"
             v-bind:nda="frontmatter.nda"
@@ -40,7 +40,7 @@
             v-bind:year="frontmatter.year"
             v-bind:subtitle="frontmatter.subtitle" />
 
-        <Content v-else />
+        <Content v-else id="general" />
 
     </main>
 

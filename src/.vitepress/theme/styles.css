@@ -28,10 +28,6 @@
   .widthConstrained, .container { width: var(--content-width-max); }
 }
 
-/* main > section {
-  margin: 12rem 0;
-} */
-
 html {
   background-color: var(--color-background-light);
   font-family: var(--font-raleway-family);
@@ -63,26 +59,8 @@ a {
   cursor: pointer;
   font-weight: 300;
 }
+
 a:hover { text-decoration: underline; }
-
-h1 {
-  font-size: 2.4rem;
-  font-weight: 100;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 1em 0;
-}
-
-h2 {
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  font-weight: 300;
-  text-align: center;
-  margin-bottom: 5rem;
-  letter-spacing: 0.1em;
-  &::before { margin: 6rem auto 1rem auto; }
-}
 
 .divider::before {
   content: '';
@@ -93,9 +71,33 @@ h2 {
   box-shadow: inset 0 4px 0 0 #c9d0d9;
 }
 
+/* **************** */
+/* *** headings *** */
+/* **************** */
+
+h1, h2, h3 {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 100;
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin: 1em 0;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 5rem;
+  letter-spacing: 0.1em;
+  &::before { margin: 6rem auto 1rem auto; }
+}
+
 h3 {
   font-weight: 600;
-  text-transform: uppercase;
   margin: 3rem 0 0.5rem 0;
   line-height: 1.5rem;
   &:first-child { margin-top: 0; }
@@ -106,6 +108,78 @@ h4 {
   margin-top: 1.5rem;
   &:first-child { margin-top: 0; }
   & + * { margin-top: 0; }
+}
+
+/* ************************ */
+/* *** markdown content *** */
+/* ************************ */
+
+.md {
+
+  /* images */
+  img { width: 100%; }
+
+  /* paragraphs */
+  p { margin: 1.3rem 0; }
+
+  /* italics */
+  em { font-style: italic; }
+
+  /* bold */
+  strong { font-weight: bold; }
+
+  /* ordered lists */
+  ol { margin-left: 1.8rem; }
+
+  /* list items */
+  li { margin: 1.3rem 0; }
+
+  /* heading 2 */
+  h2 {
+    text-align: left;
+    margin: 3rem 0 0 0;
+    line-height: 1.5em;
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
+
+  h2:first-child { margin-top: 0; }
+
+  /* dividers */
+  hr {
+    border-top: solid 1px #c9d0d9;
+    width: 70%;
+    margin: 2rem auto;
+  }
+
+  /* quotes */
+  blockquote {
+    font-style: italic;
+    font-weight: 300;
+    margin: 2rem 0;
+    padding: 0.5rem 2rem;
+    border-left: solid 2px var(--color-background-dark);
+  }
+
+  blockquote p { margin: 0; }
+
+  /* images with subtext  */
+  figure {
+    margin: 3rem 0;
+
+    img {
+      width: inherit;
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    figcaption {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.8rem;
+    }
+  }
 }
 
 /* @import "styles/_portfolio"; */
