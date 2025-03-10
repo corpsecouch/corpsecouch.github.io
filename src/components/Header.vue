@@ -17,7 +17,7 @@
   }
 </script>
 
-<style module lang="scss">
+<style module lang="css">
   .header {
     z-index: var(--z-menu);
     width: 100%;
@@ -51,8 +51,7 @@
       letter-spacing: normal;
       font-size: 1.4rem;
     }
-    a:hover {
-      text-decoration:none;
-    }
+
+    a:hover { text-decoration:none; }
   }
 </style>

@@ -4,6 +4,9 @@
 </template>
 
 <script>
+
+  // TODO: can this be deleted?
+
   export default {
     name: 'Subpage'
   }

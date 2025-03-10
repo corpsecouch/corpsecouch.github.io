@@ -29,7 +29,7 @@
   .articles {
     list-style: none;
     margin: 0;
-
-    .article + .article { margin-top: 1rem; }
   }
+
+  .article + .article { margin-top: 1rem; }
 </style>

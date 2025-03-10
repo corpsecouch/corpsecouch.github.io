@@ -28,7 +28,6 @@
 </template>
 
 <script>
-  // import SVGAwardOriginal from '@components/SVGAwardOriginal';
   import SVGAwardOriginal from './SVGAwardOriginal.vue';
 
   export default {

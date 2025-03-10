@@ -15,7 +15,7 @@
   }
 </script>
 
-<style module lang="scss">
+<style module lang="css">
   .nda {
     background-color: var(--color-background-dark);
     border-radius: 8px;

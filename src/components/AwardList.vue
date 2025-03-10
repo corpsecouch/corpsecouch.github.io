@@ -12,19 +12,14 @@
 </template>
 
 <script>
-  // import AwardItem from '@components/AwardItem';
   import AwardItem from './AwardItem.vue'
 
   export default {
     name: 'AwardList',
 
-    components: {
-      AwardItem
-    },
+    components: { AwardItem },
 
-    props: [
-      'data'
-    ]
+    props: [ 'data' ]
   }
 </script>
 
@@ -32,7 +27,7 @@
   .awards {
     list-style: none;
     margin: 0;
-
-    .award + .award { margin-top: 1rem; }
   }
+
+  .award + .award { margin-top: 1rem; }
 </style>

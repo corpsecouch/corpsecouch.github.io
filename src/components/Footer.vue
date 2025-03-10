@@ -38,7 +38,6 @@
     flex-flow: row wrap;
     justify-content: center;
     column-gap: 1.4rem;
-    /* a { color: var(--color-text-dark); } */
   }
 
   .copyright {

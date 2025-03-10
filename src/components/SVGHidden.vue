@@ -13,13 +13,12 @@
 </template>
 
 <script>
-
   export default {
     name: 'SVGHidden'
   }
 </script>
 
-<style module lang="scss">
+<style module lang="css">
   .svg {
     fill: var(--color-lighttext);
     width: 100%;
