@@ -42,16 +42,16 @@
   .name {
     flex-grow: 1;
     min-width: 30%;
-
-    a {
-      text-decoration: none;
-      display: inline-block;
-      font-family: 'Mainstay';
-      transform: rotate(-18deg);
-      letter-spacing: normal;
-      font-size: 1.4rem;
-    }
-
-    a:hover { text-decoration:none; }
   }
+
+  .name a {
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Mainstay';
+    transform: rotate(-18deg);
+    letter-spacing: normal;
+    font-size: 1.4rem;
+  }
+
+  .name a:hover { text-decoration:none; }
 </style>

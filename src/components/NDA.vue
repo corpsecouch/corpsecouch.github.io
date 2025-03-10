@@ -25,27 +25,28 @@
     padding: 1rem 1.5rem;
     margin: 6rem;
     text-align: left;
+  }
 
-    /* max-width: xsmall screen */
-    @media all and (max-width: 600px) {
+  .nda .icon {
+    width: 2.5rem;
+    display: flex;
+  }
+
+  .nda p {
+    color: var(--color-lighttext);
+    margin: 0;
+  }
+
+  /* max-width: xsmall screen */
+  @media all and (max-width: 600px) {
+    .nda {
       display: block;
       margin: 3rem 0;
     }
 
-    .icon {
-      width: 2.5rem;
-      display: flex;
-
-      /* max-width: xsmall screen */
-      @media all and (max-width: 600px) {
-        margin: auto;
-        padding-bottom: 1rem;
-      }
-    }
-
-    p {
-      color: var(--color-lighttext);
-      margin: 0;
+    .nda .icon {
+      margin: auto;
+      padding-bottom: 1rem;
     }
   }
 </style>
