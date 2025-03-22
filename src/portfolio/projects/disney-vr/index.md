@@ -15,6 +15,7 @@ tags: ['vr design', 'creative direction', 'r&d']
 preview:
     title:          'Filmmaking for Virtual Reality'
     description:    'Leading the VR conversation.'
+    sizzle: 'Showcasing VR capabilities and toolsets for filmmakers with a multi-platform VR experience featuring an end-to-end product experience across physical assets, mobile, and web.'
 ---
 
 The challenge was to educate and inspire A-list filmmakers and studio executives on the potential of VR and how it could be used to tell theatrical-level stories.

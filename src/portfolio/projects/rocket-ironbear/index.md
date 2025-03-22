@@ -15,6 +15,7 @@ tags: ['artificial intelligence', 'conversational ai', 'leadership', 'personaliz
 preview:
     title:          'Conversational Lead Funnel'
     description:    'Overhauling the mortgage top-of-funnel with conversational AI.'
+    sizzle: 'Rethinking the lead form to include AI, chat, and personalization. Significantly improving the experience and directly increasing lead conversion and revenue.'
 ---
 
 Every Rocket Mortgage client starts in the same place, filling out one of two digital lead forms then talking with a mortgage banker. The primary lead form, however, ends at a frustrating dead end while the client unexpectedly receives a phone call. The hypothesis is this experience was the primary driver for low top-of-funnel success rates. The challenge was to **measurably improve the lead form experience without negatively impacting lead flow**.
