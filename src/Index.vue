@@ -7,7 +7,17 @@
   <section id="intro">
     <!-- <p>Award-winning design leader, technologist, inventor, and founder. Passionate about the intersection of people &amp; technology, design-driven innovation, and the creative application of emerging technology.</p> -->
     <p>I’m an award-winning design and technology leader with nearly two decades of experience driving innovation at world-renowned companies like Disney, Amazon, and Rocket Companies. As a passionate technologist and inventor, I specialize in crafting visionary strategies that merge emerging technologies with human-centered design to solve complex challenges and create impactful solutions.</p>
-    <p>I'm currently open to new work: <Email></Email></p>
+    <!-- <p>I'm currently open to new work: <Email></Email></p> -->
+  </section>
+
+  <section class="hello half-margin">
+    <div>
+      <p class="text-large">I'm available for new work.</p>
+      <p>Let's do something amazing together.</p>
+    </div>
+    <div class="email-me">
+      <a href="hello@jasonbejot.com">Email Me</a>
+    </div>
   </section>
 
   <section id="experience">
@@ -115,6 +125,16 @@
         </div>
       </li>
     </ul>
+  </section>
+
+  <section class="hello">
+    <div>
+      <p class="text-large">I'm available for new work.</p>
+      <p>Let's do something amazing together.</p>
+    </div>
+    <div class="email-me">
+      <a href="hello@jasonbejot.com">Email Me</a>
+    </div>
   </section>
 
   <!-- <section id="offerings">
@@ -262,15 +282,40 @@
 </script>
 
 <style scoped lang="scss">
+  .hello {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 4rem;
+    text-align: right;
+
+    .email-me {
+      border: dashed 1px var(--color-link);
+      border-radius: 100%;
+      padding: 5px;
+
+      a {
+        border: solid 1px var(--color-link);
+        border-radius: 100%;
+        aspect-ratio: 1 / 1;
+        padding: 1rem;
+        display: block;
+        align-content: center;
+
+        &:hover {
+          background-color: var(--color-link);
+          color: var(--color-text-light);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
   #case-studies, #projects {
     display: flex;
     flex-flow: column nowrap;
     row-gap: 7rem;
-
-    // p {
-    //   font-weight: 200;
-    //   font-size: 0.9rem;
-    // }
 
     ul {
       list-style: none;
@@ -419,6 +464,7 @@
     margin: 0;
     // & + section { margin-top: 7rem; }
     & + section { margin-top: 14rem; }
+    &.half-margin { margin-top: 7rem; }
   }
 
   p + ul { margin-top: 1.3rem; }
