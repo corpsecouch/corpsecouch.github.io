@@ -17,7 +17,7 @@ tags: ['mobile design', 'voice design', 'multi-modal design', 'AI design', 'conv
 preview:
     title:          'Alexa Profile'
     description:    'The heart of personalization.'
-    sizzle: 'Ushering in voice assistant personalization with the launch of the Alexa Profile. A paradigm shift for the industry and the first person-level profile across Amazon and landscape of voice assistants.'
+    sizzle: 'Ushering in voice assistant personalization with the launch of the Alexa Profile. A paradigm shift for the industry and the first person-level profile across Amazon and the landscape of voice assistants.'
 ---
 
 Alexa customers needed a way to manage what Alexa knows about them as an individual – their biometrics, preference, privacy and security settings, etc.

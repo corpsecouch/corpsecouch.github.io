@@ -10,17 +10,7 @@
     <!-- <p>I'm currently open to new work: <Email></Email></p> -->
   </section>
 
-  <section class="hello half-margin">
-    <div>
-      <p class="text-large">I'm available for new work.</p>
-      <p>Let's do something amazing together.</p>
-    </div>
-    <div class="email-me">
-      <a href="hello@jasonbejot.com">Email Me</a>
-    </div>
-  </section>
-
-  <section id="experience">
+  <section id="experience" class="half-margin">
     <ul>
       <li><img src="/assets/logo-amazon.png" title="Amazon"></li>
       <li><img src="/assets/logo-disney.png" title="Disney"></li>
@@ -35,6 +25,16 @@
       <li><img src="/assets/logo-saic.png" title="SAIC"></li>
       <li><img src="/assets/logo-usace.png" title="USACE"></li>
     </ul>
+  </section>
+
+  <section class="hello half-margin">
+    <div>
+      <p class="text-large">I'm available for new work.</p>
+      <p>Let's do something amazing together.</p>
+    </div>
+    <div class="email-me">
+      <a href="mailto:hello@jasonbejot.com">Email Me</a>
+    </div>
   </section>
 
   <!-- <section id="projects">
@@ -92,17 +92,6 @@
     </ul>
   </section>
 
-  <section id="metrics">
-    <span class="number">3</span>
-    <span class="label text-small">patents</span>
-    <span class="number">15</span>
-    <span class="label text-small">awards</span>
-    <span class="number">39</span>
-    <span class="label text-small">articles</span>
-    <span class="number">100+</span>
-    <span class="label text-small">products</span>
-  </section>
-
   <section class="quotes">
     <div class="quote">
       <span class="verbatim">Jason is an incredible talent. Any company would be lucky to have him.</span>
@@ -127,14 +116,25 @@
     </ul>
   </section>
 
-  <section class="hello">
+  <section class="hello half-margin">
     <div>
       <p class="text-large">I'm available for new work.</p>
-      <p>Let's do something amazing together.</p>
+      <p>There's no telling what we could accomplish together.</p>
     </div>
     <div class="email-me">
-      <a href="hello@jasonbejot.com">Email Me</a>
+      <a href="mailto:hello@jasonbejot.com">Email Me</a>
     </div>
+  </section>
+
+  <section id="metrics">
+    <span class="number">3</span>
+    <span class="label text-small">patents</span>
+    <span class="number">15</span>
+    <span class="label text-small">awards</span>
+    <span class="number">39</span>
+    <span class="label text-small">articles</span>
+    <span class="number">100+</span>
+    <span class="label text-small">products</span>
   </section>
 
   <!-- <section id="offerings">
@@ -182,11 +182,11 @@
     <p><a class="more-link" href="/press/" alt="See all the articles">See all the articles</a></p>
   </section> -->
 
-  <section id="mentorship">
+  <!-- <section id="mentorship">
     <h2>Mentorship</h2>
     <section style="height: 598px; box-shadow: rgba(142, 151, 158, 0.15) 0px 4px 19px 0px; border-radius: 12px; overflow: hidden; width: 100%;"><iframe src="https://adplist.org/widgets/booking?src=jason-bejot" title="Mentorship Session" width="100%" height="100%" loading="lazy" style="border: 0px;"></iframe></section>
     <section style="padding: 16px; height: 496px; box-shadow: rgba(142, 151, 158, 0.15) 0px 4px 19px 0px; border-radius: 12px; overflow: hidden; width: 100%;"><iframe src="https://adplist.org/widgets/reviews?src=jason-bejot" title="All Reviews" width="100%" height="100%" loading="lazy" style="border: 0px;"></iframe></section>
-  </section>
+  </section> -->
 
   <section id="contact">
     <!-- https://www.ionos.com/digitalguide/e-mail/e-mail-security/protecting-your-email-address-how-to-do-it/ -->
@@ -282,6 +282,11 @@
 </script>
 
 <style scoped lang="scss">
+
+  /* ************************** */
+  /* *** say hello sections *** */
+  /* ************************** */
+
   .hello {
     display: flex;
     flex-flow: row nowrap;
@@ -289,6 +294,16 @@
     align-items: center;
     column-gap: 4rem;
     text-align: right;
+    row-gap: 1rem;
+
+    @media all and (max-width: 680px) {
+      & {
+        flex-flow: column nowrap;
+        text-align: center;
+      }
+    }
+
+    p { margin: 0 }
 
     .email-me {
       border: dashed 1px var(--color-link);
@@ -311,6 +326,10 @@
       }
     }
   }
+
+  /* ************************* */
+  /* *** projects sections *** */
+  /* ************************* */
 
   #case-studies, #projects {
     display: flex;
@@ -382,6 +401,10 @@
     }
   }
 
+  /* ********************** */
+  /* *** quote sections *** */
+  /* ********************** */
+
   .quotes {
     display: flex;
     flex-flow: column nowrap;
@@ -411,6 +434,10 @@
     .name { margin-bottom: 0.5rem; }
   }
 
+  /* *********************** */
+  /* *** metrics section *** */
+  /* *********************** */
+
   #metrics {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -422,7 +449,26 @@
     .number { font-size: 5rem; }
 
     span:nth-of-type(even) { grid-row-start: 2; }
+
+    @media all and (max-width: 680px) {
+      & {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        align-items: center;
+      }
+
+      span:nth-of-type(odd) { text-align: right; }
+
+      span:nth-of-type(even) {
+        grid-row-start: auto;
+        text-align: left;
+      }
+    }
   }
+
+  /* ***************** */
+  /* *** logo wall *** */
+  /* ***************** */
 
   #experience {
     ul {
