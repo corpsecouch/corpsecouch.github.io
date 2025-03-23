@@ -121,6 +121,17 @@ h4:first-child { margin-top: 0; }
 
 h4 + * { margin-top: 0; }
 
+
+.text-small {
+  font-size: var(--text-small-font-size);
+  font-weight: var(--text-small-font-weight);
+}
+
+.text-large {
+  font-size: var(--text-large-font-size);
+  font-weight: var(--text-large-font-weight);
+}
+
 /* ************************ */
 /* *** markdown content *** */
 /* ************************ */

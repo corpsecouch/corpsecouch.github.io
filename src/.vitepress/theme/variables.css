@@ -26,6 +26,12 @@
   /* --screen-large-max-width: var(--screen-width-max); */
   /* --screen-large-max-width: 910px; */
 
+
+  --text-small-font-size: 0.9rem;
+  --text-small-font-weight: 200;
+  --text-large-font-size: 1.2rem;
+  --text-large-font-weight: 400;
+
   --font-raleway-family: 'Raleway', sans-serif;
   --font-raleway-regular: 400;
 

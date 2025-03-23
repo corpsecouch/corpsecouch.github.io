@@ -7,7 +7,6 @@
   <section id="intro">
     <!-- <p>Award-winning design leader, technologist, inventor, and founder. Passionate about the intersection of people &amp; technology, design-driven innovation, and the creative application of emerging technology.</p> -->
     <p>I’m an award-winning design and technology leader with nearly two decades of experience driving innovation at world-renowned companies like Disney, Amazon, and Rocket Companies. As a passionate technologist and inventor, I specialize in crafting visionary strategies that merge emerging technologies with human-centered design to solve complex challenges and create impactful solutions.</p>
-    <p>From leading groundbreaking AI initiatives to designing enterprise systems that redefine workflows, my work consistently focuses on delivering value through thoughtful innovation. Whether you’re looking to transform your business with cutting-edge technology or explore new creative possibilities, I’m here to help you navigate the intersection of people, design, and technology.</p>
     <p>I'm currently open to new work: <Email></Email></p>
   </section>
 
@@ -35,24 +34,25 @@
     <p>Dive into some of these projects on my <a href="/portfolio/">portfolio</a>.</p>
   </section> -->
 
-  <section id="quotes">
+  <section class="quotes">
     <div class="quote">
-      <span class="verbatim">"Jason is a visionary leader"</span>
-      <span class="name">Brooke K.</span>
-      <span class="title">Head of Design @ Venmo</span>
+      <span class="verbatim">Jason is a visionary leader</span>
+      <span class="name text-small">Brooke K.</span>
+      <span class="title text-small">Head of Design @ Venmo</span>
     </div>
   </section>
 
   <section id="projects">
+    <p>From leading groundbreaking AI initiatives to designing enterprise systems that redefine workflows, my work consistently focuses on delivering value through thoughtful innovation. Whether you’re looking to transform your business with cutting-edge technology or explore new creative possibilities, I’m here to help you navigate the intersection of people, design, and technology.</p>
     <ul>
       <li>
         <div class="image">
           <img src="/portfolio/rocket-vision/sizzle.png">
         </div>
         <div class="desc">
-          <span class="title">Revolutionizing the Home Buying Journey</span>
+          <span class="title text-large">Revolutionizing the Home Buying Journey</span>
           <span class="company">Rocket Companies</span>
-          <span class="text">Buying a home is complex, difficult to understand, and involves a lot of people. I established Rocket Mortgage's vision to revolutionize the entire home buying journey &mdash; from getting rates, to closing, and beyond. Powered with AI, it decomplexifies the process and sets every homebuyer up for success.</span>
+          <span class="text text-small">Buying a home is complex, difficult to understand, and involves a lot of people. I established Rocket Mortgage's vision to revolutionize the entire home buying journey &mdash; from getting rates, to closing, and beyond. Powered with AI, it decomplexifies the process and sets every homebuyer up for success.</span>
         </div>
       </li>
 
@@ -61,10 +61,10 @@
           <img src="/portfolio/amazon-personalization/sizzle.png">
         </div>
         <div class="desc">
-          <span class="title">Personalizing Alexa</span>
+          <span class="title text-large">Personalizing Alexa</span>
           <span class="company">Amazon</span>
-          <span class="text">Everyone expects a voice assistant to be personal and I literally wrote the book on how to achieve that at scale &mdash; from technical components, guidelines, patterns, and best practices. Since 2019, every personalized Alexa experience has been influenced by my work.</span>
-          <a href="/portfolio/amazon-personalization/">Read the case study</a>
+          <span class="text text-small">Everyone expects a voice assistant to be personal and I literally wrote the book on how to achieve that at scale &mdash; from technical components, guidelines, patterns, and best practices. Since 2019, every personalized Alexa experience has been influenced by my work.</span>
+          <a class="text-small" href="/portfolio/amazon-personalization/">Read the case study</a>
         </div>
       </li>
 
@@ -73,10 +73,10 @@
           <img src="/portfolio/amazon-alexa-cortana/sizzle.png">
         </div>
         <div class="desc">
-          <span class="title">Pioneering AI Interoperability</span>
+          <span class="title text-large">Pioneering AI Interoperability</span>
           <span class="company">Amazon</span>
-          <span class="text">Getting Alexa with Cortana to work together was no small feat. The bigger feat was shaping Amazon's vision on how to seamlessly connect all the voice assistants.</span>
-          <a href="/portfolio/amazon-alexa-cortana">Read the case study</a>
+          <span class="text text-small">Getting Alexa with Cortana to work together was no small feat. The bigger feat was shaping Amazon's vision on how to seamlessly connect all the voice assistants.</span>
+          <a class="text-small" href="/portfolio/amazon-alexa-cortana">Read the case study</a>
         </div>
       </li>
     </ul>
@@ -84,13 +84,21 @@
 
   <section id="metrics">
     <span class="number">3</span>
-    <span class="label">patents</span>
+    <span class="label text-small">patents</span>
     <span class="number">15</span>
-    <span class="label">awards</span>
+    <span class="label text-small">awards</span>
     <span class="number">39</span>
-    <span class="label">articles</span>
+    <span class="label text-small">articles</span>
     <span class="number">100+</span>
-    <span class="label">products</span>
+    <span class="label text-small">products</span>
+  </section>
+
+  <section class="quotes">
+    <div class="quote">
+      <span class="verbatim">Jason is an incredible talent. Any company would be lucky to have him.</span>
+      <span class="name text-small">Jenn S.</span>
+      <span class="title text-small">Chief Experience Officer @ Rocket Companies</span>
+    </div>
   </section>
 
   <section id="case-studies">
@@ -100,10 +108,10 @@
           <img :src="p.frontmatter.hero.image">
         </div>
         <div class="desc">
-          <span class="title">{{ p.frontmatter.preview.title }}</span>
+          <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
           <span class="company">{{ getCompany(p.frontmatter.keys.company) }}</span>
-          <span class="text">{{ p.frontmatter.preview.sizzle }}</span>
-          <a :href="p.url">Read the case study</a>
+          <span class="text text-small">{{ p.frontmatter.preview.sizzle }}</span>
+          <a class="text-small" :href="p.url">Read the case study</a>
         </div>
       </li>
     </ul>
@@ -255,6 +263,14 @@
 
 <style scoped lang="scss">
   #case-studies, #projects {
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 7rem;
+
+    // p {
+    //   font-weight: 200;
+    //   font-size: 0.9rem;
+    // }
 
     ul {
       list-style: none;
@@ -302,88 +318,65 @@
           }
         }
 
-        .title {
-          // color: var(--color-link);
-          font-size: 1.2rem;
-          font-weight: 400;
+        /* max-width: small screen */
+        @media all and (max-width: 680px) {
+          & {
+            display: flex;
+            flex-flow: column nowrap;
+            row-gap: 1rem;
+            column-gap: 0;
+          }
 
-          // &:hover { text-decoration: underline; }
+          .desc {
+              text-align: left;
+          }
         }
 
-        .text, a {
-          font-size: 0.9rem;
-          font-weight: 200;
-        }
-
-        // &:hover {
-        //   background-color: rgba(0, 0, 0, 0.04);
-        //   transition: all 0.4s;
-        // }
-
-        img {
-          width: 100%;
-          // padding: 1rem;
-        }
-      }
-    }
-
-    /* max-width: small screen */
-    @media all and (max-width: 680px) {
-      ul {
-        display: flex;
-        flex-flow: column nowrap;
+        img { width: 100%; }
       }
     }
   }
 
-  #quotes {
+  .quotes {
     display: flex;
     flex-flow: column nowrap;
+    row-gap: 7rem;
+    align-items: center;
 
     .quote {
-      align-self: center;
       display: flex;
       flex-flow: column nowrap;
-      align-items: end;
+      text-align: center;
+      width: 35rem;
+      max-width: 100%;
     }
 
     .verbatim {
       font-size: 1.9rem;
       font-weight: 300;
       margin-bottom: 1.4rem;
+      line-height: 2.6rem;
+
+      &::before, &::after {
+        content: '"';
+        font-size: 2rem;
+      }
     }
 
-    .name, .title {
-      font-weight: 200;
-      font-size: 0.9rem;
-    }
-
-    .name {
-      margin-bottom: 0.5rem;
-    }
+    .name { margin-bottom: 0.5rem; }
   }
 
   #metrics {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto 1fr;
-    // justify-items: center;
     text-align: center;
     row-gap: 1rem;
     column-gap: 1rem;
 
-    .number {
-      font-size: 5rem;
-    }
+    .number { font-size: 5rem; }
 
-    .label {
-      font-weight: 200;
-      font-size: 0.9rem;
-    }
-
-    span:nth-of-type(even) {
-      grid-row-start: 2;
-    }
+    span:nth-of-type(even) { grid-row-start: 2; }
   }
 
   #experience {
