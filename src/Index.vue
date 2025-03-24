@@ -154,21 +154,21 @@
     <p><a class="more-link" href="/awards/" alt="See all my awards">See all my awards</a></p>
   </section> -->
 
-  <section id="about">
-    <h2>Bio</h2>
+  <!-- <section id="about"> -->
+    <!-- <h2>Bio</h2> -->
     <!--<p>I'm an experience design and product leader with a background in computer science, innovation, and entreprenuership with 19 years of professional leadership experience envisioning the future, crafting strategies, and delivering experiences.</p>-->
-    <p>I'm an executive-level tech innovator with 19 years of professional experience, having worked at Disney, Amazon, and Rocket Companies, and more.</p>
+    <!-- <p>I'm an executive-level tech innovator with 19 years of professional experience, having worked at Disney, Amazon, and Rocket Companies, and more.</p> -->
     
-    <p>Growing up on a large family farm, I filled my days with immersive storytelling playing RPGs and running D&amp;D campaigns. Once I was in college, I realized I had a talent for understanding how people expected things to work, which led me to gravitate toward HCI.</p>
+    <!-- <p>Growing up on a large family farm, I filled my days with immersive storytelling playing RPGs and running D&amp;D campaigns. Once I was in college, I realized I had a talent for understanding how people expected things to work, which led me to gravitate toward HCI.</p> -->
 
-    <p>After spending a few years as an engineering lead I made the switch to experience design. I found a real talent for invention and innovation combining my technical background with the focus on the human experience. As a result I've been elected to innovation councils, received patents and awards, launched innovation programs, and worked directly with C-suite executives at Fortune 500 companies on strategic projects.</p>
+    <!-- <p>After spending a few years as an engineering lead I made the switch to experience design. I found a real talent for invention and innovation combining my technical background with the focus on the human experience. As a result I've been elected to innovation councils, received patents and awards, launched innovation programs, and worked directly with C-suite executives at Fortune 500 companies on strategic projects.</p> -->
 
-    <img src="/assets/photos/guitar.jpg">
+    <!-- <img src="/assets/photos/guitar.jpg"> -->
 
-    <p>At some point I became a musician, playing spacey guitar riffs in The Answer Team. We were based out of Omaha, Nebraska and, when we were active, we toured and recorded two albums. You can check out The Answer Team's music on <a href="https://open.spotify.com/artist/3mMaoKi4PaOLhYFdAknELD?si=mci-mk0ASMiM1bro9ey0NA" target="_blank">Spotify</a>.</p>
+    <!-- <p>At some point I became a musician, playing spacey guitar riffs in The Answer Team. We were based out of Omaha, Nebraska and, when we were active, we toured and recorded two albums. You can check out The Answer Team's music on <a href="https://open.spotify.com/artist/3mMaoKi4PaOLhYFdAknELD?si=mci-mk0ASMiM1bro9ey0NA" target="_blank">Spotify</a>.</p> -->
 
-    <p>I currently live in Atlanta with my partner, <a href="https://www.ktmcbratney.com/" target="_blank">Kt McBratney</a>, and kiddo.</p>
-  </section>
+    <!-- <p>I currently live in Atlanta with my partner, <a href="https://www.ktmcbratney.com/" target="_blank">Kt McBratney</a>, and kiddo.</p> -->
+  <!-- </section> -->
 
   <!-- <section id="skills">
     <h2>Skills</h2>
@@ -188,8 +188,7 @@
     <section style="padding: 16px; height: 496px; box-shadow: rgba(142, 151, 158, 0.15) 0px 4px 19px 0px; border-radius: 12px; overflow: hidden; width: 100%;"><iframe src="https://adplist.org/widgets/reviews?src=jason-bejot" title="All Reviews" width="100%" height="100%" loading="lazy" style="border: 0px;"></iframe></section>
   </section> -->
 
-  <section id="contact">
-    <!-- https://www.ionos.com/digitalguide/e-mail/e-mail-security/protecting-your-email-address-how-to-do-it/ -->
+  <!-- <section id="contact">
     <div class="columns">
       <div class="left">
         <h2>Contact<br />Me</h2>
@@ -205,19 +204,19 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 </template>
 
 <script>
   // https://www.bestfolios.com/portfolio/dougseidman
 
-  import Email from '@components/Email';
-  import SVGTwitter from '@components/SVGTwitter';
-  import SVGMedium from '@components/SVGMedium';
-  import SVGLinkedIn from '@components/SVGLinkedIn';
-  import SVGEmail from '@components/SVGEmail';
-  import SVGADPList from '@components/SVGADPList';
-  import SVGGithub from '@components/SVGGithub';
+  // import Email from '@components/Email';
+  // import SVGTwitter from '@components/SVGTwitter';
+  // import SVGMedium from '@components/SVGMedium';
+  // import SVGLinkedIn from '@components/SVGLinkedIn';
+  // import SVGEmail from '@components/SVGEmail';
+  // import SVGADPList from '@components/SVGADPList';
+  // import SVGGithub from '@components/SVGGithub';
   import AwardList from '@components/AwardList';
   import { data as awardsData } from '@awards/awards.data';
   import NewsList from '@components/NewsList';
@@ -232,13 +231,13 @@
     name: 'Index',
 
     components: {
-      Email,
-      SVGTwitter,
-      SVGMedium,
-      SVGLinkedIn,
-      SVGEmail,
-      SVGADPList,
-      SVGGithub,
+      // Email,
+      // SVGTwitter,
+      // SVGMedium,
+      // SVGLinkedIn,
+      // SVGEmail,
+      // SVGADPList,
+      // SVGGithub,
       AwardList,
       NewsList
     },
@@ -515,6 +514,8 @@
 
   p + ul { margin-top: 1.3rem; }
 
+
+  // TODO: can i delete this? contact section was using it
   .columns {
     display: grid;
     grid-auto-rows: 1fr;
