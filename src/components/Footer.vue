@@ -9,7 +9,6 @@
           <a href="/articles/" alt="Articles">Articles</a>
           <a href="/awards/" alt="Awards">Awards</a>
           <a href="/press/" alt="Press">Press</a>
-          <!-- <a href="/#contact" alt="Contact">Contact</a> -->
         </div>
       </div>
 
@@ -24,11 +23,11 @@
         <span><a class="github" href="https://github.com/corpsecouch" title="Github" target="_blank">Github</a></span>
       </div>
 
-      <div :class="$style.contacts">
+      <div id="contact" :class="$style.contacts">
         <p>Contact Me</p>
         <!-- <span><Email class="email"><template v-slot:icon><SVGEmail /></template></Email></span> -->
-        <span><a clas="email" href="mailto:jasonbejot@gmail.com">Email Me</a></span>
-        <span><a clas="schedule" href="mailto:jasonbejot@gmail.com">Book A Meeting</a></span>
+        <span><a class="email" href="mailto:hello@jasonbejot.com" title="Email Me">Email Me</a></span>
+        <span><a class="schedule" href="https://cal.com/jasonbejot" title="Book A Meeting" target="_blank">Book A Meeting</a></span>
       </div>
 
     </div>
@@ -75,7 +74,6 @@
 <style module lang="css">
   .footer {
     width: 100%;
-    /* display: block; */
     display: flex;
     flex-flow: column nowrap;
     row-gap: 7rem;
@@ -84,10 +82,6 @@
     margin-top: 14rem;
     background-color: var(--color-background-dark);
     color: var(--color-text-light);
-    /* text-align: center; */
-    /* display: grid; */
-    /* grid-template-columns: 1fr 1fr; */
-    /* grid-template-rows: 1fr auto; */
   }
 
   .bottom {
@@ -104,16 +98,16 @@
     column-gap: 3.5rem;
   }
 
+  @media all and (max-width: 680px) {
+    .links {
+      display: flex;
+      flex-flow: column nowrap;
+      row-gap: 3.5rem;
+    }
+  }
+
   .navs {
-    /* display: flex; */
-    /* flex-flow: column nowrap; */
     row-gap: 1rem;
-    /* grid-column-start: 1; */
-    /* align-items: end; */
-
-    /* justify-content: center; */
-    /* column-gap: 1.4rem; */
-
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -132,6 +126,13 @@
   .socials {
     grid-row-end: span 2;
     align-items: end;
+  }
+
+  @media all and (max-width: 680px) {
+    .socials {
+      align-items: normal;
+      order: 2;
+    }
   }
 
   .contacts a, .socials a {
