@@ -149,6 +149,10 @@
         <p class="text-small">A vision is more than just few words in a deck, it's a story of the future you want to make real. It determines what you work backwards from, guiding every decision. Whether it's a product, line of business, or for your company <strong>I can help define your vision</strong>.</p>
       </li>
       <li>
+        <p class="text-large">Going 0-to-1</p>
+        <p class="text-small">Getting off the ground is sometimes the hardest step. Having launched 100's of products and led multiple R&amp;D initiatives, <strong>I can help you quickly launch, learn, and iterate</strong> your next project.</p>
+      </li>
+      <li>
         <p class="text-large">Conversational AI</p>
         <p class="text-small">LLM's are like a lump of clay, they need to be molded into shape so they can offer durable, measurable value. As a recognized conversational AI expert <strong>I can help create innovative conversational experiences</strong>.</p>
       </li>
@@ -159,6 +163,10 @@
       <li>
         <p class="text-large">Emerging Technologies</p>
         <p class="text-small">New tech is really exciting but few companies know how to effectively experiment with it or derive value. With my proven track record of doing just that, <strong>I can help apply emerging tech to your business</strong>.</p>
+      </li>
+      <li>
+        <p class="text-large">Clarity From Ambiguity</p>
+        <p class="text-small">Big problems are hard. Ambiguity is uncomfortable. Are you stuck in endless churn? Maybe you're spending more effort debating than you are shipping. <strong>I can help your business find clarity from ambiguity</strong>.</p>
       </li>
       <li>
         <p class="text-large">And much more</p>
