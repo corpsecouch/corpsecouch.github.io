@@ -15,16 +15,16 @@
       <div :class="$style.socials">
         <p>Where To Find Me</p>
         <span><a class="linkedin" href="https://linkedin.com/in/jasonbejot" title="LinkedIn" target="_blank">LinkedIn</a></span>
+        <span><a class="threads" href="https://www.threads.net/@jasonbejot" title="Threads" target="_blank">Threads</a></span>
         <span><a class="adplist" href="https://adplist.org/mentors/jason-bejot" title="ADPList" target="_blank">ADPList</a></span>
         <span><a class="medium" href="https://medium.com/@jasonbejot" title="Medium" target="_blank">Medium</a></span>
         <span><a class="substack" href="https://substack.com/@jasonbejot" title="Substack" target="_blank">Substack</a></span>
         <!-- <span><a class="twitter" href="https://twitter.com/jasonbejot" title="X (Twitter)" target="_blank"><SVGTwitter />X (Twitter)</a></span> -->
-        <span><a class="threads" href="https://www.threads.net/@jasonbejot" title="Threads" target="_blank">Threads</a></span>
         <span><a class="github" href="https://github.com/corpsecouch" title="Github" target="_blank">Github</a></span>
       </div>
 
       <div id="contact" :class="$style.contacts">
-        <p>Contact Me</p>
+        <p>How To Contact Me</p>
         <!-- <span><Email class="email"><template v-slot:icon><SVGEmail /></template></Email></span> -->
         <span><a class="email" href="mailto:hello@jasonbejot.com" title="Email Me">Email Me</a></span>
         <span><a class="schedule" href="https://cal.com/jasonbejot" title="Book A Meeting" target="_blank">Book A Meeting</a></span>
