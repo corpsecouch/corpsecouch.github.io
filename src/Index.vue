@@ -30,7 +30,7 @@
   <section class="hello half-margin">
     <div>
       <p class="text-large">I'm available for new work.</p>
-      <p>Let's do something amazing together.</p>
+      <p class="text-small">Let's do something amazing together.</p>
     </div>
     <div class="email-me">
       <a href="mailto:hello@jasonbejot.com">Email Me</a>
@@ -119,7 +119,7 @@
   <section class="hello half-margin">
     <div>
       <p class="text-large">I'm available for new work.</p>
-      <p>There's no telling what we could accomplish together.</p>
+      <p class="text-small">There's no telling what we could accomplish together.</p>
     </div>
     <div class="email-me">
       <a href="mailto:hello@jasonbejot.com">Email Me</a>
@@ -137,15 +137,44 @@
     <span class="label text-small">products</span>
   </section>
 
-  <!-- <section id="offerings">
-    <h2>What I can do for you</h2>
+  <section id="offerings">
+    <!-- <h2>What I can do for you</h2> -->
     <ul>
-      <li>Design Practice</li>
-      <li>Conversational AI</li>
-      <li>Visioneering</li>
-      <li>Emerging Technologies</li>
+      <li>
+        <p class="text-large">Evolve Your Design Practice</p>
+        <p class="text-small">Great products don't get remembered for the elegance of their tech stack or the efficiency of their agile ceremonies, they get remembered for how they make people feel. <strong>I can help you build a world-class design practice</strong>.</p>
+      </li>
+      <li>
+        <p class="text-large">Visioneering</p>
+        <p class="text-small">A vision is more than just few words in a deck, it's a story of the future you want to make real. It determines what you work backwards from, guiding every decision. Whether it's a product, line of business, or for your company <strong>I can help define your vision</strong>.</p>
+      </li>
+      <li>
+        <p class="text-large">Conversational AI</p>
+        <p class="text-small">LLM's are like a lump of clay, they need to be molded into shape so they can offer durable, measurable value. As a recognized conversational AI expert <strong>I can help create innovative conversational experiences</strong>.</p>
+      </li>
+      <li>
+        <p class="text-large">Holistic Experiences</p>
+        <p class="text-small">The companies that get repeat business are the ones that design the experience even when someone isn't actively using their app or site. <strong>I can help craft industry-defining holistic user experiences</strong>.</p>
+      </li>
+      <li>
+        <p class="text-large">Emerging Technologies</p>
+        <p class="text-small">New tech is really exciting but few companies know how to effectively experiment with it or derive value. With my proven track record of doing just that, <strong>I can help apply emerging tech to your business</strong>.</p>
+      </li>
+      <li>
+        <p class="text-large">And much more</p>
+      </li>
     </ul>
-  </section> -->
+  </section>
+
+  <section class="hello half-margin">
+    <div>
+      <p class="text-large">I'm available for new work.</p>
+      <p class="text-small">The future is just waiting to be discovered.</p>
+    </div>
+    <div class="email-me">
+      <a href="mailto:hello@jasonbejot.com">Email Me</a>
+    </div>
+  </section>
 
   <!-- <section id="awards">
     <h2>Recognition</h2>
@@ -211,15 +240,10 @@
   // https://www.bestfolios.com/portfolio/dougseidman
 
   // import Email from '@components/Email';
-  // import SVGTwitter from '@components/SVGTwitter';
-  // import SVGMedium from '@components/SVGMedium';
-  // import SVGLinkedIn from '@components/SVGLinkedIn';
-  // import SVGEmail from '@components/SVGEmail';
-  // import SVGADPList from '@components/SVGADPList';
-  // import SVGGithub from '@components/SVGGithub';
-  import AwardList from '@components/AwardList';
+
+  // import AwardList from '@components/AwardList';
   import { data as awardsData } from '@awards/awards.data';
-  import NewsList from '@components/NewsList';
+  // import NewsList from '@components/NewsList';
   import { data as newsData } from '@press/press.data';
 
   import { data as projectData } from '@portfolio/portfolio.data';
@@ -231,15 +255,8 @@
     name: 'Index',
 
     components: {
-      // Email,
-      // SVGTwitter,
-      // SVGMedium,
-      // SVGLinkedIn,
-      // SVGEmail,
-      // SVGADPList,
-      // SVGGithub,
-      AwardList,
-      NewsList
+      // AwardList,
+      // NewsList
     },
 
     data () {
@@ -282,6 +299,64 @@
 
 <style scoped lang="scss">
 
+  /* ***************** */
+  /* *** offerings *** */
+  /* ***************** */
+
+  #offerings ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  @media all and (max-width: 680px) {
+      #offerings ul {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  #offerings li {
+    display: block;
+    margin: 0;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 0.32rem;
+    box-shadow:
+      inset 1px 1px 1px 0 rgb(255, 255, 255),
+      inset -1px -1px 1px 0 rgba(0, 0, 0, .15),
+      .444584px .444584px .628737px -1px rgba(0, 0, 0, .26),
+      1.21072px 1.21072px 1.71222px -1.5px rgba(0, 0, 0, .247),
+      2.6583px 2.6583px 3.75941px -2.25px rgba(0, 0, 0, .23),
+      5.90083px 5.90083px 8.34503px -3px rgba(0, 0, 0, .192),
+      10px 10px 21.2132px -3.75px rgba(0, 0, 0, .056),
+      -.5px -.5px 0 0 rgb(0 0 0 / 5%);
+  }
+
+  #offerings li:last-child {
+    background-color: #aaa;
+    color: var(--color-text-light);
+    box-shadow: 
+      inset 1px 1px 1px #ffffffc2,
+      inset -1px -1px 1px #0000003b,
+      .444584px .444584px .628737px -1px #00000042,
+      1.21072px 1.21072px 1.71222px -1.5px #0000003f,
+      2.6583px 2.6583px 3.75941px -2.25px #0000003b,
+      5.90083px 5.90083px 8.34503px -3px #00000031,
+      10px 10px 21.2132px -3.75px #0000000e,
+      -.5px -.5px #00000012;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-around;
+      align-items: center;
+  }
+
+  #offerings strong {
+    font-weight: 500;
+  }
+
   /* ************************** */
   /* *** say hello sections *** */
   /* ************************** */
@@ -304,29 +379,51 @@
 
     p { margin: 0 }
 
-    .email-me {
-      border: dashed 1px var(--color-link);
-      border-radius: 100%;
-      padding: 5px;
-
-      a {
-        border: solid 1px var(--color-link);
-        border-radius: 100%;
-        aspect-ratio: 1 / 1;
-        padding: 1rem;
-        // display: block;
-        // align-content: center;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-around;
-
-        &:hover {
-          background-color: var(--color-link);
-          color: var(--color-text-light);
-          text-decoration: none;
-        }
-      }
+    .email-me a {
+      display: block;
+      margin: 0;
+      background-color: #f4f4f4;
+      padding: 2rem;
+      color: var(--color-text-dark);
+      border-radius: 0.32rem;
+      box-shadow:
+        inset 1px 1px 1px 0 rgb(255, 255, 255),
+        inset -1px -1px 1px 0 rgba(0, 0, 0, .15),
+        .444584px .444584px .628737px -1px rgba(0, 0, 0, .26),
+        1.21072px 1.21072px 1.71222px -1.5px rgba(0, 0, 0, .247),
+        2.6583px 2.6583px 3.75941px -2.25px rgba(0, 0, 0, .23),
+        5.90083px 5.90083px 8.34503px -3px rgba(0, 0, 0, .192),
+        10px 10px 21.2132px -3.75px rgba(0, 0, 0, .056),
+        -.5px -.5px 0 0 rgb(0 0 0 / 5%);
     }
+
+    .email-me a:hover {
+      text-decoration: none;
+      background-color: #e7e7e7;
+      transition: background-color 0.3s;
+    }
+
+    // .email-me {
+    //   border: dashed 1px var(--color-link);
+    //   border-radius: 100%;
+    //   padding: 5px;
+
+    //   a {
+    //     border: solid 1px var(--color-link);
+    //     border-radius: 100%;
+    //     aspect-ratio: 1 / 1;
+    //     padding: 1rem;
+    //     display: flex;
+    //     flex-flow: column nowrap;
+    //     justify-content: space-around;
+
+    //     &:hover {
+    //       background-color: var(--color-link);
+    //       color: var(--color-text-light);
+    //       text-decoration: none;
+    //     }
+    //   }
+    // }
   }
 
   /* ************************* */
