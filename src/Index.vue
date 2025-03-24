@@ -314,8 +314,11 @@
         border-radius: 100%;
         aspect-ratio: 1 / 1;
         padding: 1rem;
-        display: block;
-        align-content: center;
+        // display: block;
+        // align-content: center;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
 
         &:hover {
           background-color: var(--color-link);
@@ -487,6 +490,7 @@
 
     img {
       max-height: 1.6rem;
+      width: auto;
     }
   }
 
