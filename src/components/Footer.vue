@@ -79,7 +79,7 @@
     row-gap: 7rem;
     padding: 7rem 0;
     font-size: 0.9rem;
-    margin-top: 14rem;
+    margin-top: 7rem;
     background-color: var(--color-background-dark);
     color: var(--color-text-light);
   }

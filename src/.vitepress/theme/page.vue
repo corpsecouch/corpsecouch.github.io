@@ -3,7 +3,7 @@
     <h1 :class="$style.title" v-if="!!$slots.title">
       <slot name="title">Title</slot>
     </h1>
-    <Content />
+    <Content class="md" />
   </div>
 </template>
 
