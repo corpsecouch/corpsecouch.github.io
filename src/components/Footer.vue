@@ -13,21 +13,29 @@
         </div>
       </div>
 
+      <div :class="$style.socials">
+        <p>Where To Find Me</p>
+        <span><a class="linkedin" href="https://linkedin.com/in/jasonbejot" title="LinkedIn" target="_blank">LinkedIn</a></span>
+        <span><a class="adplist" href="https://adplist.org/mentors/jason-bejot" title="ADPList" target="_blank">ADPList</a></span>
+        <span><a class="medium" href="https://medium.com/@jasonbejot" title="Medium" target="_blank">Medium</a></span>
+        <span><a class="substack" href="https://substack.com/@jasonbejot" title="Substack" target="_blank">Substack</a></span>
+        <!-- <span><a class="twitter" href="https://twitter.com/jasonbejot" title="X (Twitter)" target="_blank"><SVGTwitter />X (Twitter)</a></span> -->
+        <span><a class="threads" href="https://www.threads.net/@jasonbejot" title="Threads" target="_blank">Threads</a></span>
+        <span><a class="github" href="https://github.com/corpsecouch" title="Github" target="_blank">Github</a></span>
+      </div>
+
       <div :class="$style.contacts">
         <p>Contact Me</p>
         <!-- <span><Email class="email"><template v-slot:icon><SVGEmail /></template></Email></span> -->
-         <span><a clas="email" href="mailto:jasonbejot@gmail.com">Email</a></span>
-        <span><a class="linkedin" href="https://linkedin.com/in/jasonbejot" title="LinkedIn" target="_blank"><SVGLinkedIn />LinkedIn</a></span>
-        <span><a class="adplist" href="https://adplist.org/mentors/jason-bejot" title="ADPList" target="_blank"><SVGADPList />ADPList</a></span>
-        <span><a class="medium" href="https://medium.com/@jasonbejot" title="Medium" target="_blank"><SVGMedium />Medium</a></span>
-        <span><a class="twitter" href="https://twitter.com/jasonbejot" title="X (Twitter)" target="_blank"><SVGTwitter />X (Twitter)</a></span>
-        <span><a class="github" href="https://github.com/corpsecouch" title="Github" target="_blank"><SVGGithub />Github</a></span>
+        <span><a clas="email" href="mailto:jasonbejot@gmail.com">Email Me</a></span>
+        <span><a clas="schedule" href="mailto:jasonbejot@gmail.com">Book A Meeting</a></span>
       </div>
 
-      <div :class="$style.bottom">
-        <span :class="$style.statement">Built from scratch with care.</span>
-        <span :class="$style.copyright">&copy; Jason Bejot</span>
-      </div>
+    </div>
+
+    <div :class="$style.bottom">
+      <span :class="$style.statement">Built from scratch with care.</span>
+      <span :class="$style.copyright">&copy; Jason Bejot</span>
     </div>
     
     <!-- <div id="contact" :class="$style.contact"> -->
@@ -55,23 +63,11 @@
 
 <script>
   // import Email from '@components/Email';
-  import SVGTwitter from '@components/SVGTwitter';
-  import SVGMedium from '@components/SVGMedium';
-  import SVGLinkedIn from '@components/SVGLinkedIn';
-  import SVGEmail from '@components/SVGEmail';
-  import SVGADPList from '@components/SVGADPList';
-  import SVGGithub from '@components/SVGGithub';
 
   export default {
     name: 'Footer',
     components: {
-      // Email,
-      SVGTwitter,
-      SVGMedium,
-      SVGLinkedIn,
-      SVGEmail,
-      SVGADPList,
-      SVGGithub
+      // Email
     }
   }
 </script>
@@ -79,7 +75,10 @@
 <style module lang="css">
   .footer {
     width: 100%;
-    display: block;
+    /* display: block; */
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 7rem;
     padding: 7rem 0;
     font-size: 0.9rem;
     margin-top: 14rem;
@@ -95,6 +94,7 @@
     display: flex;
     flex-flow: column nowrap;
     row-gap: 1.5rem;
+    text-align: center;
   }
 
   .links {
@@ -122,23 +122,22 @@
     text-transform: uppercase;
   }
 
-  .contacts {
+  .contacts, .socials {
     display: flex;
     flex-flow: column nowrap;
     justify-items: left;
     row-gap: 1rem;
-    align-items: end;
-    grid-row-end: span 2;
   }
 
-  .contacts a {
+  .socials {
+    grid-row-end: span 2;
+    align-items: end;
+  }
+
+  .contacts a, .socials a {
     display: inline-flex;
     flex-flow: row nowrap;
     align-items: center;
     column-gap: 0.6rem;
-  }
-
-  .contacts a * {
-    display: none;
   }
 </style>
