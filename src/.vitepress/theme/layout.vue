@@ -6,7 +6,7 @@
 
         <NotFound v-if="page.isNotFound" id="404" />
 
-        <Page v-else-if="frontmatter.layout === 'home'" id="home" />
+        <Home v-else-if="frontmatter.layout === 'home'" id="home" />
 
         <Page v-else-if="frontmatter.layout === 'page'">
             <template v-slot:title>{{frontmatter.title}}</template>
@@ -59,6 +59,7 @@
     import Article from './article.vue'
     import Application from './application.vue'
     import Portfolio from './portfolio.vue'
+    import Home from './home.vue'
 
     const { page, frontmatter } = useData()
 </script>
