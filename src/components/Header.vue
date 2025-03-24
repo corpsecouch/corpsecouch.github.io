@@ -7,7 +7,7 @@
       <a href="/articles/" alt="Articles">Articles</a>
       <a href="/awards/" alt="Awards">Awards</a>
       <a href="/press/" alt="Press">Press</a>
-      <a href="/#contact" alt="Contact">Contact</a>
+      <a href="#contact" alt="Contact">Contact</a>
     </div>
   </header>
 </template>
