@@ -27,15 +27,9 @@
     </ul>
   </section>
 
-  <section class="hello half-margin">
-    <div>
-      <p class="text-large">I'm available for new work.</p>
-      <p class="text-small">Let's do something amazing together.</p>
-    </div>
-    <div class="email-me">
-      <a href="mailto:hello@jasonbejot.com">Email Me</a>
-    </div>
-  </section>
+  <EmailMe class="half-margin">
+    <template v-slot:bottom>Let's do something amazing together.</template>
+  </EmailMe>
 
   <!-- <section id="projects">
     <h2>Projects</h2>
@@ -116,7 +110,7 @@
     </ul>
   </section>
 
-  <section class="hello half-margin">
+  <!-- <section class="hello half-margin">
     <div>
       <p class="text-large">I'm available for new work.</p>
       <p class="text-small">There's no telling what we could accomplish together.</p>
@@ -124,7 +118,11 @@
     <div class="email-me">
       <a href="mailto:hello@jasonbejot.com">Email Me</a>
     </div>
-  </section>
+  </section> -->
+
+  <EmailMe class="half-margin">
+    <template v-slot:bottom>There's no telling what we could accomplish together.</template>
+  </EmailMe>
 
   <section id="metrics">
     <span class="number">3</span>
@@ -138,7 +136,6 @@
   </section>
 
   <section id="offerings">
-    <!-- <h2>What I can do for you</h2> -->
     <ul>
       <li>
         <p class="text-large">Evolve Your Design Practice</p>
@@ -174,15 +171,9 @@
     </ul>
   </section>
 
-  <section class="hello half-margin">
-    <div>
-      <p class="text-large">I'm available for new work.</p>
-      <p class="text-small">The future is just waiting to be discovered.</p>
-    </div>
-    <div class="email-me">
-      <a href="mailto:hello@jasonbejot.com">Email Me</a>
-    </div>
-  </section>
+  <EmailMe class="half-margin">
+    <template v-slot:bottom>The future is just waiting to be discovered.</template>
+  </EmailMe>
 
   <!-- <section id="awards">
     <h2>Recognition</h2>
@@ -249,11 +240,10 @@
 
   // import Email from '@components/Email';
 
-  // import AwardList from '@components/AwardList';
-  import { data as awardsData } from '@awards/awards.data';
-  // import NewsList from '@components/NewsList';
-  import { data as newsData } from '@press/press.data';
+  import EmailMe from '@components/EmailMe.vue';
 
+  import { data as awardsData } from '@awards/awards.data';
+  import { data as newsData } from '@press/press.data';
   import { data as projectData } from '@portfolio/portfolio.data';
   import { data as companies } from '@globals/companies.data'
 
@@ -263,8 +253,7 @@
     name: 'Index',
 
     components: {
-      // AwardList,
-      // NewsList
+      EmailMe
     },
 
     data () {
@@ -363,75 +352,6 @@
 
   #offerings strong {
     font-weight: 500;
-  }
-
-  /* ************************** */
-  /* *** say hello sections *** */
-  /* ************************** */
-
-  .hello {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    column-gap: 4rem;
-    text-align: right;
-    row-gap: 1rem;
-
-    @media all and (max-width: 680px) {
-      & {
-        flex-flow: column nowrap;
-        text-align: center;
-      }
-    }
-
-    p { margin: 0 }
-
-    .email-me a {
-      display: block;
-      margin: 0;
-      background-color: #f4f4f4;
-      padding: 2rem;
-      color: var(--color-text-dark);
-      border-radius: 0.32rem;
-      box-shadow:
-        inset 1px 1px 1px 0 rgb(255, 255, 255),
-        inset -1px -1px 1px 0 rgba(0, 0, 0, .15),
-        .444584px .444584px .628737px -1px rgba(0, 0, 0, .26),
-        1.21072px 1.21072px 1.71222px -1.5px rgba(0, 0, 0, .247),
-        2.6583px 2.6583px 3.75941px -2.25px rgba(0, 0, 0, .23),
-        5.90083px 5.90083px 8.34503px -3px rgba(0, 0, 0, .192),
-        10px 10px 21.2132px -3.75px rgba(0, 0, 0, .056),
-        -.5px -.5px 0 0 rgb(0 0 0 / 5%);
-    }
-
-    .email-me a:hover {
-      text-decoration: none;
-      background-color: #e7e7e7;
-      transition: background-color 0.3s;
-    }
-
-    // .email-me {
-    //   border: dashed 1px var(--color-link);
-    //   border-radius: 100%;
-    //   padding: 5px;
-
-    //   a {
-    //     border: solid 1px var(--color-link);
-    //     border-radius: 100%;
-    //     aspect-ratio: 1 / 1;
-    //     padding: 1rem;
-    //     display: flex;
-    //     flex-flow: column nowrap;
-    //     justify-content: space-around;
-
-    //     &:hover {
-    //       background-color: var(--color-link);
-    //       color: var(--color-text-light);
-    //       text-decoration: none;
-    //     }
-    //   }
-    // }
   }
 
   /* ************************* */
