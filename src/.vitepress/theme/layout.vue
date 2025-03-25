@@ -30,7 +30,11 @@
                 <template v-slot:company>{{ frontmatter.company }}</template>
         </Application>
 
-        <Portfolio v-else-if="frontmatter.layout === 'portfolio'" id="portfolio"
+        <Portfolio v-else-if="frontmatter.layout === 'portfolio-index'" id="portfolio">
+            <template v-slot:title>{{frontmatter.title}}</template>
+        </Portfolio>
+
+        <CaseStudy v-else-if="frontmatter.layout === 'portfolio'" id="case-study"
             v-bind:keyProject="frontmatter.keys.project"
             v-bind:keyCompany="frontmatter.keys.company"
             v-bind:nda="frontmatter.nda"
@@ -58,6 +62,7 @@
     import Page from './page.vue'
     import Article from './article.vue'
     import Application from './application.vue'
+    import CaseStudy from './case-study.vue'
     import Portfolio from './portfolio.vue'
     import Home from './home.vue'
 

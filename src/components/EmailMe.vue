@@ -41,7 +41,8 @@
     margin: 0;
     background-color: #f4f4f4;
     padding: 2rem;
-    color: var(--color-text-dark);
+    /* color: var(--color-text-dark); */
+    color: var (--color-link);
     border-radius: 0.32rem;
     box-shadow:
       inset 1px 1px 1px 0 rgb(255, 255, 255),

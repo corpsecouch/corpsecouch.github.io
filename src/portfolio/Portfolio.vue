@@ -2,7 +2,11 @@
 
 
   <p>Having so many years of experience and a background across industries and careers, I've been involved with too many projects to list. Here I've provided a curated list of work that's either highly impactful, important, or I'm simply proud of. I hope you enjoy reading about them as much as I did bringing them to life.</p>
-  <p>Reach out to me at <Email></Email> if you'd like to discuss some of my work or how we might work together.</p>
+  <!-- <p>Reach out to me at <Email></Email> if you'd like to discuss some of my work or how we might work together.</p> -->
+
+  <EmailMe>
+    <template v-slot:bottom>Whatever.</template>
+  </EmailMe>
 
   <!-- Rocket -->
 
@@ -23,15 +27,17 @@
           <img :src="p.frontmatter.hero.image" class="rounded">
         </div>
 
-        <div>
-          <span class="title">{{ p.frontmatter.preview.title }}</span>
-
-          <span class="description">{{ p.frontmatter.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
-
-          <ul class="tags" v-if="p.frontmatter.tags">
-            <li class="tag" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
-          </ul>
-
+        <div class="content">
+          <div class="top">
+            <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
+            <span class="year text-small">{{ p.frontmatter.year }}</span>
+            <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
+          </div>
+          <div class="bottom">
+            <ul class="tags" v-if="p.frontmatter.tags">
+              <li class="tag text-small" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
+            </ul>
+          </div>
           <!-- <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Read the case study</a> -->
         </div>
       </li>
@@ -57,15 +63,17 @@
         <div :class="p.frontmatter.hero.type + '-image'">
           <img :src="p.frontmatter.hero.image" class="rounded">
         </div>
-        <div>
-          <span class="title">{{ p.frontmatter.preview.title }}</span>
-
-          <span class="description">{{ p.frontmatter.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
-
-          <ul class="tags" v-if="p.frontmatter.tags">
-            <li class="tag" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
-          </ul>
-
+        <div class="content">
+          <div class="top">
+            <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
+            <span class="year text-small">{{ p.frontmatter.year }}</span>
+            <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
+          </div>
+          <div class="bottom">
+            <ul class="tags" v-if="p.frontmatter.tags">
+              <li class="tag text-small" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
+            </ul>
+          </div>
           <!-- <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Read the case study</a> -->
         </div>
       </li>
@@ -91,14 +99,19 @@
         <div :class="p.frontmatter.hero.type + '-image'">
           <img :src="p.frontmatter.hero.image" class="rounded">
         </div>
-        <div>
-          <span class="title">{{ p.frontmatter.preview.title }}</span>
+        <div class="content">
+          <div class="top">
+            <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
 
-          <span class="description">{{ p.frontmatter.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
+            <span class="year text-small">{{ p.frontmatter.year }}</span>
 
-          <ul class="tags" v-if="p.frontmatter.tags">
-            <li class="tag" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
-          </ul>
+            <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
+          </div>
+          <div class="bottom">
+            <ul class="tags" v-if="p.frontmatter.tags">
+              <li class="tag text-small" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
+            </ul>
+          </div>
 
           <!-- <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Read the case study</a> -->
         </div>
@@ -125,16 +138,17 @@
         <div :class="p.frontmatter.hero.type + '-image'">
           <img :src="p.frontmatter.hero.image" class="rounded">
         </div>
-        <div>
-          <span class="title">{{ p.frontmatter.preview.title }}</span>
-
-          <span class="description">{{ p.frontmatter.year }} &mdash; {{ p.frontmatter.preview.description }}</span>
-
-          <ul class="tags" v-if="p.frontmatter.tags">
-            <li class="tag" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
-          </ul>
-
-          <!-- <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Check out this project</a> -->
+        <div class="content">
+          <div class="top">
+            <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
+            <span class="year text-small">{{ p.frontmatter.year }}</span>
+            <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
+          </div>
+          <div class="bottom">
+            <ul class="tags" v-if="p.frontmatter.tags">
+              <li class="tag text-small" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
+            </ul>
+          </div>
         </div>
       </li>
     </ul>
@@ -151,7 +165,8 @@
   import { data as companies } from '@globals/companies.data';
   import { data as awardsData } from '@awards/awards.data';
   import Callouts from '@components/Callouts.vue';
-  import Email from '@components/Email';
+  // import Email from '@components/Email';
+  import EmailMe from '@components/EmailMe';
 
   import _ from 'lodash';
 
@@ -160,7 +175,8 @@
 
     components: {
       Callouts,
-      Email
+      // Email,
+      EmailMe
     },
 
     methods: {
@@ -345,96 +361,127 @@
     list-style: none;
 
     .project {
-      padding: 1.5rem;
+      --project-padding: 1.5rem;
+
+      overflow: hidden;
+      // background-color: #f4f4f4;
+      background-color: whitesmoke;
+      // background-color: var(--color-background-light);
+      background-image: linear-gradient(0deg, var(--color-background-light) 5%, transparent 120%);
+      border-radius: 0.32rem;
+      box-shadow:
+        inset 1px 1px 1px 0 rgb(255, 255, 255),
+        inset -1px -1px 1px 0 rgba(0, 0, 0, .15),
+        .444584px .444584px .628737px -1px rgba(0, 0, 0, .26),
+        1.21072px 1.21072px 1.71222px -1.5px rgba(0, 0, 0, .247),
+        2.6583px 2.6583px 3.75941px -2.25px rgba(0, 0, 0, .23),
+        5.90083px 5.90083px 8.34503px -3px rgba(0, 0, 0, .192),
+        10px 10px 21.2132px -3.75px rgba(0, 0, 0, .056),
+        -.5px -.5px 0 0 rgb(0 0 0 / 5%);
 
       display: grid;
       grid-auto-rows: 1fr;
       grid-template-columns: 1fr 2fr;
-      grid-column-gap: 1.5rem;
+      grid-column-gap: var(--project-padding);
 
       /* max-width: xsmall screen */
       @media all and (max-width: 600px) { display: block; }
 
-      &:hover {
-        cursor: pointer;
-        .title {
-          text-decoration: underline;
-        }
-        /* transition: all 0.3s;
-        background-image: linear-gradient(-20deg, var(--color-background-light) 5%, transparent 120%);
-        background-color: whitesmoke; */
-      }
+      /* max-width: xsmall screen */
+      // @media all and (max-width: 600px) { padding: 1.5rem; }
+    }
 
-      /* .product-image, .title-image { */
-        img {
-          width: 100%;
-          /* max-width: xsmall screen */
-          @media all and (max-width: 600px) { padding: 0; }
-        }
-      /* } */
+    .project + .project { margin-top: 1rem; }
 
-      &:first-child {
-        display: block;
-        padding: 3rem;
-        background-color: whitesmoke;
-        background-image: linear-gradient(0deg, var(--color-background-light) 5%, transparent 120%);
-
-        /* max-width: xsmall screen */
-        @media all and (max-width: 600px) { padding: 1.5rem; }
-        
-        .product-image img {
-          padding: 3rem;
-
-          /* max-width: xsmall screen */
-          @media all and (max-width: 600px) { padding: 0; }
-        }
-
-        .title { margin-top: 1rem; }
-      }
+    .project:first-child {
+      display: block;
+      padding: calc(var(--project-padding) * 2);
+      background-image: linear-gradient(0deg, var(--color-background-light) 5%, transparent 120%);
 
       /* max-width: xsmall screen */
       @media all and (max-width: 600px) { padding: 1.5rem; }
+      
+      .product-image img {
+        // padding: calc(var(--project-padding) * 2);
 
-      + .project { margin-top: 1rem; }
-
-      .title {
-        display: block;
-        font-size: 1.4rem;
-        font-weight: 500;
-        /* margin-top: 1rem; */
+        /* max-width: xsmall screen */
+        @media all and (max-width: 600px) { padding: 0; }
       }
 
-      .year {
-        display: block;
-        font-style: italic;
-        margin: 0;
-        font-size: 0.7rem;
-      }
+      // .title { margin-top: 1rem; }
 
-      .description {
-        margin-top: 1rem;
-        display: block;
+      .content {
+        padding: var(--project-padding) 0 0 0;
+        row-gap: var(--project-padding);
       }
+    }
 
-      .tags {
-        list-style: none;
-        margin-left: 0;
-        display: flex;
-        flex-flow: row wrap;
-        gap: 0.2rem 0.5rem;
-        .tag {
-          background-color: var(--color-background-dark);
-          color: var(--color-text-light);
-          padding: 0 0.7rem;
-          border-radius: 1rem;
-          font-size: 0.8rem;
-        }
-      }
+    .project:first-child:hover {
+      background-image: linear-gradient(0deg, #fdfdfdde 5%, transparent 120%);
+    }
 
-      .link {
-        margin-top: 1rem;
-        display: inline-block;
+    .project:hover {
+      cursor: pointer;
+      // background-color: #e7e7e7;
+      // transition: background-color 0.3s;
+      // background-image: linear-gradient(0deg, #e7e7e7 -20%, transparent 100%);
+      background-image: linear-gradient(0deg, #e7e7e766 5%, transparent 120%);
+    }
+
+    .project img {
+      width: 100%;
+      height: 100%;
+      object-position: center;
+      object-fit: cover;
+    }
+
+    .project .product-image {
+      padding: var(--project-padding);
+    }
+
+    /* max-width: xsmall screen */
+    @media all and (max-width: 600px) {
+      .project img {
+        padding: 0;
       }
+    }
+
+    .project .content {
+      padding: var(--project-padding);
+      padding-left: 0;
+      display: flex;
+      flex-flow: column nowrap;
+      row-gap: 0.5rem;
+      justify-content: space-between;
+    }
+
+    .project .content .top {
+      display: flex;
+      flex-flow: column nowrap;
+      row-gap: 0.5rem;
+    }
+
+    .project .content .year {
+      display: none;
+    }
+
+    .project .content .tags {
+      list-style: none;
+      margin: 0;
+      display: flex;
+      flex-flow: row wrap;
+      gap: 0.2rem 0.5rem;
+    }
+
+    .project .content .tags .tag {
+      background-color: #e7e7e7;
+      box-shadow:
+        inset -1px -1px 1px 0 rgb(255, 255, 255),
+        inset 1px 1px 1px 0 rgba(0, 0, 0, .15);
+      color: var(--color-text-dark);
+      padding: 0 0.7rem;
+      border-radius: 1rem;
+      font-size: 0.8rem;
     }
   }
 
