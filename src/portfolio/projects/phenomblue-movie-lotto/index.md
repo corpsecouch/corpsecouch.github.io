@@ -10,7 +10,7 @@ hero:
   # color: lightskyblue
   image: /portfolio/phenomblue-movie-lotto/thumb.png
 year: 2012
-tags: ['design system', 'r&d']
+tags: ['r&d', '0-to-1', 'multi-modal', 'mobile design', 'ux design', 'game design']
 preview:
     title:          'Movie Lotto'
     description:    'Social gaming in theaters.'

@@ -333,7 +333,7 @@
       padding-left: 0;
       display: flex;
       flex-flow: column nowrap;
-      row-gap: 0.5rem;
+      row-gap: 1rem;
       justify-content: space-between;
     }
 

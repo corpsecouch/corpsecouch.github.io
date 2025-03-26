@@ -10,7 +10,7 @@ hero:
   # color: lightskyblue
   image: /portfolio/phenomblue-genesis/thumb.png
 year: 2009
-tags: ['public installation']
+tags: ['public installation', '0-to-1', 'ux design', 'game design', 'engineering', 'r&d', 'microsoft surface']
 preview:
     title:          'Microsoft Genesis'
     description:    A chroma-depth 3D, real-time, multi-person space simulator.

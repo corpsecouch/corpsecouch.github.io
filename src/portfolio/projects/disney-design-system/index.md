@@ -12,7 +12,7 @@ hero:
   color: blueviolet
   image: /portfolio/disney-design-system/thumb.png
 year: 2014
-tags: ['design system']
+tags: ['design system', 'enterprise', '0-to-1', 'leadership']
 
 preview:
     title:          'Enterprise Design System'

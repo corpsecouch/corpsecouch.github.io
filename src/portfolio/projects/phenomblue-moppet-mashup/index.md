@@ -10,7 +10,7 @@ hero:
   # color: lightskyblue
   image: /portfolio/phenomblue-moppet-mashup/thumb.png
 year: 2009
-tags: ['microsoft surface', 'public installation', 'r&d']
+tags: ['microsoft surface', 'public installation', 'r&d', 'ux design', 'multi-modal', '0-to-1']
 preview:
     title:          'Moppet Mashup'
     description:    'A social, large-format interactive experience.'

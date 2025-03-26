@@ -11,6 +11,7 @@ hero:
   color: lightblue
   image: /portfolio/disney-greenlight/thumb.png
 year: 2017
+tags: ['enterprise', 'SaaS', '0-to-1', 'ux design']
 
 preview:
     title:          'Movie Greenlight'

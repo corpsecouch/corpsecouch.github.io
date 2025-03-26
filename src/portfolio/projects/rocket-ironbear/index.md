@@ -11,10 +11,11 @@ hero:
   color: lightcoral
   image: /portfolio/rocket-ironbear/thumb.png
 year: 2023
-tags: ['artificial intelligence', 'conversational ai', 'leadership', 'personalization']
+tags: ['artificial intelligence', 'conversational ai', 'leadership', 'personalization', 'product design']
 preview:
     title:          'Conversational Lead Funnel'
-    description:    'Overhauling the mortgage top-of-funnel with conversational AI.'
+    # description:    'Overhauling the mortgage top-of-funnel with conversational AI.'
+    description: 'Rethinking the lead form to include AI, chat, and personalization. Significantly improving the experience and directly increasing lead conversion and revenue.'
     sizzle: 'Rethinking the lead form to include AI, chat, and personalization. Significantly improving the experience and directly increasing lead conversion and revenue.'
 ---
 

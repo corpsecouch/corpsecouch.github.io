@@ -12,7 +12,7 @@ hero:
   color: lightskyblue
   image: /portfolio/amazon-alexa-cortana/thumb.png
 year: 2017
-tags: ['voice design', 'multi-modal design', 'AI design', 'conversational design']
+tags: ['voice design', 'multi-modal', 'AI design', 'conversational design', '0-to-1', 'product design']
 preview:
     title:          'Alexa + Cortana'
     description:    'Connecting AIs from two of the worlds largest companies; a world first.'

@@ -10,7 +10,7 @@ hero:
   # color: lightskyblue
   image: /portfolio/phenomblue-fantastic-future-me/thumb.png
 year: 2012
-tags: ['public installation']
+tags: ['public installation', '0-to-1', 'ux design']
 preview:
     title:          'Fantastic Future Me'
     description:    'Encouraging kids to reach their Future Me.'

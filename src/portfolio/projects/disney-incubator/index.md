@@ -11,7 +11,7 @@ hero:
   # color: lightskyblue
   image: /portfolio/disney-incubator/thumb.png
 year: 2017
-tags: ['r&d']
+tags: ['r&d', 'leadership']
 preview:
     title:          'Innovation Incubator'
     description:    'Transforming how Disney Studios innovates.'

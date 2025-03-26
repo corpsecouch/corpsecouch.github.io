@@ -13,10 +13,11 @@ hero:
   color: lightskyblue
   image: /portfolio/amazon-profile/thumb.png
 year: 2019
-tags: ['mobile design', 'voice design', 'multi-modal design', 'AI design', 'conversational design', 'personalization']
+tags: ['mobile design', 'voice design', 'multi-modal','conversational design', 'personalization', '0-to-1', 'product design', 'leadership', 'platform']
 preview:
     title:          'Alexa Profile'
-    description:    'The heart of personalization.'
+    # description:    'The heart of personalization.'
+    description: 'Ushering in voice assistant personalization with the launch of the Alexa Profile. A paradigm shift for the industry and the first person-level profile across Amazon and the landscape of voice assistants.'
     sizzle: 'Ushering in voice assistant personalization with the launch of the Alexa Profile. A paradigm shift for the industry and the first person-level profile across Amazon and the landscape of voice assistants.'
 ---
 

@@ -11,7 +11,7 @@ hero:
   # color: lightskyblue
   image: /portfolio/phenomblue-dino-dig/thumb.png
 year: 2012
-tags: ['microsoft surface']
+tags: ['microsoft surface', '0-to-1', 'r&d', 'ux design']
 preview:
     title:          'Operation: Dino Dig'
     description:    'Social computing for learning and exploration.'

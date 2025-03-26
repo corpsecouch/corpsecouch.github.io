@@ -11,10 +11,11 @@ hero:
   color: chartreuse
   image: /portfolio/disney-vr/thumb.png
 year: 2014
-tags: ['vr design', 'creative direction', 'r&d']
+tags: ['vr design', 'creative direction', 'r&d', 'leadership', 'product design', 'multi-modal']
 preview:
     title:          'Filmmaking for Virtual Reality'
-    description:    'Leading the VR conversation.'
+    # description:    'Leading the VR conversation.'
+    description: 'Showcasing VR capabilities and toolsets for filmmakers with a multi-platform VR experience featuring an end-to-end product experience across physical assets, mobile, and web.'
     sizzle: 'Showcasing VR capabilities and toolsets for filmmakers with a multi-platform VR experience featuring an end-to-end product experience across physical assets, mobile, and web.'
 ---
 

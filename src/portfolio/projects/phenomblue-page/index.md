@@ -10,7 +10,7 @@ hero:
   # color: lightskyblue
   image: /portfolio/phenomblue-page/thumb.png
 year: 2013
-tags: ['augmented reality', 'mobile design', 'r&d', 'second-screen']
+tags: ['augmented reality', 'mobile design', 'r&d', 'mulit-modal', '0-to-1', 'ux design']
 preview:
     title:          'Page'
     description:    'Breaking down the "fifth wall" of reading and literature.'

@@ -11,6 +11,8 @@ hero:
   # color: lightskyblue
   image: /portfolio/disney-slate/thumb.png
 year: 2016
+tags: ['enterprise', 'SaaS', '0-to-1', 'ux design']
+
 preview:
     title:          'Movie Slate'
     description:    'Innovating how Disney plans and tracks their slate of upcoming movies.'

@@ -11,7 +11,7 @@ hero:
   color: wheat
   image: /portfolio/phenomblue-wild-kingdom/thumb.png
 year: 2013
-tags: ['mobile design', 'augmented reality']
+tags: ['mobile design', 'augmented reality', '0-to-1', 'r&d', 'ux design']
 preview:
     title:          'My Wild Kingdom'
     description:    'A groundbreaking adventure app that brings the wild to any situation.'
