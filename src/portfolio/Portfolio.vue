@@ -11,7 +11,7 @@
     <div class="allProjects">
 
       <!-- Rocket -->
-      <div>
+      <div class="company">
         <h3>Rocket Companies</h3>
         <!-- <p>As the first Director of Conversational AI Design for Rocket Companies, I not only established the practice for the company I also cemented conversational AI as a company priority - a core part of it's business model and long term vision – ushering in it's investments into LLMs and generative AI.</p> -->
 
@@ -21,31 +21,45 @@
           :awardsTotal="portfolioData.rocket.awards.length"
           awardsURL="/awards/#rocket" /> -->
 
-        <ul class="projects">
-          <li class="project" v-for="(p, index) in portfolioData.rocket.projects" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.hero.color} : false">
-            <div :class="p.frontmatter.hero.type + '-image'">
-              <img :src="p.frontmatter.hero.image" class="rounded">
-            </div>
+        <div v-if="'caseStudy' in portfolioData.rocket" class="caseStudies">
+          <ul>
+            <li class="caseStudy" v-for="(p, index) in portfolioData.rocket.caseStudy" @click="gotoProject(p.url)" :style="index == 0 && 'hero' in p.frontmatter ? {'background-color': p.frontmatter.hero.color} : false">
+              <!-- <li class="project" v-for="(p, index) in portfolioData.rocket.projects" @click="gotoProject(p.url)" :style="'hero' in p.frontmatter ? {'background-color': 'gold'} : false"> -->
+              <div :class="p.frontmatter.hero.type + '-image'">
+                <img :src="p.frontmatter.hero.image" class="rounded">
+              </div>
 
-            <div class="content">
-              <div class="top">
-                <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
-                <span class="year text-small">{{ p.frontmatter.year }}</span>
-                <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
+              <div class="preview">
+                <div class="top">
+                  <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
+                  <span class="year text-small">{{ p.frontmatter.year }}</span>
+                  <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
+                </div>
+                <div class="bottom">
+                  <ul class="tags" v-if="p.frontmatter.tags">
+                    <li class="tag text-small" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
+                  </ul>
+                </div>
               </div>
-              <div class="bottom">
-                <ul class="tags" v-if="p.frontmatter.tags">
-                  <li class="tag text-small" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
-                </ul>
-              </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div v-if="'project' in portfolioData.rocket"  class="projects">
+          <span class="text-small">The following projects don't have an available case study.</span>
+          <span class="text-small"><a href="#contact">Contact Me</a> if you'd like to learn more.</span>
+          <ul>
+            <li class="project" v-for="(p, index) in portfolioData.rocket.project">
+              <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
+              <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
+            </li>
+          </ul>
+        </div>
         
       </div>
 
       <!-- Amazon -->
-      <div>
+      <div class="company">
         <h3>Amazon</h3>
         <!-- <p>At Amazon, I was focused on all things Alexa identity, especially biometrics. I led the design of voice, modal, and device experiences for Alexa; starting with voice recognition then expanding to face recognition, authentication, authorization, profiles, and establishing the persoanlization guidelines. These are features used or available across every Echo device and has influenced every personalized experience.</p> -->
         
@@ -55,30 +69,43 @@
           :awardsTotal="portfolioData.amazon.awards.length"
           awardsURL="/awards/#amazon" /> -->
 
-        <ul class="projects">
-          <li class="project" v-for="(p, index) in portfolioData.amazon.projects" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.hero.color} : false">
-            <div :class="p.frontmatter.hero.type + '-image'">
-              <img :src="p.frontmatter.hero.image" class="rounded">
-            </div>
-            <div class="content">
-              <div class="top">
-                <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
-                <span class="year text-small">{{ p.frontmatter.year }}</span>
-                <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
+        <div v-if="'caseStudy' in portfolioData.amazon" class="caseStudies">
+          <ul>
+            <li class="caseStudy" v-for="(p, index) in portfolioData.amazon.caseStudy" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.hero.color} : false">
+              <div :class="p.frontmatter.hero.type + '-image'">
+                <img :src="p.frontmatter.hero.image" class="rounded">
               </div>
-              <div class="bottom">
-                <ul class="tags" v-if="p.frontmatter.tags">
-                  <li class="tag text-small" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
-                </ul>
+              <div class="preview">
+                <div class="top">
+                  <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
+                  <span class="year text-small">{{ p.frontmatter.year }}</span>
+                  <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
+                </div>
+                <div class="bottom">
+                  <ul class="tags" v-if="p.frontmatter.tags">
+                    <li class="tag text-small" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
+                  </ul>
+                </div>
               </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div v-if="'project' in portfolioData.amazon" class="projects">
+          <span class="text-small">The following projects don't have an available case study.</span>
+          <span class="text-small"><a href="#contact">Contact Me</a> if you'd like to learn more.</span>
+          <ul>
+            <li class="project" v-for="(p, index) in portfolioData.amazon.project">
+              <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
+              <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
+            </li>
+          </ul>
+        </div>
 
       </div>
 
       <!-- Disney -->
-      <div>
+      <div class="company">
         <h3>Walt Disney Studios</h3>
         <!-- <p>At Disney, I was leading the UX design of the Studio's digital transformation of it's enterprise tools and processes. I also went deep into emerging technologies and R&D, especially design-driven innovation.</p> -->
         
@@ -88,32 +115,45 @@
           :awardsTotal="portfolioData.disney.awards.length"
           awardsURL="/awards/#disney" /> -->
 
-        <ul class="projects">
-          <li class="project" v-for="(p, index) in portfolioData.disney.projects" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.hero.color} : false">
-            <div :class="p.frontmatter.hero.type + '-image'">
-              <img :src="p.frontmatter.hero.image" class="rounded">
-            </div>
-            <div class="content">
-              <div class="top">
-                <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
-
-                <span class="year text-small">{{ p.frontmatter.year }}</span>
-
-                <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
+        <div v-if="'caseStudy' in portfolioData.disney" class="caseStudies">
+          <ul>
+            <li class="caseStudy" v-for="(p, index) in portfolioData.disney.caseStudy" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.hero.color} : false">
+              <div :class="p.frontmatter.hero.type + '-image'">
+                <img :src="p.frontmatter.hero.image" class="rounded">
               </div>
-              <div class="bottom">
-                <ul class="tags" v-if="p.frontmatter.tags">
-                  <li class="tag text-small" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
-                </ul>
+              <div class="preview">
+                <div class="top">
+                  <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
+
+                  <span class="year text-small">{{ p.frontmatter.year }}</span>
+
+                  <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
+                </div>
+                <div class="bottom">
+                  <ul class="tags" v-if="p.frontmatter.tags">
+                    <li class="tag text-small" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
+                  </ul>
+                </div>
               </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div v-if="'project' in portfolioData.disney" class="projects">
+          <span class="text-small">The following projects don't have an available case study.</span>
+          <span class="text-small"><a href="#contact">Contact Me</a> if you'd like to learn more.</span>
+          <ul>
+            <li class="project" v-for="(p, index) in portfolioData.disney.project">
+              <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
+              <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
+            </li>
+          </ul>
+        </div>
 
       </div>
 
       <!-- Phenomblue -->
-      <div>
+      <div class="company">
         <h3>Phenomblue</h3>
         <!-- <p>Phenomblue was a digital brand experience agency. What does that even mean? It means I created digital experiences for brands including Microsoft, Gatorade, McDonalds, TUMS, and more.</p> -->
         
@@ -123,25 +163,38 @@
           :awardsTotal="portfolioData.phenomblue.awards.length"
           awardsURL="/awards/#phenomblue" /> -->
 
-        <ul class="projects">
-          <li class="project" v-for="(p,index) in portfolioData.phenomblue.projects" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.hero.color} : false">
-            <div :class="p.frontmatter.hero.type + '-image'">
-              <img :src="p.frontmatter.hero.image" class="rounded">
-            </div>
-            <div class="content">
-              <div class="top">
-                <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
-                <span class="year text-small">{{ p.frontmatter.year }}</span>
-                <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
+        <div v-if="'caseStudy' in portfolioData.phenomblue" class="caseStudies">
+          <ul>
+            <li class="caseStudy" v-for="(p,index) in portfolioData.phenomblue.caseStudy" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.hero.color} : false">
+              <div :class="p.frontmatter.hero.type + '-image'">
+                <img :src="p.frontmatter.hero.image" class="rounded">
               </div>
-              <div class="bottom">
-                <ul class="tags" v-if="p.frontmatter.tags">
-                  <li class="tag text-small" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
-                </ul>
+              <div class="preview">
+                <div class="top">
+                  <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
+                  <span class="year text-small">{{ p.frontmatter.year }}</span>
+                  <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
+                </div>
+                <div class="bottom">
+                  <ul class="tags" v-if="p.frontmatter.tags">
+                    <li class="tag text-small" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
+                  </ul>
+                </div>
               </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div v-if="'project' in portfolioData.phenomblue" class="projects">
+          <span class="text-small">The following projects don't have an available case study.</span>
+          <span class="text-small"><a href="#contact">Contact Me</a> if you'd like to learn more.</span>
+          <ul>
+            <li class="project" v-for="(p, index) in portfolioData.phenomblue.project">
+              <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
+              <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
+            </li>
+          </ul>
+        </div>
 
       </div>
 
@@ -159,9 +212,6 @@
   // https://www.bestfolios.com/portfolio/dougseidman
 
   import { data as projectData } from '@portfolio/portfolio.data';
-  import { data as newsData } from '@press/press.data';
-  import { data as companies } from '@globals/companies.data';
-  import { data as awardsData } from '@awards/awards.data';
   import Callouts from '@components/Callouts.vue';
   // import Email from '@components/Email';
   import EmailMe from '@components/EmailMe';
@@ -185,47 +235,8 @@
 
     data () {
 
-      // remove all hidden projects and sort the rest
-      let projects = _.orderBy(
-        _.filter(projectData, o => { return o.frontmatter.preview; }),
-        [ 'frontmatter.featured', 'frontmatter.year' ],
-        [ 'asc', 'desc' ]);
-
-      // fix the urls due to the route rewrites
-      projects = _.map(projects, (project) => {
-        // console.log(project.url)
-
-        // Regex to remove '/projects/{dynamic_part}/project'
-        project.url = `${project.url}`.replace(/\/projects\/[^\/]+/, '');
-
-        // Regex to make a project :company-:name
-        // project.url= `${project.url}`.replace(/\/projects\/([^/]+)\/([^/]+)\//, '/$1-$2/');
-
-        // console.log(project.url)
-        return project
-      })
-
-      let portfolioData = {};
-      _.each(companies, (value, key) => {
-        portfolioData[value.slug] = {
-
-          projects: _.filter(projects, o => { return o.frontmatter.keys.company == value.slug; }),
-
-          awards: _.orderBy(
-            _.filter(awardsData, o => { return o.company.slug == value.slug }),
-            o => { return o.date.year; },
-            ['desc']),
-
-          news: {
-            total: _.filter(newsData, o => { return o.company.slug == value.slug }).length,
-            data: _.take(_.filter(newsData, o => { return o.company.slug == value.slug }), 3)
-          }
-        }
-      });
-
       return {
-        portfolioData: portfolioData,
-        newsData: newsData
+        portfolioData: projectData,
       }
     }
 
@@ -266,14 +277,71 @@
     row-gap: 7rem;
   }
 
+  .company {
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: var(--project-padding);
+  }
+
   .projects {
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: var(--project-padding);
+    padding-top: var(--project-padding);
+  }
+
+  .projects ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: var(--project-padding);
+  }
+
+  /* max-width: xsmall screen */
+  @media all and (max-width: 600px) {
+    .projects ul {
+      display: flex;
+      flex-flow: column nowrap;
+    }
+  }
+
+  .projects .project {
+    grid-column-end: span 2;
+    overflow: hidden;
+    background-color: whitesmoke;
+      background-image: linear-gradient(0deg, var(--color-background-light) 5%, transparent 120%);
+      border-radius: 0.32rem;
+      box-shadow:
+        inset 1px 1px 1px 0 rgb(255, 255, 255),
+        inset -1px -1px 1px 0 rgba(0, 0, 0, .15),
+        .444584px .444584px .628737px -1px rgba(0, 0, 0, .26),
+        1.21072px 1.21072px 1.71222px -1.5px rgba(0, 0, 0, .247),
+        2.6583px 2.6583px 3.75941px -2.25px rgba(0, 0, 0, .23),
+        5.90083px 5.90083px 8.34503px -3px rgba(0, 0, 0, .192),
+        10px 10px 21.2132px -3.75px rgba(0, 0, 0, .056),
+        -.5px -.5px 0 0 rgb(0 0 0 / 5%);
+      display: flex;
+      flex-flow: column nowrap;
+      row-gap: var(--project-padding);
+      padding: var(--project-padding);
+  }
+
+  .caseStudies {
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: var(--project-padding);
+  }
+
+  .caseStudies ul {
     margin: 0;
     list-style: none;
     display: flex;
     flex-flow: column nowrap;
     row-gap: var(--project-padding);
 
-    .project {
+    .caseStudy {
       overflow: hidden;
       background-color: whitesmoke;
       background-image: linear-gradient(0deg, var(--color-background-light) 5%, transparent 120%);
@@ -297,7 +365,7 @@
       @media all and (max-width: 600px) { display: block; }
     }
 
-    .project:first-child {
+    .caseStudy:first-child {
       display: block;
       padding: calc(var(--project-padding) * 2);
       background-image: linear-gradient(0deg, var(--color-background-light) 5%, transparent 120%);
@@ -310,33 +378,33 @@
         @media all and (max-width: 600px) { padding: 0; }
       }
 
-      .content {
+      .preview {
         padding: var(--project-padding) 0 0 0;
         row-gap: var(--project-padding);
       }
     }
 
-    .project:first-child:hover {
+    .caseStudy:first-child:hover {
       background-image: linear-gradient(0deg, #fdfdfdde 5%, transparent 120%);
     }
 
-    .project:hover {
+    .caseStudy:hover {
       cursor: pointer;
       background-image: linear-gradient(0deg, #e7e7e766 5%, transparent 120%);
     }
 
-    .project img {
+    .caseStudy img {
       width: 100%;
       height: 100%;
       object-position: center;
       object-fit: cover;
     }
 
-    .project .product-image {
+    .caseStudy .product-image {
       padding: var(--project-padding);
     }
 
-    .project .content {
+    .caseStudy .preview {
       padding: var(--project-padding);
       padding-left: 0;
       display: flex;
@@ -347,26 +415,26 @@
 
     /* max-width: xsmall screen */
     @media all and (max-width: 600px) {
-      .project img {
+      .caseStudy img {
         padding: 0;
       }
 
-      .project .content {
+      .caseStudy .preview {
         padding: var(--project-padding);
       }
     }
 
-    .project .content .top {
+    .caseStudy .preview .top {
       display: flex;
       flex-flow: column nowrap;
       row-gap: 0.5rem;
     }
 
-    .project .content .year {
+    .caseStudy .preview .year {
       display: none;
     }
 
-    .project .content .tags {
+    .caseStudy .preview .tags {
       list-style: none;
       margin: 0;
       display: flex;
@@ -374,7 +442,7 @@
       gap: 0.2rem 0.5rem;
     }
 
-    .project .content .tags .tag {
+    .caseStudy .preview .tags .tag {
       background-color: #e7e7e7;
       box-shadow:
         inset -1px -1px 1px 0 rgb(255, 255, 255),

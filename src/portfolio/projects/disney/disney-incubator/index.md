@@ -1,5 +1,6 @@
 ---
 layout: portfolio
+type: project
 title: Disney Innovation Incubator
 description: A case study about launching Disney Studio's internal product incubator.
 keys:

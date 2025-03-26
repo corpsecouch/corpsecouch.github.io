@@ -1,5 +1,6 @@
 ---
 layout: portfolio
+type: project
 title: Disney Slate
 description: A case study about designing how Disney Studio's plans movie releases.
 keys:

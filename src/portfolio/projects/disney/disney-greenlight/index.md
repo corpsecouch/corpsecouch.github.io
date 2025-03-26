@@ -1,5 +1,6 @@
 ---
 layout: portfolio
+type: project
 title: Movie Greenlight
 description: A case study about creating the platform for developing Disney theatrical stories.
 keys:
