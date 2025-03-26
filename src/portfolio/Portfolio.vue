@@ -1,157 +1,155 @@
 <template>
 
+  <div class="pageContent">
+    <p>Having so many years of experience and a background across industries and careers, I've been involved with too many projects to list. Here I've provided a curated list of work that's either highly impactful, important, or I'm simply proud of. I hope you enjoy reading about them as much as I did bringing them to life.</p>
+    <!-- <p>Reach out to me at <Email></Email> if you'd like to discuss some of my work or how we might work together.</p> -->
 
-  <p>Having so many years of experience and a background across industries and careers, I've been involved with too many projects to list. Here I've provided a curated list of work that's either highly impactful, important, or I'm simply proud of. I hope you enjoy reading about them as much as I did bringing them to life.</p>
-  <!-- <p>Reach out to me at <Email></Email> if you'd like to discuss some of my work or how we might work together.</p> -->
+    <EmailMe>
+      <template v-slot:bottom>Let's make something amazing together.</template>
+    </EmailMe>
 
-  <EmailMe>
-    <template v-slot:bottom>Whatever.</template>
-  </EmailMe>
+    <div class="allProjects">
 
-  <!-- Rocket -->
+      <!-- Rocket -->
+      <div>
+        <h3>Rocket Companies</h3>
+        <!-- <p>As the first Director of Conversational AI Design for Rocket Companies, I not only established the practice for the company I also cemented conversational AI as a company priority - a core part of it's business model and long term vision – ushering in it's investments into LLMs and generative AI.</p> -->
 
-  <div class="company" id="rocket">
+        <!-- <Callouts
+          :pressTotal="portfolioData.rocket.news.total"
+          pressURL="/press/#rocket"
+          :awardsTotal="portfolioData.rocket.awards.length"
+          awardsURL="/awards/#rocket" /> -->
 
-    <h3>Rocket Companies</h3>
-    <p>As the first Director of Conversational AI Design for Rocket Companies, I not only established the practice for the company I also cemented conversational AI as a company priority - a core part of it's business model and long term vision – ushering in it's investments into LLMs and generative AI.</p>
+        <ul class="projects">
+          <li class="project" v-for="(p, index) in portfolioData.rocket.projects" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.hero.color} : false">
+            <div :class="p.frontmatter.hero.type + '-image'">
+              <img :src="p.frontmatter.hero.image" class="rounded">
+            </div>
 
-    <Callouts
-      :pressTotal="portfolioData.rocket.news.total"
-      pressURL="/press/#rocket"
-      :awardsTotal="portfolioData.rocket.awards.length"
-      awardsURL="/awards/#rocket" />
+            <div class="content">
+              <div class="top">
+                <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
+                <span class="year text-small">{{ p.frontmatter.year }}</span>
+                <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
+              </div>
+              <div class="bottom">
+                <ul class="tags" v-if="p.frontmatter.tags">
+                  <li class="tag text-small" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+        
+      </div>
 
-    <ul class="projects">
-      <li class="project" v-for="(p, index) in portfolioData.rocket.projects" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.hero.color} : false">
-        <div :class="p.frontmatter.hero.type + '-image'">
-          <img :src="p.frontmatter.hero.image" class="rounded">
-        </div>
+      <!-- Amazon -->
+      <div>
+        <h3>Amazon</h3>
+        <!-- <p>At Amazon, I was focused on all things Alexa identity, especially biometrics. I led the design of voice, modal, and device experiences for Alexa; starting with voice recognition then expanding to face recognition, authentication, authorization, profiles, and establishing the persoanlization guidelines. These are features used or available across every Echo device and has influenced every personalized experience.</p> -->
+        
+        <!-- <Callouts
+          :pressTotal="portfolioData.amazon.news.total"
+          pressURL="/press/#amazon"
+          :awardsTotal="portfolioData.amazon.awards.length"
+          awardsURL="/awards/#amazon" /> -->
 
-        <div class="content">
-          <div class="top">
-            <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
-            <span class="year text-small">{{ p.frontmatter.year }}</span>
-            <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
-          </div>
-          <div class="bottom">
-            <ul class="tags" v-if="p.frontmatter.tags">
-              <li class="tag text-small" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
-            </ul>
-          </div>
-          <!-- <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Read the case study</a> -->
-        </div>
-      </li>
-    </ul>
-    
-  </div>
+        <ul class="projects">
+          <li class="project" v-for="(p, index) in portfolioData.amazon.projects" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.hero.color} : false">
+            <div :class="p.frontmatter.hero.type + '-image'">
+              <img :src="p.frontmatter.hero.image" class="rounded">
+            </div>
+            <div class="content">
+              <div class="top">
+                <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
+                <span class="year text-small">{{ p.frontmatter.year }}</span>
+                <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
+              </div>
+              <div class="bottom">
+                <ul class="tags" v-if="p.frontmatter.tags">
+                  <li class="tag text-small" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
 
-  <!-- Amazon -->
+      </div>
 
-  <div class="company" id="amazon">
+      <!-- Disney -->
+      <div>
+        <h3>Walt Disney Studios</h3>
+        <!-- <p>At Disney, I was leading the UX design of the Studio's digital transformation of it's enterprise tools and processes. I also went deep into emerging technologies and R&D, especially design-driven innovation.</p> -->
+        
+        <!-- <Callouts
+          :pressTotal="portfolioData.disney.news.total"
+          pressURL="/press/#disney"
+          :awardsTotal="portfolioData.disney.awards.length"
+          awardsURL="/awards/#disney" /> -->
 
-    <h3>Amazon</h3>
-    <p>At Amazon, I was focused on all things Alexa identity, especially biometrics. I led the design of voice, modal, and device experiences for Alexa; starting with voice recognition then expanding to face recognition, authentication, authorization, profiles, and establishing the persoanlization guidelines. These are features used or available across every Echo device and has influenced every personalized experience.</p>
-    
-    <Callouts
-      :pressTotal="portfolioData.amazon.news.total"
-      pressURL="/press/#amazon"
-      :awardsTotal="portfolioData.amazon.awards.length"
-      awardsURL="/awards/#amazon" />
+        <ul class="projects">
+          <li class="project" v-for="(p, index) in portfolioData.disney.projects" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.hero.color} : false">
+            <div :class="p.frontmatter.hero.type + '-image'">
+              <img :src="p.frontmatter.hero.image" class="rounded">
+            </div>
+            <div class="content">
+              <div class="top">
+                <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
 
-    <ul class="projects">
-      <li class="project" v-for="(p, index) in portfolioData.amazon.projects" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.hero.color} : false">
-        <div :class="p.frontmatter.hero.type + '-image'">
-          <img :src="p.frontmatter.hero.image" class="rounded">
-        </div>
-        <div class="content">
-          <div class="top">
-            <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
-            <span class="year text-small">{{ p.frontmatter.year }}</span>
-            <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
-          </div>
-          <div class="bottom">
-            <ul class="tags" v-if="p.frontmatter.tags">
-              <li class="tag text-small" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
-            </ul>
-          </div>
-          <!-- <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Read the case study</a> -->
-        </div>
-      </li>
-    </ul>
+                <span class="year text-small">{{ p.frontmatter.year }}</span>
 
-  </div>
+                <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
+              </div>
+              <div class="bottom">
+                <ul class="tags" v-if="p.frontmatter.tags">
+                  <li class="tag text-small" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
 
-  <!-- Disney -->
+      </div>
 
-  <div class="company" id="disney">
+      <!-- Phenomblue -->
+      <div>
+        <h3>Phenomblue</h3>
+        <!-- <p>Phenomblue was a digital brand experience agency. What does that even mean? It means I created digital experiences for brands including Microsoft, Gatorade, McDonalds, TUMS, and more.</p> -->
+        
+        <!-- <Callouts
+          :pressTotal="portfolioData.phenomblue.news.total"
+          pressURL="/press/#phenomblue"
+          :awardsTotal="portfolioData.phenomblue.awards.length"
+          awardsURL="/awards/#phenomblue" /> -->
 
-    <h3>Walt Disney Studios</h3>
-    <p>At Disney, I was leading the UX design of the Studio's digital transformation of it's enterprise tools and processes. I also went deep into emerging technologies and R&D, especially design-driven innovation.</p>
-    
-    <Callouts
-      :pressTotal="portfolioData.disney.news.total"
-      pressURL="/press/#disney"
-      :awardsTotal="portfolioData.disney.awards.length"
-      awardsURL="/awards/#disney" />
+        <ul class="projects">
+          <li class="project" v-for="(p,index) in portfolioData.phenomblue.projects" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.hero.color} : false">
+            <div :class="p.frontmatter.hero.type + '-image'">
+              <img :src="p.frontmatter.hero.image" class="rounded">
+            </div>
+            <div class="content">
+              <div class="top">
+                <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
+                <span class="year text-small">{{ p.frontmatter.year }}</span>
+                <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
+              </div>
+              <div class="bottom">
+                <ul class="tags" v-if="p.frontmatter.tags">
+                  <li class="tag text-small" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
 
-    <ul class="projects">
-      <li class="project" v-for="(p, index) in portfolioData.disney.projects" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.hero.color} : false">
-        <div :class="p.frontmatter.hero.type + '-image'">
-          <img :src="p.frontmatter.hero.image" class="rounded">
-        </div>
-        <div class="content">
-          <div class="top">
-            <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
+      </div>
 
-            <span class="year text-small">{{ p.frontmatter.year }}</span>
+    </div>
 
-            <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
-          </div>
-          <div class="bottom">
-            <ul class="tags" v-if="p.frontmatter.tags">
-              <li class="tag text-small" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
-            </ul>
-          </div>
-
-          <!-- <a :href="p.url" :title="p.frontmatter.preview.title" class="link">Read the case study</a> -->
-        </div>
-      </li>
-    </ul>
-
-  </div>
-
-  <!-- Phenomblue -->
-
-  <div class="company" id="phenomblue">
-
-    <h3>Phenomblue</h3>
-    <p>Phenomblue was a digital brand experience agency. What does that even mean? It means I created digital experiences for brands including Microsoft, Gatorade, McDonalds, TUMS, and more.</p>
-    
-    <Callouts
-      :pressTotal="portfolioData.phenomblue.news.total"
-      pressURL="/press/#phenomblue"
-      :awardsTotal="portfolioData.phenomblue.awards.length"
-      awardsURL="/awards/#phenomblue" />
-
-    <ul class="projects">
-      <li class="project" v-for="(p,index) in portfolioData.phenomblue.projects" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.hero.color} : false">
-        <div :class="p.frontmatter.hero.type + '-image'">
-          <img :src="p.frontmatter.hero.image" class="rounded">
-        </div>
-        <div class="content">
-          <div class="top">
-            <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
-            <span class="year text-small">{{ p.frontmatter.year }}</span>
-            <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
-          </div>
-          <div class="bottom">
-            <ul class="tags" v-if="p.frontmatter.tags">
-              <li class="tag text-small" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
-            </ul>
-          </div>
-        </div>
-      </li>
-    </ul>
+    <EmailMe>
+      <template v-slot:bottom>We could be working together right now.</template>
+    </EmailMe>
 
   </div>
 
@@ -180,16 +178,6 @@
     },
 
     methods: {
-      // https://stackoverflow.com/questions/61435070/scroll-down-when-clicked-with-vue-js
-      /*goto(ref) {
-        let el = this.$refs[ref];
-        
-        el.parentElement.scrollTo(
-          el.offsetLeft - el.parentElement.offsetLeft,
-          el.offsetTop
-          );
-      }*/
-
       gotoProject(url) {
         window.location.href = url
       }
@@ -241,132 +229,45 @@
 /* https://css-irl.info/css-halftone-patterns/ */
 /* https://leanrada.com/notes/pure-css-halftone/ */
 
-  #callouts {
-    margin-top: 1.3rem;
-  }
-
-  h2 {
-    font-family: 'Mainstay';
-    letter-spacing: normal;
-    font-size: 5rem;
-    font-weight: normal;
-    line-height: 4.5rem;
-    text-transform: none;
-  }
-
-  #rocket {
-    h3 {
-      background-image: url('/assets/logos/rocket.png');
-      /* height: 64px; */
-    }
-    .projects > p {
-      display: inline-block;
-      padding: 8px 16px;
-      background-color: lightgray;
-      font-size: 1rem;
-      font-weight: 600;
-      border-radius: 8px;
-    }
-  }
-
-  #amazon {
-    h3 {
-      background-image: url('/assets/logos/amazon.png');
-      /* height: 64px; */
-    }
-  }
-
-  #disney {
-    h3 {
-      background-image: url('/assets/logos/disney.png');
-      /* height: 64px; */
-    }
-  }
-
-  #phenomblue {
-    h3 {
-      background-image: url('/assets/logos/phenomblue.png');
-      /* height: 64px; */
-    }
-  }
-
-  .columns {
-    display: grid;
-    grid-auto-rows: 1fr;
-    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-    grid-gap: 3.5rem 1.5rem;
-
-    /* @include screen-large { } */
-    /* @include screen-regular { } */
-    /* @include screen-small { grid-template-columns: auto; } */
-
-    .left { grid-column: left; }
-    .right { grid-column: right; }
-  }
-
-  /* max-width: small screen */
-  @media all and (max-width: 680px) {
-    .columns {
-      grid-template-columns: [left right] auto;
-    }
-  }
-
-  #menu {
-    flex-flow: row wrap;
-    column-gap: 4rem;
-    row-gap: 2rem;
-
-    margin-top: 3rem;
+  .pageContent {
     display: flex;
-    justify-content: center;
-
-    a { margin: 0; }
-
-    .rocket, .disney, .phenomblue, .amazon { img { height: 42px; } }
+    flex-flow: column;
+    row-gap: 7rem;
   }
-
-  .company {
-    padding-top: 2rem;
-    margin-top: 7rem;
-
-    &:first-child {
-      padding-top: 0;
-      margin-top: 0;
-    }
-
-    > h3 {
-      background-repeat: no-repeat;
-      background-position-x: center;
-      text-indent: 100%;
-      overflow: hidden;
-      white-space: nowrap;
-      background-size: contain;
-      /* height: 84px; */
-      height: 64px;
-    }
-  }
-
-  .awards { margin-top: 4rem; }
-  .news { margin-top: 6rem; }
 
   h3 {
     font-size: 1.5rem;
-    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 1rem;
+    margin: 0;
+    padding: 0 0 1.5rem 0;
   }
 
-  .o { letter-spacing: -0.55rem; }
+  h3::after{
+    content:'';
+    display: block;
+    border-bottom: dashed 1px var(--color-text-dark);
+    height: 50%;
+  }
+
+  .allProjects {
+    --project-padding: 1.5rem;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 7rem;
+  }
 
   .projects {
     margin: 0;
     list-style: none;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: var(--project-padding);
 
     .project {
-      --project-padding: 1.5rem;
-
       overflow: hidden;
-      // background-color: #f4f4f4;
       background-color: whitesmoke;
-      // background-color: var(--color-background-light);
       background-image: linear-gradient(0deg, var(--color-background-light) 5%, transparent 120%);
       border-radius: 0.32rem;
       box-shadow:
@@ -386,12 +287,7 @@
 
       /* max-width: xsmall screen */
       @media all and (max-width: 600px) { display: block; }
-
-      /* max-width: xsmall screen */
-      // @media all and (max-width: 600px) { padding: 1.5rem; }
     }
-
-    .project + .project { margin-top: 1rem; }
 
     .project:first-child {
       display: block;
@@ -402,13 +298,9 @@
       @media all and (max-width: 600px) { padding: 1.5rem; }
       
       .product-image img {
-        // padding: calc(var(--project-padding) * 2);
-
         /* max-width: xsmall screen */
         @media all and (max-width: 600px) { padding: 0; }
       }
-
-      // .title { margin-top: 1rem; }
 
       .content {
         padding: var(--project-padding) 0 0 0;
@@ -422,9 +314,6 @@
 
     .project:hover {
       cursor: pointer;
-      // background-color: #e7e7e7;
-      // transition: background-color 0.3s;
-      // background-image: linear-gradient(0deg, #e7e7e7 -20%, transparent 100%);
       background-image: linear-gradient(0deg, #e7e7e766 5%, transparent 120%);
     }
 
@@ -439,13 +328,6 @@
       padding: var(--project-padding);
     }
 
-    /* max-width: xsmall screen */
-    @media all and (max-width: 600px) {
-      .project img {
-        padding: 0;
-      }
-    }
-
     .project .content {
       padding: var(--project-padding);
       padding-left: 0;
@@ -453,6 +335,17 @@
       flex-flow: column nowrap;
       row-gap: 0.5rem;
       justify-content: space-between;
+    }
+
+    /* max-width: xsmall screen */
+    @media all and (max-width: 600px) {
+      .project img {
+        padding: 0;
+      }
+
+      .project .content {
+        padding: var(--project-padding);
+      }
     }
 
     .project .content .top {

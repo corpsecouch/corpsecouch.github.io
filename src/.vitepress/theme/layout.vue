@@ -68,3 +68,10 @@
 
     const { page, frontmatter } = useData()
 </script>
+
+<style lang="css">
+    main {
+        /* make sure the main area will always be at least the height of the browser */
+        min-height: 100vh;
+    }
+</style>

@@ -57,7 +57,8 @@
 
   .hello .emailMe a:hover {
     text-decoration: none;
-    background-color: #e7e7e7;
-    transition: background-color 0.3s;
+    /* background-color: #e7e7e7; */
+    /* transition: background-color 0.3s; */
+    background-image: linear-gradient(0deg, #e7e7e7aa 5%, transparent 120%);
   }
 </style>
