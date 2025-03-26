@@ -193,7 +193,15 @@
 
       // fix the urls due to the route rewrites
       projects = _.map(projects, (project) => {
-        project.url = `${project.url}`.replace(/projects\//, '')
+        // console.log(project.url)
+
+        // Regex to remove '/projects/{dynamic_part}/project'
+        project.url = `${project.url}`.replace(/\/projects\/[^\/]+/, '');
+
+        // Regex to make a project :company-:name
+        // project.url= `${project.url}`.replace(/\/projects\/([^/]+)\/([^/]+)\//, '/$1-$2/');
+
+        // console.log(project.url)
         return project
       })
 

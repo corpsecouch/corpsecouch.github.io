@@ -24,7 +24,10 @@ export default defineConfig({
     'articles/archive/:article*' : 'articles/:article*',
 
     // where portfolio projects will be served from
-    'portfolio/projects/:project*' : 'portfolio/:project*',
+    // 'portfolio/projects/:project*' : 'portfolio/:project*',
+    'portfolio/projects/:company/:project*' : 'portfolio/:project*',
+    // 'portfolio/projects/:company/:project*' : 'portfolio/:company/:project*',
+    // 'portfolio/projects/:company/:project*' : 'portfolio/:company-:project*',
 
     // where application landing pages will be served from
     'applications/:pre*-:slug' : 'apps/:slug'
