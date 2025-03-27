@@ -2,14 +2,11 @@
 layout: portfolio
 type: project
 title: Expanding AI Across Businesses
-description: Blahbity blahbity blah
+description: Under my leaership, Rocket Mortgage's chatbot expanded to be available across the mortgage journey and into other lines of business including Rocket Homes and Rocket Loans.
 keys:
   project: RocketAIBanker
   company: rocket
-year: 2024
-tags: ['IVR', 'gen ai', 'artificial intelligence', 'conversational ai', 'leadership', 'personalization', 'product design']
 preview:
     title: Expanding AI Across Businesses
-    description: 'Rethinking the lead form to include AI, chat, and personalization. Significantly improving the experience and directly increasing lead conversion and revenue.'
-    sizzle: 'Rethinking the lead form to include AI, chat, and personalization. Significantly improving the experience and directly increasing lead conversion and revenue.'
+    description: Under my leadership, Rocket Mortgage's chatbot expanded to be available across the mortgage journey and into other lines of business including Rocket Homes and Rocket Loans.
 ---

@@ -1,15 +1,12 @@
 ---
 layout: portfolio
 type: project
-title: Mulit-Modal AI Agent
-description: Blahbity blahbity blah
+title: Multi-Modal AI Agent
+description: Each person prefers different modes of communicating, especially when it comes to something as high stakes as buying a home. Under my direction, we expanded our chatbot to be available across web, mobile, and sms so the company can meet clients where they're at without forcing them to talk on the phone.
 keys:
   project: RocketMulitModal
   company: rocket
-year: 2024
-tags: ['IVR', 'gen ai', 'artificial intelligence', 'conversational ai', 'leadership', 'personalization', 'product design']
 preview:
-    title: Mulit-Modal AI Agent
-    description: 'Rethinking the lead form to include AI, chat, and personalization. Significantly improving the experience and directly increasing lead conversion and revenue.'
-    sizzle: 'Rethinking the lead form to include AI, chat, and personalization. Significantly improving the experience and directly increasing lead conversion and revenue.'
+    title: Multi-Modal AI Agent
+    description: Each person prefers different modes of communicating, especially when it comes to something as high stakes as buying a home. Under my direction, we expanded our chatbot to be available across web, mobile, and sms so the company can meet clients where they're at without forcing them to talk on the phone.
 ---

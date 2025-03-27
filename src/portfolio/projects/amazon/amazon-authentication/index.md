@@ -1,15 +1,12 @@
 ---
 layout: portfolio
 type: project
-title: Authentication
-description: Blahbity blahbity blah
+title: Alexa Authentication
+description: Trust and risk go hand-in-hand. Different experiences and actions have different levels of risk; listenting to music has a different level of risk than getting your bank balances. I led the design of Alexa's Authentication Platform which aims to mitigate user risk by introducting approproate levels of authentication methods when necessary – like a voice pin, 2FA, or voice identification.
 keys:
   project: AmazonAuthentication
   company: amazon
-year: 2019
-tags: ['IVR', 'gen ai', 'artificial intelligence', 'conversational ai', 'leadership', 'personalization', 'product design']
 preview:
-    title: Authentication
-    description: 'Rethinking the lead form to include AI, chat, and personalization. Significantly improving the experience and directly increasing lead conversion and revenue.'
-    sizzle: 'Rethinking the lead form to include AI, chat, and personalization. Significantly improving the experience and directly increasing lead conversion and revenue.'
+    title: Alexa Authentication
+    description: Trust and risk go hand-in-hand. Different experiences and actions have different levels of risk; listenting to music has a different level of risk than getting your bank balances. I led the design of Alexa's Authentication Platform which aims to mitigate user risk by introducting approproate levels of authentication methods when necessary – like a voice pin, 2FA, or voice identification.
 ---

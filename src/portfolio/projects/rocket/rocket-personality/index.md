@@ -2,14 +2,11 @@
 layout: portfolio
 type: project
 title: Branded AI Personality
-description: Blahbity blahbity blah
+description: A chatbot is a representative of the company. NLU-based chatbot's have a personality baked into all of it's responses, something LLM-based chatbots lack. Under my leadership, my team defined the branded personality for our gen ai chatbot complete with reusable prompts, patterns, and guidelines. This served as the foundation for Rocket's relaunched brand voice.
 keys:
   project: RocketPersonality
   company: rocket
-year: 2022
-tags: ['gen ai', 'artificial intelligence', 'conversational ai', 'leadership', 'branding', 'strategy']
 preview:
     title: Branded AI Personality
-    description: 'Rethinking the lead form to include AI, chat, and personalization. Significantly improving the experience and directly increasing lead conversion and revenue.'
-    sizzle: 'Rethinking the lead form to include AI, chat, and personalization. Significantly improving the experience and directly increasing lead conversion and revenue.'
+    description: A chatbot is a representative of the company. NLU-based chatbot's have a personality baked into all of it's responses, something LLM-based chatbots lack. Under my leadership, my team defined the branded personality for our gen ai chatbot complete with reusable prompts, patterns, and guidelines. This served as the foundation for Rocket's relaunched brand voice.
 ---

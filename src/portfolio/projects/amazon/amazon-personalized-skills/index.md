@@ -1,15 +1,12 @@
 ---
 layout: portfolio
 type: project
-title: Personalized Skills
-description: Blahbity blahbity blah
+title: Personalized Alexa Skills
+description: Alexa Skills become really useful when they're personalized, especially if they're connected to another account like Lyft or your bank. I led the design of skill personalization including account linking, privacy settings, and authentication methods.
 keys:
   project: AmazonPersonalizedSkills
   company: amazon
-year: 2019
-tags: ['IVR', 'gen ai', 'artificial intelligence', 'conversational ai', 'leadership', 'personalization', 'product design']
 preview:
-    title: Personalized Skills
-    description: 'Rethinking the lead form to include AI, chat, and personalization. Significantly improving the experience and directly increasing lead conversion and revenue.'
-    sizzle: 'Rethinking the lead form to include AI, chat, and personalization. Significantly improving the experience and directly increasing lead conversion and revenue.'
+    title: Personalized Alexa Skills
+    description: Alexa Skills become really useful when they're personalized, especially if they're connected to another account like Lyft or your bank. I led the design of skill personalization including account linking, privacy settings, and authentication methods.
 ---

@@ -1,15 +1,12 @@
 ---
 layout: portfolio
 type: project
-title: Presence Detection
-description: Blahbity blahbity blah
+title: Alexa Presence Detection
+description: When an Echo device knows you're nearby even when you're not talking to it, it can feel magical but also a little weird. It's also really helpful to know if you're near a device when trying to do something sensitive, like banking or shopping. I led the design of how Alexa and Echo devices know when you're near a device and use it as an authentication signal.
 keys:
   project: AmazonPresenceDetection
   company: amazon
-year: 2019
-tags: ['IVR', 'gen ai', 'artificial intelligence', 'conversational ai', 'leadership', 'personalization', 'product design']
 preview:
-    title: Presence Detection
-    description: 'Rethinking the lead form to include AI, chat, and personalization. Significantly improving the experience and directly increasing lead conversion and revenue.'
-    sizzle: 'Rethinking the lead form to include AI, chat, and personalization. Significantly improving the experience and directly increasing lead conversion and revenue.'
+    title: Alexa Presence Detection
+    description: When an Echo device knows you're nearby even when you're not talking to it, it can feel magical but also a little weird. It's also really helpful to know if you're near a device when trying to do something sensitive, like banking or shopping. I led the design of how Alexa and Echo devices know when you're near a device and use it as an authentication signal.
 ---

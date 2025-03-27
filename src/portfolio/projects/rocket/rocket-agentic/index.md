@@ -2,14 +2,11 @@
 layout: portfolio
 type: project
 title: Agentic AI Mortgage Banker
-description: Blahbity blahbity blah
+description: Mortgage bankers are licensed professionals, and they do a lot of things that aren't banking or require a license. I was the design leader on the team figuring out how to superpower mortgage bankers and clients with an agentic AI.
 keys:
   project: RocketAgenticBanker
   company: rocket
-year: 2024
-tags: ['IVR', 'gen ai', 'artificial intelligence', 'conversational ai', 'leadership', 'personalization', 'product design']
 preview:
     title: Agentic AI Mortgage Banker
-    description: 'Rethinking the lead form to include AI, chat, and personalization. Significantly improving the experience and directly increasing lead conversion and revenue.'
-    sizzle: 'Rethinking the lead form to include AI, chat, and personalization. Significantly improving the experience and directly increasing lead conversion and revenue.'
+    description: Mortgage bankers are licensed professionals, and they do a lot of things that aren't banking or require a license. I was the design leader on the team figuring out how to superpower mortgage bankers and clients with an agentic AI.
 ---

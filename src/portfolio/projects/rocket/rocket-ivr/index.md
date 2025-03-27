@@ -1,15 +1,12 @@
 ---
 layout: portfolio
 type: project
-title: Gen AI IVR
-description: Blahbity blahbity blah
+title: Self-Service IVR Powered By Gen AI
+description: When you put an offer on a house, you send an approval letter saying how much you're approved for. You only want your approval letter to say how much your offering even if you've been approved for more. Typically you have to wait for your mortgage banker draft a new letter. I led the desing of an voice-based, gen AI-powered phone service that enables homebuyers to adjust their approval letter 24/7.
 keys:
   project: RocketIVR
   company: rocket
-year: 2024
-tags: ['IVR', 'gen ai', 'artificial intelligence', 'conversational ai', 'leadership', 'personalization', 'product design']
 preview:
-    title: Gen AI IVR
-    description: 'Rethinking the lead form to include AI, chat, and personalization. Significantly improving the experience and directly increasing lead conversion and revenue.'
-    sizzle: 'Rethinking the lead form to include AI, chat, and personalization. Significantly improving the experience and directly increasing lead conversion and revenue.'
+    title: Self-Service IVR Powered By Gen AI
+    description: When you put an offer on a house, you send an approval letter saying how much you're approved for. You only want your approval letter to say how much your offering even if you've been approved for more. Typically you have to wait for your mortgage banker draft a new letter. I led the desing of an voice-based, gen AI-powered phone service that enables homebuyers to adjust their approval letter 24/7.
 ---

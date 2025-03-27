@@ -2,7 +2,8 @@
 layout: portfolio
 type: project
 title: Disney Innovation Incubator
-description: A case study about launching Disney Studio's internal product incubator.
+# description: A case study about launching Disney Studio's internal product incubator.
+description: Product teams building enterprise tools don't have alot of time or budget for trying new things. However, there was a big appetite for innovation even if there was little desire for risking the effectiveness of the tools that manage the business. Through partnerships with senior leadership and finance, I launched an incubator program focused on innovation in enterprise tools especially the application of emerging technologies.
 keys:
   project: DisneyIncubator
   company: disney
@@ -15,7 +16,8 @@ year: 2017
 tags: ['r&d', 'leadership']
 preview:
     title:          'Innovation Incubator'
-    description:    'Transforming how Disney Studios innovates.'
+    # description:    'Transforming how Disney Studios innovates.'
+    description:    Product teams building enterprise tools don't have alot of time or budget for trying new things. However, there was a big appetite for innovation even if there was little desire for risking the effectiveness of the tools that manage the business. Through partnerships with senior leadership and finance, I launched an incubator program focused on innovation in enterprise tools especially the application of emerging technologies.
 ---
 
 The product teams responsible for the Studios enterprise tools have tight budgets and timelines. The tools themselves were build using common web technologies. This left the product teams very little room to test or explore risky or unproven ideas, eventually leading to products and engineers that stagnated.

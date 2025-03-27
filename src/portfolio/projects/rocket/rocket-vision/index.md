@@ -2,14 +2,11 @@
 layout: portfolio
 type: project
 title: Defining Rockets AI Vision
-description: Blahbity blahbity blah
+description: Successfully integrating AI into business and the client experience requires more than a broad mission statement, it requires a bold vision. Under my leadership, I led an executive team that redefined the client homebuying experience, an outside-in perspective, where success depended on advanced and pervasive application of AI.
 keys:
   project: RocketVision
   company: rocket
-year: 2024
-tags: ['IVR', 'gen ai', 'artificial intelligence', 'conversational ai', 'leadership', 'personalization', 'product design']
 preview:
     title: Defining Rockets AI Vision
-    description: 'Rethinking the lead form to include AI, chat, and personalization. Significantly improving the experience and directly increasing lead conversion and revenue.'
-    sizzle: 'Rethinking the lead form to include AI, chat, and personalization. Significantly improving the experience and directly increasing lead conversion and revenue.'
+    description: Successfully integrating AI into business and the client experience requires more than a broad mission statement, it requires a bold vision. Under my leadership, I led an executive team that redefined the client homebuying experience, an outside-in perspective, where success depended on advanced and pervasive application of AI.
 ---

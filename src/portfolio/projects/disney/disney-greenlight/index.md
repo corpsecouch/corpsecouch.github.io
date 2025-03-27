@@ -2,7 +2,8 @@
 layout: portfolio
 type: project
 title: Movie Greenlight
-description: A case study about creating the platform for developing Disney theatrical stories.
+# description: A case study about creating the platform for developing Disney theatrical stories.
+description: Not all stories are Disney stories, but some stories can become Disney stories. This is the creative affairs process, working stories until they can become a Disney movie. I led the design of the tools that support the creative affairs process; a 3-way marketplace where stories come in, get analyzed, reported on, reviewed, and back around again until a decision is made.
 keys:
   project: DisneyGreenlight
   company: disney
@@ -16,7 +17,8 @@ tags: ['enterprise', 'SaaS', '0-to-1', 'ux design']
 
 preview:
     title:          'Movie Greenlight'
-    description:    'Innovating how Disney greenlights movies.'
+    # description:    'Innovating how Disney greenlights movies.'
+    description:    Not all stories are Disney stories, but some stories can become Disney stories. This is the creative affairs process, working stories until they can become a Disney movie. I led the design of the tools that support the creative affairs process; a 3-way marketplace where stories come in, get analyzed, reported on, reviewed, and back around again until a decision is made.
 ---
 
 The challenge was to fix the anitquated enterprise tools the story development team were using to develop and greenlight movie ideas.

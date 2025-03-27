@@ -1,15 +1,12 @@
 ---
 layout: portfolio
 type: project
-title: Voice Settings
-description: Blahbity blahbity blah
+title: Alexa Voice Settings
+description: Being able to adjust Alexa settings with your voice seems obvious, that's how you interact with Alexa. But that wasn't always the case and with so many settings it's surprisingly complex to achieve. I led the design of enabling Alexa settings to be available through voice, not just the Alexa app.
 keys:
   project: AmazonVoiceSettings
   company: amazon
-year: 2019
-tags: ['IVR', 'gen ai', 'artificial intelligence', 'conversational ai', 'leadership', 'personalization', 'product design']
 preview:
-    title: Voice Settings
-    description: 'Rethinking the lead form to include AI, chat, and personalization. Significantly improving the experience and directly increasing lead conversion and revenue.'
-    sizzle: 'Rethinking the lead form to include AI, chat, and personalization. Significantly improving the experience and directly increasing lead conversion and revenue.'
+    title: Alexa Voice Settings
+    description: Being able to adjust Alexa settings with your voice seems obvious, that's how you interact with Alexa. But that wasn't always the case and with so many settings, and some requiring authentication, it's surprisingly complex to achieve. I led the design of enabling Alexa settings to be available through voice, not just the Alexa app.
 ---
