@@ -20,6 +20,7 @@ export default defineConfig({
   description: "Hi, I'm Jason. Executive leader, award-winning designer, inventor, and expert in conversational AI and personalization.",
 
   srcExclude: [
+    '**/articles/drafts/**',
     '**/rocket-agentic/index.md',
     '**/rocket-expansion/index.md',
     '**/rocket-ivr/index.md',
