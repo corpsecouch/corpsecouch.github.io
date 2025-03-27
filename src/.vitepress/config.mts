@@ -19,6 +19,25 @@ export default defineConfig({
   title: "Jason Bejot",
   description: "Hi, I'm Jason. Executive leader, award-winning designer, inventor, and expert in conversational AI and personalization.",
 
+  srcExclude: [
+    '**/rocket-agentic/index.md',
+    '**/rocket-expansion/index.md',
+    '**/rocket-ivr/index.md',
+    '**/rocket-multi-modal/index.md',
+    '**/rocket-personality/index.md',
+    '**/rocket-vision/vision.md',
+    '**/amazon-authentication/index.md',
+    '**/amazon-face-id/index.md',
+    '**/amazon-personalized-skills/index.md',
+    '**/amazon-presence-detection/index.md',
+    '**/amazon-voice-settings/index.md',
+    '**/disney-dma/index.md',
+    '**/disney-greenlight/index.md',
+    '**/disney-incubator/index.md',
+    '**/disney-music/index.md',
+    '**/disney-slate/index.md',
+  ],
+
   rewrites: {
     // where articles will be served from
     'articles/archive/:article*' : 'articles/:article*',
@@ -27,7 +46,7 @@ export default defineConfig({
     // 'portfolio/projects/:project*' : 'portfolio/:project*',
     'portfolio/projects/:company/:project*' : 'portfolio/:project*',
     // 'portfolio/projects/:company/:project*' : 'portfolio/:company/:project*',
-    // 'portfolio/projects/:company/:project*' : 'portfolio/:company-:project*',
+    // 'portfolio/projects/:company*/:project*' : 'portfolio/:company*\-:project*',
 
     // where application landing pages will be served from
     'applications/:pre*-:slug' : 'apps/:slug'
