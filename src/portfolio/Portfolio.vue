@@ -46,7 +46,7 @@
         </div>
 
         <div v-if="'project' in portfolioData.rocket"  class="projects">
-          <span class="text-small">The following projects don't have an available case study.</span>
+          <span class="text-small">The following projects don't yet have an available case study.</span>
           <span class="text-small"><a href="#contact">Contact Me</a> if you'd like to learn more.</span>
           <ul>
             <li class="project" v-for="(p, index) in portfolioData.rocket.project">
@@ -92,7 +92,7 @@
         </div>
 
         <div v-if="'project' in portfolioData.amazon" class="projects">
-          <span class="text-small">The following projects don't have an available case study.</span>
+          <span class="text-small">The following projects don't yet have an available case study.</span>
           <span class="text-small"><a href="#contact">Contact Me</a> if you'd like to learn more.</span>
           <ul>
             <li class="project" v-for="(p, index) in portfolioData.amazon.project">
@@ -140,7 +140,7 @@
         </div>
 
         <div v-if="'project' in portfolioData.disney" class="projects">
-          <span class="text-small">The following projects don't have an available case study.</span>
+          <span class="text-small">The following projects don't yet have an available case study.</span>
           <span class="text-small"><a href="#contact">Contact Me</a> if you'd like to learn more.</span>
           <ul>
             <li class="project" v-for="(p, index) in portfolioData.disney.project">
@@ -186,7 +186,7 @@
         </div>
 
         <div v-if="'project' in portfolioData.phenomblue" class="projects">
-          <span class="text-small">The following projects don't have an available case study.</span>
+          <span class="text-small">The following projects don't yet have an available case study.</span>
           <span class="text-small"><a href="#contact">Contact Me</a> if you'd like to learn more.</span>
           <ul>
             <li class="project" v-for="(p, index) in portfolioData.phenomblue.project">
@@ -267,7 +267,8 @@
     content:'';
     display: block;
     border-bottom: dashed 1px var(--color-text-dark);
-    height: 50%;
+    // height: 50%;
+    margin: auto 0;
   }
 
   .allProjects {
