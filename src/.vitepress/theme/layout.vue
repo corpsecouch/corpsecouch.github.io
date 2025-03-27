@@ -67,6 +67,8 @@
     import Home from './home.vue'
 
     const { page, frontmatter } = useData()
+
+    // console.log(page.fn().filePath)
 </script>
 
 <style lang="css">

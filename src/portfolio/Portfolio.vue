@@ -216,8 +216,6 @@
   // import Email from '@components/Email';
   import EmailMe from '@components/EmailMe';
 
-  import _ from 'lodash';
-
   export default {
     name: 'Portfolio',
 

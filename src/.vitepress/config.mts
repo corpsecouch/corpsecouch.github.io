@@ -25,7 +25,7 @@ export default defineConfig({
     '**/rocket-ivr/index.md',
     '**/rocket-multi-modal/index.md',
     '**/rocket-personality/index.md',
-    '**/rocket-vision/vision.md',
+    '**/rocket-vision/index.md',
     '**/amazon-authentication/index.md',
     '**/amazon-face-id/index.md',
     '**/amazon-personalized-skills/index.md',

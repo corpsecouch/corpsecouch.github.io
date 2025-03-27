@@ -245,6 +245,7 @@
   import { data as awardsData } from '@awards/awards.data';
   import { data as newsData } from '@press/press.data';
   import { data as projectData } from '@portfolio/portfolio.data';
+  // import flatlist from '@portfolio/portfolio.data';
   import { data as companies } from '@globals/companies.data'
 
   import _ from 'lodash';
@@ -277,16 +278,18 @@
       getProjects(filter) {
         // TODO: do something if there is no filter, or it's empty
 
-        let rval = _.filter(projectData, (project) => {
+        // flatten the portfolio data first
+        let projects = []
+        _.each(projectData, company => {
+          projects.push(_.flatten(_.values(company)))
+        })
+        projects = _.flatten(projects);
+
+        // filter the portfolio data for the projects
+        let rval = _.filter(projects, (project) => {
           let end = project.url.match(/^\/.*\/(.*)\/$/i)[1]
           return end ? _.includes(filter, end) : false
         })
-
-        // remove 'projects' from the url
-        rval = _.forEach(rval, (val) => {
-          let match = val.url.match(/^(.*)\/projects\/(.*)$/i)
-          if(match) val.url = _.join(_.slice(match, 1), '/')
-        });
         
         return rval;
       }
