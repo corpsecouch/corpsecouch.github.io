@@ -21,6 +21,7 @@ export default defineConfig({
 
   srcExclude: [
     '**/articles/drafts/**',
+    '**/ace-metrix/**',
     '**/rocket-agentic/index.md',
     '**/rocket-expansion/index.md',
     '**/rocket-ivr/index.md',
