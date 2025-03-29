@@ -23,11 +23,11 @@ preview:
 
 Alexa customers needed a way to manage what Alexa knows about them as an individual – their biometrics, preference, privacy and security settings, etc.
 
-## Outcome
-The launch of the Alexa Profile ushered in a paradigm shift, moving Alexa from an impersonal assistant to a personal one. It set the bar for profiles across Amazon by being the first profile launched for any Amazon product. The number of personalized Alexa experiences increases exponentially within the first year.
-
 ## Role
 I was the head of design for the program, leading multiple cross-functional teams and designers across the Alexa organization.
+
+## Outcome
+The launch of the Alexa Profile ushered in a paradigm shift, moving Alexa from an impersonal assistant to a personal one. It set the bar for profiles across Amazon by being the first profile launched for any Amazon product. The number of personalized Alexa experiences increases exponentially within the first year.
 
 ## Process
 A profile sounds like a trivial thing, table-stakes for any app or service. There were four key challenges I needed to overcome to figure this out:
