@@ -18,7 +18,20 @@
 <style module lang="css">
   .nda {
     background-color: var(--color-background-dark);
-    border-radius: 8px;
+    /* border-radius: 8px; */
+
+    background-image: linear-gradient(0deg, #646464 5%, transparent 120%);
+    border-radius: 0.32rem;
+    box-shadow:
+      inset 1px 1px 1px 0 rgb(255, 255, 255),
+      inset -1px -1px 1px 0 rgba(0, 0, 0, .15),
+      .444584px .444584px .628737px -1px rgba(0, 0, 0, .26),
+      1.21072px 1.21072px 1.71222px -1.5px rgba(0, 0, 0, .247),
+      2.6583px 2.6583px 3.75941px -2.25px rgba(0, 0, 0, .23),
+      5.90083px 5.90083px 8.34503px -3px rgba(0, 0, 0, .192),
+      10px 10px 21.2132px -3.75px rgba(0, 0, 0, .056),
+      -.5px -.5px 0 0 rgb(0 0 0 / 5%);
+
     display: grid;
     grid-gap: 1.5rem;
     grid-template-columns: auto auto;
@@ -45,8 +58,9 @@
     }
 
     .nda .icon {
-      margin: auto;
-      padding-bottom: 1rem;
+      /* margin: auto;
+      padding-bottom: 1rem; */
+      display: none;
     }
   }
 </style>
