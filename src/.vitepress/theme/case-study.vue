@@ -116,7 +116,7 @@
 
     img {
       width: 100%;
-      max-height: 440px;
+      // max-height: 440px;
     }
 
     * + p { margin-bottom: 1.3rem; }
