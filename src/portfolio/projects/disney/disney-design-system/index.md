@@ -5,14 +5,14 @@ description: A case study about creating Disney Studio's enterprise design syste
 keys:
   project: DisneyDesignSystem
   company: disney
-nda: true
+nda: false
 featured: true
 hero:
   type: product
   color: blueviolet
   image: /portfolio/disney-design-system/thumb.png
 year: 2014
-tags: ['design system', 'enterprise', '0-to-1', 'leadership']
+tags: ['design system', 'enterprise', '0-to-1', 'leadership', 'ux design']
 
 preview:
     title:          'Enterprise Design System'
@@ -25,6 +25,18 @@ The business of Disney Studios depends on custom internal enterprise application
 I championed the need for a design system to make the suite of enterprise applications consistent and show measurable improvements with users, business operations and product development.
 
 After gaining leadership buy-in, I formed and led a cross-functional steering committee that maintained the overall vision and identified the product, technical, experience, and operational requirements.
+
+![Personas](/portfolio/disney-design-system/personas.jpg)
+
+![Competitive Analysis](/portfolio/disney-design-system/comp-analysis.jpg)
+
+![Wireframes](/portfolio/disney-design-system/wires.jpg)
+
+![High Fidelity Mockups](/portfolio/disney-design-system/hi-fi.jpg)
+
+![Components](/portfolio/disney-design-system/components.jpg)
+
+![Website](/portfolio/disney-design-system/website.jpg)
 
 ## Outcome
 We launched a full design system for Disney Studio’s entire suite of proprietary enterprise tools. It included guidelines, design resources, patterns and an Angular UI framework so designers, engineers, and product can all benefit.
