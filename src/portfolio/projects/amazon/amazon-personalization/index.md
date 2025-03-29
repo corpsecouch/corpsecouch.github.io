@@ -30,6 +30,12 @@ The Personalization HIG unlocked quality and consistency at scale. It provided c
 
 It was a huge success. The Personalization HIG was celebrated by teams and senior leaders across up and across the Alexa organization.
 
+![](/portfolio/amazon-personalization/hig1.png)
+
+![](/portfolio/amazon-personalization/hig2.png)
+
+![](/portfolio/amazon-personalization/hig3.png)
+
 ## Process
 Alexa has an internal Alexa HIG (Human Interface Guidelines) which establishes the quality bar for good Alexa experiences. Everyone making Alexa experiences, not just designers, are kept accountable to the content of the HIG. When it came to personalization, the solution was two-fold:
 - **Publish:** Extend the Alexa HIG to include personalization
