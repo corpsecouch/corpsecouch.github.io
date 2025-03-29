@@ -20,13 +20,13 @@ preview:
 
 Both Amazon and Microsoft wanted to scale their AI assistants – more capabilities, more users, more developers. Jeff and Satya saw that bringing Alexa and Cortana together could accomplish this. A one-of-a-kind partnership between Amazon and Microsoft was established to figure this out.
 
+## Role
+I was the head of design for the program spanning both Amazon and Microsoft. I led cross-functional teams across both companines.
+
 ## Outcome
 The launch of Alexa + Cortana scaled the availability of both AIs to more than one billion endpoints. Developers could now develop on one AI but launch for both simultaneously with no additional effort. It provided the foundation for other AI interoperability programs including Alexa Auto, Alexa for PC, and the Alexa integration with Facebook Portal.
 
 <Video src="https://www.youtube.com/embed/Ezxch4rykzI"></Video>
-
-## Role
-I was the head of design for the program spanning both Amazon and Microsoft. I led cross-functional teams across both companines.
 
 ## Process
 This was more than just connecting APIs or bringing Alexa's jokes and shopping to Cortana. This was about enabling two competitive AIs to work together for the benefit of the end-user. There were four key challenges I needed to overcome to figure this out:
