@@ -148,7 +148,22 @@
 
     figure {
       margin-top: 1rem;
-      background-color: whitesmoke;
+      // background-color: whitesmoke;
+      // background-color: #f4f4f4;
+      background-color: #f0f0f0;
+
+      border-radius: 0.32rem;
+      box-shadow:
+        inset 1px 1px 1px 0 rgb(255, 255, 255),
+        inset -1px -1px 1px 0 rgba(0, 0, 0, .15),
+        .444584px .444584px .628737px -1px rgba(0, 0, 0, .26),
+        1.21072px 1.21072px 1.71222px -1.5px rgba(0, 0, 0, .247),
+        2.6583px 2.6583px 3.75941px -2.25px rgba(0, 0, 0, .23),
+        5.90083px 5.90083px 8.34503px -3px rgba(0, 0, 0, .192),
+        10px 10px 21.2132px -3.75px rgba(0, 0, 0, .056),
+        -.5px -.5px 0 0 rgb(0 0 0 / 5%);
+
+
       margin-bottom: 3rem;
       padding: 2rem 2rem 1.5rem 2rem;
 
@@ -158,6 +173,7 @@
       img {
         width: 100%;
         object-fit: contain;
+        border-radius: 0.32rem;
       }
 
       &:deep(img) {

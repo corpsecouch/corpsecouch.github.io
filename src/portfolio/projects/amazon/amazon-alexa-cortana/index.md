@@ -6,7 +6,7 @@ description: A case study about connecting Alexa and Cortana together.
 keys:
   project: AmazonAlexaCortana
   company: amazon
-nda: true
+nda: false
 hero:
   type: product
   color: lightskyblue
@@ -28,7 +28,7 @@ The launch of Alexa + Cortana scaled the availability of both AIs to more than o
 
 <Video src="https://www.youtube.com/embed/Ezxch4rykzI"></Video>
 
-## Process
+## Key Challenges
 This was more than just connecting APIs or bringing Alexa's jokes and shopping to Cortana. This was about enabling two competitive AIs to work together for the benefit of the end-user. There were four key challenges I needed to overcome to figure this out:
 
 ### Vision

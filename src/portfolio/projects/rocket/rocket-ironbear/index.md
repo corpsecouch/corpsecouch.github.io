@@ -2,7 +2,7 @@
 layout: portfolio
 title: Conversational Lead Funnel
 description: A case study on overhauling the mortgage top-of-funnel using conversational AI.
-nda: true
+nda: false
 keys:
   project: RocketIronbear
   company: rocket
@@ -11,7 +11,7 @@ hero:
   color: lightcoral
   image: /portfolio/rocket-ironbear/thumb.png
 year: 2023
-tags: ['artificial intelligence', 'conversational ai', 'leadership', 'personalization', 'product design']
+tags: ['artificial intelligence', 'conversational ai', 'leadership', 'personalization', 'product design', '0-to-1']
 preview:
     title:          'Conversational Lead Funnel'
     # description:    'Overhauling the mortgage top-of-funnel with conversational AI.'
@@ -37,7 +37,7 @@ We saw a significant increase in lead conversion and estimated ARR (annual recur
 
 <Video src="https://www.youtube.com/embed/9BHhCdaoqZ8"></Video>
 
-## Process
+## Key Challenges
 
 ### Validate Assumptions
 We assumed people clients didn't like the dead-end and the disjointed experience of receiving a phone call from a mortgage banker within seconds of filling out a form. We also assumed most clients would prefer a chat experience with a mortgage banker versus a phone call. So, we asked clients what they wanted to do at the end of the form, get a call or chat. We ran this "smoke test" for two weeks on a slice of traffic. The results strongly indicated **clients at the end of the lead form preferred chatting versus getting a phone call**.

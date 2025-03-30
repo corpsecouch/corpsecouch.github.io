@@ -37,7 +37,7 @@ Post-launch, it increased the speed of product development, established cross-pr
 
 ![A stickersheet of the reusable design system compontents available at launch](/portfolio/disney-design-system/components.jpg)
 
-## Process
+## Key Challenges
 I championed the need for a design system to make the suite of enterprise applications consistent and show measurable improvements with users, business operations and product development.
 
 There were four key challenges to solving this problem:

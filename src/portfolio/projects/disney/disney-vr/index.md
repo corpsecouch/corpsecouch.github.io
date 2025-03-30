@@ -6,12 +6,13 @@ description: A case study on leading the design of a set of ground-breaking tool
 keys:
   project: DisneyVR
   company: disney
+nda: true
 hero:
   type: product
   color: chartreuse
   image: /portfolio/disney-vr/thumb.png
 year: 2014
-tags: ['vr design', 'creative direction', 'r&d', 'leadership', 'product design', 'multi-modal']
+tags: ['vr design', 'creative direction', 'r&d', 'leadership', 'product design', 'multi-modal', '0-to-1']
 preview:
     title:          'Filmmaking for Virtual Reality'
     # description:    'Leading the VR conversation.'
@@ -21,7 +22,7 @@ preview:
 
 The challenge was to educate and inspire A-list filmmakers and studio executives on the potential of VR and how it could be used to tell theatrical-level stories.
 
-## Process
+## Key Challenges
 VR reached an inflection point &mdash; the tech was just entering the consumer space and it was mature enough that filmmakers started to consider it a serious storytelling medium.
 
 Disney Studios has been a filmmaking innovator for nearly a centry. I worked closely with filmmakers, studio executives, engineers, and my design team to keep Disney at the forefront of theatrical storytelling innovation.

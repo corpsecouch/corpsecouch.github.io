@@ -29,7 +29,7 @@ I was the head of design for the program, leading multiple cross-functional team
 ## Outcome
 The launch of the Alexa Profile ushered in a paradigm shift, moving Alexa from an impersonal assistant to a personal one. It set the bar for profiles across Amazon by being the first profile launched for any Amazon product. The number of personalized Alexa experiences increases exponentially within the first year.
 
-## Process
+## Key Challenges
 A profile sounds like a trivial thing, table-stakes for any app or service. There were four key challenges I needed to overcome to figure this out:
 
 ### Vision
