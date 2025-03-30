@@ -4,11 +4,35 @@
     <p>Having so many years of experience and a background across industries and careers, I've been involved with too many projects to list. Here I've provided a curated list of work that's either highly impactful, important, or I'm simply proud of. I hope you enjoy reading about them as much as I did bringing them to life.</p>
     <!-- <p>Reach out to me at <Email></Email> if you'd like to discuss some of my work or how we might work together.</p> -->
 
-    <EmailMe>
-      <template v-slot:bottom>Let's make something amazing together.</template>
-    </EmailMe>
-
     <div class="allProjects">
+
+      <div class="featured">
+        <h3>Featured Case Studies</h3>
+        <ul >
+          <li class="caseStudy" v-for="p in featured" @click="gotoProject(p.url)" :style="'hero' in p.frontmatter ? {'background-color': p.frontmatter.hero.color} : false">
+            <div :class="p.frontmatter.hero.type + '-image'">
+                <img :src="p.frontmatter.hero.image" class="rounded">
+              </div>
+
+              <div class="preview">
+                <div class="top">
+                  <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
+                  <span class="year text-small">{{ p.frontmatter.company }} &mdash; {{ p.frontmatter.year }}</span>
+                  <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
+                </div>
+                <div class="bottom">
+                  <ul class="tags" v-if="p.frontmatter.tags">
+                    <li class="tag text-small" v-for="tag in p.frontmatter.tags">{{ tag }}</li>
+                  </ul>
+                </div>
+              </div>
+          </li>
+        </ul>
+      </div>
+
+      <EmailMe>
+        <template v-slot:bottom>Let's make something amazing together.</template>
+      </EmailMe>
 
       <!-- Rocket -->
       <div class="company">
@@ -23,8 +47,8 @@
 
         <div v-if="'caseStudy' in portfolioData.rocket" class="caseStudies">
           <ul>
-            <li class="caseStudy" v-for="(p, index) in portfolioData.rocket.caseStudy" @click="gotoProject(p.url)" :style="index == 0 && 'hero' in p.frontmatter ? {'background-color': p.frontmatter.hero.color} : false">
-              <!-- <li class="project" v-for="(p, index) in portfolioData.rocket.projects" @click="gotoProject(p.url)" :style="'hero' in p.frontmatter ? {'background-color': 'gold'} : false"> -->
+            <!-- <li class="caseStudy" v-for="(p, index) in portfolioData.rocket.caseStudy" @click="gotoProject(p.url)" :style="index == 0 && 'hero' in p.frontmatter ? {'background-color': p.frontmatter.hero.color} : false"> -->
+              <li class="caseStudy" v-for="p in portfolioData.rocket.caseStudy" @click="gotoProject(p.url)">
               <div :class="p.frontmatter.hero.type + '-image'">
                 <img :src="p.frontmatter.hero.image" class="rounded">
               </div>
@@ -34,6 +58,7 @@
                   <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
                   <span class="year text-small">{{ p.frontmatter.year }}</span>
                   <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
+                  <a :href="p.url" class="text-small">Read the case study</a>
                 </div>
                 <div class="bottom">
                   <ul class="tags" v-if="p.frontmatter.tags">
@@ -71,7 +96,8 @@
 
         <div v-if="'caseStudy' in portfolioData.amazon" class="caseStudies">
           <ul>
-            <li class="caseStudy" v-for="(p, index) in portfolioData.amazon.caseStudy" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.hero.color} : false">
+            <!-- <li class="caseStudy" v-for="(p, index) in portfolioData.amazon.caseStudy" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.hero.color} : false"> -->
+            <li class="caseStudy" v-for="p in portfolioData.amazon.caseStudy" @click="gotoProject(p.url)">
               <div :class="p.frontmatter.hero.type + '-image'">
                 <img :src="p.frontmatter.hero.image" class="rounded">
               </div>
@@ -80,6 +106,7 @@
                   <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
                   <span class="year text-small">{{ p.frontmatter.year }}</span>
                   <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
+                  <a :href="p.url" class="text-small">Read the case study</a>
                 </div>
                 <div class="bottom">
                   <ul class="tags" v-if="p.frontmatter.tags">
@@ -117,17 +144,17 @@
 
         <div v-if="'caseStudy' in portfolioData.disney" class="caseStudies">
           <ul>
-            <li class="caseStudy" v-for="(p, index) in portfolioData.disney.caseStudy" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.hero.color} : false">
+            <!-- <li class="caseStudy" v-for="(p, index) in portfolioData.disney.caseStudy" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.hero.color} : false"> -->
+            <li class="caseStudy" v-for="p in portfolioData.disney.caseStudy" @click="gotoProject(p.url)">
               <div :class="p.frontmatter.hero.type + '-image'">
                 <img :src="p.frontmatter.hero.image" class="rounded">
               </div>
               <div class="preview">
                 <div class="top">
                   <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
-
                   <span class="year text-small">{{ p.frontmatter.year }}</span>
-
                   <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
+                  <a :href="p.url" class="text-small">Read the case study</a>
                 </div>
                 <div class="bottom">
                   <ul class="tags" v-if="p.frontmatter.tags">
@@ -165,7 +192,8 @@
 
         <div v-if="'caseStudy' in portfolioData.phenomblue" class="caseStudies">
           <ul>
-            <li class="caseStudy" v-for="(p,index) in portfolioData.phenomblue.caseStudy" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.hero.color} : false">
+            <!-- <li class="caseStudy" v-for="(p,index) in portfolioData.phenomblue.caseStudy" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.hero.color} : false"> -->
+            <li class="caseStudy" v-for="(p,index) in portfolioData.phenomblue.caseStudy" @click="gotoProject(p.url)">
               <div :class="p.frontmatter.hero.type + '-image'">
                 <img :src="p.frontmatter.hero.image" class="rounded">
               </div>
@@ -174,6 +202,7 @@
                   <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
                   <span class="year text-small">{{ p.frontmatter.year }}</span>
                   <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
+                  <a :href="p.url" class="text-small">Read the case study</a>
                 </div>
                 <div class="bottom">
                   <ul class="tags" v-if="p.frontmatter.tags">
@@ -216,6 +245,8 @@
   // import Email from '@components/Email';
   import EmailMe from '@components/EmailMe';
 
+  import _ from 'lodash'
+
   export default {
     name: 'Portfolio',
 
@@ -233,8 +264,22 @@
 
     data () {
 
+      // flatten the projects array
+      let projects = []
+      _.each(projectData, company => {
+        projects.push(_.flatten(_.values(company)))
+      })
+      projects = _.flatten(projects);
+
+      // filter and sort the featured projects
+      let featured = _.orderBy(
+        _.filter(projects, ['frontmatter.featured', true]),
+        ['frontmatter.year'],
+        ['desc'])
+
       return {
-        portfolioData: projectData,
+        featured: featured,
+        portfolioData: projectData
       }
     }
 
@@ -339,118 +384,138 @@
     display: flex;
     flex-flow: column nowrap;
     row-gap: var(--project-padding);
+  }
 
-    .caseStudy {
-      overflow: hidden;
-      background-color: whitesmoke;
-      background-image: linear-gradient(0deg, var(--color-background-light) 5%, transparent 120%);
-      border-radius: 0.32rem;
-      box-shadow:
-        inset 1px 1px 1px 0 rgb(255, 255, 255),
-        inset -1px -1px 1px 0 rgba(0, 0, 0, .15),
-        .444584px .444584px .628737px -1px rgba(0, 0, 0, .26),
-        1.21072px 1.21072px 1.71222px -1.5px rgba(0, 0, 0, .247),
-        2.6583px 2.6583px 3.75941px -2.25px rgba(0, 0, 0, .23),
-        5.90083px 5.90083px 8.34503px -3px rgba(0, 0, 0, .192),
-        10px 10px 21.2132px -3.75px rgba(0, 0, 0, .056),
-        -.5px -.5px 0 0 rgb(0 0 0 / 5%);
+  .featured ul {
+    margin: 0;
+    list-style: none;
+    gap: var(--project-padding);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 
-      display: grid;
-      grid-auto-rows: 1fr;
-      grid-template-columns: 1fr 2fr;
-      grid-column-gap: var(--project-padding);
+  
 
+  .caseStudy {
+    overflow: hidden;
+    background-color: whitesmoke;
+    background-image: linear-gradient(0deg, var(--color-background-light) 5%, transparent 120%);
+    border-radius: 0.32rem;
+    box-shadow:
+      inset 1px 1px 1px 0 rgb(255, 255, 255),
+      inset -1px -1px 1px 0 rgba(0, 0, 0, .15),
+      .444584px .444584px .628737px -1px rgba(0, 0, 0, .26),
+      1.21072px 1.21072px 1.71222px -1.5px rgba(0, 0, 0, .247),
+      2.6583px 2.6583px 3.75941px -2.25px rgba(0, 0, 0, .23),
+      5.90083px 5.90083px 8.34503px -3px rgba(0, 0, 0, .192),
+      10px 10px 21.2132px -3.75px rgba(0, 0, 0, .056),
+      -.5px -.5px 0 0 rgb(0 0 0 / 5%);
+
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: var(--project-padding);
+
+    /* max-width: xsmall screen */
+    @media all and (max-width: 600px) { display: block; }
+  }
+
+  /*.caseStudies .caseStudy:first-child,*/ .featured .caseStudy {
+    display: block;
+    padding: calc(var(--project-padding) * 2);
+    background-image: linear-gradient(0deg, var(--color-background-light) 5%, transparent 120%);
+
+    /* max-width: xsmall screen */
+    @media all and (max-width: 600px) { padding: 1.5rem; }
+    
+    .product-image img {
       /* max-width: xsmall screen */
-      @media all and (max-width: 600px) { display: block; }
+      @media all and (max-width: 600px) { padding: 0; }
     }
 
-    .caseStudy:first-child {
-      display: block;
-      padding: calc(var(--project-padding) * 2);
-      background-image: linear-gradient(0deg, var(--color-background-light) 5%, transparent 120%);
-
-      /* max-width: xsmall screen */
-      @media all and (max-width: 600px) { padding: 1.5rem; }
-      
-      .product-image img {
-        /* max-width: xsmall screen */
-        @media all and (max-width: 600px) { padding: 0; }
-      }
-
-      .preview {
-        padding: var(--project-padding) 0 0 0;
-        row-gap: var(--project-padding);
-      }
+    .preview {
+      padding: var(--project-padding) 0 0 0;
+      row-gap: var(--project-padding);
     }
+  }
 
-    .caseStudy:first-child:hover {
-      background-image: linear-gradient(0deg, #fdfdfdde 5%, transparent 120%);
-    }
+  // .caseStudy:first-child:hover {
+  //   background-image: linear-gradient(0deg, #fdfdfdde 5%, transparent 120%);
+  // }
 
-    .caseStudy:hover {
-      cursor: pointer;
-      background-image: linear-gradient(0deg, #e7e7e766 5%, transparent 120%);
-    }
+  .caseStudy:hover {
+    cursor: pointer;
+    background-image: linear-gradient(0deg, #e7e7e766 5%, transparent 120%);
+  }
 
+  .caseStudy img {
+    width: 100%;
+    // height: 100%;
+    object-position: center;
+    object-fit: cover;
+  }
+
+  .caseStudy .product-image {
+    padding: var(--project-padding);
+    margin: auto 0;
+  }
+
+  .caseStudy .title-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .caseStudy .title-image img {
+    height: 100%;
+  }
+
+  .caseStudy .preview {
+    padding: var(--project-padding);
+    padding-left: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 1rem;
+    justify-content: space-between;
+  }
+
+  /* max-width: xsmall screen */
+  @media all and (max-width: 600px) {
     .caseStudy img {
-      width: 100%;
-      height: 100%;
-      object-position: center;
-      object-fit: cover;
-    }
-
-    .caseStudy .product-image {
-      padding: var(--project-padding);
+      padding: 0;
     }
 
     .caseStudy .preview {
       padding: var(--project-padding);
-      padding-left: 0;
-      display: flex;
-      flex-flow: column nowrap;
-      row-gap: 1rem;
-      justify-content: space-between;
     }
+  }
 
-    /* max-width: xsmall screen */
-    @media all and (max-width: 600px) {
-      .caseStudy img {
-        padding: 0;
-      }
+  .caseStudy .preview .top {
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 0.5rem;
+  }
 
-      .caseStudy .preview {
-        padding: var(--project-padding);
-      }
-    }
+  .caseStudies .year {
+    display: none;
+  }
 
-    .caseStudy .preview .top {
-      display: flex;
-      flex-flow: column nowrap;
-      row-gap: 0.5rem;
-    }
+  .caseStudy .preview .tags {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.2rem 0.5rem;
+  }
 
-    .caseStudy .preview .year {
-      display: none;
-    }
-
-    .caseStudy .preview .tags {
-      list-style: none;
-      margin: 0;
-      display: flex;
-      flex-flow: row wrap;
-      gap: 0.2rem 0.5rem;
-    }
-
-    .caseStudy .preview .tags .tag {
-      background-color: #e7e7e7;
-      box-shadow:
-        inset -1px -1px 1px 0 rgb(255, 255, 255),
-        inset 1px 1px 1px 0 rgba(0, 0, 0, .15);
-      color: var(--color-text-dark);
-      padding: 0 0.7rem;
-      border-radius: 1rem;
-      font-size: 0.8rem;
-    }
+  .caseStudy .preview .tags .tag {
+    background-color: #e7e7e7;
+    box-shadow:
+      inset -1px -1px 1px 0 rgb(255, 255, 255),
+      inset 1px 1px 1px 0 rgba(0, 0, 0, .15);
+    color: var(--color-text-dark);
+    padding: 0 0.7rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
   }
 
 </style>

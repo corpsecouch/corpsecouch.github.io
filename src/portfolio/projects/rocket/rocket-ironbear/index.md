@@ -3,6 +3,7 @@ layout: portfolio
 title: Conversational Lead Funnel
 description: A case study on overhauling the mortgage top-of-funnel using conversational AI.
 nda: false
+featured: true
 keys:
   project: RocketIronbear
   company: rocket

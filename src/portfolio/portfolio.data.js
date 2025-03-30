@@ -1,4 +1,5 @@
 import { createContentLoader } from 'vitepress';
+import { companies } from '../globals/companies.data'
 import _ from 'lodash'
 
 export default {
@@ -14,6 +15,15 @@ export default {
 
           // Regex to make a project :company-:name
           // project.url= `${project.url}`.replace(/\/projects\/([^/]+)\/([^/]+)\//, '/$1-$2/');
+        })
+
+        return projects
+      })
+      .then(projects => {
+        // add in the company name
+
+        _.map(projects, project => {
+          project.frontmatter.company = companies[project.frontmatter.keys.company].name.short
         })
 
         return projects
