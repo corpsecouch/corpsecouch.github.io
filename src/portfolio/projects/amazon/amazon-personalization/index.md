@@ -1,6 +1,6 @@
 ---
 layout: portfolio
-title: Alexa Personalization HIG
+title: Personalizing Alexa
 description: A case study on how I established the Human Interface Guidelines of personalization for Alexa.
 keys:
   project: AmazonPersonalization
@@ -13,7 +13,7 @@ hero:
 year: 2019
 tags: ['strategy', 'artificial intelligence', 'leadership', 'personalization', 'design system', 'product management', '0-to-1']
 preview:
-    title:          Alexa Personalization HIG
+    title:          Personalizing Alexa
     description:    Enabling a Personal Alexa at scale by establishing the Human Interface Guidelines for personalization.
 ---
 
@@ -33,9 +33,9 @@ The Personalization HIG unlocked quality and consistency at scale. It provided c
 
 It was a huge success. The Personal Alexa HIG was celebrated by teams and senior leaders across up and across the Alexa organization.
 
-![Intoduction to the Personal Alexa HIG](/portfolio/amazon-personalization/hig1.png)
+![Screenshot of the introduction to the Personal Alexa HIG](/portfolio/amazon-personalization/hig1.png)
 
-![The launch version of the HIG](/portfolio/amazon-personalization/hig-all.png)
+![Full content of launch version of the HIG](/portfolio/amazon-personalization/hig-all.png)
 
 ## Key Challenges
 Alexa has an internal Alexa HIG (Human Interface Guidelines) which establishes the quality bar for good Alexa experiences. Everyone making Alexa experiences, not just designers, are kept accountable to the content of the HIG. When it came to setting the foundation of personalization, the solution involved addressing five key challenges:
@@ -47,12 +47,12 @@ Alexa has an internal Alexa HIG (Human Interface Guidelines) which establishes t
 - Communicating up and out
 
 ### Identifying the need
-The problem presented itself naturally. As I launched the Alexa Profile, Alexa Presence, Alexa Authentication, and Alexa Authorization platform products, I noticed the teams implemented those products had the same issues and same questions. It was clear that the overally quality of customer experiences and the success of the the Alexa Identity platform needed something more than one-off partnerships with various Alexa teams. I began drafting and sharing documents, and forming working groups that attempted to solve this problem.
+The problem presented itself naturally. As I launched the Alexa Profile, Alexa Presence, Alexa Authentication, and Alexa Authorization platform products, I noticed the teams implementing those products had the same issues and same questions. It was clear that the overally quality of customer experiences and the success of the the Alexa Identity platform needed something more than one-off partnerships with various Alexa teams. I began drafting and sharing documents, and forming working groups that attempted to solve this problem.
 
 ![Looking ahead to work backwards, one of the activities of the working groups](/portfolio/amazon-personalization/working-group.jpeg)
 
 ### Defining the content
-By far the most intense and divisive part of writing guidelines is determinging the what, how, and why of every piece of content. Because of the Amazon document-driven culture, most of this came out of my document reviews. Because I was on the Alexa Identity team, I had an entire team with deep knowledge and relationships that I leveraged to gather more information, clarify the problems, and effectively address them.
+By far the most intense and divisive part of writing guidelines is determinging the what, how, and why of every piece of content. Because of the Amazon document-driven culture, most of this came out through my document reviews. Because I was on the Alexa Identity team, I had an entire team with deep knowledge and relationships that I leveraged to gather more information, clarify the problems, and effectively address open questions.
 
 ![Lots of feedback requires lots of versions and revisions](/portfolio/amazon-personalization/files.png)
 
@@ -60,7 +60,7 @@ A Personal Alexa was net new for the organization. In the end, when it came to t
 
 ![A section of the HIG](/portfolio/amazon-personalization/hig2.png)
 
-This is what the outline of the launch version looked like:
+This is the outline of the launch version looked like:
 - Defining personalization
 - Clarifing the different types of personalization
 - Introducing the technical building blocks
@@ -82,7 +82,7 @@ This is what the outline of the launch version looked like:
 ![Another section of the HIG](/portfolio/amazon-personalization/hig3.png)
 
 ### Testing the content
-To know whether this solution was effective and valuable, I needed to test it with it's future users. So, I conducted a series of moderated user tests with designers, engineers, product managers, and stakeholders from multiple Alexa teams. Not only is this simply a good practice and good rigor, it provided valuable insights and feedback that I used to refine the content before launch.
+To know whether this solution was effective and valuable, I needed to test it with it's future users. So, I conducted a series of moderated user tests with designers, engineers, product managers, and stakeholders from multiple Alexa teams. Not only was this simply a good practice and good rigor, it provided valuable insights and feedback that I used to refine the content before launch.
 
 ### Publishing the HIG
 Launching these guidelines was different than a regular product launch, but no less important. Alexa already has an internal HIG website complete with resources and a mailing list. The HIG is owned by a small group of principal designers, which I already had a close relationship with and had included as part of the process. Once leadership was aligned with the content and plan, it was a simple matter of transferring the content into the Alexa HIG CMS.
