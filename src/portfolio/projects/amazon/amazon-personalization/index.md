@@ -35,7 +35,7 @@ It was a huge success. The Personal Alexa HIG was celebrated by teams and senior
 
 ![Screenshot of the introduction to the Personal Alexa HIG](/portfolio/amazon-personalization/hig1.png)
 
-![Full content of launch version of the HIG](/portfolio/amazon-personalization/hig-all.png)
+![Full content of the launch version](/portfolio/amazon-personalization/hig-all.png)
 
 ## Key Challenges
 Alexa has an internal Alexa HIG (Human Interface Guidelines) which establishes the quality bar for good Alexa experiences. Everyone making Alexa experiences, not just designers, are kept accountable to the content of the HIG. When it came to setting the foundation of personalization, the solution involved addressing five key challenges:
