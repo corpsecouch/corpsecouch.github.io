@@ -8,9 +8,9 @@
 
       <div class="featured">
         <h3>Featured Case Studies</h3>
-        <ul >
-          <li class="caseStudy" v-for="p in featured" @click="gotoProject(p.url)" :style="'hero' in p.frontmatter ? {'background-color': p.frontmatter.hero.color} : false">
-            <div :class="p.frontmatter.hero.type + '-image'">
+        <ul>
+          <li class="caseStudy boxed" v-for="p in featured" @click="gotoProject(p.url)" :style="'hero' in p.frontmatter ? {'background-color': p.frontmatter.hero.color} : false">
+            <div :class="p.frontmatter.hero.type + '-image'" class="image">
                 <img :src="p.frontmatter.hero.image" class="rounded">
               </div>
 
@@ -19,6 +19,7 @@
                   <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
                   <span class="year text-small">{{ p.frontmatter.company }} &mdash; {{ p.frontmatter.year }}</span>
                   <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
+                  <a :href="p.url" class="text-small">Read the case study</a>
                 </div>
                 <div class="bottom">
                   <ul class="tags" v-if="p.frontmatter.tags">
@@ -49,7 +50,7 @@
           <ul>
             <!-- <li class="caseStudy" v-for="(p, index) in portfolioData.rocket.caseStudy" @click="gotoProject(p.url)" :style="index == 0 && 'hero' in p.frontmatter ? {'background-color': p.frontmatter.hero.color} : false"> -->
               <li class="caseStudy" v-for="p in portfolioData.rocket.caseStudy" @click="gotoProject(p.url)">
-              <div :class="p.frontmatter.hero.type + '-image'">
+              <div :class="p.frontmatter.hero.type + '-image'" class="image">
                 <img :src="p.frontmatter.hero.image" class="rounded">
               </div>
 
@@ -74,7 +75,7 @@
           <span class="text-small">The following projects don't yet have an available case study.</span>
           <span class="text-small"><a href="#contact">Contact Me</a> if you'd like to learn more.</span>
           <ul>
-            <li class="project" v-for="(p, index) in portfolioData.rocket.project">
+            <li class="project boxed" v-for="(p, index) in portfolioData.rocket.project">
               <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
               <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
             </li>
@@ -98,7 +99,7 @@
           <ul>
             <!-- <li class="caseStudy" v-for="(p, index) in portfolioData.amazon.caseStudy" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.hero.color} : false"> -->
             <li class="caseStudy" v-for="p in portfolioData.amazon.caseStudy" @click="gotoProject(p.url)">
-              <div :class="p.frontmatter.hero.type + '-image'">
+              <div :class="p.frontmatter.hero.type + '-image'" class="image">
                 <img :src="p.frontmatter.hero.image" class="rounded">
               </div>
               <div class="preview">
@@ -122,7 +123,7 @@
           <span class="text-small">The following projects don't yet have an available case study.</span>
           <span class="text-small"><a href="#contact">Contact Me</a> if you'd like to learn more.</span>
           <ul>
-            <li class="project" v-for="(p, index) in portfolioData.amazon.project">
+            <li class="project boxed" v-for="(p, index) in portfolioData.amazon.project">
               <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
               <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
             </li>
@@ -146,7 +147,7 @@
           <ul>
             <!-- <li class="caseStudy" v-for="(p, index) in portfolioData.disney.caseStudy" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.hero.color} : false"> -->
             <li class="caseStudy" v-for="p in portfolioData.disney.caseStudy" @click="gotoProject(p.url)">
-              <div :class="p.frontmatter.hero.type + '-image'">
+              <div :class="p.frontmatter.hero.type + '-image'" class="image">
                 <img :src="p.frontmatter.hero.image" class="rounded">
               </div>
               <div class="preview">
@@ -170,7 +171,7 @@
           <span class="text-small">The following projects don't yet have an available case study.</span>
           <span class="text-small"><a href="#contact">Contact Me</a> if you'd like to learn more.</span>
           <ul>
-            <li class="project" v-for="(p, index) in portfolioData.disney.project">
+            <li class="project boxed" v-for="(p, index) in portfolioData.disney.project">
               <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
               <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
             </li>
@@ -194,7 +195,7 @@
           <ul>
             <!-- <li class="caseStudy" v-for="(p,index) in portfolioData.phenomblue.caseStudy" @click="gotoProject(p.url)" :style="index == 0 ? {'background-color': p.frontmatter.hero.color} : false"> -->
             <li class="caseStudy" v-for="(p,index) in portfolioData.phenomblue.caseStudy" @click="gotoProject(p.url)">
-              <div :class="p.frontmatter.hero.type + '-image'">
+              <div :class="p.frontmatter.hero.type + '-image'" class="image">
                 <img :src="p.frontmatter.hero.image" class="rounded">
               </div>
               <div class="preview">
@@ -218,7 +219,7 @@
           <span class="text-small">The following projects don't yet have an available case study.</span>
           <span class="text-small"><a href="#contact">Contact Me</a> if you'd like to learn more.</span>
           <ul>
-            <li class="project" v-for="(p, index) in portfolioData.phenomblue.project">
+            <li class="project boxed" v-for="(p, index) in portfolioData.phenomblue.project">
               <span class="title text-large">{{ p.frontmatter.preview.title }}</span>
               <span class="description text-small">{{ p.frontmatter.preview.description }}</span>
             </li>
@@ -327,11 +328,35 @@
     row-gap: var(--project-padding);
   }
 
+  .rounded {
+    border-radius: 0.32rem;
+  }
+
+  .boxed {
+    overflow: hidden;
+    background-color: whitesmoke;
+    background-image: linear-gradient(0deg, var(--color-background-light) 5%, transparent 120%);
+    border-radius: 0.32rem;
+    box-shadow:
+      inset 1px 1px 1px 0 rgb(255, 255, 255),
+      inset -1px -1px 1px 0 rgba(0, 0, 0, .15),
+      .444584px .444584px .628737px -1px rgba(0, 0, 0, .26),
+      1.21072px 1.21072px 1.71222px -1.5px rgba(0, 0, 0, .247),
+      2.6583px 2.6583px 3.75941px -2.25px rgba(0, 0, 0, .23),
+      5.90083px 5.90083px 8.34503px -3px rgba(0, 0, 0, .192),
+      10px 10px 21.2132px -3.75px rgba(0, 0, 0, .056),
+      -.5px -.5px 0 0 rgb(0 0 0 / 5%);
+  }
+  
+  /* ******************** */
+  /* *** project list *** */
+  /* ******************** */
+
   .projects {
     display: flex;
     flex-flow: column nowrap;
     row-gap: var(--project-padding);
-    padding-top: var(--project-padding);
+    padding-top: calc(var(--project-padding) * 2);
   }
 
   .projects ul {
@@ -351,26 +376,21 @@
     }
   }
 
+  /* ********************** */
+  /* *** sinlge project *** */
+  /* ********************** */
+
   .projects .project {
     grid-column-end: span 2;
-    overflow: hidden;
-    background-color: whitesmoke;
-      background-image: linear-gradient(0deg, var(--color-background-light) 5%, transparent 120%);
-      border-radius: 0.32rem;
-      box-shadow:
-        inset 1px 1px 1px 0 rgb(255, 255, 255),
-        inset -1px -1px 1px 0 rgba(0, 0, 0, .15),
-        .444584px .444584px .628737px -1px rgba(0, 0, 0, .26),
-        1.21072px 1.21072px 1.71222px -1.5px rgba(0, 0, 0, .247),
-        2.6583px 2.6583px 3.75941px -2.25px rgba(0, 0, 0, .23),
-        5.90083px 5.90083px 8.34503px -3px rgba(0, 0, 0, .192),
-        10px 10px 21.2132px -3.75px rgba(0, 0, 0, .056),
-        -.5px -.5px 0 0 rgb(0 0 0 / 5%);
-      display: flex;
-      flex-flow: column nowrap;
-      row-gap: var(--project-padding);
-      padding: var(--project-padding);
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: var(--project-padding);
+    padding: var(--project-padding);
   }
+
+  /* *********************** */
+  /* *** case study list *** */
+  /* *********************** */
 
   .caseStudies {
     display: flex;
@@ -383,8 +403,13 @@
     list-style: none;
     display: flex;
     flex-flow: column nowrap;
-    row-gap: var(--project-padding);
+    // row-gap: var(--project-padding);
+    row-gap: calc(var(--project-padding) * 2);
   }
+
+  /* ******************************** */
+  /* *** featured case study list *** */
+  /* ******************************** */
 
   .featured ul {
     margin: 0;
@@ -394,25 +419,13 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  
+  /* *************************** */
+  /* *** a sinlge case study *** */
+  /* *************************** */
 
   .caseStudy {
-    overflow: hidden;
-    background-color: whitesmoke;
-    background-image: linear-gradient(0deg, var(--color-background-light) 5%, transparent 120%);
-    border-radius: 0.32rem;
-    box-shadow:
-      inset 1px 1px 1px 0 rgb(255, 255, 255),
-      inset -1px -1px 1px 0 rgba(0, 0, 0, .15),
-      .444584px .444584px .628737px -1px rgba(0, 0, 0, .26),
-      1.21072px 1.21072px 1.71222px -1.5px rgba(0, 0, 0, .247),
-      2.6583px 2.6583px 3.75941px -2.25px rgba(0, 0, 0, .23),
-      5.90083px 5.90083px 8.34503px -3px rgba(0, 0, 0, .192),
-      10px 10px 21.2132px -3.75px rgba(0, 0, 0, .056),
-      -.5px -.5px 0 0 rgb(0 0 0 / 5%);
-
     display: grid;
-    grid-auto-rows: 1fr;
+    // grid-auto-rows: 1fr;
     grid-template-columns: 1fr 2fr;
     grid-column-gap: var(--project-padding);
 
@@ -445,7 +458,11 @@
 
   .caseStudy:hover {
     cursor: pointer;
-    background-image: linear-gradient(0deg, #e7e7e766 5%, transparent 120%);
+  }
+
+  .featured .caseStudy:hover {
+    // background-image: linear-gradient(0deg, #e7e7e766 5%, transparent 120%);
+    background-image: linear-gradient(0deg, #fdfdfdde 5%, transparent 120%);
   }
 
   .caseStudy img {
@@ -456,17 +473,18 @@
   }
 
   .caseStudy .product-image {
-    padding: var(--project-padding);
+    // padding: var(--project-padding);
     margin: auto 0;
   }
 
   .caseStudy .title-image {
     width: 100%;
-    height: 100%;
+    // height: 100%;
+    margin: auto 0;
   }
 
   .caseStudy .title-image img {
-    height: 100%;
+    // height: 100%;
   }
 
   .caseStudy .preview {
@@ -499,7 +517,11 @@
     display: none;
   }
 
-  .caseStudy .preview .tags {
+  /* *********************** */
+  /* *** case study tags *** */
+  /* *********************** */
+
+  .caseStudy .tags {
     list-style: none;
     margin: 0;
     display: flex;
@@ -507,7 +529,7 @@
     gap: 0.2rem 0.5rem;
   }
 
-  .caseStudy .preview .tags .tag {
+  .caseStudy .tags .tag {
     background-color: #e7e7e7;
     box-shadow:
       inset -1px -1px 1px 0 rgb(255, 255, 255),
