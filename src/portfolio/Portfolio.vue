@@ -407,6 +407,13 @@
     row-gap: calc(var(--project-padding) * 2);
   }
 
+  /* max-width: xsmall screen */
+  @media all and (max-width: 600px) {
+    .caseStudies ul {
+      row-gap: calc(var(--project-padding) * 3);
+    }
+  }
+
   /* ******************************** */
   /* *** featured case study list *** */
   /* ******************************** */
@@ -417,6 +424,13 @@
     gap: var(--project-padding);
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  /* max-width: xsmall screen */
+  @media all and (max-width: 600px) {
+    .featured ul {
+      grid-template-columns: 1fr;
+    }
   }
 
   /* *************************** */
@@ -449,6 +463,13 @@
     .preview {
       padding: var(--project-padding) 0 0 0;
       row-gap: var(--project-padding);
+    }
+  }
+
+  /* max-width: xsmall screen */
+  @media all and (max-width: 600px) {
+    .featured .caseStudy {
+      padding-top: calc(var(--project-padding) * 2);
     }
   }
 
