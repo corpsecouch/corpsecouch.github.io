@@ -9,7 +9,8 @@ nda: false
 featured: true
 hero:
   type: product
-  color: blueviolet
+  # color: blueviolet
+  color: '#aa6be5'
   image: /portfolio/disney-design-system/thumb.png
 year: 2014
 tags: ['design system', 'enterprise', '0-to-1', 'leadership', 'ux design', 'product management', 'engineering']
