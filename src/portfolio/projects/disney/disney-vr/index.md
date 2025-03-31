@@ -7,6 +7,7 @@ keys:
   project: DisneyVR
   company: disney
 nda: true
+featured: true
 hero:
   type: product
   color: chartreuse

@@ -5,7 +5,7 @@ description: A case study on designing a groundbreaking AR mobile app.
 keys:
   project: PhenomblueWildKingdom
   company: phenomblue
-featured: true
+featured: false
 hero:
   type: product
   color: wheat
