@@ -86,7 +86,13 @@
 </script>
 
 <style module lang="scss">
-  
+
+  // for videos
+  p + div {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+  }
+
   .news, .awards, .content {
     h2 {
       font-family: 'Afacad Flux';
