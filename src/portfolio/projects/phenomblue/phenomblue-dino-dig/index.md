@@ -17,6 +17,6 @@ preview:
     description:    'Social computing for learning and exploration.'
 ---
 
-<Video src="https://www.youtube.com/embed/UGvu78DYris"></Video>
-
 Operation: Dino Dig is a social learning and exploration experience. Utilizing Microsoft Surface 2.0, people use real-world tools to interact with the digital experience and with each other.
+
+<Video src="https://www.youtube.com/embed/UGvu78DYris"></Video>
