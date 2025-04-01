@@ -551,7 +551,8 @@
   }
 
   .caseStudy .tags .tag {
-    background-color: #e7e7e7;
+    // background-color: #e7e7e7;
+    background-color: rgba(231, 231, 231, .2);
     box-shadow:
       inset -1px -1px 1px 0 rgb(255, 255, 255),
       inset 1px 1px 1px 0 rgba(0, 0, 0, .15);
