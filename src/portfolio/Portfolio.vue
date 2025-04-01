@@ -4,6 +4,10 @@
     <p>Having so many years of experience and a background across industries and careers, I've been involved with too many projects to list. Here I've provided a curated list of work that's either highly impactful, important, or I'm simply proud of. I hope you enjoy reading about them as much as I did bringing them to life.</p>
     <!-- <p>Reach out to me at <Email></Email> if you'd like to discuss some of my work or how we might work together.</p> -->
 
+    <EmailMe>
+      <template v-slot:bottom>Let's make something amazing together.</template>
+    </EmailMe>
+
     <div class="allProjects">
 
       <div class="featured">
@@ -30,10 +34,6 @@
           </li>
         </ul>
       </div>
-
-      <EmailMe>
-        <template v-slot:bottom>Let's make something amazing together.</template>
-      </EmailMe>
 
       <!-- Rocket -->
       <div class="company">
