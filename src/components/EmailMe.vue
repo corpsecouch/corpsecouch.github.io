@@ -1,7 +1,7 @@
 <template>
   <section :class="$style.hello">
     <div>
-      <p class="text-large"><slot name="top">I'm available for new work.</slot></p>
+      <!-- <p class="text-large"><slot name="top">I'm available for new work.</slot></p> -->
       <p class="text-small"><slot name="bottom"></slot></p>
     </div>
     <div :class="$style.emailMe">
