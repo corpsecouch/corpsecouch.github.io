@@ -99,3 +99,11 @@ There's a theme running through all of this: we're rethinking the relationship b
 
 That's not incremental improvement. That's a different way of thinking about what physical objects are for.
 
+---
+
+That's it for now! Let me know what you think and what you'd like to see in future editions.
+
+To boldly go,
+
+✌️ Jason
+
