@@ -6,6 +6,9 @@ layout: 'article'
 preview:
     text: 'The actual physical stuff we build things out of is starting to behave in ways that would have sounded like science fiction ten years ago.'
     image: 'hero.jpg'
+links:
+  - name: Substack
+    url: https://moreinfinite.substack.com/p/the-stuff-we-make-is-getting-smarter
 ---
 
 ![](./hero.jpg)
